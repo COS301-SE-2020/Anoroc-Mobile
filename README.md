@@ -13,7 +13,10 @@ The Notification view will show the user the notifications that they have receiv
  * Warn: You or a friend have visited a hot spot area.
  * Info: Notify the user about current developments of the contingent in their area.
  * Message: The user has received a message from their friend.
+ 
 The Recent Transits page will show the user’s last 5 movements in a map view and will be able to show the user if or where their path took them through hot spots.
-The Friends view will allow the user to view all their friends, send their friends a message, add new friends, and delete friends. The Friends page will also allow the user to send an update to the system of the worst-case outcome of that friend. The system will then notify that friend and if no action is taken on that notification after a set amount of time the system will run the purge procedure.\\\\
+The Friends view will allow the user to view all their friends, send their friends a message, add new friends, and delete friends. The Friends page will also allow the user to send an update to the system of the worst-case outcome of that friend. The system will then notify that friend and if no action is taken on that notification after a set amount of time the system will run the purge procedure.
+
 The Map view will allow the user to scroll around the country and see the hot spots that are generated onto the map in real-time as the user scrolls over that area. The user can also register an itinerary on this page which will show the user their route and the hot spots that they will pass through so that the user can determine the risk. The user can select which contingent from a shortlist that they want to view the data for.
+
 The Medical view will allow the user to enter their current condition and select the contingent that they have, the medication they are receiving as well as their feedback and that medication that they are receiving.
