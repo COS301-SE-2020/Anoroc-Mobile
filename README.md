@@ -27,7 +27,7 @@ The Medical view will allow the user to enter their current condition and select
 ## Collaborators
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
-| Tebogo | Nevile     | u15210822@tuks.co.za | [tebogo.codes](https://tebogo.codes/)  |
+| Tebogo | Selahle     | u15210822@tuks.co.za | [tebogo.codes](https://tebogo.codes/)  |
 | Andrew | Wilson     | u15191223@tuks.co.za | [andrew96-eng.github.io](https://andrew96-eng.github.io) |
 | Anika  | van Rensburg | u17246840@tuks.co.za | [anikavanrensburg.github.io](https://anikavanrensburg.github.io) |
 | Anrich | Hildebrand | u15178782@tuks.co.za | [anrich96.github.io](https://anrich96.github.io) |
