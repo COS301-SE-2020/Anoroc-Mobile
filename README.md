@@ -29,4 +29,8 @@ The Medical view will allow the user to enter their current condition and select
 |--------|------------|----------------------|------------------------|
 | Tebogo | Nevile     | u15210822@tuks.co.za | https://tebogo.codes/  |
 | Andrew | Wilson     | u15191223@tuks.co.za | andrew96-eng.github.io |
-| Anrich | Hildebrand | u15191223@tuks.co.za | andrew96-eng.github.io |
+| Anika  | van Rensburg | u17246840@tuks.co.za | anikavanrensburg.github.io |
+| Anrich | Hildebrand | u15178782@tuks.co.za | anrich96.github.io |
+| Kevin  | Huang | u15026681@tuks.co.za | kevin-d-h.github.io/myCV/ |
+| Ronald | Looi | u15226532@tuks.co.za | rsl-student.github.io |
+##
