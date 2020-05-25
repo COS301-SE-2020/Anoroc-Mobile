@@ -23,7 +23,7 @@ The Friends view will allow the user to view all their friends, send their frien
 The Map view will allow the user to scroll around the country and see the hot spots that are generated onto the map in real-time as the user scrolls over that area. The user can also register an itinerary on this page which will show the user their route and the hot spots that they will pass through so that the user can determine the risk. The user can select which contingent from a shortlist that they want to view the data for.
 
 The Medical view will allow the user to enter their current condition and select the contingent that they have, the medication they are receiving as well as their feedback and that medication that they are receiving.
-##
+
 ## Collaborators
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
