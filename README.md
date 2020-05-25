@@ -24,7 +24,9 @@ The Map view will allow the user to scroll around the country and see the hot sp
 
 The Medical view will allow the user to enter their current condition and select the contingent that they have, the medication they are receiving as well as their feedback and that medication that they are receiving.
 ##
-##Collaborators
-| Name   | Surname |        Email         |       Github.io       |
-|--------|---------|----------------------|-----------------------|
-| Tebogo | Nevile  | u15210822@tuks.co.za | https://tebogo.codes/ |
+## Collaborators
+| Name   | Surname    |        Email         |       Github.io        |
+|--------|------------|----------------------|------------------------|
+| Tebogo | Nevile     | u15210822@tuks.co.za | https://tebogo.codes/  |
+| Andrew | Wilson     | u15191223@tuks.co.za | andrew96-eng.github.io |
+| Anrich | Hildebrand | u15191223@tuks.co.za | andrew96-eng.github.io |
