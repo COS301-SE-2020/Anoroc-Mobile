@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj": {}
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj": {}
   },
   "projects": {
-    "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj": {
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
+        "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
         "projectName": "AnorocMobileApp.iOS",
-        "projectPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
+        "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\",
+        "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
-                "projectPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
+              "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
+                "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+        "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
         "projectName": "AnorocMobileApp",
-        "projectPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+        "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
         "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\obj\\",
+        "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\Microsoft\\Xamarin\\NuGet\\"
