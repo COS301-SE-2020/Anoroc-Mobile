@@ -16,5 +16,15 @@ namespace AnorocMobileApp.Views
         {
             InitializeComponent();
         }
+
+        private void btn_Back_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PopAsync();
+        }
+
+        private void btn_signup_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
