@@ -1971,39 +1971,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {},
-    "E:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/anika/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
+      "projectUniqueName": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
       "projectName": "AnorocMobileApp.Android",
-      "projectPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.Android\\obj\\",
+      "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
+      "packagesPath": "/Users/anika/.nuget/packages/",
+      "outputPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "E:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/anika/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
-              "projectPath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
+            "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
+              "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
             }
           }
         }
