@@ -668,11 +668,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
+      "projectUniqueName": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
       "projectName": "AnorocMobileApp",
-      "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
+      "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
       "packagesPath": "/Users/anika/.nuget/packages/",
-      "outputPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/",
+      "outputPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

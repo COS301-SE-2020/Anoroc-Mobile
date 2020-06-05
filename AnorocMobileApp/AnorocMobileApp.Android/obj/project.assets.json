@@ -1976,11 +1976,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
+      "projectUniqueName": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
       "projectName": "AnorocMobileApp.Android",
-      "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
+      "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
       "packagesPath": "/Users/anika/.nuget/packages/",
-      "outputPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/obj/",
+      "outputPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1995,8 +1995,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
-              "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
+            "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
+              "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
             }
           }
         }

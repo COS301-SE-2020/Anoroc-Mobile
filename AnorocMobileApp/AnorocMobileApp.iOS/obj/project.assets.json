@@ -1060,11 +1060,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/AnorocMobileApp.iOS.csproj",
+      "projectUniqueName": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/AnorocMobileApp.iOS.csproj",
       "projectName": "AnorocMobileApp.iOS",
-      "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/AnorocMobileApp.iOS.csproj",
+      "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/AnorocMobileApp.iOS.csproj",
       "packagesPath": "/Users/anika/.nuget/packages/",
-      "outputPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/obj/",
+      "outputPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1079,8 +1079,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
-              "projectPath": "/Users/anika/Documents/git/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
+            "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
+              "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
             }
           }
         }

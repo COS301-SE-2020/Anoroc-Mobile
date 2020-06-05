@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AnorocMobileApp.Views.HomePage.xaml", "Views/HomePage.xaml", typeof(global::AnorocMobileApp.Views.HomePage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("AnorocMobileApp.Views.SettingsPage.xaml", "Views/SettingsPage.xaml", typeof(global::AnorocMobileApp.Views.SettingsPage))]
 
 namespace AnorocMobileApp.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/HomePage.xaml")]
-    public partial class HomePage : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views/SettingsPage.xaml")]
+    public partial class SettingsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(HomePage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SettingsPage));
         }
     }
 }
