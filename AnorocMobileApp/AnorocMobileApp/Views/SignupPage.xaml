@@ -6,23 +6,25 @@
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.SignupPage">
     <ContentPage.Content>
-        <StackLayout Margin="20">
-            <Grid Padding="20"/>
-            <Label Text="Register an account"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
-            <Grid Padding="20"/>
-            <Entry x:Name="UserEmail" Placeholder="Email..." />
-            <Grid Padding="20"/>
-            <Entry x:Name="UsersName" Placeholder="Name..." />
-            <Grid Padding="5"/>
-            <Entry x:Name="Password" Placeholder="Password..." IsPassword="true"/>
-            <Grid Padding="5"/>
-            <Entry x:Name="ConfrimPassword" Placeholder="Confirm Password..." IsPassword="true"/>
-            <Grid Padding="5"/>
-            <Button x:Name="btn_back" Text="Go Back" Clicked="btn_Back_Clicked"/>
-            <Grid Padding="5"/>
-            <Button x:Name="btn_signup" Text="Sign Up" Clicked="btn_signup_Clicked"/>
-        </StackLayout>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Margin="20">
+                <Grid Padding="20"/>
+                <Label Text="Register an account"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                <Grid Padding="20"/>
+                <Entry x:Name="UserEmail" Placeholder="Email..." />
+                <Grid Padding="5"/>
+                <Entry x:Name="UsersName" Placeholder="Name..." />
+                <Grid Padding="5"/>
+                <Entry x:Name="Password" Placeholder="Password..." IsPassword="true"/>
+                <Grid Padding="5"/>
+                <Entry x:Name="ConfrimPassword" Placeholder="Confirm Password..." IsPassword="true"/>
+                <Grid Padding="5"/>
+                <Button x:Name="btn_back" Text="Go Back" Clicked="btn_Back_Clicked"/>
+                <Grid Padding="5"/>
+                <Button x:Name="btn_signup" Text="Sign Up" Clicked="btn_signup_Clicked"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

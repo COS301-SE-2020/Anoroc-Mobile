@@ -12,5 +12,6 @@
             <Button x:Name="google_login_button" Text="Login With Google" Clicked="loginGoogle"/>
             <Button x:Name="btn_signup"  Text="Sign Up" Clicked="btn_signup_Clicked"/>
         </StackLayout>
+      
     </ContentPage.Content>
 </ContentPage>

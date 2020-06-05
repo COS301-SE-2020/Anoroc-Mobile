@@ -35,7 +35,7 @@ namespace AnorocMobileApp.Views
                     new System.Uri("https://accounts.google.com/o/oauth2/auth"),
                     new System.Uri("https://www.google.com")
                 }*/
-
+            
             Application.Current.MainPage = new HomePage();
         }
 
