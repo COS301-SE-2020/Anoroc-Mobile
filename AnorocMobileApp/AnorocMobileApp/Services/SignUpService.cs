@@ -7,5 +7,6 @@ namespace AnorocMobileApp.Services
     //This class interacts with the API server on behalf of the User class
     class SignUpService
     {
+
     }
 }

@@ -39,6 +39,16 @@ namespace AnorocMobileApp.Views
             Application.Current.MainPage = new HomePage();
         }
 
+        private void loginFacebook(object sender, EventArgs e)
+        {
+            
+        }
+
+        public static void FacebookSuccess(string title, string msg)
+        {
+            Application.Current.MainPage = new HomePage();
+        }
+
         private async void btn_signup_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignupPage());
