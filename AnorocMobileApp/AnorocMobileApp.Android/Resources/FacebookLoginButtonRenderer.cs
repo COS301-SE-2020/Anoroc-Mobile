@@ -60,7 +60,7 @@ namespace AnorocMobileApp.Droid.Resources
                 }
                 this.disposed = true;
             }
-            base.Dispose(disposing);
+            //base.Dispose(disposing);
         }
 
         class MyFacebookCallback : Java.Lang.Object, IFacebookCallback
