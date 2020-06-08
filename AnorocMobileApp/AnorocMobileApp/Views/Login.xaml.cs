@@ -8,7 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Auth;
 using Xamarin.Forms;
+using System.Collections.Generic;
 using Xamarin.Forms.Xaml;
+using AnorocMobileApp.Services;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Views
 {
@@ -35,17 +39,44 @@ namespace AnorocMobileApp.Views
                     new System.Uri("https://accounts.google.com/o/oauth2/auth"),
                     new System.Uri("https://www.google.com")
                 }*/
-            
+
             Application.Current.MainPage = new HomePage();
         }
 
-        private void loginFacebook(object sender, EventArgs e)
+        /*private void loginFacebook(object sender, EventArgs e)
         {
-            
+
+            OAuth2Authenticator auth = new OAuth2Authenticator(
+                    clientId: Constants.FacebookAppID,
+                    scope: "",
+                    authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
+                    redirectUrl: new Uri("https://www.facebook.com/connect/login_success.html")
+                );
+
+            auth.Completed += Facebook_Auth_Completed;
+
+            //AuthenticationState.Authenticator = auth;
+      
         }
+
+        private void Facebook_Auth_Completed(object sender, AuthenticatorCompletedEventArgs e)
+        {
+            if(e.IsAuthenticated)
+            {
+                var token = new User()
+                {
+                    AccessToken = e.Account.Properties["access_token"]
+                };
+            }
+            else
+            {
+
+            }
+        }*/
 
         public static void FacebookSuccess(string title, string msg)
         {
+           
             Application.Current.MainPage = new HomePage();
         }
 

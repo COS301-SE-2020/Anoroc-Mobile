@@ -15,20 +15,26 @@ using Xamarin.Facebook.Login;
 
 namespace AnorocMobileApp.Droid.Resources.services
 {
-    public class FacebookLoginService : Services.IFacebookLoginService
+    public class FacebookLoginService : IFacebookLoginService
     {
         readonly MyAccessTokenTracker myAccessTokenTracker;
         public Action<string, string> AccessTokenChanged { get; set; }
-
+        public string name;
         public FacebookLoginService()
         {
+          
             myAccessTokenTracker = new MyAccessTokenTracker(this);
             // TODO: Stop tracking
             myAccessTokenTracker.StartTracking();
+            Profile profile = Profile.CurrentProfile;
         }
 
         public string AccessToken => Xamarin.Facebook.AccessToken.CurrentAccessToken?.Token;
-
+       
+        public string FirstName => Profile.CurrentProfile.FirstName;
+        public string UserID => Profile.CurrentProfile.Id;
+        public string LastName => Profile.CurrentProfile.LastName;
+      
         public void Logout()
         {
             LoginManager.Instance.LogOut();
@@ -37,7 +43,7 @@ namespace AnorocMobileApp.Droid.Resources.services
 
     class MyAccessTokenTracker : AccessTokenTracker
     {
-        readonly Services.IFacebookLoginService facebookLoginService;
+        readonly IFacebookLoginService facebookLoginService;
 
         public MyAccessTokenTracker(FacebookLoginService facebookLoginService)
         {

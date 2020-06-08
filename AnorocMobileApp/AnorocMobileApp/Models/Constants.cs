@@ -9,7 +9,8 @@ namespace AnorocMobileApp.Models
         public static bool IsDev = true;
         public static readonly string GoogleClientID = "1069091943659-cnv80cif7vrod2be9lmfu9a1ft01pq1n.apps.googleusercontent.com";
         public static readonly string GoogleClientSecret = "Sz5VEBHUU4o4QsNGBobe4FHt";
-        public static readonly string FaceBookDevelpmentHash = "ga0RGNYHvNM5d0SLGQfpQWAPGJ8=";
+       //public static readonly string FaceBookDevelpmentHash = "ga0RGNYHvNM5d0SLGQfpQWAPGJ8=";
+        public static readonly string FacebookAppID = "985395151878298";
     }
 
 }

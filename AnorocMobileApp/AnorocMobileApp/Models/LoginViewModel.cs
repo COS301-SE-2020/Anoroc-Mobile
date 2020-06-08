@@ -1,17 +1,22 @@
 ﻿using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+
 
 
 namespace AnorocMobileApp.Models
 {
     public class LoginViewModel
     {
+        public UserDetails userDetails = null;
         readonly IFacebookLoginService facebookLoginService;
 
         public Command FacebookLogoutCmd { get; }
@@ -37,10 +42,23 @@ namespace AnorocMobileApp.Models
                 () => DisplayAlert("Cancel", "Authentication cancelled by the user."));
         }
 
-        void Success(string title, string authToken)
+        async void Success(string title, string authToken)
         {
-            (Application.Current as App).MainPage.DisplayAlert(title, authToken, "OK");
+            await (Application.Current as App).MainPage.DisplayAlert(title, authToken, "OK");
+            await (Application.Current as App).MainPage.DisplayAlert(title, facebookLoginService.FirstName, "OK");
+          
             Login.FacebookSuccess(title, authToken);
+        }
+
+        public async void GetUserDetailsAsync(string accessToken)
+        {
+            var httpClient = new HttpClient();
+
+            var json = await httpClient.GetStringAsync(
+                $"https://graph.facebook.com/me?fields=email&name&access_token={accessToken}");
+
+            userDetails = JsonConvert.DeserializeObject<UserDetails>(json);
+            await (Application.Current as App).MainPage.DisplayAlert("User details", userDetails.ToString(), "OK");
         }
 
         void DisplayAlert(string title, string msg)

@@ -6,7 +6,16 @@
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.Login">
 
-    
+
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="login_heading" Text="Login"
+                HorizontalOptions="CenterAndExpand" />
+            <Button x:Name="google_login_button" Text="Login With Google" Clicked="loginGoogle"/>
+            <Button Text="Sign Up" Clicked="btn_signup_Clicked"/>
+            <Button Text="Login with facebook" Clicked="loginFacebook"/>
+        </StackLayout>
+    </ContentPage.Content>-->
     <ContentPage.BindingContext>
         <local:LoginViewModel />
     </ContentPage.BindingContext>
@@ -30,6 +39,6 @@
         <Button
             Text="FB Logout - backup"
             Command="{Binding FacebookLogoutCmd}" />
-    </StackLayout>
+    </StackLayout> 
 
 </ContentPage>

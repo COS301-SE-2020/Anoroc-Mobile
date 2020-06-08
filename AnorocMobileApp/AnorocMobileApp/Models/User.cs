@@ -13,7 +13,9 @@ namespace AnorocMobileApp.Models
         public string UserName { get; set; }
         public string Password { get; set; }
 
-
+        public string UserID { get; set; }
+        public string AccessToken { get; set; }
+        public string UserSurname { get; set; }
         public User(string _email, string _username, string _password) 
         {
             this.Email = _email;
