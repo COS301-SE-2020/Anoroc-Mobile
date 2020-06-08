@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Login;
@@ -27,6 +28,13 @@ namespace AnorocMobileApp.Droid.Resources.services
             // TODO: Stop tracking
             myAccessTokenTracker.StartTracking();
             Profile profile = Profile.CurrentProfile;
+            User.loggedInFacebook = true;
+        }
+
+        public bool isLoggedIn()
+        {
+            Xamarin.Facebook.AccessToken accessToken =  Xamarin.Facebook.AccessToken.CurrentAccessToken;
+            return accessToken != null;
         }
 
         public string AccessToken => Xamarin.Facebook.AccessToken.CurrentAccessToken?.Token;
@@ -34,7 +42,6 @@ namespace AnorocMobileApp.Droid.Resources.services
         public string FirstName => Profile.CurrentProfile.FirstName;
         public string UserID => Profile.CurrentProfile.Id;
         public string LastName => Profile.CurrentProfile.LastName;
-      
         public void Logout()
         {
             LoginManager.Instance.LogOut();

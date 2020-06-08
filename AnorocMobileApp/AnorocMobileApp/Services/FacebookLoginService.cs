@@ -14,5 +14,6 @@ namespace AnorocMobileApp.Services
         string AccessToken { get; }
         Action<string, string> AccessTokenChanged { get; set; }
         void Logout();
+        bool isLoggedIn();
     }
 }

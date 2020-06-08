@@ -28,6 +28,13 @@ namespace AnorocMobileApp.Models
             facebookLoginService = (Application.Current as App).FacebookLoginService;
             facebookLoginService.AccessTokenChanged = (string oldToken, string newToken) => FacebookLogoutCmd.ChangeCanExecute();
 
+            //Test if the user has logged in already
+            if(facebookLoginService.isLoggedIn())
+            {
+                Login.FacebookLoggedInAlready(facebookLoginService);
+            }
+
+
             FacebookLogoutCmd = new Command(() =>
                 facebookLoginService.Logout(),
                 () => !string.IsNullOrEmpty(facebookLoginService.AccessToken));
@@ -46,8 +53,8 @@ namespace AnorocMobileApp.Models
         {
             await (Application.Current as App).MainPage.DisplayAlert(title, authToken, "OK");
             await (Application.Current as App).MainPage.DisplayAlert(title, facebookLoginService.FirstName, "OK");
-          
-            Login.FacebookSuccess(title, authToken);
+            User.loggedInFacebook = true;
+            Login.FacebookSuccess(title, authToken, facebookLoginService);
         }
 
         public async void GetUserDetailsAsync(string accessToken)

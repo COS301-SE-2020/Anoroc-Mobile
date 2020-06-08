@@ -19,6 +19,7 @@ namespace AnorocMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
+        IFacebookLoginService facebookLoginService;
         public Login()
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace AnorocMobileApp.Views
         {
             login_heading.Text = "Clicked worked";
             loginSuccessfull();
+        }
+
+        public static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
+        {
+            Application.Current.MainPage = new HomePage(facebookLoginService);
         }
 
         private void loginSuccessfull()
@@ -74,10 +80,10 @@ namespace AnorocMobileApp.Views
             }
         }*/
 
-        public static void FacebookSuccess(string title, string msg)
+        public static void FacebookSuccess(string title, string msg, IFacebookLoginService facebookLoginService)
         {
            
-            Application.Current.MainPage = new HomePage();
+            Application.Current.MainPage = new HomePage(facebookLoginService);
         }
 
         private async void btn_signup_Clicked(object sender, EventArgs e)

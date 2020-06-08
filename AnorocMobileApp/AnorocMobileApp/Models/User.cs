@@ -9,24 +9,21 @@ namespace AnorocMobileApp.Models
     {
         private SignUpService signUpService = new SignUpService();
 
-        public string Email { get; set; }
-        public string UserName { get; set; }
+        public static string Email { get; set; }
+        public static string UserName { get; set; }
         public string Password { get; set; }
 
-        public string UserID { get; set; }
-        public string AccessToken { get; set; }
-        public string UserSurname { get; set; }
-        public User(string _email, string _username, string _password) 
-        {
-            this.Email = _email;
-            this.UserName = _username;
-            this.Password = _password;
-        }
+        public static string UserID { get; set; }
+        public static string AccessToken { get; set; }
+        public static string UserSurname { get; set; }
+
+        public static bool loggedInFacebook { get; set; }
+        public static bool loggedInGoogle { get; set; }
+        public static bool loggedInAnoroc { get; set; }
+
         public User()
         {
-            this.Email = "";
-            this.UserName = "";
-            this.Password = "";
+          
         }
 
         private void EncryptPassword()
@@ -34,9 +31,5 @@ namespace AnorocMobileApp.Models
             //ecrypt using sha-256?
         }
 
-        public override string ToString()
-        {
-            return "User Email: " + this.Email + ", User Name: " + this.UserName; 
-        }
     }
 }

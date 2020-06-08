@@ -1,4 +1,5 @@
-﻿using AnorocMobileApp.Services;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
 using System;
 using Xamarin.Forms;
@@ -15,8 +16,18 @@ namespace AnorocMobileApp
             InitializeComponent();
 
             FacebookLoginService = facebookLoginService;
-
-            MainPage = new NavigationPage(new Login());
+            if(facebookLoginService.isLoggedIn())
+            {
+                User.UserName = facebookLoginService.FirstName;
+                User.UserSurname = facebookLoginService.LastName;
+                User.UserID = facebookLoginService.UserID;
+                User.loggedInFacebook = true;
+                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Login());
+            }
         }
 
         /*public App()
