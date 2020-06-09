@@ -1,8 +1,19 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AnorocMobileApp.Views.SettingsPage">
     <ContentPage.Content>
-<Switch IsToggled="false"
-
-        />
+      <Grid VerticalOptions="Center" Margin="20">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="60"/>
+    </Grid.RowDefinitions>
+    <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
+        <Label.FontFamily>
+            <OnPlatform x:TypeArguments="x:String">
+                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+            </OnPlatform>
+        </Label.FontFamily>
+    </Label>
+<Switch IsToggled="False"/>  
+</Grid> 
     </ContentPage.Content>
 </ContentPage>
+
