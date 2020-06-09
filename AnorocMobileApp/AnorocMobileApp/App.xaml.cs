@@ -30,6 +30,11 @@ namespace AnorocMobileApp
             }
         }
 
+        public App()
+        {
+            MainPage = new NavigationPage(new Login());
+        }
+
         /*public App()
         {
             InitializeComponent();

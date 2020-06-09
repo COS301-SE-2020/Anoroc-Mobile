@@ -1,4 +1,5 @@
 ﻿using AnorocMobileApp.Services;
+using AnorocMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -22,13 +23,21 @@ namespace AnorocMobileApp.Models
         public static bool loggedInAnoroc { get; set; }
 
         public User()
-        {
-          
+        { 
         }
 
-        private void EncryptPassword()
+        public void register()
+        {
+            if(signUpService.registerUser(EncryptPassword()))
+            {
+                SignupPage.registerSuccessfull();
+            }
+        }
+
+        private string EncryptPassword()
         {
             //ecrypt using sha-256?
+            return "";
         }
 
     }

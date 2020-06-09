@@ -17,7 +17,7 @@ namespace AnorocMobileApp.Models
     public class LoginViewModel
     {
         public UserDetails userDetails = null;
-        readonly IFacebookLoginService facebookLoginService;
+        public readonly IFacebookLoginService facebookLoginService;
 
         public Command FacebookLogoutCmd { get; }
         public ICommand OnFacebookLoginSuccessCmd { get; }
@@ -49,10 +49,8 @@ namespace AnorocMobileApp.Models
                 () => DisplayAlert("Cancel", "Authentication cancelled by the user."));
         }
 
-        async void Success(string title, string authToken)
+        public void Success(string title, string authToken)
         {
-            await (Application.Current as App).MainPage.DisplayAlert(title, authToken, "OK");
-            await (Application.Current as App).MainPage.DisplayAlert(title, facebookLoginService.FirstName, "OK");
             User.loggedInFacebook = true;
             Login.FacebookSuccess(title, authToken, facebookLoginService);
         }
@@ -68,7 +66,7 @@ namespace AnorocMobileApp.Models
             await (Application.Current as App).MainPage.DisplayAlert("User details", userDetails.ToString(), "OK");
         }
 
-        void DisplayAlert(string title, string msg)
+        public void DisplayAlert(string title, string msg)
         {
             (Application.Current as App).MainPage.DisplayAlert(title, msg, "OK");
         }

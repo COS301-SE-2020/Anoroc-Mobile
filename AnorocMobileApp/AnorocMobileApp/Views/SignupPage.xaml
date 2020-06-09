@@ -17,6 +17,8 @@
                 <Grid Padding="5"/>
                 <Entry x:Name="UsersName" Placeholder="Name..." />
                 <Grid Padding="5"/>
+                <Entry x:Name="UserSurname" Placeholder="Surname..." />
+                <Grid Padding="5"/>
                 <Entry x:Name="Password" Placeholder="Password..." IsPassword="true"/>
                 <Grid Padding="5"/>
                 <Entry x:Name="ConfrimPassword" Placeholder="Confirm Password..." IsPassword="true"/>
