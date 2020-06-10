@@ -28,7 +28,7 @@ namespace AnorocMobileApp.Droid.Resources.services
             // TODO: Stop tracking
             myAccessTokenTracker.StartTracking();
             Profile profile = Profile.CurrentProfile;
-            User.loggedInFacebook = true;
+            //User.loggedInFacebook = true;
         }
 
         public bool isLoggedIn()
@@ -44,6 +44,7 @@ namespace AnorocMobileApp.Droid.Resources.services
         public string LastName => Profile.CurrentProfile.LastName;
         public void Logout()
         {
+            myAccessTokenTracker.StopTracking();
             LoginManager.Instance.LogOut();
         }
     }

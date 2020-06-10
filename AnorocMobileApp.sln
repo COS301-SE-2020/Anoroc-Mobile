@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnorocMobileApp.Android", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnorocMobileApp.iOS", "AnorocMobileApp\AnorocMobileApp.iOS\AnorocMobileApp.iOS.csproj", "{22490C34-6E89-481F-97F1-C88B842B98A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnorocMobileApp", "AnorocMobileApp\AnorocMobileApp\AnorocMobileApp.csproj", "{C0E2BFFB-0A57-4B2C-9E22-EF660B943E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnorocMobileApp", "AnorocMobileApp\AnorocMobileApp\AnorocMobileApp.csproj", "{C0E2BFFB-0A57-4B2C-9E22-EF660B943E42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
