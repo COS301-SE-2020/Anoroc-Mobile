@@ -33,9 +33,13 @@ namespace AnorocMobileApp.Views
 
         private void logout(object sender, EventArgs e)
         {
-            if(FacebookLoginService != null)
+            if(User.loggedInFacebook)
             {
                 FacebookLoginService.Logout();
+                Application.Current.MainPage = new NavigationPage(new Login());
+            }
+            else if(User.loggedInAnoroc)
+            {
                 Application.Current.MainPage = new NavigationPage(new Login());
             }
         }
