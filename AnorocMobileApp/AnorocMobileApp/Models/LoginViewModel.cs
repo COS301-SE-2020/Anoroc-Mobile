@@ -40,7 +40,7 @@ namespace AnorocMobileApp.Models
                 () => !string.IsNullOrEmpty(facebookLoginService.AccessToken));
 
             OnFacebookLoginSuccessCmd = new Command<string>(
-                (authToken) => Success("Success", $"Authentication succeed: { authToken }"));
+                (authToken) => Success("Success", authToken));
 
             OnFacebookLoginErrorCmd = new Command<string>(
                 (err) => DisplayAlert("Error", $"Authentication failed: { err }"));
@@ -49,21 +49,11 @@ namespace AnorocMobileApp.Models
                 () => DisplayAlert("Cancel", "Authentication cancelled by the user."));
         }
 
-        public void Success(string title, string authToken)
+        public async void Success(string title, string authToken)
         {
             User.loggedInFacebook = true;
+            await LoginService.GetUserEmailAsync(authToken);
             Login.FacebookSuccess(title, authToken, facebookLoginService);
-        }
-
-        public async void GetUserDetailsAsync(string accessToken)
-        {
-            var httpClient = new HttpClient();
-
-            var json = await httpClient.GetStringAsync(
-                $"https://graph.facebook.com/me?fields=email&name&access_token={accessToken}");
-
-            userDetails = JsonConvert.DeserializeObject<UserDetails>(json);
-            await (Application.Current as App).MainPage.DisplayAlert("User details", userDetails.ToString(), "OK");
         }
 
         public void DisplayAlert(string title, string msg)

@@ -3,6 +3,7 @@ using AnorocMobileApp.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Models
 {
@@ -26,9 +27,10 @@ namespace AnorocMobileApp.Models
         { 
         }
 
-        public void register()
+        public async void registerAsync()
         {
-            if(signUpService.registerUser(EncryptPassword()))
+            bool registered = await signUpService.registerUserAsync(EncryptPassword());
+            if(registered)
             {
                 SignupPage.registerSuccessfull();
             }
@@ -37,6 +39,11 @@ namespace AnorocMobileApp.Models
         private string EncryptPassword()
         {
             //ecrypt using sha-256?
+            return "";
+        }
+
+        public static async Task<string> GetUserEmail()
+        {
             return "";
         }
 

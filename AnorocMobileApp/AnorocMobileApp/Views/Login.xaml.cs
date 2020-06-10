@@ -81,8 +81,7 @@ namespace AnorocMobileApp.Views
         }*/
 
         public static void FacebookSuccess(string title, string msg, IFacebookLoginService facebookLoginService)
-        {
-           
+        { 
             Application.Current.MainPage = new HomePage(facebookLoginService);
         }
 

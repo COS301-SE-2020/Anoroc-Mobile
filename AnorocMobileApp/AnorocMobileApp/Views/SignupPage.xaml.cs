@@ -50,7 +50,7 @@ namespace AnorocMobileApp.Views
                                         User.loggedInAnoroc = true;
                                         user = new User();
                                         user.Password = Password.Text;
-                                        user.register();
+                                        user.registerAsync();
                                     }
                                     else
                                         DisplayAlert("Passwords Don't Match", "Please ensure your passwords are correct.");
