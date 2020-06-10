@@ -2576,6 +2576,12 @@
   },
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    },
+    {
       "code": "NU1202",
       "level": "Error",
       "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
