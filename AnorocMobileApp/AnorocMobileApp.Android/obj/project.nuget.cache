@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H3xPmGIqQg9+Xy0VzM9afC9/b4XpL9/e84L5iudhz+y9DBaEnwtYZWxHQyn9jshAYgFvw34PqirAc6wrA/ZrQg==",
+  "dgSpecHash": "aSG5PkPyfJ72zIRI5a7TkSUC7iavpCBU9tY4XJH70yua9d+NAVDPzqwI2lcggsvUkzY9P5W20Cwj0oPZfAlLvw==",
   "success": true,
-  "projectFilePath": "E:\\Google Drive\\University\\COS 301 Anoroc Files\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
+  "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
   "expectedPackageFiles": [
     "E:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "E:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
