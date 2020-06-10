@@ -1,18 +1,7 @@
-﻿using AnorocMobileApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Auth;
+﻿using System;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Services;
-using System.Net.Http;
-using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Views
 {

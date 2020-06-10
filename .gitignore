@@ -73,7 +73,7 @@ caketools/
 .idea
 Visual Studio 2019/**
 build/packages
-AnorocMobileApp/AnorocMobileApp.Android/obj/
+AnorocMobileApp/AnorocMobileApp.Android/obj
 AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj.user
-AnorocMobileApp/AnorocMobileApp.iOS/obj/
-AnorocMobileApp/AnorocMobileApp/obj/
+AnorocMobileApp/AnorocMobileApp.iOS/obj
+AnorocMobileApp/AnorocMobileApp/obj

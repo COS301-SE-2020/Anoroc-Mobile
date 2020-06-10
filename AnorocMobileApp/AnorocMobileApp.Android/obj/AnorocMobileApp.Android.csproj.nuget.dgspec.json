@@ -104,10 +104,6 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "Microsoft.AspNet.WebPages": {
-              "target": "Package",
-              "version": "[3.2.7, )"
-            },
             "Microsoft.AspNetCore.Authentication.Core": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -117,6 +113,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
