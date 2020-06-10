@@ -7,9 +7,17 @@
              x:Class="AnorocMobileApp.Views.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Anoroc"
+            <Label
+                x:Name="lblTitle"
+                Text="Anoroc"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Label
+                x:Name="lblAnorocHeading"
+                Text="Anoroc"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Logout" Clicked="logout"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

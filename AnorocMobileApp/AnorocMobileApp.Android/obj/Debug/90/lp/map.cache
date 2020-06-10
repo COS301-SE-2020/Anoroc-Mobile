@@ -1,4 +1,7 @@
+Bolts.AppLinks
+Bolts.Tasks
 FormsViewGroup
+Google.ZXing.Core
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -38,5 +41,13 @@ Xamarin.Android.Support.VersionedParcelable
 Xamarin.Android.Support.ViewPager
 Xamarin.Auth
 Xamarin.Essentials
+Xamarin.Facebook.Android
+Xamarin.Facebook.AppLinks.Android
+Xamarin.Facebook.Common.Android
+Xamarin.Facebook.Core.Android
+Xamarin.Facebook.Login.Android
+Xamarin.Facebook.Messenger.Android
+Xamarin.Facebook.Places.Android
+Xamarin.Facebook.Share.Android
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
