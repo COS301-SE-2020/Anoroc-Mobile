@@ -2,6 +2,10 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Services;
+using System.Net.Http;
+using System.Text;
+using AnorocMobileApp.Models;
+using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Views
 {
