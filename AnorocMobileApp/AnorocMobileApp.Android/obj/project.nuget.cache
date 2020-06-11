@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QqoB8MkryZ4A6aMBnjXApiYDsGjkYp6oJFhPRG+2Qpf1Gql5N/sM+0KxMvLEr2H3ncs2sJ2u3sqprQVaKKH3DQ==",
+  "dgSpecHash": "kpIHbBpdd08lBDvwTvTECjSgma1QGCG2uLWNMjY4VDuPNgFNj3+Jpft9NZfHvfeOS9tqDDE9BUG+W1gP99igjg==",
   "success": true,
   "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
   "expectedPackageFiles": [
@@ -20,7 +20,6 @@
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "E:\\Microsoft\\Xamarin\\NuGet\\nunit\\3.12.0\\nunit.3.12.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",

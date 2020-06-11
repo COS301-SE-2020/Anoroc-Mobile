@@ -45,8 +45,8 @@ E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMob
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\Views\SignupPage.xaml.g.cs
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.AssemblyInfoInputs.cache
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.AssemblyInfo.cs
+E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.csproj.CoreCompileInputs.cache
+E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\XamlC.stamp
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.dll
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\ref\AnorocMobileApp.dll
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.pdb
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.csproj.CoreCompileInputs.cache
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\XamlC.stamp

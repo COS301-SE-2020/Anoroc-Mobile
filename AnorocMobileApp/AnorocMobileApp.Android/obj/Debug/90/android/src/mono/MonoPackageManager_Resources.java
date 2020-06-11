@@ -23,7 +23,6 @@ public class MonoPackageManager_Resources {
 		"Microsoft.Extensions.Primitives.dll",
 		"Microsoft.Net.Http.Headers.dll",
 		"Newtonsoft.Json.dll",
-		"nunit.framework.dll",
 		"System.Text.Encodings.Web.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",
