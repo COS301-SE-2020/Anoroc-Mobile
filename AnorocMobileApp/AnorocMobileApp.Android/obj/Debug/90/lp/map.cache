@@ -51,3 +51,8 @@ Xamarin.Facebook.Places.Android
 Xamarin.Facebook.Share.Android
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
+Xamarin.GooglePlayServices.Base
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Maps
+Xamarin.GooglePlayServices.Tasks
+Xamarin.Forms.Maps.Android
