@@ -45,5 +45,12 @@
     "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

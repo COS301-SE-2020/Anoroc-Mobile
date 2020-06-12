@@ -3,6 +3,5 @@
   <PropertyGroup>
     <SelectedDevice>Pixel_2_ARM_Ver</SelectedDevice>
     <DefaultDevice>Pixel_2_ARM_Ver</DefaultDevice>
-    <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>
