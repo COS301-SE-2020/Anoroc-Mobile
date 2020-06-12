@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "M9W5btXg6R50PpetpHHuIPbqOYoUdfC5BSTsmkQ1vM9oi0yQqjKqDAiWU8FPgwi5/F5wEmqBbNSpwzKFS1jc/g==",
+  "dgSpecHash": "8p8WGrc5YNJevakgv7hEZs8QL9rsbGzRBtIDVpChBGmh1OZ4eo9Ui6wvo3pwQDNBH3cReu1gKkmKxt7XfD5sGA==",
   "success": true,
   "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
   "expectedPackageFiles": [
@@ -78,7 +78,12 @@
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.google.zxing.core\\3.3.3\\xamarin.google.zxing.core.3.3.3.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.base\\71.1610.1\\xamarin.googleplayservices.base.71.1610.1.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.basement\\71.1620.2\\xamarin.googleplayservices.basement.71.1620.2.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.gcm\\71.1600.1\\xamarin.googleplayservices.gcm.71.1600.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.iid\\71.1600.1\\xamarin.googleplayservices.iid.71.1600.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.location\\71.1600.1\\xamarin.googleplayservices.location.71.1600.1.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.maps\\71.1610.1\\xamarin.googleplayservices.maps.71.1610.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.places.placereport\\71.1600.1\\xamarin.googleplayservices.places.placereport.71.1600.1.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.stats\\71.1601.1\\xamarin.googleplayservices.stats.71.1601.1.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.1\\xamarin.googleplayservices.tasks.71.1601.1.nupkg.sha512"
   ],
   "logs": []

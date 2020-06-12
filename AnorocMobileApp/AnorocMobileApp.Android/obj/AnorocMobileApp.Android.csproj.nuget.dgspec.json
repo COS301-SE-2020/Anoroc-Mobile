@@ -66,9 +66,29 @@
               "target": "Package",
               "version": "[4.6.0.847, )"
             },
+            "Xamarin.GooglePlayServices.Base": {
+              "target": "Package",
+              "version": "[71.1610.1, )"
+            },
+            "Xamarin.GooglePlayServices.Basement": {
+              "target": "Package",
+              "version": "[71.1620.2, )"
+            },
+            "Xamarin.GooglePlayServices.Gcm": {
+              "target": "Package",
+              "version": "[71.1600.1, )"
+            },
+            "Xamarin.GooglePlayServices.Location": {
+              "target": "Package",
+              "version": "[71.1600.1, )"
+            },
             "Xamarin.GooglePlayServices.Maps": {
               "target": "Package",
               "version": "[71.1610.1, )"
+            },
+            "Xamarin.GooglePlayServices.Tasks": {
+              "target": "Package",
+              "version": "[71.1601.1, )"
             }
           }
         }
