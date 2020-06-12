@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.HomePage">
     <ContentPage Title="Home"/>
+
     <ContentPage Title="Map"/>
     <ContentPage Title="Profile"/>
     <ContentPage Title="Settings"/>

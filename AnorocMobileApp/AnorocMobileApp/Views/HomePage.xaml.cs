@@ -15,6 +15,7 @@ namespace AnorocMobileApp.Views
         public HomePage()
         {
             InitializeComponent();
+
         }
     }
 }
