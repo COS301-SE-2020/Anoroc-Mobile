@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "8p8WGrc5YNJevakgv7hEZs8QL9rsbGzRBtIDVpChBGmh1OZ4eo9Ui6wvo3pwQDNBH3cReu1gKkmKxt7XfD5sGA==",
+=======
+  "dgSpecHash": "grlmd+kTtG/OT8H/tg8CoJTU54Bf1kIP37llX9HL2a7NWKo3JRkvs/wvqpx5RGgHG3vgLYX4jc6knA3gAgya2A==",
+>>>>>>> feature/navigationDrawer
   "success": true,
   "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
   "expectedPackageFiles": [
@@ -65,6 +69,7 @@
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.build.download\\0.7.0\\xamarin.build.download.0.7.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.facebook.android\\5.11.2\\xamarin.facebook.android.5.11.2.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.facebook.applinks.android\\5.11.2\\xamarin.facebook.applinks.android.5.11.2.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.facebook.common.android\\5.11.2\\xamarin.facebook.common.android.5.11.2.nupkg.sha512",
@@ -85,6 +90,9 @@
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.places.placereport\\71.1600.1\\xamarin.googleplayservices.places.placereport.71.1600.1.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.stats\\71.1601.1\\xamarin.googleplayservices.stats.71.1601.1.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.googleplayservices.tasks\\71.1601.1\\xamarin.googleplayservices.tasks.71.1601.1.nupkg.sha512"
+=======
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+>>>>>>> feature/navigationDrawer
   ],
   "logs": []
 }

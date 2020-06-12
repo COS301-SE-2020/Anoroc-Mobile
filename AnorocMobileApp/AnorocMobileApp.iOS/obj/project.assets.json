@@ -404,8 +404,12 @@
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
+<<<<<<< HEAD
           "Xamarin.Forms": "4.6.0.847",
           "Xamarin.Forms.Maps": "4.6.0.847"
+=======
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "compile": {
           "bin/placeholder/AnorocMobileApp.dll": {}
@@ -818,8 +822,12 @@
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
+<<<<<<< HEAD
           "Xamarin.Forms": "4.6.0.847",
           "Xamarin.Forms.Maps": "4.6.0.847"
+=======
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "compile": {
           "bin/placeholder/AnorocMobileApp.dll": {}
@@ -1319,7 +1327,13 @@
       "Microsoft.AspNetCore.Http.Features/2.2.0": {
         "type": "package",
         "dependencies": {
+<<<<<<< HEAD
           "Microsoft.Extensions.Primitives": "2.2.0"
+=======
+          "Xamarin.Auth": "1.7.0",
+          "Xamarin.Essentials": "1.5.3.2",
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll": {}
@@ -1646,8 +1660,12 @@
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
+<<<<<<< HEAD
           "Xamarin.Forms": "4.6.0.847",
           "Xamarin.Forms.Maps": "4.6.0.847"
+=======
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "compile": {
           "bin/placeholder/AnorocMobileApp.dll": {}
@@ -2492,8 +2510,12 @@
       "Microsoft.AspNetCore.Authentication.Core >= 2.2.0",
       "Xamarin.Auth >= 1.7.0",
       "Xamarin.Essentials >= 1.5.3.2",
+<<<<<<< HEAD
       "Xamarin.Forms >= 4.6.0.847",
       "Xamarin.Forms.Maps >= 4.6.0.847"
+=======
+      "Xamarin.Forms >= 4.6.0.847"
+>>>>>>> feature/navigationDrawer
     ]
   },
   "packageFolders": {
@@ -2553,10 +2575,13 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.6.0.847, )"
+<<<<<<< HEAD
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
             "version": "[4.6.0.847, )"
+=======
+>>>>>>> feature/navigationDrawer
           }
         }
       }

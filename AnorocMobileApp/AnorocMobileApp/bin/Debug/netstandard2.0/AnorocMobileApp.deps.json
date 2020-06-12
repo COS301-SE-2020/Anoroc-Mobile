@@ -14,8 +14,12 @@
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
+<<<<<<< HEAD
           "Xamarin.Forms": "4.6.0.847",
           "Xamarin.Forms.Maps": "4.6.0.847"
+=======
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "runtime": {
           "AnorocMobileApp.dll": {}
@@ -282,6 +286,7 @@
           "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "4.6.0.487"
+<<<<<<< HEAD
           }
         }
       },
@@ -293,6 +298,8 @@
           "lib/netstandard2.0/Xamarin.Forms.Maps.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "4.6.0.487"
+=======
+>>>>>>> feature/navigationDrawer
           }
         }
       }
@@ -480,6 +487,7 @@
       "hashPath": "xamarin.essentials.1.5.3.2.nupkg.sha512"
     },
     "Xamarin.Forms/4.6.0.847": {
+<<<<<<< HEAD
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xUUgs1/xDdS9I/oN2UkdRwd/YToqg0qhwIK8yvyJJ2Xbhsc1ssV4/DUICdjuwCttzeiAcrhILqD+0BQhifUfxw==",
@@ -492,6 +500,13 @@
       "sha512": "sha512-NctPp0sdkAnSElZKAt3b7JG7IOm04l0mjwHtUs3zwyw2P3T+ljLoY8yq9RyswrhPKiWaOcNdRbQA7Jtey1cfOA==",
       "path": "xamarin.forms.maps/4.6.0.847",
       "hashPath": "xamarin.forms.maps.4.6.0.847.nupkg.sha512"
+=======
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xUUgs1/xDdS9I/oN2UkdRwd/YToqg0qhwIK8yvyJJ2Xbhsc1ssV4/DUICdjuwCttzeiAcrhILqD+0BQhifUfxw==",
+      "path": "xamarin.forms/4.6.0.847",
+      "hashPath": "xamarin.forms.4.6.0.847.nupkg.sha512"
+>>>>>>> feature/navigationDrawer
     }
   }
 }

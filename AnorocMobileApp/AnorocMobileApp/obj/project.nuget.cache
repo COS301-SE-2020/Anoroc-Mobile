@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "bkzW1Oqrb9JOe/USLY1A5jqjimmV7rBUVu8dBd5mCvf6mNGEx1rF9pCqvkDmoBm49ATwjhAPN/ErsYiLIZPUXg==",
+=======
+  "dgSpecHash": "3tIz7qlzE5OS0YOoW2mjx+h+x7zuyiCXmFtwm0WxrumEKz7iwqbig/E/ST0ztUFNIk5OnvJ6hFgW8VbIV7SP1w==",
+>>>>>>> feature/navigationDrawer
   "success": true,
   "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
   "expectedPackageFiles": [
@@ -29,8 +33,12 @@
     "C:\\Users\\Andre\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+<<<<<<< HEAD
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.847\\xamarin.forms.maps.4.6.0.847.nupkg.sha512"
+=======
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+>>>>>>> feature/navigationDrawer
   ],
   "logs": []
 }

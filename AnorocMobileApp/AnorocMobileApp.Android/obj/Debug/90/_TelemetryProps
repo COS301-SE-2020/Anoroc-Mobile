@@ -23,6 +23,10 @@ AndroidDexTool=d8
 AndroidLinkTool=
 AndroidEnableProfiledAot=
 AndroidInstallAfterBuild=True
+<<<<<<< HEAD
 AndroidSessionId=aa0b00a0-8eb3-47aa-8040-6774c16ab9ff
+=======
+AndroidSessionId=5fde2075-1d70-4ac8-bbb2-28356cdff90b
+>>>>>>> feature/navigationDrawer
 BuildConfiguration=Debug
 TemplateName={c9e5eea5-ca05-42a1-839b-61506e0a37df}

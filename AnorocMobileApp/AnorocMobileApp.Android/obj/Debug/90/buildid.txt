@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 d5136ed5-63c8-4b24-b15f-35dbeeeed8dd
+=======
+33380bd7-87f3-4b4d-b10b-1a8cb7fffcb7
+>>>>>>> feature/navigationDrawer

@@ -24,5 +24,9 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
+<<<<<<< HEAD
 _nugetassetstimestamp=637275760720855476
+=======
+_nugetassetstimestamp=637275776289609140
+>>>>>>> feature/navigationDrawer
 typemapkind=strings-asm

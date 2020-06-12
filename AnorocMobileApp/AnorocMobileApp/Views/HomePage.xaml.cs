@@ -12,12 +12,13 @@ using Xamarin.Forms.Xaml;
 namespace AnorocMobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class HomePage : TabbedPage
     {
         public IFacebookLoginService FacebookLoginService { get; private set; }
         public HomePage()
         {
             InitializeComponent();
+<<<<<<< HEAD
             
         }
         public HomePage(IFacebookLoginService facebookLoginService)
@@ -42,6 +43,9 @@ namespace AnorocMobileApp.Views
             {
                 Application.Current.MainPage = new NavigationPage(new Login());
             }
+=======
+
+>>>>>>> feature/navigationDrawer
         }
     }
 }

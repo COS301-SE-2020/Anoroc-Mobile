@@ -3,6 +3,9 @@
   <PropertyGroup>
     <SelectedDevice>Pixel_2_API_28</SelectedDevice>
     <DefaultDevice>Pixel_2_API_28</DefaultDevice>
+<<<<<<< HEAD
     <AndroidDesignerPreferredTheme>Theme.AppCompat.Light.NoActionBar</AndroidDesignerPreferredTheme>
+=======
+>>>>>>> feature/navigationDrawer
   </PropertyGroup>
 </Project>

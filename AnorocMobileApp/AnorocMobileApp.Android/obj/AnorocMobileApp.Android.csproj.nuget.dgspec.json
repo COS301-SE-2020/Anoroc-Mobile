@@ -61,6 +61,7 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.6.0.847, )"
+<<<<<<< HEAD
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
@@ -89,6 +90,8 @@
             "Xamarin.GooglePlayServices.Tasks": {
               "target": "Package",
               "version": "[71.1601.1, )"
+=======
+>>>>>>> feature/navigationDrawer
             }
           }
         }
@@ -157,10 +160,13 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.6.0.847, )"
+<<<<<<< HEAD
             },
             "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.6.0.847, )"
+=======
+>>>>>>> feature/navigationDrawer
             }
           },
           "imports": [

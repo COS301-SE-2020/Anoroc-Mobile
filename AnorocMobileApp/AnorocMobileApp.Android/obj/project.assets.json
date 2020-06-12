@@ -1022,6 +1022,7 @@
           "lib/monoandroid90/Xamarin.Essentials.dll": {}
         }
       },
+<<<<<<< HEAD
       "Xamarin.Facebook.Android/5.11.2": {
         "type": "package",
         "dependencies": {
@@ -1163,6 +1164,8 @@
           "lib/monoandroid90/Xamarin.Facebook.Share.Android.dll": {}
         }
       },
+=======
+>>>>>>> feature/navigationDrawer
       "Xamarin.Forms/4.6.0.847": {
         "type": "package",
         "dependencies": {
@@ -1410,8 +1413,12 @@
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
+<<<<<<< HEAD
           "Xamarin.Forms": "4.6.0.847",
           "Xamarin.Forms.Maps": "4.6.0.847"
+=======
+          "Xamarin.Forms": "4.6.0.847"
+>>>>>>> feature/navigationDrawer
         },
         "compile": {
           "bin/placeholder/AnorocMobileApp.dll": {}
@@ -2679,6 +2686,7 @@
         "xamarin.essentials.nuspec"
       ]
     },
+<<<<<<< HEAD
     "Xamarin.Facebook.Android/5.11.2": {
       "sha512": "ZCzxIKlWcDq14znmYUBNvkgfLIXKw9E9JaHcCoOwd5wtQe8VGtO0TtD9roJ0xNVXMQ92Na4nfE0guUL5ZHEOlw==",
       "type": "package",
@@ -2786,6 +2794,11 @@
     "Xamarin.Forms/4.6.0.847": {
       "sha512": "xUUgs1/xDdS9I/oN2UkdRwd/YToqg0qhwIK8yvyJJ2Xbhsc1ssV4/DUICdjuwCttzeiAcrhILqD+0BQhifUfxw==",
       "type": "package",
+=======
+    "Xamarin.Forms/4.6.0.847": {
+      "sha512": "xUUgs1/xDdS9I/oN2UkdRwd/YToqg0qhwIK8yvyJJ2Xbhsc1ssV4/DUICdjuwCttzeiAcrhILqD+0BQhifUfxw==",
+      "type": "package",
+>>>>>>> feature/navigationDrawer
       "path": "xamarin.forms/4.6.0.847",
       "files": [
         ".nupkg.metadata",
@@ -3288,6 +3301,7 @@
       "Microsoft.AspNetCore.Authentication.Core >= 2.2.0",
       "Xamarin.Auth >= 1.7.0",
       "Xamarin.Essentials >= 1.5.3.2",
+<<<<<<< HEAD
       "Xamarin.Facebook.Android >= 5.11.2",
       "Xamarin.Forms >= 4.6.0.847",
       "Xamarin.Forms.Maps >= 4.6.0.847",
@@ -3297,6 +3311,9 @@
       "Xamarin.GooglePlayServices.Location >= 71.1600.1",
       "Xamarin.GooglePlayServices.Maps >= 71.1610.1",
       "Xamarin.GooglePlayServices.Tasks >= 71.1601.1"
+=======
+      "Xamarin.Forms >= 4.6.0.847"
+>>>>>>> feature/navigationDrawer
     ]
   },
   "packageFolders": {
@@ -3360,6 +3377,7 @@
           "Xamarin.Forms": {
             "target": "Package",
             "version": "[4.6.0.847, )"
+<<<<<<< HEAD
           },
           "Xamarin.Forms.Maps": {
             "target": "Package",
@@ -3388,6 +3406,8 @@
           "Xamarin.GooglePlayServices.Tasks": {
             "target": "Package",
             "version": "[71.1601.1, )"
+=======
+>>>>>>> feature/navigationDrawer
           }
         }
       }
