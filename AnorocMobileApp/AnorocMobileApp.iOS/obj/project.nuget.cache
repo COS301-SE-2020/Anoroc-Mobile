@@ -1,19 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "h2mrHMB1KNyHgQ2BZnWzXfmegyJul+v/TkX0c5OkL/ZdVqf/hWkg5GsMh1niBRALE88+C3pPx7XSdPtbMB7RJA==",
+  "dgSpecHash": "QWX9gZboS34IlWdnt8DjtTvlt6DDt2MVvPMs+Vnq4uv7ZoyE7YzxmjWDrO6fYt4/1C/NI6G2SJrM2eeztcmDWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
+  "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

@@ -1,22 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "L9GLEp+5v7L9eE7ssgoCIZOP9xNU0AKE00xQWkVTfZoZSQ90vPCa5FSfJGtsOJAQACY2KeI81YC7JezbgkSYwQ==",
+  "dgSpecHash": "3tIz7qlzE5OS0YOoW2mjx+h+x7zuyiCXmFtwm0WxrumEKz7iwqbig/E/ST0ztUFNIk5OnvJ6hFgW8VbIV7SP1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+  "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ronald\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+    "C:\\Users\\Andre\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

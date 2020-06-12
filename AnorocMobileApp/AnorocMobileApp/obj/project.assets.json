@@ -662,23 +662,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ronald\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Andre\\.nuget\\packages\\": {},
+    "E:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+      "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
       "projectName": "AnorocMobileApp",
-      "projectPath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
-      "packagesPath": "C:\\Users\\Ronald\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\",
+      "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+      "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
+        "E:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ronald\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -732,16 +732,8 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
