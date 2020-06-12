@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "1oZH7/rsdoBt2nh4D2LJNJPBh19aRyYd3dVGkq/Es+e9Y8G4Ri12RuAhPvA/PgNuXMPGvrqNPjfPudYIe8McMQ==",
+  "dgSpecHash": "h2mrHMB1KNyHgQ2BZnWzXfmegyJul+v/TkX0c5OkL/ZdVqf/hWkg5GsMh1niBRALE88+C3pPx7XSdPtbMB7RJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
     "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.forms\\4.6.0.800\\xamarin.forms.4.6.0.800.nupkg.sha512"
+    "C:\\Users\\Ronald\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
   ],
   "logs": []
 }
