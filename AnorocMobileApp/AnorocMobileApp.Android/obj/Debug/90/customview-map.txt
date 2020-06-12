@@ -1,27 +1,27 @@
-@string/appbar_scrolling_view_behavior;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\flyoutcontent.xml
-@string/appbar_scrolling_view_behavior;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
+@string/appbar_scrolling_view_behavior;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\flyoutcontent.xml
+@string/appbar_scrolling_view_behavior;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml
 {urn:oasis:names:tc:xliff:document:1.2}g;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\values\values.xml
 {urn:oasis:names:tc:xliff:document:1.2}g;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\47\jl\res\values\values.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
 adaptive-icon;obj\Debug\90\res\mipmap-anydpi-v26\icon_round.xml
-alpha;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\enterfromleft.xml
-alpha;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\exittoleft.xml
-android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
-android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\shellcontent.xml
-android.support.design.widget.BottomNavigationView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\bottomtablayout.xml
-android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\flyoutcontent.xml
-android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
-android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\shellcontent.xml
-android.support.design.widget.TabLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
+alpha;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\enterfromleft.xml
+alpha;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\exittoleft.xml
+android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml
+android.support.design.widget.AppBarLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\shellcontent.xml
+android.support.design.widget.BottomNavigationView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\bottomtablayout.xml
+android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\flyoutcontent.xml
+android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml
+android.support.design.widget.CoordinatorLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\shellcontent.xml
+android.support.design.widget.TabLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml
 android.support.design.widget.TabLayout;obj\Debug\90\res\layout\tabbar.xml
 android.support.v7.widget.AppCompatImageView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
 android.support.v7.widget.AppCompatImageView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
 android.support.v7.widget.CardView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
 android.support.v7.widget.CardView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
-android.support.v7.widget.RecyclerView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\flyoutcontent.xml
-android.support.v7.widget.Toolbar;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
-android.support.v7.widget.Toolbar;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\shellcontent.xml
+android.support.v7.widget.RecyclerView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\flyoutcontent.xml
+android.support.v7.widget.Toolbar;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml
+android.support.v7.widget.Toolbar;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\shellcontent.xml
 android.support.v7.widget.Toolbar;obj\Debug\90\res\layout\toolbar.xml
 attr;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\values\values.xml
 attr;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\47\jl\res\values\values.xml
@@ -62,7 +62,7 @@ FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileA
 FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\layout\messenger_button_send_blue_small.xml
 FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\layout\messenger_button_send_white_large.xml
 FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\layout\messenger_button_send_white_small.xml
-FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\bottomtablayout.xml
+FrameLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\bottomtablayout.xml
 ImageView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\47\jl\res\layout\com_facebook_tooltip_bubble.xml
 item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
 item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_button_background.xml
@@ -77,13 +77,13 @@ item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\Anor
 item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\drawable\com_facebook_button_send_background.xml
 item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\drawable\com_facebook_send_button_icon.xml
 item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\values\values.xml
-item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\values\styles.xml
+item;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\values\styles.xml
 item;obj\Debug\90\res\values\styles.xml
 layer-list;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\drawable\messenger_button_blue_bg_round.xml
 layer-list;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\drawable\messenger_button_white_bg_round.xml
 LinearLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
 LinearLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
-LinearLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\bottomtablayout.xml
+LinearLayout;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\bottomtablayout.xml
 path;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_button_icon.xml
 path;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_favicon_blue.xml
 paths;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\42\jl\res\xml\xamarin_essentials_fileprovider_file_paths.xml
@@ -191,7 +191,7 @@ resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp
 resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\47\jl\res\values-zh-rTW\values-zh-rTW.xml
 resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\values\values.xml
 resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\values\values.xml
-resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\values\styles.xml
+resources;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\values\styles.xml
 resources;obj\Debug\90\res\values\colors.xml
 resources;obj\Debug\90\res\values\strings.xml
 resources;obj\Debug\90\res\values\styles.xml
@@ -206,10 +206,10 @@ selector;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\
 selector;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\drawable\com_facebook_send_button_icon.xml
 set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\41\jl\res\anim\slide_in_right.xml
 set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\41\jl\res\anim\slide_out_left.xml
-set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\enterfromleft.xml
-set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\enterfromright.xml
-set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\exittoleft.xml
-set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\exittoright.xml
+set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\enterfromleft.xml
+set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\enterfromright.xml
+set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\exittoleft.xml
+set;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\exittoright.xml
 shape;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_auth_dialog_background.xml
 shape;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_auth_dialog_cancel_background.xml
 shape;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_auth_dialog_header_background.xml
@@ -330,7 +330,7 @@ style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\Ano
 style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\47\jl\res\values\values.xml
 style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\values\values.xml
 style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\50\jl\res\values\values.xml
-style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\values\styles.xml
+style;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\values\styles.xml
 style;obj\Debug\90\res\values\styles.xml
 TextView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_device_auth_dialog_fragment.xml
 TextView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\layout\com_facebook_smart_device_dialog_fragment.xml
@@ -341,11 +341,11 @@ TextView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\
 TextView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\48\jl\res\layout\messenger_button_send_white_small.xml
 translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\41\jl\res\anim\slide_in_right.xml
 translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\41\jl\res\anim\slide_out_left.xml
-translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\enterfromleft.xml
-translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\enterfromright.xml
-translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\exittoleft.xml
-translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\anim\exittoright.xml
+translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\enterfromleft.xml
+translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\enterfromright.xml
+translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\exittoleft.xml
+translate;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\anim\exittoright.xml
 vector;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_button_icon.xml
 vector;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\45\jl\res\drawable\com_facebook_favicon_blue.xml
 WebView;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\41\jl\res\layout\activity_webview.xml
-xamarin.forms.platform.android.appcompat.FormsViewPager;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\51\jl\res\layout\rootlayout.xml
+xamarin.forms.platform.android.appcompat.FormsViewPager;E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.Android\obj\Debug\90\lp\52\jl\res\layout\rootlayout.xml

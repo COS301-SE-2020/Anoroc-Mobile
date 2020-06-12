@@ -1,11 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "wOfP2zQuuhQoOFONIiLeRaVsnZ5wkEvoxYC3TEGQLke6//RjVotJtWWhPXxwF47suQT6N+ibcEmcaTj5WWg5pQ==",
-  "success": false,
+  "dgSpecHash": "2KYJd8rvFcXY1ShCUgRFVkNzVSl0imh8rhyUueRy5rlY2N98+EK/MSvOHjrlk72HBLWAanvdlDDKfSUqKGcp/Q==",
+  "success": true,
   "projectFilePath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Andre\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
-    "C:\\Users\\Andre\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.0\\microsoft.aspnetcore.http.2.2.0.nupkg.sha512",
@@ -20,7 +18,6 @@
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.extensions.options\\2.2.0\\microsoft.extensions.options.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
-    "C:\\Users\\Andre\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",
@@ -29,122 +26,8 @@
     "C:\\Users\\Andre\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.auth\\1.7.0\\xamarin.auth.1.7.0.nupkg.sha512",
     "C:\\Users\\Andre\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512",
+    "C:\\Users\\Andre\\.nuget\\packages\\xamarin.forms.maps\\4.6.0.847\\xamarin.forms.maps.4.6.0.847.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  "logs": []
 }
