@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj": {}
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj": {}
   },
   "projects": {
-    "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj": {
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
+        "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
         "projectName": "AnorocMobileApp.Android",
-        "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj",
-        "packagesPath": "/Users/anika/.nuget/packages/",
-        "outputPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/obj/",
+        "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
+        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+        "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "E:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "/Users/anika/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
-                "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj"
+              "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
+                "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
               }
             }
           }
@@ -40,9 +46,21 @@
               "target": "Package",
               "version": "[1.7.0, )"
             },
+            "Xamarin.Auth": {
+              "target": "Package",
+              "version": "[1.7.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.5.3.2, )"
+            },
+            "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.6.0.800, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
@@ -52,25 +70,28 @@
         }
       }
     },
-    "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj": {
+    "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
+        "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
         "projectName": "AnorocMobileApp",
-        "projectPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/AnorocMobileApp.csproj",
-        "packagesPath": "/Users/anika/.nuget/packages/",
-        "outputPath": "/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/",
+        "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj",
+        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+        "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "E:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "/Users/anika/.config/NuGet/NuGet.Config"
+          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -120,7 +141,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
