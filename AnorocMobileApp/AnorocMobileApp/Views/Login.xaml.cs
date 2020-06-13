@@ -28,21 +28,19 @@ namespace AnorocMobileApp.Views
         private async void loginGoogle(object sender, EventArgs e)
         {
             var authenticator = new OAuth2Authenticator(
-                clientId: "//Key here//.apps.googleusercontent.com",
+                clientId: Constants.clientID,
                 clientSecret: null,
                 scope: "email profile",
                 authorizeUrl: new System.Uri("https://accounts.google.com/o/oauth2/v2/auth"),
-                redirectUrl: new Uri("com.googleusercontent.apps.//Key here//:/oauth2redirect"),
+                redirectUrl: new Uri(Constants.redirectUrl),
                 accessTokenUrl: new Uri("https://www.googleapis.com/oauth2/v4/token"),
                 getUsernameAsync: null,
                 isUsingNativeUI: true
                 );
-       
             authenticator.Completed += OnAuthCompleted;
             authenticator.Error += onAuthError;
 
             AuthenticationState.Authenticator = authenticator;
-
             var presenter = new Xamarin.Auth.Presenters.OAuthLoginPresenter();
             presenter.Login(authenticator);
         }
@@ -59,15 +57,13 @@ namespace AnorocMobileApp.Views
 
             if (obj.IsAuthenticated)
             {
-                await DisplayAlert("Testing", "Auth worked", "OK");
-                await DisplayAlert("Testing", obj.Account.Properties["access_token"], "OK");
+                //await DisplayAlert("Testing", obj.Account.Properties["access_token"], "OK");
                 var clientData = new HttpClient();
-
                 var resData = await clientData.GetAsync("https://www.googleapis.com/oauth2/v3/userinfo?access_token=" + obj.Account.Properties["access_token"]);
                 var json = await resData.Content.ReadAsStringAsync();
-
-                await DisplayAlert("Testing", json, "OK");
-
+                //await DisplayAlert("Testing", json, "OK");
+                var myJObject = JObject.Parse(json);
+                await DisplayAlert("Welcome", (myJObject.SelectToken("name").Value<string>()+"\n"+myJObject.SelectToken("email").Value<string>()), "OK");
                 GoogleAuthClass googleObject = JsonConvert.DeserializeObject<GoogleAuthClass>(json);
                 loginSuccessfull();
             }

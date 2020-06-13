@@ -17,7 +17,7 @@ namespace AnorocMobileApp.Droid
     [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTask)]
     [IntentFilter( new [] { Intent.ActionView }, 
         Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
-        DataSchemes = new[] { "com.googleusercontent.apps.//Key Here//" },
+        DataSchemes = new[] { "com.googleusercontent.apps.//KEY HERE//" },
         DataPath = "/oauth2redirect")]
     public class CustomUrlSchemeInterceptorActivity : Activity
     {
