@@ -497,3 +497,4 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/xamarinstudio,visualstudio,jetbrains+all,rider
+/AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj.user~573fccf461bc6c6791efdd56dce447b87f0c7ffd
