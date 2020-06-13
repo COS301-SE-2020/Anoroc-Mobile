@@ -36,8 +36,7 @@ namespace AnorocMobileApp.Views
                     new System.Uri("https://www.google.com")
                 }*/
 
-            Application.Current.MainPage = new SettingsPage();
-            //Application.Current.MainPage = new HomePage();
+            Application.Current.MainPage = new HomePage();
         }
     }
 }
