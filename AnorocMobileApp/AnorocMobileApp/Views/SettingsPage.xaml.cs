@@ -49,13 +49,14 @@ namespace AnorocMobileApp.Views
                 //await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
+        //"{"+$"'Latitude':'{location.Latitude}', 'Longitude Longitude':'{location.Longitude}','Altitude':'{location.Altitude}'"+"}"
 
         public async void postRequestAsync()
         {
             var location = new Location();
-            var json = JsonConvert.SerializeObject("{"+$"'Latitude':'{location.Latitude}', 'Longitude Longitude':'{location.Longitude}','Altitude':'{location.Altitude}'"+"}");
+            var json = JsonConvert.SerializeObject(location);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            var url = "https://10.0.2.2:5001/location/GEOLocationAsync";
+            var url = "https://10.0.2.2:44384/location/GEOLocationAsync";
             //await DisplayAlert("Attention", "Enabled: " + json, "OK");
             //await DisplayAlert("Attention", "Enabled: " + json, "OK");
 
