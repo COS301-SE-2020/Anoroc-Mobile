@@ -11,6 +11,7 @@ using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
 
+
 namespace AnorocMobileApp.Droid
 {
     [Activity(Label = "AnorocMobileApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
