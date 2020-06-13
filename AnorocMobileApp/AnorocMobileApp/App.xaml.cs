@@ -9,7 +9,7 @@ namespace AnorocMobileApp
 {
     public partial class App : Application
     {
-        readonly bool mapDebug = false;
+        readonly bool mapDebug = true;
         public IFacebookLoginService FacebookLoginService { get; private set; }
 
         public App(IFacebookLoginService facebookLoginService)
