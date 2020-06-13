@@ -2,16 +2,6 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
-      "Microsoft.AspNet.Razor/3.2.7": {
-        "type": "package"
-      },
-      "Microsoft.AspNet.WebPages/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        }
-      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -188,9 +178,6 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package"
-      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -198,6 +185,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NUnit/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -399,8 +401,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNet.WebPages": "3.2.7",
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
+          "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
@@ -415,16 +417,6 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
-      "Microsoft.AspNet.Razor/3.2.7": {
-        "type": "package"
-      },
-      "Microsoft.AspNet.WebPages/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        }
-      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -601,9 +593,6 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package"
-      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -611,6 +600,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NUnit/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -812,8 +816,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNet.WebPages": "3.2.7",
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
+          "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
@@ -828,16 +832,6 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
-      "Microsoft.AspNet.Razor/3.2.7": {
-        "type": "package"
-      },
-      "Microsoft.AspNet.WebPages/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        }
-      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1014,9 +1008,6 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package"
-      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -1024,6 +1015,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NUnit/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1225,8 +1231,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNet.WebPages": "3.2.7",
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
+          "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
@@ -1241,16 +1247,6 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
-      "Microsoft.AspNet.Razor/3.2.7": {
-        "type": "package"
-      },
-      "Microsoft.AspNet.WebPages/3.2.7": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.Razor": "[3.2.7, 3.3.0)",
-          "Microsoft.Web.Infrastructure": "1.0.0"
-        }
-      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1427,9 +1423,6 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
-      "Microsoft.Web.Infrastructure/1.0.0": {
-        "type": "package"
-      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -1437,6 +1430,21 @@
         },
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NUnit/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/_._": {}
         }
       },
       "System.Buffers/4.5.0": {
@@ -1638,8 +1646,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNet.WebPages": "3.2.7",
           "Microsoft.AspNetCore.Authentication.Core": "2.2.0",
+          "NUnit": "3.12.0",
           "Newtonsoft.Json": "12.0.3",
           "Xamarin.Auth": "1.7.0",
           "Xamarin.Essentials": "1.5.3.2",
@@ -1655,40 +1663,6 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNet.Razor/3.2.7": {
-      "sha512": "BpWEZ+Ys7g9VAkbAfpG5jr5A1fKcmadCCXv3fYfps5YfTVABJIGV4uc9yvmXKxsNsjL+BzDld2gs+xtgT2gg1g==",
-      "type": "package",
-      "path": "microsoft.aspnet.razor/3.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/System.Web.Razor.dll",
-        "lib/net45/System.Web.Razor.xml",
-        "microsoft.aspnet.razor.3.2.7.nupkg.sha512",
-        "microsoft.aspnet.razor.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebPages/3.2.7": {
-      "sha512": "2jwZFB7PvY+tbdz0ZP4iEo7gMrJxkCQUzoGLh6swUc6ZXl6DoKyDslmGcC/j9PFmJXCRMVIqtRorlPSMU2DuRA==",
-      "type": "package",
-      "path": "microsoft.aspnet.webpages/3.2.7",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/Web.config.install.xdt",
-        "Content/Web.config.uninstall.xdt",
-        "lib/net45/System.Web.Helpers.dll",
-        "lib/net45/System.Web.Helpers.xml",
-        "lib/net45/System.Web.WebPages.Deployment.dll",
-        "lib/net45/System.Web.WebPages.Deployment.xml",
-        "lib/net45/System.Web.WebPages.Razor.dll",
-        "lib/net45/System.Web.WebPages.Razor.xml",
-        "lib/net45/System.Web.WebPages.dll",
-        "lib/net45/System.Web.WebPages.xml",
-        "microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
-        "microsoft.aspnet.webpages.nuspec"
-      ]
-    },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.2.0": {
       "sha512": "VloMLDJMf3n/9ic5lCBOa42IBYJgyB1JhzLsL68Zqg+2bEPWfGBj/xCJy/LrKTArN0coOcZp3wyVTZlx0y9pHQ==",
       "type": "package",
@@ -1871,18 +1845,6 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
-    "Microsoft.Web.Infrastructure/1.0.0": {
-      "sha512": "FNmvLn5m2LTU/Rs2KWVo0SIIh9Ek+U0ojex7xeDaSHw/zgEP77A8vY5cVWgUtBGS8MJfDGNn8rpXJWEIQaPwTg==",
-      "type": "package",
-      "path": "microsoft.web.infrastructure/1.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Microsoft.Web.Infrastructure.dll",
-        "microsoft.web.infrastructure.1.0.0.nupkg.sha512",
-        "microsoft.web.infrastructure.nuspec"
-      ]
-    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -1912,6 +1874,36 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "NUnit/3.12.0": {
+      "sha512": "3oJTrcUcT9wmweBUwgUf0f1XIYy6RZq2ziV+RM95HMKAJGsHPN2i3MKK1dAPvDPMRLz799Llj4eyu/STB9Q7OA==",
+      "type": "package",
+      "path": "nunit/3.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.pdb",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.pdb",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.pdb",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.4/nunit.framework.dll",
+        "lib/netstandard1.4/nunit.framework.pdb",
+        "lib/netstandard1.4/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.pdb",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.12.0.nupkg.sha512",
+        "nunit.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -2502,24 +2494,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {},
-    "E:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\kevin\\.nuget\\packages\\": {},
+    "D:\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\RiderProjects\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
       "projectName": "AnorocMobileApp.iOS",
-      "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\",
+      "projectPath": "C:\\Users\\kevin\\RiderProjects\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\AnorocMobileApp.iOS.csproj",
+      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kevin\\RiderProjects\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "E:\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Microsoft\\Xamarin\\NuGet"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -2533,8 +2525,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
-              "projectPath": "E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
+            "C:\\Users\\kevin\\RiderProjects\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
+              "projectPath": "C:\\Users\\kevin\\RiderProjects\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
             }
           }
         }
@@ -2573,121 +2565,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\Google Drive\\COS 301 Capstone Project\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.iOS\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0). Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x64. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x64"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.WebPages 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.AspNet.WebPages 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.WebPages",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.Web.Infrastructure 1.0.0 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.Web.Infrastructure 1.0.0 supports: net40 (.NETFramework,Version=v4.0)",
-      "libraryId": "Microsoft.Web.Infrastructure",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Microsoft.AspNet.Razor 3.2.7 is not compatible with xamarinios10 (Xamarin.iOS,Version=v1.0) / win-x86. Package Microsoft.AspNet.Razor 3.2.7 supports: net45 (.NETFramework,Version=v4.5)",
-      "libraryId": "Microsoft.AspNet.Razor",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  }
 }
