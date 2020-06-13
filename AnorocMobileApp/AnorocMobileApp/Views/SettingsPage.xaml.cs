@@ -21,25 +21,56 @@ namespace AnorocMobileApp.Views
             public double Longitude = 28.232022;
             public double Altitude = 1300;
         }
-        
-        async Task OnToggledAsync(object sender, ToggledEventArgs e)
+
+        async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
             if(e.Value == true)
             {
                 //POST
-                var location = new Location();
-                var json = JsonConvert.SerializeObject(location);
-                var data = new StringContent(json, Encoding.UTF8, "application/json");
-                var url = "https://localhost:5000/location/GEOLocationAsync";
-                using var client = new HttpClient();
-                var response = await client.PostAsync(url, data);
-                string result = response.Content.ReadAsStringAsync().Result;
-                await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                try
+                {
+
+                    postRequestAsync();
+
+                }
+                catch (Exception ex)
+                {
+                    
+
+                    if (ex.InnerException != null)
+                    {
+                        await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
+
+                    }
+                }
             }
             else
             {
-                await DisplayAlert("Attention", "Disabled", "OK");
+                //await DisplayAlert("Attention", "Disabled", "OK");
             }
+        }
+
+        public async void postRequestAsync()
+        {
+            var location = new Location();
+            var json = JsonConvert.SerializeObject("{"+$"'Latitude':'{location.Latitude}', 'Longitude Longitude':'{location.Longitude}','Altitude':'{location.Altitude}'"+"}");
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var url = "https://10.0.2.2:5001/location/GEOLocationAsync";
+            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
+            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
+
+
+            //var client = new HttpClient(new System.Net.Http.HttpClientHandler());
+
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+
+            // Pass the handler to httpclient(from you are calling api)
+            HttpClient client = new HttpClient(clientHandler);
+
+            var response = await client.PostAsync(url, data);
+            string result = response.Content.ReadAsStringAsync().Result;
+            await DisplayAlert("Attention", "Enabled: " + result, "OK");
         }
     }
 }

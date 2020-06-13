@@ -12,7 +12,7 @@
             </OnPlatform>
         </Label.FontFamily>
     </Label>
-<Switch IsToggled="False" Toggled="OnToggled"/>  
+<Switch IsToggled="False" Toggled="OnToggledAsync"/>  
 </Grid>
 
     </ContentPage.Content>
