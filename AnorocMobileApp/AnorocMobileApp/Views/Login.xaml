@@ -11,5 +11,30 @@
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="google_login_button" Text="Login With Google" Clicked="loginGoogle"/>
         </StackLayout>
-    </ContentPage.Content>
+    </ContentPage.Content>-->
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout
+        Orientation="Vertical"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="CenterAndExpand">
+        
+        <Label x:Name="login_heading" Text="Login"
+                HorizontalOptions="CenterAndExpand" />
+        <Button x:Name="google_login_button" Text="Login With Google" Clicked="loginGoogle"/>
+        <Button Text="Sign Up" Clicked="btn_signup_Clicked"/>
+        
+        <Label
+            Text="XF Facebook Login Example:"
+            HorizontalTextAlignment="Center" />
+        <local1:FacebookLoginButton
+            OnSuccess="{Binding OnFacebookLoginSuccessCmd}"
+            OnError="{Binding OnFacebookLoginErrorCmd}"
+            OnCancel="{Binding OnFacebookLoginCancelCmd}"/>
+        <Button
+            Text="FB Logout - backup"
+            Command="{Binding FacebookLogoutCmd}" />
+    </StackLayout> 
+
 </ContentPage>
