@@ -9,24 +9,31 @@ namespace AnorocMobileApp
 {
     public partial class App : Application
     {
+        readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
 
         public App(IFacebookLoginService facebookLoginService)
         {
             InitializeComponent();
-
-            FacebookLoginService = facebookLoginService;
-            if(facebookLoginService.isLoggedIn())
+            if (!mapDebug)
             {
-                User.UserName = facebookLoginService.FirstName;
-                User.UserSurname = facebookLoginService.LastName;
-                User.UserID = facebookLoginService.UserID;
-                User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+                FacebookLoginService = facebookLoginService;
+                if (facebookLoginService.isLoggedIn())
+                {
+                    User.UserName = facebookLoginService.FirstName;
+                    User.UserSurname = facebookLoginService.LastName;
+                    User.UserID = facebookLoginService.UserID;
+                    User.loggedInFacebook = true;
+                    MainPage = new NavigationPage(new HomePage(facebookLoginService));
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new Login());
+                }
             }
             else
             {
-                MainPage = new NavigationPage(new Login());
+                MainPage = new Map();
             }
         }
 
