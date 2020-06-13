@@ -8,12 +8,13 @@
     <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
         <Label.FontFamily>
             <OnPlatform x:TypeArguments="x:String">
-                <On Platform="Android" Value="HelveticaNeueLTPro-Lt.otf#HelveticaNeueLTPro-Lt"/>
+                <On Platform="Android"/>
             </OnPlatform>
         </Label.FontFamily>
     </Label>
-<Switch IsToggled="False"/>  
-</Grid> 
+<Switch IsToggled="False" Toggled="OnToggled"/>  
+</Grid>
+
     </ContentPage.Content>
 </ContentPage>
 
