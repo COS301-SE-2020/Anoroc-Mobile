@@ -1,8 +1,0 @@
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\optimized\
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\AnorocMobileApp.iOS.csprojAssemblyReference.cache
-E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp.iOS\obj\iPhone\Debug\AnorocMobileApp.iOS.csproj.CoreCompileInputs.cache
