@@ -30,7 +30,7 @@ namespace AnorocMobileApp.Views
                 var location = new Location();
                 var json = JsonConvert.SerializeObject(location);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
-                var url = "https://localhost/5000/location/GEOLocationAsync";
+                var url = "https://localhost:5000/location/GEOLocationAsync";
                 using var client = new HttpClient();
                 var response = await client.PostAsync(url, data);
                 string result = response.Content.ReadAsStringAsync().Result;
