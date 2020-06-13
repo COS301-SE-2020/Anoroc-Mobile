@@ -5,7 +5,16 @@
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="AnorocMobileApp.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+  <application android:label="AnorocMobileApp.Android" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:label="CustomUrlSchemeInterceptorActivity" android:launchMode="singleTask" android:noHistory="true" android:name="crc64251446c8dd46541c.CustomUrlSchemeInterceptorActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="com.googleusercontent.apps.413846051495-8r3aljvbf2jbhcm9jlqar41ebr1apfii" />
+      </intent-filter>
+    </activity>
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="AnorocMobileApp" android:theme="@style/MainTheme" android:name="crc64251446c8dd46541c.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
