@@ -1,14 +1,14 @@
 ﻿using System;
 using Xamarin.Forms;
 
-namespace LocalNotifications
+namespace AnorocMobileApp.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class NotificationPage : ContentPage
     {
-        INotificationManager notificationManager;
+       INotificationManager notificationManager;
         int notificationNumber = 0;
 
-        public MainPage()
+        public NotificationPage()
         {
             InitializeComponent();
 

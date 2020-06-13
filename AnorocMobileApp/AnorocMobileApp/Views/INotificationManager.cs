@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LocalNotifications
+namespace AnorocMobileApp.Views
 {
     public interface INotificationManager
     {

@@ -28,7 +28,7 @@
                 HorizontalOptions="CenterAndExpand" />
         <Button x:Name="google_login_button" Text="Login With Google" Clicked="loginGoogle"/>
         <Button Text="Sign Up" Clicked="btn_signup_Clicked"/>
-        
+        <Button Text="Test Notification" Clicked="btn_notification_Clicked"/>
         <Label
             Text="XF Facebook Login Example:"
             HorizontalTextAlignment="Center" />

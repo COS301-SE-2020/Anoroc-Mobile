@@ -82,5 +82,10 @@ namespace AnorocMobileApp.Views
         {
             await Navigation.PushAsync(new SignupPage());
         }
+        
+        private async void btn_notification_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotificationPage());
+        }
     }
 }
