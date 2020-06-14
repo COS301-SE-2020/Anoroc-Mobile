@@ -6,10 +6,9 @@
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Installation](#installation)
+- [Testing Instructions](#testinginstructions)
 - [Team](#team)
 - [Contributions](#Contributions)
-- [Testing Instructions](#testinginstructions)
-
 
 ## Project Overview
 Considering the recent Global Emergency, it has been more apparent than ever before that the ability to track and trace a contingent is of the utmost importance. Cotangent tracking allows users to avoid potential infections and for authorities to be able to flatten the infection rate curve by the use of restrictions or medical services at the hot spots of the tracing.
