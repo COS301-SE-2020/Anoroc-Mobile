@@ -10,27 +10,24 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Auth;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using Newtonsoft.Json.Linq;
 
 using AnorocMobileApp.Services;
-using System.Net.Http;
-using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
-        IFacebookLoginService facebookLoginService;
+        //IFacebookLoginService facebookLoginService;
         public Login()
         {
             InitializeComponent();
         }
 
-        private async void loginGoogle(object sender, EventArgs e)
+        private void loginGoogle(object sender, EventArgs e)
         {
             var authenticator = new OAuth2Authenticator(
                 clientId: Constants.clientID,
