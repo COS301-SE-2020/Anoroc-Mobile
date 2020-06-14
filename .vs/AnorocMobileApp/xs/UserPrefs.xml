@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{46273A99-1D1B-4E7C-86BE-762D53439438}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="AnorocMobileApp/AnorocMobileApp/Views/SettingsPage.xaml.cs">
     <Files>
-      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/SettingsPage.xaml.cs" Line="39" Column="66" />
-      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/Login.xaml.cs" Line="43" Column="2" />
-      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/SettingsPage.xaml" Line="15" Column="45" />
-      <File FileName="AnorocMobileApp/AnorocMobileApp.Android/MainActivity.cs" Line="25" Column="1" />
+      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/SettingsPage.xaml.cs" Line="56" Column="25" />
+      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/Login.xaml.cs" Line="1" Column="1" />
+      <File FileName="AnorocMobileApp/AnorocMobileApp/Views/SettingsPage.xaml" />
+      <File FileName="AnorocMobileApp/AnorocMobileApp.Android/MainActivity.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,16 +12,12 @@
           <Node name="AnorocMobileApp" expanded="True">
             <Node name="AnorocMobileApp" expanded="True">
               <Node name="Views" expanded="True">
-                <Node name="HomePage.xaml" expanded="True" />
                 <Node name="Login.xaml" expanded="True" />
                 <Node name="SettingsPage.xaml" expanded="True">
                   <Node name="SettingsPage.xaml.cs" selected="True" />
                 </Node>
               </Node>
-              <Node name="App.xaml" expanded="True" />
-              <Node name="MainPage.xaml" expanded="True" />
             </Node>
-            <Node name="AnorocMobileApp.Android" expanded="True" />
           </Node>
         </State>
       </Pad>

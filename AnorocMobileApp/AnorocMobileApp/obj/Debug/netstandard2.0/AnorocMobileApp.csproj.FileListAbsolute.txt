@@ -18,7 +18,6 @@ E:/Google Drive/University/COS 301 Anoroc Files/AnorocMobileApp/AnorocMobileApp/
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/bin/Debug/netstandard2.0/AnorocMobileApp.dll
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/bin/Debug/netstandard2.0/ref/AnorocMobileApp.dll
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/bin/Debug/netstandard2.0/AnorocMobileApp.pdb
-/Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/AnorocMobileApp.csprojAssemblyReference.cache
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
 /Users/anika/Documents/git/caps/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/Views/HomePage.xaml.g.cs

@@ -9,7 +9,8 @@ using Newtonsoft.Json;
 namespace AnorocMobileApp.Views
 { 
     public partial class SettingsPage : ContentPage
-    {        
+    {
+
         public SettingsPage()
         {
             InitializeComponent();
@@ -17,19 +18,19 @@ namespace AnorocMobileApp.Views
 
         class Location
         {
-            public double Latitude = 25.754110;
-            public double Longitude = 28.232022;
-            public double Altitude = 1300;
+            public string Latitude = "25.754110";
+            public string Longitude = "28.232022";
+            public string Altitude = "1300";
         }
 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
             if(e.Value == true)
             {
-                //POST
                 try
                 {
 
+                    //POST
                     postRequestAsync();
 
                 }
@@ -46,30 +47,26 @@ namespace AnorocMobileApp.Views
             }
             else
             {
-                //await DisplayAlert("Attention", "Disabled", "OK");
+                await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
 
         public async void postRequestAsync()
         {
             var location = new Location();
-            var json = JsonConvert.SerializeObject("{"+$"'Latitude':'{location.Latitude}', 'Longitude Longitude':'{location.Longitude}','Altitude':'{location.Altitude}'"+"}");
-            var data = new StringContent(json, Encoding.UTF8, "application/json");
-            var url = "https://10.0.2.2:5001/location/GEOLocationAsync";
-            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
-            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
-
-
-            //var client = new HttpClient(new System.Net.Http.HttpClientHandler());
+            var url = "https://10.0.2.2:5001/location/GEOLocation";
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
-            // Pass the handler to httpclient(from you are calling api)
             HttpClient client = new HttpClient(clientHandler);
 
-            var response = await client.PostAsync(url, data);
+            var data  = JsonConvert.SerializeObject(location);
+            var c = new StringContent(data, Encoding.UTF8, "application/json");
+            c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+            var response = await client.PostAsync(url, c);
             string result = response.Content.ReadAsStringAsync().Result;
+
             await DisplayAlert("Attention", "Enabled: " + result, "OK");
         }
     }
