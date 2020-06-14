@@ -24,9 +24,9 @@ namespace AnorocMobileApp.Views
                 
             }
            
-            public double Latitude;
-            public double Longitude;
-            public double Altitude;
+            public string Latitude;
+            public string Longitude;
+            public string Altitude;
         }
 
         
@@ -40,9 +40,9 @@ namespace AnorocMobileApp.Views
 
                 if (location != null)
                 {
-                    loc.Latitude = location.Latitude;
-                    loc.Longitude = location.Longitude;
-                    loc.Altitude = (double)location.Altitude;
+                    loc.Latitude = location.Latitude.ToString();
+                    loc.Longitude = location.Longitude.ToString();
+                    loc.Altitude = location.Altitude.ToString();
                     //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
                 }
                 return loc;
@@ -97,21 +97,13 @@ namespace AnorocMobileApp.Views
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
-        //"{"+$"'Latitude':'{location.Latitude}', 'Longitude Longitude':'{location.Longitude}','Altitude':'{location.Altitude}'"+"}"
 
         public async void postRequestAsync()
         {
 
             var location = await getLocationAsync();
 
-            //var json = JsonConvert.SerializeObject(location);
-            //var data = new StringContent(json, Encoding.UTF8, "application/json");
             var url = "https://10.0.2.2:5001/location/GEOLocation";
-            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
-            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
-
-
-            //var client = new HttpClient(new System.Net.Http.HttpClientHandler());
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
