@@ -37,7 +37,7 @@ The application will allow the user to log in or register using either an Anoroc
 ### Required Software
 
 - [Visual Studios](https://visualstudio.microsoft.com/)
-![VisualStudioInstallOptions](https://drive.google.com/file/d/11wBA1V0kOn3tUxxnPP51VEMHAVcEAWXd/view?usp=sharing)
+![VisualStudioInstallOptions](https://user-images.githubusercontent.com/61750301/84587406-413da680-ae1f-11ea-88f3-bad89050ea1a.png)
 
 ## Contributions
 
