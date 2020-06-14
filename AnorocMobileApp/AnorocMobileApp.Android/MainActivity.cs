@@ -10,6 +10,7 @@ using Xamarin.Facebook;
 using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
+using System.Net;
 
 
 namespace AnorocMobileApp.Droid
@@ -35,6 +36,9 @@ namespace AnorocMobileApp.Droid
             base.OnCreate(savedInstanceState);
 
             Xamarin.FormsMaps.Init(this, savedInstanceState);
+
+            ServicePointManager.ServerCertificateValidationCallback += (o, cert, chain, errors) => true;
+
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);

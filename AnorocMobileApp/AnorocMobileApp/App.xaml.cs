@@ -2,6 +2,7 @@
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,6 +15,8 @@ namespace AnorocMobileApp
 
         public App(IFacebookLoginService facebookLoginService)
         {
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+           
             InitializeComponent();
             if (!mapDebug)
             {
