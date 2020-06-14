@@ -40,6 +40,8 @@ The application will allow the user to log in or register using either an Anoroc
 ![VisualStudioInstallOptions](https://user-images.githubusercontent.com/61750301/84587406-413da680-ae1f-11ea-88f3-bad89050ea1a.png)
 
 
+## Testing Instructions
+
 ## Team
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
@@ -82,5 +84,3 @@ The application will allow the user to log in or register using either an Anoroc
 
 - Integrate Team modules
 - Navigation in the Mobile App
-
-## Testing Instructions
