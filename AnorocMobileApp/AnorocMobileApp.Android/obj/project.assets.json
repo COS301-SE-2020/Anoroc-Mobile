@@ -3121,24 +3121,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anrich\\.nuget\\packages\\": {},
+    "C:\\Users\\Ronald\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anrich\\Documents\\GitHub\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
       "projectName": "AnorocMobileApp.Android",
-      "projectPath": "C:\\Users\\Anrich\\Documents\\GitHub\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
-      "packagesPath": "C:\\Users\\Anrich\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anrich\\Documents\\GitHub\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\obj\\",
+      "projectPath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\AnorocMobileApp.Android.csproj",
+      "packagesPath": "C:\\Users\\Ronald\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Anrich\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ronald\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -3152,8 +3152,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\Anrich\\Documents\\GitHub\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
-              "projectPath": "C:\\Users\\Anrich\\Documents\\GitHub\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
+            "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj": {
+              "projectPath": "C:\\Users\\Ronald\\Desktop\\COS 301 Capstone\\Anoroc-Mobile\\AnorocMobileApp\\AnorocMobileApp\\AnorocMobileApp.csproj"
             }
           }
         }
