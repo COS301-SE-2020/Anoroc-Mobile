@@ -48,3 +48,20 @@ E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMob
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.dll
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\ref\AnorocMobileApp.dll
 E:\Google Drive\COS 301 Capstone Project\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.pdb
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\bin\Debug\netstandard2.0\AnorocMobileApp.deps.json
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\bin\Debug\netstandard2.0\AnorocMobileApp.dll
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\bin\Debug\netstandard2.0\ref\AnorocMobileApp.dll
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\bin\Debug\netstandard2.0\AnorocMobileApp.pdb
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.csprojAssemblyReference.cache
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\Views\Login.xaml.g.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.AssemblyInfoInputs.cache
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.AssemblyInfo.cs
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.csproj.CoreCompileInputs.cache
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.dll
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\ref\AnorocMobileApp.dll
+C:\Users\Tebza\RiderProjects\Anoroc-Mobile\AnorocMobileApp\AnorocMobileApp\obj\Debug\netstandard2.0\AnorocMobileApp.pdb

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
@@ -103,22 +104,28 @@ namespace AnorocMobileApp.Views
 
             var json = JsonConvert.SerializeObject(location);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            var url = "https://10.0.2.2:5001/location/GEOLocationAsync";
-            await DisplayAlert("Attention", "Enabled: " + json, "OK");
+            var url = "https://192.168.43.196:5001/location/GEOLocation";
+            //await DisplayAlert("First Attention", "Enabled: " + json, "OK");
             //await DisplayAlert("Attention", "Enabled: " + json, "OK");
 
 
             //var client = new HttpClient(new System.Net.Http.HttpClientHandler());
 
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-
+            HttpClientHandler clientHandler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            };
+            
             // Pass the handler to httpclient(from you are calling api)
+            HttpResponseMessage response;
             HttpClient client = new HttpClient(clientHandler);
 
-            var response = await client.PostAsync(url, data);
-            string result = response.Content.ReadAsStringAsync().Result;
-            await DisplayAlert("Attention", "Enabled: " + result, "OK");
+            do
+            {
+                response = await client.PostAsync(url, data);
+                string result = await response.Content.ReadAsStringAsync();
+                await DisplayAlert("Attention", "Enabled: " + result, "OK");
+            } while (!response.IsSuccessStatusCode);
         }
     }
 }
