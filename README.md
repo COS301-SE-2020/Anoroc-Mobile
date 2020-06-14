@@ -22,14 +22,14 @@ The application will allow the user to log in or register using either an Anoroc
 
 - SRS Document: https://bit.ly/2XZDwEA
 - Team email: code.sum.moar@gmail.com
+- Team Communications: [Microsoft Teams](https://www.microsoft.com/en-za/microsoft-365/microsoft-teams/group-chat-software)
+- Organisation: [Clubhouse](https://clubhouse.io/)
 
 ## Technologies
 
 - Mobile Application: [Xamarin Forms | .NET](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms)
 - API: [ASP.NET Core API](https://dotnet.microsoft.com/apps/aspnet/apis)
 - Server: Azure Services
-- Team Communications: [Microsoft Teams](https://www.microsoft.com/en-za/microsoft-365/microsoft-teams/group-chat-software)
-- Organisation: [Clubhouse](https://clubhouse.io/)
 
 ## Installation
 
