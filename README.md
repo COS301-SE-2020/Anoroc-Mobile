@@ -1,14 +1,14 @@
 # Anoroc
 
-## Table of Contents (Optional)
+## Table of Contents
 
-- [Project Overview](#project overview)
+- [Project Overview](#projectoverview)
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Contributions](#contributions)
 - [Team](#team)
-- [Testing Instructions](#testing instructions)
+- [Testing Instructions](#testinginstructions)
 
 
 ## Project Overview
