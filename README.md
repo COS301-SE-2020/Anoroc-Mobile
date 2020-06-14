@@ -21,6 +21,8 @@ The application will allow the user to log in or register using either an Anoroc
 
 ## Documentation
 
+- SRS Document: https://bit.ly/2XZDwEA
+
 ## Technologies
 
 ## Installation
