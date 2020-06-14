@@ -38,7 +38,7 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <MandroidI18n />
+
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -73,10 +73,16 @@
     <PackageReference Include="Xamarin.Facebook.Android">
       <Version>5.11.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Messaging">
+      <Version>71.1740.1</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <PackageReference Include="Xamarin.Forms.Maps">
       <Version>4.6.0.847</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Base">
+      <Version>71.1610.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>71.1610.1</Version>
@@ -85,6 +91,9 @@
   <ItemGroup>
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyFirebaseIIDService.cs" />
+    <Compile Include="MyFirebaseMessagingService.cs" />
+    <Compile Include="NotificationHelper.cs" />
     <Compile Include="Resources\FacebookLoginButtonRenderer.cs" />
     <Compile Include="Resources\HeatmapRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -120,9 +129,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\AnorocMobileApp\AnorocMobileApp.csproj">
       <Project>{C0E2BFFB-0A57-4B2C-9E22-EF660B943E42}</Project>
       <Name>AnorocMobileApp</Name>
@@ -136,6 +142,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\Raw\notification.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
