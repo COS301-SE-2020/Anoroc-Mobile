@@ -37,6 +37,8 @@ The application will allow the user to log in or register using either an Anoroc
 
 - [Visual Studios](https://visualstudio.microsoft.com/) With these options installed:
 ![VisualStudioInstallOptions](https://user-images.githubusercontent.com/61750301/84587406-413da680-ae1f-11ea-88f3-bad89050ea1a.png)
+- Clone the Anoroc-Mobile or Anoroc-Server repository into your local directory.
+- Run the application by launching the AnorocMobileApp.sln or Anoroc.sln file respectively.
 
 
 ## Testing Instructions
