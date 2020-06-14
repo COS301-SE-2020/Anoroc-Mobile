@@ -13037,37 +13037,40 @@ namespace AnorocMobileApp.Droid
 			public const int fb_login_protocol_scheme = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int hide_bottom_view_on_scroll_behavior = 2131624025;
+			public const int fcm_fallback_notification_channel_label = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int messenger_send_button_text = 2131624026;
+			public const int hide_bottom_view_on_scroll_behavior = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int mtrl_chip_close_icon_content_description = 2131624027;
+			public const int messenger_send_button_text = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int password_toggle_content_description = 2131624028;
+			public const int mtrl_chip_close_icon_content_description = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int path_password_eye = 2131624029;
+			public const int password_toggle_content_description = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int path_password_eye_mask_strike_through = 2131624030;
+			public const int path_password_eye = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int path_password_eye_mask_visible = 2131624031;
+			public const int path_password_eye_mask_strike_through = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int path_password_strike_through = 2131624032;
+			public const int path_password_eye_mask_visible = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int search_menu_title = 2131624033;
+			public const int path_password_strike_through = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int status_bar_notification_info_overflow = 2131624034;
+			public const int search_menu_title = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int title_activity_webview = 2131624035;
+			public const int status_bar_notification_info_overflow = 2131624035;
+			
+			// aapt resource value: 0x7F0E0064
+			public const int title_activity_webview = 2131624036;
 			
 			static String()
 			{

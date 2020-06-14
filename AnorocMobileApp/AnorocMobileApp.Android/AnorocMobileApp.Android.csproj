@@ -89,6 +89,8 @@
   <ItemGroup>
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyFirebaseIIDService.cs" />
+    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="NotificationHelper.cs" />
     <Compile Include="Resources\FacebookLoginButtonRenderer.cs" />
     <Compile Include="Resources\HeatmapRenderer.cs" />
@@ -124,7 +126,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AnorocMobileApp\AnorocMobileApp.csproj">
       <Project>{C0E2BFFB-0A57-4B2C-9E22-EF660B943E42}</Project>
@@ -145,6 +146,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
