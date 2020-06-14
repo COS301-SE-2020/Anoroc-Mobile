@@ -71,8 +71,8 @@ The application will allow the user to log in or register using either an Anoroc
 
 ### Anrich Hildebrand
 
-- Worked on API Server
-- Login with Google
+- Login with Google to return User's Google profile data
+- Created mock database to test GEO Location points on map
 
 ### Kevin Huang
 
