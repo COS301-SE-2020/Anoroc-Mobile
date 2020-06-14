@@ -41,6 +41,36 @@ The application will allow the user to log in or register using either an Anoroc
 
 ## Contributions
 
+### Tebogo Selahle
+
+- Worked on API Server
+- Created unit tests
+
+### Andrew Wilson
+
+- Xamarin Forms Map
+- Login with Facebook
+
+### Anika van Rensburg
+
+- Worked on API Server
+- Enable GEO Location tracking on Mobile App
+
+### Anrich Hildebrand
+
+- Worked on API Server
+- Login with Google
+
+### Kevin Huang
+
+- Worked on API Server
+- Notification Module of the Mobile App
+
+### Ronald Looi
+
+- Integrate Team modules
+- Navigation in the Mobile App
+
 ## Team
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
