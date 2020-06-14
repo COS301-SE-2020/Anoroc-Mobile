@@ -18,7 +18,7 @@ namespace AnorocMobileApp.Views
                 }
             };*/
         }
-
+        public static string AccessibilityLabel = "FacebookLoginButton";
              public string[] Permissions
             {
                 get { return (string[])GetValue(PermissionsProperty); }

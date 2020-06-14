@@ -35,7 +35,7 @@
         <local1:FacebookLoginButton
             OnSuccess="{Binding OnFacebookLoginSuccessCmd}"
             OnError="{Binding OnFacebookLoginErrorCmd}"
-            OnCancel="{Binding OnFacebookLoginCancelCmd}" />
+            OnCancel="{Binding OnFacebookLoginCancelCmd}"/>
         <Button
             Text="FB Logout - backup"
             Command="{Binding FacebookLogoutCmd}" />

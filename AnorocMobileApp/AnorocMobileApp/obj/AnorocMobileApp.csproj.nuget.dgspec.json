@@ -53,10 +53,6 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
-            "NUnit": {
-              "target": "Package",
-              "version": "[3.12.0, )"
-            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[12.0.3, )"
@@ -70,6 +66,10 @@
               "version": "[1.5.3.2, )"
             },
             "Xamarin.Forms": {
+              "target": "Package",
+              "version": "[4.6.0.847, )"
+            },
+            "Xamarin.Forms.Maps": {
               "target": "Package",
               "version": "[4.6.0.847, )"
             }
