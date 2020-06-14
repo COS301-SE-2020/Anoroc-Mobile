@@ -42,10 +42,10 @@ namespace AnorocMobileApp.Models
             return "";
         }
 
-        public static async Task<string> GetUserEmail()
+        /*public static async Task<string> GetUserEmail()
         {
             return "";
-        }
+        }*/
 
     }
 }
