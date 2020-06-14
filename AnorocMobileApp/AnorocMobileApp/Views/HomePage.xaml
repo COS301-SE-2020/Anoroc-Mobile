@@ -27,4 +27,6 @@
     
     <views:Map Title="Map"></views:Map>
     <views:NotificationPage Title="Notifications"></views:NotificationPage>
+    <views:SettingsPage Title="Settings"></views:SettingsPage>
+
 </TabbedPage>

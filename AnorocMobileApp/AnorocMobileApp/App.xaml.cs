@@ -36,7 +36,7 @@ namespace AnorocMobileApp
             }
             else
             {
-                MainPage = new Map();
+                //MainPage = new Map();
             }
         }
 
