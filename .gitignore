@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> development
 # Created by https://www.toptal.com/developers/gitignore/api/xamarinstudio,visualstudio,jetbrains+all,rider
 # Edit at https://www.toptal.com/developers/gitignore?templates=xamarinstudio,visualstudio,jetbrains+all,rider
 
@@ -498,3 +501,14 @@ MigrationBackup/
 
 # End of https://www.toptal.com/developers/gitignore/api/xamarinstudio,visualstudio,jetbrains+all,rider
 /AnorocMobileApp/AnorocMobileApp.Android/AnorocMobileApp.Android.csproj.user~573fccf461bc6c6791efdd56dce447b87f0c7ffd
+<<<<<<< HEAD
+=======
+.DS_Store
+AnorocMobileApp/AnorocMobileApp.iOS/obj/iPhone/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+AnorocMobileApp/AnorocMobileApp.Android/obj/Debug/90/AnorocMobileApp.Android.csprojAssemblyReference.cache
+AnorocMobileApp/AnorocMobileApp.Android/obj/Debug/90/designtime/build.props
+AnorocMobileApp/AnorocMobileApp.Android/obj/Debug/90/libraryprojectimports.cache
+AnorocMobileApp/AnorocMobileApp.iOS/obj/iPhone/Debug/AnorocMobileApp.iOS.csprojAssemblyReference.cache
+AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/AnorocMobileApp.csprojAssemblyReference.cache
+
+>>>>>>> development
