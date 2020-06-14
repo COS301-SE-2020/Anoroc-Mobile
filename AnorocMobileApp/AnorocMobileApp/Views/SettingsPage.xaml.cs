@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Views
 { 
@@ -17,9 +18,45 @@ namespace AnorocMobileApp.Views
 
         class Location
         {
-            public double Latitude = 25.754110;
-            public double Longitude = 28.232022;
-            public double Altitude = 1300;
+            public Location()
+            {
+                getLocationAsync();
+            }
+            public async void getLocationAsync()
+            {
+                try
+                {
+                    var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+                    var location = await Geolocation.GetLocationAsync(request);
+
+                    if (location != null)
+                    {
+                        Latitude = location.Latitude;
+                        Longitude = location.Longitude;
+                        Altitude = (double)location.Altitude;
+                        Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                    }
+                }
+                catch (FeatureNotSupportedException fnsEx)
+                {
+                    // Handle not supported on device exception
+                }
+                catch (FeatureNotEnabledException fneEx)
+                {
+                    // Handle not enabled on device exception
+                }
+                catch (PermissionException pEx)
+                {
+                    // Handle permission exception
+                }
+                catch (Exception ex)
+                {
+                    // Unable to get location
+                }
+            }
+            public double Latitude;
+            public double Longitude;
+            public double Altitude;
         }
 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
@@ -57,7 +94,7 @@ namespace AnorocMobileApp.Views
             var json = JsonConvert.SerializeObject(location);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             var url = "https://10.0.2.2:44384/location/GEOLocationAsync";
-            //await DisplayAlert("Attention", "Enabled: " + json, "OK");
+            await DisplayAlert("Attention", "Enabled: " + json, "OK");
             //await DisplayAlert("Attention", "Enabled: " + json, "OK");
 
 
