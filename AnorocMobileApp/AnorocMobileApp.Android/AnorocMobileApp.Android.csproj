@@ -38,6 +38,7 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -82,7 +83,6 @@
     <PackageReference Include="Xamarin.GooglePlayServices.Base">
       <Version>71.1610.1</Version>
     </PackageReference>
-
     <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>71.1610.1</Version>
     </PackageReference>

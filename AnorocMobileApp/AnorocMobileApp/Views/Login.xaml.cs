@@ -10,14 +10,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Auth;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using Newtonsoft.Json.Linq;
 
 using AnorocMobileApp.Services;
-using System.Net.Http;
-using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Views
 {
@@ -30,7 +27,7 @@ namespace AnorocMobileApp.Views
             InitializeComponent();
         }
 
-        private async void loginGoogle(object sender, EventArgs e)
+        private /*async*/ void loginGoogle(object sender, EventArgs e)
         {
             var authenticator = new OAuth2Authenticator(
                 clientId: Constants.clientID,
@@ -51,7 +48,7 @@ namespace AnorocMobileApp.Views
         }
 
 
-        public async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs obj)
+        /*public async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs obj)
         {
             var authenticator = sender as OAuth2Authenticator;
             if(authenticator != null)
@@ -76,7 +73,7 @@ namespace AnorocMobileApp.Views
             {
                 await DisplayAlert("Testing", obj.IsAuthenticated.ToString(), "OK");
             }
-        }
+        }*/
 
         public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
         {
@@ -126,10 +123,10 @@ namespace AnorocMobileApp.Views
             }
         }
 
-        public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
+        /*public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
         {
             DisplayAlert("Google Auth Error", e.Message, "OK");
-        }
+        }*/
 
         public static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
         {
