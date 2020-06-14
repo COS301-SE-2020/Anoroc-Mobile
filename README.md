@@ -1,5 +1,16 @@
 # Anoroc
 
+## Table of Contents (Optional)
+
+- [Project Overview](#project overview)
+- [Documentation](#documentation)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Contributions](#contributions)
+- [Team](#team)
+- [Testing Instructions](#testing instructions)
+
+
 ## Project Overview
 Considering the recent Global Emergency, it has been more apparent than ever before that the ability to track and trace a contingent is of the utmost importance. Cotangent tracking allows users to avoid potential infections and for authorities to be able to flatten the infection rate curve by the use of restrictions or medical services at the hot spots of the tracing.
 The application will allow the tracking of multiple contingents that are deemed as pandemics by the World Health Organisation, that are currently affecting the country that the user is in. Often this will only be one contingent at a time; however, the system will have the capability to track multiple.
@@ -8,9 +19,15 @@ The application proposed is a tool that tracks the user’s location data on a m
 
 The application will allow the user to log in or register using either an Anoroc account or by the use of their social media accounts (Google, Facebook). Once logged in, the user will be able to voluntarily give their contagent status and select the contagent they will be focusing on. The application allows for anonymous users, these user will simply be able to see the hotspots and calcuate their risk.
 
-The application works off of the Microsoft Azure services and the Mobile app is developed in Xamerin.
+## Documentation
 
-## Collaborators
+## Technologies
+
+## Installation
+
+## Contributions
+
+## Team
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
 | Tebogo | Selahle     | u15210822@tuks.co.za | [tebogo.codes](https://tebogo.codes/)  |
@@ -19,4 +36,5 @@ The application works off of the Microsoft Azure services and the Mobile app is 
 | Anrich | Hildebrand | u15178782@tuks.co.za | [anrich96.github.io](https://anrich96.github.io) |
 | Kevin  | Huang | u15026681@tuks.co.za | [kevin-d-h.github.io](https://kevin-d-h.github.io/myCV/) |
 | Ronald | Looi | u15226532@tuks.co.za | [rsl-student.github.io](https://rsl-student.github.io) |
-##
+
+## Testing Instructions
