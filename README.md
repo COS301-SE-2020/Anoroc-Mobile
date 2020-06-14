@@ -6,8 +6,8 @@
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Installation](#installation)
-- [Contributions](#contributions)
 - [Team](#team)
+- [Contributions](#Contributions)
 - [Testing Instructions](#testinginstructions)
 
 
@@ -38,6 +38,18 @@ The application will allow the user to log in or register using either an Anoroc
 
 - [Visual Studios](https://visualstudio.microsoft.com/) With these options installed:
 ![VisualStudioInstallOptions](https://user-images.githubusercontent.com/61750301/84587406-413da680-ae1f-11ea-88f3-bad89050ea1a.png)
+
+
+## Team
+| Name   | Surname    |        Email         |       Github.io        |
+|--------|------------|----------------------|------------------------|
+| Tebogo | Selahle     | u15210822@tuks.co.za | [tebogo.codes](https://tebogo.codes/)  |
+| Andrew | Wilson     | u15191223@tuks.co.za | [andrew96-eng.github.io](https://andrew96-eng.github.io) |
+| Anika  | van Rensburg | u17246840@tuks.co.za | [anikavanrensburg.github.io](https://anikavanrensburg.github.io) |
+| Anrich | Hildebrand | u15178782@tuks.co.za | [anrich96.github.io](https://anrich96.github.io) |
+| Kevin  | Huang | u15026681@tuks.co.za | [kevin-d-h.github.io](https://kevin-d-h.github.io/myCV/) |
+| Ronald | Looi | u15226532@tuks.co.za | [rsl-student.github.io](https://rsl-student.github.io) |
+
 
 ## Contributions
 
@@ -70,15 +82,5 @@ The application will allow the user to log in or register using either an Anoroc
 
 - Integrate Team modules
 - Navigation in the Mobile App
-
-## Team
-| Name   | Surname    |        Email         |       Github.io        |
-|--------|------------|----------------------|------------------------|
-| Tebogo | Selahle     | u15210822@tuks.co.za | [tebogo.codes](https://tebogo.codes/)  |
-| Andrew | Wilson     | u15191223@tuks.co.za | [andrew96-eng.github.io](https://andrew96-eng.github.io) |
-| Anika  | van Rensburg | u17246840@tuks.co.za | [anikavanrensburg.github.io](https://anikavanrensburg.github.io) |
-| Anrich | Hildebrand | u15178782@tuks.co.za | [anrich96.github.io](https://anrich96.github.io) |
-| Kevin  | Huang | u15026681@tuks.co.za | [kevin-d-h.github.io](https://kevin-d-h.github.io/myCV/) |
-| Ronald | Looi | u15226532@tuks.co.za | [rsl-student.github.io](https://rsl-student.github.io) |
 
 ## Testing Instructions
