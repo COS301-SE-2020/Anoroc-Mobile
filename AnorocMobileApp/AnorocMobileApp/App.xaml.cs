@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Views;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,6 +10,8 @@ namespace AnorocMobileApp
     {
         public App()
         {
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+           
             InitializeComponent();
 
             MainPage = new NavigationPage(new Login());
