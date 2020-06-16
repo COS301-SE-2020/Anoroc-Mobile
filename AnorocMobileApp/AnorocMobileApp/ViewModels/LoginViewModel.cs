@@ -23,14 +23,16 @@ namespace AnorocMobileApp.Models
         public ICommand OnFacebookLoginSuccessCmd { get; }
         public ICommand OnFacebookLoginErrorCmd { get; }
         public ICommand OnFacebookLoginCancelCmd { get; }
+        bool facebookLoginTest = true;
         public LoginViewModel()
         {
             facebookLoginService = (Application.Current as App).FacebookLoginService;
             facebookLoginService.AccessTokenChanged = (string oldToken, string newToken) => FacebookLogoutCmd.ChangeCanExecute();
 
             //Test if the user has logged in already
-            if(facebookLoginService.isLoggedIn())
+            if(facebookLoginService.isLoggedIn() && facebookLoginTest)
             {
+                facebookLoginTest = false;
                 Login.FacebookLoggedInAlready(facebookLoginService);
             }
 

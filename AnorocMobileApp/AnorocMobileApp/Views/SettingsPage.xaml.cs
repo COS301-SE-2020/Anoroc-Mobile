@@ -14,6 +14,8 @@ namespace AnorocMobileApp.Views
 
         public SettingsPage()
         {
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+
             InitializeComponent();
         }
 
