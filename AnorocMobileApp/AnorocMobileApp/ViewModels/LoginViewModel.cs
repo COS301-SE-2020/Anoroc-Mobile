@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -56,7 +57,7 @@ namespace AnorocMobileApp.Models
         public void Success(string title, string authToken)
         {
             User.loggedInFacebook = true;
-            LoginService.fillUserDetails(facebookLoginService);
+            _= LoginService.fillUserDetails(facebookLoginService);
             Login.FacebookSuccess(title, authToken, facebookLoginService);
         }
 

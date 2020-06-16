@@ -21,13 +21,15 @@ namespace AnorocMobileApp.Services
         }
 
 
-        public async static void fillUserDetails(IFacebookLoginService facebookLoginService)
+        public async static Task fillUserDetails(IFacebookLoginService facebookLoginService)
         {
             await Task.Factory.StartNew(async () =>
-            {
-                System.Threading.Thread.Sleep(5000);
-                await fillDetailsAsync(facebookLoginService);
-            });
+             {
+                 System.Threading.Thread.Sleep(5000);
+                 await fillDetailsAsync(facebookLoginService);
+             });
+
+            await fillDetailsAsync(facebookLoginService);
         }
         private static async Task fillDetailsAsync(IFacebookLoginService facebookLoginService)
         {
