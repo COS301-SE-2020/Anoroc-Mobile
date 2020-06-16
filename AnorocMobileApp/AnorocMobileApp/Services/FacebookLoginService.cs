@@ -12,6 +12,8 @@ namespace AnorocMobileApp.Services
         string UserID { get; }
         string LastName { get; }
         string AccessToken { get; }
+        void setUserDetails();
+
         Action<string, string> AccessTokenChanged { get; set; }
         void Logout();
         bool isLoggedIn();

@@ -97,11 +97,7 @@ namespace AnorocMobileApp.Views
             }
         }
 
-        /*public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
-        {
-            DisplayAlert("Google Auth Error", e.Message, "OK");
-        }*/
-
+   
         public static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
         {
             Application.Current.MainPage = new HomePage(facebookLoginService);

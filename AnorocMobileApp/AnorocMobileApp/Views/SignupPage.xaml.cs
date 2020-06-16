@@ -45,7 +45,7 @@ namespace AnorocMobileApp.Views
                                     if (Password.Text.Equals(ConfrimPassword.Text))
                                     {
                                         User.Email = UserEmail.Text;
-                                        User.UserName = UsersName.Text;
+                                        User.FirstName = UsersName.Text;
                                         User.UserSurname = UserSurname.Text;
                                         User.loggedInAnoroc = true;
                                         user = new User();

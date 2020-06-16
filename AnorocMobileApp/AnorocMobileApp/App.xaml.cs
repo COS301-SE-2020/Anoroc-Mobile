@@ -20,7 +20,7 @@ namespace AnorocMobileApp
                 FacebookLoginService = facebookLoginService;
                 if (facebookLoginService.isLoggedIn())
                 {
-                    User.UserName = facebookLoginService.FirstName;
+                    User.FirstName = facebookLoginService.FirstName;
                     User.UserSurname = facebookLoginService.LastName;
                     User.UserID = facebookLoginService.UserID;
                     User.loggedInFacebook = true;

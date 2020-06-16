@@ -23,8 +23,9 @@ namespace AnorocMobileApp.Views
         public HomePage(IFacebookLoginService facebookLoginService)
         {
             FacebookLoginService = facebookLoginService;
+            
             InitializeComponent();
-            lblAnorocHeading.Text = User.UserName + " " + User.UserSurname;
+            lblAnorocHeading.Text = User.FirstName + " " + User.UserSurname;
             if (User.loggedInFacebook)
             {
                 lblTitle.Text = "Anoroc Logged in with Facebook";
