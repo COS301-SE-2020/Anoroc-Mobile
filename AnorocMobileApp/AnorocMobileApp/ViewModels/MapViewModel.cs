@@ -11,7 +11,7 @@ using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Models
 {
-    class MapViewModel
+    public class MapViewModel
     {
         MapModel mapModel = new MapModel();
 

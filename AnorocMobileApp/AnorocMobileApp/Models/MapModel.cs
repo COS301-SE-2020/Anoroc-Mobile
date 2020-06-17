@@ -12,7 +12,7 @@ using System.Diagnostics;
 
 namespace AnorocMobileApp.Models
 {
-    class MapModel
+    public class MapModel
     {
         public MapModel()
         {
