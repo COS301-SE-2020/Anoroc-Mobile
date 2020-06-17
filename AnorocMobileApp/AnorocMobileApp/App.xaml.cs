@@ -15,15 +15,12 @@ namespace AnorocMobileApp
 
         public App(IFacebookLoginService facebookLoginService)
         {
-            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-           
             InitializeComponent();
-            if (!mapDebug)
-            {
+
                 FacebookLoginService = facebookLoginService;
                 if (facebookLoginService.isLoggedIn())
                 {
-                    User.UserName = facebookLoginService.FirstName;
+                    User.FirstName = facebookLoginService.FirstName;
                     User.UserSurname = facebookLoginService.LastName;
                     User.UserID = facebookLoginService.UserID;
                     User.loggedInFacebook = true;
@@ -33,11 +30,6 @@ namespace AnorocMobileApp
                 {
                     MainPage = new NavigationPage(new Login());
                 }
-            }
-            else
-            {
-                //MainPage = new Map();
-            }
         }
 
         public App()

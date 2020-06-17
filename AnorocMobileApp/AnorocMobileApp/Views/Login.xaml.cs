@@ -48,32 +48,6 @@ namespace AnorocMobileApp.Views
         }
 
 
-        /*public async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs obj)
-        {
-            var authenticator = sender as OAuth2Authenticator;
-            if(authenticator != null)
-            {
-                authenticator.Completed -= OnAuthCompleted;
-                authenticator.Error -= onAuthError;
-            }
-
-            if (obj.IsAuthenticated)
-            {
-                //await DisplayAlert("Testing", obj.Account.Properties["access_token"], "OK");
-                var clientData = new HttpClient();
-                var resData = await clientData.GetAsync("https://www.googleapis.com/oauth2/v3/userinfo?access_token=" + obj.Account.Properties["access_token"]);
-                var json = await resData.Content.ReadAsStringAsync();
-                //await DisplayAlert("Testing", json, "OK");
-                var myJObject = JObject.Parse(json);
-                await DisplayAlert("Welcome", (myJObject.SelectToken("name").Value<string>()+"\n"+myJObject.SelectToken("email").Value<string>()), "OK");
-                GoogleAuthClass googleObject = JsonConvert.DeserializeObject<GoogleAuthClass>(json);
-                loginSuccessfull();
-            }
-            else
-            {
-                await DisplayAlert("Testing", obj.IsAuthenticated.ToString(), "OK");
-            }
-        }*/
 
         public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
         {
@@ -123,11 +97,7 @@ namespace AnorocMobileApp.Views
             }
         }
 
-        /*public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
-        {
-            DisplayAlert("Google Auth Error", e.Message, "OK");
-        }*/
-
+   
         public static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
         {
             Application.Current.MainPage = new HomePage(facebookLoginService);
@@ -147,36 +117,6 @@ namespace AnorocMobileApp.Views
             Application.Current.MainPage = new SettingsPage();
         }
 
-        /*private void loginFacebook(object sender, EventArgs e)
-        {
-
-            OAuth2Authenticator auth = new OAuth2Authenticator(
-                    clientId: Constants.FacebookAppID,
-                    scope: "",
-                    authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
-                    redirectUrl: new Uri("https://www.facebook.com/connect/login_success.html")
-                );
-
-            auth.Completed += Facebook_Auth_Completed;
-
-            //AuthenticationState.Authenticator = auth;
-      
-        }
-
-        private void Facebook_Auth_Completed(object sender, AuthenticatorCompletedEventArgs e)
-        {
-            if(e.IsAuthenticated)
-            {
-                var token = new User()
-                {
-                    AccessToken = e.Account.Properties["access_token"]
-                };
-            }
-            else
-            {
-
-            }
-        }*/
 
         public static void FacebookSuccess(string title, string msg, IFacebookLoginService facebookLoginService)
         { 

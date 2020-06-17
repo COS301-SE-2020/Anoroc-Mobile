@@ -7,6 +7,7 @@ using System.Collections.Specialized;
 using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -20,35 +21,32 @@ namespace AnorocMobileApp.Services
             return true;
         }
 
-        public async static Task GetUserEmailAsync(string accessToken)
+
+        public static async Task fillUserDetails(IFacebookLoginService facebookLoginService)
         {
-            int count = 0;
-            LoginViewModel m = new LoginViewModel();
-            try
+            await Task.Factory.StartNew(async () =>
             {
-                var httpClient = new HttpClient();
+                Thread.Sleep(4000);
+                await fillDetailsAsync(facebookLoginService);
+            });
+        }
+        private static async Task fillDetailsAsync(IFacebookLoginService facebookLoginService)
+        {
+            facebookLoginService.setUserDetails();
 
-                string url = $"https://graph.facebook.com/{User.UserID}?fields=email&access_token={accessToken}";
+            var httpClient = new HttpClient();
+           
+            string url = $"https://graph.facebook.com/{User.UserID}?fields=email&access_token={facebookLoginService.AccessToken}";
 
-                var json = await httpClient.GetStringAsync(url);
-
-                UserDetails userDetails = JsonConvert.DeserializeObject<UserDetails>(json);
-                if (string.IsNullOrEmpty(userDetails.Email))
-                    _ = (Application.Current as App).MainPage.DisplayAlert("Error", "Could not fetch email address", "OK");
-                else
-                    User.Email = userDetails.Email;
-            }
-            catch(Exception e)
-            {
-                if(count <= 5)
-                {
-                    await GetUserEmailAsync(accessToken);
-                }
-                else
-                {
-                    m.DisplayAlert("Failed to get Facebook email", e.Message);
-                }
-            }
+            var json = await httpClient.GetStringAsync(url);
+            //_ = (Application.Current as App).MainPage.DisplayAlert("Error", json, "OK");
+            UserDetails userDetails = JsonConvert.DeserializeObject<UserDetails>(json);
+            if (string.IsNullOrEmpty(userDetails.Email))
+                Console.WriteLine("Could not get email.");
+            else
+                User.Email = userDetails.Email;
         }
     }
 }
+
+

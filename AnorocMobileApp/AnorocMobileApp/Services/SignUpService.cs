@@ -27,7 +27,7 @@ namespace AnorocMobileApp.Services
 
             // Have to make seporate call to Facebook API to get the email address for the 
 
-            string jsonData = "{" + $"'userEmail':'{User.Email}', 'username':'{User.UserName}', 'surname':'{User.UserSurname}', 'password':'{password}'" + "}";
+            string jsonData = "{" + $"'userEmail':'{User.Email}', 'username':'{User.FirstName}', 'surname':'{User.UserSurname}', 'password':'{password}'" + "}";
 
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await http.PostAsync("/foo/login", content);

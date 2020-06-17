@@ -18,6 +18,7 @@ namespace AnorocMobileApp.Models
         List<Place> placesList;
         public MapViewModel()
         {
+
             placesList = new List<Place>();
         }
         public List<Place> GetPinsForArea()
