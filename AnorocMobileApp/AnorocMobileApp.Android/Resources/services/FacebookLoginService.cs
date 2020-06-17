@@ -35,13 +35,19 @@ namespace AnorocMobileApp.Droid.Resources.services
             //User.loggedInFacebook = true;
         }
 
-
+        public bool waitOnProfile()
+        {
+            if (Profile.CurrentProfile == null)
+                return true;
+            else
+                return false;
+        }
 
         public void setUserDetails()
         {
-            User.UserID = Profile.CurrentProfile.Id;
-            User.FirstName = Profile.CurrentProfile.Name;
-            User.UserSurname = Profile.CurrentProfile.LastName;
+            User.UserID = Profile.CurrentProfile?.Id;
+            User.FirstName = Profile.CurrentProfile?.Name;
+            User.UserSurname = Profile.CurrentProfile?.LastName;
         }
 
         /*public AccessToken getFacebookAccessToken()
@@ -55,8 +61,10 @@ namespace AnorocMobileApp.Droid.Resources.services
             return accessToken != null;
         }
 
+        
+
         public string AccessToken => Xamarin.Facebook.AccessToken.CurrentAccessToken?.Token;
-       
+        
         public string FirstName => Profile.CurrentProfile?.FirstName;
         public string UserID => Profile.CurrentProfile?.Id;
         public string LastName => Profile.CurrentProfile?.LastName;

@@ -13,6 +13,7 @@ namespace AnorocMobileApp.Services
         string LastName { get; }
         string AccessToken { get; }
         void setUserDetails();
+        bool waitOnProfile();
 
         Action<string, string> AccessTokenChanged { get; set; }
         void Logout();

@@ -14,7 +14,8 @@ namespace AnorocMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : TabbedPage
     {
-        public IFacebookLoginService FacebookLoginService { get; private set; }
+        public string Email { get; set; }
+        public IFacebookLoginService FacebookLoginService { get; set; }
         public HomePage()
         {
             InitializeComponent();
@@ -31,7 +32,10 @@ namespace AnorocMobileApp.Views
                 lblTitle.Text = "Anoroc Logged in with Facebook";
             }
         }
-
+        private void checkEmail(object sender, EventArgs e)
+        {
+            DisplayAlert("Testing", User.FirstName + "," + User.Email, "OK");
+        }
         private void logout(object sender, EventArgs e)
         {
             if(User.loggedInFacebook)
