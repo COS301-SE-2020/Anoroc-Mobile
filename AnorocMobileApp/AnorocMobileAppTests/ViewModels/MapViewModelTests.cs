@@ -13,11 +13,12 @@ namespace AnorocMobileApp.Models.Tests
         [TestMethod()]
         public void GetPinsForAreaTest()
         {
-            MapModel mapModel = new MapModel();
-            var resultObject = mapModel.loadJsonFileToList();
-            List<Place> placesList = new List<Place>();
             try
             {
+                MapModel mapModel = new MapModel();
+                var resultObject = mapModel.loadJsonFileToList();
+                List<Place> placesList = new List<Place>();
+
                 foreach (var place in resultObject.PointArray)
                 {
                     placesList.Add(new Place
@@ -31,7 +32,7 @@ namespace AnorocMobileApp.Models.Tests
                         //OpenNow = GetOpenHours(place?.opening_hours?.open_now)
                     });
                 }
-                Assert.IsNotNull(placesList);
+                Assert.IsNotNull(placesList[0].PlaceName);
             }
             catch(Exception e)
             {
