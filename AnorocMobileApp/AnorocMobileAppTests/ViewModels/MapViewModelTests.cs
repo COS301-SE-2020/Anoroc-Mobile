@@ -32,7 +32,10 @@ namespace AnorocMobileApp.Models.Tests
                         //OpenNow = GetOpenHours(place?.opening_hours?.open_now)
                     });
                 }
+                Assert.IsNotNull(placesList[0].Location);
+                Assert.IsNotNull(placesList[0].Position);
                 Assert.IsNotNull(placesList[0].PlaceName);
+                Assert.IsNotNull(placesList[0].Address);
             }
             catch(Exception e)
             {
