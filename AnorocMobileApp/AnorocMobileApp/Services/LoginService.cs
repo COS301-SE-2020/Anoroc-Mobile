@@ -13,15 +13,20 @@ using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
 {
-    //Use this class to log the user in again once our Token.token has expireed and we need a new one
+    /// <summary>
+    /// Use this class to log the user in again once our Token.token has expireed and we need a new one
+    /// </summary>
     class LoginService
     {
         public bool LoginAnoroc()
         {
             return true;
         }
-
-
+        /// <summary>
+        /// Retrieve the user's data based on their Facebook login
+        /// </summary>
+        /// <param name="facebookLoginService">Service used to manage Facebook login Authentication</param>
+        /// <returns></returns>
         public static async Task fillUserDetails(IFacebookLoginService facebookLoginService)
         {
             await Task.Factory.StartNew(async () =>
@@ -30,7 +35,12 @@ namespace AnorocMobileApp.Services
                 await fillDetailsAsync(facebookLoginService);
             });
         }
-        private static async Task fillDetailsAsync(IFacebookLoginService facebookLoginService)
+        /// <summary>
+        /// Asynchronously collect Facebook data in background
+        /// </summary>
+        /// <param name="facebookLoginService">Service used to manage Facebook login Authentication</param>
+        /// <returns>A Task</returns>
+        static async Task fillDetailsAsync(IFacebookLoginService facebookLoginService)
         {
             facebookLoginService.setUserDetails();
 

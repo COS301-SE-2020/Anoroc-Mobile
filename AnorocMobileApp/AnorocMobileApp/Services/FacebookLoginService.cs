@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Text;
 
 namespace AnorocMobileApp.Services
 {
+    /// <summary>
+    /// Facebook Login Service
+    /// </summary>
     public interface IFacebookLoginService
     {
 

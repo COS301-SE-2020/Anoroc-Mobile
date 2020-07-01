@@ -1,19 +1,13 @@
 ﻿using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.Models
 {
+    /// <summary>
+    /// View Model used ro the Login Feature
+    /// </summary>
     public class LoginViewModel
     {
         public UserDetails userDetails = null;
@@ -24,6 +18,9 @@ namespace AnorocMobileApp.Models
         public ICommand OnFacebookLoginErrorCmd { get; }
         public ICommand OnFacebookLoginCancelCmd { get; }
         public static bool facebookLoginTest = true;
+        /// <summary>
+        /// A View Model for the Facebook Login that is used to handle successful logins, on login, and errors on login
+        /// </summary>
         public LoginViewModel()
         {
             facebookLoginService = (Application.Current as App).FacebookLoginService;
@@ -53,14 +50,22 @@ namespace AnorocMobileApp.Models
             OnFacebookLoginCancelCmd = new Command(
                 () => DisplayAlert("Cancel", "Authentication cancelled by the user."));
         }
-
+        /// <summary>
+        /// A successful login from Facebook returns an Authorization token which is used
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="authToken">Authorization Token provided by Facebook</param>
         public void Success(string title, string authToken)
         {
             User.loggedInFacebook = true;
             _= LoginService.fillUserDetails(facebookLoginService);
             Login.FacebookSuccess(title, authToken, facebookLoginService);
         }
-
+        /// <summary>
+        /// A notification of the state of the Login through Facebook, if there is an error this function will notify the user
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="msg">Error message on unsuccessful login</param>
         public void DisplayAlert(string title, string msg)
         {
             (Application.Current as App).MainPage.DisplayAlert(title, msg, "OK");

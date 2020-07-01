@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,29 +8,34 @@ using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Views
 { 
+    /// <summary>
+    /// Class to manage the Settings Paged
+    /// </summary>
     public partial class SettingsPage : ContentPage
     {
-
+        /// <summary>
+        /// Initializes the settings Screen
+        /// </summary>
         public SettingsPage()
         {
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-
             InitializeComponent();
         }
-
+        /*We need to fix this, Only 1 class allowed per file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
         public class Location
         {
             public Location()
             {
                 
             }
-           
             public string Latitude;
             public string Longitude;
             public string Altitude;
         }
-
-        
+        /// <summary>
+        /// Asynchronous function that returns the current User location
+        /// </summary>
+        /// <returns>Location of the user based on the phones Geolocation</returns>
         public async Task<Location> getLocationAsync()
         {
             Location loc = new Location();
@@ -71,26 +75,26 @@ namespace AnorocMobileApp.Views
             }
 
         }
-
+        /// <summary>
+        /// Function to toggle Asynchronous location, when off
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Toggled Event Arguments</param>
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
             if(e.Value == true)
             {
                 try
                 {
-
                     //POST
                     postRequestAsync();
 
                 }
                 catch (Exception ex)
                 {
-                    
-
                     if (ex.InnerException != null)
                     {
                         await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
-
                     }
                 }
             }
@@ -99,7 +103,9 @@ namespace AnorocMobileApp.Views
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
-
+        /// <summary>
+        /// Function to get the user's Geolocation when the location permission is enabled 
+        /// </summary>
         public async void postRequestAsync()
         {
 

@@ -11,16 +11,29 @@ using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views
 {
+    /// <summary>
+    /// Class to manage the Home Page Screen
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage : TabbedPage
     {
+        /// <summary>
+        /// Getter's and Setter's for Email and Facebook Login Service
+        /// </summary>
         public string Email { get; set; }
         public IFacebookLoginService FacebookLoginService { get; set; }
+        /// <summary>
+        /// Constructor to load homepage
+        /// </summary>
         public HomePage()
         {
             InitializeComponent();
             
         }
+        /// <summary>
+        /// Tests whether the user is logged in with Facebook
+        /// </summary>
+        /// <param name="facebookLoginService">Login With Facebook Service</param>
         public HomePage(IFacebookLoginService facebookLoginService)
         {
             FacebookLoginService = facebookLoginService;
@@ -32,10 +45,20 @@ namespace AnorocMobileApp.Views
                 lblTitle.Text = "Anoroc Logged in with Facebook";
             }
         }
+        /// <summary>
+        /// Test function to retrive the User's data
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Event Arguments</param>
         private void checkEmail(object sender, EventArgs e)
         {
             DisplayAlert("Testing", User.FirstName + "," + User.Email, "OK");
         }
+        /// <summary>
+        /// Log out function to log user out from Facebok or Google
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event Arguments</param>
         private void logout(object sender, EventArgs e)
         {
             if(User.loggedInFacebook)
