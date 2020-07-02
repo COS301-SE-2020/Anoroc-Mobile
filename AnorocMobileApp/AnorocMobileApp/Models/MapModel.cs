@@ -9,15 +9,27 @@ using System.Reflection;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using System.Diagnostics;
+using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.Models
 {
     class MapModel
     {
+        MapService Map_Service;
         public MapModel()
         {
+            Map_Service = new MapService();
         }
-        public Points loadJsonFileToList()
+
+
+        public async System.Threading.Tasks.Task<List<Clusters>> GetClustersAsync()
+        {
+          
+            List<Clusters> clusters = await Map_Service.FetchClustersAsync();
+            return clusters;
+        }
+
+        public Clusters loadJsonFileToList()
         {
             try
             {
@@ -29,7 +41,7 @@ namespace AnorocMobileApp.Models
                     text = reader.ReadToEnd();
                 }
 
-                var resultObject = JsonConvert.DeserializeObject<Points>(text);
+                var resultObject = JsonConvert.DeserializeObject<Clusters>(text);
                 return resultObject;
             }
             catch (Exception ex)

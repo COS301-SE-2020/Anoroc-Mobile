@@ -10,8 +10,8 @@ namespace AnorocMobileApp.Models
         {
 
         }
-        public string Latitude;
-        public string Longitude;
-        public string Altitude;
+   
+        public GEOCoordinate Coordinate { get; set; }
+        
     }
 }

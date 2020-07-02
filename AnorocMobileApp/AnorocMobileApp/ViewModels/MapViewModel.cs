@@ -9,49 +9,41 @@ namespace AnorocMobileApp.Models
         /// Public instances declared in MapViewModel Class along with constructor
         /// </summary>
         /// <param name="mapModel">A new instancce of the MapModel Object used to show the map</param>
-        /// <param name="placesList">A list of Place Onjects used to store all the data points</param>
+        /// <param name="Cluster_List">A list of Place Objects used to store all the data points</param>
         MapModel mapModel = new MapModel();
-        List<Place> placesList;
+        List<Clusters> Cluster_List;
         public MapViewModel()
         {
-            placesList = new List<Place>();
+            Cluster_List = new List<Clusters>();
         }
+        
+
+
         /// <summary>
-        /// Loads data points from JSON object and creates a list of Place objefcts based on the JSON data
+        ///     Wrapper function that turns the returned clusters into pins used by the map
         /// </summary>
-        /// <param name="resultObject">The parsed JSON data that is used to read through the JSON</param>
-        /// <returns>A list of new 'Place' Objects</returns>
-        public List<Place> GetPinsForArea()
-        {  
-            var resultObject = mapModel.loadJsonFileToList();
-            if (resultObject != null)
+        /// <returns> The pins </returns>
+        public async System.Threading.Tasks.Task<List<Pin>> GetPinsForAreaAsync()
+        {
+            List<Pin> map_pins = new List<Pin>();
+
+            Cluster_List = await mapModel.GetClustersAsync();
+
+            foreach (Clusters cluster in Cluster_List)
             {
-                foreach (var place in resultObject.PointArray)
+                foreach (Location location in cluster.Coordinates)
                 {
-                    placesList.Add(new Place
+                    map_pins.Add(new Pin
                     {
-                        PlaceName = "Test Name",
+                        Label = "Test name",
                         Address = "Test Address",
-                        Location = new Location(place.Latitude, place.Longitude),
-                        Position = new Position(place.Latitude, place.Longitude)
-                        //Icon = place.icon,
-                        //Distance = $"{GetDistance(lat1, lon1, place.geometry.location.lat, place.geometry.location.lng, DistanceUnit.Kiliometers).ToString("N2")}km",
-                        //OpenNow = GetOpenHours(place?.opening_hours?.open_now)
+                        Type = PinType.Place,
+                        Position = new Position(location.Coordinate.Latitude, location.Coordinate.Longitude)
                     });
                 }
-                return placesList;
             }
-            else
-                return null;
+            return map_pins;
         }
     }
 }
-//PlacesListView.ItemsSource = placesList;
-//var loc = await Xamarin.Essentials.Geolocation.GetLocationAsync();
-/* MyMap.Pins.Add(new Pin
-                {
-                    Label = place.name,
-                    Address = place.vicinity,
-                    Type = PinType.Place,
-                    Position = new Position(place.geometry.location.lat, place.geometry.location.lng)
-                });*/
+
