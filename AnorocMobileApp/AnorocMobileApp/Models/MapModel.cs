@@ -10,6 +10,7 @@ using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using System.Diagnostics;
 using AnorocMobileApp.Services;
+using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Models
 {
@@ -21,15 +22,19 @@ namespace AnorocMobileApp.Models
             Map_Service = new MapService();
         }
 
-
-        public async System.Threading.Tasks.Task<List<Clusters>> GetClustersAsync()
+        public async Task<List<Cluster>> GetClustersWithRadius()
         {
-          
-            List<Clusters> clusters = await Map_Service.FetchClustersAsync();
+            List<Cluster> cluster = await Map_Service.GetClustersForCirclesAsync();
+            return cluster;
+        }
+
+        public async Task<List<ClusterAllPins>> GetClustersAsync()
+        { 
+            List<ClusterAllPins> clusters = await Map_Service.FetchClustersAsync();
             return clusters;
         }
 
-        public Clusters loadJsonFileToList()
+        public ClusterAllPins loadJsonFileToList()
         {
             try
             {
@@ -41,7 +46,7 @@ namespace AnorocMobileApp.Models
                     text = reader.ReadToEnd();
                 }
 
-                var resultObject = JsonConvert.DeserializeObject<Clusters>(text);
+                var resultObject = JsonConvert.DeserializeObject<ClusterAllPins>(text);
                 return resultObject;
             }
             catch (Exception ex)

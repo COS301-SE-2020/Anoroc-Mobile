@@ -11,7 +11,9 @@ namespace AnorocMobileApp.Models
 
         }
    
+        public DateTime Created { get; set; }
         public GEOCoordinate Coordinate { get; set; }
-        
+        public bool Carrier_Data_Point { get; set; }
+
     }
 }

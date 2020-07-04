@@ -16,9 +16,29 @@ namespace AnorocMobileApp.Views
 
             //Task.Delay(2000);
 
-            UpdateMapAsync();
+            //UpdateMapAsync();
+            DrawClusters();
         }
 
+
+        async void DrawClusters()
+        {
+            List<Circle> circles = await viewModel.GetClustersForMap();
+            foreach(Circle circle in circles)
+            {
+                MyMap.MapElements.Add(circle);
+            }
+            addPins();
+            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
+        }
+        void addPins()
+        {
+            List<Pin> pins = viewModel.Pins;
+            foreach (Pin pin in pins)
+            {
+                MyMap.Pins.Add(pin);
+            }
+        }
 
         /// <summary>
         /// Function to update the map based on the View Model's GetPinsForArea

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AnorocMobileApp.Models
 {
-    public class Clusters
+    public class ClusterAllPins
     {
         public List<Location> Coordinates { get; set; }
         public DateTime Created { get; set; }
