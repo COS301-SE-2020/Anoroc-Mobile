@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,11 +42,11 @@ namespace AnorocMobileApp.Views
             if(User.loggedInFacebook)
             {
                 FacebookLoginService.Logout();
-                Application.Current.MainPage = new NavigationPage(new Login());
+                Application.Current.MainPage = new NavigationPage(new LoginWithSocialIconPage());
             }
             else if(User.loggedInAnoroc)
             {
-                Application.Current.MainPage = new NavigationPage(new Login());
+                Application.Current.MainPage = new NavigationPage(new LoginWithSocialIconPage());
             }
         }
     }
