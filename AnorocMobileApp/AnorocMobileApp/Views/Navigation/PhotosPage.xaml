@@ -30,7 +30,7 @@
                     HorizontalOptions="CenterAndExpand"
                     LineHeight="{OnPlatform Android=1.5,
                                             Default=-1}"
-                    Text="Photos"
+                    Text="Home"
                     TextColor="{DynamicResource Gray-900}"
                     VerticalOptions="Center" />
 
