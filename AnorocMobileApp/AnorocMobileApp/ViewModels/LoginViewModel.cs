@@ -6,7 +6,7 @@ using Xamarin.Forms;
 namespace AnorocMobileApp.Models
 {
     /// <summary>
-    /// View Model used ro the Login Feature
+    /// View Model used to the Login Feature
     /// </summary>
     public class LoginViewModel
     {

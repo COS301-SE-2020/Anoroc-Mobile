@@ -38,7 +38,6 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -91,8 +90,6 @@
   <ItemGroup>
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MyFirebaseIIDService.cs" />
-    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="NotificationHelper.cs" />
     <Compile Include="Resources\FacebookLoginButtonRenderer.cs" />
     <Compile Include="Resources\HeatmapRenderer.cs" />

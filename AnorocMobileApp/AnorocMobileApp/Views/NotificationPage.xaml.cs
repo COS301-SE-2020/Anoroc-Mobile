@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnorocMobileApp.Services;
+using System;
 using System.Net.Http;
 using Xamarin.Forms;
 
@@ -35,7 +36,7 @@ namespace AnorocMobileApp.Views
             var response = await client.GetAsync(url);
 
             string result = response.Content.ReadAsStringAsync().Result;
-            DependencyService.Get<INotification>().CreateNotification("Anoroc", result);
+            DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", result);
         }
 
     }
