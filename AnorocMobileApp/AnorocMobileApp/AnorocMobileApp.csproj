@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -39,9 +39,11 @@
     <PackageReference Include="Syncfusion.Xamarin.Cards" Version="18.1.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.1.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.DataSource" Version="18.1.0.59" />
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar" Version="18.1.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.1.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.1.0.59" />
     <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="18.1.0.59" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator" Version="18.1.0.59" />
     <PackageReference Include="Xamarin.Auth" Version="1.7.0" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.847" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
@@ -83,13 +85,22 @@
     <EmbeddedResource Update="Views\Forms\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage.xaml">
+    <EmbeddedResource Update="Views\HomePage_old.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Menu\ArticleListPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Menu\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\AlbumPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Navigation\ArticleListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\BottomNavigationPage.xaml">
@@ -108,6 +119,9 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NotificationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\HomeTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\SocialIconTemplate.xaml">

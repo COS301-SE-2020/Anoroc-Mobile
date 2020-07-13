@@ -78,6 +78,9 @@
     <PackageReference Include="Syncfusion.Xamarin.DataSource">
       <Version>18.1.0.59</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfCalendar">
+      <Version>18.1.0.59</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
       <Version>18.1.0.59</Version>
     </PackageReference>
@@ -85,6 +88,9 @@
       <Version>18.1.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRating">
+      <Version>18.1.0.59</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRotator">
       <Version>18.1.0.59</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.CustomTabs">

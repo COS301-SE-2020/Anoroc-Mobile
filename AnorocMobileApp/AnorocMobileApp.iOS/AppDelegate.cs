@@ -1,3 +1,5 @@
+using Syncfusion.SfRotator.XForms.iOS;
+using Syncfusion.SfCalendar.XForms.iOS;
 using Syncfusion.XForms.iOS.Cards;
 using Syncfusion.XForms.iOS.Graphics;
 using Syncfusion.XForms.iOS.Core;
@@ -31,7 +33,10 @@ namespace AnorocMobileApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Xamarin.FormsMaps.Init();
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+            SfRotatorRenderer.Init();
+SfCardLayoutRenderer.Init();
+SfCalendarRenderer.Init();
             SfCardViewRenderer.Init();
             Core.Init();
             SfGradientViewRenderer.Init();
