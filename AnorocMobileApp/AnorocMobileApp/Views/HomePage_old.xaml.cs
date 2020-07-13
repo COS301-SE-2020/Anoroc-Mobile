@@ -13,16 +13,16 @@ using Xamarin.Forms.Xaml;
 namespace AnorocMobileApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : TabbedPage
+    public partial class HomePage_old : TabbedPage
     {
         public string Email { get; set; }
         public IFacebookLoginService FacebookLoginService { get; set; }
-        public HomePage()
+        public HomePage_old()
         {
             InitializeComponent();
             
         }
-        public HomePage(IFacebookLoginService facebookLoginService)
+        public HomePage_old(IFacebookLoginService facebookLoginService)
         {
             FacebookLoginService = facebookLoginService;
             
