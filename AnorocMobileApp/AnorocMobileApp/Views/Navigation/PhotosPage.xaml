@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AnorocMobileApp.Views.Navigation.PhotosPage"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
@@ -49,62 +50,9 @@
                     WidthRequest="40" />
 
             </Grid>
-            
+
             <BoxView Style="{StaticResource BoxViewStyle}" />
 
-            <listView:SfListView ItemsSource="{Binding Photos}" 
-                                 Padding="15,0,15,15"
-                                 ItemSize="90" 
-                                 ItemSpacing="4"  
-                                 IsScrollBarVisible="False"
-                                 SelectionBackgroundColor="Transparent"              
-                                 TapCommand="{Binding ImageTapCommand}">
-
-                <listView:SfListView.DataSource>
-                    <data:DataSource>
-                        <data:DataSource.GroupDescriptors>
-                            <data:GroupDescriptor PropertyName="UpdatedDate" />
-                        </data:DataSource.GroupDescriptors>
-                    </data:DataSource>
-                </listView:SfListView.DataSource>
-
-                <listView:SfListView.GroupHeaderTemplate>
-                    <DataTemplate>
-                        <StackLayout Orientation="Horizontal">
-                            <Label Text="{Binding Key,StringFormat='{0:MMMM dd, yyyy}'}" 
-                                   FontFamily="{StaticResource Montserrat-SemiBold}"
-                                   FontSize="12"
-                                   Margin="0,5,0,0"
-                                   LineHeight="{OnPlatform Android=1.25,
-                                                        Default=-1}"
-                                   TextColor="{DynamicResource Gray-800}"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="StartAndExpand"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </listView:SfListView.GroupHeaderTemplate>
-
-                <listView:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid BackgroundColor="{DynamicResource Gray-200}">
-                            <Image Aspect="AspectFill"
-                                   BackgroundColor="{DynamicResource Gray-200}"
-                                   HeightRequest="90" 
-                                   WidthRequest="114">
-                                  <Image.Source>
-                                      <UriImageSource Uri="{Binding ImageURL}"
-                                                      CacheValidity="14"
-                                                      CachingEnabled="true"/>
-                                </Image.Source>
-                            </Image>
-                        </Grid>
-                    </DataTemplate>
-                </listView:SfListView.ItemTemplate>
-
-                <listView:SfListView.LayoutManager>
-                    <listView:GridLayout SpanCount="{core:OnPlatformOrientationIntValue PhonePortrait=3,PhoneLandscape=5,TabletPortrait=6,TabletLandscape=10,Desktop=10}"/>
-                </listView:SfListView.LayoutManager>
-            </listView:SfListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
