@@ -20,7 +20,7 @@ namespace AnorocMobileApp.Views
         /// </summary>
         public SettingsPage()
         {
-            var status= new Label();
+            var status = new Label();
             status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
 
             GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
@@ -37,10 +37,10 @@ namespace AnorocMobileApp.Views
         /// Asynchronous function that returns the current User location
         /// </summary>
         /// <returns>Location of the user based on the phones Geolocation</returns>
-        public async Task<Models.GEOCoordinate> getLocationAsync()
+        public async Task<Models.Location> getLocationAsync()
         {
             //Location loc = new Location();
-            Models.GEOCoordinate loc = new Models.GEOCoordinate();
+            Models.Location loc = new Models.Location();
             try
             {
                 GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
@@ -48,9 +48,12 @@ namespace AnorocMobileApp.Views
 
                 if (location != null)
                 {
-                    loc.Latitude = location.Latitude;
-                    loc.Longitude = location.Longitude;
-                    loc.Altitude = (double)location.Altitude;
+                    loc.Coordinate.Latitude = location.Latitude;
+                    loc.Coordinate.Longitude = location.Longitude;
+                    loc.Coordinate.Altitude = (double)location.Altitude;
+                    //loc.Latitude = location.Latitude.ToString();
+                    //loc.Longitude = location.Longitude;
+                    //loc.Altitude = (double)location.Altitude;
 
 
                     //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
@@ -86,7 +89,7 @@ namespace AnorocMobileApp.Views
         /// <param name="e">Toggled Event Arguments</param>
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
-            if(e.Value == true)
+            if (e.Value == tIrue)
             {
                 try
                 {
@@ -113,7 +116,7 @@ namespace AnorocMobileApp.Views
         public async void postRequestAsync()
         {
 
-            Models.GEOCoordinate location = await getLocationAsync();
+            Models.Location location = await getLocationAsync();
 
             string url = "https://10.0.2.2:5001/location/GEOLocation";
 
@@ -122,7 +125,7 @@ namespace AnorocMobileApp.Views
 
             HttpClient client = new HttpClient(clientHandler);
 
-            string data  = JsonConvert.SerializeObject(location);
+            string data = JsonConvert.SerializeObject(location);
             StringContent c = new StringContent(data, Encoding.UTF8, "application/json");
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             HttpResponseMessage response = await client.PostAsync(url, c);
@@ -138,6 +141,7 @@ namespace AnorocMobileApp.Views
 
             if (selectedIndex != -1)
             {
+                string value = (string)picker.ItemsSource[selectedIndex];
                 //status.Text = (string)picker.ItemsSource[selectedIndex];
             }
         }
