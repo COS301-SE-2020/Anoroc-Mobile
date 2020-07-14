@@ -7,48 +7,52 @@ using Newtonsoft.Json;
 using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Views
-{ 
+{
+
     /// <summary>
     /// Class to manage the Settings Paged
     /// </summary>
     public partial class SettingsPage : ContentPage
     {
+
         /// <summary>
         /// Initializes the settings Screen
         /// </summary>
         public SettingsPage()
         {
-            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+            var status= new Label();
+            status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
+
+            GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
             InitializeComponent();
         }
         /*We need to fix this, Only 1 class allowed per file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-        public class Location
-        {
-            public Location()
-            {
-                
-            }
-            public string Latitude;
-            public string Longitude;
-            public string Altitude;
-        }
+        //public class Location
+        //{
+        //    public string Latitude;
+        //    public string Longitude;
+        //    public string Altitude;
+        //}
         /// <summary>
         /// Asynchronous function that returns the current User location
         /// </summary>
         /// <returns>Location of the user based on the phones Geolocation</returns>
-        public async Task<Location> getLocationAsync()
+        public async Task<Models.GEOCoordinate> getLocationAsync()
         {
-            Location loc = new Location();
+            //Location loc = new Location();
+            Models.GEOCoordinate loc = new Models.GEOCoordinate();
             try
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-                var location = await Geolocation.GetLocationAsync(request);
+                GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+                Location location = await Geolocation.GetLocationAsync(request);
 
                 if (location != null)
                 {
-                    loc.Latitude = location.Latitude.ToString();
-                    loc.Longitude = location.Longitude.ToString();
-                    loc.Altitude = location.Altitude.ToString();
+                    loc.Latitude = location.Latitude;
+                    loc.Longitude = location.Longitude;
+                    loc.Altitude = (double)location.Altitude;
+
+
                     //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
                 }
                 return loc;
@@ -109,22 +113,33 @@ namespace AnorocMobileApp.Views
         public async void postRequestAsync()
         {
 
-            var location = await getLocationAsync();
+            Models.GEOCoordinate location = await getLocationAsync();
 
-            var url = "https://10.0.2.2:5001/location/GEOLocation";
+            string url = "https://10.0.2.2:5001/location/GEOLocation";
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
             HttpClient client = new HttpClient(clientHandler);
 
-            var data  = JsonConvert.SerializeObject(location);
-            var c = new StringContent(data, Encoding.UTF8, "application/json");
+            string data  = JsonConvert.SerializeObject(location);
+            StringContent c = new StringContent(data, Encoding.UTF8, "application/json");
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            var response = await client.PostAsync(url, c);
+            HttpResponseMessage response = await client.PostAsync(url, c);
             string result = response.Content.ReadAsStringAsync().Result;
 
             await DisplayAlert("Attention", "Enabled: " + result, "OK");
+        }
+
+        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                //status.Text = (string)picker.ItemsSource[selectedIndex];
+            }
         }
     }
 }

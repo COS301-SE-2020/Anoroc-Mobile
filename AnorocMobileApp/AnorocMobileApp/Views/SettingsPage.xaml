@@ -1,20 +1,64 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AnorocMobileApp.Views.SettingsPage">
-    <ContentPage.Content>
-      <Grid VerticalOptions="Center" Margin="20">
-    <Grid.RowDefinitions>
-        <RowDefinition Height="60"/>
-    </Grid.RowDefinitions>
-    <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
-        <Label.FontFamily>
-            <OnPlatform x:TypeArguments="x:String">
-                <On Platform="Android"/>
-            </OnPlatform>
-        </Label.FontFamily>
-    </Label>
-<Switch IsToggled="False" Toggled="OnToggledAsync"/>  
-</Grid>
 
-    </ContentPage.Content>
+
+    <!--<ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>-->
+
+    <Grid VerticalOptions="Center" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <On Platform="Android" />
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+        <Switch Grid.Row="0" Grid.Column="0" IsToggled="False" Toggled="OnToggledAsync" />
+        <Label Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" />
+        <Picker x:Name="status" Grid.Row="1" Grid.Column="0" Title="Status">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Positive</x:String>
+                    <x:String>Negative</x:String>
+                    <x:String>Untested</x:String>
+                    <x:String>Waiting Results</x:String>
+                    <x:String>Recoverd</x:String>
+                    <x:String>Unsure</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </Grid>
+
+
+    <!--<ContentPage.Content>
+        <Grid VerticalOptions="Center" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+            <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Switch Grid.Row="0" Grid.Column="1" IsToggled="False" Toggled="OnToggledAsync" />
+
+            <Label VerticalTextAlignment="Center" Grid.Row="1" Grid.Column="0" Text="Status" StyleClass="lbl-fieldform" FontSize="Body">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android" />
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <Picker  Grid.Row="1" Grid.Column="1" Title="None Selected" />
+        </Grid>
+
+    </ContentPage.Content>-->
+
+
 </ContentPage>
-
