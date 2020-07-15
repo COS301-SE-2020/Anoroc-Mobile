@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
-namespace AnorocMobileApp.Views.Menu
+namespace AnorocMobileApp.Views.Home
 {
     /// <summary>
     /// Class helps to reduce repetitive markup, and allows an apps appearance to be more easily changed.

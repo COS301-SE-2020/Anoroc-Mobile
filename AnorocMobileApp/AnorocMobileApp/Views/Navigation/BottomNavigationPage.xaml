@@ -3,8 +3,8 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:local="clr-namespace:AnorocMobileApp.Views.Navigation"
             x:Class="AnorocMobileApp.Views.Navigation.BottomNavigationPage"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
-            xmlns:local1="clr-namespace:AnorocMobileApp.Views.Menu"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:home="clr-namespace:AnorocMobileApp.Views.Home;assembly=AnorocMobileApp"
             android:TabbedPage.ToolbarPlacement="Bottom"
             android:TabbedPage.BarSelectedItemColor="{DynamicResource PrimaryColor}"
             android:TabbedPage.BarItemColor="{DynamicResource Gray-600}"
@@ -17,13 +17,13 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </TabbedPage.Resources>
-    <local1:HomePage Title="Home">
-        <local1:HomePage.IconImageSource>
+    <home:HomePage Title="Home">
+        <home:HomePage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource HomeIcon}"
                                  Size="16"/>
-        </local1:HomePage.IconImageSource>
-    </local1:HomePage>
+        </home:HomePage.IconImageSource>
+    </home:HomePage>
     <local:PhotosPage Title="Itinerary">
         <local:PhotosPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"

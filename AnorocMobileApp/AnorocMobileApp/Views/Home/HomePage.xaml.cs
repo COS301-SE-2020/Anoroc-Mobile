@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
-namespace AnorocMobileApp.Views.Menu
+namespace AnorocMobileApp.Views.Home
 {
     /// <summary>
     /// Home page for the app to display a summary of information

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-using AnorocMobileApp.Views;
-using Newtonsoft.Json;
-using System.IO;
-using System.Reflection;
+﻿using System.Collections.Generic;
+using AnorocMobileApp.Models;
 using Xamarin.Forms.Maps;
-using Xamarin.Essentials;
+using Location = AnorocMobileApp.Models.Location;
 
-namespace AnorocMobileApp.Models
+namespace AnorocMobileApp.ViewModels
 {
     class MapViewModel
     {

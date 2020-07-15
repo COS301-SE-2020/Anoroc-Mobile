@@ -1,9 +1,8 @@
 ﻿using System.Collections.ObjectModel;
-using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AnorocMobileApp.ViewModels.Menu
+namespace AnorocMobileApp.ViewModels.Home
 {
     /// <summary>
     /// ViewModel for Home page.
@@ -13,9 +12,9 @@ namespace AnorocMobileApp.ViewModels.Menu
     {
         #region Fields
 
-        private ObservableCollection<Home> featuredStories;
+        private ObservableCollection<Models.Home> featuredStories;
 
-        private ObservableCollection<Home> latestStories;
+        private ObservableCollection<Models.Home> latestStories;
 
         #endregion
 
@@ -25,9 +24,9 @@ namespace AnorocMobileApp.ViewModels.Menu
         /// </summary>
         public HomeViewModel()
         {
-            this.FeaturedStories = new ObservableCollection<Home>
+            this.FeaturedStories = new ObservableCollection<Models.Home>
             {
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "ArticleImage2.png",
                     Name = "Learning to Reset",
@@ -35,7 +34,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "Aug 2010",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "ArticleImage3.png",
                     Name = "Holistic Approach to UI Design",
@@ -43,7 +42,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "Apr 16",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "ArticleImage4.png",
                     Name = "Guiding Your Flock to Success",
@@ -51,7 +50,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "May 2012",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "ArticleImage5.png",
                     Name = "Be a Nurturing, Fierce Team Leader",
@@ -59,7 +58,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "Apr 16",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "ArticleImage6.png",
                     Name = "Holistic Approach to UI Design",
@@ -69,9 +68,9 @@ namespace AnorocMobileApp.ViewModels.Menu
                 }
             };
 
-            this.LatestStories = new ObservableCollection<Home>
+            this.LatestStories = new ObservableCollection<Models.Home>
             {
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "Article_image1.png",
                     Name = "Learning to Reset",
@@ -79,7 +78,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "Apr 16",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "Article_image2.png",
                     Name = "Holistic Approach to UI Design",
@@ -87,7 +86,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "May 26",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "Article_image3.png",
                     Name = "Guiding Your Flock to Success",
@@ -95,7 +94,7 @@ namespace AnorocMobileApp.ViewModels.Menu
                     Date = "Apr 10",
                     AverageReadingTime = "5 mins read"
                 },
-                new Home
+                new Models.Home
                 {
                     ImagePath = App.BaseImageUrl + "Article_image4.png",
                     Name = "Holistic Approach to UI Design",
@@ -116,7 +115,7 @@ namespace AnorocMobileApp.ViewModels.Menu
         /// <summary>
         /// Gets or sets the property that has been bound with the rotator view, which displays the articles featured stories items.
         /// </summary>
-        public ObservableCollection<Home> FeaturedStories
+        public ObservableCollection<Models.Home> FeaturedStories
         {
             get
             {
@@ -138,7 +137,7 @@ namespace AnorocMobileApp.ViewModels.Menu
         /// <summary>
         /// Gets or sets the property that has been bound with the list view, which displays the articles latest stories items.
         /// </summary>
-        public ObservableCollection<Home> LatestStories
+        public ObservableCollection<Models.Home> LatestStories
         {
             get
             {
@@ -199,7 +198,7 @@ namespace AnorocMobileApp.ViewModels.Menu
         /// <param name="obj">The object</param>
         private void BookmarkButtonClicked(object obj)
         {
-            if (obj is Home article)
+            if (obj is Models.Home article)
             {
                 article.IsBookmarked = !article.IsBookmarked;
             }
