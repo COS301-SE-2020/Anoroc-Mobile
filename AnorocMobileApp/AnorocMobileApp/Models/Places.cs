@@ -51,13 +51,13 @@ namespace AnorocMobileApp.Models
 
     public class Location
     {
-        public Location(float _lat, float _lng)
+        public Location(float _lat, float _lon)
         {
             lat = _lat;
-            lng = _lng;
+            lon = _lon;
         }
         public float lat { get; set; }
-        public float lng { get; set; }
+        public float lon { get; set; }
     }
 
     public class Viewport
