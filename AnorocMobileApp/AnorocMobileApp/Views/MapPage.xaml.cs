@@ -16,7 +16,8 @@ namespace AnorocMobileApp.Views
 
             //Task.Delay(2000);
 
-            //UpdateMapAsync();
+            UpdateMapAsync();
+
             DrawClusters();
         }
 
