@@ -29,7 +29,7 @@ namespace AnorocMobileApp
                     User.UserSurname = facebookLoginService.LastName;
                     User.UserID = facebookLoginService.UserID;
                     User.loggedInFacebook = true;
-                    MainPage = new NavigationPage(new HomePage(facebookLoginService));
+                    MainPage = new NavigationPage(new BottomNavigationPage());
                 }
                 else
                 {
