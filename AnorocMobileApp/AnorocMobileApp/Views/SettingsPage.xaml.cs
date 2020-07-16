@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.Views
 { 
@@ -84,6 +85,9 @@ namespace AnorocMobileApp.Views
         {
             if(e.Value == true)
             {
+                BackgroundLocaitonService locaitonService = new BackgroundLocaitonService();
+                BackgroundLocaitonService.Tracking = true;
+                locaitonService.Start_Tracking();
                 try
                 {
                     //POST
