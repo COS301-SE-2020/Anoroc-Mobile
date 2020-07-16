@@ -106,7 +106,7 @@ namespace AnorocMobileApp.Droid
                 try
                 {
                     var msg = message.GetNotification().Body;
-
+                    // Passing Message onto xamarin forms
                     MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, msg);
                 }
                 catch (Exception ex)
