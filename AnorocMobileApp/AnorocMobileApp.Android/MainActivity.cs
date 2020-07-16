@@ -8,7 +8,8 @@ using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
 using System.Net;
-
+using Xamarin.Forms;
+using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.Droid
 {
@@ -41,7 +42,25 @@ namespace AnorocMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
             LoadApplication(new App(new FacebookLoginService()));
+
+            WireUpBackgroundLocationTask();
         }
+
+        void WireUpBackgroundLocationTask()
+        {
+            MessagingCenter.Subscribe<StartBackgroundLocationTracking>(this, "StartLongRunningTaskMessage", message =>
+            {
+                var intent = new Intent(this, typeof(BackgroundLocationAndroidService));
+                StartService(intent);
+            });
+
+            MessagingCenter.Subscribe<StopBackgroundLocationTrackingMessage>(this, "StopLongRunningTaskMessage", message =>
+            {
+                var intent = new Intent(this, typeof(BackgroundLocationAndroidService));
+                StopService(intent);
+            });
+        }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

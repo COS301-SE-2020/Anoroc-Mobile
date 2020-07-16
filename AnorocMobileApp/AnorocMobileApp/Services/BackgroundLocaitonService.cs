@@ -1,8 +1,5 @@
 ﻿using AnorocMobileApp.Interfaces;
-using AnorocMobileApp.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -35,30 +32,34 @@ namespace AnorocMobileApp.Services
         public void Start_Tracking()
         {
             Tracking = true;
-            Run_Track();
+            var message = new StartBackgroundLocationTracking();
+            MessagingCenter.Send(message, "StartLongRunningTaskMessage");
+            HandleCancel();
         }
         
         /// <summary>
         /// Calls the Track function based every _Backoff amount of seconds
         /// </summary>
-        protected void Run_Track()
+        public async void Run_TrackAsync()
         {
-            Device.StartTimer(new TimeSpan(ConvertSecToNano(_Backoff)), () =>
+            await Task.Run(async () =>
             {
-                Track();
-                return Tracking;
+                while (Tracking)
+                {
+                    Track();
+                    await Task.Delay(ConvertSec(_Backoff));
+                }
             });
         }
 
         /// <summary>
-        /// Used to run the Timer ever _Backoff seconds by converting the seconds to nanoseconds
+        /// Used to run the Timer ever _Backoff seconds by converting the seconds to milisecondss
         /// </summary>
         /// <param name="seconds"> The seconds to convert </param>
-        /// <returns> The Nanoseconds </returns>
-        private long ConvertSecToNano(int seconds)
-        {
-            long ticks = seconds * (1 ^ 9);
-            return ticks;
+        /// <returns> The Miliseconds </returns>
+        private int ConvertSec(int seconds)
+        { 
+            return seconds * 1000;
         }
 
         private int _Backoff;
@@ -98,12 +99,22 @@ namespace AnorocMobileApp.Services
             Previous_request = location;
         }
 
+        void HandleCancel()
+        {
+            MessagingCenter.Subscribe<CancelMessage>(this, "CancelMessage", message =>
+            {
+                Stop_Tracking();
+            });
+        }
+
         /// <summary>
         /// Stop recording the users location in the background
         /// </summary>
         public void Stop_Tracking()
         {
             Tracking = false;
+            var message = new StopBackgroundLocationTrackingMessage();
+            MessagingCenter.Send(message, "StopLongRunningTaskMessage");
         }
     }
 }

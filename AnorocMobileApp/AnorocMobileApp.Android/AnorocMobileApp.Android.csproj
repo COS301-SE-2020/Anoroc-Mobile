@@ -107,6 +107,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\services\BackgroundLocationAndroidService.cs" />
     <Compile Include="Resources\services\FacebookLoginService.cs" />
   </ItemGroup>
   <ItemGroup>

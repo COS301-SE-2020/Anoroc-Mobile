@@ -2,6 +2,7 @@
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
 using System;
+using System.Net;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -46,14 +47,32 @@ namespace AnorocMobileApp
 
         protected override void OnStart()
         {
+            LoadPersistentValues();
         }
 
         protected override void OnSleep()
         {
+            Current.Properties["Tracking"] = BackgroundLocaitonService.Tracking;
         }
 
         protected override void OnResume()
         {
+            LoadPersistentValues();
         }
+
+        private void LoadPersistentValues()
+        {
+            if(Current.Properties.ContainsKey("Tracking"))
+            {
+                var value = (bool)Current.Properties["Tracking"];
+                BackgroundLocaitonService.Tracking = value;
+                if(BackgroundLocaitonService.Tracking)
+                {
+                    var message = new StartBackgroundLocationTracking();
+                    MessagingCenter.Send(message, "StartLongRunningTaskMessage");
+                }
+            }
+        }
+            
     }
 }
