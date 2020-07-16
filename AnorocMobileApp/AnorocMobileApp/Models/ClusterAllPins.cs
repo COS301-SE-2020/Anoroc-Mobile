@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace AnorocMobileApp.Models
 {
-    public class Location
+    public class ClusterAllPins
     {
-        public Location()
-        {
-
-        }
-   
+        public List<Location> Coordinates { get; set; }
         public DateTime Created { get; set; }
-        public GEOCoordinate Coordinate { get; set; }
         public bool Carrier_Data_Point { get; set; }
-
     }
 }
