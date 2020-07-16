@@ -12,6 +12,7 @@ using Android.Gms.Common;
 using Firebase.Iid;
 using Firebase.Messaging;
 using Xamarin.Forms;
+using Android.Util;
 
 namespace AnorocMobileApp.Droid
 {
@@ -44,7 +45,11 @@ namespace AnorocMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
             LoadApplication(new App(new FacebookLoginService()));
+
+            IsPlayServicesAvailable();
         }
+
+        //TODO: Add Force Refresh Token
         /// <summary>
         /// Function to check if Google Play services is correctly installed for the firebase messaging
         /// </summary>
@@ -72,13 +77,13 @@ namespace AnorocMobileApp.Droid
         }
 
         /// <summary>
-        /// Class with Firebase Services.
+        /// Class with Firebase Instance Services. For Regristration to Firebase
         /// </summary>
         [Service]
-        [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT"})]
+        [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
         public class MyFirebaseIIDService : FirebaseInstanceIdService
         {
-            public override void OnTokenRefresh()
+            public override async void OnTokenRefresh()
             {
                 var refreshedToken = FirebaseInstanceId.Instance.Token;
                 Console.WriteLine($"Token received: {refreshedToken}");
@@ -88,10 +93,13 @@ namespace AnorocMobileApp.Droid
             void SendRegistrationToServer(string token)
             {
                 // TODO: Still need to be implemented
+                Log.Debug(PackageName, token);
             }
         }
 
-
+        /// <summary>
+        /// Class with Firebase Messaging Services. To get messages while application is active
+        /// </summary>
         [Service]
         [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
         public class MyFirebaseMessagingService : FirebaseMessagingService
@@ -102,7 +110,6 @@ namespace AnorocMobileApp.Droid
                 base.OnMessageReceived(message);
 
                 Console.WriteLine("Received: " + message);
-
                 try
                 {
                     var msg = message.GetNotification().Body;

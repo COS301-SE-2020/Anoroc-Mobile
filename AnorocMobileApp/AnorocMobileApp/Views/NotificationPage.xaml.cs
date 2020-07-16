@@ -28,7 +28,7 @@ namespace AnorocMobileApp.Views
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
-                //lblMsg.Text = msg;
+                lblMsg.Text = msg;
             });
         }
 
