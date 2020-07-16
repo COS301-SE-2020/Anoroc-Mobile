@@ -43,7 +43,7 @@ namespace AnorocMobileApp.Views
             {
                 var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
                 var location = await Geolocation.GetLocationAsync(request);
-
+                
                 if (location != null)
                 {
                     loc.Latitude = location.Latitude.ToString();
