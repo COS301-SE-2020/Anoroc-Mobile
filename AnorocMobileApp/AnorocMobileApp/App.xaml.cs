@@ -17,10 +17,8 @@ namespace AnorocMobileApp
  
         public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
         {
-           
             InitializeComponent();
 
-           
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
 
@@ -44,19 +42,19 @@ namespace AnorocMobileApp
         {
             InitializeComponent();
 
-                FacebookLoginService = facebookLoginService;
-                if (facebookLoginService.isLoggedIn())
-                {
-                    User.FirstName = facebookLoginService.FirstName;
-                    User.UserSurname = facebookLoginService.LastName;
-                    User.UserID = facebookLoginService.UserID;
-                    User.loggedInFacebook = true;
-                    MainPage = new NavigationPage(new HomePage(facebookLoginService));
-                }
-                else
-                {
-                    MainPage = new NavigationPage(new Login());
-                }
+            FacebookLoginService = facebookLoginService;
+            if (facebookLoginService.isLoggedIn())
+            {
+                User.FirstName = facebookLoginService.FirstName;
+                User.UserSurname = facebookLoginService.LastName;
+                User.UserID = facebookLoginService.UserID;
+                User.loggedInFacebook = true;
+                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Login());
+            }
         }
 
         public App()
@@ -99,6 +97,6 @@ namespace AnorocMobileApp
                 }
             }
         }
-            
+
     }
 }
