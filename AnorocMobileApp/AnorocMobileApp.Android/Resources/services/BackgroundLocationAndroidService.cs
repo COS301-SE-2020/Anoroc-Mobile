@@ -26,37 +26,7 @@ namespace AnorocMobileApp.Droid.Resources.services
             return null;
         }
 
-       /* public override void OnCreate()
-        {
-            _cts = new CancellationTokenSource();
-
-            Task.Run(() =>
-            {
-                try
-                {
-                    var locationService = new BackgroundLocaitonService();
-                    BackgroundLocaitonService.Tracking = true;
-                    locationService.Run_TrackAsync();
-                }
-                catch (System.OperationCanceledException)
-                {
-
-                }
-                finally
-                {
-                    if (_cts.IsCancellationRequested)
-                    {
-                        var message = new CancelMessage();
-                        Device.BeginInvokeOnMainThread(() =>
-                        {
-                            MessagingCenter.Send(message, "CancelMessage");
-                        });
-                    }
-                }
-            }, _cts.Token);
-
-            base.OnCreate();
-        }*/
+     
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
         {
             _cts = new CancellationTokenSource();
@@ -65,9 +35,9 @@ namespace AnorocMobileApp.Droid.Resources.services
             {
                 try
                 {
-                    var locationService = new BackgroundLocaitonService();
+                    var backgroundLocationService = MainActivity.BackgroundLocationService;
                     BackgroundLocaitonService.Tracking = true;
-                    locationService.Run_TrackAsync();
+                    backgroundLocationService.Run_TrackAsync();
                 }
                 catch(Android.OS.OperationCanceledException)
                 {

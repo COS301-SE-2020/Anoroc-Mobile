@@ -1,4 +1,7 @@
 ﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Views;
+using System;
+using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -16,6 +19,7 @@ namespace AnorocMobileApp.Services
         private int request_count;
 
         public static bool Tracking;
+
         public BackgroundLocaitonService()
         {
             Tracking = false;
@@ -29,11 +33,13 @@ namespace AnorocMobileApp.Services
         /// <summary>
         /// Start the Background tracking service
         /// </summary>
+        ///
+
         public void Start_Tracking()
         {
             Tracking = true;
             var message = new StartBackgroundLocationTracking();
-            MessagingCenter.Send(message, "StartLongRunningTaskMessage");
+            MessagingCenter.Send(message, "StartBackgroundLocationTracking");
             HandleCancel();
         }
         
@@ -47,6 +53,9 @@ namespace AnorocMobileApp.Services
                 while (Tracking)
                 {
                     Track();
+                    //temp
+                    Debug.WriteLine(_Backoff);
+
                     await Task.Delay(ConvertSec(_Backoff));
                 }
             });
@@ -70,33 +79,54 @@ namespace AnorocMobileApp.Services
         /// </summary>
         protected async void Track()
         {
-           
-            request = new GeolocationRequest(GeolocationAccuracy.Best);
-            Xamarin.Essentials.Location location = null;
+            bool success = false;
+            int retry = 0;
+            while (retry < 3 && !success)
+            {
+                retry = 0;
+                try
+                {
+                    request = new GeolocationRequest(GeolocationAccuracy.Best);
+                    Xamarin.Essentials.Location location = null;
 
-            if (Previous_request != null)
-            {
-                location = await Geolocation.GetLocationAsync(request);
-                if(location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.01)
-                {
-                    _Backoff = 30;
-                    Modifier = 2;
-                    LocationService.Send_Locaiton_Server(new Models.Location(location));
-                }
-                else
-                {
-                    if ((_Backoff / 60) <= 10)
+                    if (Previous_request != null)
                     {
-                        _Backoff += (30 * Modifier);
-                        Modifier *= 2;
+                        location = await Geolocation.GetLocationAsync(request);
+                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.01)
+                        {
+                            _Backoff = 30;
+                            Modifier = 2;
+                            LocationService.Send_Locaiton_Server(new Models.Location(location));
+                        }
+                        else
+                        {
+                            if ((_Backoff / 60) <= 10)
+                            {
+                                _Backoff += (30 * Modifier);
+                                Modifier *= 2;
+                            }
+                        }
                     }
+                    else
+                    {
+                        location = await Geolocation.GetLocationAsync(request);
+                    }
+                    Previous_request = location;
+
+                    success = true;
+                }
+                catch (Exception e)
+                {
+                    Debug.WriteLine(e.StackTrace);
+                    retry++;
                 }
             }
-            else
+            if(retry == 3 || !success)
             {
-                location = await Geolocation.GetLocationAsync(request);
+                Stop_Tracking();
+                // TODO:
+                // Failed to Track, need to make a handler - copuld be a manual retry button that starts the tracking again
             }
-            Previous_request = location;
         }
 
         void HandleCancel()
@@ -113,8 +143,10 @@ namespace AnorocMobileApp.Services
         public void Stop_Tracking()
         {
             Tracking = false;
+            Debug.WriteLine("Stopped tracking - " + _Backoff);
             var message = new StopBackgroundLocationTrackingMessage();
-            MessagingCenter.Send(message, "StopLongRunningTaskMessage");
+            MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
         }
+
     }
 }

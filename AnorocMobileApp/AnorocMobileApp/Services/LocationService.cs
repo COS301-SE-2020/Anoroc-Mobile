@@ -7,13 +7,20 @@ namespace AnorocMobileApp.Services
 {
     public class LocationService
     {
+        private bool success;
+
         public LocationService()
         {
-
+            success = false;
         }
         public void Send_Locaiton_Server(Location lcoation)
         {
 
+            success = true;
+            if (!success)
+            {
+                throw new CantConnectToLocationServerException();
+            }
         }
     }
 }

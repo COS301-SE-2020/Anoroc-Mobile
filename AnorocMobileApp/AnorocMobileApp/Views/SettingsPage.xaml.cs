@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Interfaces;
 
 namespace AnorocMobileApp.Views
 { 
@@ -17,8 +18,11 @@ namespace AnorocMobileApp.Views
         /// <summary>
         /// Initializes the settings Screen
         /// </summary>
+        /// 
+        BackgroundLocaitonService locaitonService;
         public SettingsPage()
         {
+            locaitonService = new BackgroundLocaitonService();
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
             InitializeComponent();
         }
@@ -76,18 +80,23 @@ namespace AnorocMobileApp.Views
             }
 
         }
+
+
+
+
         /// <summary>
         /// Function to toggle Asynchronous location, when off
         /// </summary>
         /// <param name="sender">Sender Object</param>
         /// <param name="e">Toggled Event Arguments</param>
+        /// 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
             if(e.Value == true)
             {
-                BackgroundLocaitonService locaitonService = new BackgroundLocaitonService();
+                
                 BackgroundLocaitonService.Tracking = true;
-                locaitonService.Start_Tracking();
+                Container.BackgroundLocationService.Start_Tracking();
                 try
                 {
                     //POST
@@ -104,6 +113,8 @@ namespace AnorocMobileApp.Views
             }
             else
             {
+                BackgroundLocaitonService.Tracking = false;
+                locaitonService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }

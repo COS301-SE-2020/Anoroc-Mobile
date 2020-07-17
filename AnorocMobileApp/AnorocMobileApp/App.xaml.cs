@@ -1,4 +1,5 @@
-﻿using AnorocMobileApp.Models;
+﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
 using System;
@@ -13,6 +14,31 @@ namespace AnorocMobileApp
     {
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
+ 
+        public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
+        {
+           
+            InitializeComponent();
+
+           
+            // Dependancy Injections:
+            Container.BackgroundLocationService = backgroundLocationService;
+
+            FacebookLoginService = facebookLoginService;
+
+            if (facebookLoginService.isLoggedIn())
+            {
+                User.FirstName = facebookLoginService.FirstName;
+                User.UserSurname = facebookLoginService.LastName;
+                User.UserID = facebookLoginService.UserID;
+                User.loggedInFacebook = true;
+                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+            }
+            else
+            {
+                MainPage = new NavigationPage(new Login());
+            }
+        }
 
         public App(IFacebookLoginService facebookLoginService)
         {

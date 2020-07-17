@@ -19,13 +19,19 @@ namespace AnorocMobileApp.Droid
         public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
+        public static BackgroundLocaitonService BackgroundLocationService;
+
         readonly string[] LocationPermissions =
         {
             Manifest.Permission.AccessCoarseLocation,
             Manifest.Permission.AccessFineLocation
         };
+
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            BackgroundLocationService = new BackgroundLocaitonService();
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -41,25 +47,35 @@ namespace AnorocMobileApp.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
-            LoadApplication(new App(new FacebookLoginService()));
+
+            
+            // Dependency Injection:
+
+            LoadApplication(new App(new FacebookLoginService(), BackgroundLocationService));
 
             WireUpBackgroundLocationTask();
         }
 
+
+
+
         void WireUpBackgroundLocationTask()
         {
-            MessagingCenter.Subscribe<StartBackgroundLocationTracking>(this, "StartLongRunningTaskMessage", message =>
+            MessagingCenter.Subscribe<StartBackgroundLocationTracking>(this, "StartBackgroundLocationTracking", message =>
             {
                 var intent = new Intent(this, typeof(BackgroundLocationAndroidService));
                 StartService(intent);
             });
 
-            MessagingCenter.Subscribe<StopBackgroundLocationTrackingMessage>(this, "StopLongRunningTaskMessage", message =>
+            MessagingCenter.Subscribe<StopBackgroundLocationTrackingMessage>(this, "StopBackgroundLocationTrackingMessage", message =>
             {
                 var intent = new Intent(this, typeof(BackgroundLocationAndroidService));
                 StopService(intent);
             });
         }
+
+
+
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -84,6 +100,9 @@ namespace AnorocMobileApp.Droid
             CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }
 
+
+
+
         protected override void OnStart()
         {
             base.OnStart();
@@ -100,7 +119,5 @@ namespace AnorocMobileApp.Droid
                 }
             }
         }
-
-
     }
 }
