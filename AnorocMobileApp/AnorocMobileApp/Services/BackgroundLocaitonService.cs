@@ -25,10 +25,11 @@ namespace AnorocMobileApp.Services
             Tracking = false;
             Initial_Backoff = 15;
             _Backoff = Initial_Backoff;
-            Modifier = 2;
+            Modifier = 1.6;
             request_count = 0;
             User_Location = new Models.Location();
             LocationService = new LocationService();
+            Track_Retry = 0;
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace AnorocMobileApp.Services
                   {
                       Track();
                       //temp
-                      Debug.WriteLine(_Backoff);
+                      Debug.WriteLine("Backoff: " + _Backoff + "; Retry: " + Track_Retry);
 
                       await Task.Delay(ConvertSec(_Backoff));
                   }
@@ -67,16 +68,18 @@ namespace AnorocMobileApp.Services
         /// </summary>
         /// <param name="seconds"> The seconds to convert </param>
         /// <returns> The Miliseconds </returns>
-        private int ConvertSec(int seconds)
+        private int ConvertSec(double seconds)
         { 
-            return seconds * 1000;
+            return (int)(seconds * 1000);
         }
 
-        private int _Backoff;
-        private int Modifier;
-        private int Initial_Backoff;
+        private double _Backoff;
+        private double Modifier;
+        private double Initial_Backoff;
+        private double Track_Retry;
         /// <summary>
         /// Sends the user's location to the server if the distance is to the last request is larger than 10m, otherwise an exponential backoff occrus
+        /// Backoff = (previous backoff ^ 2)
         /// </summary>
         protected async void Track()
         {
@@ -96,15 +99,15 @@ namespace AnorocMobileApp.Services
                         if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.01)
                         {
                             _Backoff = Initial_Backoff;
-                            Modifier = 2;
+                            Track_Retry = 0;
                             LocationService.Send_Locaiton_Server(new Models.Location(location));
                         }
                         else
                         {
                             if ((_Backoff / 60) <= 10)
                             {
-                                _Backoff += (Initial_Backoff * Modifier);
-                                Modifier *= 2;
+                                _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
+                                Track_Retry++;
                             }
                         }
                     }
