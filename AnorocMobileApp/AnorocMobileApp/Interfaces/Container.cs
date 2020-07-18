@@ -4,12 +4,9 @@ using System.Text;
 
 namespace AnorocMobileApp.Interfaces
 {
-    public class Container
+    public static class Container
     {
-        public Container(IBackgroundLocationService backgroundLocationService)
-        {
-            BackgroundLocationService = backgroundLocationService;
-        }
+        
         public static IBackgroundLocationService BackgroundLocationService {get; set;}
         public static ILocationService LocationService { get; set; }
     }
