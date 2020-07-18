@@ -61,7 +61,7 @@
                     FontSize="12"
                     LineHeight="{OnPlatform Default=-1,
                                             Android=1.25}"
-                    Text="HOME"
+                    Text="Encounters"
                     TextColor="{DynamicResource Gray-800}" />
 
                 <!--<Rotator for featured blog stories>-->
@@ -72,7 +72,7 @@
                     DotsBorderColor="Transparent"
                     HeightRequest="266"
                     HorizontalOptions="StartAndExpand"
-                    ItemsSource="{Binding FeaturedStories}"
+                    ItemsSource="{Binding ContagionContact}"
                     NavigationDirection="Horizontal"
                     NavigationStripMode="Dots"
                     SelectedDotColor="{DynamicResource PrimaryColor}"
@@ -102,7 +102,7 @@
                                                          VerticalOptions="Center"
                                                          HorizontalOptions="Center"
                                                          >
-                                                <!--  Blog tile  -->
+                                                <!--  Location of the contact  -->
                                                 <Label
                                                     helper:RTLHelper.Margin="16,16,0,8"
                                                     FontFamily="{StaticResource Montserrat-Bold}"
@@ -111,7 +111,7 @@
                                                     LineHeight="{OnPlatform Default=-1,
                                                                             Android=1.25}"
                                                     MaxLines="1"
-                                                    Text="{Binding Name}"
+                                                    Text="{Binding Location}"
                                                     TextColor="{DynamicResource Gray-900}" />
 
                                                 <!--  Author name  -->
@@ -121,26 +121,10 @@
                                                     FontSize="12"
                                                     LineHeight="{OnPlatform Default=-1,
                                                                             Android=1.5}"
-                                                    Text="{Binding Author}"
+                                                    Text="{Binding DateTime}"
                                                     TextColor="{DynamicResource Gray-900}"
                                                     VerticalOptions="End" />
-
-                                                <!--  Published date and average reading time  -->
-                                                <Label
-                                                    Margin="16,2,16,16"
-                                                    FontFamily="{StaticResource Montserrat-Regular}"
-                                                    FontSize="12"
-                                                    LineHeight="{OnPlatform Default=-1,
-                                                                            Android=1.5}"
-                                                    TextColor="{DynamicResource Gray-700}">
-                                                    <Label.FormattedText>
-                                                        <FormattedString>
-                                                            <Span Text="{Binding Date}" />
-                                                            <Span Text=" | " />
-                                                            <Span Text="{Binding AverageReadingTime}" />
-                                                        </FormattedString>
-                                                    </Label.FormattedText>
-                                                </Label>
+                                                
                                             </StackLayout>
                                             
                                             <StackLayout.GestureRecognizers>
