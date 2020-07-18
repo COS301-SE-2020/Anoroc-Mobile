@@ -9,5 +9,6 @@ namespace AnorocMobileApp.Interfaces
         bool isTracking();
         void Start_Tracking();
         void Stop_Tracking();
+        void Run_TrackAsync();
     }
 }

@@ -20,11 +20,11 @@ namespace AnorocMobileApp.Views
         /// Initializes the settings Screen
         /// </summary>
         /// 
-        IBackgroundLocationService locaitonService;
+        
         public SettingsPage()
         {
             InitializeComponent();
-            locaitonService = Container.BackgroundLocationService;
+           
 
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
            
@@ -125,7 +125,7 @@ namespace AnorocMobileApp.Views
             else
             {
                 BackgroundLocaitonService.Tracking = false;
-                locaitonService.Stop_Tracking();
+                Container.BackgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }

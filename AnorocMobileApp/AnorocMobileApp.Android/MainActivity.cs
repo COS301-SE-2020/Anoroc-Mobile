@@ -10,6 +10,7 @@ using Android;
 using System.Net;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Interfaces;
 
 namespace AnorocMobileApp.Droid
 {
@@ -19,7 +20,7 @@ namespace AnorocMobileApp.Droid
         public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
-        public static BackgroundLocaitonService BackgroundLocationService;
+        public static IBackgroundLocationService BackgroundLocationService;
 
         readonly string[] LocationPermissions =
         {
@@ -30,6 +31,7 @@ namespace AnorocMobileApp.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            // Set Dependancy
             BackgroundLocationService = new BackgroundLocaitonService();
 
             TabLayoutResource = Resource.Layout.Tabbar;

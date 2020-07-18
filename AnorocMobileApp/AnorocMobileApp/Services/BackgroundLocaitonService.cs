@@ -123,6 +123,7 @@ namespace AnorocMobileApp.Services
                 catch (Exception e)
                 {
                     Debug.WriteLine(e.StackTrace);
+                    //retry for getting the geolocation
                     retry++;
                 }
             }
