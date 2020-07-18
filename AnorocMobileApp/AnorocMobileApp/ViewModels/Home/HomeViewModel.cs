@@ -1,4 +1,6 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
+using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -16,6 +18,8 @@ namespace AnorocMobileApp.ViewModels.Home
 
         private ObservableCollection<Models.Home> latestStories;
 
+        private ObservableCollection<Models.ContagionContact> contagionContact;
+
         #endregion
 
         #region Constructor
@@ -24,6 +28,25 @@ namespace AnorocMobileApp.ViewModels.Home
         /// </summary>
         public HomeViewModel()
         {
+            this.ContagionContact = new ObservableCollection<ContagionContact>
+            {
+                new Models.ContagionContact
+                {
+                    Location = "Francis Baard, Pretoria",
+                    DateTime = new DateTime(2020, 07, 15, 13, 30, 0)
+                },
+                new Models.ContagionContact
+                {
+                    Location = "Menlyn Mall, Pretoria",
+                    DateTime = new DateTime(2020, 03, 11, 15, 30, 0)
+                },
+                new Models.ContagionContact
+                {
+                    Location = "Mike's Butchery",
+                    DateTime = new DateTime(2020, 02, 14, 12, 30, 0)
+                }
+            };
+
             this.FeaturedStories = new ObservableCollection<Models.Home>
             {
                 new Models.Home
@@ -112,6 +135,22 @@ namespace AnorocMobileApp.ViewModels.Home
         #endregion
 
         #region Public Properties
+
+        public ObservableCollection<ContagionContact> ContagionContact
+        {
+            get => contagionContact;
+            set
+            {
+                if (this.contagionContact == value)
+                {
+                    return;
+                }
+
+                this.contagionContact = value;
+                this.NotifyPropertyChanged();
+            }
+        }
+
         /// <summary>
         /// Gets or sets the property that has been bound with the rotator view, which displays the articles featured stories items.
         /// </summary>
