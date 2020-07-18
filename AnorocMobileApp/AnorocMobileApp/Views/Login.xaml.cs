@@ -135,7 +135,7 @@ namespace AnorocMobileApp.Views
         /// <param name="facebookLoginService"></param>
         public static void FacebookSuccess(string title, string msg, IFacebookLoginService facebookLoginService)
         { 
-            Application.Current.MainPage = new HomePage(facebookLoginService);
+            Application.Current.MainPage = new HomePage_old(facebookLoginService);
         }
         /// <summary>
         /// Function called once the Sign In button is selectedin the app which opens the Sign Up page

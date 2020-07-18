@@ -28,6 +28,10 @@
     <EmbeddedResource Include="Images\WaterConsumed.svg" />
     <EmbeddedResource Include="Places.json" />
     <EmbeddedResource Include="Points.json" />
+    <EmbeddedResource Update="Views\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
