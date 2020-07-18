@@ -15,7 +15,7 @@ namespace AnorocMobileApp.Services
         Models.Location User_Location;
         GeolocationRequest request;
         Xamarin.Essentials.Location Previous_request;
-        LocationService LocationService;
+        ILocationService LocationService;
         private int request_count;
 
         public static bool Tracking;
@@ -28,7 +28,7 @@ namespace AnorocMobileApp.Services
             Modifier = 1.6;
             request_count = 0;
             User_Location = new Models.Location();
-            LocationService = new LocationService();
+            LocationService = Container.LocationService;
             Track_Retry = 0;
         }
 
@@ -96,7 +96,7 @@ namespace AnorocMobileApp.Services
                     if (Previous_request != null)
                     {
                         location = await Geolocation.GetLocationAsync(request);
-                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.01)
+                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
                         {
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
