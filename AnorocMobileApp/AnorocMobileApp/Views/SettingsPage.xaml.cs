@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using Xamarin.Essentials;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
+using System.Diagnostics;
 
 namespace AnorocMobileApp.Views
 { 
@@ -105,6 +106,7 @@ namespace AnorocMobileApp.Views
                 }
                 catch (Exception ex)
                 {
+                    Debug.WriteLine(ex.Message);
                     if (ex.InnerException != null)
                     {
                         await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
@@ -131,15 +133,33 @@ namespace AnorocMobileApp.Views
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
-            HttpClient client = new HttpClient(clientHandler);
+            using (HttpClient client = new HttpClient(clientHandler))
+            {
 
-            var data  = JsonConvert.SerializeObject(location);
-            var c = new StringContent(data, Encoding.UTF8, "application/json");
-            c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            var response = await client.PostAsync(url, c);
-            string result = response.Content.ReadAsStringAsync().Result;
+                client.Timeout = TimeSpan.FromSeconds(30);
 
-            await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                var data = JsonConvert.SerializeObject(location);
+                var c = new StringContent(data, Encoding.UTF8, "application/json");
+                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response;
+
+                try
+                {
+                    response = await client.PostAsync(url, c);
+                }
+                catch(Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
+
+                if(!response.IsSuccessStatusCode)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                await DisplayAlert("Attention", "Enabled: " + result, "OK");
+            }
         }
     }
 }

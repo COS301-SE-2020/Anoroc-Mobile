@@ -23,7 +23,8 @@ namespace AnorocMobileApp.Services
         public BackgroundLocaitonService()
         {
             Tracking = false;
-            _Backoff = 30;
+            Initial_Backoff = 15;
+            _Backoff = Initial_Backoff;
             Modifier = 2;
             request_count = 0;
             User_Location = new Models.Location();
@@ -49,16 +50,16 @@ namespace AnorocMobileApp.Services
         public async void Run_TrackAsync()
         {
             await Task.Run(async () =>
-            {
-                while (Tracking)
-                {
-                    Track();
-                    //temp
-                    Debug.WriteLine(_Backoff);
+              {
+                  while (Tracking)
+                  {
+                      Track();
+                      //temp
+                      Debug.WriteLine(_Backoff);
 
-                    await Task.Delay(ConvertSec(_Backoff));
-                }
-            });
+                      await Task.Delay(ConvertSec(_Backoff));
+                  }
+              },CancellationToken.None);
         }
 
         /// <summary>
@@ -73,7 +74,7 @@ namespace AnorocMobileApp.Services
 
         private int _Backoff;
         private int Modifier;
-
+        private int Initial_Backoff;
         /// <summary>
         /// Sends the user's location to the server if the distance is to the last request is larger than 10m, otherwise an exponential backoff occrus
         /// </summary>
@@ -94,7 +95,7 @@ namespace AnorocMobileApp.Services
                         location = await Geolocation.GetLocationAsync(request);
                         if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.01)
                         {
-                            _Backoff = 30;
+                            _Backoff = Initial_Backoff;
                             Modifier = 2;
                             LocationService.Send_Locaiton_Server(new Models.Location(location));
                         }
@@ -102,7 +103,7 @@ namespace AnorocMobileApp.Services
                         {
                             if ((_Backoff / 60) <= 10)
                             {
-                                _Backoff += (30 * Modifier);
+                                _Backoff += (Initial_Backoff * Modifier);
                                 Modifier *= 2;
                             }
                         }
@@ -110,6 +111,7 @@ namespace AnorocMobileApp.Services
                     else
                     {
                         location = await Geolocation.GetLocationAsync(request);
+                        LocationService.Send_Locaiton_Server(new Models.Location(location));
                     }
                     Previous_request = location;
 

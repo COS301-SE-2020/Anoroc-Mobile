@@ -31,30 +31,30 @@ namespace AnorocMobileApp.Droid.Resources.services
         {
             _cts = new CancellationTokenSource();
 
-            Task.Run(() =>
-            {
-                try
-                {
-                    var backgroundLocationService = MainActivity.BackgroundLocationService;
-                    BackgroundLocaitonService.Tracking = true;
-                    backgroundLocationService.Run_TrackAsync();
-                }
-                catch(Android.OS.OperationCanceledException)
-                {
+            _ = Task.Run(() =>
+              {
+                  try
+                  {
+                      var backgroundLocationService = MainActivity.BackgroundLocationService;
+                      BackgroundLocaitonService.Tracking = true;
+                      backgroundLocationService.Run_TrackAsync();
+                  }
+                  catch (System.OperationCanceledException)
+                  {
 
-                }
-                finally
-                {
-                    if (_cts.IsCancellationRequested)
-                    {
-                        var message = new CancelMessage();
-                        Device.BeginInvokeOnMainThread(() =>
-                        {
-                            MessagingCenter.Send(message, "CancelMessage");
-                        });
-                    }
-                }
-            }, _cts.Token);
+                  }
+                  finally
+                  {
+                      if (_cts.IsCancellationRequested)
+                      {
+                          var message = new CancelMessage();
+                          Device.BeginInvokeOnMainThread(() =>
+                          {
+                              MessagingCenter.Send(message, "CancelMessage");
+                          });
+                      }
+                  }
+              }, _cts.Token);
 
             return StartCommandResult.Sticky;
         }
