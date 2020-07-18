@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using AnorocMobileApp.Services;
+using AnorocMobileApp.Interfaces;
+using System.Diagnostics;
 
 namespace AnorocMobileApp.Views
 {
@@ -18,13 +21,25 @@ namespace AnorocMobileApp.Views
         /// <summary>
         /// Initializes the settings Screen
         /// </summary>
+        /// 
+        
         public SettingsPage()
         {
             var status = new Label();
             status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
 
-            GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
             InitializeComponent();
+           
+
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+           
+            if (Application.Current.Properties.ContainsKey("Tracking"))
+            {
+                var value = (bool)Application.Current.Properties["Tracking"];
+                if (value)
+                    Location_Tracking_Switch.IsToggled = true;
+            }
+
         }
         /*We need to fix this, Only 1 class allowed per file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
         //public class Location
@@ -82,15 +97,23 @@ namespace AnorocMobileApp.Views
             }
 
         }
+
+
+
+
         /// <summary>
         /// Function to toggle Asynchronous location, when off
         /// </summary>
         /// <param name="sender">Sender Object</param>
         /// <param name="e">Toggled Event Arguments</param>
+        /// 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
             if (e.Value == true)
             {
+                
+                BackgroundLocaitonService.Tracking = true;
+                Container.BackgroundLocationService.Start_Tracking();
                 try
                 {
                     //POST
@@ -99,6 +122,7 @@ namespace AnorocMobileApp.Views
                 }
                 catch (Exception ex)
                 {
+                    Debug.WriteLine(ex.Message);
                     if (ex.InnerException != null)
                     {
                         await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
@@ -107,6 +131,8 @@ namespace AnorocMobileApp.Views
             }
             else
             {
+                BackgroundLocaitonService.Tracking = false;
+                Container.BackgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
@@ -123,15 +149,33 @@ namespace AnorocMobileApp.Views
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
 
-            HttpClient client = new HttpClient(clientHandler);
+            using (HttpClient client = new HttpClient(clientHandler))
+            {
 
-            string data = JsonConvert.SerializeObject(location);
-            StringContent c = new StringContent(data, Encoding.UTF8, "application/json");
-            c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            HttpResponseMessage response = await client.PostAsync(url, c);
-            string result = response.Content.ReadAsStringAsync().Result;
+                client.Timeout = TimeSpan.FromSeconds(30);
 
-            await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                var data = JsonConvert.SerializeObject(location);
+                var c = new StringContent(data, Encoding.UTF8, "application/json");
+                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage response;
+
+                try
+                {
+                    response = await client.PostAsync(url, c);
+                }
+                catch(Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
+
+                if(!response.IsSuccessStatusCode)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
+                string result = response.Content.ReadAsStringAsync().Result;
+
+                await DisplayAlert("Attention", "Enabled: " + result, "OK");
+            }
         }
 
         //void OnPickerSelectedIndexChanged(object sender, EventArgs e)

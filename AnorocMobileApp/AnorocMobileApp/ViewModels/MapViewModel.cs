@@ -39,6 +39,7 @@ namespace AnorocMobileApp.Models
                     StrokeWidth = 8,
                     FillColor = Color.FromHex("#88FFC0CB")
                 };
+                // Clickable Centre pin
                 Pins.Add(new Pin
                 {
                     Label = "Cluster Count: " + cluster.Pin_Count,
