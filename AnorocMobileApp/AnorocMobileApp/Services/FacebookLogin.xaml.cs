@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Services
@@ -12,6 +6,9 @@ namespace AnorocMobileApp.Services
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FacebookLogin : ContentPage
     {
+        /// <summary>
+        /// Constructor to load Facebook login Page
+        /// </summary>
         public FacebookLogin()
         {
             InitializeComponent();
