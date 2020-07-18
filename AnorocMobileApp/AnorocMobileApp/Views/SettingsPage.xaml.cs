@@ -89,7 +89,7 @@ namespace AnorocMobileApp.Views
         /// <param name="e">Toggled Event Arguments</param>
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
-            if (e.Value == tIrue)
+            if (e.Value == true)
             {
                 try
                 {
@@ -134,16 +134,17 @@ namespace AnorocMobileApp.Views
             await DisplayAlert("Attention", "Enabled: " + result, "OK");
         }
 
-        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
+        //void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    var picker = (Picker)sender;
+        //    int selectedIndex = picker.SelectedIndex;
 
-            if (selectedIndex != -1)
-            {
-                string value = (string)picker.ItemsSource[selectedIndex];
-                //status.Text = (string)picker.ItemsSource[selectedIndex];
-            }
-        }
+        //    if (selectedIndex != -1)
+        //    {
+        //        string value = (string)picker.ItemsSource[selectedIndex];
+        //        DisplayAlert("","",value);
+        //        //status.Text = (string)picker.ItemsSource[selectedIndex];
+        //    }
+        //}
     }
 }
