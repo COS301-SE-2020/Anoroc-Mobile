@@ -20,12 +20,21 @@ namespace AnorocMobileApp.Views
         /// Initializes the settings Screen
         /// </summary>
         /// 
-        BackgroundLocaitonService locaitonService;
+        IBackgroundLocationService locaitonService;
         public SettingsPage()
         {
-            locaitonService = new BackgroundLocaitonService();
-            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
             InitializeComponent();
+            locaitonService = Container.BackgroundLocationService;
+
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
+           
+            if (Application.Current.Properties.ContainsKey("Tracking"))
+            {
+                var value = (bool)Application.Current.Properties["Tracking"];
+                if (value)
+                    Location_Tracking_Switch.IsToggled = true;
+            }
+
         }
         /*We need to fix this, Only 1 class allowed per file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
         public class Location

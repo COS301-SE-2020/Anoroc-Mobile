@@ -13,7 +13,7 @@
                     </OnPlatform>
                 </Label.FontFamily>
             </Label>
-            <Switch IsToggled="False" Toggled="OnToggledAsync"/>
+            <Switch x:Name="Location_Tracking_Switch" IsToggled="false" Toggled="OnToggledAsync"/>
         </Grid>
         
     </ContentPage.Content>

@@ -153,5 +153,9 @@ namespace AnorocMobileApp.Services
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
         }
 
+        public bool isTracking()
+        {
+            return Tracking;
+        }
     }
 }
