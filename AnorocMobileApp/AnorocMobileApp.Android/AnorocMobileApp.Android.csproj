@@ -95,8 +95,6 @@
   <ItemGroup>
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MyFirebaseIIDService.cs" />
-    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="NotificationHelper.cs" />
     <Compile Include="Resources\FacebookLoginButtonRenderer.cs" />
     <Compile Include="Resources\HeatmapRenderer.cs" />
@@ -155,7 +153,7 @@
     <AndroidResource Include="Resources\drawable\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="google-services.json" />
+    <GoogleServicesJson Include="google-services.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

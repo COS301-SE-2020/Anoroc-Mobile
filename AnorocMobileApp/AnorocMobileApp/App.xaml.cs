@@ -12,6 +12,8 @@ namespace AnorocMobileApp
 {
     public partial class App : Application
     {
+        public const string NotificationReceivedKey = "NotificationRecieved";
+         
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  
