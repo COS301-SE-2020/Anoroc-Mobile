@@ -3,6 +3,8 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Models;
+using Newtonsoft.Json;
 
 namespace AnorocMobileApp.Services
 {
@@ -16,7 +18,14 @@ namespace AnorocMobileApp.Services
         {
             HttpClientHandler clientHandler = new HttpClientHandler();
             string url = "https://10.0.2.2:5001/UserManagement/CarrierStatus";
-            var c = new StringContent(value, Encoding.UTF8, "application/json");
+
+            Token token_object = new Token();
+            token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+            token_object.Object_To_Server = value;
+
+            var data = JsonConvert.SerializeObject(token_object);
+
+            var c = new StringContent(data, Encoding.UTF8, "application/json");
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             HttpResponseMessage response;
 

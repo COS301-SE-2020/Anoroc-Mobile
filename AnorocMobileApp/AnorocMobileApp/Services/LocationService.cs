@@ -42,14 +42,19 @@ namespace AnorocMobileApp.Services
 
                     client.Timeout = TimeSpan.FromSeconds(30);
 
-                    var data = JsonConvert.SerializeObject(location);
-                    var c = new StringContent(data, Encoding.UTF8, "application/json");
-                    c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                    Token token = new Token();
+                    token.access_token = (string)Application.Current.Properties["TOKEN"];
+
+                    token.Object_To_Server = location;
+                    var data = JsonConvert.SerializeObject(token);
+
+                    var StringConent = new StringContent(data, Encoding.UTF8, "application/json");
+                    StringConent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                     HttpResponseMessage response;
 
                     try
                     {
-                        response = await client.PostAsync(url, c);
+                        response = await client.PostAsync(url, StringConent);
                     }
                     catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                     {
