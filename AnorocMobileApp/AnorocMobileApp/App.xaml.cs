@@ -15,17 +15,22 @@ namespace AnorocMobileApp
     public partial class App : Application
     {
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
+
+        private static string syncfusionLicense =
+            "Mjc4NTI4QDMxMzgyZTMxMmUzMEovelVGeVpMcitlK2xXZTZydjByUXNFbW5TRkxnM1laOU51Q1VqdU44b2M9";
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  
         public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
         {
-            InitializeComponent();
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
+            InitializeComponent();
+            
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
             Container.LocationService = new LocationService();
-
 
             FacebookLoginService = facebookLoginService;
 
@@ -35,18 +40,18 @@ namespace AnorocMobileApp
                 User.UserSurname = facebookLoginService.LastName;
                 User.UserID = facebookLoginService.UserID;
                 User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+                MainPage = new NavigationPage(new BottomNavigationPage());
             }
             else
             {
-                MainPage = new NavigationPage(new Login());
+                MainPage = new NavigationPage(new BottomNavigationPage());
             }
         }
 
         public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("");
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
             InitializeComponent();
 
                 FacebookLoginService = facebookLoginService;
@@ -66,6 +71,9 @@ namespace AnorocMobileApp
 
         public App()
         {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+
             MainPage = new NavigationPage(new BottomNavigationPage());
         }
 
