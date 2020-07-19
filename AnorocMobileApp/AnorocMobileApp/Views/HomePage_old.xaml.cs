@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,26 +16,28 @@ namespace AnorocMobileApp.Views
     /// Class to manage the Home Page Screen
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : TabbedPage
+    public partial class HomePage_old : TabbedPage
     {
         /// <summary>
         /// Getter's and Setter's for Email and Facebook Login Service
         /// </summary>
         public string Email { get; set; }
         public IFacebookLoginService FacebookLoginService { get; set; }
+        
         /// <summary>
         /// Constructor to load homepage
         /// </summary>
-        public HomePage()
+        public HomePage_old()
         {
             InitializeComponent();
             
         }
+        
         /// <summary>
         /// Tests whether the user is logged in with Facebook
         /// </summary>
         /// <param name="facebookLoginService">Login With Facebook Service</param>
-        public HomePage(IFacebookLoginService facebookLoginService)
+        public HomePage_old(IFacebookLoginService facebookLoginService)
         {
             FacebookLoginService = facebookLoginService;
             

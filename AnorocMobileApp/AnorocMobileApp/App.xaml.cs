@@ -1,7 +1,9 @@
-﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
+using AnorocMobileApp.Views.Forms;
+using AnorocMobileApp.Views.Navigation;
 using System;
 using System.Net;
 using Xamarin.Essentials;
@@ -14,13 +16,20 @@ namespace AnorocMobileApp
     {
         public const string NotificationReceivedKey = "NotificationRecieved";
          
+        public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
+
+        private static string syncfusionLicense =
+            "";
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  
         public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
         {
-            InitializeComponent();
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
+            InitializeComponent();
+            
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
             Container.LocationService = new LocationService();
@@ -34,36 +43,41 @@ namespace AnorocMobileApp
                 User.UserSurname = facebookLoginService.LastName;
                 User.UserID = facebookLoginService.UserID;
                 User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new HomePage(facebookLoginService));
+                MainPage = new NavigationPage(new BottomNavigationPage());
             }
             else
             {
-                MainPage = new NavigationPage(new Login());
+                MainPage = new NavigationPage(new BottomNavigationPage());
             }
         }
 
         public App(IFacebookLoginService facebookLoginService)
         {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
             InitializeComponent();
 
-            FacebookLoginService = facebookLoginService;
-            if (facebookLoginService.isLoggedIn())
-            {
-                User.FirstName = facebookLoginService.FirstName;
-                User.UserSurname = facebookLoginService.LastName;
-                User.UserID = facebookLoginService.UserID;
-                User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new HomePage(facebookLoginService));
-            }
-            else
-            {
-                MainPage = new NavigationPage(new Login());
-            }
+                FacebookLoginService = facebookLoginService;
+                if (facebookLoginService.isLoggedIn())
+                {
+                    User.FirstName = facebookLoginService.FirstName;
+                    User.UserSurname = facebookLoginService.LastName;
+                    User.UserID = facebookLoginService.UserID;
+                    User.loggedInFacebook = true;
+                    MainPage = new NavigationPage(new BottomNavigationPage());
+                }
+                else
+                {
+                    MainPage = new NavigationPage(new BottomNavigationPage());
+                }
         }
 
         public App()
         {
-            MainPage = new NavigationPage(new Login());
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+
+            MainPage = new NavigationPage(new BottomNavigationPage());
         }
 
         /*public App()
