@@ -12,5 +12,6 @@ namespace AnorocMobileApp.Interfaces
         }
         public static IBackgroundLocationService BackgroundLocationService {get; set;}
         public static ILocationService LocationService { get; set; }
+        public static IUserManagementService userManagementService { get; set; }
     }
 }

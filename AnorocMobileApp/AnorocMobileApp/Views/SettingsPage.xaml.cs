@@ -9,6 +9,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
 using System.Diagnostics;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.ViewModels;
 
 namespace AnorocMobileApp.Views
 {
@@ -30,7 +31,7 @@ namespace AnorocMobileApp.Views
             status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
 
             InitializeComponent();
-            DisplayAlert("", User.carrierStatus, "Cancel");
+            DisplayAlert("Carrier Status", User.carrierStatus, "Cancel");
 
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
            
@@ -41,67 +42,9 @@ namespace AnorocMobileApp.Views
                     Location_Tracking_Switch.IsToggled = true;
             }
 
-        }
-        /*We need to fix this, Only 1 class allowed per file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-        //public class Location
-        //{
-        //    public string Latitude;
-        //    public string Longitude;
-        //    public string Altitude;
-        //}
-        /// <summary>
-        /// Asynchronous function that returns the current User location
-        /// </summary>
-        /// <returns>Location of the user based on the phones Geolocation</returns>
-        public async Task<Models.Location> getLocationAsync()
-        {
-            //Location loc = new Location();
-            Models.Location loc = new Models.Location();
-            try
-            {
-                GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-                Xamarin.Essentials.Location location = await Geolocation.GetLocationAsync(request);
+        }       
 
-                if (location != null)
-                {
-                    loc.Coordinate.Latitude = location.Latitude;
-                    loc.Coordinate.Longitude = location.Longitude;
-                    loc.Coordinate.Altitude = (double)location.Altitude;
-                    //loc.Latitude = location.Latitude.ToString();
-                    //loc.Longitude = location.Longitude;
-                    //loc.Altitude = (double)location.Altitude;
-
-
-                    //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                }
-                return loc;
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception
-                return null;
-            }
-            catch (FeatureNotEnabledException fneEx)
-            {
-                // Handle not enabled on device exception
-                return null;
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
-                return null;
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location
-                return null;
-            }
-
-        }
-
-
-
-
+        
         /// <summary>
         /// Function to toggle Asynchronous location, when off
         /// </summary>
@@ -114,68 +57,13 @@ namespace AnorocMobileApp.Views
             {
                 
                 BackgroundLocaitonService.Tracking = true;
-                Container.BackgroundLocationService.Start_Tracking();
-                try
-                {
-                    //POST
-                    postRequestAsync();
-
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message);
-                    if (ex.InnerException != null)
-                    {
-                        await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
-                    }
-                }
+                Container.BackgroundLocationService.Start_Tracking();               
             }
             else
             {
                 BackgroundLocaitonService.Tracking = false;
                 Container.BackgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
-            }
-        }
-        /// <summary>
-        /// Function to get the user's Geolocation when the location permission is enabled 
-        /// </summary>
-        public async void postRequestAsync()
-        {
-
-            Models.Location location = await getLocationAsync();
-
-            string url = "https://10.0.2.2:5001/location/GEOLocation";
-
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-
-            using (HttpClient client = new HttpClient(clientHandler))
-            {
-
-                client.Timeout = TimeSpan.FromSeconds(30);
-
-                var data = JsonConvert.SerializeObject(location);
-                var c = new StringContent(data, Encoding.UTF8, "application/json");
-                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                HttpResponseMessage response;
-
-                try
-                {
-                    response = await client.PostAsync(url, c);
-                }
-                catch(Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    throw new CantConnectToLocationServerException();
-                }
-
-                if(!response.IsSuccessStatusCode)
-                {
-                    //throw new CantConnectToLocationServerException();
-                }
-                string result = response.Content.ReadAsStringAsync().Result;
-
-                await DisplayAlert("Attention", "Enabled: " + result, "OK");
             }
         }
 
@@ -187,8 +75,10 @@ namespace AnorocMobileApp.Views
             if (selectedIndex != -1)
             {
                 string value = (string)picker.ItemsSource[selectedIndex];
-                DisplayAlert("", "", value);
+                DisplayAlert("Carrier Status", value, "OK");
                 Application.Current.Properties["CarrierStatus"] = value;
+                Container.userManagementService.sendCarrierStatusAsync(value);
+
                 //status.Text = (string)picker.ItemsSource[selectedIndex];
             }
         }

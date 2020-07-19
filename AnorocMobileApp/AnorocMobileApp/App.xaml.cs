@@ -22,7 +22,7 @@ namespace AnorocMobileApp
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
             Container.LocationService = new LocationService();
-
+            Container.userManagementService = new UserManagementService();
 
             FacebookLoginService = facebookLoginService;
 
