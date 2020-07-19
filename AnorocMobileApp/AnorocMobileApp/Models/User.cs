@@ -22,6 +22,7 @@ namespace AnorocMobileApp.Models
         public static bool loggedInFacebook { get; set; }
         public static bool loggedInGoogle { get; set; }
         public static bool loggedInAnoroc { get; set; }
+        public static string carrierStatus { get; set; }
 
         public User()
         { 

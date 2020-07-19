@@ -8,6 +8,10 @@ using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
 using System.Net;
+using Android.Gms.Common;
+using Firebase.Iid;
+using Firebase.Messaging;
+using Android.Util;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
@@ -50,14 +54,91 @@ namespace AnorocMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
             
+            LoadApplication(new App(new FacebookLoginService()));
+
+            IsPlayServicesAvailable();
+
             // Dependency Injection:
 
             LoadApplication(new App(new FacebookLoginService(), BackgroundLocationService));
 
             WireUpBackgroundLocationTask();
         }
+        
+        //TODO: Add Force Refresh Token
+        /// <summary>
+        /// Function to check if Google Play services is correctly installed for the firebase messaging
+        /// </summary>
+        /// <returns>True or False</returns>
+        public bool IsPlayServicesAvailable()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
+                {
+                    Console.WriteLine($"Error: {GoogleApiAvailability.Instance.GetErrorString(resultCode)}");
+                }
+                else
+                {
+                    Console.WriteLine("Error: Play services not supported!");
+                }
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("Play services available.");
+                return true;
+            }
+        }
 
+        /// <summary>
+        /// Class with Firebase Instance Services. For Regristration to Firebase
+        /// </summary>
+        [Service]
+        [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
+        public class MyFirebaseIIDService : FirebaseInstanceIdService
+        {
+            public override async void OnTokenRefresh()
+            {
+                var refreshedToken = FirebaseInstanceId.Instance.Token;
+                Console.WriteLine($"Token received: {refreshedToken}");
+                SendRegistrationToServer(refreshedToken);
+            }
 
+            void SendRegistrationToServer(string token)
+            {
+                // TODO: Still need to be implemented
+                Log.Debug(PackageName, token);
+            }
+        }
+
+        /// <summary>
+        /// Class with Firebase Messaging Services. To get messages while application is active
+        /// </summary>
+        [Service]
+        [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
+        public class MyFirebaseMessagingService : FirebaseMessagingService
+        {
+
+            public override void OnMessageReceived(RemoteMessage message)
+            {
+                base.OnMessageReceived(message);
+
+                Console.WriteLine("Received: " + message);
+                try
+                {
+                    var msg = message.GetNotification().Body;
+                    // Passing Message onto xamarin forms
+                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, msg);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Errorr extracting message: " + ex);
+                }
+            }
+
+        }
 
 
         void WireUpBackgroundLocationTask()
@@ -74,7 +155,6 @@ namespace AnorocMobileApp.Droid
                 StopService(intent);
             });
         }
-
 
 
 

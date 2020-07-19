@@ -14,6 +14,8 @@ namespace AnorocMobileApp
 {
     public partial class App : Application
     {
+        public const string NotificationReceivedKey = "NotificationRecieved";
+         
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense =
@@ -31,6 +33,7 @@ namespace AnorocMobileApp
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
             Container.LocationService = new LocationService();
+            Container.userManagementService = new UserManagementService();
 
             FacebookLoginService = facebookLoginService;
 
@@ -111,7 +114,12 @@ namespace AnorocMobileApp
                     
                 }
             }
-        }
 
+            if (Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                // Use Carrier status
+                User.carrierStatus = Current.Properties["CarrierStatus"].ToString();
+            }
+        }
     }
 }

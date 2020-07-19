@@ -4,9 +4,15 @@
              xmlns:local="clr-namespace:AnorocMobileApp.Views"
              x:Class="AnorocMobileApp.Views.NotificationPage">
 
-    <StackLayout Padding="10">
-        <Entry Placeholder="Message" x:Name="message" HorizontalOptions="FillAndExpand"/>
-        <Button Text="Send Notification" Clicked="SendNotification"/>
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Received message:"/>
+            <Label x:Name="lblMsg" Text="(Nothing Yet)"/>
+        </StackLayout>
+        <StackLayout Padding="10">
+            <Entry Placeholder="Message" x:Name="message" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Send Notification" Clicked="SendNotification"/>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

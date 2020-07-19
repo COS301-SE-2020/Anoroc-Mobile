@@ -9,6 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnorocMobileApp.iOS", "Anor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnorocMobileApp", "AnorocMobileApp\AnorocMobileApp\AnorocMobileApp.csproj", "{C0E2BFFB-0A57-4B2C-9E22-EF660B943E42}"
 EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnorocMobileAppTests", "AnorocMobileApp\AnorocMobileAppTests\AnorocMobileAppTests.csproj", "{BC6D2FE1-DC85-4682-BE59-216756B7CA7B}"
 EndProject
 Global

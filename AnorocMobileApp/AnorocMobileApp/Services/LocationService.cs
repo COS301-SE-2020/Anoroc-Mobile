@@ -2,7 +2,13 @@
 using AnorocMobileApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text;
+
+using System.Threading.Tasks;
+using AnorocMobileApp.Services;
+using Newtonsoft.Json;
+using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
 {
@@ -14,13 +20,57 @@ namespace AnorocMobileApp.Services
         {
             success = false;
         }
-        public void Send_Locaiton_Server(Location lcoation)
+        public void Send_Locaiton_ServerAsync(Location location)
         {
-
-            success = true;
+            
+            PostLocationAsync(location);
             if (!success)
             {
                 throw new CantConnectToLocationServerException();
+            }
+        }
+        protected async void PostLocationAsync(Location location)
+        {
+            string url = "https://10.0.2.2:5001/location/GEOLocation";
+
+            HttpClientHandler clientHandler = new HttpClientHandler();
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            try
+            {
+                using (HttpClient client = new HttpClient(clientHandler))
+                {
+
+                    client.Timeout = TimeSpan.FromSeconds(30);
+
+                    var data = JsonConvert.SerializeObject(location);
+                    var c = new StringContent(data, Encoding.UTF8, "application/json");
+                    c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                    HttpResponseMessage response;
+
+                    try
+                    {
+                        response = await client.PostAsync(url, c);
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        throw new CantConnectToLocationServerException();
+                    }
+
+                    if (!response.IsSuccessStatusCode)
+                    {
+                        throw new CantConnectToLocationServerException();
+                    }
+                    string result = response.Content.ReadAsStringAsync().Result;
+
+                    //await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                    success = true;
+                }
+
+            }
+            catch(Exception e) when (e is CantConnectToLocationServerException)
+            {
+               //TODO:
+               // retry logic for sending to the server
             }
         }
     }

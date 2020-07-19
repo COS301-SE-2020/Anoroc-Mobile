@@ -7,6 +7,6 @@ namespace AnorocMobileApp.Interfaces
 {
     public interface ILocationService
     {
-        void Send_Locaiton_Server(Location location);
+        void Send_Locaiton_ServerAsync(Location location);
     }
 }

@@ -1,33 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.Media;
-using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.App;
-using Android.Views;
-using Android.Widget;
 using AnorocMobileApp.Droid;
 using Xamarin.Forms;
-
+///<summary>
+/// Helper class used to customize local push notifications on Android Devices
+/// </summary>
 [assembly:Dependency(typeof(NotificationHelper))]
 namespace AnorocMobileApp.Droid
 {
-    class NotificationHelper : INotification
+    class NotificationHelper : Services.NotificationServices
     {
         private Context mContext;
         private NotificationManager mNotificationManager;
         private NotificationCompat.Builder mBuilder;
         public static String NOTIFICATION_CHANNEL_ID = "10023";
-
+        /// <summary>
+        /// Function to intialize a context variable to get the anroid application context
+        /// </summary>
         public NotificationHelper()
         {
             mContext = global::Android.App.Application.Context;
         }
+        /// <summary>
+        /// Function to Create Notofication
+        /// </summary>
+        /// <param name="title">String for the title of the notification</param>
+        /// <param name="message">String for the body/message of the notification</param>
         public void CreateNotification(String title, String message)
         {
             try

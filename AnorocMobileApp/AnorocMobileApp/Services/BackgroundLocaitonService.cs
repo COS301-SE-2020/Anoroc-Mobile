@@ -28,7 +28,7 @@ namespace AnorocMobileApp.Services
             Modifier = 1.6;
             request_count = 0;
             User_Location = new Models.Location();
-            LocationService = Container.LocationService;
+            
             Track_Retry = 0;
         }
 
@@ -83,6 +83,7 @@ namespace AnorocMobileApp.Services
         /// </summary>
         protected async void Track()
         {
+            LocationService = new LocationService();
             bool success = false;
             int retry = 0;
             while (retry < 3 && !success)
@@ -100,7 +101,7 @@ namespace AnorocMobileApp.Services
                         {
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
-                            LocationService.Send_Locaiton_Server(new Models.Location(location));
+                            LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
                         }
                         else
                         {
@@ -114,7 +115,7 @@ namespace AnorocMobileApp.Services
                     else
                     {
                         location = await Geolocation.GetLocationAsync(request);
-                        LocationService.Send_Locaiton_Server(new Models.Location(location));
+                        LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
                     }
                     Previous_request = location;
 
