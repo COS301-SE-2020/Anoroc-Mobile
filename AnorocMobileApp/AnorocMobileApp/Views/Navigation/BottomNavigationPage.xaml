@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:local="clr-namespace:AnorocMobileApp.Views.Navigation"
+            xmlns:navigation="clr-namespace:AnorocMobileApp.Views.Navigation"
+            xmlns:local="clr-namespace:AnorocMobileApp.Views;assembly=AnorocMobileApp"
             x:Class="AnorocMobileApp.Views.Navigation.BottomNavigationPage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
             xmlns:home="clr-namespace:AnorocMobileApp.Views.Home;assembly=AnorocMobileApp"
@@ -9,7 +10,8 @@
             android:TabbedPage.BarSelectedItemColor="{DynamicResource PrimaryColor}"
             android:TabbedPage.BarItemColor="{DynamicResource Gray-600}"
             BarBackgroundColor="White"
-            NavigationPage.HasNavigationBar="False">
+            NavigationPage.HasNavigationBar="False"
+            android:TabbedPage.IsSwipePagingEnabled="False">
     <TabbedPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -24,20 +26,20 @@
                                  Size="16"/>
         </home:HomePage.IconImageSource>
     </home:HomePage>
-    <local:PhotosPage Title="Itinerary">
-        <local:PhotosPage.IconImageSource>
+    <navigation:PhotosPage Title="Itinerary">
+        <navigation:PhotosPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource SettingsIcon}"
                                  Size="16"/>
-        </local:PhotosPage.IconImageSource>
-    </local:PhotosPage>
-    <local:MePage Title="Me">
-        <local:MePage.IconImageSource>
+        </navigation:PhotosPage.IconImageSource>
+    </navigation:PhotosPage>
+    <navigation:MePage Title="Me">
+        <navigation:MePage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource MeIcon}"
                                  Size="16"/>
-        </local:MePage.IconImageSource>
-    </local:MePage>
+        </navigation:MePage.IconImageSource>
+    </navigation:MePage>
     <local:SettingsPage Title="Settings">
         <local:SettingsPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
