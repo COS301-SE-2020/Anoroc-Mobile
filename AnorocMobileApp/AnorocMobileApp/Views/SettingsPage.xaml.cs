@@ -31,8 +31,10 @@ namespace AnorocMobileApp.Views
             status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
 
             InitializeComponent();
-            DisplayAlert("Carrier Status", User.carrierStatus, "Cancel");
 
+            //if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            //    DisplayAlert("Carrier Status", (string)Application.Current.Properties["CarrierStatus"], "Cancel");
+            
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
            
             if (Application.Current.Properties.ContainsKey("Tracking"))
