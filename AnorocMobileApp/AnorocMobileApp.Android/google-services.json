@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "1028291892011",
-    "firebase_url": "https://anorocmobileapp.firebaseio.com",
-    "project_id": "anorocmobileapp",
-    "storage_bucket": "anorocmobileapp.appspot.com"
+    "project_number": "885850755065",
+    "firebase_url": "https://anorocfirebase.firebaseio.com",
+    "project_id": "anorocfirebase",
+    "storage_bucket": "anorocfirebase.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1028291892011:android:63682352337b6c835d6b6e",
+        "mobilesdk_app_id": "1:885850755065:android:ccf048b6b4320b3d6bb728",
         "android_client_info": {
-          "package_name": "com.companyname.anorocmobileapp"
+          "package_name": "com.anorocmobileapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1028291892011-2s9ku54rfm9l2ee032921kvci0iiosvl.apps.googleusercontent.com",
+          "client_id": "885850755065-ie7tnfbodbnf5v6q3altio2ma2lpe5dv.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCzscT8GZizldKAgce7XwFQldy8IfTOj7E"
+          "current_key": "AIzaSyCrMpocAkJVn7jDSBYZNtgGDrVz_VkHa14"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1028291892011-2s9ku54rfm9l2ee032921kvci0iiosvl.apps.googleusercontent.com",
+              "client_id": "885850755065-ie7tnfbodbnf5v6q3altio2ma2lpe5dv.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

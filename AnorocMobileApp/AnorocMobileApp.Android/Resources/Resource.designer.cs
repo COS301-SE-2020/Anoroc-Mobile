@@ -13043,49 +13043,73 @@ namespace AnorocMobileApp.Droid
 			public const int com_facebook_tooltip_default = 2131624003;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int fab_transformation_scrim_behavior = 2131624022;
+			public const int default_web_client_id = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int fab_transformation_sheet_behavior = 2131624023;
+			public const int fab_transformation_scrim_behavior = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int fb_login_protocol_scheme = 2131624024;
+			public const int fab_transformation_sheet_behavior = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
-			public const int fcm_fallback_notification_channel_label = 2131624025;
+			public const int fb_login_protocol_scheme = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int hide_bottom_view_on_scroll_behavior = 2131624026;
+			public const int fcm_fallback_notification_channel_label = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int messenger_send_button_text = 2131624027;
+			public const int firebase_database_url = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int mtrl_chip_close_icon_content_description = 2131624028;
+			public const int gcm_defaultSenderId = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int password_toggle_content_description = 2131624029;
+			public const int google_api_key = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int path_password_eye = 2131624030;
+			public const int google_app_id = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int path_password_eye_mask_strike_through = 2131624031;
+			public const int google_crash_reporting_api_key = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int path_password_eye_mask_visible = 2131624032;
+			public const int google_storage_bucket = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int path_password_strike_through = 2131624033;
+			public const int hide_bottom_view_on_scroll_behavior = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int search_menu_title = 2131624034;
+			public const int messenger_send_button_text = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int status_bar_notification_info_overflow = 2131624035;
+			public const int mtrl_chip_close_icon_content_description = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int title_activity_webview = 2131624036;
+			public const int password_toggle_content_description = 2131624036;
+			
+			// aapt resource value: 0x7F0E0065
+			public const int path_password_eye = 2131624037;
+			
+			// aapt resource value: 0x7F0E0066
+			public const int path_password_eye_mask_strike_through = 2131624038;
+			
+			// aapt resource value: 0x7F0E0067
+			public const int path_password_eye_mask_visible = 2131624039;
+			
+			// aapt resource value: 0x7F0E0068
+			public const int path_password_strike_through = 2131624040;
+			
+			// aapt resource value: 0x7F0E0069
+			public const int project_id = 2131624041;
+			
+			// aapt resource value: 0x7F0E006A
+			public const int search_menu_title = 2131624042;
+			
+			// aapt resource value: 0x7F0E006B
+			public const int status_bar_notification_info_overflow = 2131624043;
+			
+			// aapt resource value: 0x7F0E006C
+			public const int title_activity_webview = 2131624044;
 			
 			static String()
 			{

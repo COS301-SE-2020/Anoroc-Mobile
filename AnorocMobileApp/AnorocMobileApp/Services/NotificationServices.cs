@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnorocMobileApp
+namespace AnorocMobileApp.Services
 {
-    public interface INotification
+    public interface NotificationServices
     {
         void CreateNotification(String title, String message);
     }
