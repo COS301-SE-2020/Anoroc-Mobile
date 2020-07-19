@@ -16,7 +16,7 @@ namespace AnorocMobileApp.Views
 
             //Task.Delay(2000);
 
-            UpdateMapAsync();
+            //UpdateMapAsync();
 
             DrawClusters();
         }
@@ -25,12 +25,15 @@ namespace AnorocMobileApp.Views
         async void DrawClusters()
         {
             List<Circle> circles = await viewModel.GetClustersForMap();
-            foreach(Circle circle in circles)
+            if (circles != null)
             {
-                MyMap.MapElements.Add(circle);
+                foreach (Circle circle in circles)
+                {
+                    MyMap.MapElements.Add(circle);
+                }
+                addPins();
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
             }
-            addPins();
-            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
         }
         void addPins()
         {
@@ -52,11 +55,15 @@ namespace AnorocMobileApp.Views
         async void UpdateMapAsync()
         {
             List<Pin> pins = await viewModel.GetPinsForAreaAsync();
-            foreach(Pin pin in pins)
+           
+            if (pins != null)
             {
-                MyMap.Pins.Add(pin);
+                foreach (Pin pin in pins)
+                {
+                    MyMap.Pins.Add(pin);
+                }
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
             }
-            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
         }
     }
 }
