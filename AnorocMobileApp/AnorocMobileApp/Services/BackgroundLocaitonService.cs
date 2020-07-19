@@ -101,7 +101,7 @@ namespace AnorocMobileApp.Services
                         {
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
-                            LocationService.Send_Locaiton_Server(new Models.Location(location));
+                            LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
                         }
                         else
                         {
@@ -115,7 +115,7 @@ namespace AnorocMobileApp.Services
                     else
                     {
                         location = await Geolocation.GetLocationAsync(request);
-                        LocationService.Send_Locaiton_Server(new Models.Location(location));
+                        LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
                     }
                     Previous_request = location;
 

@@ -24,7 +24,7 @@ namespace AnorocMobileApp
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;
             Container.LocationService = new LocationService();
-
+            Container.userManagementService = new UserManagementService();
 
             FacebookLoginService = facebookLoginService;
 
@@ -100,7 +100,12 @@ namespace AnorocMobileApp
                     
                 }
             }
-        }
 
+            if (Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                // Use Carrier status
+                User.carrierStatus = Current.Properties["CarrierStatus"].ToString();
+            }
+        }
     }
 }

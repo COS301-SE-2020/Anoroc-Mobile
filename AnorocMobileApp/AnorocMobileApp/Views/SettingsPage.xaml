@@ -5,7 +5,6 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            
             <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
                 <Label.FontFamily>
                     <OnPlatform x:TypeArguments="x:String">
@@ -13,9 +12,24 @@
                     </OnPlatform>
                 </Label.FontFamily>
             </Label>
-            <Switch x:Name="Location_Tracking_Switch" IsToggled="false" Toggled="OnToggledAsync"/>
+            <Switch x:Name="Location_Tracking_Switch" Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="OnToggledAsync"/>
+            <Label Text="Status" Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="picker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                 Title="Select status"
+                 TitleColor="Black">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Positive</x:String>
+                        <x:String>Negative</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
         </Grid>
-        
     </ContentPage.Content>
 </ContentPage>
 
+<!-- <ContentPage.BindingContext>
+        <local2:SettingsViewModel/>
+    </ContentPage.BindingContext> -->
+
+   
