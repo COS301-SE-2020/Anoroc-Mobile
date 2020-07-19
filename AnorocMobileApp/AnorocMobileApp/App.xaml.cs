@@ -98,7 +98,12 @@ namespace AnorocMobileApp
                     
                 }
             }
-        }
 
+            if (Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                // Use Carrier status
+                User.carrierStatus = Current.Properties["CarrierStatus"].ToString();
+            }
+        }
     }
 }

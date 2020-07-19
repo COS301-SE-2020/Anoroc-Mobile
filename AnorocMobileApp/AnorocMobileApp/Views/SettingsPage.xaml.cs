@@ -8,6 +8,7 @@ using Xamarin.Essentials;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
 using System.Diagnostics;
+using AnorocMobileApp.Models;
 
 namespace AnorocMobileApp.Views
 {
@@ -29,7 +30,7 @@ namespace AnorocMobileApp.Views
             status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
 
             InitializeComponent();
-           
+            DisplayAlert("", User.carrierStatus, "Cancel");
 
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
            
@@ -59,7 +60,7 @@ namespace AnorocMobileApp.Views
             try
             {
                 GeolocationRequest request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-                Location location = await Geolocation.GetLocationAsync(request);
+                Xamarin.Essentials.Location location = await Geolocation.GetLocationAsync(request);
 
                 if (location != null)
                 {
@@ -170,7 +171,7 @@ namespace AnorocMobileApp.Views
 
                 if(!response.IsSuccessStatusCode)
                 {
-                    throw new CantConnectToLocationServerException();
+                    //throw new CantConnectToLocationServerException();
                 }
                 string result = response.Content.ReadAsStringAsync().Result;
 
@@ -178,17 +179,18 @@ namespace AnorocMobileApp.Views
             }
         }
 
-        //void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    var picker = (Picker)sender;
-        //    int selectedIndex = picker.SelectedIndex;
+        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
 
-        //    if (selectedIndex != -1)
-        //    {
-        //        string value = (string)picker.ItemsSource[selectedIndex];
-        //        DisplayAlert("","",value);
-        //        //status.Text = (string)picker.ItemsSource[selectedIndex];
-        //    }
-        //}
+            if (selectedIndex != -1)
+            {
+                string value = (string)picker.ItemsSource[selectedIndex];
+                DisplayAlert("", "", value);
+                Application.Current.Properties["CarrierStatus"] = value;
+                //status.Text = (string)picker.ItemsSource[selectedIndex];
+            }
+        }
     }
 }
