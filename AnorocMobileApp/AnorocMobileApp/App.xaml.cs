@@ -45,11 +45,13 @@ namespace AnorocMobileApp
                 User.UserSurname = facebookLoginService.LastName;
                 User.UserID = facebookLoginService.UserID;
                 User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new BottomNavigationPage());
+                //MainPage = new NavigationPage(new BottomNavigationPage());
+                MainPage = new Views.Map();
             }
             else
             {
-                MainPage = new NavigationPage(new BottomNavigationPage());
+                //MainPage = new NavigationPage(new BottomNavigationPage());
+                MainPage = new Views.Map();
             }
         }
 
