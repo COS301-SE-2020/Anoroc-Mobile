@@ -91,6 +91,8 @@ namespace AnorocMobileApp.Services
                 retry = 0;
                 try
                 {
+                    // TODO:
+                    // faster they go, the more locations sent and slower they go the less
                     request = new GeolocationRequest(GeolocationAccuracy.Best);
                     Xamarin.Essentials.Location location = null;
 
@@ -109,6 +111,11 @@ namespace AnorocMobileApp.Services
                             {
                                 _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
                                 Track_Retry++;
+                            }
+                            else
+                            {
+                                //send the location on the 10th minute, and every 10 minutes after that
+                                LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
                             }
                         }
                     }
