@@ -40,6 +40,13 @@
                                  Size="16"/>
         </navigation:MePage.IconImageSource>
     </navigation:MePage>
+    <local:Map Title="Map">
+        <local:Map.IconImageSource>
+            <FontImageSource FontFamily="{StaticResource FontIcons}"
+                             Glyph="{StaticResource MapIcon}"
+                             Size="16"/>
+        </local:Map.IconImageSource>
+    </local:Map>
     <local:SettingsPage Title="Settings">
         <local:SettingsPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
