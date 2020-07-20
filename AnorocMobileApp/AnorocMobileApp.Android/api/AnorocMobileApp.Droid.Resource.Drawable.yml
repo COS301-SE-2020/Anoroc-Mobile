@@ -1,0 +1,4259 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Drawable
+  commentId: T:AnorocMobileApp.Droid.Resource.Drawable
+  id: Resource.Drawable
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_action_bar_item_background_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_borderless_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_colored_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_internal_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_control_background_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_dialog_material_background
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_edit_text_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_ab_back_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_clear_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_go_search_api_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_search_api_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_16dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_36dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_48dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_focused_holo
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_longpressed_holo
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_small_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_thumb_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_track_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_switch_thumb_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_cursor_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_material
+  - AnorocMobileApp.Droid.Resource.Drawable.abc_vector_test
+  - AnorocMobileApp.Droid.Resource.Drawable.avd_hide_password
+  - AnorocMobileApp.Droid.Resource.Drawable.avd_show_password
+  - AnorocMobileApp.Droid.Resource.Drawable.design_bottom_navigation_item_background
+  - AnorocMobileApp.Droid.Resource.Drawable.design_fab_background
+  - AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility
+  - AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility_off
+  - AnorocMobileApp.Droid.Resource.Drawable.design_password_eye
+  - AnorocMobileApp.Droid.Resource.Drawable.design_snackbar_background
+  - AnorocMobileApp.Droid.Resource.Drawable.ic_arrow_back
+  - AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black
+  - AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle
+  - AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle
+  - AnorocMobileApp.Droid.Resource.Drawable.icon
+  - AnorocMobileApp.Droid.Resource.Drawable.mtrl_snackbar_background
+  - AnorocMobileApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator
+  - AnorocMobileApp.Droid.Resource.Drawable.navigation_empty_icon
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_action_background
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_normal
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_pressed
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal_pressed
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_icon_background
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_low_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.notification_tile_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg
+  - AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_dark
+  - AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_light
+  - AnorocMobileApp.Droid.Resource.Drawable.xamagonBlue
+  langs:
+  - csharp
+  - vb
+  name: Resource.Drawable
+  nameWithType: Resource.Drawable
+  fullName: AnorocMobileApp.Droid.Resource.Drawable
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Drawable
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10741
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Drawable
+    content.vb: Public Class Drawable
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha
+  id: abc_ab_share_pack_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ab_share_pack_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_ab_share_pack_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ab_share_pack_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10745
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ab_share_pack_mtrl_alpha = 2131165184
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ab_share_pack_mtrl_alpha As Integer = 2131165184
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_action_bar_item_background_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_action_bar_item_background_material
+  id: abc_action_bar_item_background_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_action_bar_item_background_material
+  nameWithType: Resource.Drawable.abc_action_bar_item_background_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_action_bar_item_background_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_bar_item_background_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10748
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_bar_item_background_material = 2131165185
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_bar_item_background_material As Integer = 2131165185
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_borderless_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_borderless_material
+  id: abc_btn_borderless_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_borderless_material
+  nameWithType: Resource.Drawable.abc_btn_borderless_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_borderless_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_borderless_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10751
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_borderless_material = 2131165186
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_borderless_material As Integer = 2131165186
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_material
+  id: abc_btn_check_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_check_material
+  nameWithType: Resource.Drawable.abc_btn_check_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_check_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10754
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_check_material = 2131165187
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_check_material As Integer = 2131165187
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000
+  id: abc_btn_check_to_on_mtrl_000
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_check_to_on_mtrl_000
+  nameWithType: Resource.Drawable.abc_btn_check_to_on_mtrl_000
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_check_to_on_mtrl_000
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10757
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_check_to_on_mtrl_000 = 2131165188
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_check_to_on_mtrl_000 As Integer = 2131165188
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015
+  id: abc_btn_check_to_on_mtrl_015
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_check_to_on_mtrl_015
+  nameWithType: Resource.Drawable.abc_btn_check_to_on_mtrl_015
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_check_to_on_mtrl_015
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10760
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_check_to_on_mtrl_015 = 2131165189
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_check_to_on_mtrl_015 As Integer = 2131165189
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_colored_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_colored_material
+  id: abc_btn_colored_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_colored_material
+  nameWithType: Resource.Drawable.abc_btn_colored_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_colored_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_colored_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10763
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_colored_material = 2131165190
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_colored_material As Integer = 2131165190
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape
+  id: abc_btn_default_mtrl_shape
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_default_mtrl_shape
+  nameWithType: Resource.Drawable.abc_btn_default_mtrl_shape
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_default_mtrl_shape
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_default_mtrl_shape
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10766
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_default_mtrl_shape = 2131165191
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_default_mtrl_shape As Integer = 2131165191
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_material
+  id: abc_btn_radio_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_radio_material
+  nameWithType: Resource.Drawable.abc_btn_radio_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_radio_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10769
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_radio_material = 2131165192
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_radio_material As Integer = 2131165192
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000
+  id: abc_btn_radio_to_on_mtrl_000
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_radio_to_on_mtrl_000
+  nameWithType: Resource.Drawable.abc_btn_radio_to_on_mtrl_000
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_radio_to_on_mtrl_000
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10772
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_radio_to_on_mtrl_000 = 2131165193
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_radio_to_on_mtrl_000 As Integer = 2131165193
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015
+  id: abc_btn_radio_to_on_mtrl_015
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_radio_to_on_mtrl_015
+  nameWithType: Resource.Drawable.abc_btn_radio_to_on_mtrl_015
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_radio_to_on_mtrl_015
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10775
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_radio_to_on_mtrl_015 = 2131165194
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_radio_to_on_mtrl_015 As Integer = 2131165194
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001
+  id: abc_btn_switch_to_on_mtrl_00001
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_switch_to_on_mtrl_00001
+  nameWithType: Resource.Drawable.abc_btn_switch_to_on_mtrl_00001
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_switch_to_on_mtrl_00001
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10778
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_switch_to_on_mtrl_00001 = 2131165195
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_switch_to_on_mtrl_00001 As Integer = 2131165195
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012
+  id: abc_btn_switch_to_on_mtrl_00012
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_switch_to_on_mtrl_00012
+  nameWithType: Resource.Drawable.abc_btn_switch_to_on_mtrl_00012
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_switch_to_on_mtrl_00012
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10781
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_switch_to_on_mtrl_00012 = 2131165196
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_switch_to_on_mtrl_00012 As Integer = 2131165196
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_internal_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_internal_bg
+  id: abc_cab_background_internal_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_cab_background_internal_bg
+  nameWithType: Resource.Drawable.abc_cab_background_internal_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_internal_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_cab_background_internal_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10784
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_cab_background_internal_bg = 2131165197
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_cab_background_internal_bg As Integer = 2131165197
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_material
+  id: abc_cab_background_top_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_cab_background_top_material
+  nameWithType: Resource.Drawable.abc_cab_background_top_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_cab_background_top_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10787
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_cab_background_top_material = 2131165198
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_cab_background_top_material As Integer = 2131165198
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha
+  id: abc_cab_background_top_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_cab_background_top_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_cab_background_top_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_cab_background_top_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10790
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_cab_background_top_mtrl_alpha = 2131165199
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_cab_background_top_mtrl_alpha As Integer = 2131165199
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_control_background_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_control_background_material
+  id: abc_control_background_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_control_background_material
+  nameWithType: Resource.Drawable.abc_control_background_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_control_background_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_control_background_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10793
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_control_background_material = 2131165200
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_control_background_material As Integer = 2131165200
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_dialog_material_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_dialog_material_background
+  id: abc_dialog_material_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_dialog_material_background
+  nameWithType: Resource.Drawable.abc_dialog_material_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_dialog_material_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_dialog_material_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10796
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_dialog_material_background = 2131165201
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_dialog_material_background As Integer = 2131165201
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_edit_text_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_edit_text_material
+  id: abc_edit_text_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_edit_text_material
+  nameWithType: Resource.Drawable.abc_edit_text_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_edit_text_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_edit_text_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10799
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_edit_text_material = 2131165202
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_edit_text_material As Integer = 2131165202
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_ab_back_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_ab_back_material
+  id: abc_ic_ab_back_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_ab_back_material
+  nameWithType: Resource.Drawable.abc_ic_ab_back_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_ab_back_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_ab_back_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10802
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_ab_back_material = 2131165203
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_ab_back_material As Integer = 2131165203
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp
+  id: abc_ic_arrow_drop_right_black_24dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_arrow_drop_right_black_24dp
+  nameWithType: Resource.Drawable.abc_ic_arrow_drop_right_black_24dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_arrow_drop_right_black_24dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10805
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_arrow_drop_right_black_24dp = 2131165204
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_arrow_drop_right_black_24dp As Integer = 2131165204
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_clear_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_clear_material
+  id: abc_ic_clear_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_clear_material
+  nameWithType: Resource.Drawable.abc_ic_clear_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_clear_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_clear_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10808
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_clear_material = 2131165205
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_clear_material As Integer = 2131165205
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha
+  id: abc_ic_commit_search_api_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_commit_search_api_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_commit_search_api_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10811
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_commit_search_api_mtrl_alpha = 2131165206
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_commit_search_api_mtrl_alpha As Integer = 2131165206
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_go_search_api_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_go_search_api_material
+  id: abc_ic_go_search_api_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_go_search_api_material
+  nameWithType: Resource.Drawable.abc_ic_go_search_api_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_go_search_api_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_go_search_api_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10814
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_go_search_api_material = 2131165207
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_go_search_api_material As Integer = 2131165207
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha
+  id: abc_ic_menu_copy_mtrl_am_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_copy_mtrl_am_alpha
+  nameWithType: Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_copy_mtrl_am_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10817
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_copy_mtrl_am_alpha = 2131165208
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_copy_mtrl_am_alpha As Integer = 2131165208
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha
+  id: abc_ic_menu_cut_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_cut_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_ic_menu_cut_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_cut_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10820
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_cut_mtrl_alpha = 2131165209
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_cut_mtrl_alpha As Integer = 2131165209
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material
+  id: abc_ic_menu_overflow_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_overflow_material
+  nameWithType: Resource.Drawable.abc_ic_menu_overflow_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_overflow_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_overflow_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10823
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_overflow_material = 2131165210
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_overflow_material As Integer = 2131165210
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha
+  id: abc_ic_menu_paste_mtrl_am_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_paste_mtrl_am_alpha
+  nameWithType: Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_paste_mtrl_am_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10826
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_paste_mtrl_am_alpha = 2131165211
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_paste_mtrl_am_alpha As Integer = 2131165211
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha
+  id: abc_ic_menu_selectall_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_selectall_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_selectall_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10829
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_selectall_mtrl_alpha = 2131165212
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_selectall_mtrl_alpha As Integer = 2131165212
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha
+  id: abc_ic_menu_share_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_menu_share_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_ic_menu_share_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_menu_share_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10832
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_menu_share_mtrl_alpha = 2131165213
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_menu_share_mtrl_alpha As Integer = 2131165213
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_search_api_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_search_api_material
+  id: abc_ic_search_api_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_search_api_material
+  nameWithType: Resource.Drawable.abc_ic_search_api_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_search_api_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_search_api_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10835
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_search_api_material = 2131165214
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_search_api_material As Integer = 2131165214
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_16dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_16dp
+  id: abc_ic_star_black_16dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_black_16dp
+  nameWithType: Resource.Drawable.abc_ic_star_black_16dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_16dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_black_16dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10838
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_black_16dp = 2131165215
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_black_16dp As Integer = 2131165215
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_36dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_36dp
+  id: abc_ic_star_black_36dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_black_36dp
+  nameWithType: Resource.Drawable.abc_ic_star_black_36dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_36dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_black_36dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10841
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_black_36dp = 2131165216
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_black_36dp As Integer = 2131165216
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_48dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_48dp
+  id: abc_ic_star_black_48dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_black_48dp
+  nameWithType: Resource.Drawable.abc_ic_star_black_48dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_black_48dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_black_48dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10844
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_black_48dp = 2131165217
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_black_48dp As Integer = 2131165217
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp
+  id: abc_ic_star_half_black_16dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_half_black_16dp
+  nameWithType: Resource.Drawable.abc_ic_star_half_black_16dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_16dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_half_black_16dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10847
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_half_black_16dp = 2131165218
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_half_black_16dp As Integer = 2131165218
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp
+  id: abc_ic_star_half_black_36dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_half_black_36dp
+  nameWithType: Resource.Drawable.abc_ic_star_half_black_36dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_36dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_half_black_36dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10850
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_half_black_36dp = 2131165219
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_half_black_36dp As Integer = 2131165219
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp
+  id: abc_ic_star_half_black_48dp
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_star_half_black_48dp
+  nameWithType: Resource.Drawable.abc_ic_star_half_black_48dp
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_star_half_black_48dp
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_star_half_black_48dp
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10853
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_star_half_black_48dp = 2131165220
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_star_half_black_48dp As Integer = 2131165220
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material
+  id: abc_ic_voice_search_api_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ic_voice_search_api_material
+  nameWithType: Resource.Drawable.abc_ic_voice_search_api_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ic_voice_search_api_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ic_voice_search_api_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10856
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ic_voice_search_api_material = 2131165221
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ic_voice_search_api_material As Integer = 2131165221
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_dark
+  id: abc_item_background_holo_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_item_background_holo_dark
+  nameWithType: Resource.Drawable.abc_item_background_holo_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_item_background_holo_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10859
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_item_background_holo_dark = 2131165222
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_item_background_holo_dark As Integer = 2131165222
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_light
+  id: abc_item_background_holo_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_item_background_holo_light
+  nameWithType: Resource.Drawable.abc_item_background_holo_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_item_background_holo_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_item_background_holo_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10862
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_item_background_holo_light = 2131165223
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_item_background_holo_light As Integer = 2131165223
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_material
+  id: abc_list_divider_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_divider_material
+  nameWithType: Resource.Drawable.abc_list_divider_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_divider_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10865
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_divider_material = 2131165224
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_divider_material As Integer = 2131165224
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha
+  id: abc_list_divider_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_divider_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_list_divider_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_divider_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10868
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_divider_mtrl_alpha = 2131165225
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_divider_mtrl_alpha As Integer = 2131165225
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_focused_holo
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_focused_holo
+  id: abc_list_focused_holo
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_focused_holo
+  nameWithType: Resource.Drawable.abc_list_focused_holo
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_focused_holo
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_focused_holo
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10871
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_focused_holo = 2131165226
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_focused_holo As Integer = 2131165226
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_longpressed_holo
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_longpressed_holo
+  id: abc_list_longpressed_holo
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_longpressed_holo
+  nameWithType: Resource.Drawable.abc_list_longpressed_holo
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_longpressed_holo
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_longpressed_holo
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10874
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_longpressed_holo = 2131165227
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_longpressed_holo As Integer = 2131165227
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark
+  id: abc_list_pressed_holo_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_pressed_holo_dark
+  nameWithType: Resource.Drawable.abc_list_pressed_holo_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_pressed_holo_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10877
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_pressed_holo_dark = 2131165228
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_pressed_holo_dark As Integer = 2131165228
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_light
+  id: abc_list_pressed_holo_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_pressed_holo_light
+  nameWithType: Resource.Drawable.abc_list_pressed_holo_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_pressed_holo_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_pressed_holo_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10880
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_pressed_holo_light = 2131165229
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_pressed_holo_light As Integer = 2131165229
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark
+  id: abc_list_selector_background_transition_holo_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_background_transition_holo_dark
+  nameWithType: Resource.Drawable.abc_list_selector_background_transition_holo_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_background_transition_holo_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10883
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_background_transition_holo_dark = 2131165230
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_background_transition_holo_dark As Integer = 2131165230
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light
+  id: abc_list_selector_background_transition_holo_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_background_transition_holo_light
+  nameWithType: Resource.Drawable.abc_list_selector_background_transition_holo_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_background_transition_holo_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10886
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_background_transition_holo_light = 2131165231
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_background_transition_holo_light As Integer = 2131165231
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark
+  id: abc_list_selector_disabled_holo_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_disabled_holo_dark
+  nameWithType: Resource.Drawable.abc_list_selector_disabled_holo_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_disabled_holo_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10889
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_disabled_holo_dark = 2131165232
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_disabled_holo_dark As Integer = 2131165232
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light
+  id: abc_list_selector_disabled_holo_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_disabled_holo_light
+  nameWithType: Resource.Drawable.abc_list_selector_disabled_holo_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_disabled_holo_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10892
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_disabled_holo_light = 2131165233
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_disabled_holo_light As Integer = 2131165233
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_dark
+  id: abc_list_selector_holo_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_holo_dark
+  nameWithType: Resource.Drawable.abc_list_selector_holo_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_holo_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10895
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_holo_dark = 2131165234
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_holo_dark As Integer = 2131165234
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_light
+  id: abc_list_selector_holo_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_list_selector_holo_light
+  nameWithType: Resource.Drawable.abc_list_selector_holo_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_list_selector_holo_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_selector_holo_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10898
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_selector_holo_light = 2131165235
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_selector_holo_light As Integer = 2131165235
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult
+  id: abc_menu_hardkey_panel_mtrl_mult
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_menu_hardkey_panel_mtrl_mult
+  nameWithType: Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_menu_hardkey_panel_mtrl_mult
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10901
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_menu_hardkey_panel_mtrl_mult = 2131165236
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_menu_hardkey_panel_mtrl_mult As Integer = 2131165236
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult
+  id: abc_popup_background_mtrl_mult
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_popup_background_mtrl_mult
+  nameWithType: Resource.Drawable.abc_popup_background_mtrl_mult
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_popup_background_mtrl_mult
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_popup_background_mtrl_mult
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10904
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_popup_background_mtrl_mult = 2131165237
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_popup_background_mtrl_mult As Integer = 2131165237
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material
+  id: abc_ratingbar_indicator_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ratingbar_indicator_material
+  nameWithType: Resource.Drawable.abc_ratingbar_indicator_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_indicator_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ratingbar_indicator_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10907
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ratingbar_indicator_material = 2131165238
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ratingbar_indicator_material As Integer = 2131165238
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_material
+  id: abc_ratingbar_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ratingbar_material
+  nameWithType: Resource.Drawable.abc_ratingbar_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ratingbar_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10910
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ratingbar_material = 2131165239
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ratingbar_material As Integer = 2131165239
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_small_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_small_material
+  id: abc_ratingbar_small_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_ratingbar_small_material
+  nameWithType: Resource.Drawable.abc_ratingbar_small_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_ratingbar_small_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_ratingbar_small_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10913
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_ratingbar_small_material = 2131165240
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_ratingbar_small_material As Integer = 2131165240
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha
+  id: abc_scrubber_control_off_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_scrubber_control_off_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_scrubber_control_off_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_scrubber_control_off_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10916
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_scrubber_control_off_mtrl_alpha = 2131165241
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_scrubber_control_off_mtrl_alpha As Integer = 2131165241
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000
+  id: abc_scrubber_control_to_pressed_mtrl_000
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_scrubber_control_to_pressed_mtrl_000
+  nameWithType: Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_scrubber_control_to_pressed_mtrl_000
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10919
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_scrubber_control_to_pressed_mtrl_000 = 2131165242
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_scrubber_control_to_pressed_mtrl_000 As Integer = 2131165242
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005
+  id: abc_scrubber_control_to_pressed_mtrl_005
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_scrubber_control_to_pressed_mtrl_005
+  nameWithType: Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_scrubber_control_to_pressed_mtrl_005
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10922
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_scrubber_control_to_pressed_mtrl_005 = 2131165243
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_scrubber_control_to_pressed_mtrl_005 As Integer = 2131165243
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha
+  id: abc_scrubber_primary_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_scrubber_primary_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_scrubber_primary_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_scrubber_primary_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10925
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_scrubber_primary_mtrl_alpha = 2131165244
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_scrubber_primary_mtrl_alpha As Integer = 2131165244
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha
+  id: abc_scrubber_track_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_scrubber_track_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_scrubber_track_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_scrubber_track_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10928
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_scrubber_track_mtrl_alpha = 2131165245
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_scrubber_track_mtrl_alpha As Integer = 2131165245
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_thumb_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_thumb_material
+  id: abc_seekbar_thumb_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_seekbar_thumb_material
+  nameWithType: Resource.Drawable.abc_seekbar_thumb_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_thumb_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_seekbar_thumb_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10931
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_seekbar_thumb_material = 2131165246
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_seekbar_thumb_material As Integer = 2131165246
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material
+  id: abc_seekbar_tick_mark_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_seekbar_tick_mark_material
+  nameWithType: Resource.Drawable.abc_seekbar_tick_mark_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_tick_mark_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_seekbar_tick_mark_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10934
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_seekbar_tick_mark_material = 2131165247
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_seekbar_tick_mark_material As Integer = 2131165247
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_track_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_track_material
+  id: abc_seekbar_track_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_seekbar_track_material
+  nameWithType: Resource.Drawable.abc_seekbar_track_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_seekbar_track_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_seekbar_track_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10937
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_seekbar_track_material = 2131165248
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_seekbar_track_material As Integer = 2131165248
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha
+  id: abc_spinner_mtrl_am_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_spinner_mtrl_am_alpha
+  nameWithType: Resource.Drawable.abc_spinner_mtrl_am_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_spinner_mtrl_am_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10940
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_spinner_mtrl_am_alpha = 2131165249
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_spinner_mtrl_am_alpha As Integer = 2131165249
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material
+  id: abc_spinner_textfield_background_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_spinner_textfield_background_material
+  nameWithType: Resource.Drawable.abc_spinner_textfield_background_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_spinner_textfield_background_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_spinner_textfield_background_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10943
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_spinner_textfield_background_material = 2131165250
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_spinner_textfield_background_material As Integer = 2131165250
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_switch_thumb_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_switch_thumb_material
+  id: abc_switch_thumb_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_switch_thumb_material
+  nameWithType: Resource.Drawable.abc_switch_thumb_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_switch_thumb_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_switch_thumb_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10946
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_switch_thumb_material = 2131165251
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_switch_thumb_material As Integer = 2131165251
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha
+  id: abc_switch_track_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_switch_track_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_switch_track_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_switch_track_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10949
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_switch_track_mtrl_alpha = 2131165252
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_switch_track_mtrl_alpha As Integer = 2131165252
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_material
+  id: abc_tab_indicator_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_tab_indicator_material
+  nameWithType: Resource.Drawable.abc_tab_indicator_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tab_indicator_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10952
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tab_indicator_material = 2131165253
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tab_indicator_material As Integer = 2131165253
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha
+  id: abc_tab_indicator_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_tab_indicator_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_tab_indicator_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tab_indicator_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10955
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tab_indicator_mtrl_alpha = 2131165254
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tab_indicator_mtrl_alpha As Integer = 2131165254
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha
+  id: abc_textfield_activated_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_textfield_activated_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_textfield_activated_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_textfield_activated_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10958
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_textfield_activated_mtrl_alpha = 2131165262
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_textfield_activated_mtrl_alpha As Integer = 2131165262
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha
+  id: abc_textfield_default_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_textfield_default_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_textfield_default_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_textfield_default_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10961
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_textfield_default_mtrl_alpha = 2131165263
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_textfield_default_mtrl_alpha As Integer = 2131165263
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha
+  id: abc_textfield_search_activated_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_textfield_search_activated_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_textfield_search_activated_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_textfield_search_activated_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10964
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_textfield_search_activated_mtrl_alpha = 2131165264
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_textfield_search_activated_mtrl_alpha As Integer = 2131165264
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha
+  id: abc_textfield_search_default_mtrl_alpha
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_textfield_search_default_mtrl_alpha
+  nameWithType: Resource.Drawable.abc_textfield_search_default_mtrl_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_textfield_search_default_mtrl_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10967
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_textfield_search_default_mtrl_alpha = 2131165265
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_textfield_search_default_mtrl_alpha As Integer = 2131165265
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_material
+  id: abc_textfield_search_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_textfield_search_material
+  nameWithType: Resource.Drawable.abc_textfield_search_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_textfield_search_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_textfield_search_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10970
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_textfield_search_material = 2131165266
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_textfield_search_material As Integer = 2131165266
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_cursor_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_cursor_material
+  id: abc_text_cursor_material
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_cursor_material
+  nameWithType: Resource.Drawable.abc_text_cursor_material
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_cursor_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_cursor_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10973
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_cursor_material = 2131165255
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_cursor_material As Integer = 2131165255
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark
+  id: abc_text_select_handle_left_mtrl_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_left_mtrl_dark
+  nameWithType: Resource.Drawable.abc_text_select_handle_left_mtrl_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_left_mtrl_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10976
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_left_mtrl_dark = 2131165256
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_left_mtrl_dark As Integer = 2131165256
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light
+  id: abc_text_select_handle_left_mtrl_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_left_mtrl_light
+  nameWithType: Resource.Drawable.abc_text_select_handle_left_mtrl_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_left_mtrl_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10979
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_left_mtrl_light = 2131165257
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_left_mtrl_light As Integer = 2131165257
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark
+  id: abc_text_select_handle_middle_mtrl_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_middle_mtrl_dark
+  nameWithType: Resource.Drawable.abc_text_select_handle_middle_mtrl_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_middle_mtrl_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10982
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_middle_mtrl_dark = 2131165258
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_middle_mtrl_dark As Integer = 2131165258
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light
+  id: abc_text_select_handle_middle_mtrl_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_middle_mtrl_light
+  nameWithType: Resource.Drawable.abc_text_select_handle_middle_mtrl_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_middle_mtrl_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10985
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_middle_mtrl_light = 2131165259
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_middle_mtrl_light As Integer = 2131165259
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark
+  id: abc_text_select_handle_right_mtrl_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_right_mtrl_dark
+  nameWithType: Resource.Drawable.abc_text_select_handle_right_mtrl_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_right_mtrl_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10988
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_right_mtrl_dark = 2131165260
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_right_mtrl_dark As Integer = 2131165260
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light
+  id: abc_text_select_handle_right_mtrl_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_text_select_handle_right_mtrl_light
+  nameWithType: Resource.Drawable.abc_text_select_handle_right_mtrl_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_text_select_handle_right_mtrl_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10991
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_text_select_handle_right_mtrl_light = 2131165261
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_text_select_handle_right_mtrl_light As Integer = 2131165261
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.abc_vector_test
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.abc_vector_test
+  id: abc_vector_test
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: abc_vector_test
+  nameWithType: Resource.Drawable.abc_vector_test
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.abc_vector_test
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_vector_test
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10994
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_vector_test = 2131165267
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_vector_test As Integer = 2131165267
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.avd_hide_password
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.avd_hide_password
+  id: avd_hide_password
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: avd_hide_password
+  nameWithType: Resource.Drawable.avd_hide_password
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.avd_hide_password
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: avd_hide_password
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10997
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int avd_hide_password = 2131165268
+    return:
+      type: System.Int32
+    content.vb: Public Const avd_hide_password As Integer = 2131165268
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.avd_show_password
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.avd_show_password
+  id: avd_show_password
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: avd_show_password
+  nameWithType: Resource.Drawable.avd_show_password
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.avd_show_password
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: avd_show_password
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11000
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int avd_show_password = 2131165269
+    return:
+      type: System.Int32
+    content.vb: Public Const avd_show_password As Integer = 2131165269
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_bottom_navigation_item_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_bottom_navigation_item_background
+  id: design_bottom_navigation_item_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_navigation_item_background
+  nameWithType: Resource.Drawable.design_bottom_navigation_item_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_bottom_navigation_item_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_navigation_item_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11003
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_navigation_item_background = 2131165270
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_navigation_item_background As Integer = 2131165270
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_fab_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_fab_background
+  id: design_fab_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_fab_background
+  nameWithType: Resource.Drawable.design_fab_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_fab_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11006
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_background = 2131165271
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_background As Integer = 2131165271
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility
+  id: design_ic_visibility
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_ic_visibility
+  nameWithType: Resource.Drawable.design_ic_visibility
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_ic_visibility
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11009
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_ic_visibility = 2131165272
+    return:
+      type: System.Int32
+    content.vb: Public Const design_ic_visibility As Integer = 2131165272
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility_off
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility_off
+  id: design_ic_visibility_off
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_ic_visibility_off
+  nameWithType: Resource.Drawable.design_ic_visibility_off
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_ic_visibility_off
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_ic_visibility_off
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11012
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_ic_visibility_off = 2131165273
+    return:
+      type: System.Int32
+    content.vb: Public Const design_ic_visibility_off As Integer = 2131165273
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_password_eye
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_password_eye
+  id: design_password_eye
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_password_eye
+  nameWithType: Resource.Drawable.design_password_eye
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_password_eye
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_password_eye
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11015
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_password_eye = 2131165274
+    return:
+      type: System.Int32
+    content.vb: Public Const design_password_eye As Integer = 2131165274
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.design_snackbar_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.design_snackbar_background
+  id: design_snackbar_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: design_snackbar_background
+  nameWithType: Resource.Drawable.design_snackbar_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.design_snackbar_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_snackbar_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11018
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_snackbar_background = 2131165275
+    return:
+      type: System.Int32
+    content.vb: Public Const design_snackbar_background As Integer = 2131165275
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.icon
+  id: icon
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: icon
+  nameWithType: Resource.Drawable.icon
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11021
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int icon = 2131165280
+    return:
+      type: System.Int32
+    content.vb: Public Const icon As Integer = 2131165280
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.ic_arrow_back
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.ic_arrow_back
+  id: ic_arrow_back
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: ic_arrow_back
+  nameWithType: Resource.Drawable.ic_arrow_back
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.ic_arrow_back
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ic_arrow_back
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11024
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ic_arrow_back = 2131165276
+    return:
+      type: System.Int32
+    content.vb: Public Const ic_arrow_back As Integer = 2131165276
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black
+  id: ic_mtrl_chip_checked_black
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: ic_mtrl_chip_checked_black
+  nameWithType: Resource.Drawable.ic_mtrl_chip_checked_black
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_black
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ic_mtrl_chip_checked_black
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11027
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ic_mtrl_chip_checked_black = 2131165277
+    return:
+      type: System.Int32
+    content.vb: Public Const ic_mtrl_chip_checked_black As Integer = 2131165277
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle
+  id: ic_mtrl_chip_checked_circle
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: ic_mtrl_chip_checked_circle
+  nameWithType: Resource.Drawable.ic_mtrl_chip_checked_circle
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ic_mtrl_chip_checked_circle
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11030
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ic_mtrl_chip_checked_circle = 2131165278
+    return:
+      type: System.Int32
+    content.vb: Public Const ic_mtrl_chip_checked_circle As Integer = 2131165278
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle
+  id: ic_mtrl_chip_close_circle
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: ic_mtrl_chip_close_circle
+  nameWithType: Resource.Drawable.ic_mtrl_chip_close_circle
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.ic_mtrl_chip_close_circle
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ic_mtrl_chip_close_circle
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11033
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ic_mtrl_chip_close_circle = 2131165279
+    return:
+      type: System.Int32
+    content.vb: Public Const ic_mtrl_chip_close_circle As Integer = 2131165279
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.mtrl_snackbar_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.mtrl_snackbar_background
+  id: mtrl_snackbar_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: mtrl_snackbar_background
+  nameWithType: Resource.Drawable.mtrl_snackbar_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.mtrl_snackbar_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_snackbar_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11036
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_snackbar_background = 2131165281
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_snackbar_background As Integer = 2131165281
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator
+  id: mtrl_tabs_default_indicator
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_default_indicator
+  nameWithType: Resource.Drawable.mtrl_tabs_default_indicator
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.mtrl_tabs_default_indicator
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_default_indicator
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11039
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_default_indicator = 2131165282
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_default_indicator As Integer = 2131165282
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.navigation_empty_icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.navigation_empty_icon
+  id: navigation_empty_icon
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: navigation_empty_icon
+  nameWithType: Resource.Drawable.navigation_empty_icon
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.navigation_empty_icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: navigation_empty_icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11042
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int navigation_empty_icon = 2131165283
+    return:
+      type: System.Int32
+    content.vb: Public Const navigation_empty_icon As Integer = 2131165283
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_action_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_action_background
+  id: notification_action_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_action_background
+  nameWithType: Resource.Drawable.notification_action_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_action_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_action_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11045
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_action_background = 2131165284
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_action_background As Integer = 2131165284
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg
+  id: notification_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg
+  nameWithType: Resource.Drawable.notification_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11048
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg = 2131165285
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg As Integer = 2131165285
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low
+  id: notification_bg_low
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg_low
+  nameWithType: Resource.Drawable.notification_bg_low
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg_low
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11051
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg_low = 2131165286
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg_low As Integer = 2131165286
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_normal
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_normal
+  id: notification_bg_low_normal
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg_low_normal
+  nameWithType: Resource.Drawable.notification_bg_low_normal
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_normal
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg_low_normal
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11054
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg_low_normal = 2131165287
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg_low_normal As Integer = 2131165287
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_pressed
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_pressed
+  id: notification_bg_low_pressed
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg_low_pressed
+  nameWithType: Resource.Drawable.notification_bg_low_pressed
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_low_pressed
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg_low_pressed
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11057
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg_low_pressed = 2131165288
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg_low_pressed As Integer = 2131165288
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal
+  id: notification_bg_normal
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg_normal
+  nameWithType: Resource.Drawable.notification_bg_normal
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg_normal
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11060
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg_normal = 2131165289
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg_normal As Integer = 2131165289
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal_pressed
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal_pressed
+  id: notification_bg_normal_pressed
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_bg_normal_pressed
+  nameWithType: Resource.Drawable.notification_bg_normal_pressed
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_bg_normal_pressed
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_bg_normal_pressed
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11063
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_bg_normal_pressed = 2131165290
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_bg_normal_pressed As Integer = 2131165290
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_icon_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_icon_background
+  id: notification_icon_background
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_icon_background
+  nameWithType: Resource.Drawable.notification_icon_background
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_icon_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_icon_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11066
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_icon_background = 2131165291
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_icon_background As Integer = 2131165291
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_bg
+  id: notification_template_icon_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_template_icon_bg
+  nameWithType: Resource.Drawable.notification_template_icon_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_icon_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11069
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_icon_bg = 2131165292
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_icon_bg As Integer = 2131165292
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_low_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_low_bg
+  id: notification_template_icon_low_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_template_icon_low_bg
+  nameWithType: Resource.Drawable.notification_template_icon_low_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_template_icon_low_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_icon_low_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11072
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_icon_low_bg = 2131165293
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_icon_low_bg As Integer = 2131165293
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notification_tile_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notification_tile_bg
+  id: notification_tile_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notification_tile_bg
+  nameWithType: Resource.Drawable.notification_tile_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notification_tile_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_tile_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11075
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_tile_bg = 2131165294
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_tile_bg As Integer = 2131165294
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg
+  id: notify_panel_notification_icon_bg
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: notify_panel_notification_icon_bg
+  nameWithType: Resource.Drawable.notify_panel_notification_icon_bg
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.notify_panel_notification_icon_bg
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notify_panel_notification_icon_bg
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11078
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notify_panel_notification_icon_bg = 2131165295
+    return:
+      type: System.Int32
+    content.vb: Public Const notify_panel_notification_icon_bg As Integer = 2131165295
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_dark
+  id: tooltip_frame_dark
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: tooltip_frame_dark
+  nameWithType: Resource.Drawable.tooltip_frame_dark
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: tooltip_frame_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11081
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int tooltip_frame_dark = 2131165296
+    return:
+      type: System.Int32
+    content.vb: Public Const tooltip_frame_dark As Integer = 2131165296
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_light
+  id: tooltip_frame_light
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: tooltip_frame_light
+  nameWithType: Resource.Drawable.tooltip_frame_light
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.tooltip_frame_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: tooltip_frame_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11084
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int tooltip_frame_light = 2131165297
+    return:
+      type: System.Int32
+    content.vb: Public Const tooltip_frame_light As Integer = 2131165297
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Drawable.xamagonBlue
+  commentId: F:AnorocMobileApp.Droid.Resource.Drawable.xamagonBlue
+  id: xamagonBlue
+  parent: AnorocMobileApp.Droid.Resource.Drawable
+  langs:
+  - csharp
+  - vb
+  name: xamagonBlue
+  nameWithType: Resource.Drawable.xamagonBlue
+  fullName: AnorocMobileApp.Droid.Resource.Drawable.xamagonBlue
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: xamagonBlue
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11087
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int xamagonBlue = 2131165298
+    return:
+      type: System.Int32
+    content.vb: Public Const xamagonBlue As Integer = 2131165298
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

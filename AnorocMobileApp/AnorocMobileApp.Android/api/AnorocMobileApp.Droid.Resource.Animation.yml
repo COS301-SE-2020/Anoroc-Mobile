@@ -1,0 +1,1097 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Animation
+  commentId: T:AnorocMobileApp.Droid.Resource.Animation
+  id: Resource.Animation
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Animation.abc_fade_in
+  - AnorocMobileApp.Droid.Resource.Animation.abc_fade_out
+  - AnorocMobileApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom
+  - AnorocMobileApp.Droid.Resource.Animation.abc_popup_enter
+  - AnorocMobileApp.Droid.Resource.Animation.abc_popup_exit
+  - AnorocMobileApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom
+  - AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_bottom
+  - AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_top
+  - AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_bottom
+  - AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_top
+  - AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_enter
+  - AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_exit
+  - AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_in
+  - AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_out
+  - AnorocMobileApp.Droid.Resource.Animation.design_snackbar_in
+  - AnorocMobileApp.Droid.Resource.Animation.design_snackbar_out
+  - AnorocMobileApp.Droid.Resource.Animation.EnterFromLeft
+  - AnorocMobileApp.Droid.Resource.Animation.EnterFromRight
+  - AnorocMobileApp.Droid.Resource.Animation.ExitToLeft
+  - AnorocMobileApp.Droid.Resource.Animation.ExitToRight
+  - AnorocMobileApp.Droid.Resource.Animation.slide_in_right
+  - AnorocMobileApp.Droid.Resource.Animation.slide_out_left
+  langs:
+  - csharp
+  - vb
+  name: Resource.Animation
+  nameWithType: Resource.Animation
+  fullName: AnorocMobileApp.Droid.Resource.Animation
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Animation
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8053
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Animation
+    content.vb: Public Class Animation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_fade_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_fade_in
+  id: abc_fade_in
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_fade_in
+  nameWithType: Resource.Animation.abc_fade_in
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_fade_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_fade_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8057
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_fade_in = 2130771972
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_fade_in As Integer = 2130771972
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_fade_out
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_fade_out
+  id: abc_fade_out
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_fade_out
+  nameWithType: Resource.Animation.abc_fade_out
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_fade_out
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_fade_out
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8060
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_fade_out = 2130771973
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_fade_out As Integer = 2130771973
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom
+  id: abc_grow_fade_in_from_bottom
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_grow_fade_in_from_bottom
+  nameWithType: Resource.Animation.abc_grow_fade_in_from_bottom
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_grow_fade_in_from_bottom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_grow_fade_in_from_bottom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8063
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_grow_fade_in_from_bottom = 2130771974
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_grow_fade_in_from_bottom As Integer = 2130771974
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_popup_enter
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_popup_enter
+  id: abc_popup_enter
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_popup_enter
+  nameWithType: Resource.Animation.abc_popup_enter
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_popup_enter
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_popup_enter
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8066
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_popup_enter = 2130771975
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_popup_enter As Integer = 2130771975
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_popup_exit
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_popup_exit
+  id: abc_popup_exit
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_popup_exit
+  nameWithType: Resource.Animation.abc_popup_exit
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_popup_exit
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_popup_exit
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8069
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_popup_exit = 2130771976
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_popup_exit As Integer = 2130771976
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom
+  id: abc_shrink_fade_out_from_bottom
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_shrink_fade_out_from_bottom
+  nameWithType: Resource.Animation.abc_shrink_fade_out_from_bottom
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_shrink_fade_out_from_bottom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8072
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_shrink_fade_out_from_bottom = 2130771977
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_shrink_fade_out_from_bottom As Integer = 2130771977
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_bottom
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_bottom
+  id: abc_slide_in_bottom
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_slide_in_bottom
+  nameWithType: Resource.Animation.abc_slide_in_bottom
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_bottom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_slide_in_bottom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8075
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_slide_in_bottom = 2130771978
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_slide_in_bottom As Integer = 2130771978
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_top
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_top
+  id: abc_slide_in_top
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_slide_in_top
+  nameWithType: Resource.Animation.abc_slide_in_top
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_slide_in_top
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_slide_in_top
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8078
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_slide_in_top = 2130771979
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_slide_in_top As Integer = 2130771979
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_bottom
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_bottom
+  id: abc_slide_out_bottom
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_slide_out_bottom
+  nameWithType: Resource.Animation.abc_slide_out_bottom
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_bottom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_slide_out_bottom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8081
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_slide_out_bottom = 2130771980
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_slide_out_bottom As Integer = 2130771980
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_top
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_top
+  id: abc_slide_out_top
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_slide_out_top
+  nameWithType: Resource.Animation.abc_slide_out_top
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_slide_out_top
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_slide_out_top
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8084
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_slide_out_top = 2130771981
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_slide_out_top As Integer = 2130771981
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_enter
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_enter
+  id: abc_tooltip_enter
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_tooltip_enter
+  nameWithType: Resource.Animation.abc_tooltip_enter
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_enter
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tooltip_enter
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8087
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tooltip_enter = 2130771982
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tooltip_enter As Integer = 2130771982
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_exit
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_exit
+  id: abc_tooltip_exit
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: abc_tooltip_exit
+  nameWithType: Resource.Animation.abc_tooltip_exit
+  fullName: AnorocMobileApp.Droid.Resource.Animation.abc_tooltip_exit
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tooltip_exit
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8090
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tooltip_exit = 2130771983
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tooltip_exit As Integer = 2130771983
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_in
+  id: design_bottom_sheet_slide_in
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_sheet_slide_in
+  nameWithType: Resource.Animation.design_bottom_sheet_slide_in
+  fullName: AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_sheet_slide_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8093
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_sheet_slide_in = 2130771984
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_sheet_slide_in As Integer = 2130771984
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_out
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_out
+  id: design_bottom_sheet_slide_out
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_sheet_slide_out
+  nameWithType: Resource.Animation.design_bottom_sheet_slide_out
+  fullName: AnorocMobileApp.Droid.Resource.Animation.design_bottom_sheet_slide_out
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_sheet_slide_out
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8096
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_sheet_slide_out = 2130771985
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_sheet_slide_out As Integer = 2130771985
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.design_snackbar_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.design_snackbar_in
+  id: design_snackbar_in
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: design_snackbar_in
+  nameWithType: Resource.Animation.design_snackbar_in
+  fullName: AnorocMobileApp.Droid.Resource.Animation.design_snackbar_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_snackbar_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8099
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_snackbar_in = 2130771986
+    return:
+      type: System.Int32
+    content.vb: Public Const design_snackbar_in As Integer = 2130771986
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.design_snackbar_out
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.design_snackbar_out
+  id: design_snackbar_out
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: design_snackbar_out
+  nameWithType: Resource.Animation.design_snackbar_out
+  fullName: AnorocMobileApp.Droid.Resource.Animation.design_snackbar_out
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_snackbar_out
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8102
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_snackbar_out = 2130771987
+    return:
+      type: System.Int32
+    content.vb: Public Const design_snackbar_out As Integer = 2130771987
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.EnterFromLeft
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.EnterFromLeft
+  id: EnterFromLeft
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: EnterFromLeft
+  nameWithType: Resource.Animation.EnterFromLeft
+  fullName: AnorocMobileApp.Droid.Resource.Animation.EnterFromLeft
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: EnterFromLeft
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8105
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int EnterFromLeft = 2130771968
+    return:
+      type: System.Int32
+    content.vb: Public Const EnterFromLeft As Integer = 2130771968
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.EnterFromRight
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.EnterFromRight
+  id: EnterFromRight
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: EnterFromRight
+  nameWithType: Resource.Animation.EnterFromRight
+  fullName: AnorocMobileApp.Droid.Resource.Animation.EnterFromRight
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: EnterFromRight
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8108
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int EnterFromRight = 2130771969
+    return:
+      type: System.Int32
+    content.vb: Public Const EnterFromRight As Integer = 2130771969
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.ExitToLeft
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.ExitToLeft
+  id: ExitToLeft
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: ExitToLeft
+  nameWithType: Resource.Animation.ExitToLeft
+  fullName: AnorocMobileApp.Droid.Resource.Animation.ExitToLeft
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ExitToLeft
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8111
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ExitToLeft = 2130771970
+    return:
+      type: System.Int32
+    content.vb: Public Const ExitToLeft As Integer = 2130771970
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.ExitToRight
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.ExitToRight
+  id: ExitToRight
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: ExitToRight
+  nameWithType: Resource.Animation.ExitToRight
+  fullName: AnorocMobileApp.Droid.Resource.Animation.ExitToRight
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ExitToRight
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8114
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ExitToRight = 2130771971
+    return:
+      type: System.Int32
+    content.vb: Public Const ExitToRight As Integer = 2130771971
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.slide_in_right
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.slide_in_right
+  id: slide_in_right
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: slide_in_right
+  nameWithType: Resource.Animation.slide_in_right
+  fullName: AnorocMobileApp.Droid.Resource.Animation.slide_in_right
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: slide_in_right
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8117
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int slide_in_right = 2130771988
+    return:
+      type: System.Int32
+    content.vb: Public Const slide_in_right As Integer = 2130771988
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Animation.slide_out_left
+  commentId: F:AnorocMobileApp.Droid.Resource.Animation.slide_out_left
+  id: slide_out_left
+  parent: AnorocMobileApp.Droid.Resource.Animation
+  langs:
+  - csharp
+  - vb
+  name: slide_out_left
+  nameWithType: Resource.Animation.slide_out_left
+  fullName: AnorocMobileApp.Droid.Resource.Animation.slide_out_left
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: slide_out_left
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 8120
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int slide_out_left = 2130771989
+    return:
+      type: System.Int32
+    content.vb: Public Const slide_out_left As Integer = 2130771989
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
