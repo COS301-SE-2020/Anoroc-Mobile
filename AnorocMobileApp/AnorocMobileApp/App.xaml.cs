@@ -6,6 +6,7 @@ using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using System;
 using System.Net;
+using Microsoft.Identity.Client;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,11 @@ namespace AnorocMobileApp
     public partial class App : Application
     {
         public const string NotificationReceivedKey = "NotificationRecieved";
+        
+        public static IPublicClientApplication AuthenticationClient { get; private set; }
+
+        public static object UIParent { get; set; } = null;
+
          
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
@@ -29,6 +35,11 @@ namespace AnorocMobileApp
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
             InitializeComponent();
+            
+            AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.Adb2C.ClientId)
+                .WithB2CAuthority(Constants.Adb2C.AuthoritySignin)
+                .WithRedirectUri($"msal{Constants.Adb2C.ClientId}://auth")
+                .Build();
             
             // Dependancy Injections:
             Container.BackgroundLocationService = backgroundLocationService;

@@ -24,11 +24,14 @@ namespace AnorocMobileApp.Models
 
         public static class Adb2C
         {
-            static readonly string tenantName = "anorocmob";
-            static readonly string tenantId = "anorocmob.onmicrosoft.com";
-            static readonly string clientId = "d09df4e8-8c35-4d67-b446-57098d21ce5d";
-            static readonly string policySignin = "B2C_1_signupsignin1";
-            static readonly string policyPassword = "B2C_1_passwordreset";
+            public static readonly string TenantName = "anorocmob";
+            public static readonly string TenantId = "anorocmob.onmicrosoft.com";
+            public static readonly string ClientId = "d09df4e8-8c35-4d67-b446-57098d21ce5d";
+            public static readonly string PolicySignin = "B2C_1_signupsignin1";
+            public static readonly string PolicyPassword = "B2C_1_passwordreset";
+            public static readonly string AuthorityBase = $"https://{TenantName}.b2clogin.com/tfp/{TenantId}/";
+            public static string AuthoritySignin => $"{AuthorityBase}{PolicySignin}";
+            public static string AuthorityPasswordReset => $"{AuthorityBase}{PolicyPassword}";
         }
     }
 
