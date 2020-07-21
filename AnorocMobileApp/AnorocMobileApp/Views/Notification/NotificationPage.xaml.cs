@@ -18,7 +18,8 @@ namespace AnorocMobileApp.Views.Notification
         public NotificationPage()
         {
             InitializeComponent();
-            this.BindingContext = NotificationDataService.Instance.NotificationViewModel;
+            //this.BindingContext = NotificationDataService.Instance.NotificationViewModel;
+            this.BindingContext = EncounterDataService.Instance.NotificationViewModel;
         }
     }
 }

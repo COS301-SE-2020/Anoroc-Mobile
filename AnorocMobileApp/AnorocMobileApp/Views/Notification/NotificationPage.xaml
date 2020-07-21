@@ -25,19 +25,7 @@
             <StackLayout Spacing="0">
 
                 <!--  Title View  -->
-                <controls:TitleView Title="Notifications" BackgroundColor="{DynamicResource Gray-White} ">
-
-                    <!-- Back button -->
-                    <controls:TitleView.LeadingView>
-                        <buttons:SfButton Text="{StaticResource Back}" Style="{StaticResource IconButtonStyle}" CornerRadius="4"
-                                          Command="{Binding Path=BindingContext.BackCommand, Source={x:Reference notificationPage}}"/>
-                    </controls:TitleView.LeadingView>
-
-                    <!-- More button -->
-                    <controls:TitleView.TrailingView>
-                        <buttons:SfButton Text="{StaticResource More}" Style="{StaticResource IconButtonStyle}" CornerRadius="4"
-                                          Command="{Binding Path=BindingContext.MenuCommand, Source={x:Reference notificationPage}}" />
-                    </controls:TitleView.TrailingView>
+                <controls:TitleView Title="Encounters" BackgroundColor="{DynamicResource Gray-White} ">
 
                 </controls:TitleView>
                 <ContentPresenter />
