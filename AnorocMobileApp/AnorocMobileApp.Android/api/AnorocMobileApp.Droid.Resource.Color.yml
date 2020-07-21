@@ -1,0 +1,4973 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Color
+  commentId: T:AnorocMobileApp.Droid.Resource.Color
+  id: Resource.Color
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light
+  - AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material
+  - AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_text_material
+  - AnorocMobileApp.Droid.Resource.Color.abc_color_highlight_material
+  - AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_light
+  - AnorocMobileApp.Droid.Resource.Color.abc_input_method_navigation_guard
+  - AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light
+  - AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_light
+  - AnorocMobileApp.Droid.Resource.Color.abc_search_url_text
+  - AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_normal
+  - AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_pressed
+  - AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_selected
+  - AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_light
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_btn_checkable
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_default
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_edittext
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_seek_thumb
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_spinner
+  - AnorocMobileApp.Droid.Resource.Color.abc_tint_switch_track
+  - AnorocMobileApp.Droid.Resource.Color.accent_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.accent_material_light
+  - AnorocMobileApp.Droid.Resource.Color.background_floating_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.background_floating_material_light
+  - AnorocMobileApp.Droid.Resource.Color.background_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.background_material_light
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_light
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_light
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_light
+  - AnorocMobileApp.Droid.Resource.Color.browser_actions_bg_grey
+  - AnorocMobileApp.Droid.Resource.Color.browser_actions_divider_color
+  - AnorocMobileApp.Droid.Resource.Color.browser_actions_text_color
+  - AnorocMobileApp.Droid.Resource.Color.browser_actions_title_color
+  - AnorocMobileApp.Droid.Resource.Color.button_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.button_material_light
+  - AnorocMobileApp.Droid.Resource.Color.cardview_dark_background
+  - AnorocMobileApp.Droid.Resource.Color.cardview_light_background
+  - AnorocMobileApp.Droid.Resource.Color.cardview_shadow_end_color
+  - AnorocMobileApp.Droid.Resource.Color.cardview_shadow_start_color
+  - AnorocMobileApp.Droid.Resource.Color.colorAccent
+  - AnorocMobileApp.Droid.Resource.Color.colorPrimary
+  - AnorocMobileApp.Droid.Resource.Color.colorPrimaryDark
+  - AnorocMobileApp.Droid.Resource.Color.design_bottom_navigation_shadow_color
+  - AnorocMobileApp.Droid.Resource.Color.design_default_color_primary
+  - AnorocMobileApp.Droid.Resource.Color.design_default_color_primary_dark
+  - AnorocMobileApp.Droid.Resource.Color.design_error
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_end_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_mid_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_start_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_inner_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_outer_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_inner_color
+  - AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_outer_color
+  - AnorocMobileApp.Droid.Resource.Color.design_snackbar_background_color
+  - AnorocMobileApp.Droid.Resource.Color.design_tint_password_toggle
+  - AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_light
+  - AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_light
+  - AnorocMobileApp.Droid.Resource.Color.error_color_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.error_color_material_light
+  - AnorocMobileApp.Droid.Resource.Color.foreground_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.foreground_material_light
+  - AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_light
+  - AnorocMobileApp.Droid.Resource.Color.launcher_background
+  - AnorocMobileApp.Droid.Resource.Color.material_blue_grey_800
+  - AnorocMobileApp.Droid.Resource.Color.material_blue_grey_900
+  - AnorocMobileApp.Droid.Resource.Color.material_blue_grey_950
+  - AnorocMobileApp.Droid.Resource.Color.material_deep_teal_200
+  - AnorocMobileApp.Droid.Resource.Color.material_deep_teal_500
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_100
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_300
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_50
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_600
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_800
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_850
+  - AnorocMobileApp.Droid.Resource.Color.material_grey_900
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_disabled
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_disabled
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_chip_background_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_chip_close_icon_tint
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_chip_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_chip_text_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_fab_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_scrim_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_ripple_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_disabled_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color
+  - AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color
+  - AnorocMobileApp.Droid.Resource.Color.notification_action_color_filter
+  - AnorocMobileApp.Droid.Resource.Color.notification_icon_bg_color
+  - AnorocMobileApp.Droid.Resource.Color.notification_material_background_media_default_color
+  - AnorocMobileApp.Droid.Resource.Color.primary_dark_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.primary_dark_material_light
+  - AnorocMobileApp.Droid.Resource.Color.primary_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.primary_material_light
+  - AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_light
+  - AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_light
+  - AnorocMobileApp.Droid.Resource.Color.ripple_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.ripple_material_light
+  - AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_light
+  - AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_light
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_light
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_light
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_dark
+  - AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_light
+  - AnorocMobileApp.Droid.Resource.Color.tooltip_background_dark
+  - AnorocMobileApp.Droid.Resource.Color.tooltip_background_light
+  langs:
+  - csharp
+  - vb
+  name: Resource.Color
+  nameWithType: Resource.Color
+  fullName: AnorocMobileApp.Droid.Resource.Color
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9644
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Color
+    content.vb: Public Class Color
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark
+  id: abc_background_cache_hint_selector_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_background_cache_hint_selector_material_dark
+  nameWithType: Resource.Color.abc_background_cache_hint_selector_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_background_cache_hint_selector_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9648
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_background_cache_hint_selector_material_dark = 2131034112
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_background_cache_hint_selector_material_dark As Integer = 2131034112
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light
+  id: abc_background_cache_hint_selector_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_background_cache_hint_selector_material_light
+  nameWithType: Resource.Color.abc_background_cache_hint_selector_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_background_cache_hint_selector_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_background_cache_hint_selector_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9651
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_background_cache_hint_selector_material_light = 2131034113
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_background_cache_hint_selector_material_light As Integer = 2131034113
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material
+  id: abc_btn_colored_borderless_text_material
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_colored_borderless_text_material
+  nameWithType: Resource.Color.abc_btn_colored_borderless_text_material
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_borderless_text_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_colored_borderless_text_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9654
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_colored_borderless_text_material = 2131034114
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_colored_borderless_text_material As Integer = 2131034114
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_text_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_text_material
+  id: abc_btn_colored_text_material
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_btn_colored_text_material
+  nameWithType: Resource.Color.abc_btn_colored_text_material
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_btn_colored_text_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_btn_colored_text_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9657
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_btn_colored_text_material = 2131034115
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_btn_colored_text_material As Integer = 2131034115
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_color_highlight_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_color_highlight_material
+  id: abc_color_highlight_material
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_color_highlight_material
+  nameWithType: Resource.Color.abc_color_highlight_material
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_color_highlight_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_color_highlight_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9660
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_color_highlight_material = 2131034116
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_color_highlight_material As Integer = 2131034116
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_dark
+  id: abc_hint_foreground_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_hint_foreground_material_dark
+  nameWithType: Resource.Color.abc_hint_foreground_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_hint_foreground_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9663
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_hint_foreground_material_dark = 2131034117
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_hint_foreground_material_dark As Integer = 2131034117
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_light
+  id: abc_hint_foreground_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_hint_foreground_material_light
+  nameWithType: Resource.Color.abc_hint_foreground_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_hint_foreground_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_hint_foreground_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9666
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_hint_foreground_material_light = 2131034118
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_hint_foreground_material_light As Integer = 2131034118
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_input_method_navigation_guard
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_input_method_navigation_guard
+  id: abc_input_method_navigation_guard
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_input_method_navigation_guard
+  nameWithType: Resource.Color.abc_input_method_navigation_guard
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_input_method_navigation_guard
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_input_method_navigation_guard
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9669
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_input_method_navigation_guard = 2131034119
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_input_method_navigation_guard As Integer = 2131034119
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark
+  id: abc_primary_text_disable_only_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_primary_text_disable_only_material_dark
+  nameWithType: Resource.Color.abc_primary_text_disable_only_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_primary_text_disable_only_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9672
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_primary_text_disable_only_material_dark = 2131034120
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_primary_text_disable_only_material_dark As Integer = 2131034120
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light
+  id: abc_primary_text_disable_only_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_primary_text_disable_only_material_light
+  nameWithType: Resource.Color.abc_primary_text_disable_only_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_disable_only_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_primary_text_disable_only_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9675
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_primary_text_disable_only_material_light = 2131034121
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_primary_text_disable_only_material_light As Integer = 2131034121
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_dark
+  id: abc_primary_text_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_primary_text_material_dark
+  nameWithType: Resource.Color.abc_primary_text_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_primary_text_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9678
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_primary_text_material_dark = 2131034122
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_primary_text_material_dark As Integer = 2131034122
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_light
+  id: abc_primary_text_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_primary_text_material_light
+  nameWithType: Resource.Color.abc_primary_text_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_primary_text_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_primary_text_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9681
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_primary_text_material_light = 2131034123
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_primary_text_material_light As Integer = 2131034123
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_search_url_text
+  id: abc_search_url_text
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_search_url_text
+  nameWithType: Resource.Color.abc_search_url_text
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_url_text
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9684
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_url_text = 2131034124
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_url_text As Integer = 2131034124
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_normal
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_normal
+  id: abc_search_url_text_normal
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_search_url_text_normal
+  nameWithType: Resource.Color.abc_search_url_text_normal
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_normal
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_url_text_normal
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9687
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_url_text_normal = 2131034125
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_url_text_normal As Integer = 2131034125
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_pressed
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_pressed
+  id: abc_search_url_text_pressed
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_search_url_text_pressed
+  nameWithType: Resource.Color.abc_search_url_text_pressed
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_pressed
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_url_text_pressed
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9690
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_url_text_pressed = 2131034126
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_url_text_pressed As Integer = 2131034126
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_selected
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_selected
+  id: abc_search_url_text_selected
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_search_url_text_selected
+  nameWithType: Resource.Color.abc_search_url_text_selected
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_search_url_text_selected
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_url_text_selected
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9693
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_url_text_selected = 2131034127
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_url_text_selected As Integer = 2131034127
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_dark
+  id: abc_secondary_text_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_secondary_text_material_dark
+  nameWithType: Resource.Color.abc_secondary_text_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_secondary_text_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9696
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_secondary_text_material_dark = 2131034128
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_secondary_text_material_dark As Integer = 2131034128
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_light
+  id: abc_secondary_text_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_secondary_text_material_light
+  nameWithType: Resource.Color.abc_secondary_text_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_secondary_text_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_secondary_text_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9699
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_secondary_text_material_light = 2131034129
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_secondary_text_material_light As Integer = 2131034129
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_btn_checkable
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_btn_checkable
+  id: abc_tint_btn_checkable
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_btn_checkable
+  nameWithType: Resource.Color.abc_tint_btn_checkable
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_btn_checkable
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_btn_checkable
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9702
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_btn_checkable = 2131034130
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_btn_checkable As Integer = 2131034130
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_default
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_default
+  id: abc_tint_default
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_default
+  nameWithType: Resource.Color.abc_tint_default
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_default
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_default
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9705
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_default = 2131034131
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_default As Integer = 2131034131
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_edittext
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_edittext
+  id: abc_tint_edittext
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_edittext
+  nameWithType: Resource.Color.abc_tint_edittext
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_edittext
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_edittext
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9708
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_edittext = 2131034132
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_edittext As Integer = 2131034132
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_seek_thumb
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_seek_thumb
+  id: abc_tint_seek_thumb
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_seek_thumb
+  nameWithType: Resource.Color.abc_tint_seek_thumb
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_seek_thumb
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_seek_thumb
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9711
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_seek_thumb = 2131034133
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_seek_thumb As Integer = 2131034133
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_spinner
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_spinner
+  id: abc_tint_spinner
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_spinner
+  nameWithType: Resource.Color.abc_tint_spinner
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_spinner
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_spinner
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9714
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_spinner = 2131034134
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_spinner As Integer = 2131034134
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.abc_tint_switch_track
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.abc_tint_switch_track
+  id: abc_tint_switch_track
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: abc_tint_switch_track
+  nameWithType: Resource.Color.abc_tint_switch_track
+  fullName: AnorocMobileApp.Droid.Resource.Color.abc_tint_switch_track
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tint_switch_track
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9717
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tint_switch_track = 2131034135
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tint_switch_track As Integer = 2131034135
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.accent_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.accent_material_dark
+  id: accent_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: accent_material_dark
+  nameWithType: Resource.Color.accent_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.accent_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: accent_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9720
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int accent_material_dark = 2131034136
+    return:
+      type: System.Int32
+    content.vb: Public Const accent_material_dark As Integer = 2131034136
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.accent_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.accent_material_light
+  id: accent_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: accent_material_light
+  nameWithType: Resource.Color.accent_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.accent_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: accent_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9723
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int accent_material_light = 2131034137
+    return:
+      type: System.Int32
+    content.vb: Public Const accent_material_light As Integer = 2131034137
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.background_floating_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.background_floating_material_dark
+  id: background_floating_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: background_floating_material_dark
+  nameWithType: Resource.Color.background_floating_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.background_floating_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: background_floating_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9726
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int background_floating_material_dark = 2131034138
+    return:
+      type: System.Int32
+    content.vb: Public Const background_floating_material_dark As Integer = 2131034138
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.background_floating_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.background_floating_material_light
+  id: background_floating_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: background_floating_material_light
+  nameWithType: Resource.Color.background_floating_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.background_floating_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: background_floating_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9729
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int background_floating_material_light = 2131034139
+    return:
+      type: System.Int32
+    content.vb: Public Const background_floating_material_light As Integer = 2131034139
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.background_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.background_material_dark
+  id: background_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: background_material_dark
+  nameWithType: Resource.Color.background_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.background_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: background_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9732
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int background_material_dark = 2131034140
+    return:
+      type: System.Int32
+    content.vb: Public Const background_material_dark As Integer = 2131034140
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.background_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.background_material_light
+  id: background_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: background_material_light
+  nameWithType: Resource.Color.background_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.background_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: background_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9735
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int background_material_light = 2131034141
+    return:
+      type: System.Int32
+    content.vb: Public Const background_material_light As Integer = 2131034141
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_dark
+  id: bright_foreground_disabled_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_disabled_material_dark
+  nameWithType: Resource.Color.bright_foreground_disabled_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_disabled_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9738
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_disabled_material_dark = 2131034142
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_disabled_material_dark As Integer = 2131034142
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_light
+  id: bright_foreground_disabled_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_disabled_material_light
+  nameWithType: Resource.Color.bright_foreground_disabled_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_disabled_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_disabled_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9741
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_disabled_material_light = 2131034143
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_disabled_material_light As Integer = 2131034143
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_dark
+  id: bright_foreground_inverse_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_inverse_material_dark
+  nameWithType: Resource.Color.bright_foreground_inverse_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_inverse_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9744
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_inverse_material_dark = 2131034144
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_inverse_material_dark As Integer = 2131034144
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_light
+  id: bright_foreground_inverse_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_inverse_material_light
+  nameWithType: Resource.Color.bright_foreground_inverse_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_inverse_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_inverse_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9747
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_inverse_material_light = 2131034145
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_inverse_material_light As Integer = 2131034145
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_dark
+  id: bright_foreground_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_material_dark
+  nameWithType: Resource.Color.bright_foreground_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9750
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_material_dark = 2131034146
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_material_dark As Integer = 2131034146
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_light
+  id: bright_foreground_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: bright_foreground_material_light
+  nameWithType: Resource.Color.bright_foreground_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.bright_foreground_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bright_foreground_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9753
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bright_foreground_material_light = 2131034147
+    return:
+      type: System.Int32
+    content.vb: Public Const bright_foreground_material_light As Integer = 2131034147
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.browser_actions_bg_grey
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.browser_actions_bg_grey
+  id: browser_actions_bg_grey
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_bg_grey
+  nameWithType: Resource.Color.browser_actions_bg_grey
+  fullName: AnorocMobileApp.Droid.Resource.Color.browser_actions_bg_grey
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_bg_grey
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9756
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_bg_grey = 2131034148
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_bg_grey As Integer = 2131034148
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.browser_actions_divider_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.browser_actions_divider_color
+  id: browser_actions_divider_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_divider_color
+  nameWithType: Resource.Color.browser_actions_divider_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.browser_actions_divider_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_divider_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9759
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_divider_color = 2131034149
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_divider_color As Integer = 2131034149
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.browser_actions_text_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.browser_actions_text_color
+  id: browser_actions_text_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_text_color
+  nameWithType: Resource.Color.browser_actions_text_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.browser_actions_text_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_text_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9762
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_text_color = 2131034150
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_text_color As Integer = 2131034150
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.browser_actions_title_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.browser_actions_title_color
+  id: browser_actions_title_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_title_color
+  nameWithType: Resource.Color.browser_actions_title_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.browser_actions_title_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_title_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9765
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_title_color = 2131034151
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_title_color As Integer = 2131034151
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.button_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.button_material_dark
+  id: button_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: button_material_dark
+  nameWithType: Resource.Color.button_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.button_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: button_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9768
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int button_material_dark = 2131034152
+    return:
+      type: System.Int32
+    content.vb: Public Const button_material_dark As Integer = 2131034152
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.button_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.button_material_light
+  id: button_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: button_material_light
+  nameWithType: Resource.Color.button_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.button_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: button_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9771
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int button_material_light = 2131034153
+    return:
+      type: System.Int32
+    content.vb: Public Const button_material_light As Integer = 2131034153
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.cardview_dark_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.cardview_dark_background
+  id: cardview_dark_background
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: cardview_dark_background
+  nameWithType: Resource.Color.cardview_dark_background
+  fullName: AnorocMobileApp.Droid.Resource.Color.cardview_dark_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: cardview_dark_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9774
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int cardview_dark_background = 2131034154
+    return:
+      type: System.Int32
+    content.vb: Public Const cardview_dark_background As Integer = 2131034154
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.cardview_light_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.cardview_light_background
+  id: cardview_light_background
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: cardview_light_background
+  nameWithType: Resource.Color.cardview_light_background
+  fullName: AnorocMobileApp.Droid.Resource.Color.cardview_light_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: cardview_light_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9777
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int cardview_light_background = 2131034155
+    return:
+      type: System.Int32
+    content.vb: Public Const cardview_light_background As Integer = 2131034155
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.cardview_shadow_end_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.cardview_shadow_end_color
+  id: cardview_shadow_end_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: cardview_shadow_end_color
+  nameWithType: Resource.Color.cardview_shadow_end_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.cardview_shadow_end_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: cardview_shadow_end_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9780
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int cardview_shadow_end_color = 2131034156
+    return:
+      type: System.Int32
+    content.vb: Public Const cardview_shadow_end_color As Integer = 2131034156
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.cardview_shadow_start_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.cardview_shadow_start_color
+  id: cardview_shadow_start_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: cardview_shadow_start_color
+  nameWithType: Resource.Color.cardview_shadow_start_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.cardview_shadow_start_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: cardview_shadow_start_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9783
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int cardview_shadow_start_color = 2131034157
+    return:
+      type: System.Int32
+    content.vb: Public Const cardview_shadow_start_color As Integer = 2131034157
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.colorAccent
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.colorAccent
+  id: colorAccent
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: colorAccent
+  nameWithType: Resource.Color.colorAccent
+  fullName: AnorocMobileApp.Droid.Resource.Color.colorAccent
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: colorAccent
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9786
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int colorAccent = 2131034158
+    return:
+      type: System.Int32
+    content.vb: Public Const colorAccent As Integer = 2131034158
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.colorPrimary
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.colorPrimary
+  id: colorPrimary
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: colorPrimary
+  nameWithType: Resource.Color.colorPrimary
+  fullName: AnorocMobileApp.Droid.Resource.Color.colorPrimary
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: colorPrimary
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9789
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int colorPrimary = 2131034159
+    return:
+      type: System.Int32
+    content.vb: Public Const colorPrimary As Integer = 2131034159
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.colorPrimaryDark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.colorPrimaryDark
+  id: colorPrimaryDark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: colorPrimaryDark
+  nameWithType: Resource.Color.colorPrimaryDark
+  fullName: AnorocMobileApp.Droid.Resource.Color.colorPrimaryDark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: colorPrimaryDark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9792
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int colorPrimaryDark = 2131034160
+    return:
+      type: System.Int32
+    content.vb: Public Const colorPrimaryDark As Integer = 2131034160
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_bottom_navigation_shadow_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_bottom_navigation_shadow_color
+  id: design_bottom_navigation_shadow_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_navigation_shadow_color
+  nameWithType: Resource.Color.design_bottom_navigation_shadow_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_bottom_navigation_shadow_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_navigation_shadow_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9795
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_navigation_shadow_color = 2131034161
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_navigation_shadow_color As Integer = 2131034161
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_default_color_primary
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_default_color_primary
+  id: design_default_color_primary
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_default_color_primary
+  nameWithType: Resource.Color.design_default_color_primary
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_default_color_primary
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_default_color_primary
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9798
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_default_color_primary = 2131034162
+    return:
+      type: System.Int32
+    content.vb: Public Const design_default_color_primary As Integer = 2131034162
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_default_color_primary_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_default_color_primary_dark
+  id: design_default_color_primary_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_default_color_primary_dark
+  nameWithType: Resource.Color.design_default_color_primary_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_default_color_primary_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_default_color_primary_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9801
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_default_color_primary_dark = 2131034163
+    return:
+      type: System.Int32
+    content.vb: Public Const design_default_color_primary_dark As Integer = 2131034163
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_error
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_error
+  id: design_error
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_error
+  nameWithType: Resource.Color.design_error
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_error
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_error
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9804
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_error = 2131034164
+    return:
+      type: System.Int32
+    content.vb: Public Const design_error As Integer = 2131034164
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_end_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_end_color
+  id: design_fab_shadow_end_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_shadow_end_color
+  nameWithType: Resource.Color.design_fab_shadow_end_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_end_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_shadow_end_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9807
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_shadow_end_color = 2131034165
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_shadow_end_color As Integer = 2131034165
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_mid_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_mid_color
+  id: design_fab_shadow_mid_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_shadow_mid_color
+  nameWithType: Resource.Color.design_fab_shadow_mid_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_mid_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_shadow_mid_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9810
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_shadow_mid_color = 2131034166
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_shadow_mid_color As Integer = 2131034166
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_start_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_start_color
+  id: design_fab_shadow_start_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_shadow_start_color
+  nameWithType: Resource.Color.design_fab_shadow_start_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_shadow_start_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_shadow_start_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9813
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_shadow_start_color = 2131034167
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_shadow_start_color As Integer = 2131034167
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_inner_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_inner_color
+  id: design_fab_stroke_end_inner_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_stroke_end_inner_color
+  nameWithType: Resource.Color.design_fab_stroke_end_inner_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_inner_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_stroke_end_inner_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9816
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_stroke_end_inner_color = 2131034168
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_stroke_end_inner_color As Integer = 2131034168
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_outer_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_outer_color
+  id: design_fab_stroke_end_outer_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_stroke_end_outer_color
+  nameWithType: Resource.Color.design_fab_stroke_end_outer_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_end_outer_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_stroke_end_outer_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9819
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_stroke_end_outer_color = 2131034169
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_stroke_end_outer_color As Integer = 2131034169
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_inner_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_inner_color
+  id: design_fab_stroke_top_inner_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_stroke_top_inner_color
+  nameWithType: Resource.Color.design_fab_stroke_top_inner_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_inner_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_stroke_top_inner_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9822
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_stroke_top_inner_color = 2131034170
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_stroke_top_inner_color As Integer = 2131034170
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_outer_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_outer_color
+  id: design_fab_stroke_top_outer_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_fab_stroke_top_outer_color
+  nameWithType: Resource.Color.design_fab_stroke_top_outer_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_fab_stroke_top_outer_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_fab_stroke_top_outer_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9825
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_fab_stroke_top_outer_color = 2131034171
+    return:
+      type: System.Int32
+    content.vb: Public Const design_fab_stroke_top_outer_color As Integer = 2131034171
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_snackbar_background_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_snackbar_background_color
+  id: design_snackbar_background_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_snackbar_background_color
+  nameWithType: Resource.Color.design_snackbar_background_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_snackbar_background_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_snackbar_background_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9828
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_snackbar_background_color = 2131034172
+    return:
+      type: System.Int32
+    content.vb: Public Const design_snackbar_background_color As Integer = 2131034172
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.design_tint_password_toggle
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.design_tint_password_toggle
+  id: design_tint_password_toggle
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: design_tint_password_toggle
+  nameWithType: Resource.Color.design_tint_password_toggle
+  fullName: AnorocMobileApp.Droid.Resource.Color.design_tint_password_toggle
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_tint_password_toggle
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9831
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_tint_password_toggle = 2131034173
+    return:
+      type: System.Int32
+    content.vb: Public Const design_tint_password_toggle As Integer = 2131034173
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_dark
+  id: dim_foreground_disabled_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: dim_foreground_disabled_material_dark
+  nameWithType: Resource.Color.dim_foreground_disabled_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: dim_foreground_disabled_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9834
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int dim_foreground_disabled_material_dark = 2131034174
+    return:
+      type: System.Int32
+    content.vb: Public Const dim_foreground_disabled_material_dark As Integer = 2131034174
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_light
+  id: dim_foreground_disabled_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: dim_foreground_disabled_material_light
+  nameWithType: Resource.Color.dim_foreground_disabled_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.dim_foreground_disabled_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: dim_foreground_disabled_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9837
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int dim_foreground_disabled_material_light = 2131034175
+    return:
+      type: System.Int32
+    content.vb: Public Const dim_foreground_disabled_material_light As Integer = 2131034175
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_dark
+  id: dim_foreground_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: dim_foreground_material_dark
+  nameWithType: Resource.Color.dim_foreground_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: dim_foreground_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9840
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int dim_foreground_material_dark = 2131034176
+    return:
+      type: System.Int32
+    content.vb: Public Const dim_foreground_material_dark As Integer = 2131034176
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_light
+  id: dim_foreground_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: dim_foreground_material_light
+  nameWithType: Resource.Color.dim_foreground_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.dim_foreground_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: dim_foreground_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9843
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int dim_foreground_material_light = 2131034177
+    return:
+      type: System.Int32
+    content.vb: Public Const dim_foreground_material_light As Integer = 2131034177
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.error_color_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.error_color_material_dark
+  id: error_color_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: error_color_material_dark
+  nameWithType: Resource.Color.error_color_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.error_color_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: error_color_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9846
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int error_color_material_dark = 2131034178
+    return:
+      type: System.Int32
+    content.vb: Public Const error_color_material_dark As Integer = 2131034178
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.error_color_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.error_color_material_light
+  id: error_color_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: error_color_material_light
+  nameWithType: Resource.Color.error_color_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.error_color_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: error_color_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9849
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int error_color_material_light = 2131034179
+    return:
+      type: System.Int32
+    content.vb: Public Const error_color_material_light As Integer = 2131034179
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.foreground_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.foreground_material_dark
+  id: foreground_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: foreground_material_dark
+  nameWithType: Resource.Color.foreground_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.foreground_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: foreground_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9852
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int foreground_material_dark = 2131034180
+    return:
+      type: System.Int32
+    content.vb: Public Const foreground_material_dark As Integer = 2131034180
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.foreground_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.foreground_material_light
+  id: foreground_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: foreground_material_light
+  nameWithType: Resource.Color.foreground_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.foreground_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: foreground_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9855
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int foreground_material_light = 2131034181
+    return:
+      type: System.Int32
+    content.vb: Public Const foreground_material_light As Integer = 2131034181
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_dark
+  id: highlighted_text_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: highlighted_text_material_dark
+  nameWithType: Resource.Color.highlighted_text_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: highlighted_text_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9858
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int highlighted_text_material_dark = 2131034182
+    return:
+      type: System.Int32
+    content.vb: Public Const highlighted_text_material_dark As Integer = 2131034182
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_light
+  id: highlighted_text_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: highlighted_text_material_light
+  nameWithType: Resource.Color.highlighted_text_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.highlighted_text_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: highlighted_text_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9861
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int highlighted_text_material_light = 2131034183
+    return:
+      type: System.Int32
+    content.vb: Public Const highlighted_text_material_light As Integer = 2131034183
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.launcher_background
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.launcher_background
+  id: launcher_background
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: launcher_background
+  nameWithType: Resource.Color.launcher_background
+  fullName: AnorocMobileApp.Droid.Resource.Color.launcher_background
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: launcher_background
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9864
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int launcher_background = 2131034184
+    return:
+      type: System.Int32
+    content.vb: Public Const launcher_background As Integer = 2131034184
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_800
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_blue_grey_800
+  id: material_blue_grey_800
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_blue_grey_800
+  nameWithType: Resource.Color.material_blue_grey_800
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_800
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_blue_grey_800
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9867
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_blue_grey_800 = 2131034185
+    return:
+      type: System.Int32
+    content.vb: Public Const material_blue_grey_800 As Integer = 2131034185
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_900
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_blue_grey_900
+  id: material_blue_grey_900
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_blue_grey_900
+  nameWithType: Resource.Color.material_blue_grey_900
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_900
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_blue_grey_900
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9870
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_blue_grey_900 = 2131034186
+    return:
+      type: System.Int32
+    content.vb: Public Const material_blue_grey_900 As Integer = 2131034186
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_950
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_blue_grey_950
+  id: material_blue_grey_950
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_blue_grey_950
+  nameWithType: Resource.Color.material_blue_grey_950
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_blue_grey_950
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_blue_grey_950
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9873
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_blue_grey_950 = 2131034187
+    return:
+      type: System.Int32
+    content.vb: Public Const material_blue_grey_950 As Integer = 2131034187
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_deep_teal_200
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_deep_teal_200
+  id: material_deep_teal_200
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_deep_teal_200
+  nameWithType: Resource.Color.material_deep_teal_200
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_deep_teal_200
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_deep_teal_200
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9876
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_deep_teal_200 = 2131034188
+    return:
+      type: System.Int32
+    content.vb: Public Const material_deep_teal_200 As Integer = 2131034188
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_deep_teal_500
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_deep_teal_500
+  id: material_deep_teal_500
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_deep_teal_500
+  nameWithType: Resource.Color.material_deep_teal_500
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_deep_teal_500
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_deep_teal_500
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9879
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_deep_teal_500 = 2131034189
+    return:
+      type: System.Int32
+    content.vb: Public Const material_deep_teal_500 As Integer = 2131034189
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_100
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_100
+  id: material_grey_100
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_100
+  nameWithType: Resource.Color.material_grey_100
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_100
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_100
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9882
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_100 = 2131034190
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_100 As Integer = 2131034190
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_300
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_300
+  id: material_grey_300
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_300
+  nameWithType: Resource.Color.material_grey_300
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_300
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_300
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9885
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_300 = 2131034191
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_300 As Integer = 2131034191
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_50
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_50
+  id: material_grey_50
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_50
+  nameWithType: Resource.Color.material_grey_50
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_50
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_50
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9888
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_50 = 2131034192
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_50 As Integer = 2131034192
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_600
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_600
+  id: material_grey_600
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_600
+  nameWithType: Resource.Color.material_grey_600
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_600
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_600
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9891
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_600 = 2131034193
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_600 As Integer = 2131034193
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_800
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_800
+  id: material_grey_800
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_800
+  nameWithType: Resource.Color.material_grey_800
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_800
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_800
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9894
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_800 = 2131034194
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_800 As Integer = 2131034194
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_850
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_850
+  id: material_grey_850
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_850
+  nameWithType: Resource.Color.material_grey_850
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_850
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_850
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9897
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_850 = 2131034195
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_850 As Integer = 2131034195
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.material_grey_900
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.material_grey_900
+  id: material_grey_900
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: material_grey_900
+  nameWithType: Resource.Color.material_grey_900
+  fullName: AnorocMobileApp.Droid.Resource.Color.material_grey_900
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: material_grey_900
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9900
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int material_grey_900 = 2131034196
+    return:
+      type: System.Int32
+    content.vb: Public Const material_grey_900 As Integer = 2131034196
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint
+  id: mtrl_bottom_nav_colored_item_tint
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_bottom_nav_colored_item_tint
+  nameWithType: Resource.Color.mtrl_bottom_nav_colored_item_tint
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_bottom_nav_colored_item_tint
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9903
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_bottom_nav_colored_item_tint = 2131034197
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_bottom_nav_colored_item_tint As Integer = 2131034197
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint
+  id: mtrl_bottom_nav_item_tint
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_bottom_nav_item_tint
+  nameWithType: Resource.Color.mtrl_bottom_nav_item_tint
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_bottom_nav_item_tint
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_bottom_nav_item_tint
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9906
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_bottom_nav_item_tint = 2131034198
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_bottom_nav_item_tint As Integer = 2131034198
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_disabled
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_disabled
+  id: mtrl_btn_bg_color_disabled
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_bg_color_disabled
+  nameWithType: Resource.Color.mtrl_btn_bg_color_disabled
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_disabled
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_bg_color_disabled
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9909
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_bg_color_disabled = 2131034199
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_bg_color_disabled As Integer = 2131034199
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_selector
+  id: mtrl_btn_bg_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_bg_color_selector
+  nameWithType: Resource.Color.mtrl_btn_bg_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_bg_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_bg_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9912
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_bg_color_selector = 2131034200
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_bg_color_selector As Integer = 2131034200
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_ripple_color
+  id: mtrl_btn_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_ripple_color
+  nameWithType: Resource.Color.mtrl_btn_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9915
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_ripple_color = 2131034201
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_ripple_color As Integer = 2131034201
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector
+  id: mtrl_btn_stroke_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_stroke_color_selector
+  nameWithType: Resource.Color.mtrl_btn_stroke_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_stroke_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_stroke_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9918
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_stroke_color_selector = 2131034202
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_stroke_color_selector As Integer = 2131034202
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color
+  id: mtrl_btn_text_btn_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_text_btn_ripple_color
+  nameWithType: Resource.Color.mtrl_btn_text_btn_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_text_btn_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9921
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_text_btn_ripple_color = 2131034203
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_text_btn_ripple_color As Integer = 2131034203
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_disabled
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_disabled
+  id: mtrl_btn_text_color_disabled
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_text_color_disabled
+  nameWithType: Resource.Color.mtrl_btn_text_color_disabled
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_disabled
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_text_color_disabled
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9924
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_text_color_disabled = 2131034204
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_text_color_disabled As Integer = 2131034204
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_selector
+  id: mtrl_btn_text_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_text_color_selector
+  nameWithType: Resource.Color.mtrl_btn_text_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_text_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_text_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9927
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_text_color_selector = 2131034205
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_text_color_selector As Integer = 2131034205
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color
+  id: mtrl_btn_transparent_bg_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_transparent_bg_color
+  nameWithType: Resource.Color.mtrl_btn_transparent_bg_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_btn_transparent_bg_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_transparent_bg_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9930
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_transparent_bg_color = 2131034206
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_transparent_bg_color As Integer = 2131034206
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_background_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_chip_background_color
+  id: mtrl_chip_background_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_chip_background_color
+  nameWithType: Resource.Color.mtrl_chip_background_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_background_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_chip_background_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9933
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_chip_background_color = 2131034207
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_chip_background_color As Integer = 2131034207
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_close_icon_tint
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_chip_close_icon_tint
+  id: mtrl_chip_close_icon_tint
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_chip_close_icon_tint
+  nameWithType: Resource.Color.mtrl_chip_close_icon_tint
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_close_icon_tint
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_chip_close_icon_tint
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9936
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_chip_close_icon_tint = 2131034208
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_chip_close_icon_tint As Integer = 2131034208
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_chip_ripple_color
+  id: mtrl_chip_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_chip_ripple_color
+  nameWithType: Resource.Color.mtrl_chip_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_chip_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9939
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_chip_ripple_color = 2131034209
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_chip_ripple_color As Integer = 2131034209
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_text_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_chip_text_color
+  id: mtrl_chip_text_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_chip_text_color
+  nameWithType: Resource.Color.mtrl_chip_text_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_chip_text_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_chip_text_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9942
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_chip_text_color = 2131034210
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_chip_text_color As Integer = 2131034210
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_fab_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_fab_ripple_color
+  id: mtrl_fab_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_fab_ripple_color
+  nameWithType: Resource.Color.mtrl_fab_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_fab_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_fab_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9945
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_fab_ripple_color = 2131034211
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_fab_ripple_color As Integer = 2131034211
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_scrim_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_scrim_color
+  id: mtrl_scrim_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_scrim_color
+  nameWithType: Resource.Color.mtrl_scrim_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_scrim_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_scrim_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9948
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_scrim_color = 2131034212
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_scrim_color As Integer = 2131034212
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color
+  id: mtrl_tabs_colored_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_colored_ripple_color
+  nameWithType: Resource.Color.mtrl_tabs_colored_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_colored_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_colored_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9951
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_colored_ripple_color = 2131034213
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_colored_ripple_color As Integer = 2131034213
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector
+  id: mtrl_tabs_icon_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_icon_color_selector
+  nameWithType: Resource.Color.mtrl_tabs_icon_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_icon_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9954
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_icon_color_selector = 2131034214
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_icon_color_selector As Integer = 2131034214
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored
+  id: mtrl_tabs_icon_color_selector_colored
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_icon_color_selector_colored
+  nameWithType: Resource.Color.mtrl_tabs_icon_color_selector_colored
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_icon_color_selector_colored
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9957
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_icon_color_selector_colored = 2131034215
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_icon_color_selector_colored As Integer = 2131034215
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector
+  id: mtrl_tabs_legacy_text_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_legacy_text_color_selector
+  nameWithType: Resource.Color.mtrl_tabs_legacy_text_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_legacy_text_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9960
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_legacy_text_color_selector = 2131034216
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_legacy_text_color_selector As Integer = 2131034216
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_ripple_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_ripple_color
+  id: mtrl_tabs_ripple_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tabs_ripple_color
+  nameWithType: Resource.Color.mtrl_tabs_ripple_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_tabs_ripple_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tabs_ripple_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9963
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tabs_ripple_color = 2131034217
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tabs_ripple_color As Integer = 2131034217
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color
+  id: mtrl_textinput_default_box_stroke_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_textinput_default_box_stroke_color
+  nameWithType: Resource.Color.mtrl_textinput_default_box_stroke_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_textinput_default_box_stroke_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9966
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_textinput_default_box_stroke_color = 2131034219
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_textinput_default_box_stroke_color As Integer = 2131034219
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_disabled_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_disabled_color
+  id: mtrl_textinput_disabled_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_textinput_disabled_color
+  nameWithType: Resource.Color.mtrl_textinput_disabled_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_disabled_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_textinput_disabled_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9969
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_textinput_disabled_color = 2131034220
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_textinput_disabled_color As Integer = 2131034220
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color
+  id: mtrl_textinput_filled_box_default_background_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_textinput_filled_box_default_background_color
+  nameWithType: Resource.Color.mtrl_textinput_filled_box_default_background_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_textinput_filled_box_default_background_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9972
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_textinput_filled_box_default_background_color = 2131034221
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_textinput_filled_box_default_background_color As Integer = 2131034221
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color
+  id: mtrl_textinput_hovered_box_stroke_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_textinput_hovered_box_stroke_color
+  nameWithType: Resource.Color.mtrl_textinput_hovered_box_stroke_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_textinput_hovered_box_stroke_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9975
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_textinput_hovered_box_stroke_color = 2131034222
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_textinput_hovered_box_stroke_color As Integer = 2131034222
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector
+  id: mtrl_text_btn_text_color_selector
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: mtrl_text_btn_text_color_selector
+  nameWithType: Resource.Color.mtrl_text_btn_text_color_selector
+  fullName: AnorocMobileApp.Droid.Resource.Color.mtrl_text_btn_text_color_selector
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_text_btn_text_color_selector
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9978
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_text_btn_text_color_selector = 2131034218
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_text_btn_text_color_selector As Integer = 2131034218
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.notification_action_color_filter
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.notification_action_color_filter
+  id: notification_action_color_filter
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: notification_action_color_filter
+  nameWithType: Resource.Color.notification_action_color_filter
+  fullName: AnorocMobileApp.Droid.Resource.Color.notification_action_color_filter
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_action_color_filter
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9981
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_action_color_filter = 2131034223
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_action_color_filter As Integer = 2131034223
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.notification_icon_bg_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.notification_icon_bg_color
+  id: notification_icon_bg_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: notification_icon_bg_color
+  nameWithType: Resource.Color.notification_icon_bg_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.notification_icon_bg_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_icon_bg_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9984
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_icon_bg_color = 2131034224
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_icon_bg_color As Integer = 2131034224
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.notification_material_background_media_default_color
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.notification_material_background_media_default_color
+  id: notification_material_background_media_default_color
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: notification_material_background_media_default_color
+  nameWithType: Resource.Color.notification_material_background_media_default_color
+  fullName: AnorocMobileApp.Droid.Resource.Color.notification_material_background_media_default_color
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_material_background_media_default_color
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9987
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_material_background_media_default_color = 2131034225
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_material_background_media_default_color As Integer = 2131034225
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_dark_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_dark_material_dark
+  id: primary_dark_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_dark_material_dark
+  nameWithType: Resource.Color.primary_dark_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_dark_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_dark_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9990
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_dark_material_dark = 2131034226
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_dark_material_dark As Integer = 2131034226
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_dark_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_dark_material_light
+  id: primary_dark_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_dark_material_light
+  nameWithType: Resource.Color.primary_dark_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_dark_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_dark_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9993
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_dark_material_light = 2131034227
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_dark_material_light As Integer = 2131034227
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_material_dark
+  id: primary_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_material_dark
+  nameWithType: Resource.Color.primary_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9996
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_material_dark = 2131034228
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_material_dark As Integer = 2131034228
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_material_light
+  id: primary_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_material_light
+  nameWithType: Resource.Color.primary_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 9999
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_material_light = 2131034229
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_material_light As Integer = 2131034229
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_dark
+  id: primary_text_default_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_text_default_material_dark
+  nameWithType: Resource.Color.primary_text_default_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_text_default_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10002
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_text_default_material_dark = 2131034230
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_text_default_material_dark As Integer = 2131034230
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_light
+  id: primary_text_default_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_text_default_material_light
+  nameWithType: Resource.Color.primary_text_default_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_text_default_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_text_default_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10005
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_text_default_material_light = 2131034231
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_text_default_material_light As Integer = 2131034231
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_dark
+  id: primary_text_disabled_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_text_disabled_material_dark
+  nameWithType: Resource.Color.primary_text_disabled_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_text_disabled_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10008
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_text_disabled_material_dark = 2131034232
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_text_disabled_material_dark As Integer = 2131034232
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_light
+  id: primary_text_disabled_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: primary_text_disabled_material_light
+  nameWithType: Resource.Color.primary_text_disabled_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.primary_text_disabled_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: primary_text_disabled_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10011
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int primary_text_disabled_material_light = 2131034233
+    return:
+      type: System.Int32
+    content.vb: Public Const primary_text_disabled_material_light As Integer = 2131034233
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.ripple_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.ripple_material_dark
+  id: ripple_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: ripple_material_dark
+  nameWithType: Resource.Color.ripple_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.ripple_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ripple_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10014
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ripple_material_dark = 2131034234
+    return:
+      type: System.Int32
+    content.vb: Public Const ripple_material_dark As Integer = 2131034234
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.ripple_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.ripple_material_light
+  id: ripple_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: ripple_material_light
+  nameWithType: Resource.Color.ripple_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.ripple_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ripple_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10017
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ripple_material_light = 2131034235
+    return:
+      type: System.Int32
+    content.vb: Public Const ripple_material_light As Integer = 2131034235
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_dark
+  id: secondary_text_default_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: secondary_text_default_material_dark
+  nameWithType: Resource.Color.secondary_text_default_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: secondary_text_default_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10020
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int secondary_text_default_material_dark = 2131034236
+    return:
+      type: System.Int32
+    content.vb: Public Const secondary_text_default_material_dark As Integer = 2131034236
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_light
+  id: secondary_text_default_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: secondary_text_default_material_light
+  nameWithType: Resource.Color.secondary_text_default_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.secondary_text_default_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: secondary_text_default_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10023
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int secondary_text_default_material_light = 2131034237
+    return:
+      type: System.Int32
+    content.vb: Public Const secondary_text_default_material_light As Integer = 2131034237
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_dark
+  id: secondary_text_disabled_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: secondary_text_disabled_material_dark
+  nameWithType: Resource.Color.secondary_text_disabled_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: secondary_text_disabled_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10026
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int secondary_text_disabled_material_dark = 2131034238
+    return:
+      type: System.Int32
+    content.vb: Public Const secondary_text_disabled_material_dark As Integer = 2131034238
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_light
+  id: secondary_text_disabled_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: secondary_text_disabled_material_light
+  nameWithType: Resource.Color.secondary_text_disabled_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.secondary_text_disabled_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: secondary_text_disabled_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10029
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int secondary_text_disabled_material_light = 2131034239
+    return:
+      type: System.Int32
+    content.vb: Public Const secondary_text_disabled_material_light As Integer = 2131034239
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_dark
+  id: switch_thumb_disabled_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_disabled_material_dark
+  nameWithType: Resource.Color.switch_thumb_disabled_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_disabled_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10032
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_disabled_material_dark = 2131034240
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_disabled_material_dark As Integer = 2131034240
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_light
+  id: switch_thumb_disabled_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_disabled_material_light
+  nameWithType: Resource.Color.switch_thumb_disabled_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_disabled_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_disabled_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10035
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_disabled_material_light = 2131034241
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_disabled_material_light As Integer = 2131034241
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_dark
+  id: switch_thumb_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_material_dark
+  nameWithType: Resource.Color.switch_thumb_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10038
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_material_dark = 2131034242
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_material_dark As Integer = 2131034242
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_light
+  id: switch_thumb_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_material_light
+  nameWithType: Resource.Color.switch_thumb_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10041
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_material_light = 2131034243
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_material_light As Integer = 2131034243
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_dark
+  id: switch_thumb_normal_material_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_normal_material_dark
+  nameWithType: Resource.Color.switch_thumb_normal_material_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_normal_material_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10044
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_normal_material_dark = 2131034244
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_normal_material_dark As Integer = 2131034244
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_light
+  id: switch_thumb_normal_material_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: switch_thumb_normal_material_light
+  nameWithType: Resource.Color.switch_thumb_normal_material_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.switch_thumb_normal_material_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: switch_thumb_normal_material_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10047
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int switch_thumb_normal_material_light = 2131034245
+    return:
+      type: System.Int32
+    content.vb: Public Const switch_thumb_normal_material_light As Integer = 2131034245
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.tooltip_background_dark
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.tooltip_background_dark
+  id: tooltip_background_dark
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: tooltip_background_dark
+  nameWithType: Resource.Color.tooltip_background_dark
+  fullName: AnorocMobileApp.Droid.Resource.Color.tooltip_background_dark
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: tooltip_background_dark
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10050
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int tooltip_background_dark = 2131034246
+    return:
+      type: System.Int32
+    content.vb: Public Const tooltip_background_dark As Integer = 2131034246
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Color.tooltip_background_light
+  commentId: F:AnorocMobileApp.Droid.Resource.Color.tooltip_background_light
+  id: tooltip_background_light
+  parent: AnorocMobileApp.Droid.Resource.Color
+  langs:
+  - csharp
+  - vb
+  name: tooltip_background_light
+  nameWithType: Resource.Color.tooltip_background_light
+  fullName: AnorocMobileApp.Droid.Resource.Color.tooltip_background_light
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: tooltip_background_light
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 10053
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int tooltip_background_light = 2131034247
+    return:
+      type: System.Int32
+    content.vb: Public Const tooltip_background_light As Integer = 2131034247
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

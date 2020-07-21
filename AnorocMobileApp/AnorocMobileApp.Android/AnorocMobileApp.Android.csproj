@@ -121,8 +121,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyFirebaseIIDService.cs" />
     <Compile Include="CustomUrlSchemeInterceptorActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="NotificationHelper.cs" />
     <Compile Include="Renderers\BorderlessEntryRenderer.cs" />
     <Compile Include="Resources\FacebookLoginButtonRenderer.cs" />

@@ -92,55 +92,6 @@ namespace AnorocMobileApp.Droid
             }
         }
 
-        /// <summary>
-        /// Class with Firebase Instance Services. For Regristration to Firebase
-        /// </summary>
-        [Service]
-        [IntentFilter(new[] { "com.google.firebase.INSTANCE_ID_EVENT" })]
-        public class MyFirebaseIIDService : FirebaseInstanceIdService
-        {
-            public override async void OnTokenRefresh()
-            {
-                var refreshedToken = FirebaseInstanceId.Instance.Token;
-                Console.WriteLine($"Token received: {refreshedToken}");
-                SendRegistrationToServer(refreshedToken);
-            }
-
-            void SendRegistrationToServer(string token)
-            {
-                // TODO: Still need to be implemented
-                Log.Debug(PackageName, token);
-            }
-        }
-
-        /// <summary>
-        /// Class with Firebase Messaging Services. To get messages while application is active
-        /// </summary>
-        [Service]
-        [IntentFilter(new[] { "com.google.firebase.MESSAGING_EVENT" })]
-        public class MyFirebaseMessagingService : FirebaseMessagingService
-        {
-
-            public override void OnMessageReceived(RemoteMessage message)
-            {
-                base.OnMessageReceived(message);
-
-                Console.WriteLine("Received: " + message);
-                try
-                {
-                    var msg = message.GetNotification().Body;
-                    // Passing Message onto xamarin forms
-                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, msg);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Errorr extracting message: " + ex);
-                }
-            }
-
-        }
-
-
         void WireUpBackgroundLocationTask()
         {
             MessagingCenter.Subscribe<StartBackgroundLocationTracking>(this, "StartBackgroundLocationTracking", message =>
