@@ -20,7 +20,11 @@ namespace AnorocMobileApp.Services
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
         }
 
-
+        /// <summary>
+        /// Function to send Fire base token
+        /// </summary>
+        /// <param name="firebasetoken">Fire base token</param>
+        /// 
         public async void SendFireBaseToken(string firebasetoken)
         {
             using (Anoroc_Client = new HttpClient(clientHandler))
@@ -41,7 +45,7 @@ namespace AnorocMobileApp.Services
                 try
                 {
                     responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
-                   
+
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
@@ -55,7 +59,11 @@ namespace AnorocMobileApp.Services
         }
 
 
-
+        /// <summary>
+        /// Function to send Carrier status to server
+        /// </summary>
+        /// <param name="value">Carrier status</param>
+        /// 
         public async void sendCarrierStatusAsync(string value)
         {
             HttpClientHandler clientHandler = new HttpClientHandler();
@@ -78,22 +86,18 @@ namespace AnorocMobileApp.Services
             HttpResponseMessage response;
 
             //using (HttpClient client = new HttpClient(clientHandler))
-            //{
-                try
-                {
-                    response = await client.PostAsync(url, c);
-                    string result = response.Content.ReadAsStringAsync().Result;
-                    Debug.WriteLine(result);
-                }
-                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    //throw new Exception();
-                    throw new CantConnectToLocationServerException();
+            try
+            {
+                response = await client.PostAsync(url, c);
+                //string result = response.Content.ReadAsStringAsync().Result;
+                //Debug.WriteLine(result);
+            }
+            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+            {
+                //throw new Exception();
+                throw new CantConnectToLocationServerException();
+            }
 
-                }
-
-
-            //}
         }
     }
 }

@@ -20,6 +20,11 @@ namespace AnorocMobileApp.Services
         {
             success = false;
         }
+        /// <summary>
+        /// Function to post location to server
+        /// </summary>
+        /// <param name="location">Location Object</param>        
+        /// 
         public void Send_Locaiton_ServerAsync(Location location)
         {
             
@@ -29,6 +34,11 @@ namespace AnorocMobileApp.Services
                 throw new CantConnectToLocationServerException();
             }
         }
+        /// <summary>
+        /// Function to send user locaton to server
+        /// </summary>
+        /// <param name="location">Location Object</param>
+        /// 
         protected async void PostLocationAsync(Location location)
         {
             string url = "https://10.0.2.2:5001/location/GEOLocation";
