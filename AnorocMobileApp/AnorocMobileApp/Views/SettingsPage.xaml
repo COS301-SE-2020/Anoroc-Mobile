@@ -1,19 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AnorocMobileApp.Views.SettingsPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:behaviors="clr-namespace:Behaviors;assembly=Behaviors" x:Class="AnorocMobileApp.Views.SettingsPage">
     <ContentPage.Content>
         <Grid VerticalOptions="Center" Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
             </Grid.RowDefinitions>
-            <Label VerticalTextAlignment="Center" Grid.Row="0" Grid.Column="0" Text="Location Tracking" StyleClass="lbl-fieldform" FontSize="Body">
-                <Label.FontFamily>
-                    <OnPlatform x:TypeArguments="x:String">
-                        <On Platform="Android"/>
-                    </OnPlatform>
-                </Label.FontFamily>
-            </Label>
+
+            <Label VerticalTextAlignment="Center" Text="Location Tracking" Grid.Row="0" Grid.Column="0"/>
             <Switch x:Name="Location_Tracking_Switch" Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="OnToggledAsync"/>
-            <Label Text="Status" Grid.Row="1" Grid.Column="0"/>
+            
+            <Label VerticalTextAlignment="Center" Text="Status" Grid.Row="1" Grid.Column="0"/>
             <Picker x:Name="picker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="OnPickerSelectedIndexChanged"
                  Title="Select status"
                  TitleColor="Black">
@@ -24,6 +20,7 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -44,6 +44,15 @@ namespace AnorocMobileApp.Views
                     Location_Tracking_Switch.IsToggled = true;
             }
 
+            if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                var value = Application.Current.Properties["CarrierStatus"].ToString();
+                if (value == "Positive")
+                    picker.SelectedIndex = 0;
+                else
+                    picker.SelectedIndex = 1;
+            }
+
         }       
 
         
@@ -69,6 +78,12 @@ namespace AnorocMobileApp.Views
             }
         }
 
+        /// <summary>
+        /// Function when the Carrier status is changed
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Changed Event Arguments</param>
+        /// 
         void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {
             var picker = (Picker)sender;
@@ -77,11 +92,9 @@ namespace AnorocMobileApp.Views
             if (selectedIndex != -1)
             {
                 string value = (string)picker.ItemsSource[selectedIndex];
-                DisplayAlert("Carrier Status", value, "OK");
+                //DisplayAlert("Carrier Status", value, "OK");
                 Application.Current.Properties["CarrierStatus"] = value;
-                Container.userManagementService.sendCarrierStatusAsync(value);
-
-                //status.Text = (string)picker.ItemsSource[selectedIndex];
+                Container.userManagementService.sendCarrierStatusAsync(value);                
             }
         }
     }
