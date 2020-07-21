@@ -2,6 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:navigation="clr-namespace:AnorocMobileApp.Views.Navigation"
+            xmlns:notification="clr-namespace:AnorocMobileApp.Views.Notification"
             xmlns:local="clr-namespace:AnorocMobileApp.Views;assembly=AnorocMobileApp"
             x:Class="AnorocMobileApp.Views.Navigation.BottomNavigationPage"
             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
@@ -26,13 +27,13 @@
                                  Size="16"/>
         </home:HomePage.IconImageSource>
     </home:HomePage>
-    <navigation:PhotosPage Title="Itinerary">
-        <navigation:PhotosPage.IconImageSource>
+    <notification:NotificationPage Title="Encounters">
+        <notification:NotificationPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource SettingsIcon}"
                                  Size="16"/>
-        </navigation:PhotosPage.IconImageSource>
-    </navigation:PhotosPage>
+        </notification:NotificationPage.IconImageSource>
+    </notification:NotificationPage>
     <navigation:MePage Title="Me">
         <navigation:MePage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
