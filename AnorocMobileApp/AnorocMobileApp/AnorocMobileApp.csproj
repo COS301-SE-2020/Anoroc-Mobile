@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Remove="Data\navigation.json" />
+    <None Remove="Data\notification.json" />
     <None Remove="Images\CaloriesEaten.svg" />
     <None Remove="Images\HeartRate.svg" />
     <None Remove="Images\SleepDuration.svg" />
@@ -22,6 +23,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Data\navigation.json" />
+    <EmbeddedResource Include="Data\notification.json" />
     <EmbeddedResource Include="Images\CaloriesEaten.svg" />
     <EmbeddedResource Include="Images\HeartRate.svg" />
     <EmbeddedResource Include="Images\SleepDuration.svg" />
@@ -136,6 +138,12 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\NotificationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Notification\NotificationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Notification\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\HomeTemplate.xaml">
