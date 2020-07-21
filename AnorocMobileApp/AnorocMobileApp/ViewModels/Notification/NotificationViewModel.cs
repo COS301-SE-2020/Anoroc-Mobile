@@ -73,13 +73,13 @@ namespace AnorocMobileApp.ViewModels.Notification
         /// <summary>
         /// Gets or sets a collection of values to be displayed in the social notification page recent list.
         /// </summary>
-        [DataMember(Name = "recentSocialNotificationList")]
+        [DataMember(Name = "recentNotificationList")]
         public ObservableCollection<NotificationModel> RecentList { get; set; }
 
         /// <summary>
         /// Gets or sets a collection of values to be displayed in the social notification page earlier list.
         /// </summary>
-        [DataMember(Name = "earlierSocialNotificationList")]
+        [DataMember(Name = "earlierNotificationList")]
         public ObservableCollection<NotificationModel> EarlierList { get; set; }
 
         #endregion
