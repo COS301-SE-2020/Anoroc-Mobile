@@ -7,10 +7,10 @@
             </Grid.RowDefinitions>
 
             <Label VerticalTextAlignment="Center" Text="Location Tracking" Grid.Row="0" Grid.Column="0"/>
-            <Switch x:Name="Location_Tracking_Switch" Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="OnToggledAsync"/>
+            <Switch AutomationId="LocationToggle" x:Name="Location_Tracking_Switch" Grid.Row="0" Grid.Column="1" IsToggled="false" Toggled="OnToggledAsync"/>
             
             <Label VerticalTextAlignment="Center" Text="Status" Grid.Row="1" Grid.Column="0"/>
-            <Picker x:Name="picker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="OnPickerSelectedIndexChanged"
+            <Picker AutomationId="Picker" x:Name="picker" Grid.Row="1" Grid.Column="1" SelectedIndexChanged="OnPickerSelectedIndexChanged"
                  Title="Select status"
                  TitleColor="Black">
                 <Picker.ItemsSource>
