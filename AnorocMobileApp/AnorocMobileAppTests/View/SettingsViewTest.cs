@@ -1,20 +1,21 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using System.IO;
 using System.Linq;
-using System.Text;
+using AnorocMobileApp;
+using NUnit.Framework;
 using Xamarin.UITest;
+using Xamarin.UITest.Queries;
 
 namespace AnorocMobileAppTests.View
 {
     [TestFixture(Platform.Android)]
     //[TestFixture(Platform.iOS)]
-    public class LoginViewTest
+    public class SettingsViewTest
     {
         IApp app;
         Platform platform;
 
-        public LoginViewTest(Platform platform)
+        public SettingsViewTest(Platform platform)
         {
             this.platform = platform;
         }
@@ -24,12 +25,14 @@ namespace AnorocMobileAppTests.View
         {
             app = AppInitializer.StartApp(platform);
         }
-        
+/*
         [Test]
-        public void ShouldBeAbleTologin()
+        public void ShouldBeAbleToToggleLocation()
         {
             //Arrange
-            
+
+            //app.Tap("MeButton");
+
             app.Tap("UserNameBox");
             app.EnterText("kevin@anoroc.co.za");
             app.DismissKeyboard();
@@ -39,16 +42,28 @@ namespace AnorocMobileAppTests.View
 
             //Act
             app.Tap("LoginButton");
+
+            Console.WriteLine(App.ScreenWidth);
+
             app.WaitForElement("HomeLabel");
+            //MePage Coordinates
+            app.TapCoordinates(1000, 1710);
 
-            //Assert
-            bool result = app.Query(e => e.Marked("HomeLabel")).Any(); 
+            var switchValue = app.Query(c => c.Marked("Location_Tracking_Switch").Invoke("isChecked").Value<bool>()).First();
 
-            Assert.IsTrue(result);
+        *//*    AppResult[] results = app.Query(c => c.All());
+            for(int i=0;i<results.Length;i++)
+            {
+                Console.WriteLine(results[i].Text);
+            }
+*//*
+            Assert.IsTrue(switchValue);
 
 
-        }
-        
+        }*/
+
+
+
         public void OpenRepl()
         {
 
