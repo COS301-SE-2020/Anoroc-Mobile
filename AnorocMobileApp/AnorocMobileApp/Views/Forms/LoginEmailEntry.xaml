@@ -30,6 +30,7 @@
 
                     <control:BorderlessEntry
                         x:Name="EmailEntry"
+                        AutomationId="UserNameBox"
                         Placeholder="Email"
                         PlaceholderColor="{DynamicResource Gray-700}"
                         Style="{StaticResource EntryStyle}"
