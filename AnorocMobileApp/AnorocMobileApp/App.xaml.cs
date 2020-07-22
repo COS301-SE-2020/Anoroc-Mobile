@@ -47,7 +47,7 @@ namespace AnorocMobileApp
             }
             else
             {
-                MainPage = new NavigationPage(new BottomNavigationPage());
+                MainPage = new LoginWithSocialIconPage();
             }
         }
 
