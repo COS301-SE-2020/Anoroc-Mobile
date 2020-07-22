@@ -95,6 +95,7 @@
                         Style="{StaticResource SfBorderStyle}" CornerRadius="4">
                             <control:BorderlessEntry
                             x:Name="PasswordEntry"
+                            AutomationId="PasswordBox"    
                             IsPassword="True"
                             Placeholder="Password"
                             PlaceholderColor="{DynamicResource Gray-700}"
@@ -119,6 +120,7 @@
                         <buttons:SfButton
                         Grid.Row="5"
                         Margin="0,16"
+                        AutomationId="LoginButton"
                         CornerRadius="4"
                         Command="{Binding LoginCommand}"
                         Style="{StaticResource SfButtonStyle}"
