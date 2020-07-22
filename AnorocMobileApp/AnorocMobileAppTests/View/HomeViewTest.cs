@@ -79,7 +79,7 @@ namespace AnorocMobileAppTests
         {
             //Arrange
             app.Tap("UserNameBox");
-            app.EnterText("AndrewIsHardCarry");
+            app.EnterText("username");
             app.DismissKeyboard();
             app.Tap("PasswordBox");
             app.EnterText("1234");
@@ -93,7 +93,6 @@ namespace AnorocMobileAppTests
             bool result = true;
 
             Assert.IsTrue(result);
-
 
         }
         
