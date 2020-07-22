@@ -41,7 +41,7 @@ namespace AnorocMobileApp.Services
         /// 
         protected async void PostLocationAsync(Location location)
         {
-            string url = "https://10.0.2.2:5001/location/GEOLocation";
+            string url = Constants.AnorocURI +  "location/GEOLocation";
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
