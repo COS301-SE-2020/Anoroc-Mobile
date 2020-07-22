@@ -1,0 +1,485 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Interpolator
+  commentId: T:AnorocMobileApp.Droid.Resource.Interpolator
+  id: Resource.Interpolator
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in
+  - AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in
+  - AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear
+  - AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in
+  langs:
+  - csharp
+  - vb
+  name: Resource.Interpolator
+  nameWithType: Resource.Interpolator
+  fullName: AnorocMobileApp.Droid.Resource.Interpolator
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Interpolator
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11830
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Interpolator
+    content.vb: Public Class Interpolator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in
+  id: mtrl_fast_out_linear_in
+  parent: AnorocMobileApp.Droid.Resource.Interpolator
+  langs:
+  - csharp
+  - vb
+  name: mtrl_fast_out_linear_in
+  nameWithType: Resource.Interpolator.mtrl_fast_out_linear_in
+  fullName: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_linear_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_fast_out_linear_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11834
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_fast_out_linear_in = 2131361792
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_fast_out_linear_in As Integer = 2131361792
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in
+  id: mtrl_fast_out_slow_in
+  parent: AnorocMobileApp.Droid.Resource.Interpolator
+  langs:
+  - csharp
+  - vb
+  name: mtrl_fast_out_slow_in
+  nameWithType: Resource.Interpolator.mtrl_fast_out_slow_in
+  fullName: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_fast_out_slow_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_fast_out_slow_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11837
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_fast_out_slow_in = 2131361793
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_fast_out_slow_in As Integer = 2131361793
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear
+  commentId: F:AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear
+  id: mtrl_linear
+  parent: AnorocMobileApp.Droid.Resource.Interpolator
+  langs:
+  - csharp
+  - vb
+  name: mtrl_linear
+  nameWithType: Resource.Interpolator.mtrl_linear
+  fullName: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_linear
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11840
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_linear = 2131361794
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_linear As Integer = 2131361794
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in
+  commentId: F:AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in
+  id: mtrl_linear_out_slow_in
+  parent: AnorocMobileApp.Droid.Resource.Interpolator
+  langs:
+  - csharp
+  - vb
+  name: mtrl_linear_out_slow_in
+  nameWithType: Resource.Interpolator.mtrl_linear_out_slow_in
+  fullName: AnorocMobileApp.Droid.Resource.Interpolator.mtrl_linear_out_slow_in
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_linear_out_slow_in
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11843
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_linear_out_slow_in = 2131361795
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_linear_out_slow_in As Integer = 2131361795
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

@@ -20,6 +20,11 @@ namespace AnorocMobileApp.Services
         {
             success = false;
         }
+        /// <summary>
+        /// Function to post location to server
+        /// </summary>
+        /// <param name="location">Location Object</param>        
+        /// 
         public void Send_Locaiton_ServerAsync(Location location)
         {
             
@@ -29,9 +34,14 @@ namespace AnorocMobileApp.Services
                 throw new CantConnectToLocationServerException();
             }
         }
+        /// <summary>
+        /// Function to send user locaton to server
+        /// </summary>
+        /// <param name="location">Location Object</param>
+        /// 
         protected async void PostLocationAsync(Location location)
         {
-            string url = "https://10.0.2.2:5001/location/GEOLocation";
+            string url = Constants.AnorocURI +  "location/GEOLocation";
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
@@ -42,14 +52,20 @@ namespace AnorocMobileApp.Services
 
                     client.Timeout = TimeSpan.FromSeconds(30);
 
-                    var data = JsonConvert.SerializeObject(location);
-                    var c = new StringContent(data, Encoding.UTF8, "application/json");
-                    c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                    Token token = new Token();
+                    token.access_token = (string)Application.Current.Properties["TOKEN"];
+
+
+                    token.Object_To_Server = JsonConvert.SerializeObject(location);
+                    var data = JsonConvert.SerializeObject(token);
+
+                    var StringConent = new StringContent(data, Encoding.UTF8, "application/json");
+                    StringConent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                     HttpResponseMessage response;
 
                     try
                     {
-                        response = await client.PostAsync(url, c);
+                        response = await client.PostAsync(url, StringConent);
                     }
                     catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                     {
@@ -73,5 +89,8 @@ namespace AnorocMobileApp.Services
                // retry logic for sending to the server
             }
         }
+
+
+    
     }
 }

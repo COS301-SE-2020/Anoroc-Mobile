@@ -27,8 +27,19 @@ namespace AnorocMobileApp.Services
             {
                 Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                HttpContent content = new StringContent("{\"Area\":{\"HandShake\":\"Hello\"}}", Encoding.UTF8, "application/json");
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/location/Clusters/Simplified");
+                Token token_object = new Token();
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                //MOCK AREA OBJECT
+                token_object.Object_To_Server = "{\"Area\":{\"HandShake\":\"Hello\"}}";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"location/Clusters/Simplified");
                 HttpResponseMessage responseMessage;
 
                 try
@@ -60,11 +71,20 @@ namespace AnorocMobileApp.Services
 
                 Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/location/Clusters/Pins");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "location/Clusters/Pins");
+                Token token_object = new Token();
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                //MOCK AREA OBJECT
+                token_object.Object_To_Server = "{\"Area\":{\"HandShake\":\"Hello\"}}";
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
                 HttpResponseMessage responseMessage;
                 try
                 {
-                    responseMessage = await Anoroc_Client.GetAsync(Anoroc_Uri);
+                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
                     List<ClusterAllPins> clusters = new List<ClusterAllPins>();
                     if (responseMessage.IsSuccessStatusCode)
                     {

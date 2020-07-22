@@ -11,6 +11,8 @@ namespace AnorocMobileApp.Models
         public string error_descriptions { get; set; }
         public DateTime expiry_date { get; set; }
 
+        public string Object_To_Server { get; set; }
+
         public Token() { }
     }
 }

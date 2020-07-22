@@ -26,6 +26,7 @@
     <x:String x:Key="HomeIcon">&#xe706;</x:String>
     <x:String x:Key="MeIcon">&#xe70e;</x:String>
     <x:String x:Key="SettingsIcon">&#xe72b;</x:String>
+    <x:String x:Key="MapIcon">&#xe726;</x:String>
     <x:String x:Key="Next">&#xe71a;</x:String>
     <x:String x:Key="EditIcon">&#xe727;</x:String>
     <x:String x:Key="More">&#xe719;</x:String>

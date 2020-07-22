@@ -1,4 +1,5 @@
 ﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Views;
 using System;
 using System.Diagnostics;
@@ -86,11 +87,12 @@ namespace AnorocMobileApp.Services
             LocationService = new LocationService();
             bool success = false;
             int retry = 0;
-            while (retry < 3 && !success)
-            {
+            
                 retry = 0;
                 try
                 {
+                    // TODO:
+                    // faster they go, the more locations sent and slower they go the less
                     request = new GeolocationRequest(GeolocationAccuracy.Best);
                     Xamarin.Essentials.Location location = null;
 
@@ -101,7 +103,9 @@ namespace AnorocMobileApp.Services
                         {
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
-                            LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
+                            Models.Location customLocation = new Models.Location(location);
+                            customLocation.Carrier_Data_Point = User.carrierStatus;
+                            LocationService.Send_Locaiton_ServerAsync(customLocation);
                         }
                         else
                         {
@@ -110,12 +114,21 @@ namespace AnorocMobileApp.Services
                                 _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
                                 Track_Retry++;
                             }
+                            else
+                            {
+                            //send the location on the 10th minute, and every 10 minutes after that
+                            Models.Location customLocation = new Models.Location(location);
+                            customLocation.Carrier_Data_Point = User.carrierStatus;
+                            LocationService.Send_Locaiton_ServerAsync(customLocation);
+                            }
                         }
                     }
                     else
                     {
                         location = await Geolocation.GetLocationAsync(request);
-                        LocationService.Send_Locaiton_ServerAsync(new Models.Location(location));
+                        Models.Location customLocation = new Models.Location(location);
+                        customLocation.Carrier_Data_Point = User.carrierStatus;
+                        LocationService.Send_Locaiton_ServerAsync(customLocation);
                     }
                     Previous_request = location;
 
@@ -127,7 +140,7 @@ namespace AnorocMobileApp.Services
                     //retry for getting the geolocation
                     retry++;
                 }
-            }
+            
             if(retry == 3 || !success)
             {
                 Stop_Tracking();

@@ -1,0 +1,53 @@
+### YamlMime:TableOfContent
+- uid: AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  items:
+  - uid: AnorocMobileApp.Droid.CustomUrlSchemeInterceptorActivity
+    name: CustomUrlSchemeInterceptorActivity
+  - uid: AnorocMobileApp.Droid.MainActivity
+    name: MainActivity
+  - uid: AnorocMobileApp.Droid.MyFirebaseIIDService
+    name: MyFirebaseIIDService
+  - uid: AnorocMobileApp.Droid.MyFirebaseMessagingService
+    name: MyFirebaseMessagingService
+  - uid: AnorocMobileApp.Droid.Resource
+    name: Resource
+  - uid: AnorocMobileApp.Droid.Resource.Animation
+    name: Resource.Animation
+  - uid: AnorocMobileApp.Droid.Resource.Animator
+    name: Resource.Animator
+  - uid: AnorocMobileApp.Droid.Resource.Attribute
+    name: Resource.Attribute
+  - uid: AnorocMobileApp.Droid.Resource.Boolean
+    name: Resource.Boolean
+  - uid: AnorocMobileApp.Droid.Resource.Color
+    name: Resource.Color
+  - uid: AnorocMobileApp.Droid.Resource.Dimension
+    name: Resource.Dimension
+  - uid: AnorocMobileApp.Droid.Resource.Drawable
+    name: Resource.Drawable
+  - uid: AnorocMobileApp.Droid.Resource.Id
+    name: Resource.Id
+  - uid: AnorocMobileApp.Droid.Resource.Integer
+    name: Resource.Integer
+  - uid: AnorocMobileApp.Droid.Resource.Interpolator
+    name: Resource.Interpolator
+  - uid: AnorocMobileApp.Droid.Resource.Layout
+    name: Resource.Layout
+  - uid: AnorocMobileApp.Droid.Resource.Mipmap
+    name: Resource.Mipmap
+  - uid: AnorocMobileApp.Droid.Resource.Raw
+    name: Resource.Raw
+  - uid: AnorocMobileApp.Droid.Resource.String
+    name: Resource.String
+  - uid: AnorocMobileApp.Droid.Resource.Style
+    name: Resource.Style
+  - uid: AnorocMobileApp.Droid.Resource.Styleable
+    name: Resource.Styleable
+  - uid: AnorocMobileApp.Droid.Resource.Xml
+    name: Resource.Xml
+- uid: AnorocMobileApp.Droid.Resources.services
+  name: AnorocMobileApp.Droid.Resources.services
+  items:
+  - uid: AnorocMobileApp.Droid.Resources.services.FacebookLoginService
+    name: FacebookLoginService

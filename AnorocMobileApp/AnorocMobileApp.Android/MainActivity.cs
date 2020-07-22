@@ -54,7 +54,7 @@ namespace AnorocMobileApp.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             global::Xamarin.Auth.Presenters.XamarinAndroid.AuthenticationConfiguration.Init(this, savedInstanceState);
             
-            LoadApplication(new App(new FacebookLoginService()));
+            //LoadApplication(new App(new FacebookLoginService()));
 
             IsPlayServicesAvailable();
 

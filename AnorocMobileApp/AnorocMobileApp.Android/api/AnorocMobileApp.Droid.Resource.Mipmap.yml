@@ -1,0 +1,451 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Mipmap
+  commentId: T:AnorocMobileApp.Droid.Resource.Mipmap
+  id: Resource.Mipmap
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Mipmap.icon
+  - AnorocMobileApp.Droid.Resource.Mipmap.icon_round
+  - AnorocMobileApp.Droid.Resource.Mipmap.launcher_foreground
+  langs:
+  - csharp
+  - vb
+  name: Resource.Mipmap
+  nameWithType: Resource.Mipmap
+  fullName: AnorocMobileApp.Droid.Resource.Mipmap
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Mipmap
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12084
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Mipmap
+    content.vb: Public Class Mipmap
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Mipmap.icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Mipmap.icon
+  id: icon
+  parent: AnorocMobileApp.Droid.Resource.Mipmap
+  langs:
+  - csharp
+  - vb
+  name: icon
+  nameWithType: Resource.Mipmap.icon
+  fullName: AnorocMobileApp.Droid.Resource.Mipmap.icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12088
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int icon = 2131492864
+    return:
+      type: System.Int32
+    content.vb: Public Const icon As Integer = 2131492864
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Mipmap.icon_round
+  commentId: F:AnorocMobileApp.Droid.Resource.Mipmap.icon_round
+  id: icon_round
+  parent: AnorocMobileApp.Droid.Resource.Mipmap
+  langs:
+  - csharp
+  - vb
+  name: icon_round
+  nameWithType: Resource.Mipmap.icon_round
+  fullName: AnorocMobileApp.Droid.Resource.Mipmap.icon_round
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: icon_round
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12091
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int icon_round = 2131492865
+    return:
+      type: System.Int32
+    content.vb: Public Const icon_round As Integer = 2131492865
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Mipmap.launcher_foreground
+  commentId: F:AnorocMobileApp.Droid.Resource.Mipmap.launcher_foreground
+  id: launcher_foreground
+  parent: AnorocMobileApp.Droid.Resource.Mipmap
+  langs:
+  - csharp
+  - vb
+  name: launcher_foreground
+  nameWithType: Resource.Mipmap.launcher_foreground
+  fullName: AnorocMobileApp.Droid.Resource.Mipmap.launcher_foreground
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: launcher_foreground
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12094
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int launcher_foreground = 2131492866
+    return:
+      type: System.Int32
+    content.vb: Public Const launcher_foreground As Integer = 2131492866
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
