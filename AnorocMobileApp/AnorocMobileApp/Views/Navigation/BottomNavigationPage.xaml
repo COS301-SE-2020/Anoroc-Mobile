@@ -27,8 +27,8 @@
                                  Size="16"/>
         </home:HomePage.IconImageSource>
     </home:HomePage>
-    <notification:NotificationPage Title="Encounters">
-        <notification:NotificationPage.IconImageSource>
+    <notification:NotificationPage Title="Encounters"  >
+        <notification:NotificationPage.IconImageSource >
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource SettingsIcon}"
                                  Size="16"/>

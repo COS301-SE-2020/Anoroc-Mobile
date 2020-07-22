@@ -35,6 +35,8 @@ namespace AnorocMobileApp.Droid
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
+
             // Set Dependancy
             BackgroundLocationService = new BackgroundLocaitonService();
 

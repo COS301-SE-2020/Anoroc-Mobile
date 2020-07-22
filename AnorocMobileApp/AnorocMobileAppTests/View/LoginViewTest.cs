@@ -29,20 +29,20 @@ namespace AnorocMobileAppTests.View
         public void ShouldBeAbleTologin()
         {
             //Arrange
-
+            
             app.Tap("UserNameBox");
-            app.EnterText("kevin");
+            app.EnterText("kevin@anoroc.co.za");
             app.DismissKeyboard();
             app.Tap("PasswordBox");
-            app.EnterText("huang");
+            app.EnterText("AnorocUITest");
             app.DismissKeyboard();
 
             //Act
             app.Tap("LoginButton");
-            app.WaitForElement("WelcomeBox");
+            app.WaitForElement("HomeLabel");
 
             //Assert
-            bool result = true;
+            bool result = app.Query(e => e.Marked("HomeLabel")).Any(); 
 
             Assert.IsTrue(result);
 
