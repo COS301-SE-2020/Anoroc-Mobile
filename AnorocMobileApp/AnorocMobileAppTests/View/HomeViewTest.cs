@@ -75,18 +75,15 @@ namespace AnorocMobileAppTests
 
         
         [Test]
-        public void ShouldBeAbleTologin()
+        public void ShouldBeAbleToGoToMePage()
         {
             //Arrange
-            app.Tap("UserNameBox");
-            app.EnterText("username");
-            app.DismissKeyboard();
-            app.Tap("PasswordBox");
-            app.EnterText("1234");
-            app.DismissKeyboard();
+
+            //app.Tap("MeButton");
+          
+            app.Tap("MeButton1");
 
             //Act
-            app.Tap("LoginButton");
             //app.WaitForElement("WelcomeBox");
 
             //Assert

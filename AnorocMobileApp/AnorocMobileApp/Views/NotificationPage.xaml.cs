@@ -28,6 +28,7 @@ namespace AnorocMobileApp.Views
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
                 lblMsg.Text = msg;
             });
         }

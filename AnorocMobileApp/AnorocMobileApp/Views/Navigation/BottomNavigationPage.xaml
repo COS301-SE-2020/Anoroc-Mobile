@@ -32,10 +32,12 @@
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource SettingsIcon}"
                                  Size="16"/>
+
         </notification:NotificationPage.IconImageSource>
     </notification:NotificationPage>
     <navigation:MePage Title="Me">
         <navigation:MePage.IconImageSource>
+
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource MeIcon}"
                                  Size="16"/>

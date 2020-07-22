@@ -18,8 +18,7 @@ namespace AnorocMobileApp
          
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
-        private static string syncfusionLicense =
-            "";
+        private static string syncfusionLicense = "sadasdasdsadadasdasdsa";
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  
