@@ -122,7 +122,10 @@ namespace AnorocMobileApp
             if (Current.Properties.ContainsKey("CarrierStatus"))
             {
                 // Use Carrier status
-                User.carrierStatus = Current.Properties["CarrierStatus"].ToString();
+                if (Current.Properties["CarrierStatus"].ToString() == "Positive")
+                    User.carrierStatus = true;
+                else
+                    User.carrierStatus = false;
             }
         }
     }

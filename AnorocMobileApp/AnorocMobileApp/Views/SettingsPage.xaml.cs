@@ -94,6 +94,12 @@ namespace AnorocMobileApp.Views
                 string value = (string)picker.ItemsSource[selectedIndex];
                 //DisplayAlert("Carrier Status", value, "OK");
                 Application.Current.Properties["CarrierStatus"] = value;
+                
+                if (value == "Positive")
+                    User.carrierStatus = true;
+                else
+                    User.carrierStatus = false;
+
                 Container.userManagementService.sendCarrierStatusAsync(value);                
             }
         }
