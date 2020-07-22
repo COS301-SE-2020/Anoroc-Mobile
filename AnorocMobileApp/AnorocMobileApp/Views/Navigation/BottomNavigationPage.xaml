@@ -33,8 +33,9 @@
                                  Size="16"/>
         </navigation:PhotosPage.IconImageSource>
     </navigation:PhotosPage>
-    <navigation:MePage Title="Me">
-        <navigation:MePage.IconImageSource>
+    <navigation:MePage Title="Me" AutomationId="MeButton1">
+
+        <navigation:MePage.IconImageSource AutomationId="MeButton">
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource MeIcon}"
                                  Size="16"/>
