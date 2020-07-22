@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms.Internals;
+﻿using System;
+using AnorocMobileApp.Views.Navigation;
+using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views.Forms
@@ -17,5 +20,12 @@ namespace AnorocMobileApp.Views.Forms
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Function sets Main Page to Navigation Page
+        /// </summary>
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());                  
+        }        
     }
 }

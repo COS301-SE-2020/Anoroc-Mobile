@@ -78,9 +78,11 @@ namespace AnorocMobileAppTests
         public void ShouldBeAbleToGoToMePage()
         {
             //Arrange
+
             //app.Tap("MeButton");
           
             app.Tap("MeButton1");
+
             //Act
             //app.WaitForElement("WelcomeBox");
 
@@ -88,7 +90,6 @@ namespace AnorocMobileAppTests
             bool result = true;
 
             Assert.IsTrue(result);
-
 
         }
         
