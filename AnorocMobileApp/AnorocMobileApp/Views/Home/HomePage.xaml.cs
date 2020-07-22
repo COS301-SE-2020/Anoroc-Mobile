@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms.Internals;
+﻿using AnorocMobileApp.Services;
+using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views.Home
