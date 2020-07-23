@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using AnorocMobileApp.Interfaces;
 using Firebase.Iid;
 
 namespace AnorocMobileApp.Droid
@@ -31,6 +32,7 @@ namespace AnorocMobileApp.Droid
 
         void SendRegistrationToServer(string token)
         {
+            Container.userManagementService.SendFireBaseToken(token);
             // TODO: Still need to be implemented
             Log.Debug(PackageName, token);
         }
