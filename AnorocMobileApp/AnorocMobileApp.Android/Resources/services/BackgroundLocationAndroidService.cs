@@ -37,6 +37,7 @@ namespace AnorocMobileApp.Droid.Resources.services
                   {
                       var backgroundLocationService = MainActivity.BackgroundLocationService;
                       backgroundLocationService.Run_TrackAsync();
+                      BackgroundLocaitonService.Tracking = true;
                   }
                   catch (System.OperationCanceledException)
                   {
