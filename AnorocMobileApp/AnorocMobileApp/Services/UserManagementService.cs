@@ -24,7 +24,7 @@ namespace AnorocMobileApp.Services
         /// Function to send Fire base token
         /// </summary>
         /// <param name="firebasetoken">Fire base token</param>
-        /// 
+
         public async void SendFireBaseToken(string firebasetoken)
         {
             using (Anoroc_Client = new HttpClient(clientHandler))
