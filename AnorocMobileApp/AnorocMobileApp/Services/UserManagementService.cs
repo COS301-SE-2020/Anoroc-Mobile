@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/UserManagement/FirebaseToken");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "UserManagement/FirebaseToken");
                 HttpResponseMessage responseMessage;
 
                 try
@@ -73,7 +73,7 @@ namespace AnorocMobileApp.Services
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
-            string url = "https://10.0.2.2:5001/UserManagement/CarrierStatus";
+            string url = Constants.AnorocURI + "UserManagement/CarrierStatus";
 
             Token token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
