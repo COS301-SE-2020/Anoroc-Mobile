@@ -31,7 +31,7 @@ namespace AnorocMobileApp.Services
             PostLocationAsync(location);
             if (!success)
             {
-                throw new CantConnectToLocationServerException();
+                //throw new CantConnectToLocationServerException();
             }
         }
         /// <summary>

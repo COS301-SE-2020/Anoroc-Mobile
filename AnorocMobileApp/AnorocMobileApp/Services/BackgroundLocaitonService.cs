@@ -141,12 +141,12 @@ namespace AnorocMobileApp.Services
                     retry++;
                 }
             
-            if(retry == 3 || !success)
+            /*if(retry == 3 || !success)
             {
                 Stop_Tracking();
                 // TODO:
                 // Failed to Track, need to make a handler - copuld be a manual retry button that starts the tracking again
-            }
+            }*/
         }
 
         void HandleCancel()
