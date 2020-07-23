@@ -45,6 +45,10 @@ The application will allow the user to log in or register using either an Anoroc
 
 ## Testing Instructions
 
+- Open the Test Explorer in Visual Studios
+![VisualStudiosTestingExplorer](https://user-images.githubusercontent.com/61750301/88283131-264a3600-cceb-11ea-8b4c-5726d76ae633.png)
+- Click on the green play button to Run All Tests
+
 ## Team
 | Name   | Surname    |        Email         |       Github.io        |
 |--------|------------|----------------------|------------------------|
@@ -60,30 +64,30 @@ The application will allow the user to log in or register using either an Anoroc
 
 ### Tebogo Selahle
 
-- Worked on API Server
-- Created unit tests
+- UX / UI Development
+- Backend Server Development
 
 ### Andrew Wilson
 
-- Xamarin Forms Map
-- Login with Facebook
+- Spatial Data Analytics
+- Backend Mobile Development
 
 ### Anika van Rensburg
 
-- Worked on API Server
-- Enable GEO Location tracking on Mobile App
+- UI Testing
+- Backend Mobile Development
 
 ### Anrich Hildebrand
 
-- Login with Google to return User's Google profile data
-- Created mock database to test GEO Location points on map
+- Database Management
+- Backend Server Development
 
 ### Kevin Huang
 
-- Worked on API Server
-- Notification Module of the Mobile App
+- Push Notification System
+- UI Testing
 
 ### Ronald Looi
 
-- Integrate Team modules
-- Navigation in the Mobile App
+- Backend Server Development
+- Backend Mobile Development
