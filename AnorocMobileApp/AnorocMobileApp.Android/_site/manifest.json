@@ -1,0 +1,428 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Anrich/Documents/GitHub/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.CustomUrlSchemeInterceptorActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.CustomUrlSchemeInterceptorActivity.html",
+          "hash": "6bwY22jee3Y1/Va/i7cTNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.MainActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.MainActivity.html",
+          "hash": "5DB+V/OvWcHkMCCjQYJfNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.MyFirebaseIIDService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.MyFirebaseIIDService.html",
+          "hash": "5I2c0UaQyiIGwRP1xkavIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.MyFirebaseMessagingService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.MyFirebaseMessagingService.html",
+          "hash": "4xvxw5DbkzbnHzLxQIw7fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Animation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Animation.html",
+          "hash": "C24iSM8uqvIbBfWxV/FLOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Animator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Animator.html",
+          "hash": "iL5eil0L1MRmuMRN93yY/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Attribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Attribute.html",
+          "hash": "njpPiwXEredT5T2JaMDxKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Boolean.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Boolean.html",
+          "hash": "N8+v70OAK9u4pN3Dpwfo7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Color.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Color.html",
+          "hash": "/u89f8hSbKAdKiOcvMJtLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Dimension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Dimension.html",
+          "hash": "ic7jyIDOj/NTp5bGesEByQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Drawable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Drawable.html",
+          "hash": "elKp2bgSd+eoHG6dDMYnag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Id.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Id.html",
+          "hash": "LPbFLj4sKQbJVDR812CAdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Integer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Integer.html",
+          "hash": "O9UVNajYlbi/niWNajayIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Interpolator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Interpolator.html",
+          "hash": "gXEn58rjyWSYZGSCOrORUQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Layout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Layout.html",
+          "hash": "7TKWA9PrpyS+BnGzlMy4vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Mipmap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Mipmap.html",
+          "hash": "T3px7JuhvfA5+YLEKhlnnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Raw.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Raw.html",
+          "hash": "oVMOuMLZqEax7tiynMvqQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.String.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.String.html",
+          "hash": "MgZnlbOjBerGyMxpECe+Og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Style.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Style.html",
+          "hash": "IqDvmTUyzJn1ew2HEe3Vfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Styleable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Styleable.html",
+          "hash": "uqF3bfTlp72Lvj/DwaEm/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.Xml.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.Xml.html",
+          "hash": "kT7jldbN6gjWn8pDUgvp1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resource.html",
+          "hash": "qCY5FwBOb54MCYLEYW+mRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resources.services.FacebookLoginService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resources.services.FacebookLoginService.html",
+          "hash": "BsM5KvuaZihCOBvSzYYVQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.Resources.services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.Resources.services.html",
+          "hash": "XSEANzDpBfJNEJ3Gh91zaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AnorocMobileApp.Droid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AnorocMobileApp.Droid.html",
+          "hash": "8rIMhD83o4LyslI8VQuKeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "x3UWs7Q18RMiW5N20YJ9zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "65EWwlhBhbvmuu6VP2O/Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "gJT809X1n0cauulaXsucgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "8562cVO8D+AMGrRuMZ73ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "+rHUkRZHZRi5gd1aTU6lJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 25,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

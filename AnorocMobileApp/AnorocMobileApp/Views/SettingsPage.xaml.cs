@@ -1,122 +1,124 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
+using AnorocMobileApp.Services;
+using AnorocMobileApp.Interfaces;
+using System.Diagnostics;
+using AnorocMobileApp.Models;
+using AnorocMobileApp.ViewModels;
 
 namespace AnorocMobileApp.Views
-{ 
+{
+
+    /// <summary>
+    /// Class to manage the Settings Paged
+    /// </summary>
     public partial class SettingsPage : ContentPage
     {
 
+        /// <summary>
+        /// Initializes the settings Screen
+        /// </summary>
+        /// 
+        
         public SettingsPage()
         {
+            var status = new Label();
+            status.SetBinding(Label.TextProperty, new Binding("SelectedItem", source: status));
+
             InitializeComponent();
-        }
 
-        public class Location
-        {
-            public Location()
-            {
-                
-            }
+            //if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            //    DisplayAlert("Carrier Status", (string)Application.Current.Properties["CarrierStatus"], "Cancel");
+            
+            var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
            
-            public string Latitude;
-            public string Longitude;
-            public string Altitude;
+            if (Application.Current.Properties.ContainsKey("Tracking"))
+            {
+                var value = (bool)Application.Current.Properties["Tracking"];
+                if (value)
+                    Location_Tracking_Switch.IsToggled = true;
+            }
+
+            if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                var value = Application.Current.Properties["CarrierStatus"].ToString();
+                if (value == "Positive")
+                    picker.SelectedIndex = 0;
+                else
+                    picker.SelectedIndex = 1;
+            }
+
         }
 
-        
-        public async Task<Location> getLocationAsync()
+
+        protected override void OnAppearing()
         {
-            Location loc = new Location();
-            try
-            {
-                var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
-                var location = await Geolocation.GetLocationAsync(request);
+            base.OnAppearing();
 
-                if (location != null)
-                {
-                    loc.Latitude = location.Latitude.ToString();
-                    loc.Longitude = location.Longitude.ToString();
-                    loc.Altitude = location.Altitude.ToString();
-                    //Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                }
-                return loc;
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Handle not supported on device exception
-                return null;
-            }
-            catch (FeatureNotEnabledException fneEx)
-            {
-                // Handle not enabled on device exception
-                return null;
-            }
-            catch (PermissionException pEx)
-            {
-                // Handle permission exception
-                return null;
-            }
-            catch (Exception ex)
-            {
-                // Unable to get location
-                return null;
-            }
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
 
         }
 
+        void OnMessageReceived(object sender, string msg)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+            });
+        }
+
+        /// <summary>
+        /// Function to toggle Asynchronous location, when off
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Toggled Event Arguments</param>
+        /// 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
-            if(e.Value == true)
+            if (e.Value == true)
             {
-                try
-                {
-
-                    //POST
-                    postRequestAsync();
-
-                }
-                catch (Exception ex)
-                {
-                    
-
-                    if (ex.InnerException != null)
-                    {
-                        await DisplayAlert("Attention", ":( " + ex.InnerException.Message, "OK");
-
-                    }
-                }
+                
+                BackgroundLocaitonService.Tracking = true;
+                Container.BackgroundLocationService.Start_Tracking();               
             }
             else
             {
+                BackgroundLocaitonService.Tracking = false;
+                Container.BackgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
 
-        public async void postRequestAsync()
+        /// <summary>
+        /// Function when the Carrier status is changed
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Changed Event Arguments</param>
+        /// 
+        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
 
-            var location = await getLocationAsync();
+            if (selectedIndex != -1)
+            {
+                string value = (string)picker.ItemsSource[selectedIndex];
+                //DisplayAlert("Carrier Status", value, "OK");
+                Application.Current.Properties["CarrierStatus"] = value;
+                
+                if (value == "Positive")
+                    User.carrierStatus = true;
+                else
+                    User.carrierStatus = false;
 
-            var url = "https://10.0.2.2:5001/location/GEOLocation";
-
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-
-            HttpClient client = new HttpClient(clientHandler);
-
-            var data  = JsonConvert.SerializeObject(location);
-            var c = new StringContent(data, Encoding.UTF8, "application/json");
-            c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            var response = await client.PostAsync(url, c);
-            string result = response.Content.ReadAsStringAsync().Result;
-
-            await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                Container.userManagementService.sendCarrierStatusAsync(value);                
+            }
         }
     }
 }

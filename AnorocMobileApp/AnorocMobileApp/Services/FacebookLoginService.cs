@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Text;
 
 namespace AnorocMobileApp.Services
 {
+    /// <summary>
+    /// Facebook Login Service
+    /// </summary>
     public interface IFacebookLoginService
     {
 
@@ -12,6 +12,9 @@ namespace AnorocMobileApp.Services
         string UserID { get; }
         string LastName { get; }
         string AccessToken { get; }
+        void setUserDetails();
+        bool waitOnProfile();
+
         Action<string, string> AccessTokenChanged { get; set; }
         void Logout();
         bool isLoggedIn();

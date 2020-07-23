@@ -1,7 +1,6 @@
 ﻿using AnorocMobileApp.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Services
 {
-    //This class interacts with the API server on behalf of the User class
+    /// <summary>
+    /// This class interacts with the API server on behalf of the User class
+    /// </summary>
     class SignUpService
     {
         HttpClient http;
@@ -20,6 +21,11 @@ namespace AnorocMobileApp.Services
         }
         // TODO:
         // Link to our API
+        /// <summary>
+        /// Function to asynchronously log the user in
+        /// </summary>
+        /// <param name="password">Password used to authenticate sign up</param>
+        /// <returns></returns>
         public async Task<bool> registerUserAsync(string password)
         {
             http = new HttpClient();
@@ -27,7 +33,7 @@ namespace AnorocMobileApp.Services
 
             // Have to make seporate call to Facebook API to get the email address for the 
 
-            string jsonData = "{" + $"'userEmail':'{User.Email}', 'username':'{User.UserName}', 'surname':'{User.UserSurname}', 'password':'{password}'" + "}";
+            string jsonData = "{" + $"'userEmail':'{User.Email}', 'username':'{User.FirstName}', 'surname':'{User.UserSurname}', 'password':'{password}'" + "}";
 
             var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
             HttpResponseMessage response = await http.PostAsync("/foo/login", content);
@@ -40,6 +46,7 @@ namespace AnorocMobileApp.Services
                 return true;
         }
     }
+    //We need to put this class in it's own file!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     class Response
     {
         public string Token { get; set; }

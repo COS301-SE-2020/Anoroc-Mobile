@@ -1,0 +1,2797 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Layout
+  commentId: T:AnorocMobileApp.Droid.Resource.Layout
+  id: Resource.Layout
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_title_item
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_up_container
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_item_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_bar
+  - AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_close_item_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view
+  - AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item
+  - AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_title_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_cascading_menu_item_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_dialog_title_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_expanded_menu_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_checkbox
+  - AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_icon
+  - AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_radio
+  - AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_item_layout
+  - AnorocMobileApp.Droid.Resource.Layout.abc_screen_content_include
+  - AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple
+  - AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode
+  - AnorocMobileApp.Droid.Resource.Layout.abc_screen_toolbar
+  - AnorocMobileApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line
+  - AnorocMobileApp.Droid.Resource.Layout.abc_search_view
+  - AnorocMobileApp.Droid.Resource.Layout.abc_select_dialog_material
+  - AnorocMobileApp.Droid.Resource.Layout.abc_tooltip
+  - AnorocMobileApp.Droid.Resource.Layout.activity_webview
+  - AnorocMobileApp.Droid.Resource.Layout.BottomTabLayout
+  - AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_page
+  - AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_row
+  - AnorocMobileApp.Droid.Resource.Layout.design_bottom_navigation_item
+  - AnorocMobileApp.Droid.Resource.Layout.design_bottom_sheet_dialog
+  - AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar
+  - AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar_include
+  - AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_icon
+  - AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_text
+  - AnorocMobileApp.Droid.Resource.Layout.design_menu_item_action_area
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_item
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_header
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_separator
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_subheader
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu
+  - AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu_item
+  - AnorocMobileApp.Droid.Resource.Layout.design_text_input_password_icon
+  - AnorocMobileApp.Droid.Resource.Layout.FlyoutContent
+  - AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar
+  - AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar_include
+  - AnorocMobileApp.Droid.Resource.Layout.notification_action
+  - AnorocMobileApp.Droid.Resource.Layout.notification_action_tombstone
+  - AnorocMobileApp.Droid.Resource.Layout.notification_media_action
+  - AnorocMobileApp.Droid.Resource.Layout.notification_media_cancel_action
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_custom
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_custom_big
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_icon_group
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_lines_media
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_media
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_media_custom
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_part_chronometer
+  - AnorocMobileApp.Droid.Resource.Layout.notification_template_part_time
+  - AnorocMobileApp.Droid.Resource.Layout.RootLayout
+  - AnorocMobileApp.Droid.Resource.Layout.select_dialog_item_material
+  - AnorocMobileApp.Droid.Resource.Layout.select_dialog_multichoice_material
+  - AnorocMobileApp.Droid.Resource.Layout.select_dialog_singlechoice_material
+  - AnorocMobileApp.Droid.Resource.Layout.ShellContent
+  - AnorocMobileApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item
+  - AnorocMobileApp.Droid.Resource.Layout.Tabbar
+  - AnorocMobileApp.Droid.Resource.Layout.Toolbar
+  langs:
+  - csharp
+  - vb
+  name: Resource.Layout
+  nameWithType: Resource.Layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11855
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Layout
+    content.vb: Public Class Layout
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_title_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_title_item
+  id: abc_action_bar_title_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_bar_title_item
+  nameWithType: Resource.Layout.abc_action_bar_title_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_title_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_bar_title_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11859
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_bar_title_item = 2131427334
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_bar_title_item As Integer = 2131427334
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_up_container
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_up_container
+  id: abc_action_bar_up_container
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_bar_up_container
+  nameWithType: Resource.Layout.abc_action_bar_up_container
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_bar_up_container
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_bar_up_container
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11862
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_bar_up_container = 2131427335
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_bar_up_container As Integer = 2131427335
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_item_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_item_layout
+  id: abc_action_menu_item_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_menu_item_layout
+  nameWithType: Resource.Layout.abc_action_menu_item_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_item_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_menu_item_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11865
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_menu_item_layout = 2131427336
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_menu_item_layout As Integer = 2131427336
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_layout
+  id: abc_action_menu_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_menu_layout
+  nameWithType: Resource.Layout.abc_action_menu_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_menu_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_menu_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11868
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_menu_layout = 2131427337
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_menu_layout As Integer = 2131427337
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_bar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_bar
+  id: abc_action_mode_bar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_mode_bar
+  nameWithType: Resource.Layout.abc_action_mode_bar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_bar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_mode_bar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11871
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_mode_bar = 2131427338
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_mode_bar As Integer = 2131427338
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_close_item_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_close_item_material
+  id: abc_action_mode_close_item_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_action_mode_close_item_material
+  nameWithType: Resource.Layout.abc_action_mode_close_item_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_action_mode_close_item_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_action_mode_close_item_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11874
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_action_mode_close_item_material = 2131427339
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_action_mode_close_item_material As Integer = 2131427339
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view
+  id: abc_activity_chooser_view
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_activity_chooser_view
+  nameWithType: Resource.Layout.abc_activity_chooser_view
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_activity_chooser_view
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11877
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_activity_chooser_view = 2131427340
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_activity_chooser_view As Integer = 2131427340
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item
+  id: abc_activity_chooser_view_list_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_activity_chooser_view_list_item
+  nameWithType: Resource.Layout.abc_activity_chooser_view_list_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_activity_chooser_view_list_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_activity_chooser_view_list_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11880
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_activity_chooser_view_list_item = 2131427341
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_activity_chooser_view_list_item As Integer = 2131427341
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material
+  id: abc_alert_dialog_button_bar_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_alert_dialog_button_bar_material
+  nameWithType: Resource.Layout.abc_alert_dialog_button_bar_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_button_bar_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_alert_dialog_button_bar_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11883
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_alert_dialog_button_bar_material = 2131427342
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_alert_dialog_button_bar_material As Integer = 2131427342
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_material
+  id: abc_alert_dialog_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_alert_dialog_material
+  nameWithType: Resource.Layout.abc_alert_dialog_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_alert_dialog_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11886
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_alert_dialog_material = 2131427343
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_alert_dialog_material As Integer = 2131427343
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_title_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_title_material
+  id: abc_alert_dialog_title_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_alert_dialog_title_material
+  nameWithType: Resource.Layout.abc_alert_dialog_title_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_alert_dialog_title_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_alert_dialog_title_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11889
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_alert_dialog_title_material = 2131427344
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_alert_dialog_title_material As Integer = 2131427344
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_cascading_menu_item_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_cascading_menu_item_layout
+  id: abc_cascading_menu_item_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_cascading_menu_item_layout
+  nameWithType: Resource.Layout.abc_cascading_menu_item_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_cascading_menu_item_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_cascading_menu_item_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11892
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_cascading_menu_item_layout = 2131427345
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_cascading_menu_item_layout As Integer = 2131427345
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_dialog_title_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_dialog_title_material
+  id: abc_dialog_title_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_dialog_title_material
+  nameWithType: Resource.Layout.abc_dialog_title_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_dialog_title_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_dialog_title_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11895
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_dialog_title_material = 2131427346
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_dialog_title_material As Integer = 2131427346
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_expanded_menu_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_expanded_menu_layout
+  id: abc_expanded_menu_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_expanded_menu_layout
+  nameWithType: Resource.Layout.abc_expanded_menu_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_expanded_menu_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_expanded_menu_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11898
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_expanded_menu_layout = 2131427347
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_expanded_menu_layout As Integer = 2131427347
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_checkbox
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_checkbox
+  id: abc_list_menu_item_checkbox
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_list_menu_item_checkbox
+  nameWithType: Resource.Layout.abc_list_menu_item_checkbox
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_checkbox
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_menu_item_checkbox
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11901
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_menu_item_checkbox = 2131427348
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_menu_item_checkbox As Integer = 2131427348
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_icon
+  id: abc_list_menu_item_icon
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_list_menu_item_icon
+  nameWithType: Resource.Layout.abc_list_menu_item_icon
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_menu_item_icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11904
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_menu_item_icon = 2131427349
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_menu_item_icon As Integer = 2131427349
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_layout
+  id: abc_list_menu_item_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_list_menu_item_layout
+  nameWithType: Resource.Layout.abc_list_menu_item_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_menu_item_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11907
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_menu_item_layout = 2131427350
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_menu_item_layout As Integer = 2131427350
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_radio
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_radio
+  id: abc_list_menu_item_radio
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_list_menu_item_radio
+  nameWithType: Resource.Layout.abc_list_menu_item_radio
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_list_menu_item_radio
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_list_menu_item_radio
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11910
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_list_menu_item_radio = 2131427351
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_list_menu_item_radio As Integer = 2131427351
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout
+  id: abc_popup_menu_header_item_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_popup_menu_header_item_layout
+  nameWithType: Resource.Layout.abc_popup_menu_header_item_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_header_item_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_popup_menu_header_item_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11913
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_popup_menu_header_item_layout = 2131427352
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_popup_menu_header_item_layout As Integer = 2131427352
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_item_layout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_item_layout
+  id: abc_popup_menu_item_layout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_popup_menu_item_layout
+  nameWithType: Resource.Layout.abc_popup_menu_item_layout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_popup_menu_item_layout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_popup_menu_item_layout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11916
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_popup_menu_item_layout = 2131427353
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_popup_menu_item_layout As Integer = 2131427353
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_screen_content_include
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_screen_content_include
+  id: abc_screen_content_include
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_screen_content_include
+  nameWithType: Resource.Layout.abc_screen_content_include
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_screen_content_include
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_screen_content_include
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11919
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_screen_content_include = 2131427354
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_screen_content_include As Integer = 2131427354
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple
+  id: abc_screen_simple
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_screen_simple
+  nameWithType: Resource.Layout.abc_screen_simple
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_screen_simple
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11922
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_screen_simple = 2131427355
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_screen_simple As Integer = 2131427355
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode
+  id: abc_screen_simple_overlay_action_mode
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_screen_simple_overlay_action_mode
+  nameWithType: Resource.Layout.abc_screen_simple_overlay_action_mode
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_screen_simple_overlay_action_mode
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11925
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_screen_simple_overlay_action_mode = 2131427356
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_screen_simple_overlay_action_mode As Integer = 2131427356
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_screen_toolbar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_screen_toolbar
+  id: abc_screen_toolbar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_screen_toolbar
+  nameWithType: Resource.Layout.abc_screen_toolbar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_screen_toolbar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_screen_toolbar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11928
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_screen_toolbar = 2131427357
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_screen_toolbar As Integer = 2131427357
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line
+  id: abc_search_dropdown_item_icons_2line
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_search_dropdown_item_icons_2line
+  nameWithType: Resource.Layout.abc_search_dropdown_item_icons_2line
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_dropdown_item_icons_2line
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11931
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_dropdown_item_icons_2line = 2131427358
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_dropdown_item_icons_2line As Integer = 2131427358
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_search_view
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_search_view
+  id: abc_search_view
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_search_view
+  nameWithType: Resource.Layout.abc_search_view
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_search_view
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_search_view
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11934
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_search_view = 2131427359
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_search_view As Integer = 2131427359
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_select_dialog_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_select_dialog_material
+  id: abc_select_dialog_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_select_dialog_material
+  nameWithType: Resource.Layout.abc_select_dialog_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_select_dialog_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_select_dialog_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11937
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_select_dialog_material = 2131427360
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_select_dialog_material As Integer = 2131427360
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.abc_tooltip
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.abc_tooltip
+  id: abc_tooltip
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: abc_tooltip
+  nameWithType: Resource.Layout.abc_tooltip
+  fullName: AnorocMobileApp.Droid.Resource.Layout.abc_tooltip
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_tooltip
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11940
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_tooltip = 2131427361
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_tooltip As Integer = 2131427361
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.activity_webview
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.activity_webview
+  id: activity_webview
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: activity_webview
+  nameWithType: Resource.Layout.activity_webview
+  fullName: AnorocMobileApp.Droid.Resource.Layout.activity_webview
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: activity_webview
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11943
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int activity_webview = 2131427362
+    return:
+      type: System.Int32
+    content.vb: Public Const activity_webview As Integer = 2131427362
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.BottomTabLayout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.BottomTabLayout
+  id: BottomTabLayout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: BottomTabLayout
+  nameWithType: Resource.Layout.BottomTabLayout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.BottomTabLayout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: BottomTabLayout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11946
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int BottomTabLayout = 2131427328
+    return:
+      type: System.Int32
+    content.vb: Public Const BottomTabLayout As Integer = 2131427328
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_page
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_page
+  id: browser_actions_context_menu_page
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_context_menu_page
+  nameWithType: Resource.Layout.browser_actions_context_menu_page
+  fullName: AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_page
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_context_menu_page
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11949
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_context_menu_page = 2131427363
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_context_menu_page As Integer = 2131427363
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_row
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_row
+  id: browser_actions_context_menu_row
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: browser_actions_context_menu_row
+  nameWithType: Resource.Layout.browser_actions_context_menu_row
+  fullName: AnorocMobileApp.Droid.Resource.Layout.browser_actions_context_menu_row
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: browser_actions_context_menu_row
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11952
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int browser_actions_context_menu_row = 2131427364
+    return:
+      type: System.Int32
+    content.vb: Public Const browser_actions_context_menu_row As Integer = 2131427364
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_bottom_navigation_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_bottom_navigation_item
+  id: design_bottom_navigation_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_navigation_item
+  nameWithType: Resource.Layout.design_bottom_navigation_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_bottom_navigation_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_navigation_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11955
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_navigation_item = 2131427365
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_navigation_item As Integer = 2131427365
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_bottom_sheet_dialog
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_bottom_sheet_dialog
+  id: design_bottom_sheet_dialog
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_bottom_sheet_dialog
+  nameWithType: Resource.Layout.design_bottom_sheet_dialog
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_bottom_sheet_dialog
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_bottom_sheet_dialog
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11958
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_bottom_sheet_dialog = 2131427366
+    return:
+      type: System.Int32
+    content.vb: Public Const design_bottom_sheet_dialog As Integer = 2131427366
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar
+  id: design_layout_snackbar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_layout_snackbar
+  nameWithType: Resource.Layout.design_layout_snackbar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_layout_snackbar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11961
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_layout_snackbar = 2131427367
+    return:
+      type: System.Int32
+    content.vb: Public Const design_layout_snackbar As Integer = 2131427367
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar_include
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar_include
+  id: design_layout_snackbar_include
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_layout_snackbar_include
+  nameWithType: Resource.Layout.design_layout_snackbar_include
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_layout_snackbar_include
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_layout_snackbar_include
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11964
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_layout_snackbar_include = 2131427368
+    return:
+      type: System.Int32
+    content.vb: Public Const design_layout_snackbar_include As Integer = 2131427368
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_icon
+  id: design_layout_tab_icon
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_layout_tab_icon
+  nameWithType: Resource.Layout.design_layout_tab_icon
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_layout_tab_icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11967
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_layout_tab_icon = 2131427369
+    return:
+      type: System.Int32
+    content.vb: Public Const design_layout_tab_icon As Integer = 2131427369
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_text
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_text
+  id: design_layout_tab_text
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_layout_tab_text
+  nameWithType: Resource.Layout.design_layout_tab_text
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_layout_tab_text
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_layout_tab_text
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11970
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_layout_tab_text = 2131427370
+    return:
+      type: System.Int32
+    content.vb: Public Const design_layout_tab_text As Integer = 2131427370
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_menu_item_action_area
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_menu_item_action_area
+  id: design_menu_item_action_area
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_menu_item_action_area
+  nameWithType: Resource.Layout.design_menu_item_action_area
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_menu_item_action_area
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_menu_item_action_area
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11973
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_menu_item_action_area = 2131427371
+    return:
+      type: System.Int32
+    content.vb: Public Const design_menu_item_action_area As Integer = 2131427371
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_item
+  id: design_navigation_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_item
+  nameWithType: Resource.Layout.design_navigation_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11976
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_item = 2131427372
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_item As Integer = 2131427372
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_header
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_header
+  id: design_navigation_item_header
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_item_header
+  nameWithType: Resource.Layout.design_navigation_item_header
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_header
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_item_header
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11979
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_item_header = 2131427373
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_item_header As Integer = 2131427373
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_separator
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_separator
+  id: design_navigation_item_separator
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_item_separator
+  nameWithType: Resource.Layout.design_navigation_item_separator
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_separator
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_item_separator
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11982
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_item_separator = 2131427374
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_item_separator As Integer = 2131427374
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_subheader
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_subheader
+  id: design_navigation_item_subheader
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_item_subheader
+  nameWithType: Resource.Layout.design_navigation_item_subheader
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_item_subheader
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_item_subheader
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11985
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_item_subheader = 2131427375
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_item_subheader As Integer = 2131427375
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu
+  id: design_navigation_menu
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_menu
+  nameWithType: Resource.Layout.design_navigation_menu
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_menu
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11988
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_menu = 2131427376
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_menu As Integer = 2131427376
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu_item
+  id: design_navigation_menu_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_navigation_menu_item
+  nameWithType: Resource.Layout.design_navigation_menu_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_navigation_menu_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_navigation_menu_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11991
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_navigation_menu_item = 2131427377
+    return:
+      type: System.Int32
+    content.vb: Public Const design_navigation_menu_item As Integer = 2131427377
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.design_text_input_password_icon
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.design_text_input_password_icon
+  id: design_text_input_password_icon
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: design_text_input_password_icon
+  nameWithType: Resource.Layout.design_text_input_password_icon
+  fullName: AnorocMobileApp.Droid.Resource.Layout.design_text_input_password_icon
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_text_input_password_icon
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11994
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_text_input_password_icon = 2131427378
+    return:
+      type: System.Int32
+    content.vb: Public Const design_text_input_password_icon As Integer = 2131427378
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.FlyoutContent
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.FlyoutContent
+  id: FlyoutContent
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: FlyoutContent
+  nameWithType: Resource.Layout.FlyoutContent
+  fullName: AnorocMobileApp.Droid.Resource.Layout.FlyoutContent
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: FlyoutContent
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11997
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int FlyoutContent = 2131427329
+    return:
+      type: System.Int32
+    content.vb: Public Const FlyoutContent As Integer = 2131427329
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar
+  id: mtrl_layout_snackbar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: mtrl_layout_snackbar
+  nameWithType: Resource.Layout.mtrl_layout_snackbar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_layout_snackbar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12000
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_layout_snackbar = 2131427379
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_layout_snackbar As Integer = 2131427379
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar_include
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar_include
+  id: mtrl_layout_snackbar_include
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: mtrl_layout_snackbar_include
+  nameWithType: Resource.Layout.mtrl_layout_snackbar_include
+  fullName: AnorocMobileApp.Droid.Resource.Layout.mtrl_layout_snackbar_include
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_layout_snackbar_include
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12003
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_layout_snackbar_include = 2131427380
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_layout_snackbar_include As Integer = 2131427380
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_action
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_action
+  id: notification_action
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_action
+  nameWithType: Resource.Layout.notification_action
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_action
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_action
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12006
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_action = 2131427381
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_action As Integer = 2131427381
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_action_tombstone
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_action_tombstone
+  id: notification_action_tombstone
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_action_tombstone
+  nameWithType: Resource.Layout.notification_action_tombstone
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_action_tombstone
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_action_tombstone
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12009
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_action_tombstone = 2131427382
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_action_tombstone As Integer = 2131427382
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_media_action
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_media_action
+  id: notification_media_action
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_media_action
+  nameWithType: Resource.Layout.notification_media_action
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_media_action
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_media_action
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12012
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_media_action = 2131427383
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_media_action As Integer = 2131427383
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_media_cancel_action
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_media_cancel_action
+  id: notification_media_cancel_action
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_media_cancel_action
+  nameWithType: Resource.Layout.notification_media_cancel_action
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_media_cancel_action
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_media_cancel_action
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12015
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_media_cancel_action = 2131427384
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_media_cancel_action As Integer = 2131427384
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media
+  id: notification_template_big_media
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_big_media
+  nameWithType: Resource.Layout.notification_template_big_media
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_big_media
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12018
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_big_media = 2131427385
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_big_media As Integer = 2131427385
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_custom
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_custom
+  id: notification_template_big_media_custom
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_big_media_custom
+  nameWithType: Resource.Layout.notification_template_big_media_custom
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_custom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_big_media_custom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12021
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_big_media_custom = 2131427386
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_big_media_custom As Integer = 2131427386
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow
+  id: notification_template_big_media_narrow
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_big_media_narrow
+  nameWithType: Resource.Layout.notification_template_big_media_narrow
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_big_media_narrow
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12024
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_big_media_narrow = 2131427387
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_big_media_narrow As Integer = 2131427387
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom
+  id: notification_template_big_media_narrow_custom
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_big_media_narrow_custom
+  nameWithType: Resource.Layout.notification_template_big_media_narrow_custom
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_big_media_narrow_custom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_big_media_narrow_custom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12027
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_big_media_narrow_custom = 2131427388
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_big_media_narrow_custom As Integer = 2131427388
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_custom_big
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_custom_big
+  id: notification_template_custom_big
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_custom_big
+  nameWithType: Resource.Layout.notification_template_custom_big
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_custom_big
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_custom_big
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12030
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_custom_big = 2131427389
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_custom_big As Integer = 2131427389
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_icon_group
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_icon_group
+  id: notification_template_icon_group
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_icon_group
+  nameWithType: Resource.Layout.notification_template_icon_group
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_icon_group
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_icon_group
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12033
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_icon_group = 2131427390
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_icon_group As Integer = 2131427390
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_lines_media
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_lines_media
+  id: notification_template_lines_media
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_lines_media
+  nameWithType: Resource.Layout.notification_template_lines_media
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_lines_media
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_lines_media
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12036
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_lines_media = 2131427391
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_lines_media As Integer = 2131427391
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_media
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_media
+  id: notification_template_media
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_media
+  nameWithType: Resource.Layout.notification_template_media
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_media
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_media
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12039
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_media = 2131427392
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_media As Integer = 2131427392
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_media_custom
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_media_custom
+  id: notification_template_media_custom
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_media_custom
+  nameWithType: Resource.Layout.notification_template_media_custom
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_media_custom
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_media_custom
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12042
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_media_custom = 2131427393
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_media_custom As Integer = 2131427393
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_part_chronometer
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_part_chronometer
+  id: notification_template_part_chronometer
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_part_chronometer
+  nameWithType: Resource.Layout.notification_template_part_chronometer
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_part_chronometer
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_part_chronometer
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12045
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_part_chronometer = 2131427394
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_part_chronometer As Integer = 2131427394
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.notification_template_part_time
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.notification_template_part_time
+  id: notification_template_part_time
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: notification_template_part_time
+  nameWithType: Resource.Layout.notification_template_part_time
+  fullName: AnorocMobileApp.Droid.Resource.Layout.notification_template_part_time
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: notification_template_part_time
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12048
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int notification_template_part_time = 2131427395
+    return:
+      type: System.Int32
+    content.vb: Public Const notification_template_part_time As Integer = 2131427395
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.RootLayout
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.RootLayout
+  id: RootLayout
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: RootLayout
+  nameWithType: Resource.Layout.RootLayout
+  fullName: AnorocMobileApp.Droid.Resource.Layout.RootLayout
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: RootLayout
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12051
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int RootLayout = 2131427330
+    return:
+      type: System.Int32
+    content.vb: Public Const RootLayout As Integer = 2131427330
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.select_dialog_item_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.select_dialog_item_material
+  id: select_dialog_item_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: select_dialog_item_material
+  nameWithType: Resource.Layout.select_dialog_item_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.select_dialog_item_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: select_dialog_item_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12054
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int select_dialog_item_material = 2131427396
+    return:
+      type: System.Int32
+    content.vb: Public Const select_dialog_item_material As Integer = 2131427396
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.select_dialog_multichoice_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.select_dialog_multichoice_material
+  id: select_dialog_multichoice_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: select_dialog_multichoice_material
+  nameWithType: Resource.Layout.select_dialog_multichoice_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.select_dialog_multichoice_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: select_dialog_multichoice_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12057
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int select_dialog_multichoice_material = 2131427397
+    return:
+      type: System.Int32
+    content.vb: Public Const select_dialog_multichoice_material As Integer = 2131427397
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.select_dialog_singlechoice_material
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.select_dialog_singlechoice_material
+  id: select_dialog_singlechoice_material
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: select_dialog_singlechoice_material
+  nameWithType: Resource.Layout.select_dialog_singlechoice_material
+  fullName: AnorocMobileApp.Droid.Resource.Layout.select_dialog_singlechoice_material
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: select_dialog_singlechoice_material
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12060
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int select_dialog_singlechoice_material = 2131427398
+    return:
+      type: System.Int32
+    content.vb: Public Const select_dialog_singlechoice_material As Integer = 2131427398
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.ShellContent
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.ShellContent
+  id: ShellContent
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: ShellContent
+  nameWithType: Resource.Layout.ShellContent
+  fullName: AnorocMobileApp.Droid.Resource.Layout.ShellContent
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: ShellContent
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12063
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int ShellContent = 2131427331
+    return:
+      type: System.Int32
+    content.vb: Public Const ShellContent As Integer = 2131427331
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item
+  id: support_simple_spinner_dropdown_item
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: support_simple_spinner_dropdown_item
+  nameWithType: Resource.Layout.support_simple_spinner_dropdown_item
+  fullName: AnorocMobileApp.Droid.Resource.Layout.support_simple_spinner_dropdown_item
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: support_simple_spinner_dropdown_item
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12066
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int support_simple_spinner_dropdown_item = 2131427399
+    return:
+      type: System.Int32
+    content.vb: Public Const support_simple_spinner_dropdown_item As Integer = 2131427399
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.Tabbar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.Tabbar
+  id: Tabbar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: Tabbar
+  nameWithType: Resource.Layout.Tabbar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.Tabbar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Tabbar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12069
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int Tabbar = 2131427332
+    return:
+      type: System.Int32
+    content.vb: Public Const Tabbar As Integer = 2131427332
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Layout.Toolbar
+  commentId: F:AnorocMobileApp.Droid.Resource.Layout.Toolbar
+  id: Toolbar
+  parent: AnorocMobileApp.Droid.Resource.Layout
+  langs:
+  - csharp
+  - vb
+  name: Toolbar
+  nameWithType: Resource.Layout.Toolbar
+  fullName: AnorocMobileApp.Droid.Resource.Layout.Toolbar
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Toolbar
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 12072
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int Toolbar = 2131427333
+    return:
+      type: System.Int32
+    content.vb: Public Const Toolbar As Integer = 2131427333
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

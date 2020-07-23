@@ -77,7 +77,7 @@ namespace AnorocMobileApp.Droid.Resources
 
             public void OnError(FacebookException fbException) =>
                 view.OnError?.Execute(fbException.Message);
-
+            
             public void OnSuccess(Java.Lang.Object result) =>
                 view.OnSuccess?.Execute(((LoginResult)result).AccessToken.Token);
 

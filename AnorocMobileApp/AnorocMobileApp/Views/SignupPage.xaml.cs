@@ -1,25 +1,33 @@
 ﻿using AnorocMobileApp.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-
+using AnorocMobileApp.Views.Home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views
 {
+    /// <summary>
+    /// Class to manage Sign Up
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignupPage : ContentPage
     {
         User user;
+        /// <summary>
+        /// Constructor to Load Sign Up page
+        /// </summary>
         public SignupPage()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Navigation to home screen
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event Arguments</param>
         private void btn_Back_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage.Navigation.PopAsync();
@@ -27,6 +35,11 @@ namespace AnorocMobileApp.Views
 
         // TODO:
         // Change Alerts to red highlights of the entry missing
+        /// <summary>
+        /// Managing and using user provided input to sign up and create a new account
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Event Argumants</param>
         private void btn_signup_Clicked(object sender, EventArgs e)
         {
             if(UserEmail.Text != "")
@@ -45,7 +58,7 @@ namespace AnorocMobileApp.Views
                                     if (Password.Text.Equals(ConfrimPassword.Text))
                                     {
                                         User.Email = UserEmail.Text;
-                                        User.UserName = UsersName.Text;
+                                        User.FirstName = UsersName.Text;
                                         User.UserSurname = UserSurname.Text;
                                         User.loggedInAnoroc = true;
                                         user = new User();
@@ -76,12 +89,18 @@ namespace AnorocMobileApp.Views
                 }
             }
         }
-
+        /// <summary>
+        /// Manage a successful registration of new user
+        /// </summary>
         public static void registerSuccessfull()
         {
             Application.Current.MainPage = new HomePage();
         }
-
+        /// <summary>
+        /// Simple Notification that can inform the user on the register activity
+        /// </summary>
+        /// <param name="title">Title</param>
+        /// <param name="msg">Message that needs to be displayed to the user</param>
         public void DisplayAlert(string title, string msg)
         {
             (Application.Current as App).MainPage.DisplayAlert(title, msg, "OK");

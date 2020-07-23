@@ -1,4 +1,14 @@
-﻿using System;
+using Syncfusion.SfRotator.XForms.iOS;
+using Syncfusion.SfCalendar.XForms.iOS;
+using Syncfusion.XForms.iOS.Cards;
+using Syncfusion.XForms.iOS.Graphics;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.XForms.iOS.ComboBox;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.XForms.iOS.Buttons;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using AnorocMobileApp.Services;
@@ -23,7 +33,18 @@ namespace AnorocMobileApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             Xamarin.FormsMaps.Init();
-            global::Xamarin.Forms.Forms.Init();
+global::Xamarin.Forms.Forms.Init();
+            SfRotatorRenderer.Init();
+SfCardLayoutRenderer.Init();
+SfCalendarRenderer.Init();
+            SfCardViewRenderer.Init();
+            Core.Init();
+            SfGradientViewRenderer.Init();
+            SfListViewRenderer.Init();
+            SfRatingRenderer.Init();
+            SfBorderRenderer.Init();
+            SfButtonRenderer.Init();
+            SfComboBoxRenderer.Init();
             global::Xamarin.Auth.Presenters.XamarinIOS.AuthenticationConfiguration.Init();
             LoadApplication(new App());
 

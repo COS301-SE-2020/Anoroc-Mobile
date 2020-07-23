@@ -1,23 +1,18 @@
 ﻿using AnorocMobileApp.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Auth;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
 using Newtonsoft.Json.Linq;
-
 using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.Views
 {
+    /// <summary>
+    /// Login class used to manage all forms of Login
+    /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Login : ContentPage
     {
@@ -26,8 +21,12 @@ namespace AnorocMobileApp.Views
         {
             InitializeComponent();
         }
-
-        private /*async*/ void loginGoogle(object sender, EventArgs e)
+        /// <summary>
+        /// Use of the OAuth2Authenticator to validate Google Login
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Event Arguments at the instance the function is called</param>
+        void loginGoogle(object sender, EventArgs e)
         {
             var authenticator = new OAuth2Authenticator(
                 clientId: Constants.clientID,
@@ -48,33 +47,11 @@ namespace AnorocMobileApp.Views
         }
 
 
-        /*public async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs obj)
-        {
-            var authenticator = sender as OAuth2Authenticator;
-            if(authenticator != null)
-            {
-                authenticator.Completed -= OnAuthCompleted;
-                authenticator.Error -= onAuthError;
-            }
-
-            if (obj.IsAuthenticated)
-            {
-                //await DisplayAlert("Testing", obj.Account.Properties["access_token"], "OK");
-                var clientData = new HttpClient();
-                var resData = await clientData.GetAsync("https://www.googleapis.com/oauth2/v3/userinfo?access_token=" + obj.Account.Properties["access_token"]);
-                var json = await resData.Content.ReadAsStringAsync();
-                //await DisplayAlert("Testing", json, "OK");
-                var myJObject = JObject.Parse(json);
-                await DisplayAlert("Welcome", (myJObject.SelectToken("name").Value<string>()+"\n"+myJObject.SelectToken("email").Value<string>()), "OK");
-                GoogleAuthClass googleObject = JsonConvert.DeserializeObject<GoogleAuthClass>(json);
-                loginSuccessfull();
-            }
-            else
-            {
-                await DisplayAlert("Testing", obj.IsAuthenticated.ToString(), "OK");
-            }
-        }*/
-
+        /// <summary>
+        /// A function used to control and help with Authentication Problems and/or erros
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">Authentication Errors that clearly indicate errors if they occur</param>
         public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
         {
             var authenticator = new OAuth2Authenticator(
@@ -95,7 +72,12 @@ namespace AnorocMobileApp.Views
             presenter.Login(authenticator);
         }
 
-
+        /// <summary>
+        /// Function used to manage and control the user's data once successfully logged in
+        /// The User's data is retrived from the AuthenticatorCompletedEventArgs object
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="obj">An object of the user's profile data once completed with the Authorization</param>
         public async void OnAuthCompleted(object sender, AuthenticatorCompletedEventArgs obj)
         {
             var authenticator = sender as OAuth2Authenticator;
@@ -114,7 +96,7 @@ namespace AnorocMobileApp.Views
                 //await DisplayAlert("Testing", json, "OK");
                 var myJObject = JObject.Parse(json);
                 await DisplayAlert("Welcome", (myJObject.SelectToken("name").Value<string>()+"\n"+myJObject.SelectToken("email").Value<string>()), "OK");
-                GoogleAuthClass googleObject = JsonConvert.DeserializeObject<GoogleAuthClass>(json);
+                GoogleAuthorization googleObject = JsonConvert.DeserializeObject<GoogleAuthorization>(json);
                 loginSuccessfull();
             }
             else
@@ -123,17 +105,15 @@ namespace AnorocMobileApp.Views
             }
         }
 
-        /*public void onAuthError(object sender, AuthenticatorErrorEventArgs e)
-        {
-            DisplayAlert("Google Auth Error", e.Message, "OK");
-        }*/
-
-        public static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
+   
+        /*static void FacebookLoggedInAlready(IFacebookLoginService facebookLoginService)
         {
             Application.Current.MainPage = new HomePage(facebookLoginService);
-        }
-
-        private void loginSuccessfull()
+        }*/
+        /// <summary>
+        /// Handler function that navigates to a new page once a log in is successful with Google
+        /// </summary>
+        void loginSuccessfull()
         {
             /*var authenticator = OAuth2Authenticator
                 {
@@ -144,60 +124,36 @@ namespace AnorocMobileApp.Views
                 }*/
 
             //Application.Current.MainPage = new HomePage();
-            Application.Current.MainPage = new SettingsPage();
+            //Application.Current.MainPage = new SettingsPage();
         }
 
-        /*private void loginFacebook(object sender, EventArgs e)
-        {
-
-            OAuth2Authenticator auth = new OAuth2Authenticator(
-                    clientId: Constants.FacebookAppID,
-                    scope: "",
-                    authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
-                    redirectUrl: new Uri("https://www.facebook.com/connect/login_success.html")
-                );
-
-            auth.Completed += Facebook_Auth_Completed;
-
-            //AuthenticationState.Authenticator = auth;
-      
-        }
-
-        private void Facebook_Auth_Completed(object sender, AuthenticatorCompletedEventArgs e)
-        {
-            if(e.IsAuthenticated)
-            {
-                var token = new User()
-                {
-                    AccessToken = e.Account.Properties["access_token"]
-                };
-            }
-            else
-            {
-
-            }
-        }*/
-
+        /// <summary>
+        /// Handler function that navigates to a new page once successfully logged in through Facebook
+        /// </summary>
+        /// <param name="title"></param>
+        /// <param name="msg"></param>
+        /// <param name="facebookLoginService"></param>
         public static void FacebookSuccess(string title, string msg, IFacebookLoginService facebookLoginService)
         { 
-            Application.Current.MainPage = new HomePage(facebookLoginService);
+            Application.Current.MainPage = new HomePage_old(facebookLoginService);
         }
-
-        private async void btn_signup_Clicked(object sender, EventArgs e)
+        /// <summary>
+        /// Function called once the Sign In button is selectedin the app which opens the Sign Up page
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Event Arguments</param>
+        async void btn_signup_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignupPage());
         }
-        private async void btn_notification_Clicked(object sender, EventArgs e)
+        /// <summary>
+        /// Function called once the Notifications button is clicked which navigates to the Notifications page
+        /// </summary>
+        /// <param name="sender">Sender Object</param>
+        /// <param name="e">Event Arguments</param>
+        async void btn_notification_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NotificationPage());
         }
     }
-}
-
-public class GoogleAuthClass
-{
-    public string email { get; set; }
-    public string photo { get; set; }
-    public string name { get; set; }
-    public string email_verified { get; set; }
 }

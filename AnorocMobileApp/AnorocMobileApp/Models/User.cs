@@ -12,7 +12,7 @@ namespace AnorocMobileApp.Models
         private SignUpService signUpService = new SignUpService();
 
         public static string Email { get; set; }
-        public static string UserName { get; set; }
+        public static string FirstName { get; set; }
         public string Password { get; set; }
 
         public static string UserID { get; set; }
@@ -22,6 +22,7 @@ namespace AnorocMobileApp.Models
         public static bool loggedInFacebook { get; set; }
         public static bool loggedInGoogle { get; set; }
         public static bool loggedInAnoroc { get; set; }
+        public static bool carrierStatus { get; set; }
 
         public User()
         { 

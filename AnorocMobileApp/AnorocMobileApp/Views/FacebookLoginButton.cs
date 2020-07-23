@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
+
 
 namespace AnorocMobileApp.Views
 {
@@ -36,7 +38,7 @@ namespace AnorocMobileApp.Views
         public Command<string> OnSuccess
         {
             get { return (Command<string>)GetValue(OnSuccessProperty); }
-            set { SetValue(OnSuccessProperty, value); }
+            set { SetValue(OnSuccessProperty, value);  }
         }
 
         public static readonly BindableProperty OnSuccessProperty =

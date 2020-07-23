@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Services
 {
-    //Handles commnication with the Google API
+    /// <summary>
+    /// Handles commnication with the Google API
+    /// </summary>
     class GoogleServices
     {
        

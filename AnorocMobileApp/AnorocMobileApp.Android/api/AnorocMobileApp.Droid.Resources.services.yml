@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resources.services
+  commentId: N:AnorocMobileApp.Droid.Resources.services
+  id: AnorocMobileApp.Droid.Resources.services
+  children:
+  - AnorocMobileApp.Droid.Resources.services.FacebookLoginService
+  langs:
+  - csharp
+  - vb
+  name: AnorocMobileApp.Droid.Resources.services
+  nameWithType: AnorocMobileApp.Droid.Resources.services
+  fullName: AnorocMobileApp.Droid.Resources.services
+  type: Namespace
+  assemblies:
+  - AnorocMobileApp.Android
+references:
+- uid: AnorocMobileApp.Droid.Resources.services.FacebookLoginService
+  commentId: T:AnorocMobileApp.Droid.Resources.services.FacebookLoginService
+  name: FacebookLoginService
+  nameWithType: FacebookLoginService
+  fullName: AnorocMobileApp.Droid.Resources.services.FacebookLoginService

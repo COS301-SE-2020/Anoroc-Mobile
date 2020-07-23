@@ -1,0 +1,859 @@
+### YamlMime:ManagedReference
+items:
+- uid: AnorocMobileApp.Droid.Resource.Integer
+  commentId: T:AnorocMobileApp.Droid.Resource.Integer
+  id: Resource.Integer
+  parent: AnorocMobileApp.Droid
+  children:
+  - AnorocMobileApp.Droid.Resource.Integer.abc_config_activityDefaultDur
+  - AnorocMobileApp.Droid.Resource.Integer.abc_config_activityShortDur
+  - AnorocMobileApp.Droid.Resource.Integer.app_bar_elevation_anim_duration
+  - AnorocMobileApp.Droid.Resource.Integer.bottom_sheet_slide_duration
+  - AnorocMobileApp.Droid.Resource.Integer.cancel_button_image_alpha
+  - AnorocMobileApp.Droid.Resource.Integer.config_tooltipAnimTime
+  - AnorocMobileApp.Droid.Resource.Integer.design_snackbar_text_max_lines
+  - AnorocMobileApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms
+  - AnorocMobileApp.Droid.Resource.Integer.hide_password_duration
+  - AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms
+  - AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms
+  - AnorocMobileApp.Droid.Resource.Integer.mtrl_chip_anim_duration
+  - AnorocMobileApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms
+  - AnorocMobileApp.Droid.Resource.Integer.show_password_duration
+  - AnorocMobileApp.Droid.Resource.Integer.status_bar_notification_info_maxnum
+  langs:
+  - csharp
+  - vb
+  name: Resource.Integer
+  nameWithType: Resource.Integer
+  fullName: AnorocMobileApp.Droid.Resource.Integer
+  type: Class
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: Integer
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11772
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public class Integer
+    content.vb: Public Class Integer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ToString
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: AnorocMobileApp.Droid.Resource.Integer.abc_config_activityDefaultDur
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.abc_config_activityDefaultDur
+  id: abc_config_activityDefaultDur
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: abc_config_activityDefaultDur
+  nameWithType: Resource.Integer.abc_config_activityDefaultDur
+  fullName: AnorocMobileApp.Droid.Resource.Integer.abc_config_activityDefaultDur
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_config_activityDefaultDur
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11776
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_config_activityDefaultDur = 2131296256
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_config_activityDefaultDur As Integer = 2131296256
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.abc_config_activityShortDur
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.abc_config_activityShortDur
+  id: abc_config_activityShortDur
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: abc_config_activityShortDur
+  nameWithType: Resource.Integer.abc_config_activityShortDur
+  fullName: AnorocMobileApp.Droid.Resource.Integer.abc_config_activityShortDur
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: abc_config_activityShortDur
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11779
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int abc_config_activityShortDur = 2131296257
+    return:
+      type: System.Int32
+    content.vb: Public Const abc_config_activityShortDur As Integer = 2131296257
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.app_bar_elevation_anim_duration
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.app_bar_elevation_anim_duration
+  id: app_bar_elevation_anim_duration
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: app_bar_elevation_anim_duration
+  nameWithType: Resource.Integer.app_bar_elevation_anim_duration
+  fullName: AnorocMobileApp.Droid.Resource.Integer.app_bar_elevation_anim_duration
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: app_bar_elevation_anim_duration
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11782
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int app_bar_elevation_anim_duration = 2131296258
+    return:
+      type: System.Int32
+    content.vb: Public Const app_bar_elevation_anim_duration As Integer = 2131296258
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.bottom_sheet_slide_duration
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.bottom_sheet_slide_duration
+  id: bottom_sheet_slide_duration
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: bottom_sheet_slide_duration
+  nameWithType: Resource.Integer.bottom_sheet_slide_duration
+  fullName: AnorocMobileApp.Droid.Resource.Integer.bottom_sheet_slide_duration
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: bottom_sheet_slide_duration
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11785
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int bottom_sheet_slide_duration = 2131296259
+    return:
+      type: System.Int32
+    content.vb: Public Const bottom_sheet_slide_duration As Integer = 2131296259
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.cancel_button_image_alpha
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.cancel_button_image_alpha
+  id: cancel_button_image_alpha
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: cancel_button_image_alpha
+  nameWithType: Resource.Integer.cancel_button_image_alpha
+  fullName: AnorocMobileApp.Droid.Resource.Integer.cancel_button_image_alpha
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: cancel_button_image_alpha
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11788
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int cancel_button_image_alpha = 2131296260
+    return:
+      type: System.Int32
+    content.vb: Public Const cancel_button_image_alpha As Integer = 2131296260
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.config_tooltipAnimTime
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.config_tooltipAnimTime
+  id: config_tooltipAnimTime
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: config_tooltipAnimTime
+  nameWithType: Resource.Integer.config_tooltipAnimTime
+  fullName: AnorocMobileApp.Droid.Resource.Integer.config_tooltipAnimTime
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: config_tooltipAnimTime
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11791
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int config_tooltipAnimTime = 2131296261
+    return:
+      type: System.Int32
+    content.vb: Public Const config_tooltipAnimTime As Integer = 2131296261
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.design_snackbar_text_max_lines
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.design_snackbar_text_max_lines
+  id: design_snackbar_text_max_lines
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: design_snackbar_text_max_lines
+  nameWithType: Resource.Integer.design_snackbar_text_max_lines
+  fullName: AnorocMobileApp.Droid.Resource.Integer.design_snackbar_text_max_lines
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_snackbar_text_max_lines
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11794
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_snackbar_text_max_lines = 2131296262
+    return:
+      type: System.Int32
+    content.vb: Public Const design_snackbar_text_max_lines As Integer = 2131296262
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms
+  id: design_tab_indicator_anim_duration_ms
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: design_tab_indicator_anim_duration_ms
+  nameWithType: Resource.Integer.design_tab_indicator_anim_duration_ms
+  fullName: AnorocMobileApp.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: design_tab_indicator_anim_duration_ms
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11797
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int design_tab_indicator_anim_duration_ms = 2131296263
+    return:
+      type: System.Int32
+    content.vb: Public Const design_tab_indicator_anim_duration_ms As Integer = 2131296263
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.hide_password_duration
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.hide_password_duration
+  id: hide_password_duration
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: hide_password_duration
+  nameWithType: Resource.Integer.hide_password_duration
+  fullName: AnorocMobileApp.Droid.Resource.Integer.hide_password_duration
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: hide_password_duration
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11800
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int hide_password_duration = 2131296264
+    return:
+      type: System.Int32
+    content.vb: Public Const hide_password_duration As Integer = 2131296264
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms
+  id: mtrl_btn_anim_delay_ms
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_anim_delay_ms
+  nameWithType: Resource.Integer.mtrl_btn_anim_delay_ms
+  fullName: AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_delay_ms
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_anim_delay_ms
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11803
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_anim_delay_ms = 2131296265
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_anim_delay_ms As Integer = 2131296265
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms
+  id: mtrl_btn_anim_duration_ms
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: mtrl_btn_anim_duration_ms
+  nameWithType: Resource.Integer.mtrl_btn_anim_duration_ms
+  fullName: AnorocMobileApp.Droid.Resource.Integer.mtrl_btn_anim_duration_ms
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_btn_anim_duration_ms
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11806
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_btn_anim_duration_ms = 2131296266
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_btn_anim_duration_ms As Integer = 2131296266
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.mtrl_chip_anim_duration
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.mtrl_chip_anim_duration
+  id: mtrl_chip_anim_duration
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: mtrl_chip_anim_duration
+  nameWithType: Resource.Integer.mtrl_chip_anim_duration
+  fullName: AnorocMobileApp.Droid.Resource.Integer.mtrl_chip_anim_duration
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_chip_anim_duration
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11809
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_chip_anim_duration = 2131296267
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_chip_anim_duration As Integer = 2131296267
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms
+  id: mtrl_tab_indicator_anim_duration_ms
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: mtrl_tab_indicator_anim_duration_ms
+  nameWithType: Resource.Integer.mtrl_tab_indicator_anim_duration_ms
+  fullName: AnorocMobileApp.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: mtrl_tab_indicator_anim_duration_ms
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11812
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int mtrl_tab_indicator_anim_duration_ms = 2131296268
+    return:
+      type: System.Int32
+    content.vb: Public Const mtrl_tab_indicator_anim_duration_ms As Integer = 2131296268
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.show_password_duration
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.show_password_duration
+  id: show_password_duration
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: show_password_duration
+  nameWithType: Resource.Integer.show_password_duration
+  fullName: AnorocMobileApp.Droid.Resource.Integer.show_password_duration
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: show_password_duration
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11815
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int show_password_duration = 2131296269
+    return:
+      type: System.Int32
+    content.vb: Public Const show_password_duration As Integer = 2131296269
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: AnorocMobileApp.Droid.Resource.Integer.status_bar_notification_info_maxnum
+  commentId: F:AnorocMobileApp.Droid.Resource.Integer.status_bar_notification_info_maxnum
+  id: status_bar_notification_info_maxnum
+  parent: AnorocMobileApp.Droid.Resource.Integer
+  langs:
+  - csharp
+  - vb
+  name: status_bar_notification_info_maxnum
+  nameWithType: Resource.Integer.status_bar_notification_info_maxnum
+  fullName: AnorocMobileApp.Droid.Resource.Integer.status_bar_notification_info_maxnum
+  type: Field
+  source:
+    remote:
+      path: AnorocMobileApp/AnorocMobileApp.Android/obj/Release/90/designtime/Resource.designer.cs
+      branch: development
+      repo: https://github.com/COS301-SE-2020/Anoroc-Mobile.git
+    id: status_bar_notification_info_maxnum
+    path: obj/Release/90/designtime/Resource.designer.cs
+    startLine: 11818
+  assemblies:
+  - AnorocMobileApp.Android
+  namespace: AnorocMobileApp.Droid
+  syntax:
+    content: public const int status_bar_notification_info_maxnum = 2131296270
+    return:
+      type: System.Int32
+    content.vb: Public Const status_bar_notification_info_maxnum As Integer = 2131296270
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: AnorocMobileApp.Droid
+  commentId: N:AnorocMobileApp.Droid
+  name: AnorocMobileApp.Droid
+  nameWithType: AnorocMobileApp.Droid
+  fullName: AnorocMobileApp.Droid
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
