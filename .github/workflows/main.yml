@@ -20,24 +20,3 @@ jobs:
       run: |
         cd ..
         ls
-        
-  Android:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Android
-      run: |
-        cd AnorocMobileApp
-        nuget restore
-        cd AnorocMobileApp.Android
-        msbuild Blank.Android.csproj /verbosity:normal /t:Rebuild /p:Configuration=Debug
-        
-  iOS:
-    runs-on: macos-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: iOS
-      run: |
-        cd AnorocMobileApp
-        nuget restore
-        msbuild AnorocMobileAppiOS/Blank.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
