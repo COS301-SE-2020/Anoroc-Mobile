@@ -45,6 +45,10 @@ The application will allow the user to log in or register using either an Anoroc
 - Clone the Anoroc-Mobile or Anoroc-Server repository into your local directory.
 - Open Visual Studios by launching the AnorocMobileApp.sln or Anoroc.sln file respectively.
 
+### Google Maps
+- To use the google maps portion of the mobile application you need to place your own Google Maps API Key in the android manifest file.
+- To get an API Key please follow the instructions found at this link: [Obtaining a Google Maps API Key](https://docs.microsoft.com/en-us/xamarin/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key?tabs=windows)
+
 
 ## Testing Instructions
 
