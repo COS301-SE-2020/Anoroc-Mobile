@@ -42,7 +42,10 @@ namespace AnorocMobileApp.Services
         {
             Tracking = true;
             var message = new StartBackgroundLocationTracking();
-            Application.Current.Properties["Tracking"] = true;
+            if(Application.Current != null)
+            {
+                Application.Current.Properties["Tracking"] = true;
+            }
             MessagingCenter.Send(message, "StartBackgroundLocationTracking");
             HandleCancel();
         }
@@ -165,7 +168,10 @@ namespace AnorocMobileApp.Services
         {
             Tracking = false;
             Debug.WriteLine("Stopped tracking - " + _Backoff);
-            Application.Current.Properties["Tracking"] = false;
+            if (Application.Current != null)
+            {
+                Application.Current.Properties["Tracking"] = false;
+            }
             var message = new StopBackgroundLocationTrackingMessage();
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
         }

@@ -12,10 +12,12 @@ namespace AnorocMobileApp.Services.Tests
     [TestClass()]
     public class BackgroundLocaitonServiceTests
     {
-        IBackgroundLocationService BackgroundLocationService = new BackgroundLocaitonService();
+        
         [TestMethod()]
         public void Start_TrackingTest()
         {
+            IBackgroundLocationService BackgroundLocationService = new BackgroundLocaitonService();
+
             MessagingCenter.Subscribe<StartBackgroundLocationTracking>(this, "StartBackgroundLocationTracking", message =>
             {
                 Assert.IsTrue(BackgroundLocationService.isTracking());
@@ -26,6 +28,8 @@ namespace AnorocMobileApp.Services.Tests
         [TestMethod()]
         public void Stop_TrackingTest()
         {
+            IBackgroundLocationService BackgroundLocationService = new BackgroundLocaitonService();
+
             MessagingCenter.Subscribe<StopBackgroundLocationTrackingMessage>(this, "StopBackgroundLocationTrackingMessage", message =>
             {
                 Assert.IsFalse(BackgroundLocationService.isTracking());
