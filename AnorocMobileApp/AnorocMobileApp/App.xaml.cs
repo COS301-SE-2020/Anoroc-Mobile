@@ -1,14 +1,11 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-using AnorocMobileApp.Views;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
-using System;
-using System.Net;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using SimpleInjector;
+
 
 namespace AnorocMobileApp
 {
@@ -22,18 +19,26 @@ namespace AnorocMobileApp
         private static string syncfusionLicense = "";
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
- 
+
+
+        //-------------------------------------------------------------------------------------------------
+        //Container Set up
+        public static SimpleInjector.Container IoCContainer { get; set; } = new SimpleInjector.Container();
+        //-------------------------------------------------------------------------------------------------
+
         public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
             InitializeComponent();
-            
+
             // Dependancy Injections:
-            Container.BackgroundLocationService = backgroundLocationService;
-            Container.LocationService = new LocationService();
-            Container.userManagementService = new UserManagementService();
+            Interfaces.Container.BackgroundLocationService = backgroundLocationService;
+            Interfaces.Container.LocationService = new LocationService();
+            Interfaces.Container.userManagementService = new UserManagementService();
+
+          
 
             FacebookLoginService = facebookLoginService;
 
