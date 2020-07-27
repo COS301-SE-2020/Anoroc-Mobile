@@ -26,7 +26,7 @@ namespace AnorocMobileApp
         public static SimpleInjector.Container IoCContainer { get; set; } = new SimpleInjector.Container();
         //-------------------------------------------------------------------------------------------------
 
-        public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
+        public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
@@ -34,11 +34,9 @@ namespace AnorocMobileApp
             InitializeComponent();
 
             // Dependancy Injections:
-            Interfaces.Container.BackgroundLocationService = backgroundLocationService;
-            Interfaces.Container.LocationService = new LocationService();
-            Interfaces.Container.userManagementService = new UserManagementService();
-
-          
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
 
             FacebookLoginService = facebookLoginService;
 
@@ -64,29 +62,13 @@ namespace AnorocMobileApp
             }
         }
 
-        public App(IFacebookLoginService facebookLoginService)
-        {
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            InitializeComponent();
-
-                FacebookLoginService = facebookLoginService;
-                if (facebookLoginService.isLoggedIn())
-                {
-                    User.FirstName = facebookLoginService.FirstName;
-                    User.UserSurname = facebookLoginService.LastName;
-                    User.UserID = facebookLoginService.UserID;
-                    User.loggedInFacebook = true;
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
-                else
-                {
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
-        }
-
         public App()
         {
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
@@ -119,11 +101,12 @@ namespace AnorocMobileApp
         {
             if(Current.Properties.ContainsKey("Tracking"))
             {
+                IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
                 BackgroundLocaitonService.Tracking = value;
                 if(value)
                 {
-                    Container.BackgroundLocationService.Start_Tracking();
+                    backgroundLocationService.Start_Tracking();
                 }
             }
 
