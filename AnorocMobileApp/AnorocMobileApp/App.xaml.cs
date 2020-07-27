@@ -5,7 +5,7 @@ using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using Xamarin.Forms;
 using SimpleInjector;
-
+using SimpleInjector.Lifestyles;
 
 namespace AnorocMobileApp
 {
@@ -23,7 +23,7 @@ namespace AnorocMobileApp
 
         //-------------------------------------------------------------------------------------------------
         //Container Set up
-        public static SimpleInjector.Container IoCContainer { get; set; } = new SimpleInjector.Container();
+        public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
 
         public App(IFacebookLoginService facebookLoginService)
@@ -33,10 +33,13 @@ namespace AnorocMobileApp
 
             InitializeComponent();
 
+            //Defualt lifestle
+            IoCContainer = new Container();
+           /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
             FacebookLoginService = facebookLoginService;
 
