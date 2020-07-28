@@ -6,6 +6,7 @@ using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using System;
 using System.Net;
+using AnorocMobileApp.Helpers;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -19,7 +20,7 @@ namespace AnorocMobileApp
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
-        private static string syncfusionLicense = "";
+        private static string syncfusionLicense = Secrets.SyncfusionLicense;
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  

@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 
 using System.Threading.Tasks;
+using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Services;
 using Newtonsoft.Json;
 using Xamarin.Forms;
@@ -41,7 +42,7 @@ namespace AnorocMobileApp.Services
         /// 
         protected async void PostLocationAsync(Location location)
         {
-            string url = Constants.AnorocURI +  "location/GEOLocation";
+            const string url = Secrets.baseEndpoint + Secrets.geolocationEndpoint;
 
             HttpClientHandler clientHandler = new HttpClientHandler();
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
