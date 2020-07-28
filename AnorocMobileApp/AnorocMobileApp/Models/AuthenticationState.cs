@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Auth;
+﻿using Xamarin.Auth;
 
 namespace AnorocMobileApp.Models
 {

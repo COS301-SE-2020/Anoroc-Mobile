@@ -1,19 +1,14 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-using AnorocMobileApp.Views;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
-using System;
-using System.Net;
 using AnorocMobileApp.Helpers;
-using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp
 {
-    public partial class App : Application
+    public partial class App
     {
         public const string NotificationReceivedKey = "NotificationRecieved";
 

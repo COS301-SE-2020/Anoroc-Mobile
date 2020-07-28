@@ -1,6 +1,5 @@
 ﻿using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
-using AnorocMobileApp.Views;
 using System;
 using System.Diagnostics;
 using System.Threading;

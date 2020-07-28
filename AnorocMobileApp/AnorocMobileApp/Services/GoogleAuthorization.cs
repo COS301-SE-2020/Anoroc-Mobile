@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AnorocMobileApp.Services
+﻿namespace AnorocMobileApp.Services
 {
     /// <summary>
     /// Getter's and Setter's for Google's Authorization class used to authenticate our Google Login

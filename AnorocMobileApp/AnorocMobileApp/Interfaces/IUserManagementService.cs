@@ -1,5 +1,4 @@
-﻿using System;
-namespace AnorocMobileApp.Interfaces
+﻿namespace AnorocMobileApp.Interfaces
 {
     public interface IUserManagementService
     {

@@ -1,13 +1,11 @@
 ﻿using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 
 using System.Threading.Tasks;
 using AnorocMobileApp.Helpers;
-using AnorocMobileApp.Services;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
