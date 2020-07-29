@@ -81,16 +81,17 @@ namespace AnorocMobileApp.Views
         /// 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
+            IBackgroundLocationService backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.Value == true)
             {
                 
                 BackgroundLocaitonService.Tracking = true;
-                Container.BackgroundLocationService.Start_Tracking();               
+                backgroundLocationService.Start_Tracking();               
             }
             else
             {
                 BackgroundLocaitonService.Tracking = false;
-                Container.BackgroundLocationService.Stop_Tracking();
+                backgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
@@ -105,7 +106,7 @@ namespace AnorocMobileApp.Views
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;
-
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
             if (selectedIndex != -1)
             {
                 string value = (string)picker.ItemsSource[selectedIndex];
@@ -117,7 +118,7 @@ namespace AnorocMobileApp.Views
                 else
                     User.carrierStatus = false;
 
-                Container.userManagementService.sendCarrierStatusAsync(value);                
+                userManagementService.sendCarrierStatusAsync(value);                
             }
         }
     }
