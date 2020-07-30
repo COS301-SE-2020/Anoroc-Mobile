@@ -5,6 +5,8 @@ using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using AnorocMobileApp.Helpers;
 using Xamarin.Forms;
+using SimpleInjector;
+using SimpleInjector.Lifestyles;
 
 namespace AnorocMobileApp
 {
@@ -18,18 +20,27 @@ namespace AnorocMobileApp
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
- 
-        public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
+
+
+        //-------------------------------------------------------------------------------------------------
+        //Container Set up
+        public static Container IoCContainer { get; set; }
+        //-------------------------------------------------------------------------------------------------
+
+        public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
             InitializeComponent();
-            
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+           /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
             // Dependancy Injections:
-            Container.BackgroundLocationService = backgroundLocationService;
-            Container.LocationService = new LocationService();
-            Container.userManagementService = new UserManagementService();
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
             FacebookLoginService = facebookLoginService;
 
@@ -55,29 +66,13 @@ namespace AnorocMobileApp
             }
         }
 
-        public App(IFacebookLoginService facebookLoginService)
-        {
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            InitializeComponent();
-
-                FacebookLoginService = facebookLoginService;
-                if (facebookLoginService.isLoggedIn())
-                {
-                    User.FirstName = facebookLoginService.FirstName;
-                    User.UserSurname = facebookLoginService.LastName;
-                    User.UserID = facebookLoginService.UserID;
-                    User.loggedInFacebook = true;
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
-                else
-                {
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
-        }
-
         public App()
         {
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
@@ -110,11 +105,12 @@ namespace AnorocMobileApp
         {
             if(Current.Properties.ContainsKey("Tracking"))
             {
+                IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
                 BackgroundLocaitonService.Tracking = value;
                 if(value)
                 {
-                    Container.BackgroundLocationService.Start_Tracking();
+                    backgroundLocationService.Start_Tracking();
                 }
             }
 

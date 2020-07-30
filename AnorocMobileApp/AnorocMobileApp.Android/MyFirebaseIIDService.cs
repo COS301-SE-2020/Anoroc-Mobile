@@ -32,7 +32,8 @@ namespace AnorocMobileApp.Droid
 
         void SendRegistrationToServer(string token)
         {
-            Container.userManagementService.SendFireBaseToken(token);
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
+            userManagementService.SendFireBaseToken(token);
             // TODO: Still need to be implemented
             Log.Debug(PackageName, token);
         }

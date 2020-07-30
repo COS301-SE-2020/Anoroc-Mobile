@@ -66,7 +66,7 @@ namespace AnorocMobileApp.Services
                     {
                         response = await client.PostAsync(url, StringConent);
                     }
-                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException || e is HttpRequestException)
                     {
                         throw new CantConnectToLocationServerException();
                     }

@@ -22,6 +22,7 @@ namespace AnorocMobileApp.Services
 
         public BackgroundLocaitonService()
         {
+            LocationService = App.IoCContainer.GetInstance<ILocationService>();
             Tracking = false;
             Initial_Backoff = 15;
             _Backoff = Initial_Backoff;
@@ -84,7 +85,7 @@ namespace AnorocMobileApp.Services
         /// </summary>
         protected async void Track()
         {
-            LocationService = new LocationService();
+            
             bool success = false;
             int retry = 0;
             
