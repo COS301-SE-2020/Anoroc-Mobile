@@ -51,10 +51,10 @@ namespace AnorocMobileApp
             else
             {
 
-                //MainPage = new NavigationPage(new BottomNavigationPage());
+                MainPage = new Views.Navigation.SettingsPage();
                 //MainPage = new Views.Map();
 
-                MainPage = new LoginWithSocialIconPage();
+                //MainPage = new LoginWithSocialIconPage();
 
             }
         }
