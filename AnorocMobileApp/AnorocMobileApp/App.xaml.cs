@@ -3,20 +3,21 @@ using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
+using AnorocMobileApp.Helpers;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 
 namespace AnorocMobileApp
 {
-    public partial class App : Application
+    public partial class App
     {
         public const string NotificationReceivedKey = "NotificationRecieved";
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
-        private static string syncfusionLicense = "";
+        private static string syncfusionLicense = Secrets.SyncfusionLicense;
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
 

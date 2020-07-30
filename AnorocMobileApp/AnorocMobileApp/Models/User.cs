@@ -1,9 +1,5 @@
 ﻿using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Models
 {

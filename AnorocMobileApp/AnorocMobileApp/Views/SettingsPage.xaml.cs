@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Text;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Newtonsoft.Json;
 using Xamarin.Essentials;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
-using System.Diagnostics;
 using AnorocMobileApp.Models;
-using AnorocMobileApp.ViewModels;
 
 namespace AnorocMobileApp.Views
 {

@@ -1,6 +1,5 @@
 ﻿using AnorocMobileApp.DataService;
 using AnorocMobileApp.Services;
-using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
