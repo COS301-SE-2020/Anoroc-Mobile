@@ -30,6 +30,7 @@ namespace AnorocMobileApp.Models
             public static readonly string PolicySignin = "B2C_1_signupsignin1";
             public static readonly string PolicyPassword = "B2C_1_passwordreset";
             public static readonly string AuthorityBase = $"https://{TenantName}.b2clogin.com/tfp/{TenantId}/";
+            public static readonly string[] Scopes = { "" };
             public static string AuthoritySignin => $"{AuthorityBase}{PolicySignin}";
             public static string AuthorityPasswordReset => $"{AuthorityBase}{PolicyPassword}";
         }

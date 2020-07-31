@@ -120,7 +120,7 @@
                         Grid.Row="5"
                         Margin="0,16"
                         CornerRadius="4"
-                        Command="{Binding LoginCommand}"
+                        Clicked="OnLoginButtonClicked"
                         Style="{StaticResource SfButtonStyle}"
                         Text="LOG IN" />
 

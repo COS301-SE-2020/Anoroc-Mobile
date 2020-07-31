@@ -15,6 +15,7 @@ using Android.Util;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
+using Microsoft.Identity.Client;
 
 namespace AnorocMobileApp.Droid
 {
@@ -61,6 +62,7 @@ namespace AnorocMobileApp.Droid
             // Dependency Injection:
 
             LoadApplication(new App(new FacebookLoginService(), BackgroundLocationService));
+            App.UIParent = this;
 
             WireUpBackgroundLocationTask();
         }
@@ -120,7 +122,7 @@ namespace AnorocMobileApp.Droid
                 if ((grantResults.Length == 1) && (grantResults[0] == (int)Permission.Granted)) { }
                 // Permissions granted - display a message.
                 else { }        
-             }
+            }
             else
             {
                 base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -130,6 +132,7 @@ namespace AnorocMobileApp.Droid
         {
             base.OnActivityResult(requestCode, resultCode, data);
             CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
         }
 
 
