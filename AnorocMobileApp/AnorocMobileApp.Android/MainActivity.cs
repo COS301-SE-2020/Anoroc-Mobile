@@ -24,7 +24,7 @@ namespace AnorocMobileApp.Droid
         public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
-        public static IBackgroundLocationService BackgroundLocationService;
+       
 
         readonly string[] LocationPermissions =
         {
@@ -38,7 +38,7 @@ namespace AnorocMobileApp.Droid
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
 
             // Set Dependancy
-            BackgroundLocationService = new BackgroundLocaitonService();
+           
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -62,7 +62,7 @@ namespace AnorocMobileApp.Droid
 
             // Dependency Injection:
 
-            LoadApplication(new App(new FacebookLoginService(), BackgroundLocationService));
+            LoadApplication(new App(new FacebookLoginService()));
 
             WireUpBackgroundLocationTask();
         }

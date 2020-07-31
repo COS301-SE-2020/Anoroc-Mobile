@@ -1,9 +1,9 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using AnorocMobileApp.Exceptions;
+using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using Newtonsoft.Json;
@@ -71,9 +71,10 @@ namespace AnorocMobileApp.Services
 
             HttpClient client = new HttpClient(clientHandler);
 
-            string url = "https://10.0.2.2:5001/UserManagement/CarrierStatus";
+            //HttpClientHandler clientHandler = new HttpClientHandler();
+            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
 
-            Token token_object = new Token();
+            var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
             token_object.Object_To_Server = value;
 
