@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Interfaces;
-using Container = AnorocMobileApp.Interfaces.Container;
+
 
 namespace AnorocMobileApp.Views.Navigation
 {

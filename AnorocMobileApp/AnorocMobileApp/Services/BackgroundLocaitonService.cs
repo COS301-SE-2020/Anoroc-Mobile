@@ -1,7 +1,9 @@
 ﻿using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
+using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -29,7 +31,7 @@ namespace AnorocMobileApp.Services
             Modifier = 1.6;
             request_count = 0;
             User_Location = new Models.Location();
-            
+
             Track_Retry = 0;
         }
 
@@ -46,7 +48,7 @@ namespace AnorocMobileApp.Services
             MessagingCenter.Send(message, "StartBackgroundLocationTracking");
             HandleCancel();
         }
-        
+
         /// <summary>
         /// Calls the Track function based every _Backoff amount of seconds
         /// </summary>
@@ -62,7 +64,7 @@ namespace AnorocMobileApp.Services
 
                       await Task.Delay(ConvertSec(_Backoff));
                   }
-              },CancellationToken.None);
+              }, CancellationToken.None);
         }
 
         /// <summary>
@@ -71,7 +73,7 @@ namespace AnorocMobileApp.Services
         /// <param name="seconds"> The seconds to convert </param>
         /// <returns> The Miliseconds </returns>
         private int ConvertSec(double seconds)
-        { 
+        {
             return (int)(seconds * 1000);
         }
 
@@ -85,63 +87,83 @@ namespace AnorocMobileApp.Services
         /// </summary>
         protected async void Track()
         {
-            
+
             bool success = false;
             int retry = 0;
-            
-                retry = 0;
-                try
-                {
-                    // TODO:
-                    // faster they go, the more locations sent and slower they go the less
-                    request = new GeolocationRequest(GeolocationAccuracy.Best);
-                    Xamarin.Essentials.Location location = null;
 
-                    if (Previous_request != null)
+            retry = 0;
+            try
+            {
+                // TODO:
+                // faster they go, the more locations sent and slower they go the less
+                request = new GeolocationRequest(GeolocationAccuracy.Best);
+                Xamarin.Essentials.Location location = null;
+
+                if (Previous_request != null)
+                {
+                    location = await Geolocation.GetLocationAsync(request);
+                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
                     {
-                        location = await Geolocation.GetLocationAsync(request);
-                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
+                        _Backoff = Initial_Backoff;
+                        Track_Retry = 0;
+                        Models.Location customLocation = new Models.Location(location);
+                        //customLocation.Region
+                        var placemarks = await Geocoding.GetPlacemarksAsync(customLocation.Coordinate.Latitude, customLocation.Coordinate.Longitude);
+                        var placemark = placemarks?.FirstOrDefault();
+                        if (placemark != null)
                         {
-                            _Backoff = Initial_Backoff;
-                            Track_Retry = 0;
-                            Models.Location customLocation = new Models.Location(location);
-                            customLocation.Carrier_Data_Point = User.carrierStatus;
-                            LocationService.Send_Locaiton_ServerAsync(customLocation);
+                            var geocodeAddress =
+                                $"AdminArea:       {placemark.AdminArea}\n" +
+                                $"CountryCode:     {placemark.CountryCode}\n" +
+                                $"CountryName:     {placemark.CountryName}\n" +
+                                $"FeatureName:     {placemark.FeatureName}\n" +
+                                $"Locality:        {placemark.Locality}\n" +
+                                $"PostalCode:      {placemark.PostalCode}\n" +
+                                $"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                                $"SubLocality:     {placemark.SubLocality}\n" +
+                                $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                                $"Thoroughfare:    {placemark.Thoroughfare}\n";
+
+                            //Console.WriteLine(geocodeAddress);
+                            await App.Current.MainPage.DisplayAlert("Testing", JsonConvert.SerializeObject(geocodeAddress) , "OK");
+                        }
+                        customLocation.Carrier_Data_Point = User.carrierStatus;
+                        LocationService.Send_Locaiton_ServerAsync(customLocation);
+                    }
+                    else
+                    {
+                        if ((_Backoff / 60) <= 10)
+                        {
+                            _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
+                            Track_Retry++;
                         }
                         else
                         {
-                            if ((_Backoff / 60) <= 10)
-                            {
-                                _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
-                                Track_Retry++;
-                            }
-                            else
-                            {
                             //send the location on the 10th minute, and every 10 minutes after that
                             Models.Location customLocation = new Models.Location(location);
                             customLocation.Carrier_Data_Point = User.carrierStatus;
                             LocationService.Send_Locaiton_ServerAsync(customLocation);
-                            }
                         }
                     }
-                    else
-                    {
-                        location = await Geolocation.GetLocationAsync(request);
-                        Models.Location customLocation = new Models.Location(location);
-                        customLocation.Carrier_Data_Point = User.carrierStatus;
-                        LocationService.Send_Locaiton_ServerAsync(customLocation);
-                    }
-                    Previous_request = location;
-
-                    success = true;
                 }
-                catch (Exception e)
+                else
                 {
-                    Debug.WriteLine(e.StackTrace);
-                    //retry for getting the geolocation
-                    retry++;
+                    location = await Geolocation.GetLocationAsync(request);
+                    Models.Location customLocation = new Models.Location(location);
+                    customLocation.Carrier_Data_Point = User.carrierStatus;
+                    LocationService.Send_Locaiton_ServerAsync(customLocation);
                 }
-            
+                Previous_request = location;
+
+                success = true;
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.StackTrace);
+                //retry for getting the geolocation
+                retry++;
+            }
+
             /*if(retry == 3 || !success)
             {
                 Stop_Tracking();
