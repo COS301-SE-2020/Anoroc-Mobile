@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Interfaces;
-
+//using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
 {
@@ -80,22 +80,27 @@ namespace AnorocMobileApp.Views.Navigation
                 else
                     User.carrierStatus = false;
 
-                Container.userManagementService.sendCarrierStatusAsync(value);
+                
+                IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
+                user.sendCarrierStatusAsync(value);
             }
         }
 
 
         async void SfSwitch_StateChanged(System.Object sender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
         {
+            IBackgroundLocationService back = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.NewValue == true)
             {
                 BackgroundLocaitonService.Tracking = true;
-                //Container.BackgroundLocationService.Start_Tracking();
+                back.Start_Tracking();
+
             }
             else
             {
-                BackgroundLocaitonService.Tracking = false;
-                Container.BackgroundLocationService.Stop_Tracking();
+                BackgroundLocaitonService.Tracking = false;                               
+                back.Stop_Tracking();
+
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
 

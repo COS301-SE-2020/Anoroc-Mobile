@@ -18,7 +18,7 @@ namespace AnorocMobileApp.Views
 
             //UpdateMapAsync();
 
-            //DrawClusters();
+            DrawClusters();
         }
 
 

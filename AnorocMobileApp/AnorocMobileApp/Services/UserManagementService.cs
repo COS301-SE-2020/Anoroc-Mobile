@@ -86,7 +86,7 @@ namespace AnorocMobileApp.Services
 
             try
             {
-                //response = await client.PostAsync(url, c);
+                response = await client.PostAsync(url, c);
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {                
