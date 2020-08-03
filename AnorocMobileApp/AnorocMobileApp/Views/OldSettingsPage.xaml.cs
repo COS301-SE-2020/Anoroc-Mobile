@@ -90,6 +90,11 @@ namespace AnorocMobileApp.Views
             }
         }
 
+        public async void DisplayTest(String str) {
+            await DisplayAlert("Attention", "Disabled", "OK");
+
+        }
+
         /// <summary>
         /// Function when the Carrier status is changed
         /// </summary>
