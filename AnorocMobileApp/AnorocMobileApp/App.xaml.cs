@@ -34,9 +34,14 @@ namespace AnorocMobileApp
 
             InitializeComponent();
 
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+            MainPage = new LoginWithSocialIconPage();
+/*
             //Defualt lifestle
             IoCContainer = new Container();
-           /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
+           *//* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
@@ -63,7 +68,7 @@ namespace AnorocMobileApp
 
                 MainPage = new LoginWithSocialIconPage();
 
-            }
+            }*/
         }
 
         public App()

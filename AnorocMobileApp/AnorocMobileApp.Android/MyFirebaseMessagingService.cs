@@ -31,6 +31,8 @@ namespace AnorocMobileApp.Droid
             Console.WriteLine("Received: " + message);
             try
             {
+                var title = message.GetNotification().Title;
+                var data = message.GetNotification().ToString();
                 var msg = message.GetNotification().Body;
                 Console.WriteLine("Testing Data output: "  + message.Data.Values);
 

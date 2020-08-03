@@ -1,5 +1,7 @@
 ﻿using System;
+using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
+using Microsoft.Identity.Client;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -25,7 +27,36 @@ namespace AnorocMobileApp.Views.Forms
         /// </summary>
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());                  
-        }        
+             OnSignInSignOut(sender,e);
+        }
+
+        async void OnSignInSignOut(object sender, EventArgs e)
+        {
+            try
+            {
+                if (btnSignInSignOut.Text == "Sign in")
+                {
+                    var userContext = await B2CAuthenticationService.Instance.SignInAsync();
+                }
+                else
+                {
+                    var userContext = await B2CAuthenticationService.Instance.SignOutAsync();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                // Checking the exception message 
+                // should ONLY be done for B2C
+                // reset and not any other error.
+                if (ex.Message.Contains("AADB2C90118"))
+                    Console.WriteLine("Hello World!");
+                // Alert if any exception excluding user canceling sign-in dialog
+                else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
+                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
+            }
+        }
+
+
     }
 }
