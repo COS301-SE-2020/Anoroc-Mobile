@@ -66,27 +66,34 @@ namespace AnorocMobileApp.Services
         /// 
         public async void sendCarrierStatusAsync(string value)
         {
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            var clientHandler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            };
 
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
             var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
 
-            var token_object = new Token();
+            /*var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = value;
+            token_object.Object_To_Server = value;*/
+            
+            var status = value == "Positive";
+            var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);
 
-            var data = JsonConvert.SerializeObject(token_object);
+            var data = JsonConvert.SerializeObject(carrierStatus);
 
             var c = new StringContent(data, Encoding.UTF8, "application/json");
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-            HttpResponseMessage response;
+            
 
             try
             {
-                response = await client.PostAsync(url, c);
+                var response = await client.PostAsync(url, c);
+                //string result = response.Content.ReadAsStringAsync().Result;
+                //Debug.WriteLine(result);
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {                
