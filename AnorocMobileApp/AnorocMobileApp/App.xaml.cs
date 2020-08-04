@@ -4,6 +4,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
@@ -57,12 +58,8 @@ namespace AnorocMobileApp
             }
             else
             {
-
-                //MainPage = new NavigationPage(new BottomNavigationPage());
-                //MainPage = new Views.Map();
-
-                MainPage = new LoginWithSocialIconPage();
-
+                // MainPage = new LoginWithSocialIconPage();
+                MainPage = new ItineraryPage();
             }
         }
 
