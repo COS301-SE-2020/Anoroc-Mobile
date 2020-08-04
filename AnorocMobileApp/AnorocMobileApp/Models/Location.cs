@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Models
 {
@@ -31,7 +28,7 @@ namespace AnorocMobileApp.Models
         public DateTime Created { get; set; }
         public GEOCoordinate Coordinate { get; set; }
         public bool Carrier_Data_Point { get; set; }
-
+        public Area Region { get; set; }
 
         public Location clone()
         {

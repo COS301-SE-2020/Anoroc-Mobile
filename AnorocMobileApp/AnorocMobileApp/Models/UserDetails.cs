@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace AnorocMobileApp.Models
+﻿namespace AnorocMobileApp.Models
 {
     public class UserDetails
     {

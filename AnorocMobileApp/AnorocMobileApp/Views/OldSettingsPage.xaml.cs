@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Text;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Xamarin.Forms;
-using Newtonsoft.Json;
 using Xamarin.Essentials;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
-using System.Diagnostics;
 using AnorocMobileApp.Models;
-using AnorocMobileApp.ViewModels;
 
 namespace AnorocMobileApp.Views
 {
@@ -81,18 +75,24 @@ namespace AnorocMobileApp.Views
         /// 
         async void OnToggledAsync(object sender, ToggledEventArgs e)
         {
+            IBackgroundLocationService backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.Value == true)
             {
                 
                 BackgroundLocaitonService.Tracking = true;
-                Container.BackgroundLocationService.Start_Tracking();               
+                backgroundLocationService.Start_Tracking();               
             }
             else
             {
                 BackgroundLocaitonService.Tracking = false;
-                Container.BackgroundLocationService.Stop_Tracking();
+                backgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
+        }
+
+        public async void DisplayTest(String str) {
+            await DisplayAlert("Attention", "Disabled", "OK");
+
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace AnorocMobileApp.Views
         {
             var picker = (Picker)sender;
             int selectedIndex = picker.SelectedIndex;
-
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
             if (selectedIndex != -1)
             {
                 string value = (string)picker.ItemsSource[selectedIndex];
@@ -117,7 +117,7 @@ namespace AnorocMobileApp.Views
                 else
                     User.carrierStatus = false;
 
-                Container.userManagementService.sendCarrierStatusAsync(value);                
+                userManagementService.sendCarrierStatusAsync(value);                
             }
         }
     }

@@ -13,20 +13,20 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-      <ScrollView>
-        <Grid>
-          <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-          </Grid.RowDefinitions>
-          <Label Grid.Row="0"
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0"
                   FontFamily="{StaticResource Montserrat-Medium}"
                   FontSize="16"
                   Margin="0,4,0,0"
@@ -39,71 +39,80 @@
                   TextColor="{DynamicResource Gray-900}"
                   VerticalOptions="Center" />
 
-          <BoxView Grid.Row="1" Style="{StaticResource BoxViewStyle}" />
+                <BoxView Grid.Row="1" Style="{StaticResource BoxViewStyle}" />
 
-          <Label Grid.Row="2" Style="{StaticResource SettingsLabelStyle}" Text="Backup automatically"/>
+                <Label Grid.Row="2" Style="{StaticResource SettingsLabelStyle}" Text="Location Tracking"/>
 
-          <buttons:SfSwitch Grid.Row="2"
+                <buttons:SfSwitch Grid.Row="2"
                       HorizontalOptions="EndAndExpand"
                       AllowIndeterminateState="False"
                       HeightRequest="30"
+                      x:Name="LocationSwitch"
+                      StateChanged="SfSwitch_StateChanged"
                       VisualType="Cupertino">
-            <VisualStateManager.VisualStateGroups>
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="On">
-                  <VisualState.Setters>
-                    <Setter Property="SwitchSettings">
-                      <Setter.Value>
-                        <buttons:CupertinoSwitchSettings
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:CupertinoSwitchSettings
                                     x:TypeArguments="buttons:OnState"
                                     ThumbBorderColor="{DynamicResource Gray-200}"
                                     ThumbColor="{DynamicResource Gray-White}"
                                     TrackBorderColor="{DynamicResource Gray-200}"
                                     TrackColor="{DynamicResource PrimaryColor}" />
-                      </Setter.Value>
-                    </Setter>
-                  </VisualState.Setters>
-                </VisualState>
-                <VisualState x:Name="Off">
-                  <VisualState.Setters>
-                    <Setter Property="SwitchSettings">
-                      <Setter.Value>
-                        <buttons:CupertinoSwitchSettings
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:CupertinoSwitchSettings
                                     x:TypeArguments="buttons:OffState"
                                     ThumbBorderColor="{DynamicResource Gray-200}"
                                     ThumbColor="{DynamicResource Gray-White}"
                                     TrackBorderColor="{DynamicResource Gray-200}"
                                     TrackColor="{DynamicResource Gray-White}" />
-                      </Setter.Value>
-                    </Setter>
-                  </VisualState.Setters>
-                </VisualState>
-              </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-          </buttons:SfSwitch>
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfSwitch>
 
-          <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="3"/>
-          <Label Style="{StaticResource SettingsLabelStyle}" Text="Download quality" Grid.Row="4"/>
-          <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="4">
-            <Label.GestureRecognizers>
-              <TapGestureRecognizer Command="{Binding }"/>
-            </Label.GestureRecognizers>
-          </Label>
-          <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="5"/>
-          <Label Style="{StaticResource SettingsLabelStyle}" Text="Show hidden files" Grid.Row="6"/>
-          <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="6">
-            <Label.GestureRecognizers>
-              <TapGestureRecognizer Command="{Binding }"/>
-            </Label.GestureRecognizers>
-          </Label>
-          <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="7"/>
-          <Label Style="{StaticResource SettingsLabelStyle}" Text="Privacy Policy" Grid.Row="8"/>
-          <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="8">
-            <Label.GestureRecognizers>
-              <TapGestureRecognizer Command="{Binding }"/>
-            </Label.GestureRecognizers>
-          </Label>
-        </Grid>
-      </ScrollView>
+                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="3"/>
+                <Label Style="{StaticResource SettingsLabelStyle}" Text="Download quality" Grid.Row="4"/>
+                <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="4">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding }"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="5"/>
+                <Label Style="{StaticResource SettingsLabelStyle}" Text="Show hidden files" Grid.Row="6"/>
+                <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="6">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding }"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="7"/>
+
+
+                 <Picker AutomationId="Picker" x:Name="picker" Grid.Row="9" SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                 Title="Select status">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Positive</x:String>
+                            <x:String>Negative</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+               
+                
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
