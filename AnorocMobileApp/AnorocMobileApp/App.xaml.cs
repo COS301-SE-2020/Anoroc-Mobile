@@ -19,7 +19,7 @@ namespace AnorocMobileApp
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
-        private static string syncfusionLicense = "";
+        private static string syncfusionLicense = "Mjc4NTI4QDMxMzgyZTMxMmUzMEovelVGeVpMcitlK2xXZTZydjByUXNFbW5TRkxnM1laOU51Q1VqdU44b2M9";
         readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
  
@@ -37,7 +37,7 @@ namespace AnorocMobileApp
 
             FacebookLoginService = facebookLoginService;
 
-            Current.Properties["TOKEN"] = "thisisatoken";
+            
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -83,14 +83,15 @@ namespace AnorocMobileApp
         public App()
         {
             //Register Syncfusion license
+            InitializeComponent();
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
+            Current.Properties["TOKEN"] = "thisisatoken";
             MainPage = new NavigationPage(new BottomNavigationPage());
         }
 
         /*public App()
         {
-            InitializeComponent();
+            
 
             MainPage = new NavigationPage(new Login());
         }*/

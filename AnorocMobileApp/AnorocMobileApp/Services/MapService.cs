@@ -38,7 +38,7 @@ namespace AnorocMobileApp.Services
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
-
+                var url = Constants.AnorocURI + "location/Clusters/Simplified";
                 Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"location/Clusters/Simplified");
                 HttpResponseMessage responseMessage;
 

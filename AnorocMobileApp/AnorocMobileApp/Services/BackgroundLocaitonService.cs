@@ -18,7 +18,7 @@ namespace AnorocMobileApp.Services
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
         private int request_count;
-
+        
         public static bool Tracking;
 
         public BackgroundLocaitonService()
@@ -88,7 +88,7 @@ namespace AnorocMobileApp.Services
             LocationService = new LocationService();
             bool success = false;
             int retry = 0;
-            
+
                 retry = 0;
                 try
                 {
@@ -96,10 +96,13 @@ namespace AnorocMobileApp.Services
                     // faster they go, the more locations sent and slower they go the less
                     request = new GeolocationRequest(GeolocationAccuracy.Best);
                     Xamarin.Essentials.Location location = null;
+                    
 
                     if (Previous_request != null)
-                    {
+                    {                                         
                         location = await Geolocation.GetLocationAsync(request);
+                        SetBackground(Battery.ChargeLevel, Battery.State == BatteryState.Charging);
+
                         if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
                         {
                             _Backoff = Initial_Backoff;
@@ -126,6 +129,7 @@ namespace AnorocMobileApp.Services
                     }
                     else
                     {
+                        
                         location = await Geolocation.GetLocationAsync(request);
                         Models.Location customLocation = new Models.Location(location);
                         customLocation.Carrier_Data_Point = User.carrierStatus;
@@ -173,6 +177,22 @@ namespace AnorocMobileApp.Services
         public bool isTracking()
         {
             return Tracking;
+        }
+
+        void SetBackground(double level, bool charging)
+        {
+            Color? colour = null;
+            var status = charging ? "Charging" : "Not charging";
+
+            if (level > .5f)
+                colour = Color.Green.MultiplyAlpha(level);
+            else if (level > .1f)
+                colour = Color.Yellow.MultiplyAlpha(level);
+            else
+                colour = Color.Red.MultiplyAlpha(level);
+
+            Console.WriteLine("Colour: " + colour.Value);
+
         }
     }
 }
