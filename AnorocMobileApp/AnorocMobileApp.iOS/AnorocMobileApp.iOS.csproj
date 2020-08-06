@@ -154,31 +154,31 @@
       <Version>1.68.3</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Cards">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Core">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.DataSource">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfCalendar">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfListView">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRating">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfRotator">
-      <Version>18.1.0.59</Version>
+      <Version>18.2.0.48</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Auth">
       <Version>1.7.0</Version>
