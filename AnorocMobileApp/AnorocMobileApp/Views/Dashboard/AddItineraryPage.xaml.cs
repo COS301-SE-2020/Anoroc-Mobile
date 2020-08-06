@@ -33,7 +33,13 @@ namespace AnorocMobileApp.Views.Dashboard
 
         private SfPopupLayout CreatePopupLayout()
         {
-            var popup = new SfPopupLayout();
+            var popup = new SfPopupLayout()
+            {
+                PopupView =
+                {
+                    HeaderTitle = "Itinerary date"
+                },
+            };
             
             var datePicker = new SfDatePicker()
             {
