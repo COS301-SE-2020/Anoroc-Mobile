@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AnorocMobileApp.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.Models.Itinerary
@@ -23,7 +24,7 @@ namespace AnorocMobileApp.Models.Itinerary
         /// The locations will be in order of visitations.
         /// E.g. index 0 is the start location. index 1 follows start location.
         /// </summary>
-        public List<Location> Locations;
+        public List<GEOCoordinate> Locations;
 
         #endregion
     }
