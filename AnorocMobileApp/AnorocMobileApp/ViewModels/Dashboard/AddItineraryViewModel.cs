@@ -1,4 +1,5 @@
-﻿using AnorocMobileApp.Models.Dashboard;
+﻿using System;
+using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.Serialization;
@@ -22,7 +23,6 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         public AddItineraryViewModel()
         {
-            OpenPopupCommand = new Command(OpenPopup);
         }
 
         #endregion
@@ -30,7 +30,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #region Properties
 
         /// <summary>
-        /// Gets or sets a collection of value to be displayed in Daily timeline page.
+        /// Gets or sets a collection of value to be displayed in add itinerary page.
         /// </summary>
         [DataMember(Name = "dailyTimeline")]
         public ObservableCollection<Event> DailyTimeline { get; set; }
@@ -38,33 +38,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #endregion
         
         #region Commands
-        
-        public ICommand OpenPopupCommand { get; set; }
 
         #endregion
         
         #region Methods
 
-        private void OpenPopup()
-        {
-            DisplayPopup = true;
-        }
-
         #endregion
         
         #region Fields
-
-        private bool displayPopup;
-
-        public bool DisplayPopup
-        {
-            get => displayPopup;
-            set
-            {
-                displayPopup = value;
-                RaisePropertyChanged("DisplayPopup");
-            }
-        }
 
         #endregion
 
