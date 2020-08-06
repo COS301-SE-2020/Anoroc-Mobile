@@ -31,12 +31,11 @@ namespace AnorocMobileApp
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
             InitializeComponent();
-
+            Current.Properties["TOKEN"] = "thisisatoken";
             //Defualt lifestle
             IoCContainer = new Container();
-           /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
+            /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);

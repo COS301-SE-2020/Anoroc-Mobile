@@ -59,7 +59,12 @@ namespace AnorocMobileApp.Views.Navigation
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+               // DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+                Application.Current.Properties["Message"] = msg;
+                Application.Current.SavePropertiesAsync();
+                var blTest = (Application.Current.Properties["Message"].ToString());
+                DependencyService.Get<NotificationServices>().CreateNotification("TestSave", blTest);
+                Console.WriteLine("blTest");
             });
         }
 

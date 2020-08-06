@@ -63,7 +63,6 @@ namespace AnorocMobileApp.Droid
             {
                 intent.PutExtra(key, data[key]);
             }
-        }  
-
+        }   
     }
 }

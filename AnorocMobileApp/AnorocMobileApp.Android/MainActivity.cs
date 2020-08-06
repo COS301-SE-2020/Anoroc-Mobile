@@ -55,6 +55,7 @@ namespace AnorocMobileApp.Droid
                         {
                             var value = Intent.Extras.GetString(key);
                             Preferences.Set("title", value);
+                            
                         }
                         else if (key == "body")
                         {
