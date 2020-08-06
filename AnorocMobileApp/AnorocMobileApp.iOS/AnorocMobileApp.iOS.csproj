@@ -139,6 +139,9 @@
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
       <Version>18.2.0.48</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
+      <Version>18.2.0.48</Version>
+    </PackageReference>
     <PackageReference Include="System.Drawing.Common">
       <Version>4.7.0</Version>
     </PackageReference>
