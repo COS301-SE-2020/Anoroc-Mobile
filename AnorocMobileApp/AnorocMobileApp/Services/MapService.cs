@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"location/Clusters/Simplified");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"Cluster/Simplified");
                 HttpResponseMessage responseMessage;
 
                 try
@@ -71,7 +71,7 @@ namespace AnorocMobileApp.Services
 
                 Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "location/Clusters/Pins");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Cluster/Pins");
                 Token token_object = new Token();
                 token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
 
