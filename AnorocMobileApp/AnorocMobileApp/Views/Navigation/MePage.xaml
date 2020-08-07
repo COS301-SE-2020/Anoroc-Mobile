@@ -163,10 +163,10 @@
                         </Grid.ColumnDefinitions>
 
                         <!-- Age -->
-                        <Label Text="{Binding Age}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
+                        <Label Text="{Binding Status}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
                                VerticalOptions="End" />
 
-                        <Label Grid.Row="1" FontSize="12" Text="Age" Style="{StaticResource LabelStyle}" 
+                        <Label Grid.Row="1" FontSize="12" Text="Status" Style="{StaticResource LabelStyle}" 
                                HorizontalOptions="Center" VerticalOptions="Start"
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
 
@@ -177,7 +177,7 @@
                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding Weight}" Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="Center" VerticalOptions="End" />
 
-                        <Label Grid.Row="1" Grid.Column="2" Text="Weight" FontSize="12" Style="{StaticResource LabelStyle}" 
+                        <Label Grid.Row="1" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
                                HorizontalOptions="Center" VerticalOptions="Start" />
 
@@ -188,7 +188,7 @@
                         <Label Grid.Row="0" Grid.Column="4" Text="{Binding Height}" HorizontalOptions="Center" 
                                VerticalOptions="End" Style="{StaticResource LabelStyle}" />
 
-                        <Label Grid.Row="1" Grid.Column="4" Text="Height" FontSize="12" HorizontalOptions="Center"
+                        <Label Grid.Row="1" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center"
                                VerticalOptions="Start" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
                                TextColor="{DynamicResource Gray-700}" />
 

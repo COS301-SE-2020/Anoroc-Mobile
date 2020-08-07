@@ -30,29 +30,36 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 new Me()
                 {
-                    Category = "Calories Eaten",
-                    CategoryValue = "13,100",
-                    ImagePath = "CaloriesEaten.svg"
-                },
-                new Me()
-                {
-                    Category = "Heart Rate",
-                    CategoryValue = "87 BPM",
-                    ImagePath = "HeartRate.svg"
-                },
-                new Me()
-                {
-                    Category = "Water Consumed",
-                    CategoryValue = "38.6 L",
-                    ImagePath = "WaterConsumed.svg"
-                },
-                new Me()
-                {
-                    Category = "Sleep Duration",
-                    CategoryValue = "7.3 H",
-                    ImagePath = "SleepDuration.svg"
+                    Category = "Notifications",
+                    CategoryValue = "13",                    
+                    ImagePath = "CaloriesEaten.svg",
+                    //doSomething()
+                    
+
                 }
+                
+                //,
+                //new Me()
+                //{
+                //    Category = "Heart Rate",
+                //    CategoryValue = "87 BPM",
+                //    ImagePath = "HeartRate.svg"
+                //},
+                //new Me()
+                //{
+                //    Category = "Water Consumed",
+                //    CategoryValue = "38.6 L",
+                //    ImagePath = "WaterConsumed.svg"
+                //},
+                //new Me()
+                //{
+                //    Category = "Sleep Duration",
+                //    CategoryValue = "7.3 H",
+                //    ImagePath = "SleepDuration.svg"
+                //}
             };
+            //cardItems.Add();                            
+             //CardItem button onPress={() => Alert.alert('hi')}
 
             this.ProfileImage = App.BaseImageUrl + "ProfileImage16.png";
             this.ProfileName = "Anoroc Van Looi";
@@ -61,6 +68,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             this.Age = "35";
             this.Weight = "159 Ibs";
             this.Height = "165 cm";
+            this.Status = "Negative";
         }
 
         #endregion
@@ -118,6 +126,11 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// Gets or sets the height.
         /// </summary>
         public string Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the status.
+        /// </summary>
+        public string Status { get; set; }
 
         #endregion
     }
