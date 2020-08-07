@@ -24,7 +24,7 @@ namespace AnorocMobileApp.Models.Itinerary
         /// The locations will be in order of visitations.
         /// E.g. index 0 is the start location. index 1 follows start location.
         /// </summary>
-        public List<GEOCoordinate> Locations;
+        public List<Location> Locations;
 
         #endregion
     }
