@@ -71,7 +71,6 @@ namespace AnorocMobileApp.Services
                 ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
             };
 
-            // Pass the handler to httpclient(from you are calling api)
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
@@ -90,7 +89,6 @@ namespace AnorocMobileApp.Services
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
             
 
-            //using (HttpClient client = new HttpClient(clientHandler))
             try
             {
                 var response = await client.PostAsync(url, c);
@@ -98,8 +96,7 @@ namespace AnorocMobileApp.Services
                 //Debug.WriteLine(result);
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-            {
-                //throw new Exception();
+            {                
                 throw new CantConnectToLocationServerException();
             }
 
