@@ -40,7 +40,7 @@ namespace AnorocMobileApp
             IoCContainer = new Container();
            /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
@@ -67,7 +67,7 @@ namespace AnorocMobileApp
         public App()
         {
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
 
@@ -91,7 +91,7 @@ namespace AnorocMobileApp
 
         protected override void OnSleep()
         {
-            Current.Properties["Tracking"] = BackgroundLocaitonService.Tracking;
+            Current.Properties["Tracking"] = BackgroundLocationService.Tracking;
         }
 
         protected override void OnResume()
@@ -105,7 +105,7 @@ namespace AnorocMobileApp
             {
                 IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
-                BackgroundLocaitonService.Tracking = value;
+                BackgroundLocationService.Tracking = value;
                 if(value)
                 {
                     backgroundLocationService.Start_Tracking();

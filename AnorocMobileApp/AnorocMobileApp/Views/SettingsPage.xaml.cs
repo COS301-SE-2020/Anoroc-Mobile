@@ -79,12 +79,12 @@ namespace AnorocMobileApp.Views
             if (e.Value == true)
             {
                 
-                BackgroundLocaitonService.Tracking = true;
+                BackgroundLocationService.Tracking = true;
                 backgroundLocationService.Start_Tracking();               
             }
             else
             {
-                BackgroundLocaitonService.Tracking = false;
+                BackgroundLocationService.Tracking = false;
                 backgroundLocationService.Stop_Tracking();
                 await DisplayAlert("Attention", "Disabled", "OK");
             }
