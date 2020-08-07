@@ -58,17 +58,12 @@ namespace AnorocMobileApp
             }
             else
             {
-<<<<<<< HEAD
-                // MainPage = new LoginWithSocialIconPage();
-                MainPage = new ItineraryPage();
-=======
 
                 //MainPage = new Views.Navigation.SettingsPage();
                 //MainPage = new Views.Map();
 
                 MainPage = new LoginWithSocialIconPage();
 
->>>>>>> af231d5255841fa5273af2d485c8fbbcea33e7fd
             }
         }
 

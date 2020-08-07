@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Exceptions;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -39,7 +40,7 @@ namespace AnorocMobileApp.Services
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"Cluster/Simplified");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+ "Cluster/Simplified");
                 HttpResponseMessage responseMessage;
 
                 try
