@@ -17,6 +17,9 @@
         public static readonly string GoogleClientSecret = "google secret on google project";
        
         public static readonly string FacebookAppID = "985395151878298";
+
+        public static readonly string GooglePlacesApiAutoCompleteUrl =
+            "https://maps.googleapis.com/maps/api/place/autocomplete/json?key={0}&input={1}&components=country:za";
     }
 
 }
