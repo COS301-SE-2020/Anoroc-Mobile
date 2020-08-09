@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.Serialization;
 using Xamarin.Forms.Internals;
 using System.Windows.Input;
+using AnorocMobileApp.Models;
 using Xamarin.Forms;
 
 namespace AnorocMobileApp.ViewModels.Dashboard
@@ -14,7 +15,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
-    public class AddItineraryViewModel : BaseViewModel, INotifyPropertyChanged
+    public class AddItineraryViewModel : INotifyPropertyChanged
     {
         #region Constructor
 
@@ -26,6 +27,13 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         }
 
         #endregion
+        
+        #region Fields
+
+        private ObservableCollection<AddressInfo> addresses;
+        private string addressText;
+
+        #endregion
 
         #region Properties
 
@@ -34,6 +42,31 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         [DataMember(Name = "dailyTimeline")]
         public ObservableCollection<Event> DailyTimeline { get; set; }
+
+        public ObservableCollection<AddressInfo> Addresses
+        {
+            get => addresses ?? (addresses = new ObservableCollection<AddressInfo>());
+            set
+            {
+                if (addresses != value)
+                {
+                    addresses = value;
+                    OnPropertyChanged("Addresses");
+                }
+            }
+        }
+        
+        public string AddressText 
+        {
+            get => addressText;
+            set 
+            {
+                if (addressText != value) {
+                    addressText = value;
+                    OnPropertyChanged("AddressText");
+                }
+            }
+        }
 
         #endregion
         
@@ -44,21 +77,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #region Methods
 
         #endregion
-        
-        #region Fields
-
-        #endregion
 
         #region INotifyPropertyChanged
-
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void RaisePropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion
