@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms.Internals;
 using System.Windows.Input;
 using AnorocMobileApp.Helpers;
-using AnorocMobileApp.Models;
+//using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Itinerary;
+//using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
 
 namespace AnorocMobileApp.ViewModels.Dashboard
@@ -44,7 +46,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Fields
 
-        private ObservableCollection<AddressInfo> addresses;
+        private ObservableCollection<Address> addresses;
         private string addressText;
 
         #endregion
@@ -57,9 +59,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         [DataMember(Name = "dailyTimeline")]
         public ObservableCollection<Event> DailyTimeline { get; set; }
 
-        public ObservableCollection<AddressInfo> Addresses
+        public ObservableCollection<Address> Addresses
         {
-            get => addresses ?? (addresses = new ObservableCollection<AddressInfo>());
+            get => addresses ?? (addresses = new ObservableCollection<Address>());
             set
             {
                 if (addresses != value)
@@ -92,7 +94,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         public async Task GetPlacesPredictonAsync()
         {
-            // TODO: Add some logic to slow down requests
+            /*// TODO: Add some logic to slow down requests
             // Google will deny requests which are too frequent
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMinutes(2)).Token;
 
@@ -106,7 +108,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 {
                     
                 }
-            }
+            }*/
         }
         
         #endregion
