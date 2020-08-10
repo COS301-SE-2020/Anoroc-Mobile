@@ -92,13 +92,13 @@ namespace AnorocMobileApp.Views.Navigation
             IBackgroundLocationService back = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.NewValue == true)
             {
-                BackgroundLocaitonService.Tracking = true;
+                BackgroundLocationService.Tracking = true;
                 back.Start_Tracking();
 
             }
             else
             {
-                BackgroundLocaitonService.Tracking = false;                               
+                BackgroundLocationService.Tracking = false;                               
                 back.Stop_Tracking();
 
                 await DisplayAlert("Attention", "Disabled", "OK");
