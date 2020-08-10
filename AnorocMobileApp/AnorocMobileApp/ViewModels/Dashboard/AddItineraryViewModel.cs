@@ -113,6 +113,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             // TODO: Add some logic to slow down requests
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMinutes(2)).Token;
 
+            // TODO: Pass current lon and lat to show areas closer to the user
             using (var request = new HttpRequestMessage(HttpMethod.Get,
                 string.Format(Constants.AzureFuzzySearchUrl,
                     WebUtility.UrlEncode(addressText),

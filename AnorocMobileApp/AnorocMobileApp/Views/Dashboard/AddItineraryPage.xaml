@@ -50,7 +50,7 @@
                     <Label Text="25 Dec 2020" HorizontalOptions="Start" FontSize="20" FontFamily="{StaticResource Montserrat-Bold}"
                            TextColor="{DynamicResource Gray-900}">
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Clicked"/>
+                            <TapGestureRecognizer Tapped="ClickedDate"/>
                         </Label.GestureRecognizers>
                     </Label>
 
@@ -106,6 +106,7 @@
                 
                 <StackLayout Grid.Row="3" Margin="0" Spacing="0">
                     <buttons:SfButton
+                        Clicked="ClickedAdd"
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Add next location" />
                     <buttons:SfButton
