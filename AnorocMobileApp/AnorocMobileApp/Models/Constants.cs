@@ -20,6 +20,9 @@
 
         public static readonly string GooglePlacesApiAutoCompleteUrl =
             "https://maps.googleapis.com/maps/api/place/autocomplete/json?key={0}&input={1}&components=country:za";
+
+        public static readonly string AzureFuzzySearchUrl =
+            "https://atlas.microsoft.com/search/fuzzy/json?api-version=1.0&query={0}&subscription-key={1}&countrySet=ZA&limit=5";
     }
 
 }
