@@ -10,8 +10,10 @@ using System.Threading.Tasks;
 using Xamarin.Forms.Internals;
 using System.Windows.Input;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Models;
 //using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
+using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
 
@@ -94,21 +96,36 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         public async Task GetPlacesPredictonAsync()
         {
-            /*// TODO: Add some logic to slow down requests
-            // Google will deny requests which are too frequent
+            // TODO: Add some logic to slow down requests
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMinutes(2)).Token;
 
             using (var request = new HttpRequestMessage(HttpMethod.Get,
-                string.Format(Constants.GooglePlacesApiAutoCompleteUrl,
-                    Secrets.GooglePlacesApiKey,
-                    WebUtility.UrlEncode(addressText))))
+                string.Format(Constants.AzureFuzzySearchUrl,
+                    WebUtility.UrlEncode(addressText),
+                    Secrets.AzureMapsSubscriptionKey)))
             {
                 using (HttpResponseMessage message = await HttpClientInstance.SendAsync(
                     request, HttpCompletionOption.ResponseContentRead, cancellationToken).ConfigureAwait(false))
                 {
-                    
+                    if (message.IsSuccessStatusCode)
+                    {
+                        var json = await message.Content.ReadAsStringAsync().ConfigureAwait(false);
+                        var wholeResponse = await Task.Run(() => JsonConvert.DeserializeObject<Welcome>(json)).ConfigureAwait(false);
+                        
+                        // TODO: Maybe check if it converted successfully
+                        
+                        Addresses.Clear();
+
+                        if (wholeResponse.Summary.TotalResults > 0)
+                        {
+                            foreach (var result in wholeResponse.Results)
+                            {
+                                Addresses.Add(result.Address);
+                            }
+                        }
+                    }
                 }
-            }*/
+            }
         }
         
         #endregion
