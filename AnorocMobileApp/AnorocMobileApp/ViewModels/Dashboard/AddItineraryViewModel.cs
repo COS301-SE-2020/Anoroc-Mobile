@@ -2,9 +2,14 @@
 using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Net;
+using System.Net.Http;
 using System.Runtime.Serialization;
+using System.Threading;
+using System.Threading.Tasks;
 using Xamarin.Forms.Internals;
 using System.Windows.Input;
+using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Models;
 using Xamarin.Forms;
 
@@ -26,6 +31,15 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         {
         }
 
+        #endregion
+        
+        #region HttpRequest
+        
+        private static HttpClient _httpClientInstance;
+
+        public static HttpClient HttpClientInstance => _httpClientInstance ?? (_httpClientInstance = new HttpClient());
+
+        
         #endregion
         
         #region Fields
@@ -76,6 +90,25 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Methods
 
+        public async Task GetPlacesPredictonAsync()
+        {
+            // TODO: Add some logic to slow down requests
+            // Google will deny requests which are too frequent
+            var cancellationToken = new CancellationTokenSource(TimeSpan.FromMinutes(2)).Token;
+
+            using (var request = new HttpRequestMessage(HttpMethod.Get,
+                string.Format(Constants.GooglePlacesApiAutoCompleteUrl,
+                    Secrets.GooglePlacesApiKey,
+                    WebUtility.UrlEncode(addressText))))
+            {
+                using (HttpResponseMessage message = await HttpClientInstance.SendAsync(
+                    request, HttpCompletionOption.ResponseContentRead, cancellationToken).ConfigureAwait(false))
+                {
+                    
+                }
+            }
+        }
+        
         #endregion
 
         #region INotifyPropertyChanged
