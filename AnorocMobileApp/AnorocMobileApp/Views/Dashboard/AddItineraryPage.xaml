@@ -8,11 +8,20 @@
              xmlns:sfpicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
              xmlns:sfPopout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
              xmlns:Behavior="clr-namespace:AnorocMobileApp.Behaviors"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.Dashboard.AddItineraryPage"
              BackgroundColor="{DynamicResource Gray-White}"
              NavigationPage.HasNavigationBar="False">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.Content>
         <ScrollView>
             <Grid RowSpacing="0" ColumnSpacing="0">
@@ -20,6 +29,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
                 <Label
@@ -92,6 +102,16 @@
 
                         </listView:SfListView>
                     </Grid>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="3" Margin="0" Spacing="0">
+                    <buttons:SfButton
+                        Style="{StaticResource SfGradientButtonStyle}"
+                        Text="Add next location" />
+                    <buttons:SfButton
+                        Style="{StaticResource SfGradientButtonStyle}"
+                        Text="Done" />
+                    
                 </StackLayout>
 
             </Grid>
