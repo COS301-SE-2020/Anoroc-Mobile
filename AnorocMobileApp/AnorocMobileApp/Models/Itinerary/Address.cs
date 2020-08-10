@@ -6,15 +6,14 @@
 //
 //    var welcome = Welcome.FromJson(jsonString);
 
-namespace AnorocMobileApp.Models
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+
+namespace AnorocMobileApp.Models.Itinerary
 {
-    using System;
-    using System.Collections.Generic;
-
-    using System.Globalization;
-    using Newtonsoft.Json;
-    using Newtonsoft.Json.Converters;
-
     public partial class Welcome
     {
         [JsonProperty("summary")]
@@ -219,12 +218,12 @@ namespace AnorocMobileApp.Models
 
     public partial class Welcome
     {
-        public static Welcome FromJson(string json) => JsonConvert.DeserializeObject<Welcome>(json, AnorocMobileApp.Models.Converter.Settings);
+        public static Welcome FromJson(string json) => JsonConvert.DeserializeObject<Welcome>(json, Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Welcome self) => JsonConvert.SerializeObject(self, AnorocMobileApp.Models.Converter.Settings);
+        public static string ToJson(this Welcome self) => JsonConvert.SerializeObject(self, Converter.Settings);
     }
 
     internal static class Converter
@@ -265,7 +264,6 @@ namespace AnorocMobileApp.Models
             }
             var value = (long)untypedValue;
             serializer.Serialize(writer, value.ToString());
-            return;
         }
 
         public static readonly ParseStringConverter Singleton = new ParseStringConverter();
