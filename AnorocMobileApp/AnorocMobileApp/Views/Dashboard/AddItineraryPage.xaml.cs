@@ -1,5 +1,6 @@
 ﻿using System;
 using AnorocMobileApp.DataService;
+using AnorocMobileApp.ViewModels.Dashboard;
 using Syncfusion.XForms.Pickers;
 using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms;
@@ -23,7 +24,8 @@ namespace AnorocMobileApp.Views.Dashboard
         {
             this.popupLayout = CreatePopupLayout();
             InitializeComponent();
-            this.BindingContext = AddItineraryDataService.Instance.AddItineraryViewModel;
+            // this.BindingContext = AddItineraryDataService.Instance.AddItineraryViewModel;
+            this.BindingContext = new AddItineraryViewModel();
         }
 
         private void Clicked(object sender, EventArgs e)
