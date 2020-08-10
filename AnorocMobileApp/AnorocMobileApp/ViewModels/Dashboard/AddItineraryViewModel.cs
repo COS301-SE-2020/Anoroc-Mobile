@@ -49,6 +49,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #region Fields
 
         private ObservableCollection<Address> addresses;
+        private ObservableCollection<Location> locations;
         private string addressText;
 
         #endregion
@@ -69,6 +70,19 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addresses != value)
                 {
                     addresses = value;
+                    OnPropertyChanged("Addresses");
+                }
+            }
+        }
+        
+        public ObservableCollection<Location> Locations
+        {
+            get => locations ?? (locations = new ObservableCollection<Location>());
+            set
+            {
+                if (locations != value)
+                {
+                    locations = value;
                     OnPropertyChanged("Addresses");
                 }
             }
