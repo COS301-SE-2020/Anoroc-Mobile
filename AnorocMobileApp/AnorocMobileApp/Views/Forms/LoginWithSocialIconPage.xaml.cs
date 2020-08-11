@@ -73,5 +73,20 @@ namespace AnorocMobileApp.Views.Forms
 
         }
 
+        async void OnPasswordReset()
+        {
+            try
+            {
+                var userContext = await B2CAuthenticationService.Instance.ResetPasswordAsync();
+                UpdateSignInState(userContext);
+            }
+            catch (Exception ex)
+            {
+                // Alert if any exception excluding user canceling sign-in dialog
+                if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
+                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
+            }
+        }
+
     }
 }
