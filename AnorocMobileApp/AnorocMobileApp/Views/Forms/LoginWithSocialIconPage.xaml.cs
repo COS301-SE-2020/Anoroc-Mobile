@@ -61,8 +61,6 @@ namespace AnorocMobileApp.Views.Forms
                 else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
                     await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
             }
-
-
         }
 
 

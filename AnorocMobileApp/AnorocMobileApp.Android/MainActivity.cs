@@ -67,7 +67,7 @@ namespace AnorocMobileApp.Droid
 
             // Dependency Injection:
 
-            LoadApplication(new App(new FacebookLoginService()));
+            LoadApplication(new App());
 
             WireUpBackgroundLocationTask();
         }
