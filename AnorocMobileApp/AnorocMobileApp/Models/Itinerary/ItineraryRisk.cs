@@ -6,6 +6,11 @@ namespace AnorocMobileApp.Models.Itinerary
 {
     public class ItineraryRisk
     {
+        ItineraryRisk()
+        {
+            LocationItineraryRisks = new Dictionary<Location, int>();
+            TotalItineraryRisk = 0;
+        }
         public DateTime Created { get; set; }
         /// <summary>
         /// The total risk of the journey

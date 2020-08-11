@@ -3,17 +3,18 @@ using AnorocMobileApp.Models.Itinerary;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Interfaces
 {
     public interface IItineraryService
     {
-        ItineraryRisk Refresh();
+        Task<List<ItineraryRisk>> LoadMore();
 
         void Clear();
 
         void ProcessItinerary(Itinerary userItinerary);
 
-        ItineraryRisk GetUserItineraries();
+        Task<List<ItineraryRisk>> GetUserItineraries();
     }
 }
