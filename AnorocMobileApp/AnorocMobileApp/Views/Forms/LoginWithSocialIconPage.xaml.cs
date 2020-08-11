@@ -39,8 +39,16 @@ namespace AnorocMobileApp.Views.Forms
             {
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
-                Console.WriteLine("Access Token: " + userContext.AccessToken);
-                Application.Current.Properties["accessToken"] = userContext.AccessToken;
+                if(userContext.IsLoggedOn)
+                {
+                    Console.WriteLine("Access Token: " + userContext.AccessToken);
+                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+                 }
+                else
+                {
+                    Console.WriteLine("Error: Access Token is not available");
+                }
+
             }
             catch (Exception ex)
             {
@@ -56,6 +64,7 @@ namespace AnorocMobileApp.Views.Forms
 
 
         }
+
 
         void UpdateSignInState(UserContext userContext)
         {
