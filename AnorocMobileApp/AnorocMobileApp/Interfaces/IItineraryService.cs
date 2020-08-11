@@ -13,7 +13,7 @@ namespace AnorocMobileApp.Interfaces
 
         void Clear();
 
-        Task<List<ItineraryRisk>> ProcessItinerary(Itinerary userItinerary);
+        Task<ItineraryRisk> ProcessItinerary(Itinerary userItinerary);
 
         Task<List<ItineraryRisk>> GetUserItineraries();
     }

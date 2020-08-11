@@ -23,6 +23,9 @@ namespace AnorocMobileApp.Services
             Anoroc_Client = new HttpClient(clientHandler);
         }
         public static int Pagination { get; private set; }
+
+        // TODO: 
+        // Make a max for the number of itineraries that we have in memory
         public List<ItineraryRisk> UserItineraries { get; private set; }
         public void Clear()
         {
@@ -80,8 +83,9 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async Task<List<ItineraryRisk>> ProcessItinerary(Itinerary userItinerary)
+        public async Task<ItineraryRisk> ProcessItinerary(Itinerary userItinerary)
         {
+            
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
                 if (UserItineraries == null)
@@ -91,7 +95,7 @@ namespace AnorocMobileApp.Services
 
                 Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/GetUserItinerary");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/ProcessItinerary");
                 Token token_object = new Token();
 
                 token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
@@ -108,13 +112,14 @@ namespace AnorocMobileApp.Services
                 try
                 {
                     responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-
+                    ItineraryRisk itineraryRisk = null;
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        UserItineraries.Add(JsonConvert.DeserializeObject<ItineraryRisk>(json));
+                        itineraryRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
+                        UserItineraries.Add(itineraryRisk);
                     }
-                    return UserItineraries;
+                    return itineraryRisk;
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
@@ -133,8 +138,14 @@ namespace AnorocMobileApp.Services
         {
             Pagination = 10;
             List<ItineraryRisk> itineraryRisks = new List<ItineraryRisk>();
-            
-            for(int i = 0; i < Pagination; i++)
+
+            int size;
+            if (UserItineraries.Count < Pagination)
+                size = UserItineraries.Count;
+            else
+                size = Pagination;
+
+            for (int i = 0; i < size; i++)
             {
                 itineraryRisks.Add(UserItineraries.ElementAt(i));
             }
