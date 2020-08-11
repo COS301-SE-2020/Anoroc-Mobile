@@ -83,9 +83,6 @@ namespace AnorocMobileApp
 
             DependencyService.Register<B2CAuthenticationService>();
 
-            Current.Properties["TOKEN"] = "thisisatoken";
-
-
             IoCContainer = new Container();
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);

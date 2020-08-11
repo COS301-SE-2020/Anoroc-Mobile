@@ -1,4 +1,5 @@
 ﻿using System;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
 using Microsoft.Identity.Client;
@@ -33,12 +34,35 @@ namespace AnorocMobileApp.Views.Forms
         async void OnSignInSignOut(object sender, EventArgs e)
         {
 
-            var userContext = await B2CAuthenticationService.Instance.SignInAsync();
-            Console.WriteLine("Access Token: " + userContext.AccessToken);
-            Application.Current.Properties["accessToken"] = userContext.AccessToken;
+
+            try
+            {
+                var userContext = await B2CAuthenticationService.Instance.SignInAsync();
+                UpdateSignInState(userContext);
+                Console.WriteLine("Access Token: " + userContext.AccessToken);
+                Application.Current.Properties["accessToken"] = userContext.AccessToken;
+            }
+            catch (Exception ex)
+            {
+                // Checking the exception message 
+                // should ONLY be done for B2C
+                // reset and not any other error.
+                if (ex.Message.Contains("AADB2C90118"))
+                    OnPasswordReset();
+                // Alert if any exception excluding user canceling sign-in dialog
+                else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
+                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
+            }
+
 
         }
 
+        void UpdateSignInState(UserContext userContext)
+        {
+            var isSignedIn = userContext.IsLoggedOn;
+            btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
+
+        }
 
     }
 }

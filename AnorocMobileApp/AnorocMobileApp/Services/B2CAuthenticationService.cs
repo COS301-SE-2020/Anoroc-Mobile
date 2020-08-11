@@ -152,7 +152,7 @@ namespace AnorocMobileApp.Services
             newContext.IsLoggedOn = false;
             JObject user = ParseIdToken(ar.IdToken);
 
-            newContext.AccessToken = ar.AccessToken;
+            newContext.AccessToken = ar.IdToken;
             newContext.Name = user["name"]?.ToString();
             newContext.UserIdentifier = user["oid"]?.ToString();
 

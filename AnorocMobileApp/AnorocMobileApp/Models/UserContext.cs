@@ -4,6 +4,10 @@ using System.Text;
 
 namespace AnorocMobileApp.Models
 {
+
+    /// <summary>
+    /// Class for Azure AD B2C user attributes
+    /// </summary>
     public class UserContext
     {
         public string Name { get; internal set; }
