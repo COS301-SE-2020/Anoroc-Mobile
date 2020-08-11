@@ -80,9 +80,47 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public void ProcessItinerary(Itinerary userItinerary)
+        public async Task<List<ItineraryRisk>> ProcessItinerary(Itinerary userItinerary)
         {
-            throw new NotImplementedException();
+            using (Anoroc_Client = new HttpClient(clientHandler))
+            {
+                if (UserItineraries == null)
+                {
+                    UserItineraries = new List<ItineraryRisk>();
+                }
+
+                Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
+
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/GetUserItinerary");
+                Token token_object = new Token();
+
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                token_object.Object_To_Server = JsonConvert.SerializeObject(userItinerary);
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        UserItineraries.Add(JsonConvert.DeserializeObject<ItineraryRisk>(json));
+                    }
+                    return UserItineraries;
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToItineraryServiceException();
+                }
+            }
         }
 
         public async Task<List<ItineraryRisk>> LoadMore()
