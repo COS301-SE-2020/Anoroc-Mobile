@@ -32,29 +32,11 @@ namespace AnorocMobileApp.Views.Forms
 
         async void OnSignInSignOut(object sender, EventArgs e)
         {
-            try
-            {
-                if (btnSignInSignOut.Text == "Sign in")
-                {
-                    var userContext = await B2CAuthenticationService.Instance.SignInAsync();
-                }
-                else
-                {
-                    var userContext = await B2CAuthenticationService.Instance.SignOutAsync();
 
-                }
-            }
-            catch (Exception ex)
-            {
-                // Checking the exception message 
-                // should ONLY be done for B2C
-                // reset and not any other error.
-                if (ex.Message.Contains("AADB2C90118"))
-                    Console.WriteLine("Hello World!");
-                // Alert if any exception excluding user canceling sign-in dialog
-                else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
-                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
-            }
+            var userContext = await B2CAuthenticationService.Instance.SignInAsync();
+            Console.WriteLine("Access Token: " + userContext.AccessToken);
+            Application.Current.Properties["accessToken"] = userContext.AccessToken;
+
         }
 
 

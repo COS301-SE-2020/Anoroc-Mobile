@@ -27,6 +27,7 @@ namespace AnorocMobileApp
         public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
 
+        /*
         public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
@@ -34,22 +35,24 @@ namespace AnorocMobileApp
 
             InitializeComponent();
 
-
             DependencyService.Register<B2CAuthenticationService>();
 
-            MainPage = new LoginWithSocialIconPage();
-/*
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new NavigationPage(new BottomNavigationPage());
+
             //Defualt lifestle
             IoCContainer = new Container();
-           *//* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
-            FacebookLoginService = facebookLoginService;
+            //FacebookLoginService = facebookLoginService;
 
-            Current.Properties["TOKEN"] = "thisisatoken";
+    
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -68,18 +71,27 @@ namespace AnorocMobileApp
 
                 MainPage = new LoginWithSocialIconPage();
 
-            }*/
+            }
         }
+
+        */
 
         public App()
         {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+
+            IoCContainer = new Container();
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
 
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
             MainPage = new NavigationPage(new BottomNavigationPage());
         }

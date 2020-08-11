@@ -17,7 +17,7 @@ namespace AnorocMobileApp.Droid
     [IntentFilter(new[] { Intent.ActionView },
         Categories = new[] { Intent.CategoryBrowsable, Intent.CategoryDefault },
         DataHost = "auth",
-        DataScheme = "msal4cd918f3-751a-4f35-8cd6-e62e11cb8f22")]
+        DataScheme = "msal841e1d06-26d5-4092-a0b0-c75823ed2671")]
     public class MsalActivity : BrowserTabActivity
     {
     }

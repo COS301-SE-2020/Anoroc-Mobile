@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AnorocMobileApp.Services
+namespace AnorocMobileApp.Models
 {
     public static class B2CConstants
     {
