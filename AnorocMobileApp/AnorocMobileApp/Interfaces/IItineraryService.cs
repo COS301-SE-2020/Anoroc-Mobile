@@ -8,10 +8,12 @@ namespace AnorocMobileApp.Interfaces
 {
     public interface IItineraryService
     {
-        Dictionary<Location, int> Refresh();
+        ItineraryRisk Refresh();
+
+        void Clear();
 
         void ProcessItinerary(Itinerary userItinerary);
 
-        Dictionary<Location, int> GetUserItineraries();
+        ItineraryRisk GetUserItineraries();
     }
 }

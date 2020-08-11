@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AnorocMobileApp.Models.Itinerary
 {
-    class ItineraryRisk
+    public class ItineraryRisk
     {
         public DateTime Created { get; set; }
         /// <summary>

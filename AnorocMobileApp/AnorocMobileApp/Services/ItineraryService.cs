@@ -9,7 +9,17 @@ namespace AnorocMobileApp.Services
 {
     class ItineraryService : IItineraryService
     {
-        public Dictionary<Location, int> GetUserItineraries()
+        public static int Pagination { get; private set; }
+        public ItineraryRisk UserItineraries { get; private set; }
+        public void Clear()
+        {
+            Pagination = 10;
+            UserItineraries.LocationItineraryRisks.Clear();
+            UserItineraries.LocationItineraryRisks = null;
+            UserItineraries = null;
+        }
+
+        public ItineraryRisk GetUserItineraries()
         {
             throw new NotImplementedException();
         }
@@ -19,9 +29,12 @@ namespace AnorocMobileApp.Services
             throw new NotImplementedException();
         }
 
-        public Dictionary<Location, int> Refresh()
+        public ItineraryRisk Refresh()
         {
-            throw new NotImplementedException();
+            Pagination += 10;
+            
+
+            return UserItineraries;
         }
     }
 }

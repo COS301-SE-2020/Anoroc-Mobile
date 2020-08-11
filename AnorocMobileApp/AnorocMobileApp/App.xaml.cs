@@ -42,6 +42,7 @@ namespace AnorocMobileApp
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
 
             FacebookLoginService = facebookLoginService;
 
