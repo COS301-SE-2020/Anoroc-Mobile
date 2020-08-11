@@ -90,7 +90,7 @@
                         AutomationId="LoginButton"
                         CornerRadius="4"
                         x:Name="btnSignInSignOut"
-                        Clicked="Button_Clicked"
+                        Clicked="SignInButton_Clicked"
                         Command="{Binding LoginCommand}"
                         Style="{StaticResource SfButtonStyle}"
                         Text="Sign in" />
@@ -102,6 +102,7 @@
                         Margin="0,2"
                         FontFamily="{StaticResource Montserrat-SemiBold}"
                         FontSize="12" 
+                        Clicked="PasswordResetButton_Clicked"    
                         HorizontalOptions="End" 
                         Style="{StaticResource SfFlatButtonStyle}"
                         Text="FORGOT PASSWORD?"

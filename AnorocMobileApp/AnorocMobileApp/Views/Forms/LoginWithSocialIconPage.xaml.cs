@@ -26,9 +26,15 @@ namespace AnorocMobileApp.Views.Forms
         /// <summary>
         /// Function sets Main Page to Navigation Page
         /// </summary>
-        private void Button_Clicked(object sender, EventArgs e)
+        private void SignInButton_Clicked(object sender, EventArgs e)
         {
-             OnSignInSignOut(sender,e);
+            Application.Current.MainPage = new LoadingPage();
+            OnSignInSignOut(sender,e);
+        }
+
+        private void PasswordResetButton_Clicked(object sender, EventArgs e)
+        {
+            OnPasswordReset();
         }
 
         async void OnSignInSignOut(object sender, EventArgs e)
@@ -43,10 +49,15 @@ namespace AnorocMobileApp.Views.Forms
                 {
                     Console.WriteLine("Access Token: " + userContext.AccessToken);
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;
-                 }
+
+                    Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+
+                }
                 else
                 {
                     Console.WriteLine("Error: Access Token is not available");
+                    Application.Current.MainPage = new LoginWithSocialIconPage();
+
                 }
 
             }
