@@ -72,9 +72,16 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        UserItineraries.Add(JsonConvert.DeserializeObject<ItineraryRisk>(json));
+                        var itineraruRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
+
+                        if(itineraruRisk != null)
+                            UserItineraries.Add(itineraruRisk);
                     }
-                    return UserItineraries;
+
+                    if (UserItineraries.Count > 0)
+                        return UserItineraries;
+                    else
+                        return null;
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
@@ -123,7 +130,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToItineraryServiceException();
+                    return null;
                 }
             }
         }
