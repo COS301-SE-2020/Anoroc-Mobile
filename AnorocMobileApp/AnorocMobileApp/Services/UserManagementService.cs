@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri( Constants.AnorocURI + "UserManagement/FirebaseToken");
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
@@ -119,7 +119,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "UserManagement/RegisterNewUser");
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.registerNewUserEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
