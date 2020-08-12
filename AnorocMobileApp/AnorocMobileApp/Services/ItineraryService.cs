@@ -40,6 +40,8 @@ namespace AnorocMobileApp.Services
             }
         }
 
+        // TODO:
+        // Checker if the itinerary is already in local var
         public async Task<List<ItineraryRisk>> GetUserItineraries()
         {
             using (Anoroc_Client = new HttpClient(clientHandler))
