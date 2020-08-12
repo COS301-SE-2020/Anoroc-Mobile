@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/UserManagement/FirebaseToken");
+                Uri Anoroc_Uri = new Uri( Constants.AnorocURI + "UserManagement/FirebaseToken");
                 HttpResponseMessage responseMessage;
 
                 try

@@ -143,6 +143,8 @@ namespace AnorocMobileApp.Services
             return await GetUserItineraries();
         }
 
+        // TODO:
+        // Put this logic in the Model for the itinerary
         public void Reset()
         {
             Pagination = 10;
