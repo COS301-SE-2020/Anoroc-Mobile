@@ -2,6 +2,7 @@
 using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Serialization;
@@ -41,7 +42,21 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         private static HttpClient _httpClientInstance;
 
-        public static HttpClient HttpClientInstance => _httpClientInstance ?? (_httpClientInstance = new HttpClient());
+        public static HttpClient HttpClientInstance
+        {
+            get
+            {
+                if (_httpClientInstance == null)
+                {
+                    var handler = new HttpClientHandler
+                    {
+                        ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                    };
+                    _httpClientInstance = _httpClientInstance ?? (_httpClientInstance = new HttpClient());
+                }
+                return _httpClientInstance;
+            }
+        }
 
         
         #endregion
@@ -83,7 +98,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (locations != value)
                 {
                     locations = value;
-                    OnPropertyChanged("Addresses");
+                    OnPropertyChanged("Locations");
                 }
             }
         }
@@ -110,33 +125,30 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         public async Task GetPlacesPredictonAsync()
         {
+            Debug.Print("In GetPlaces function");
             // TODO: Add some logic to slow down requests
             var cancellationToken = new CancellationTokenSource(TimeSpan.FromMinutes(2)).Token;
 
             // TODO: Pass current lon and lat to show areas closer to the user
-            using (var request = new HttpRequestMessage(HttpMethod.Get,
-                string.Format(Constants.AzureFuzzySearchUrl,
-                    WebUtility.UrlEncode(addressText),
-                    Secrets.AzureMapsSubscriptionKey)))
+            var url = string.Format(Constants.AzureFuzzySearchUrl,
+                WebUtility.UrlEncode(addressText),
+                Secrets.AzureMapsSubscriptionKey);
+            using (var message = await HttpClientInstance.GetAsync(url, HttpCompletionOption.ResponseContentRead, cancellationToken))
             {
-                using (HttpResponseMessage message = await HttpClientInstance.SendAsync(
-                    request, HttpCompletionOption.ResponseContentRead, cancellationToken).ConfigureAwait(false))
+                if (message.IsSuccessStatusCode)
                 {
-                    if (message.IsSuccessStatusCode)
-                    {
-                        var json = await message.Content.ReadAsStringAsync().ConfigureAwait(false);
-                        var wholeResponse = await Task.Run(() => JsonConvert.DeserializeObject<Welcome>(json)).ConfigureAwait(false);
-                        
-                        // TODO: Maybe check if it converted successfully
-                        
-                        Addresses.Clear();
+                    var json = await message.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    var wholeResponse = await Task.Run(() => JsonConvert.DeserializeObject<Welcome>(json)).ConfigureAwait(false);
+                    
+                    // TODO: Maybe check if it converted successfully
+                    
+                    Addresses.Clear();
 
-                        if (wholeResponse.Summary.TotalResults > 0)
+                    if (wholeResponse.Summary.TotalResults > 0)
+                    {
+                        foreach (var result in wholeResponse.Results)
                         {
-                            foreach (var result in wholeResponse.Results)
-                            {
-                                Addresses.Add(result.Address);
-                            }
+                            Addresses.Add(result.Address);
                         }
                     }
                 }
