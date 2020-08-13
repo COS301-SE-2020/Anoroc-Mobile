@@ -36,5 +36,10 @@ namespace AnorocMobileApp.Views.Navigation
                 DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
             });
         }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("Alert", "Notifications", "OK");         
+        }
     }
 }

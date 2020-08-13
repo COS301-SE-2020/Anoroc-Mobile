@@ -60,9 +60,10 @@ namespace AnorocMobileApp
             {
 
                 //MainPage = new Views.Navigation.SettingsPage();
+                MainPage = new Views.Navigation.MePage();
                 //MainPage = new Views.Map();
 
-                MainPage = new LoginWithSocialIconPage();
+                //MainPage = new LoginWithSocialIconPage();
 
             }
         }

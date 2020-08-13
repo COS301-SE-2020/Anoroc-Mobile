@@ -28,15 +28,15 @@ namespace AnorocMobileApp.ViewModels.Navigation
         {
             cardItems = new ObservableCollection<Me>()
             {
-                new Me()
-                {
-                    Category = "Notifications",
-                    CategoryValue = "13",                    
-                    ImagePath = "CaloriesEaten.svg",
-                    //doSomething()
+                //new Me()
+                //{
+                //    Category = "Notifications",
+                //    //CategoryValue = "13",                    
+                //    //ImagePath = "CaloriesEaten.svg",
+                //    //doSomething()
                     
 
-                }
+                //}
                 
                 //,
                 //new Me()
@@ -66,9 +66,11 @@ namespace AnorocMobileApp.ViewModels.Navigation
             this.State = "Gauteng";
             this.Country = "South Africa";
             this.Age = "35";
-            this.Weight = "159 Ibs";
-            this.Height = "165 cm";
+            //this.Weight = "159 Ibs";
+            //this.Height = "165 cm";
             this.Status = "Negative";
+            this.Location = "Enabled";
+            this.Incidents = "92";
         }
 
         #endregion
@@ -91,6 +93,13 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 this.NotifyPropertyChanged();
             }
         }
+
+        public void NotificationsView()
+        {
+            App.Current.MainPage.DisplayAlert("Alert", "Notifications", "OK");
+        }
+
+
 
         /// <summary>
         /// Gets or sets the profile image.
@@ -131,6 +140,16 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// Gets or sets the status.
         /// </summary>
         public string Status { get; set; }
+
+        /// <summary>
+        /// Gets or sets the incidents.
+        /// </summary>
+        public string Incidents { get; set; }
+
+        /// <summary>
+        /// Gets or sets the location.
+        /// </summary>
+        public string Location { get; set; }
 
         #endregion
     }
