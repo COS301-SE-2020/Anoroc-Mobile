@@ -7,7 +7,7 @@
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:sfpicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
              xmlns:sfPopout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
-             xmlns:Behavior="clr-namespace:AnorocMobileApp.Behaviors"
+             xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.Dashboard.AddItineraryPage"
@@ -97,7 +97,7 @@
                             </listView:SfListView.ItemTemplate>
 
                             <listView:SfListView.Behaviors>
-                                <Behavior:SfListViewExtendHeightBehavior/>
+                                <behavior:SfListViewExtendHeightBehavior/>
                             </listView:SfListView.Behaviors>
 
                         </listView:SfListView>
@@ -112,7 +112,6 @@
                     <buttons:SfButton
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Done" />
-                    
                 </StackLayout>
 
             </Grid>
