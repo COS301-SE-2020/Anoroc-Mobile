@@ -41,7 +41,7 @@ namespace AnorocMobileApp.Controls
         /// <param name="newValue">Updated state</param>
         public static void RedrawCanvas(BindableObject bindable, object oldValue, object newValue)
         {
-            SVGImage sVGImage = bindable as SVGImage;
+            var sVGImage = bindable as SVGImage;
             sVGImage?.canvasView.InvalidateSurface();
         }
 
@@ -52,7 +52,7 @@ namespace AnorocMobileApp.Controls
         /// <param name="args">The arguments</param>
         private void CanvasView_PaintSurface(object sender, SKPaintSurfaceEventArgs args)
         {
-            SKCanvas skCanvas = args.Surface.Canvas;
+            var skCanvas = args.Surface.Canvas;
             skCanvas.Clear();
 
             if (string.IsNullOrEmpty(this.Source))
@@ -64,16 +64,16 @@ namespace AnorocMobileApp.Controls
             var assembly = typeof(SVGImage).GetTypeInfo().Assembly.GetName();
 
             // Update the canvas with the SVG image
-            using (Stream stream = typeof(SVGImage).GetTypeInfo().Assembly.GetManifestResourceStream(assembly.Name + ".Images." + Source))
+            using (var stream = typeof(SVGImage).GetTypeInfo().Assembly.GetManifestResourceStream(assembly.Name + ".Images." + Source))
             {
-                SkiaSharp.Extended.Svg.SKSvg skSVG = new SkiaSharp.Extended.Svg.SKSvg();
+                var skSVG = new SkiaSharp.Extended.Svg.SKSvg();
                 skSVG.Load(stream);
-                SKImageInfo imageInfo = args.Info;
+                var imageInfo = args.Info;
                 skCanvas.Translate(imageInfo.Width / 2f, imageInfo.Height / 2f);
-                SKRect rectBounds = skSVG.ViewBox;
-                float xRatio = imageInfo.Width / rectBounds.Width;
-                float yRatio = imageInfo.Height / rectBounds.Height;
-                float minRatio = Math.Min(xRatio, yRatio);
+                var rectBounds = skSVG.ViewBox;
+                var xRatio = imageInfo.Width / rectBounds.Width;
+                var yRatio = imageInfo.Height / rectBounds.Height;
+                var minRatio = Math.Min(xRatio, yRatio);
                 skCanvas.Scale(minRatio);
                 skCanvas.Translate(-rectBounds.MidX, -rectBounds.MidY);
                 skCanvas.DrawPicture(skSVG.Picture);

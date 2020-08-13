@@ -50,11 +50,11 @@
                              Size="16"/>
         </local:Map.IconImageSource>
     </local:Map>
-    <local:SettingsPage Title="Settings">
-        <local:SettingsPage.IconImageSource>
+    <navigation:SettingsPage Title="Settings">
+        <navigation:SettingsPage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource SettingsIcon}"
                                  Size="16"/>
-        </local:SettingsPage.IconImageSource>
-    </local:SettingsPage>
+        </navigation:SettingsPage.IconImageSource>
+    </navigation:SettingsPage>
 </TabbedPage>

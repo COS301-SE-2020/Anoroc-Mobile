@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using System.Diagnostics;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.ViewModels.Navigation
@@ -41,6 +42,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// <param name="obj">The Object.</param>
         private void DownloadQualityTapped(object obj)
         {
+            //Application.Current.MainPage.DisplayAlert("AA", "BB", "Ok");
         }
 
         /// <summary>
@@ -58,5 +60,6 @@ namespace AnorocMobileApp.ViewModels.Navigation
         private void PrivacyPolicyTapped(object obj)
         {
         }
+                
     }
 }
