@@ -94,6 +94,11 @@ namespace AnorocMobileApp.Models.Itinerary
         [JsonProperty("streetNumber", NullValueHandling = NullValueHandling.Ignore)]
         [JsonConverter(typeof(ParseStringConverter))]
         public long? StreetNumber { get; set; }
+
+        public override string ToString()
+        {
+            return FreeformAddress;
+        }
     }
 
     public partial class DataSources
