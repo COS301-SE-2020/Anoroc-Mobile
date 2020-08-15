@@ -86,7 +86,8 @@ namespace AnorocMobileApp.Views.Dashboard
             var sfListView = new SfListView
             {
                 ItemsSource = viewModel.Addresses,
-                Margin = new Thickness(8, 4)
+                Margin = new Thickness(8, 4),
+                TapCommand = viewModel.SearchLocationTapped
             };
             // SfListView.SetBinding(SfListView.ItemsSourceProperty, "Addresses");
 
