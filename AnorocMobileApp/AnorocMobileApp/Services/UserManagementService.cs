@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/UserManagement/FirebaseToken");
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
@@ -100,6 +100,42 @@ namespace AnorocMobileApp.Services
                 throw new CantConnectToLocationServerException();
             }
 
+        }
+
+        public async void RegisterUserAsync(string firstName, string surname, string userEmail)
+        {
+            using (Anoroc_Client = new HttpClient(clientHandler))
+            {
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                User.Email = userEmail;
+                User.FirstName = firstName;
+                User.UserSurname = surname;
+                token_object.Object_To_Server = User.toString(); ;
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.registerNewUserEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                    }
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
+            }
         }
     }
 }
