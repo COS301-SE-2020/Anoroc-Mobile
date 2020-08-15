@@ -34,6 +34,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         public AddItineraryViewModel()
         {
+            SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
         }
 
         #endregion
@@ -119,6 +120,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Commands
 
+        private Command<object> searchLocationTapped;
+
+        public Command<object> SearchLocationTapped
+        {
+            get => searchLocationTapped;
+            set => searchLocationTapped = value;
+        }
+
         #endregion
         
         #region Methods
@@ -153,6 +162,12 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     }
                 }
             }
+        }
+
+        private void SearchLocationTappedMethod(object obj)
+        {
+            var item = obj as Syncfusion.ListView.XForms.ItemTappedEventArgs;
+            if (item != null) Debug.Print(item.ItemData + " | " + item.GetType());
         }
         
         #endregion
