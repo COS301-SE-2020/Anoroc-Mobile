@@ -102,7 +102,7 @@ namespace AnorocMobileApp.Services
 
         }
 
-        public async void RegisterUserAsync(string firstName, string surname, string userEmail)
+        public async void UserLoggedIn(string firstName, string surname, string userEmail)
         {
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
@@ -119,7 +119,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.registerNewUserEndpoint);
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserLoggedInEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
@@ -129,6 +129,7 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
+                        Application.Current.Properties["TOKEN"] = json;
                     }
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
