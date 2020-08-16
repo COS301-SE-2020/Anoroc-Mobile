@@ -200,6 +200,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     {
                         // TODO perhaps just store Position object instead of Location
                         Locations.Add(new Location(result.Position));
+                        AddressTimeline.Add(result.Address);
                     }
                 }
             };
