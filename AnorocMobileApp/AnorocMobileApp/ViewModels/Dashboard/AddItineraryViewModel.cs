@@ -65,9 +65,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Fields
 
-        private ObservableCollection<(Address address, Position position)> results;
+        private ObservableCollection<Result> results;
         private ObservableCollection<Address> addresses;
         private ObservableCollection<Location> locations;
+        private ObservableCollection<Address> addressTimeline;
         private string addressText;
 
         #endregion
@@ -80,9 +81,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         [DataMember(Name = "dailyTimeline")]
         public ObservableCollection<Event> DailyTimeline { get; set; }
 
-        public ObservableCollection<(Address address, Position position)> Results
+        public ObservableCollection<Result> Results
         {
-            get => results ?? (results = new ObservableCollection<(Address address, Position position)>());
+            get => results ?? (results = new ObservableCollection<Result>());
             set
             {
                 if (results != value)
@@ -118,7 +119,20 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 }
             }
         }
-        
+
+        public ObservableCollection<Address> AddressTimeline
+        {
+            get => addressTimeline ?? (addressTimeline = new ObservableCollection<Address>());
+            set
+            {
+                if (addressTimeline != value)
+                {
+                    addressTimeline = value;
+                    OnPropertyChanged("AddressTimeline");
+                }
+            }
+        }
+
         public string AddressText 
         {
             get => addressText;
@@ -168,7 +182,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                         foreach (var result in wholeResponse.Results)
                         {
                             Addresses.Add(result.Address);
-                            Results.Add((result.Address, result.Position));
+                            Results.Add(result);
                         }
                     }
                 }
@@ -182,10 +196,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 var address = item.ItemData as Address;
                 foreach (var result in Results)
                 {
-                    if (result.address == address)
+                    if (result.Address == address)
                     {
                         // TODO perhaps just store Position object instead of Location
-                        Locations.Add(new Location(result.position));
+                        Locations.Add(new Location(result.Position));
                     }
                 }
             };
