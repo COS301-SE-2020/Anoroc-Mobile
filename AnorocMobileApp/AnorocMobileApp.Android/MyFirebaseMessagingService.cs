@@ -25,25 +25,29 @@ namespace AnorocMobileApp.Droid
         public static string title = "";
         public static string body = "";
 
-        public override void OnMessageReceived(RemoteMessage message)
+        public override void  OnMessageReceived(RemoteMessage message)
         {
             base.OnMessageReceived(message);
 
             Console.WriteLine("Received: " + message);
             try
-            {                
+            {
+                base.OnMessageReceived(message);
+
                 var body = message.GetNotification().Body;
                 var title = message.GetNotification().Title;
-                string[] notificationMessage = { title, body };
-                Console.WriteLine("Testing Data output: "  + message.Data.Values);
+
+                string[] notificationMessage = { title, body };               
+
+                //Console.WriteLine("Testing Data output: "  + message.Data.Values);
 
 
                 // Passing Message onto xamarin forms
                 MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, body);
-                Console.WriteLine("Received Message: " + body);
+                //Console.WriteLine("Received Message: " + body);
 
                 MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationReceivedKey, notificationMessage);
-                SendNotification(title, message.Data);
+                SendNotification(body, message.Data);                
             }
             catch (Exception ex)
             {

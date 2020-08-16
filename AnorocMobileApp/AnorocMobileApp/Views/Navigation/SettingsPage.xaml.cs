@@ -64,7 +64,7 @@ namespace AnorocMobileApp.Views.Navigation
                 Application.Current.SavePropertiesAsync();
                 var blTest = (Application.Current.Properties["Message"].ToString());
                 DependencyService.Get<NotificationServices>().CreateNotification("TestSave", blTest);
-                Console.WriteLine("blTest");
+                //Console.WriteLine("blTest");
             });
         }
 
