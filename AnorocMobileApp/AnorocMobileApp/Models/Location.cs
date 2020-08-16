@@ -8,6 +8,12 @@ namespace AnorocMobileApp.Models
         {
 
         }
+
+        public Location(double lon, double lat)
+        {
+            Latitude = lat;
+            Longitude = lon;
+        }
         public Location(Xamarin.Essentials.Location loc)
         {
             this.Created = DateTime.Now;
