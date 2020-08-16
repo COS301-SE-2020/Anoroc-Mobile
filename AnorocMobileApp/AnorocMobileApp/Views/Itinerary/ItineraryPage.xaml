@@ -9,11 +9,7 @@
     xmlns:itinerary="clr-namespace:AnorocMobileApp.ViewModels.Itinerary;assembly=AnorocMobileApp"
     BackgroundColor="{StaticResource Gray-White}"
     NavigationPage.HasNavigationBar="False">
-
-    <!--  Binding context for Itinerary page  -->
-    <ContentPage.BindingContext>
-        <itinerary:ItineraryPageViewModel />
-    </ContentPage.BindingContext>
+    
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -78,7 +74,7 @@
             <!--  Try again button  -->
             <button:SfButton
                 Grid.Row="1"
-                Command="{Binding GoBackCommand}"
+                Command="{Binding AddItineraryCommand}"
                 Style="{StaticResource SfGradientButtonStyle}"
                 Text="Add Itinerary" />
         </Grid>
