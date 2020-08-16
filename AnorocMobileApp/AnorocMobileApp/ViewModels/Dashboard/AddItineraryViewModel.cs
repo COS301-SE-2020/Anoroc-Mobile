@@ -44,7 +44,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         private static HttpClient _httpClientInstance;
 
-        public static HttpClient HttpClientInstance
+        private static HttpClient HttpClientInstance
         {
             get
             {
