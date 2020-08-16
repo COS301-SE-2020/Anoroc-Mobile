@@ -1,5 +1,8 @@
 ﻿using System;
+using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -9,7 +12,7 @@ namespace AnorocMobileApp.Views.Forms
     /// <summary>
     /// Page to login with user name and password
     /// </summary>
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginWithSocialIconPage
     {
@@ -25,7 +28,35 @@ namespace AnorocMobileApp.Views.Forms
         /// </summary>
         private void Button_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());                  
-        }        
+
+            NotificationDB notificationDB = new NotificationDB()
+            {
+                Body = "This is a waring"
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                int rowsAdded = conn.Insert(notificationDB);
+
+                Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+
+            }
+        }
+
+
+        //MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
+
+        
+        
+
+        /*void OnMessageReceived(object sender, string msg)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+            });
+        }*/
     }
 }

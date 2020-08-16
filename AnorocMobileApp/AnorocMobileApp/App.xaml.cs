@@ -27,6 +27,9 @@ namespace AnorocMobileApp
         public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
 
+
+        public static string FilePath;
+
         public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
@@ -64,6 +67,27 @@ namespace AnorocMobileApp
 
             }
         }
+
+
+        public App(string filePath)
+        {
+            IoCContainer = new Container();
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new LoginWithSocialIconPage();
+
+            FilePath = filePath;
+        }
+
+
 
         public App()
         {

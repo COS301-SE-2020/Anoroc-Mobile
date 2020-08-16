@@ -16,6 +16,7 @@ using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
 using Xamarin.Essentials;
+using System.IO;
 
 namespace AnorocMobileApp.Droid
 {
@@ -91,7 +92,11 @@ namespace AnorocMobileApp.Droid
 
             // Dependency Injection:
 
-            LoadApplication(new App(new FacebookLoginService()));
+            string fileNmae = "notification_db.db3";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string completePath = Path.Combine(folderPath, fileNmae);
+
+            LoadApplication(new App(completePath));
 
             WireUpBackgroundLocationTask();
         }

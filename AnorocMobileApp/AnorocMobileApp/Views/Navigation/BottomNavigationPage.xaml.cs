@@ -1,11 +1,13 @@
-﻿using AnorocMobileApp.Services;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views.Navigation
 {
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BottomNavigationPage : TabbedPage
     {
@@ -19,17 +21,15 @@ namespace AnorocMobileApp.Views.Navigation
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
-
-        }
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
+
+                conn.CreateTable<NotificationDB>();
+                var notifications = conn.Table<NotificationDB>().ToList();
+
+            }
+
         }
+
     }
 }

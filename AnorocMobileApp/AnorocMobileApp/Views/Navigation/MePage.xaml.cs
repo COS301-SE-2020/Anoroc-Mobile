@@ -1,4 +1,6 @@
-﻿using AnorocMobileApp.Services;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -8,7 +10,7 @@ namespace AnorocMobileApp.Views.Navigation
     /// <summary>
     /// Page to show the Me page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    [SQLite.Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MePage : ContentPage
     {
@@ -30,6 +32,17 @@ namespace AnorocMobileApp.Views.Navigation
 
         void OnMessageReceived(object sender, string msg)
         {
+            NotificationDB notificationDB = new NotificationDB()
+            {
+                Body = msg
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                int rowsAdded = conn.Insert(notificationDB);
+            }
+
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
