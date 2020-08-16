@@ -17,6 +17,7 @@ using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
+using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
 
 namespace AnorocMobileApp.ViewModels.Dashboard
 {
@@ -64,6 +65,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Fields
 
+        private ObservableCollection<(Address address, Position position)> results;
         private ObservableCollection<Address> addresses;
         private ObservableCollection<Location> locations;
         private string addressText;
@@ -78,6 +80,19 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         [DataMember(Name = "dailyTimeline")]
         public ObservableCollection<Event> DailyTimeline { get; set; }
 
+        public ObservableCollection<(Address address, Position position)> Results
+        {
+            get => results ?? (results = new ObservableCollection<(Address address, Position position)>());
+            set
+            {
+                if (results != value)
+                {
+                    results = value;
+                    OnPropertyChanged("Results");
+                }
+            }
+        }
+        
         public ObservableCollection<Address> Addresses
         {
             get => addresses ?? (addresses = new ObservableCollection<Address>());
@@ -120,13 +135,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         
         #region Commands
 
-        private Command<object> searchLocationTapped;
-
-        public Command<object> SearchLocationTapped
-        {
-            get => searchLocationTapped;
-            set => searchLocationTapped = value;
-        }
+        public Command<object> SearchLocationTapped { get; set; }
 
         #endregion
         
@@ -152,12 +161,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     // TODO: Maybe check if it converted successfully
                     
                     Addresses.Clear();
+                    Results.Clear();
 
                     if (wholeResponse.Summary.TotalResults > 0)
                     {
                         foreach (var result in wholeResponse.Results)
                         {
                             Addresses.Add(result.Address);
+                            Results.Add((result.Address, result.Position));
                         }
                     }
                 }
@@ -166,8 +177,18 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private void SearchLocationTappedMethod(object obj)
         {
-            var item = obj as Syncfusion.ListView.XForms.ItemTappedEventArgs;
-            if (item != null) Debug.Print(item.ItemData + " | " + item.GetType());
+            if (obj is ItemTappedEventArgs item)
+            {
+                var address = item.ItemData as Address;
+                foreach (var result in Results)
+                {
+                    if (result.address == address)
+                    {
+                        // TODO perhaps just store Position object instead of Location
+                        Locations.Add(new Location(result.position));
+                    }
+                }
+            };
         }
         
         #endregion
