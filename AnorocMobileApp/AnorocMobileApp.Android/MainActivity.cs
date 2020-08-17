@@ -17,8 +17,9 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
 using Xamarin.Essentials;
 using System.IO;
-using AnorocMobileApp.Models;
-using SQLite;
+using Plugin.CurrentActivity;
+using Microsoft.Identity.Client;
+
 
 namespace AnorocMobileApp.Droid
 {
@@ -42,6 +43,8 @@ namespace AnorocMobileApp.Droid
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
 
             // Set Dependancy
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            DependencyService.Register<IParentWindowLocatorService, AndroidParentWindowLocatorService>();
 
 
             TabLayoutResource = Resource.Layout.Tabbar;
@@ -92,6 +95,7 @@ namespace AnorocMobileApp.Droid
 
             IsPlayServicesAvailable();
 
+
             // Dependency Injection:
 
             string fileNmae = "notification_db.db3";
@@ -99,6 +103,7 @@ namespace AnorocMobileApp.Droid
             string completePath = Path.Combine(folderPath, fileNmae);
 
             LoadApplication(new App(completePath));
+
 
             WireUpBackgroundLocationTask();
         }
@@ -181,6 +186,7 @@ namespace AnorocMobileApp.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
             CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }
 
