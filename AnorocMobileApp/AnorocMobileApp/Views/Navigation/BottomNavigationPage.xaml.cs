@@ -11,6 +11,8 @@ namespace AnorocMobileApp.Views.Navigation
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BottomNavigationPage : TabbedPage
     {
+
+        private string title; 
         public BottomNavigationPage()
         {
             InitializeComponent();
@@ -21,15 +23,54 @@ namespace AnorocMobileApp.Views.Navigation
         {
             base.OnAppearing();
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleMessageReceived);
 
-                conn.CreateTable<NotificationDB>();
-                var notifications = conn.Table<NotificationDB>().ToList();
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
 
-            }
+            /*  if(title != null && body != null)
+              {
+                  SaveMessageToSQLite(title, body);
+              }
+              if (title != null && body != null)
+              {
+
+              }*/
+
+
 
         }
+
+
+        void OnTitleMessageReceived(object sender, string msg)
+        {
+            title = msg;
+        }
+
+        void OnBodyMessageReceived(object sender, string msg)
+        {
+            //body = msg;
+
+            NotificationDB notificationDB = new NotificationDB()
+            {
+                Title = title,
+                Body = msg
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                int rowsAdded = conn.Insert(notificationDB);
+            }
+
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification(title, msg);
+            });
+
+        }
+
 
     }
 }

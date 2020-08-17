@@ -58,19 +58,9 @@ namespace AnorocMobileApp.Views.Forms
         void SaveMessagetoSqLite(string title)
         {
 
-            NotificationDB notificationDB = new NotificationDB()
-            {
-                Title = title,
-                Body = body
-            };
+           Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.CreateTable<NotificationDB>();
-                int rowsAdded = conn.Insert(notificationDB);
-
-                var notifications = conn.Table<NotificationDB>().ToList();
-            }
+        }
 
 
         }

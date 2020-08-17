@@ -15,24 +15,6 @@ namespace AnorocMobileApp.Views
             InitializeComponent();
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-           
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
-
-        }
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-                lblMsg.Text = msg;
-            });
-        }
-
         /// <summary>
         /// Function to Send Notofication to user
         /// </summary>

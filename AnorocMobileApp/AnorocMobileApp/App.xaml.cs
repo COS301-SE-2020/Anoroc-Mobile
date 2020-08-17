@@ -15,7 +15,6 @@ namespace AnorocMobileApp
     {
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
-        public const string WholeNotificationReceivedKey = "WholeNotificationRecieved";
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";

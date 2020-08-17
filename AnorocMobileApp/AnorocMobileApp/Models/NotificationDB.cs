@@ -18,7 +18,6 @@ namespace AnorocMobileApp.Models
             get;
             set;
         }
-
         public string Body
         {
             get;

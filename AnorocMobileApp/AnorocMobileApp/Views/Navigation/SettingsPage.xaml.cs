@@ -46,27 +46,6 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
-
-        }
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                //Update Label
-               // DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-                Application.Current.Properties["Message"] = msg;
-                Application.Current.SavePropertiesAsync();
-                var blTest = (Application.Current.Properties["Message"].ToString());
-                DependencyService.Get<NotificationServices>().CreateNotification("TestSave", blTest);
-                //Console.WriteLine("blTest");
-            });
-        }
 
         private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {
