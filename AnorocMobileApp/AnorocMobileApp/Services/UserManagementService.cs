@@ -129,7 +129,8 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        Application.Current.Properties["TOKEN"] = json;
+                        if(!json.Equals("I trust you...for now..."))
+                            Application.Current.Properties["TOKEN"] = json;
                     }
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
