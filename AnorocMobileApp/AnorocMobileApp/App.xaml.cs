@@ -7,12 +7,15 @@ using AnorocMobileApp.Helpers;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
+using AnorocMobileApp;
 
 namespace AnorocMobileApp
 {
     public partial class App
     {
-        public const string NotificationReceivedKey = "NotificationRecieved";
+        public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
+        public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
+        public const string WholeNotificationReceivedKey = "WholeNotificationRecieved";
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";

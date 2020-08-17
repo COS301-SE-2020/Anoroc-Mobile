@@ -9,7 +9,9 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using AnorocMobileApp.Models;
 using Firebase.Messaging;
+using SQLite;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -43,11 +45,12 @@ namespace AnorocMobileApp.Droid
 
 
                 // Passing Message onto xamarin forms
-                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, body);
+                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, body);
                 //Console.WriteLine("Received Message: " + body);
 
-                MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationReceivedKey, notificationMessage);
-                SendNotification(body, message.Data);                
+                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+
+                //SendNotification(body, message.Data);                
             }
             catch (Exception ex)
             {
@@ -66,6 +69,20 @@ namespace AnorocMobileApp.Droid
             foreach (var key in data.Keys)
             {
                 intent.PutExtra(key, data[key]);
+            }
+
+            NotificationDB notificationDB = new NotificationDB()
+            {
+                Title = title,
+                Body = body
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+
+                conn.CreateTable<NotificationDB>();
+                var notifications = conn.Table<NotificationDB>().ToList();
+
             }
         }   
     }

@@ -19,6 +19,10 @@ namespace AnorocMobileApp.Views.Forms
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginWithSocialIconPage" /> class.
         /// </summary>
+
+        private string title = "";
+        private string body = "";
+
         public LoginWithSocialIconPage()
         {
             InitializeComponent();
@@ -27,11 +31,37 @@ namespace AnorocMobileApp.Views.Forms
         /// Function sets Main Page to Navigation Page
         /// </summary>
         private void Button_Clicked(object sender, EventArgs e)
+        {            
+            Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());            
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleRecieved);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
+
+        }
+
+        void OnTitleRecieved(object sender, string msg)
+        {
+            title = msg;
+            SaveMessagetoSqLite(title);
+        }
+
+        void OnMessageReceived(object sender, string msg)
+        {
+            body = msg;
+        }
+
+        void SaveMessagetoSqLite(string title)
         {
 
             NotificationDB notificationDB = new NotificationDB()
             {
-                Body = "This is a waring"
+                Title = title,
+                Body = body
             };
 
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
@@ -39,16 +69,16 @@ namespace AnorocMobileApp.Views.Forms
                 conn.CreateTable<NotificationDB>();
                 int rowsAdded = conn.Insert(notificationDB);
 
-                Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
-
+                var notifications = conn.Table<NotificationDB>().ToList();
             }
-        }
 
+
+        }
 
         //MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
 
-        
-        
+
+
 
         /*void OnMessageReceived(object sender, string msg)
         {

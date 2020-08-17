@@ -1,4 +1,6 @@
-﻿using AnorocMobileApp.Services;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -15,6 +17,8 @@ namespace AnorocMobileApp.Views.Home
         /// <summary>
         /// Initializes a new instance of the <see cref="HomePage" /> class.
         /// </summary>
+        private string title = "";
+        private string body = "";
         public HomePage()
         {
             InitializeComponent();
@@ -24,17 +28,40 @@ namespace AnorocMobileApp.Views.Home
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleRecieved);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
 
+        }
+
+        void OnTitleRecieved(object sender, string msg)
+        {
+            title = msg;
+            SaveMessagetoSqLite(title);
         }
 
         void OnMessageReceived(object sender, string msg)
         {
-            Device.BeginInvokeOnMainThread(() =>
+            body = msg;
+        }
+
+        void SaveMessagetoSqLite(string title)
+        {
+
+            NotificationDB notificationDB = new NotificationDB()
             {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
+                Title = title,
+                Body = body
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                int rowsAdded = conn.Insert(notificationDB);
+
+                var notifications = conn.Table<NotificationDB>().ToList();
+            }
+
+
         }
     }
 }

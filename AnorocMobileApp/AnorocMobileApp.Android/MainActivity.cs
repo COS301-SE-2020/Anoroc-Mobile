@@ -17,6 +17,8 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
 using Xamarin.Essentials;
 using System.IO;
+using AnorocMobileApp.Models;
+using SQLite;
 
 namespace AnorocMobileApp.Droid
 {
@@ -40,7 +42,7 @@ namespace AnorocMobileApp.Droid
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
 
             // Set Dependancy
-           
+
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
@@ -139,7 +141,7 @@ namespace AnorocMobileApp.Droid
                 Preferences.Set("title", title);
                 Preferences.Set("body", body);
             }
-
+            
         }
 
         void WireUpBackgroundLocationTask()
@@ -200,6 +202,31 @@ namespace AnorocMobileApp.Droid
                     // Permissions already granted - display a message.
                 }
             }
-        }       
+        }
+
+
+        void OnMessageReceived(object sender, string msg)
+        {
+            var title = Intent.GetStringExtra("title");
+            NotificationDB notificationDB = new NotificationDB()
+            {
+                Title = title,
+                Body = msg
+            };
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                int rowsAdded = conn.Insert(notificationDB);
+
+                var notifications = conn.Table<NotificationDB>().ToList();
+            }
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+            });
+        }
     }
 }
