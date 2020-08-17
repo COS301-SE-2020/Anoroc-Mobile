@@ -162,21 +162,24 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Age -->
+                        <!-- Carrier status -->
                         <Label Grid.Row="0" FontSize="12" Text="Status" Style="{StaticResource LabelStyle}" 
                                HorizontalOptions="Center" VerticalOptions="End"
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
-                        <Picker Grid.Row="1"   Title="  Status  "
-                
-                               
-                               Grid.Column="0"  FontSize="12"  
-                               FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
-                               HorizontalOptions="Center"
-                                VerticalOptions="Center" 
-                                > 
+
+                        <Picker
+                            AutomationId="Picker"
+                            x:Name="picker"
+                            SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                            Grid.Row="1"
+                            Title="  Status  "                                              
+                            Grid.Column="0"  FontSize="12"  
+                            FontFamily="{DynamicResource Montserrat-Medium}"
+                            TextColor="{DynamicResource Gray-700}" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
                             <Picker.ItemsSource>
                                 <x:Array Type="{x:Type x:String}">
-                                    
                                     <x:String>Positive</x:String>
                                     <x:String>Negative</x:String>
                                 </x:Array>
@@ -189,7 +192,7 @@
                         <!-- Seperator -->
                         <BoxView Grid.Column="1" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
-                        <!-- Weight -->
+                        <!-- Location tracking -->
                         <Label Grid.Row="1" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
                                HorizontalOptions="Center" VerticalOptions="Center" />
@@ -200,7 +203,7 @@
                         <!-- Seperator -->
                         <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
-                        <!-- Height -->
+                        <!-- Number of incedents -->
                         <Label Grid.Row="1" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center"
                                VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
                                TextColor="{DynamicResource Gray-700}" />
@@ -210,14 +213,17 @@
 
                     </Grid>
                 </cards:SfCardView>
+
+                <!-- Go to notifications -->
                 <Button Text="Notifications"
                         Font="Ariel"
                         Grid.Row="1"
                         VerticalOptions="Start"                        
                         Padding="20"
-                        BackgroundColor="#F3F3F3"                        
-                        Command="{Binding NotificationsView}"
+                        BackgroundColor="#f2f2f2"
+                        Clicked="Button_Clicked"                        
                         />
+                        <!-- Command="{Binding NotificationsView}" -->
             </Grid>
 
 

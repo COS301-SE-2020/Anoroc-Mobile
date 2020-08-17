@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using Xamarin.Forms.Internals;
 using AnorocMobileApp.Models;
+using Xamarin.Forms;
+using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
@@ -34,10 +36,10 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 //    //CategoryValue = "13",                    
                 //    //ImagePath = "CaloriesEaten.svg",
                 //    //doSomething()
-                    
+
 
                 //}
-                
+
                 //,
                 //new Me()
                 //{
@@ -59,17 +61,18 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 //}
             };
             //cardItems.Add();                            
-             //CardItem button onPress={() => Alert.alert('hi')}
+            //CardItem button onPress={() => Alert.alert('hi')}
 
             this.ProfileImage = App.BaseImageUrl + "ProfileImage16.png";
             this.ProfileName = "Anoroc Van Looi";
             this.State = "Gauteng";
             this.Country = "South Africa";
             this.Age = "35";
-            //this.Weight = "159 Ibs";
-            //this.Height = "165 cm";
-            this.Status = "Negative";
-            this.Location = "Enabled";
+            this.Location = "Disabled";
+            if (BackgroundLocaitonService.Tracking)
+            {
+                this.Location = "Enabled";                
+            }
             this.Incidents = "92";
         }
 
@@ -93,12 +96,6 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 this.NotifyPropertyChanged();
             }
         }
-
-        public void NotificationsView()
-        {
-            App.Current.MainPage.DisplayAlert("Alert", "Notifications", "OK");
-        }
-
 
 
         /// <summary>

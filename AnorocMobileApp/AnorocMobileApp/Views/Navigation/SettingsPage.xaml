@@ -99,17 +99,6 @@
                     </Label.GestureRecognizers>
                 </Label>
                 <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="7"/>
-
-
-                 <Picker AutomationId="Picker" x:Name="picker" Grid.Row="9" SelectedIndexChanged="OnPickerSelectedIndexChanged"
-                 Title="Select status">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Positive</x:String>
-                            <x:String>Negative</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
                
                 
             </Grid>

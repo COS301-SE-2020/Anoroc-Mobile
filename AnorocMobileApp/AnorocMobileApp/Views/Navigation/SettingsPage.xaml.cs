@@ -36,14 +36,14 @@ namespace AnorocMobileApp.Views.Navigation
                     LocationSwitch.IsEnabled = true;
             }
 
-            if (Application.Current.Properties.ContainsKey("CarrierStatus"))
-            {
-                var value = Application.Current.Properties["CarrierStatus"].ToString();
-                if (value == "Positive")
-                    picker.SelectedIndex = 0;
-                else
-                    picker.SelectedIndex = 1;
-            }
+            //if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            //{
+            //    var value = Application.Current.Properties["CarrierStatus"].ToString();
+            //    if (value == "Positive")
+            //        picker.SelectedIndex = 0;
+            //    else
+            //        picker.SelectedIndex = 1;
+            //}
         }
 
         protected override void OnAppearing()
@@ -63,28 +63,28 @@ namespace AnorocMobileApp.Views.Navigation
             });
         }
 
-        private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
-        {
+        //private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
+        //{
 
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
+        //    var picker = (Picker)sender;
+        //    int selectedIndex = picker.SelectedIndex;
 
-            if (selectedIndex != -1)
-            {
-                string value = (string)picker.ItemsSource[selectedIndex];
-                //DisplayAlert("Carrier Status", value, "OK");
-                Application.Current.Properties["CarrierStatus"] = value;
+        //    if (selectedIndex != -1)
+        //    {
+        //        string value = (string)picker.ItemsSource[selectedIndex];
+        //        //DisplayAlert("Carrier Status", value, "OK");
+        //        Application.Current.Properties["CarrierStatus"] = value;
 
-                if (value == "Positive")
-                    User.carrierStatus = true;
-                else
-                    User.carrierStatus = false;
+        //        if (value == "Positive")
+        //            User.carrierStatus = true;
+        //        else
+        //            User.carrierStatus = false;
 
                 
-                IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
-                user.sendCarrierStatusAsync(value);
-            }
-        }
+        //        IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
+        //        user.sendCarrierStatusAsync(value);
+        //    }
+        //}
 
 
         async void SfSwitch_StateChanged(System.Object sender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
@@ -92,13 +92,13 @@ namespace AnorocMobileApp.Views.Navigation
             IBackgroundLocationService back = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.NewValue == true)
             {
-                BackgroundLocaitonService.Tracking = true;
+                //BackgroundLocaitonService.Tracking = true;
                 back.Start_Tracking();
 
             }
             else
             {
-                BackgroundLocaitonService.Tracking = false;                               
+                //BackgroundLocaitonService.Tracking = false;                               
                 back.Stop_Tracking();
 
                 await DisplayAlert("Attention", "Disabled", "OK");

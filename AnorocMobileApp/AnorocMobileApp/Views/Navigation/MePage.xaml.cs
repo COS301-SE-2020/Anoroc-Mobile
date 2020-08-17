@@ -1,4 +1,7 @@
-﻿using AnorocMobileApp.Services;
+﻿using System;
+using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -18,6 +21,15 @@ namespace AnorocMobileApp.Views.Navigation
         public MePage()
         {
             InitializeComponent();
+
+            if (Application.Current.Properties.ContainsKey("CarrierStatus"))
+            {
+                var value = Application.Current.Properties["CarrierStatus"].ToString();
+                if (value == "Positive")
+                    picker.SelectedIndex = 0;
+                else
+                    picker.SelectedIndex = 1;
+            }
         }
 
         protected override void OnAppearing()
@@ -39,7 +51,29 @@ namespace AnorocMobileApp.Views.Navigation
 
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
-            DisplayAlert("Alert", "Notifications", "OK");         
+            //DisplayAlert("Alert", "Notifications", "OK");
+            Navigation.PushModalAsync(new Notification.NotificationPage());
+        }
+
+        private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+
+            if (selectedIndex != -1)
+            {
+                string value = (string)picker.ItemsSource[selectedIndex];
+                Application.Current.Properties["CarrierStatus"] = value;
+
+                if (value == "Positive")
+                    User.carrierStatus = true;
+                else
+                    User.carrierStatus = false;
+
+
+                IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
+                user.sendCarrierStatusAsync(value);
+            }
         }
     }
 }
