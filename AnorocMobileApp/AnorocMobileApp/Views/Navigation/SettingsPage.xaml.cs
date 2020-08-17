@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Interfaces;
+using Plugin.Toast;
 //using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -29,11 +30,17 @@ namespace AnorocMobileApp.Views.Navigation
 
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
 
-            if (Application.Current.Properties.ContainsKey("Tracking"))
+            //if (Application.Current.Properties.ContainsKey("Tracking"))
+            //{
+            //    var value = (bool)Application.Current.Properties["Tracking"];
+            //    if (value)
+            //LocationSwitch.IsEnabled = true;
+            //}
+
+            //LocationSwitch.IsEnabled = true;
+            if (BackgroundLocaitonService.Tracking)
             {
-                var value = (bool)Application.Current.Properties["Tracking"];
-                if (value)
-                    LocationSwitch.IsEnabled = true;
+                Locations_SfSwitch.IsOn = true;
             }
 
             //if (Application.Current.Properties.ContainsKey("CarrierStatus"))
@@ -101,7 +108,9 @@ namespace AnorocMobileApp.Views.Navigation
                 //BackgroundLocaitonService.Tracking = false;                               
                 back.Stop_Tracking();
 
-                await DisplayAlert("Attention", "Disabled", "OK");
+                //await DisplayAlert("Attention", "Disabled", "OK");
+                CrossToastPopUp.Current.ShowToastMessage("Lacation Tracking Disabled");
+
             }
 
         }

@@ -47,7 +47,7 @@
                       HorizontalOptions="EndAndExpand"
                       AllowIndeterminateState="False"
                       HeightRequest="30"
-                      x:Name="LocationSwitch"
+                      x:Name="Locations_SfSwitch"                      
                       StateChanged="SfSwitch_StateChanged"
                       VisualType="Cupertino">
                     <VisualStateManager.VisualStateGroups>
@@ -84,7 +84,7 @@
                     </VisualStateManager.VisualStateGroups>
                 </buttons:SfSwitch>
 
-                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="3"/>
+                <!--<BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="3"/>
                 <Label Style="{StaticResource SettingsLabelStyle}" Text="Download quality" Grid.Row="4"/>
                 <Label Style="{StaticResource SettingsIconStyle}" Grid.Row="4">
                     <Label.GestureRecognizers>
@@ -98,7 +98,7 @@
                         <TapGestureRecognizer Command="{Binding }"/>
                     </Label.GestureRecognizers>
                 </Label>
-                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="7"/>
+                <BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="7"/>-->
                
                 
             </Grid>
