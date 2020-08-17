@@ -37,17 +37,20 @@ namespace AnorocMobileApp.Droid
                 var body = message.GetNotification().Body;
                 var title = message.GetNotification().Title;
 
-                string[] notificationMessage = { title, body };               
+                string[] notificationMessage = { title, body };
 
                 //Console.WriteLine("Testing Data output: "  + message.Data.Values);
 
 
                 // Passing Message onto xamarin forms
-                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationReceivedKey, body);
+                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, body);
                 //Console.WriteLine("Received Message: " + body);
 
-                MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationReceivedKey, notificationMessage);
-                SendNotification(body, message.Data);                
+
+
+                //MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationReceivedKey, notificationMessage);
+                //SendNotification(body, message.Data);                
             }
             catch (Exception ex)
             {

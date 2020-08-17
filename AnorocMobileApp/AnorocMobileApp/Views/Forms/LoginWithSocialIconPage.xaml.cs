@@ -29,19 +29,8 @@ namespace AnorocMobileApp.Views.Forms
         private void Button_Clicked(object sender, EventArgs e)
         {
 
-            NotificationDB notificationDB = new NotificationDB()
-            {
-                Body = "This is a waring"
-            };
+           Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.CreateTable<NotificationDB>();
-                int rowsAdded = conn.Insert(notificationDB);
-
-                Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
-
-            }
         }
 
 
