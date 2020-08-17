@@ -32,14 +32,16 @@ namespace AnorocMobileApp.Droid
             Console.WriteLine("Received: " + message);
             try
             {
+
                 base.OnMessageReceived(message);
 
                 var body = message.GetNotification().Body;
                 var title = message.GetNotification().Title;
-
                 string[] notificationMessage = { title, body };
+                var data = message.GetNotification().ToString();
+                var msg = message.GetNotification().Body;
+                Console.WriteLine("Testing Data output: "  + message.Data.Values);
 
-                //Console.WriteLine("Testing Data output: "  + message.Data.Values);
 
 
                 // Passing Message onto xamarin forms

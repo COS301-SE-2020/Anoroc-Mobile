@@ -4,6 +4,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
@@ -29,25 +30,42 @@ namespace AnorocMobileApp
         //-------------------------------------------------------------------------------------------------
 
 
+
         public static string FilePath;
+
+
+        
 
         public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
             InitializeComponent();
+
             Current.Properties["TOKEN"] = "thisisatoken";
             //Defualt lifestle
             IoCContainer = new Container();
             /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new NavigationPage(new BottomNavigationPage());
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
 
-            FacebookLoginService = facebookLoginService;
+            //FacebookLoginService = facebookLoginService;
 
-            
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -70,6 +88,7 @@ namespace AnorocMobileApp
         }
 
 
+
         public App(string filePath)
         {
             IoCContainer = new Container();
@@ -90,12 +109,33 @@ namespace AnorocMobileApp
 
 
 
+
         public App()
         {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+
+            InitializeComponent();
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new LoginWithSocialIconPage();
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            /*
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+            */
 
             //Register Syncfusion license
             InitializeComponent();

@@ -105,7 +105,7 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
 
                     //var placemarks = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
-                    var placemarks = await Geocoding.GetPlacemarksAsync(customLocation.Coordinate.Latitude, customLocation.Coordinate.Longitude);
+                    var placemarks = await Geocoding.GetPlacemarksAsync(customLocation.Latitude, customLocation.Longitude);
                     var placemark = placemarks?.FirstOrDefault();
                     if (placemark != null)
                     {

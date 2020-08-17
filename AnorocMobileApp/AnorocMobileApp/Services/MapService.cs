@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Exceptions;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -38,8 +39,9 @@ namespace AnorocMobileApp.Services
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
-                var url = Constants.AnorocURI + "location/Clusters/Simplified";
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+"location/Clusters/Simplified");
+
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+ "Cluster/Simplified");
+
                 HttpResponseMessage responseMessage;
 
                 try
@@ -71,7 +73,7 @@ namespace AnorocMobileApp.Services
 
                 Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "location/Clusters/Pins");
+                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Cluster/Pins");
                 Token token_object = new Token();
                 token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
 

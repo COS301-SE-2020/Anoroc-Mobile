@@ -16,6 +16,7 @@
     <None Remove="Data\encounter.json" />
     <None Remove="Images\CaloriesEaten.svg" />
     <None Remove="Images\HeartRate.svg" />
+    <None Remove="Images\EmptyItinerary.svg" />
     <None Remove="Images\SleepDuration.svg" />
     <None Remove="Images\WaterConsumed.svg" />
     <None Remove="places.json" />
@@ -30,8 +31,15 @@
     <EmbeddedResource Include="Images\HeartRate.svg" />
     <EmbeddedResource Include="Images\SleepDuration.svg" />
     <EmbeddedResource Include="Images\WaterConsumed.svg" />
+    <EmbeddedResource Include="Images\EmptyItinerary.svg" />
     <EmbeddedResource Include="Places.json" />
     <EmbeddedResource Include="Points.json" />
+    <EmbeddedResource Update="Views\Itinerary\ItineraryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Login.xaml">
       <SubType>Designer</SubType>
       <Generator></Generator>
@@ -40,12 +48,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Core" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.17.0" />
     <PackageReference Include="Mobile.BuildTools" Version="1.4.0.638" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="SimpleInjector" Version="5.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
     <PackageReference Include="System.Security.Permissions" Version="4.7.0" />
     <PackageReference Include="TinyIoC" Version="1.3.0">
@@ -90,6 +100,9 @@
     <Compile Update="Views\Navigation\MePage.xaml.cs">
       <DependentUpon>MePage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\LoadingPage.xaml.cs">
+      <DependentUpon>LoadingPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -108,7 +121,7 @@
     <EmbeddedResource Update="Views\MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\NotificationPage.xaml">
+    <EmbeddedResource Update="Views\LoadingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Forms\LoginEmailEntry.xaml">
@@ -150,7 +163,7 @@
     <EmbeddedResource Update="Views\Navigation\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\NotificationPage.xaml">
+    <EmbeddedResource Update="Views\LoadingPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Notification\NotificationPage.xaml">
