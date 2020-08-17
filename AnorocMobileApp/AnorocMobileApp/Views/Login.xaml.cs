@@ -153,7 +153,7 @@ namespace AnorocMobileApp.Views
         /// <param name="e">Event Arguments</param>
         async void btn_notification_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NotificationPage());
+            //await Navigation.PushAsync(new NotificationPage());
         }
     }
 }

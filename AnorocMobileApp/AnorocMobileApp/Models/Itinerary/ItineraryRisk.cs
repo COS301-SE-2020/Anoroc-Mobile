@@ -4,8 +4,13 @@ using System.Text;
 
 namespace AnorocMobileApp.Models.Itinerary
 {
-    class ItineraryRisk
+    public class ItineraryRisk
     {
+        ItineraryRisk()
+        {
+            LocationItineraryRisks = new Dictionary<Location, int>();
+            TotalItineraryRisk = 0;
+        }
         public DateTime Created { get; set; }
         /// <summary>
         /// The total risk of the journey

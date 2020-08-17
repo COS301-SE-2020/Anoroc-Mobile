@@ -1,5 +1,7 @@
 ﻿using AnorocMobileApp.Services;
 using AnorocMobileApp.Views;
+using Newtonsoft.Json;
+using System;
 
 namespace AnorocMobileApp.Models
 {
@@ -35,8 +37,14 @@ namespace AnorocMobileApp.Models
 
         private string EncryptPassword()
         {
+            // TODO:
             //ecrypt using sha-256?
             return "";
+        }
+
+        internal static string toString()
+        {
+            return JsonConvert.SerializeObject(new UserWrapper(Email, FirstName, UserSurname, loggedInAnoroc, loggedInFacebook, loggedInGoogle, carrierStatus));
         }
 
         /*public static async Task<string> GetUserEmail()
