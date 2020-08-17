@@ -14,7 +14,7 @@ namespace AnorocMobileApp.Views.Forms
     /// Page to login with user name and password
     /// </summary>
 
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginWithSocialIconPage
