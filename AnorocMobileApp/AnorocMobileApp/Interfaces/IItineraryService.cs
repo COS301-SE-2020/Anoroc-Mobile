@@ -32,5 +32,7 @@ namespace AnorocMobileApp.Interfaces
         /// </summary>
         /// <returns> List of the user's itineraries, null if none found. </returns>
         Task<List<ItineraryRisk>> GetUserItineraries();
+
+        Task<List<ItineraryRisk>> GetAllUserItineraries();
     }
 }
