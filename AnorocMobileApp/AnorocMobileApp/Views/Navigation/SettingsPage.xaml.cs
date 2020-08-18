@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Interfaces;
+using Plugin.Toast;
 //using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -29,63 +30,51 @@ namespace AnorocMobileApp.Views.Navigation
 
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
 
-            if (Application.Current.Properties.ContainsKey("Tracking"))
+            //if (Application.Current.Properties.ContainsKey("Tracking"))
+            if (BackgroundLocaitonService.Tracking)
             {
-                var value = (bool)Application.Current.Properties["Tracking"];
-                if (value)
-                    LocationSwitch.IsEnabled = true;
+                Locations_SfSwitch.IsOn = true;
             }
 
-            if (Application.Current.Properties.ContainsKey("CarrierStatus"))
-            {
-                var value = Application.Current.Properties["CarrierStatus"].ToString();
-                if (value == "Positive")
-                    picker.SelectedIndex = 0;
-                else
-                    picker.SelectedIndex = 1;
-            }
         }
 
-
-        private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
+        protected override void OnAppearing()
         {
+            base.OnAppearing();
 
-            var picker = (Picker)sender;
-            int selectedIndex = picker.SelectedIndex;
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
 
-            if (selectedIndex != -1)
-            {
-                string value = (string)picker.ItemsSource[selectedIndex];
-                //DisplayAlert("Carrier Status", value, "OK");
-                Application.Current.Properties["CarrierStatus"] = value;
-
-                if (value == "Positive")
-                    User.carrierStatus = true;
-                else
-                    User.carrierStatus = false;
-
-                
-                IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
-                user.sendCarrierStatusAsync(value);
-            }
         }
 
+        void OnMessageReceived(object sender, string msg)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+            });
+        }
 
+        /// <summary>
+        /// Enabels and disables location tracking
+        /// </summary>
         async void SfSwitch_StateChanged(System.Object sender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
         {
             IBackgroundLocationService back = App.IoCContainer.GetInstance<IBackgroundLocationService>();
             if (e.NewValue == true)
             {
-                BackgroundLocaitonService.Tracking = true;
+                //BackgroundLocaitonService.Tracking = true;
                 back.Start_Tracking();
 
             }
             else
             {
-                BackgroundLocaitonService.Tracking = false;                               
+                //BackgroundLocaitonService.Tracking = false;                               
                 back.Stop_Tracking();
 
-                await DisplayAlert("Attention", "Disabled", "OK");
+                //await DisplayAlert("Attention", "Disabled", "OK");
+                CrossToastPopUp.Current.ShowToastMessage("Lacation Tracking Disabled");
+
             }
 
         }
