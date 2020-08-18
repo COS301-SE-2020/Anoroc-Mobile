@@ -74,13 +74,12 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        var itineraruRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
-
-                        if(itineraruRisk != null)
-                            UserItineraries.Add(itineraruRisk);
+                        UserItineraries = JsonConvert.DeserializeObject<List<ItineraryRisk>>(json);
                     }
 
-                    if (UserItineraries.Count > 0)
+                    if (UserItineraries == null)
+                        return null;
+                    else if (UserItineraries.Count > 0)
                         return UserItineraries;
                     else
                         return null;
@@ -197,13 +196,12 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        var itineraruRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
-
-                        if (itineraruRisk != null)
-                            UserItineraries.Add(itineraruRisk);
+                        UserItineraries = JsonConvert.DeserializeObject<List<ItineraryRisk>>(json);
                     }
 
-                    if (UserItineraries.Count > 0)
+                    if (UserItineraries == null)
+                        return null;
+                    else if (UserItineraries.Count > 0)
                         return UserItineraries;
                     else
                         return null;
