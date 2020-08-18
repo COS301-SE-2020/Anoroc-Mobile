@@ -1,4 +1,5 @@
 ﻿using System;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
@@ -47,8 +48,13 @@ namespace AnorocMobileApp.Views.Forms
                 UpdateSignInState(userContext);
                 if(userContext.IsLoggedOn)
                 {
-                    Console.WriteLine("Access Token: " + userContext.AccessToken);
-                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+                    /*Console.WriteLine("Access Token: " + userContext.AccessToken);
+                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
+
+
+                    IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
+                    ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
+
 
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
