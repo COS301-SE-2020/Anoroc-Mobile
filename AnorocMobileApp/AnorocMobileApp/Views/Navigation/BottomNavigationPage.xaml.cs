@@ -23,6 +23,7 @@ namespace AnorocMobileApp.Views.Navigation
         {
             base.OnAppearing();
 
+            
             MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleMessageReceived);
 
             MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
@@ -59,6 +60,7 @@ namespace AnorocMobileApp.Views.Navigation
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
                 int rowsAdded = conn.Insert(notificationDB);
             }
 
@@ -70,7 +72,5 @@ namespace AnorocMobileApp.Views.Navigation
             });
 
         }
-
-
     }
 }

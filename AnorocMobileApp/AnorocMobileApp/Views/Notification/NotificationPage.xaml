@@ -39,7 +39,7 @@
         <ScrollView>
 
             <StackLayout Padding="0, 16" Spacing="24">
-
+                
                 <listView:SfListView x:Name="RecentList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"

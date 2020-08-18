@@ -1,6 +1,10 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
 using System.Runtime.Serialization.Json;
+using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.ViewModels.Notification;
+using SQLite;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.DataService
@@ -8,7 +12,7 @@ namespace AnorocMobileApp.DataService
     /// <summary>
     /// The Encounter Data Service
     /// </summary>
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     public class EncounterDataService
     {
         #region fields
@@ -40,23 +44,43 @@ namespace AnorocMobileApp.DataService
         /// <typeparam name="T">Type of view model.</typeparam>
         /// <param name="fileName">Json file to fetch data.</param>
         /// <returns>Returns the view model object.</returns>
-        private static T PopulateData<T>(string fileName)
+        private static NotificationViewModel PopulateData<T>(string fileName)
         {
             var file = "AnorocMobileApp.Data." + fileName;
 
             var assembly = typeof(App).GetTypeInfo().Assembly;
 
-            T obj;
-
+            NotificationViewModel obj;
+            
             using (var stream = assembly.GetManifestResourceStream(file))
             {
                 var serializer = new DataContractJsonSerializer(typeof(T));
-                obj = (T)serializer.ReadObject(stream);
+                obj = (NotificationViewModel)serializer.ReadObject(stream);                
+            }
+           
+            return loadNotifications(obj);
+        }
+
+        #endregion
+
+        private static NotificationViewModel loadNotifications(NotificationViewModel obj)
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
+                foreach (var n in notificaitons)
+                {
+                    NotificationModel tempModel = new NotificationModel();
+                    tempModel.Name = n.Body;
+                    tempModel.IsRead = false;
+                    tempModel.ReceivedTime = "Not sure";
+                    obj.RecentList.Add(tempModel);
+                }
+                conn.Close();
             }
 
             return obj;
         }
-
-        #endregion
     }
 }

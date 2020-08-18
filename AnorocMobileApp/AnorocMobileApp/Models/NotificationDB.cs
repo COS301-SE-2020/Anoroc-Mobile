@@ -22,6 +22,6 @@ namespace AnorocMobileApp.Models
         {
             get;
             set;
-        }
+        }        
     }
 }

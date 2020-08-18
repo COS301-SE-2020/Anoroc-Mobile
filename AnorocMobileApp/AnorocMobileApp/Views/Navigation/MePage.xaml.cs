@@ -1,6 +1,8 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using NUnit.Framework;
 using SQLite;
+using System.Collections.Generic;
 using System.Xml.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -26,11 +28,30 @@ namespace AnorocMobileApp.Views.Navigation
         private string body = "";
         public MePage()
         {
-            InitializeComponent();
+            InitializeComponent();                        
         }
 
-
-
+        public void OnAppearing()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                var notificationList = new List<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
+                foreach(var notificationRow in notificaitons)
+                {
+                    notificationList.Add(notificationRow);
+                }
+            }            
+        }
+        
+        /*
+        public Task<List<TodoItem>> GetItemsNotDoneAsync()
+        {
+            // SQL queries are also possible
+            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+        }
+        */
 
     }
 }

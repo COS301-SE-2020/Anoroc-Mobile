@@ -1,5 +1,7 @@
 ﻿using AnorocMobileApp.DataService;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -9,7 +11,7 @@ namespace AnorocMobileApp.Views.Notification
     /// <summary>
     /// Page to show the health care details.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotificationPage : ContentPage
     {
@@ -20,6 +22,7 @@ namespace AnorocMobileApp.Views.Notification
         {
             InitializeComponent();
             //this.BindingContext = NotificationDataService.Instance.NotificationViewModel;
+            loadNotificationList();
             this.BindingContext = EncounterDataService.Instance.NotificationViewModel;
         }
 
@@ -38,6 +41,15 @@ namespace AnorocMobileApp.Views.Notification
                 //Update Label
                 DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
             });
+        }
+
+        void loadNotificationList()
+        {
+            NotificationDB notificationDB = new NotificationDB();
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                var notifications = conn.Table<NotificationDB>().ToList();
+            }
         }
     }
 }

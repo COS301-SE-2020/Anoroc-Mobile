@@ -9,8 +9,7 @@ namespace AnorocMobileApp.Views.Home
 {
     /// <summary>
     /// Home page for the app to display a summary of information
-    /// </summary>
-    [Preserve(AllMembers = true)]
+    /// </summary>    
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class HomePage
     {

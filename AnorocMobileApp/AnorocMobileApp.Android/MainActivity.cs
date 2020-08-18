@@ -209,30 +209,5 @@ namespace AnorocMobileApp.Droid
                 }
             }
         }
-
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            var title = Intent.GetStringExtra("title");
-            NotificationDB notificationDB = new NotificationDB()
-            {
-                Title = title,
-                Body = msg
-            };
-
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.CreateTable<NotificationDB>();
-                int rowsAdded = conn.Insert(notificationDB);
-
-                var notifications = conn.Table<NotificationDB>().ToList();
-            }
-
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
-        }
     }
 }
