@@ -41,16 +41,7 @@ namespace AnorocMobileApp.Views.Navigation
 
         public void OnAppearing()
         {
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-                conn.CreateTable<NotificationDB>();
-                var notificationList = new List<NotificationDB>();
-                var notificaitons = conn.Table<NotificationDB>().ToList();
-                foreach(var notificationRow in notificaitons)
-                {
-                    notificationList.Add(notificationRow);
-                }
-            }            
+                   
         }
         
         /*
