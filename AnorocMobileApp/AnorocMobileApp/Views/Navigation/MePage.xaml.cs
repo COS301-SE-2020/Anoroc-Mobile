@@ -49,12 +49,19 @@ namespace AnorocMobileApp.Views.Navigation
             });
         }
 
+        /// <summary>
+        /// Goes to notifications view.
+        /// TODO: Show notifications in an improved way
+        /// </summary>
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             //DisplayAlert("Alert", "Notifications", "OK");
             Navigation.PushModalAsync(new Notification.NotificationPage());
         }
 
+        /// <summary>
+        /// When Carrier status is changed, Calls funtion to send status to server
+        /// </summary>
         private void OnPickerSelectedIndexChanged(object sender, EventArgs args)
         {
             var picker = (Picker)sender;

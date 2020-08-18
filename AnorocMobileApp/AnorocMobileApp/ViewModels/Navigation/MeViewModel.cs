@@ -36,10 +36,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 //    //CategoryValue = "13",                    
                 //    //ImagePath = "CaloriesEaten.svg",
                 //    //doSomething()
-
-
                 //}
-
                 //,
                 //new Me()
                 //{
@@ -71,7 +68,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             this.Location = "Disabled";
             if (BackgroundLocaitonService.Tracking)
             {
-                this.Location = "Enabled";                
+                this.Location = "Enabled";
             }
             this.Incidents = "92";
         }
