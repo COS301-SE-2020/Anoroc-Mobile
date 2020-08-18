@@ -1,6 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using Xamarin.Forms.Internals;
 using AnorocMobileApp.Models;
+using Xamarin.Forms;
+using AnorocMobileApp.Services;
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
@@ -28,39 +30,47 @@ namespace AnorocMobileApp.ViewModels.Navigation
         {
             cardItems = new ObservableCollection<Me>()
             {
-                new Me()
-                {
-                    Category = "Calories Eaten",
-                    CategoryValue = "13,100",
-                    ImagePath = "CaloriesEaten.svg"
-                },
-                new Me()
-                {
-                    Category = "Heart Rate",
-                    CategoryValue = "87 BPM",
-                    ImagePath = "HeartRate.svg"
-                },
-                new Me()
-                {
-                    Category = "Water Consumed",
-                    CategoryValue = "38.6 L",
-                    ImagePath = "WaterConsumed.svg"
-                },
-                new Me()
-                {
-                    Category = "Sleep Duration",
-                    CategoryValue = "7.3 H",
-                    ImagePath = "SleepDuration.svg"
-                }
+                //new Me()
+                //{
+                //    Category = "Notifications",
+                //    //CategoryValue = "13",                    
+                //    //ImagePath = "CaloriesEaten.svg",
+                //    //doSomething()
+                //}
+                //,
+                //new Me()
+                //{
+                //    Category = "Heart Rate",
+                //    CategoryValue = "87 BPM",
+                //    ImagePath = "HeartRate.svg"
+                //},
+                //new Me()
+                //{
+                //    Category = "Water Consumed",
+                //    CategoryValue = "38.6 L",
+                //    ImagePath = "WaterConsumed.svg"
+                //},
+                //new Me()
+                //{
+                //    Category = "Sleep Duration",
+                //    CategoryValue = "7.3 H",
+                //    ImagePath = "SleepDuration.svg"
+                //}
             };
+            //cardItems.Add();                            
+            //CardItem button onPress={() => Alert.alert('hi')}
 
             this.ProfileImage = App.BaseImageUrl + "ProfileImage16.png";
             this.ProfileName = "Anoroc Van Looi";
             this.State = "Gauteng";
             this.Country = "South Africa";
             this.Age = "35";
-            this.Weight = "159 Ibs";
-            this.Height = "165 cm";
+            this.Location = "Disabled";
+            if (BackgroundLocaitonService.Tracking)
+            {
+                this.Location = "Enabled";
+            }
+            this.Incidents = "92";
         }
 
         #endregion
@@ -83,6 +93,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
                 this.NotifyPropertyChanged();
             }
         }
+
 
         /// <summary>
         /// Gets or sets the profile image.
@@ -118,6 +129,21 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// Gets or sets the height.
         /// </summary>
         public string Height { get; set; }
+
+        /// <summary>
+        /// Gets or sets the status.
+        /// </summary>
+        public string Status { get; set; }
+
+        /// <summary>
+        /// Gets or sets the incidents.
+        /// </summary>
+        public string Incidents { get; set; }
+
+        /// <summary>
+        /// Gets or sets the location.
+        /// </summary>
+        public string Location { get; set; }
 
         #endregion
     }
