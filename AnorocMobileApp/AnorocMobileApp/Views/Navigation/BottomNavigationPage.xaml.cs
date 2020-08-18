@@ -62,8 +62,10 @@ namespace AnorocMobileApp.Views.Navigation
                 conn.CreateTable<NotificationDB>();
                 var notificaitons = conn.Table<NotificationDB>().ToList();
                 int rowsAdded = conn.Insert(notificationDB);
+                notificaitons = conn.Table<NotificationDB>().ToList();
+                conn.Close();
             }
-
+            
 
             Device.BeginInvokeOnMainThread(() =>
             {

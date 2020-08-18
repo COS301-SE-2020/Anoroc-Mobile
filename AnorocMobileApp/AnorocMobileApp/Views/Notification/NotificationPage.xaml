@@ -39,8 +39,10 @@
         <ScrollView>
 
             <StackLayout Padding="0, 16" Spacing="24">
-                
-                <listView:SfListView x:Name="RecentList"
+
+                <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                                Command="{Binding RefreshCommand}">
+                    <listView:SfListView x:Name="RecentList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
                                      AutoFitMode="Height"
@@ -52,22 +54,22 @@
                                      ItemsSource="{Binding RecentList}"
                                      SelectionBackgroundColor="Transparent">
 
-                    <listView:SfListView.HeaderTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="0" Margin="16, 0, 16, 8" ColumnSpacing="0">
+                        <listView:SfListView.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" Margin="16, 0, 16, 8" ColumnSpacing="0">
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
 
-                                <Label Text="RECENT"
+                                    <Label Text="RECENT"
                                        TextColor="{DynamicResource Gray-900}"
                                        FontSize="12"
                                        FontFamily="{DynamicResource Montserrat-SemiBold}"
                                        HorizontalOptions="Start"/>
 
-                                <buttons:SfButton Grid.Column="1" 
+                                    <buttons:SfButton Grid.Column="1" 
                                                   BorderWidth="0" 
                                                   WidthRequest="134" 
                                                   HeightRequest="18"
@@ -76,7 +78,7 @@
                                                   CornerRadius="4"
                                                   HorizontalOptions="End">
 
-                                    <Label Text="MARK ALL AS READ"
+                                        <Label Text="MARK ALL AS READ"
                                            TextColor="{DynamicResource Link}"
                                            FontSize="12"
                                            VerticalTextAlignment="Center"
@@ -84,38 +86,38 @@
                                            LineHeight="{OnPlatform Android=1.5,Default=-1}"
                                            FontFamily="{DynamicResource Montserrat-SemiBold}" />
 
-                                </buttons:SfButton>
+                                    </buttons:SfButton>
 
-                            </Grid>
-                        </DataTemplate>
-                    </listView:SfListView.HeaderTemplate>
+                                </Grid>
+                            </DataTemplate>
+                        </listView:SfListView.HeaderTemplate>
 
-                    <listView:SfListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
+                        <listView:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
 
-                                <!-- Notify icon for readable item  -->
-                                <Label Text="{StaticResource 'New Message'}" 
+                                    <!-- Notify icon for readable item  -->
+                                    <Label Text="{StaticResource 'New Message'}" 
                                            TextColor="{Binding IsRead, Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=6}" 
                                            FontSize="12" Margin="16, 20, 0, 0" 
                                            FontFamily="{StaticResource FontIcons}"/>
 
-                                <!-- Notification Detail -->
-                                <Label  x:Name="LblTest" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium}" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
+                                    <!-- Notification Detail -->
+                                    <Label  x:Name="LblTest" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium}" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
 
-                                <!-- Received Time -->
-                                <Label Grid.Row="1"
+                                    <!-- Received Time -->
+                                    <Label Grid.Row="1"
                                            Grid.Column="1" Margin="0, 4, 16, 16"
                                            Text="{Binding ReceivedTime}"
                                            TextColor="{DynamicResource Gray-700}"
@@ -124,19 +126,19 @@
                                            LineBreakMode="TailTruncation"
                                            FontFamily="{DynamicResource Montserrat-Medium}"/>
 
-                                <!-- Seperator -->
-                                <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
+                                    <!-- Seperator -->
+                                    <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
 
-                            </Grid>
-                        </DataTemplate>
-                    </listView:SfListView.ItemTemplate>
+                                </Grid>
+                            </DataTemplate>
+                        </listView:SfListView.ItemTemplate>
 
-                    <listView:SfListView.Behaviors>
-                        <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
-                    </listView:SfListView.Behaviors>
-                </listView:SfListView>
-
-                <listView:SfListView x:Name="EarlierList"
+                        <listView:SfListView.Behaviors>
+                            <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
+                        </listView:SfListView.Behaviors>
+                    </listView:SfListView>
+                </RefreshView>
+                    <listView:SfListView x:Name="EarlierList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
                                      AutoFitMode="Height"
@@ -148,45 +150,45 @@
                                      ItemsSource="{Binding EarlierList}"
                                      SelectionBackgroundColor="Transparent">
 
-                    <listView:SfListView.HeaderTemplate>
-                        <DataTemplate>
-                           
+                        <listView:SfListView.HeaderTemplate>
+                            <DataTemplate>
+
                                 <Label Text="EARLIER"
                                        Margin="16, 0, 16, 8"
                                        TextColor="{DynamicResource Gray-900}"
                                        FontSize="12"
                                        FontFamily="{DynamicResource Montserrat-SemiBold}"
                                        HorizontalOptions="Start"/>
-                               
-                        </DataTemplate>
-                    </listView:SfListView.HeaderTemplate>
 
-                    <listView:SfListView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
+                            </DataTemplate>
+                        </listView:SfListView.HeaderTemplate>
 
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="Auto"/>
-                                </Grid.RowDefinitions>
+                        <listView:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
 
-                                <!-- Notify icon for readable item  -->
-                                <Label Text="{StaticResource 'New Message'}" 
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Notify icon for readable item  -->
+                                    <Label Text="{StaticResource 'New Message'}" 
                                            TextColor="{Binding IsRead, Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=6}" 
                                            FontSize="12" Margin="16, 20, 0, 0" 
                                            FontFamily="{StaticResource FontIcons}"/>
 
-                                <!-- Notification Detail -->
-                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium }" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
+                                    <!-- Notification Detail -->
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium }" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
 
-                                <!-- Received Time -->
-                                <Label Grid.Row="1"
+                                    <!-- Received Time -->
+                                    <Label Grid.Row="1"
                                            Grid.Column="1" Margin="0, 4, 16, 16"
                                            Text="{Binding ReceivedTime}"
                                            TextColor="{DynamicResource Gray-700}"
@@ -195,18 +197,18 @@
                                            LineBreakMode="TailTruncation"
                                            FontFamily="{DynamicResource Montserrat-Medium}"/>
 
-                                <!-- Seperator -->
-                                <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
+                                    <!-- Seperator -->
+                                    <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
 
-                            </Grid>
-                        </DataTemplate>
-                    </listView:SfListView.ItemTemplate>
+                                </Grid>
+                            </DataTemplate>
+                        </listView:SfListView.ItemTemplate>
 
-                    <listView:SfListView.Behaviors>
-                        <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
-                    </listView:SfListView.Behaviors>
-                </listView:SfListView>
-
+                        <listView:SfListView.Behaviors>
+                            <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
+                        </listView:SfListView.Behaviors>
+                    </listView:SfListView>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

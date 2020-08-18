@@ -2,7 +2,6 @@
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
-using SQLite;
 using Microsoft.Identity.Client;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;

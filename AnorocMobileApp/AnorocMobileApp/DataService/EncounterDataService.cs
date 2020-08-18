@@ -77,7 +77,7 @@ namespace AnorocMobileApp.DataService
                     tempModel.ReceivedTime = "Not sure";
                     obj.RecentList.Add(tempModel);
                 }
-                conn.Close();
+                conn.Close();                
             }
 
             return obj;

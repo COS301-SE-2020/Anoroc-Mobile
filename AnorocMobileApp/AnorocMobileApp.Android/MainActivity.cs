@@ -19,7 +19,7 @@ using Xamarin.Essentials;
 using System.IO;
 using Plugin.CurrentActivity;
 using Microsoft.Identity.Client;
-
+using SQLite;
 
 namespace AnorocMobileApp.Droid
 {
@@ -100,8 +100,7 @@ namespace AnorocMobileApp.Droid
 
             string fileNmae = "notification_db.db3";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string completePath = Path.Combine(folderPath, fileNmae);
-
+            string completePath = Path.Combine(folderPath, fileNmae);            
             LoadApplication(new App(completePath));
 
 
