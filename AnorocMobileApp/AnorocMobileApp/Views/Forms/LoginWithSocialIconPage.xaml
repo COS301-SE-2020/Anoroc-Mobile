@@ -95,8 +95,20 @@
                         Style="{StaticResource SfButtonStyle}"
                         Text="Sign in" />
 
+                        <buttons:SfButton
+                        Grid.Row="6"
+                        AutomationId="PassToHome"
+                        CornerRadius="4"
+                        IsVisible="false"
+                        x:Name="btnGoToHome"
+                        Clicked="Home_Clicked"
+                        Command="{Binding HomeCommand}"
+                        Style="{StaticResource SfButtonStyle}"
+                        Text="Go home" />
+
                         <!--Forgot password link-->  
                         <buttons:SfButton
+                        AutomationId="ResetPasswordButton"
                         x:Name="ForgotPasswordLabel"
                         Grid.Row="5" CornerRadius="4"
                         Margin="0,2"

@@ -109,5 +109,10 @@ namespace AnorocMobileApp.Views.Forms
             }
         }
 
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+
+        }
     }
 }
