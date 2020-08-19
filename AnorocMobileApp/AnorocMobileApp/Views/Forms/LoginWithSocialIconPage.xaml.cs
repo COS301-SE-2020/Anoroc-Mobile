@@ -51,10 +51,9 @@ namespace AnorocMobileApp.Views.Forms
                     /*Console.WriteLine("Access Token: " + userContext.AccessToken);
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
 
-
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
+                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
                     ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
-
 
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
@@ -84,7 +83,7 @@ namespace AnorocMobileApp.Views.Forms
         void UpdateSignInState(UserContext userContext)
         {
             var isSignedIn = userContext.IsLoggedOn;
-            btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
+            //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
 
         }
 

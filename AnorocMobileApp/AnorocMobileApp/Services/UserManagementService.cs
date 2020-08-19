@@ -111,6 +111,7 @@ namespace AnorocMobileApp.Services
                 User.Email = userEmail;
                 User.FirstName = firstName;
                 User.UserSurname = surname;
+                User.currentlyLoggedIn = true;
                 token_object.Object_To_Server = User.toString(); ;
 
                 var data = JsonConvert.SerializeObject(token_object);

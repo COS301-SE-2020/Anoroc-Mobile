@@ -60,7 +60,6 @@ namespace AnorocMobileApp.Views
                                         User.UserSurname = UserSurname.Text;
                                         User.loggedInAnoroc = true;
                                         user = new User();
-                                        user.Password = Password.Text;
                                         user.registerAsync();
                                     }
                                     else
