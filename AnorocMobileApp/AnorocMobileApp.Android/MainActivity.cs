@@ -15,6 +15,11 @@ using Android.Util;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Interfaces;
+using Xamarin.Essentials;
+using System.IO;
+using Plugin.CurrentActivity;
+using Microsoft.Identity.Client;
+using SQLite;
 
 namespace AnorocMobileApp.Droid
 {
@@ -38,14 +43,44 @@ namespace AnorocMobileApp.Droid
             App.ScreenWidth = (int)(Resources.DisplayMetrics.WidthPixels / Resources.DisplayMetrics.Density);
 
             // Set Dependancy
-           
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
+            DependencyService.Register<IParentWindowLocatorService, AndroidParentWindowLocatorService>();
+
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            //  For killed app state
+            if (Intent.Extras != null)
+            {
+                foreach (var key in Intent.Extras.KeySet())
+                {
+                    if (key != null)
+                    {
+                        if (key == "title")
+                        {
+                            var value = Intent.Extras.GetString(key);
+                            Preferences.Set("title", value);
+                            
+                        }
+                        else if (key == "body")
+                        {
+                            var value = Intent.Extras.GetString(key);
+                            Preferences.Set("body", value);
+                        }
+
+                    }
+                }
+            }
+
             CallbackManager = CallbackManagerFactory.Create();
 
             base.OnCreate(savedInstanceState);
+
+            //Added battery feature
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);            
+            //end of added battery feature
 
             Xamarin.FormsMaps.Init(this, savedInstanceState);
 
@@ -59,9 +94,14 @@ namespace AnorocMobileApp.Droid
             
             IsPlayServicesAvailable();
 
+
             // Dependency Injection:
 
-            LoadApplication(new App(new FacebookLoginService()));
+            string fileNmae = "notification_db.db3";
+            string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string completePath = Path.Combine(folderPath, fileNmae);            
+            LoadApplication(new App(completePath));
+
 
             WireUpBackgroundLocationTask();
         }
@@ -91,6 +131,20 @@ namespace AnorocMobileApp.Droid
                 Console.WriteLine("Play services available.");
                 return true;
             }
+        }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+
+            if (intent != null)
+            {
+                var title = intent.GetStringExtra("title");
+                var body = intent.GetStringExtra("body");
+
+                Preferences.Set("title", title);
+                Preferences.Set("body", body);
+            }
+            
         }
 
         void WireUpBackgroundLocationTask()
@@ -130,6 +184,7 @@ namespace AnorocMobileApp.Droid
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
+            AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
             CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }
 

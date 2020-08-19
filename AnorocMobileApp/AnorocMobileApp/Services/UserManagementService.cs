@@ -39,7 +39,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri("https://10.0.2.2:5001/UserManagement/FirebaseToken");
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
@@ -74,7 +74,7 @@ namespace AnorocMobileApp.Services
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
-            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
+            var url = "https://10.0.2.2:5001/" + Secrets.carrierStatusEndpoint;
 
             /*var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
@@ -91,7 +91,7 @@ namespace AnorocMobileApp.Services
 
             try
             {
-                var response = await client.PostAsync(url, c);
+                //var response = await client.PostAsync(url, c);
                 //string result = response.Content.ReadAsStringAsync().Result;
                 //Debug.WriteLine(result);
             }
@@ -100,6 +100,44 @@ namespace AnorocMobileApp.Services
                 throw new CantConnectToLocationServerException();
             }
 
+        }
+
+        public async void UserLoggedIn(string firstName, string surname, string userEmail)
+        {
+            using (Anoroc_Client = new HttpClient(clientHandler))
+            {
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                User.Email = userEmail;
+                User.FirstName = firstName;
+                User.UserSurname = surname;
+                token_object.Object_To_Server = User.toString(); ;
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserLoggedInEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        if(!json.Equals("I trust you...for now..."))
+                            Application.Current.Properties["TOKEN"] = json;
+                    }
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
+            }
         }
     }
 }

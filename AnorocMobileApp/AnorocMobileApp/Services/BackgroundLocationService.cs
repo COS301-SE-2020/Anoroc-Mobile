@@ -18,7 +18,8 @@ namespace AnorocMobileApp.Services
         GeolocationRequest request;
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
-
+        private int request_count;
+        
         public static bool Tracking;
 
         public BackgroundLocationService()
@@ -28,6 +29,7 @@ namespace AnorocMobileApp.Services
             Initial_Backoff = 15;
             _Backoff = Initial_Backoff;
             Modifier = 1.6;
+            request_count = 0;
             User_Location = new Models.Location();
 
             Track_Retry = 0;
@@ -201,6 +203,22 @@ namespace AnorocMobileApp.Services
         public bool isTracking()
         {
             return Tracking;
+        }
+
+        void SetBackground(double level, bool charging)
+        {
+            Color? colour = null;
+            var status = charging ? "Charging" : "Not charging";
+
+            if (level > .5f)
+                colour = Color.Green.MultiplyAlpha(level);
+            else if (level > .1f)
+                colour = Color.Yellow.MultiplyAlpha(level);
+            else
+                colour = Color.Red.MultiplyAlpha(level);
+
+            Console.WriteLine("Colour: " + colour.Value);
+
         }
     }
 }

@@ -54,7 +54,7 @@ namespace AnorocMobileApp.Views
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
 
         }
 
@@ -79,14 +79,14 @@ namespace AnorocMobileApp.Views
             if (e.Value == true)
             {
                 
-                BackgroundLocationService.Tracking = true;
-                backgroundLocationService.Start_Tracking();               
+                //BackgroundLocaitonService.Tracking = true;
+                //backgroundLocationService.Start_Tracking();               
             }
             else
             {
-                BackgroundLocationService.Tracking = false;
-                backgroundLocationService.Stop_Tracking();
-                await DisplayAlert("Attention", "Disabled", "OK");
+                //BackgroundLocaitonService.Tracking = false;
+                //backgroundLocationService.Stop_Tracking();
+                //await DisplayAlert("Attention", "Disabled", "OK");
             }
         }
 
