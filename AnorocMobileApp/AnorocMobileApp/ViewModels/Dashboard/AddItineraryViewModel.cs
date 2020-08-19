@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -14,6 +15,7 @@ using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Models;
 //using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
+using AnorocMobileApp.Services;
 using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
@@ -36,15 +38,16 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         public AddItineraryViewModel()
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
+            DoneButtonTapped = new Command(DoneTappedMethod);
         }
 
         #endregion
         
         #region HttpRequest
         
-        private static HttpClient _httpClientInstance;
+        private HttpClient _httpClientInstance;
 
-        private static HttpClient HttpClientInstance
+        private HttpClient HttpClientInstance
         {
             get
             {
@@ -67,7 +70,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private ObservableCollection<Result> results;
         private ObservableCollection<Address> addresses;
-        private ObservableCollection<Location> locations;
+        private List<Location> locations;
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
 
@@ -106,10 +109,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 }
             }
         }
-        
-        public ObservableCollection<Location> Locations
+
+        private List<Location> Locations
         {
-            get => locations ?? (locations = new ObservableCollection<Location>());
+            get => locations ?? (locations = new List<Location>());
             set
             {
                 if (locations != value)
@@ -150,6 +153,8 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #region Commands
 
         public Command<object> SearchLocationTapped { get; set; }
+        
+        public Command DoneButtonTapped { get; set; }
 
         #endregion
         
@@ -204,6 +209,16 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     }
                 }
             };
+        }
+
+        private async void DoneTappedMethod()
+        {
+            Debug.Write("In DoneTappedMethod()");
+            var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
+            var service = new ItineraryService();
+            var risk = await service.ProcessItinerary(itinerary);
+            
+            Debug.Print(risk.LocationItineraryRisks.Count.ToString());
         }
         
         #endregion

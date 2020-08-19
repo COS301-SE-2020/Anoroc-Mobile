@@ -110,6 +110,7 @@
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Add next location" />
                     <buttons:SfButton
+                        Command="{Binding DoneButtonTapped}"
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Done" />
                 </StackLayout>
