@@ -66,7 +66,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             this.Country = "South Africa";
             this.Age = "35";
             this.Location = "Disabled";
-            if (BackgroundLocaitonService.Tracking)
+            if (BackgroundLocationService.Tracking)
             {
                 this.Location = "Enabled";
             }

@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
 {
-    public class BackgroundLocaitonService : IBackgroundLocationService
+    public class BackgroundLocationService : IBackgroundLocationService
     {
 
         Models.Location User_Location;
@@ -22,7 +22,7 @@ namespace AnorocMobileApp.Services
         
         public static bool Tracking;
 
-        public BackgroundLocaitonService()
+        public BackgroundLocationService()
         {
             LocationService = App.IoCContainer.GetInstance<ILocationService>();
             Tracking = false;

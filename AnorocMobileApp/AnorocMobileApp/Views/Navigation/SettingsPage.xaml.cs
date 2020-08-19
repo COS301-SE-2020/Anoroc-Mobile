@@ -31,7 +31,7 @@ namespace AnorocMobileApp.Views.Navigation
             var request = new GeolocationRequest(GeolocationAccuracy.Lowest);
 
             //if (Application.Current.Properties.ContainsKey("Tracking"))
-            if (BackgroundLocaitonService.Tracking)
+            if (BackgroundLocationService.Tracking)
             {
                 Locations_SfSwitch.IsOn = true;
             }

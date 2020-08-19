@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using AnorocMobileApp.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.Models.Itinerary

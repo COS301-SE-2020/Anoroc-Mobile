@@ -1,4 +1,5 @@
 ﻿using System;
+using AnorocMobileApp.Models.Itinerary;
 
 namespace AnorocMobileApp.Models
 {
@@ -7,6 +8,12 @@ namespace AnorocMobileApp.Models
         public Location()
         {
 
+        }
+
+        public Location(Position position)
+        {
+            Latitude = position.Lat;
+            Longitude = position.Lon;
         }
         public Location(Xamarin.Essentials.Location loc)
         {

@@ -18,7 +18,7 @@ namespace AnorocMobileApp.Views.Itinerary
         public ItineraryPage()
         {
             InitializeComponent();
-            BindingContext = new ItineraryPageViewModel();
+            BindingContext = new ItineraryPageViewModel(Navigation);
         }
 
         /// <summary>

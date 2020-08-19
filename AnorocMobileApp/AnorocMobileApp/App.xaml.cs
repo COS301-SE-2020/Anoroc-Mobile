@@ -4,6 +4,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Views.Dashboard;
 using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using SimpleInjector;
@@ -17,6 +18,7 @@ namespace AnorocMobileApp
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
 
+
         public const string FirebaseTokenKey = "FirebaseRecieved";
 
         
@@ -26,7 +28,6 @@ namespace AnorocMobileApp
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
-        readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
 
 
@@ -48,9 +49,9 @@ namespace AnorocMobileApp
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
             InitializeComponent();
 
-            Current.Properties["TOKEN"] = "thisisatoken";
+            //Current.Properties["TOKEN"] = "thisisatoken";
             //Defualt lifestle
-            IoCContainer = new Container();
+            //IoCContainer = new Container();
             /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
 
             DependencyService.Register<B2CAuthenticationService>();
@@ -65,13 +66,14 @@ namespace AnorocMobileApp
             //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
 
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
             IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
 
             //FacebookLoginService = facebookLoginService;
 
+            Current.Properties["TOKEN"] = "thisisatoken";
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -100,7 +102,7 @@ namespace AnorocMobileApp
         {
             IoCContainer = new Container();
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
@@ -137,12 +139,12 @@ namespace AnorocMobileApp
             IoCContainer = new Container();
             //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
             /*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
             */
@@ -171,7 +173,7 @@ namespace AnorocMobileApp
 
         protected override void OnSleep()
         {
-            Current.Properties["Tracking"] = BackgroundLocaitonService.Tracking;
+            Current.Properties["Tracking"] = BackgroundLocationService.Tracking;
         }
 
         protected override void OnResume()
@@ -185,7 +187,7 @@ namespace AnorocMobileApp
             {
                 IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
-                BackgroundLocaitonService.Tracking = value;
+                BackgroundLocationService.Tracking = value;
                 if(value)
                 {
                     backgroundLocationService.Start_Tracking();
