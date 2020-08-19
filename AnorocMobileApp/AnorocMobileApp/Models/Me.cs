@@ -33,7 +33,7 @@ namespace AnorocMobileApp.Models
         /// <summary>
         /// Gets or sets the property that has been displays the category image.
         /// </summary>
-        public string ImagePath { get; set; }
+        public string ImagePath { get; set; }       
 
         #endregion
 

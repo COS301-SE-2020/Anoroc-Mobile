@@ -13,13 +13,19 @@ namespace AnorocMobileApp.Views.Forms
     /// <summary>
     /// Page to login with user name and password
     /// </summary>
-    [Preserve(AllMembers = true)]
+
+    //[Preserve(AllMembers = true)]
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginWithSocialIconPage
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginWithSocialIconPage" /> class.
         /// </summary>
+
+        private string title = "";
+        private string body = "";
+
         public LoginWithSocialIconPage()
         {
             InitializeComponent();

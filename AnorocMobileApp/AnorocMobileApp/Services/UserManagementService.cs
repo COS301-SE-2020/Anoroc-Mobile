@@ -74,7 +74,7 @@ namespace AnorocMobileApp.Services
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
-            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
+            var url = "https://10.0.2.2:5001/" + Secrets.carrierStatusEndpoint;
 
             /*var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
@@ -91,7 +91,7 @@ namespace AnorocMobileApp.Services
 
             try
             {
-                var response = await client.PostAsync(url, c);
+                //var response = await client.PostAsync(url, c);
                 //string result = response.Content.ReadAsStringAsync().Result;
                 //Debug.WriteLine(result);
             }

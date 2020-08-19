@@ -1,4 +1,6 @@
-﻿using AnorocMobileApp.Models.Notification;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Notification;
+using SQLite;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
 using Xamarin.Forms;
@@ -9,7 +11,7 @@ namespace AnorocMobileApp.ViewModels.Notification
     /// <summary>
     /// ViewModel for the Notification page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    //[SQLite.Preserve(AllMembers = true)]
     [DataContract]
     public class NotificationViewModel : BaseViewModel
     {
@@ -30,7 +32,7 @@ namespace AnorocMobileApp.ViewModels.Notification
         /// </summary>
         public NotificationViewModel()
         {
-
+           
         }
 
         #endregion
@@ -114,6 +116,6 @@ namespace AnorocMobileApp.ViewModels.Notification
             // Do something
         }
 
-        #endregion
+        #endregion       
     }
 }

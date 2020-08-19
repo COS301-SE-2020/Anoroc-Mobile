@@ -145,7 +145,7 @@
 
                 <cards:SfCardView Grid.Row="0" CornerRadius="4" VerticalOptions="End" Margin="16,0,16,24"  BorderWidth="0" HasShadow="True"  
                                  BackgroundColor="{DynamicResource Gray-White}" HorizontalOptions="CenterAndExpand" WidthRequest="{OnIdiom Phone=343, Default=736}" >
-                   
+
                     <Grid RowSpacing="0" ColumnSpacing="0" WidthRequest="{OnIdiom Phone=343, Default=480}" 
                           HeightRequest="90">
 
@@ -162,39 +162,75 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <!-- Age -->
-                        <Label Text="{Binding Age}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
-                               VerticalOptions="End" />
-
-                        <Label Grid.Row="1" FontSize="12" Text="Age" Style="{StaticResource LabelStyle}" 
-                               HorizontalOptions="Center" VerticalOptions="Start"
+                        <!-- Carrier status -->
+                        <Label Grid.Row="0" FontSize="12" Text="Status" Style="{StaticResource LabelStyle}" 
+                               HorizontalOptions="Center" VerticalOptions="End"
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
+
+                        <Picker
+                            AutomationId="Picker"
+                            x:Name="picker"
+                            SelectedIndexChanged="OnPickerSelectedIndexChanged"
+                            Grid.Row="1"
+                            Title="  Status  "                                              
+                            Grid.Column="0"  FontSize="12"  
+                            FontFamily="{DynamicResource Montserrat-Medium}"
+                            TextColor="{DynamicResource Gray-700}" 
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Positive</x:String>
+                                    <x:String>Negative</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                        <!--<Label Text="{Binding Status}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
+                               VerticalOptions="End" />-->
+
 
                         <!-- Seperator -->
                         <BoxView Grid.Column="1" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
-                        <!-- Weight -->
-                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Weight}" Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="Center" VerticalOptions="End" />
-
-                        <Label Grid.Row="1" Grid.Column="2" Text="Weight" FontSize="12" Style="{StaticResource LabelStyle}" 
+                        <!-- Location tracking -->
+                        <Label Grid.Row="1" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
-                               HorizontalOptions="Center" VerticalOptions="Start" />
+                               HorizontalOptions="Center" VerticalOptions="Center" />
+
+                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="Center" VerticalOptions="End" />
 
                         <!-- Seperator -->
                         <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
-                        <!-- Height -->
-                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding Height}" HorizontalOptions="Center" 
-                               VerticalOptions="End" Style="{StaticResource LabelStyle}" />
-
-                        <Label Grid.Row="1" Grid.Column="4" Text="Height" FontSize="12" HorizontalOptions="Center"
-                               VerticalOptions="Start" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
+                        <!-- Number of incedents -->
+                        <Label Grid.Row="1" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center"
+                               VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
                                TextColor="{DynamicResource Gray-700}" />
+
+                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" 
+                               VerticalOptions="End" Style="{StaticResource LabelStyle}" />
 
                     </Grid>
                 </cards:SfCardView>
+
+                <!-- Go to notifications -->
+                <Button Text="Notifications"
+                        Font="Ariel"
+                        Grid.Row="1"
+                        VerticalOptions="Start"                        
+                        Padding="20"
+                        BackgroundColor="#f2f2f2"
+                        Clicked="Button_Clicked"                        
+                        />
+                        <!-- Command="{Binding NotificationsView}" -->
             </Grid>
+
+
         </ScrollView>
+
+
     </ContentPage.Content>
+
+
 </ContentPage>
