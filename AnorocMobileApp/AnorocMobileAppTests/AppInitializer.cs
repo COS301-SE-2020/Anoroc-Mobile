@@ -13,7 +13,7 @@ namespace AnorocMobileAppTests
             {
                 return ConfigureApp
                     .Android
-                    .ApkFile("C:/Users/Ronald/Desktop/Anaroc - Mobile DAB/AnorocMobileApp/AnorocMobileApp.Android/bin/Debug/com.anorocmobileapp.apk")
+                    .ApkFile("D:/2020/Github/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/bin/Debug/com.anorocmobileapp.apk")
                     .WaitTimes(new WaitTimes())
                     .StartApp();
             }
