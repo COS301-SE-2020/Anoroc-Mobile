@@ -2,6 +2,7 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -11,13 +12,19 @@ namespace AnorocMobileApp.Views.Navigation
     /// <summary>
     /// Page to show the Me page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    [SQLite.Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MePage : ContentPage
     {
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MePage" /> class.
         /// </summary>
+        /// 
+        private string title = "";
+        private string body = "";
         public MePage()
         {
             InitializeComponent();
@@ -32,23 +39,18 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        protected override void OnAppearing()
+        public void OnAppearing()
         {
-            base.OnAppearing();
-
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
-
+                   
         }
-
-        void OnMessageReceived(object sender, string msg)
+        
+        /*
+        public Task<List<TodoItem>> GetItemsNotDoneAsync()
         {
-            Device.BeginInvokeOnMainThread(() =>
-            {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
+            // SQL queries are also possible
+            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
         }
-
+        */
         /// <summary>
         /// Goes to notifications view.
         /// TODO: Show notifications in an improved way

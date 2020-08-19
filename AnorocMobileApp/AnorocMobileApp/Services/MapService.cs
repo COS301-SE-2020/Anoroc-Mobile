@@ -41,6 +41,7 @@ namespace AnorocMobileApp.Services
 
 
                 Uri Anoroc_Uri = new Uri(Constants.AnorocURI+ "Cluster/Simplified");
+
                 HttpResponseMessage responseMessage;
 
                 try

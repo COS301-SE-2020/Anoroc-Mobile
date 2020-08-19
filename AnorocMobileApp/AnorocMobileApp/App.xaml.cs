@@ -8,12 +8,14 @@ using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
+using AnorocMobileApp;
 
 namespace AnorocMobileApp
 {
     public partial class App
     {
-        public const string NotificationReceivedKey = "NotificationRecieved";
+        public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
+        public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
@@ -28,13 +30,23 @@ namespace AnorocMobileApp
         public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
 
-        /*
+
+
+        public static string FilePath;
+
+
+        
+
         public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
             InitializeComponent();
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+            //Defualt lifestle
+            IoCContainer = new Container();
+            /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
 
             DependencyService.Register<B2CAuthenticationService>();
 
@@ -46,6 +58,7 @@ namespace AnorocMobileApp
             //Defualt lifestle
             IoCContainer = new Container();
             //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
@@ -54,7 +67,6 @@ namespace AnorocMobileApp
 
             //FacebookLoginService = facebookLoginService;
 
-    
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -77,7 +89,28 @@ namespace AnorocMobileApp
             }
         }
 
-        */
+
+
+        public App(string filePath)
+        {
+            IoCContainer = new Container();
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new LoginWithSocialIconPage();
+
+            FilePath = filePath;
+        }
+
+
+
 
         public App()
         {
@@ -106,12 +139,16 @@ namespace AnorocMobileApp
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
             */
 
-
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+            Current.Properties["TOKEN"] = "thisisatoken";
+            MainPage = new NavigationPage(new BottomNavigationPage());
         }
 
         /*public App()
         {
-            InitializeComponent();
+            
 
             MainPage = new NavigationPage(new Login());
         }*/

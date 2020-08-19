@@ -19,7 +19,7 @@ namespace AnorocMobileApp.Services
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
         private int request_count;
-
+        
         public static bool Tracking;
 
         public BackgroundLocaitonService()
@@ -203,6 +203,22 @@ namespace AnorocMobileApp.Services
         public bool isTracking()
         {
             return Tracking;
+        }
+
+        void SetBackground(double level, bool charging)
+        {
+            Color? colour = null;
+            var status = charging ? "Charging" : "Not charging";
+
+            if (level > .5f)
+                colour = Color.Green.MultiplyAlpha(level);
+            else if (level > .1f)
+                colour = Color.Yellow.MultiplyAlpha(level);
+            else
+                colour = Color.Red.MultiplyAlpha(level);
+
+            Console.WriteLine("Colour: " + colour.Value);
+
         }
     }
 }
