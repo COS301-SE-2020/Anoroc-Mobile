@@ -19,6 +19,12 @@ namespace AnorocMobileAppTests.View
             this.platform = platform;
         }
 
+        [Test]
+        public void AppLaunches()
+        {
+            app.Screenshot("First screen.");
+        }
+
         [SetUp]
         public void BeforeEachTest()
         {
