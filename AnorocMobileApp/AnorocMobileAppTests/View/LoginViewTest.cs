@@ -23,6 +23,9 @@ namespace AnorocMobileAppTests.View
         public void AppLaunches()
         {
             app.Screenshot("First screen.");
+
+            Assert.IsTrue(true);
+           
         }
 
         [SetUp]
