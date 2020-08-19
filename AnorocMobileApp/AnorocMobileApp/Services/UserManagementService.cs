@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -118,7 +119,6 @@ namespace AnorocMobileApp.Services
 
                 var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
 
                 Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserLoggedInEndpoint);
                 HttpResponseMessage responseMessage;

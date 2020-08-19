@@ -73,7 +73,6 @@ namespace AnorocMobileApp
 
             //FacebookLoginService = facebookLoginService;
 
-            Current.Properties["TOKEN"] = "thisisatoken";
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -105,11 +104,13 @@ namespace AnorocMobileApp
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
-
+            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
             //Register Syncfusion license
             InitializeComponent();
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
             Current.Properties["TOKEN"] = "thisisatoken";
+
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
             MainPage = new LoginWithSocialIconPage();
 

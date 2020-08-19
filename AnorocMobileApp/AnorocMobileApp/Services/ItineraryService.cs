@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Services
 {
@@ -107,8 +108,8 @@ namespace AnorocMobileApp.Services
                 Token token_object = new Token();
 
                 token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-
-                token_object.Object_To_Server = JsonConvert.SerializeObject(userItinerary);
+                
+                token_object.Object_To_Server = JsonConvert.SerializeObject(new ItineraryWrap(userItinerary));
 
                 var data = JsonConvert.SerializeObject(token_object);
 
@@ -119,15 +120,21 @@ namespace AnorocMobileApp.Services
 
                 try
                 {
+
                     responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-                    ItineraryRisk itineraryRisk = null;
-                    if (responseMessage.IsSuccessStatusCode)
+                    ItineraryRiskWrapper itineraryRisk = null;
+                    if (responseMessage != null)
                     {
-                        var json = await responseMessage.Content.ReadAsStringAsync();
-                        itineraryRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
-                        UserItineraries.Add(itineraryRisk);
+                        if (responseMessage.IsSuccessStatusCode)
+                        {
+                            var json = await responseMessage.Content.ReadAsStringAsync();
+                            itineraryRisk = JsonConvert.DeserializeObject<ItineraryRiskWrapper>(json);
+                            UserItineraries.Add(itineraryRisk.toItineraryRisk());
+                        }
+                        return itineraryRisk.toItineraryRisk();
                     }
-                    return itineraryRisk;
+                    else
+                        return null;
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
