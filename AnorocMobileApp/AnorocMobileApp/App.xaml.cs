@@ -18,7 +18,13 @@ namespace AnorocMobileApp
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
 
-        public static int ScreenWidth;
+
+        public const string FirebaseTokenKey = "FirebaseRecieved";
+
+        
+
+
+        static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
@@ -124,6 +130,9 @@ namespace AnorocMobileApp
 
             Current.Properties["TOKEN"] = "thisisatoken";
 
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
+
+
             MainPage = new LoginWithSocialIconPage();
 
             //Defualt lifestle
@@ -146,7 +155,10 @@ namespace AnorocMobileApp
             Current.Properties["TOKEN"] = "thisisatoken";
             MainPage = new NavigationPage(new BottomNavigationPage());
         }
-
+        void OnKeyReceived(object sender, string key)
+        {
+            Current.Properties["FirebaseToken"] = key;
+        }
         /*public App()
         {
             
