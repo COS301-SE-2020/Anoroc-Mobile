@@ -96,7 +96,7 @@ namespace AnorocMobileApp
         {
             IoCContainer = new Container();
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
 
@@ -130,7 +130,7 @@ namespace AnorocMobileApp
             IoCContainer = new Container();
             //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
             /*
