@@ -52,7 +52,8 @@ namespace AnorocMobileApp.Views.Forms
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
 
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
-                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+                    //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+
                     ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
 
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
