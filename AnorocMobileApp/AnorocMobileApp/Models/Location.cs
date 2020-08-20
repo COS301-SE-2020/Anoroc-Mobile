@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Threading.Tasks;
 using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
@@ -21,7 +22,7 @@ namespace AnorocMobileApp.Models
             GetRegion();
 
         }
-        public async void GetRegion()
+        public async Task GetRegion()
         {
             var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
             var placemark = placemarks?.FirstOrDefault();
@@ -48,6 +49,8 @@ namespace AnorocMobileApp.Models
 
             Latitude = loc.Latitude;
             Longitude = loc.Longitude;
+
+            GetRegion();
            
         }
 
@@ -58,6 +61,7 @@ namespace AnorocMobileApp.Models
             Longitude = longC;
             Created = dateTime;
             Carrier_Data_Point = carrier;
+            GetRegion();
         }
    
         public DateTime Created { get; set; }

@@ -130,11 +130,13 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        if(!json.Equals("I trust you...for now..."))
+                        if (json != null)
+                        {
                             Application.Current.Properties["TOKEN"] = json;
                             string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
                             IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
                             ims.SendFireBaseToken(firebaseToken);
+                        }
                     }
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
