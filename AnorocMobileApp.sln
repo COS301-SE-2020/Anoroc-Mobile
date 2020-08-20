@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnorocMobileApp", "AnorocMo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnorocMobileAppTests", "AnorocMobileApp\AnorocMobileAppTests\AnorocMobileAppTests.csproj", "{BC6D2FE1-DC85-4682-BE59-216756B7CA7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTesting", "IntegrationTesting\IntegrationTesting.csproj", "{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,18 @@ Global
 		{BC6D2FE1-DC85-4682-BE59-216756B7CA7B}.Release|iPhone.Build.0 = Release|Any CPU
 		{BC6D2FE1-DC85-4682-BE59-216756B7CA7B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{BC6D2FE1-DC85-4682-BE59-216756B7CA7B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|iPhone.Build.0 = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{2A21C39B-6047-46E4-97A5-3523AE9B7A8A}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
