@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using AnorocMobileApp.Interfaces;
 using Firebase.Iid;
+using Xamarin.Forms;
 
 namespace AnorocMobileApp.Droid
 {
@@ -26,13 +27,15 @@ namespace AnorocMobileApp.Droid
         public override async void OnTokenRefresh()
         {
             var refreshedToken = FirebaseInstanceId.Instance.Token;
-            Console.WriteLine($"Token received: {refreshedToken}");
-            SendRegistrationToServer(refreshedToken);
+            Console.WriteLine($"Token wire up: {refreshedToken}");
+            MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.FirebaseTokenKey, refreshedToken);
+           // SendRegistrationToServer(refreshedToken);
         }
 
         void SendRegistrationToServer(string token)
         {
-            Container.userManagementService.SendFireBaseToken(token);
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
+            userManagementService.SendFireBaseToken(token);
             // TODO: Still need to be implemented
             Log.Debug(PackageName, token);
         }

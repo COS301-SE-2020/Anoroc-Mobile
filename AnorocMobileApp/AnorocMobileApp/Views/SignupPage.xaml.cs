@@ -1,8 +1,6 @@
 ﻿using AnorocMobileApp.Models;
 using System;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using AnorocMobileApp.Views.Home;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -62,7 +60,6 @@ namespace AnorocMobileApp.Views
                                         User.UserSurname = UserSurname.Text;
                                         User.loggedInAnoroc = true;
                                         user = new User();
-                                        user.Password = Password.Text;
                                         user.registerAsync();
                                     }
                                     else

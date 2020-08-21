@@ -1,13 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-using AnorocMobileApp.Views;
 using Newtonsoft.Json;
 using System.IO;
 using System.Reflection;
-using Xamarin.Forms.Maps;
-using Xamarin.Essentials;
 using System.Diagnostics;
 using AnorocMobileApp.Services;
 using System.Threading.Tasks;

@@ -1,6 +1,4 @@
-﻿using System.Threading;
-
-namespace AnorocMobileApp.Models
+﻿namespace AnorocMobileApp.Models
 {
     public class GEOCoordinate
     {

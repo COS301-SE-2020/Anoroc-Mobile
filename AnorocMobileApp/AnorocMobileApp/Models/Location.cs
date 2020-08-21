@@ -1,6 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+using AnorocMobileApp.Models.Itinerary;
+using Newtonsoft.Json;
 using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Models
@@ -11,31 +13,72 @@ namespace AnorocMobileApp.Models
         {
 
         }
+
+        public Location(Position position)
+        {
+            Latitude = position.Lat;
+            Longitude = position.Lon;
+
+            GetRegion();
+
+        }
+        public async Task GetRegion()
+        {
+            var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
+            var placemark = placemarks?.FirstOrDefault();
+            if (placemark != null)
+            {
+                var geocodeAddress =
+                    $"AdminArea:       {placemark.AdminArea}\n" +
+                    $"CountryCode:     {placemark.CountryCode}\n" +
+                    $"CountryName:     {placemark.CountryName}\n" +
+                    $"FeatureName:     {placemark.FeatureName}\n" +
+                    $"Locality:        {placemark.Locality}\n" +
+                    $"PostalCode:      {placemark.PostalCode}\n" +
+                    $"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                    $"SubLocality:     {placemark.SubLocality}\n" +
+                    $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                    $"Thoroughfare:    {placemark.Thoroughfare}\n";
+            }
+            Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality);
+        }
         public Location(Xamarin.Essentials.Location loc)
         {
             this.Created = DateTime.Now;
             Carrier_Data_Point = false;
-            Coordinate = new GEOCoordinate(loc.Latitude, loc.Longitude, loc.Altitude.GetValueOrDefault(), loc.Speed.GetValueOrDefault());
-            Coordinate.HorizontalAccuracy = 1;
-            Coordinate.VerticalAccuracy = 1;
-            Coordinate.Course = 1;
+
+            Latitude = loc.Latitude;
+            Longitude = loc.Longitude;
+
+            GetRegion();
+           
         }
 
-        public Location(GEOCoordinate coord, DateTime dateTime, bool carrier)
+        public Location(double lat, double longC, DateTime dateTime, bool carrier)
         {
-            Coordinate = new GEOCoordinate(coord.Latitude, coord.Longitude);
+
+            Latitude = lat;
+            Longitude = longC;
             Created = dateTime;
             Carrier_Data_Point = carrier;
+            GetRegion();
         }
    
         public DateTime Created { get; set; }
-        public GEOCoordinate Coordinate { get; set; }
+        
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public bool Carrier_Data_Point { get; set; }
-
+        public Area Region { get; set; }
 
         public Location clone()
         {
-            return new Location(Coordinate, Created, Carrier_Data_Point);
+            return new Location(Latitude, Longitude, Created, Carrier_Data_Point);
         }
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
     }
 }

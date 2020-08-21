@@ -269,6 +269,7 @@ $tf/
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
+*.DotSettings
 
 # TeamCity is a build add-in
 _TeamCity*
@@ -504,3 +505,7 @@ AnorocMobileApp/AnorocMobileApp.Android/obj/Debug/90/designtime/build.props
 AnorocMobileApp/AnorocMobileApp.Android/obj/Debug/90/libraryprojectimports.cache
 AnorocMobileApp/AnorocMobileApp.iOS/obj/iPhone/Debug/AnorocMobileApp.iOS.csprojAssemblyReference.cache
 AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/AnorocMobileApp.csprojAssemblyReference.cache
+
+secrets.json
+
+

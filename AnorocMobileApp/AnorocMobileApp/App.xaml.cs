@@ -1,43 +1,78 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-using AnorocMobileApp.Views;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
-using System;
-using System.Net;
-using Xamarin.Essentials;
+using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Views.Dashboard;
+using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+using SimpleInjector;
+using SimpleInjector.Lifestyles;
+using AnorocMobileApp;
 
 namespace AnorocMobileApp
 {
-    public partial class App : Application
+    public partial class App
     {
-        public const string NotificationReceivedKey = "NotificationRecieved";
+        public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
+        public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
+
+
+        public const string FirebaseTokenKey = "FirebaseRecieved";
+
+        
+
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
-        private static string syncfusionLicense = "";
-        readonly bool mapDebug = false;
+        private static string syncfusionLicense = Secrets.SyncfusionLicense;
         public IFacebookLoginService FacebookLoginService { get; private set; }
- 
-        public App(IFacebookLoginService facebookLoginService, IBackgroundLocationService backgroundLocationService)
+
+
+        //-------------------------------------------------------------------------------------------------
+        //Container Set up
+        public static Container IoCContainer { get; set; }
+        //-------------------------------------------------------------------------------------------------
+
+
+
+        public static string FilePath;
+
+
+        
+
+        public App(IFacebookLoginService facebookLoginService)
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
             InitializeComponent();
-            
-            // Dependancy Injections:
-            Container.BackgroundLocationService = backgroundLocationService;
-            Container.LocationService = new LocationService();
-            Container.userManagementService = new UserManagementService();
 
-            FacebookLoginService = facebookLoginService;
+            //Current.Properties["TOKEN"] = "thisisatoken";
+            //Defualt lifestle
+            //IoCContainer = new Container();
+            /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
+
+            DependencyService.Register<B2CAuthenticationService>();
+
 
             Current.Properties["TOKEN"] = "thisisatoken";
+
+            MainPage = new NavigationPage(new BottomNavigationPage());
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
+
+            //FacebookLoginService = facebookLoginService;
+
 
             if (facebookLoginService.isLoggedIn())
             {
@@ -51,46 +86,84 @@ namespace AnorocMobileApp
             else
             {
 
-                //MainPage = new NavigationPage(new BottomNavigationPage());
-                //MainPage = new Views.Map();
+                //MainPage = new Views.Navigation.SettingsPage();
+                //MainPage = new Views.Navigation.MePage();
+                MainPage = new Views.Navigation.BottomNavigationPage();
 
-                MainPage = new LoginWithSocialIconPage();
+                //MainPage = new LoginWithSocialIconPage();
 
             }
         }
 
-        public App(IFacebookLoginService facebookLoginService)
-        {
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            InitializeComponent();
 
-                FacebookLoginService = facebookLoginService;
-                if (facebookLoginService.isLoggedIn())
-                {
-                    User.FirstName = facebookLoginService.FirstName;
-                    User.UserSurname = facebookLoginService.LastName;
-                    User.UserID = facebookLoginService.UserID;
-                    User.loggedInFacebook = true;
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
-                else
-                {
-                    MainPage = new NavigationPage(new BottomNavigationPage());
-                }
+
+        public App(string filePath)
+        {
+            IoCContainer = new Container();
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
+
+            MainPage = new LoginWithSocialIconPage();
+
+            FilePath = filePath;
         }
+
+
+
 
         public App()
         {
             //Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
+            InitializeComponent();
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+            Current.Properties["TOKEN"] = "thisisatoken";
+
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
+
+
+            MainPage = new LoginWithSocialIconPage();
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            /*
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+            */
+
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+            Current.Properties["TOKEN"] = "thisisatoken";
             MainPage = new NavigationPage(new BottomNavigationPage());
         }
-
+        void OnKeyReceived(object sender, string key)
+        {
+            Current.Properties["FirebaseToken"] = key;
+           // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
+        }
         /*public App()
         {
-            InitializeComponent();
+            
 
             MainPage = new NavigationPage(new Login());
         }*/
@@ -102,7 +175,7 @@ namespace AnorocMobileApp
 
         protected override void OnSleep()
         {
-            Current.Properties["Tracking"] = BackgroundLocaitonService.Tracking;
+            Current.Properties["Tracking"] = BackgroundLocationService.Tracking;
         }
 
         protected override void OnResume()
@@ -114,11 +187,12 @@ namespace AnorocMobileApp
         {
             if(Current.Properties.ContainsKey("Tracking"))
             {
+                IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
-                BackgroundLocaitonService.Tracking = value;
+                BackgroundLocationService.Tracking = value;
                 if(value)
                 {
-                    Container.BackgroundLocationService.Start_Tracking();
+                    backgroundLocationService.Start_Tracking();
                 }
             }
 

@@ -12,6 +12,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Services;
 using Xamarin.Forms;
 
@@ -35,9 +36,9 @@ namespace AnorocMobileApp.Droid.Resources.services
               {
                   try
                   {
-                      var backgroundLocationService = MainActivity.BackgroundLocationService;
+                      var backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
                       backgroundLocationService.Run_TrackAsync();
-                      BackgroundLocaitonService.Tracking = true;
+                      BackgroundLocationService.Tracking = true;
                   }
                   catch (System.OperationCanceledException)
                   {

@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Xamarin.Forms;
 
 namespace AnorocMobileApp
 {
@@ -9,7 +8,7 @@ namespace AnorocMobileApp
     /// Constructor to load the homepage
     /// </summary>
     [DesignTimeVisible(false)]
-    public partial class MainPage : ContentPage
+    public partial class MainPage
     {
         public MainPage()
         {

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-using Xamarin.Auth;
-
-namespace AnorocMobileApp.Models
+﻿namespace AnorocMobileApp.Models
 {
     public static class FacebookPageHelper
     {
