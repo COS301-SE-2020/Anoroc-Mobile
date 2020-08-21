@@ -3,7 +3,7 @@ using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Xamarin.UITest.Utils;
 
-namespace AnorocMobileAppTests
+namespace UITest
 {
     public class AppInitializer
     {
@@ -13,7 +13,7 @@ namespace AnorocMobileAppTests
             {
                 return ConfigureApp
                     .Android
-                    .ApkFile("C:/Users/kevin/source/repos/COS301-SE-2020/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/bin/Release/com.anorocmobileapp.apk")
+                    .ApkFile("D:/2020/Github/Anoroc-Mobile/AnorocMobileApp/AnorocMobileApp.Android/bin/Debug/com.anorocmobileapp.apk")
                     .WaitTimes(new WaitTimes())
                     .StartApp();
             }
