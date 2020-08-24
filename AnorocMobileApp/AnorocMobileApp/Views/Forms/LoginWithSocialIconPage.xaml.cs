@@ -34,7 +34,6 @@ namespace AnorocMobileApp.Views.Forms
           
         }
 
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -115,6 +114,9 @@ namespace AnorocMobileApp.Views.Forms
 
             CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
             CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
+            CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
+            CrossSecureStorage.Current.SetValue("Surname", userContext.FamilyName);
+
             //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
 
         }

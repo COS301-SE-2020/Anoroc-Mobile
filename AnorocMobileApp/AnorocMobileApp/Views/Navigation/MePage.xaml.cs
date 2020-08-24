@@ -2,7 +2,7 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-
+using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -39,9 +39,14 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        public void OnAppearing()
+        protected override void OnAppearing()
         {
-                   
+            base.OnAppearing();
+            var name = CrossSecureStorage.Current.GetValue("Name");
+            var surname = CrossSecureStorage.Current.GetValue("Surname");
+
+            profileName.Text = name.ToString() + " " + surname.ToString();
+
         }
         
         /*
