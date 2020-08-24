@@ -52,11 +52,11 @@ namespace AnorocMobileApp.Views.Forms
             {
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
+                
                 if(userContext.IsLoggedOn)
                 {
                     /*Console.WriteLine("Access Token: " + userContext.AccessToken);
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
-
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
                     //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
 
