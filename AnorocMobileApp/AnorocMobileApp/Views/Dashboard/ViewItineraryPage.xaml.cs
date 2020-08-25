@@ -17,7 +17,7 @@ namespace AnorocMobileApp.Views.Dashboard
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewItineraryPage" /> class.
         /// </summary>
-        public ViewItineraryPage(List<Location> locations)
+        public ViewItineraryPage(Dictionary<Location, int> locations)
         {
             InitializeComponent();
             BindingContext = new ViewItineraryViewModel(Navigation, locations);
