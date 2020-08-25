@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.ViewModels.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -19,7 +20,7 @@ namespace AnorocMobileApp.Views.Dashboard
         public ViewItineraryPage(List<Location> locations)
         {
             InitializeComponent();
-            
+            BindingContext = new ViewItineraryViewModel(Navigation, locations);
         }
     }
 }

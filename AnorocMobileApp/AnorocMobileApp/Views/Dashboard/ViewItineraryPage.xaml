@@ -33,34 +33,6 @@
                     Title="Health Care"
                     FontFamily="{StaticResource Montserrat-Medium}"
                     FontSize="16">
-                    <controls:TitleView.LeadingView>
-
-                        <buttons:SfButton
-                            Command="{TemplateBinding BindingContext.menuCommand}"
-                            CornerRadius="4"
-                            HorizontalOptions="Start"
-                            Style="{StaticResource IconButtonStyle}"
-                            Text="{StaticResource Menu}" />
-
-                    </controls:TitleView.LeadingView>
-
-                    <controls:TitleView.TrailingView>
-
-                        <border:SfBorder
-                            BackgroundColor="{DynamicResource Gray-200}"
-                            BorderColor="{DynamicResource Gray-White}"
-                            Style="{StaticResource ProfileBorderStyle}">
-                            <Image HeightRequest="40" WidthRequest="40">
-                                <Image.Source>
-                                    <UriImageSource
-                                        CacheValidity="14"
-                                        CachingEnabled="true"
-                                        Uri="{Binding Path=BindingContext.ProfileImage, Source={x:Reference healthCarePage}}" />
-                                </Image.Source>
-                            </Image>
-                        </border:SfBorder>
-
-                    </controls:TitleView.TrailingView>
                 </controls:TitleView>
 
                 <ContentPresenter />
