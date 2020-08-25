@@ -39,7 +39,7 @@
     <EmbeddedResource Update="Views\Dashboard\AddItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Dashboard\HealthCarePage.xaml">
+    <EmbeddedResource Update="Views\Dashboard\ViewItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Dashboard\Styles.xaml">

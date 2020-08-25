@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Dashboard;
 using Syncfusion.SfChart.XForms;
 using Xamarin.Forms;
@@ -11,7 +13,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
     /// ViewModel for stock overview page.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class HealthCareViewModel : BaseViewModel
+    public class ViewItineraryViewModel : BaseViewModel
     {
         #region Field
 
@@ -45,15 +47,22 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         private ObservableCollection<ChartDataPoint> waterConsumedData;
 
+        private INavigation Navigation { get; set; }
+
+        private List<Location> Locations { get; set; }
+        
         #endregion
 
         #region Constructor
 
         /// <summary>
-        /// Initializes a new instance for the <see cref="HealthCareViewModel" /> class.
+        /// Initializes a new instance for the <see cref="ViewItineraryViewModel" /> class.
         /// </summary>
-        public HealthCareViewModel()
+        public ViewItineraryViewModel(INavigation navigation, List<Location> locations)
         {
+            Navigation = navigation;
+            Locations = locations;
+            
             GetChartData();
             cardItems = new ObservableCollection<HealthCare>()
             {

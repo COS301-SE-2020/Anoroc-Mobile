@@ -1,4 +1,6 @@
-﻿using Xamarin.Forms;
+﻿using System.Collections.Generic;
+using AnorocMobileApp.Models;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
@@ -9,14 +11,15 @@ namespace AnorocMobileApp.Views.Dashboard
     /// </summary>
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HealthCarePage : ContentPage
+    public partial class ViewItineraryPage : ContentPage
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="HealthCarePage" /> class.
+        /// Initializes a new instance of the <see cref="ViewItineraryPage" /> class.
         /// </summary>
-        public HealthCarePage()
+        public ViewItineraryPage(List<Location> locations)
         {
             InitializeComponent();
+            
         }
     }
 }
