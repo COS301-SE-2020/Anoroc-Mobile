@@ -30,7 +30,7 @@ namespace AnorocMobileApp.Views.Dashboard
         {
             InitializeComponent();
             // this.BindingContext = AddItineraryDataService.Instance.AddItineraryViewModel;
-            viewModel = new AddItineraryViewModel();
+            viewModel = new AddItineraryViewModel(Navigation);
             this.BindingContext = viewModel;
             this.popupLayout = CreateDatePopoutLayout();
             this.searchPopupLayout = CreateSearchPopoutLayout();

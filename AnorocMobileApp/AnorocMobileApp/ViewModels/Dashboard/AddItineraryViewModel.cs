@@ -35,10 +35,11 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
         /// </summary>
-        public AddItineraryViewModel()
+        public AddItineraryViewModel(INavigation navigation)
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
+            Navigation = navigation;
         }
 
         #endregion
@@ -73,6 +74,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private List<Location> locations;
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
+        public INavigation Navigation { get; set;}
 
         #endregion
 
@@ -218,7 +220,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
             
-            Debug.Print(risk.LocationItineraryRisks.Count.ToString());
+            
         }
         
         #endregion
