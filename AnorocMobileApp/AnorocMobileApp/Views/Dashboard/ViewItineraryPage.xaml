@@ -8,17 +8,13 @@
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Dashboard"
              xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             x:Class="AnorocMobileApp.Views.Dashboard.HealthCarePage"
+             x:Class="AnorocMobileApp.Views.Dashboard.ViewItineraryPage"
              xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              xmlns:behavior ="clr-namespace:AnorocMobileApp.Behaviors;assembly=AnorocMobileApp"
              x:Name="healthCarePage"
              NavigationPage.HasNavigationBar="False"
              Style="{StaticResource ContentPageStyle}">
-
-    <ContentPage.BindingContext>
-        <viewModel:HealthCareViewModel />
-    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <ResourceDictionary>
