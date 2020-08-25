@@ -222,11 +222,8 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
-            
-            var riskLocations = new List<Location>(risk.LocationItineraryRisks.Count);
-            riskLocations.AddRange(risk.LocationItineraryRisks.Keys);
 
-            Navigation.InsertPageBefore(new ViewItineraryPage(riskLocations), View);
+            Navigation.InsertPageBefore(new ViewItineraryPage(risk.LocationItineraryRisks), View);
             await Navigation.PopAsync();
 
         }
