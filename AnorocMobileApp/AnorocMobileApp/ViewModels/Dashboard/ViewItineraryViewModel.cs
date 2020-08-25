@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Dashboard;
 using Syncfusion.SfChart.XForms;
@@ -47,10 +48,18 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         private ObservableCollection<ChartDataPoint> waterConsumedData;
 
+        /// <summary>
+        /// To store the navigation object for navigating
+        /// </summary>
         private INavigation Navigation { get; set; }
 
-        private List<Location> Locations { get; set; }
-        
+        /// <summary>
+        /// To store locations along with their associated risk
+        /// </summary>
+        private Dictionary<Location, int> Locations { get; set; }
+
+        private string averageRisk;
+
         #endregion
 
         #region Constructor
@@ -58,75 +67,87 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Initializes a new instance for the <see cref="ViewItineraryViewModel" /> class.
         /// </summary>
-        public ViewItineraryViewModel(INavigation navigation, List<Location> locations)
+        public ViewItineraryViewModel(INavigation navigation, Dictionary<Location, int> locations)
         {
+            var riskGradientStart = new Dictionary<int, string>()
+            {
+                {0, "#DCE35B"},
+                {1, "#ffc500"},
+                {2, "#F9D423"},
+                {3, "#fe8c00"},
+                {4, "#F00000"}
+            };
+
+            var riskGradientEnd = new Dictionary<int, string>()
+            {
+                {0, "#45B649"},
+                {1, "#c21500"},
+                {2, "#e65c00"},
+                {3, "#f83600"},
+                {4, "#DC281E"}
+            };
+
+            var riskDescription = new Dictionary<int, string>()
+            {
+                {0, "NO RISK"},
+                {1, "LOW RISK"},
+                {2, "MODERATE RISK"},
+                {3, "MEDIUM RISK"},
+                {4, "HIGH RISK"}
+            };
+
             Navigation = navigation;
             Locations = locations;
-            
-            GetChartData();
             cardItems = new ObservableCollection<HealthCare>()
             {
                 new HealthCare()
                 {
-                    Category = "HEART RATE",
-                    CategoryValue = "87 bmp",
-                    ChartData = heartRateData,
-                    BackgroundGradientStart = "#f59083",
-                    BackgroundGradientEnd = "#fae188",
+                    Category = "University of Pretoria (Test)",
+                    CategoryValue = riskDescription[0],
+                    BackgroundGradientStart = riskGradientStart[0],
+                    BackgroundGradientEnd = riskGradientEnd[0]
                 },
                 new HealthCare()
                 {
-                    Category = "CALORIES BURNED",
-                    CategoryValue = "948 cal",
-                    ChartData = caloriesBurnedData,
-                    BackgroundGradientStart = "#ff7272",
-                    BackgroundGradientEnd = "#f650c5"
+                    Category = "McDonald's Hatfield (Test)",
+                    CategoryValue = riskDescription[1],
+                    BackgroundGradientStart = riskGradientStart[1],
+                    BackgroundGradientEnd = riskGradientEnd[1]
                 },
                 new HealthCare()
                 {
-                    Category = "SLEEP TIME",
-                    CategoryValue = "7.3 hrs",
-                    ChartData = sleepTimeData,
-                    BackgroundGradientStart = "#5e7cea",
-                    BackgroundGradientEnd = "#1dcce3"
+                    Category = "Centurion Gautrain (Test)",
+                    CategoryValue = riskDescription[2],
+                    BackgroundGradientStart = riskGradientStart[2],
+                    BackgroundGradientEnd = riskGradientEnd[2]
                 },
                 new HealthCare()
                 {
-                    Category = "WATER CONSUMED",
-                    CategoryValue = "38.6 ltr",
-                    ChartData = waterConsumedData,
-                    BackgroundGradientStart = "#255ea6",
-                    BackgroundGradientEnd = "#b350d1"
+                    Category = "Loftus Versfeld Stadium (Test)",
+                    CategoryValue = riskDescription[3],
+                    BackgroundGradientStart = riskGradientStart[3],
+                    BackgroundGradientEnd = riskGradientEnd[3]
+                },
+                new HealthCare()
+                {
+                    Category = "Menlyn Shopping Mall (Test)",
+                    CategoryValue = riskDescription[4],
+                    BackgroundGradientStart = riskGradientStart[4],
+                    BackgroundGradientEnd = riskGradientEnd[4]
                 }
             };
-
-            listItems = new ObservableCollection<HealthCare>()
+            var sortedLocations = from entry in locations orderby entry.Value descending select entry;
+            foreach (var risk in sortedLocations)
             {
-                new HealthCare()
+                cardItems.Add(new HealthCare()
                 {
-                    Category = "Blood Pressure",
-                    CategoryValue = "141/90 mmgh",
-                    CategoryPercentage = "30%",
-                    BackgroundGradientStart = "#cf86ff"
-                },
-                new HealthCare()
-                {
-                    Category = "Body Weight",
-                    CategoryValue = "80kg",
-                    CategoryPercentage = "50%",
-                    BackgroundGradientStart = "#8691ff"
-                },
-                new HealthCare()
-                {
-                    Category = "Steps",
-                    CategoryValue = "3463",
-                    CategoryPercentage = "60%",
-                    BackgroundGradientStart = "#ff9686"
-                }
-            };
-
-            this.ProfileImage = App.BaseImageUrl + "ProfileImage1.png";
-            this.MenuCommand = new Command(this.MenuClicked);
+                    Category = risk.Key.Region.Suburb,
+                    CategoryValue = riskDescription[risk.Value],
+                    BackgroundGradientStart = riskGradientStart[risk.Value],
+                    BackgroundGradientEnd = riskGradientEnd[risk.Value]
+                    
+                });
+            }
         }
 
         #endregion
