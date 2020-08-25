@@ -4,6 +4,7 @@ using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
 using Microsoft.Identity.Client;
+using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -29,6 +30,22 @@ namespace AnorocMobileApp.Views.Forms
         public LoginWithSocialIconPage()
         {
             InitializeComponent();
+
+          
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
+
+            if (signedIn != null)
+            {
+                if (signedIn.ToString().Equals("true"))
+                {
+                    Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+                }
+            }
         }
         /// <summary>
         /// Function sets Main Page to Navigation Page
@@ -50,13 +67,16 @@ namespace AnorocMobileApp.Views.Forms
 
             try
             {
+
+               
+
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
+                
                 if(userContext.IsLoggedOn)
                 {
                     /*Console.WriteLine("Access Token: " + userContext.AccessToken);
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
-
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
                     //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
 
@@ -90,6 +110,13 @@ namespace AnorocMobileApp.Views.Forms
         void UpdateSignInState(UserContext userContext)
         {
             var isSignedIn = userContext.IsLoggedOn;
+
+
+            CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
+            CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
+            CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
+            CrossSecureStorage.Current.SetValue("Surname", userContext.FamilyName);
+
             //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
 
         }
