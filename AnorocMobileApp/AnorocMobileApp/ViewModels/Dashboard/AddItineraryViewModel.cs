@@ -223,7 +223,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
 
-            Navigation.InsertPageBefore(new ViewItineraryPage(risk.LocationItineraryRisks), View);
+            Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
             await Navigation.PopAsync();
 
         }

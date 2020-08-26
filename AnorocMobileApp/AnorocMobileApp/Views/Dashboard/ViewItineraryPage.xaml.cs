@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.ViewModels.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -17,10 +18,10 @@ namespace AnorocMobileApp.Views.Dashboard
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewItineraryPage" /> class.
         /// </summary>
-        public ViewItineraryPage(Dictionary<Location, int> locations)
+        public ViewItineraryPage(ItineraryRisk itineraryRisk)
         {
             InitializeComponent();
-            BindingContext = new ViewItineraryViewModel(Navigation, locations);
+            BindingContext = new ViewItineraryViewModel(Navigation, itineraryRisk);
         }
     }
 }
