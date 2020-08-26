@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Dashboard;
+using AnorocMobileApp.Models.Itinerary;
 using Syncfusion.SfChart.XForms;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -58,8 +59,6 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// </summary>
         private Dictionary<Location, int> Locations { get; set; }
 
-        private string averageRisk;
-
         #endregion
 
         #region Constructor
@@ -67,8 +66,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Initializes a new instance for the <see cref="ViewItineraryViewModel" /> class.
         /// </summary>
-        public ViewItineraryViewModel(INavigation navigation, Dictionary<Location, int> locations)
+        public ViewItineraryViewModel(INavigation navigation, ItineraryRisk itineraryRisk)
         {
+            var locations = itineraryRisk.LocationItineraryRisks;
+
             var riskGradientStart = new Dictionary<int, string>()
             {
                 {0, "#DCE35B"},
@@ -95,7 +96,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 {3, "MEDIUM RISK"},
                 {4, "HIGH RISK"}
             };
-
+            
             Navigation = navigation;
             Locations = locations;
             cardItems = new ObservableCollection<HealthCare>()
@@ -148,6 +149,11 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     
                 });
             }
+
+            AverageRisk = itineraryRisk.TotalItineraryRisk;
+            CardColour = riskGradientEnd[AverageRisk];
+            Date = itineraryRisk.Created;
+            Risk = riskDescription[AverageRisk];
         }
 
         #endregion
@@ -192,6 +198,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 this.NotifyPropertyChanged();
             }
         }
+
+        public int AverageRisk { get; set; }
+
+        public string CardColour { get; set; }
+
+        public DateTime Date { get; set; }
+
+        public string Risk { get; set; }
 
         #endregion
 
