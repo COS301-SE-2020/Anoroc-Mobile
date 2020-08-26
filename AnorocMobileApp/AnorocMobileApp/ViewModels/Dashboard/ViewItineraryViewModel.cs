@@ -22,12 +22,12 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// To store the health care data collection.
         /// </summary>
-        private ObservableCollection<HealthCare> cardItems;
+        private ObservableCollection<ItineraryRiskDetail> cardItems;
 
         /// <summary>
         /// To store the health care data collection.
         /// </summary>
-        private ObservableCollection<HealthCare> listItems;
+        private ObservableCollection<ItineraryRiskDetail> listItems;
 
         /// <summary>
         /// To store the heart rate data collection.
@@ -99,40 +99,40 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             
             Navigation = navigation;
             Locations = locations;
-            cardItems = new ObservableCollection<HealthCare>()
+            cardItems = new ObservableCollection<ItineraryRiskDetail>()
             {
-                new HealthCare()
+                new ItineraryRiskDetail()
                 {
-                    Category = "University of Pretoria (Test)",
-                    CategoryValue = riskDescription[0],
+                    LocationName = "University of Pretoria (Test)",
+                    LocationRisk = riskDescription[0],
                     BackgroundGradientStart = riskGradientStart[0],
                     BackgroundGradientEnd = riskGradientEnd[0]
                 },
-                new HealthCare()
+                new ItineraryRiskDetail()
                 {
-                    Category = "McDonald's Hatfield (Test)",
-                    CategoryValue = riskDescription[1],
+                    LocationName = "McDonald's Hatfield (Test)",
+                    LocationRisk = riskDescription[1],
                     BackgroundGradientStart = riskGradientStart[1],
                     BackgroundGradientEnd = riskGradientEnd[1]
                 },
-                new HealthCare()
+                new ItineraryRiskDetail()
                 {
-                    Category = "Centurion Gautrain (Test)",
-                    CategoryValue = riskDescription[2],
+                    LocationName = "Centurion Gautrain (Test)",
+                    LocationRisk = riskDescription[2],
                     BackgroundGradientStart = riskGradientStart[2],
                     BackgroundGradientEnd = riskGradientEnd[2]
                 },
-                new HealthCare()
+                new ItineraryRiskDetail()
                 {
-                    Category = "Loftus Versfeld Stadium (Test)",
-                    CategoryValue = riskDescription[3],
+                    LocationName = "Loftus Versfeld Stadium (Test)",
+                    LocationRisk = riskDescription[3],
                     BackgroundGradientStart = riskGradientStart[3],
                     BackgroundGradientEnd = riskGradientEnd[3]
                 },
-                new HealthCare()
+                new ItineraryRiskDetail()
                 {
-                    Category = "Menlyn Shopping Mall (Test)",
-                    CategoryValue = riskDescription[4],
+                    LocationName = "Menlyn Shopping Mall (Test)",
+                    LocationRisk = riskDescription[4],
                     BackgroundGradientStart = riskGradientStart[4],
                     BackgroundGradientEnd = riskGradientEnd[4]
                 }
@@ -140,10 +140,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var sortedLocations = from entry in locations orderby entry.Value descending select entry;
             foreach (var risk in sortedLocations)
             {
-                cardItems.Add(new HealthCare()
+                cardItems.Add(new ItineraryRiskDetail()
                 {
-                    Category = risk.Key.Region.Suburb,
-                    CategoryValue = riskDescription[risk.Value],
+                    LocationName = risk.Key.Region.Suburb,
+                    LocationRisk = riskDescription[risk.Value],
                     BackgroundGradientStart = riskGradientStart[risk.Value],
                     BackgroundGradientEnd = riskGradientEnd[risk.Value]
                     
@@ -168,7 +168,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Gets or sets the health care items collection.
         /// </summary>
-        public ObservableCollection<HealthCare> CardItems
+        public ObservableCollection<ItineraryRiskDetail> CardItems
         {
             get
             {
@@ -185,7 +185,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Gets or sets the health care items collection.
         /// </summary>
-        public ObservableCollection<HealthCare> ListItems
+        public ObservableCollection<ItineraryRiskDetail> ListItems
         {
             get
             {
@@ -219,59 +219,6 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         #endregion
 
         #region Methods
-
-        /// <summary>
-        /// Chart Data Collection
-        /// </summary>
-        private void GetChartData()
-        {
-            DateTime dateTime = new DateTime(2019, 5, 1);
-
-            heartRateData = new ObservableCollection<ChartDataPoint>()
-            {
-                new ChartDataPoint(dateTime, 15),
-                new ChartDataPoint(dateTime.AddMonths(1), 20),
-                new ChartDataPoint(dateTime.AddMonths(2), 17),
-                new ChartDataPoint(dateTime.AddMonths(3), 23),
-                new ChartDataPoint(dateTime.AddMonths(4), 18),
-                new ChartDataPoint(dateTime.AddMonths(5), 25),
-                new ChartDataPoint(dateTime.AddMonths(6), 19),
-                new ChartDataPoint(dateTime.AddMonths(7), 21),
-            };
-
-            caloriesBurnedData = new ObservableCollection<ChartDataPoint>()
-            {
-                new ChartDataPoint(dateTime, 940),
-                new ChartDataPoint(dateTime.AddMonths(1), 960),
-                new ChartDataPoint(dateTime.AddMonths(2), 942),
-                new ChartDataPoint(dateTime.AddMonths(3), 957),
-                new ChartDataPoint(dateTime.AddMonths(4), 940),
-                new ChartDataPoint(dateTime.AddMonths(5), 942),
-            };
-
-            sleepTimeData = new ObservableCollection<ChartDataPoint>()
-            {
-                new ChartDataPoint(dateTime, 7.8),
-                new ChartDataPoint(dateTime.AddMonths(1), 7.2),
-                new ChartDataPoint(dateTime.AddMonths(2), 8.0),
-                new ChartDataPoint(dateTime.AddMonths(3), 6.8),
-                new ChartDataPoint(dateTime.AddMonths(4), 7.6),
-                new ChartDataPoint(dateTime.AddMonths(5), 7.0),
-                new ChartDataPoint(dateTime.AddMonths(6), 7.5),
-            };
-
-            waterConsumedData = new ObservableCollection<ChartDataPoint>()
-            {
-                new ChartDataPoint(dateTime, 36),
-                new ChartDataPoint(dateTime.AddMonths(1), 41),
-                new ChartDataPoint(dateTime.AddMonths(2), 38),
-                new ChartDataPoint(dateTime.AddMonths(3), 41),
-                new ChartDataPoint(dateTime.AddMonths(4), 35),
-                new ChartDataPoint(dateTime.AddMonths(5), 37),
-                new ChartDataPoint(dateTime.AddMonths(6), 38),
-                new ChartDataPoint(dateTime.AddMonths(7), 36),
-            };
-        }
 
         /// <summary>
         /// Invoked when the menu button is clicked.

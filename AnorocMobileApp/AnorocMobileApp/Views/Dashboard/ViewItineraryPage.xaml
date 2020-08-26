@@ -12,7 +12,7 @@
              xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
              xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
              xmlns:behavior ="clr-namespace:AnorocMobileApp.Behaviors;assembly=AnorocMobileApp"
-             x:Name="healthCarePage"
+             x:Name="ViewItineraryPageName"
              NavigationPage.HasNavigationBar="False"
              Style="{StaticResource ContentPageStyle}">
 
@@ -30,7 +30,7 @@
 
                 <!--  Title View  -->
                 <controls:TitleView
-                    Title="Health Care"
+                    Title="View Itinerary"
                     FontFamily="{StaticResource Montserrat-Medium}"
                     FontSize="16">
                 </controls:TitleView>
@@ -76,8 +76,8 @@
                                         </gradient:SfGradientView>
 
                                         <StackLayout Margin="15" Spacing="5">
-                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="12" Text="{Binding Category}"></Label>
-                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="24" Text="{Binding CategoryValue}"></Label>
+                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="12" Text="{Binding LocationName}"></Label>
+                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="24" Text="{Binding LocationRisk}"></Label>
                                         </StackLayout>
                                     </Grid>
                                 </cards:SfCardView.Content>

@@ -1,6 +1,4 @@
-﻿using Syncfusion.SfChart.XForms;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.Models.Dashboard
@@ -9,11 +7,9 @@ namespace AnorocMobileApp.Models.Dashboard
     /// Model for Health care page.
     /// </summary>
     [Preserve(AllMembers = true)]
-    public class HealthCare : INotifyPropertyChanged
+    public class ItineraryRiskDetail : INotifyPropertyChanged
     {
         #region Field
-
-        private ObservableCollection<ChartDataPoint> chartData;
 
         #endregion
 
@@ -29,41 +25,14 @@ namespace AnorocMobileApp.Models.Dashboard
         #region Property
 
         /// <summary>
-        /// Gets or sets the property that has been displays the Category.
+        /// Gets or sets the property that has been displays the LocationName.
         /// </summary>
-        public string Category { get; set; }
+        public string LocationName { get; set; }
 
         /// <summary>
         /// Gets or sets the property that has been displays the Category value.
         /// </summary>
-        public string CategoryValue { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property that has been displays the Category percentage.
-        /// </summary>
-        public string CategoryPercentage { get; set; }
-
-        /// <summary>
-        /// Gets or sets the property that has been bound with SfChart Control, which displays the health care data visualization.
-        /// </summary>
-        public ObservableCollection<ChartDataPoint> ChartData
-        {
-            get
-            {
-                return chartData;
-            }
-
-            set
-            {
-                if (chartData == value)
-                {
-                    return;
-                }
-
-                chartData = value;
-                this.OnPropertyChanged("ChartData");
-            }
-        }
+        public string LocationRisk { get; set; }
 
         /// <summary>
         /// Gets or sets the property that has been displays the background gradient start.
