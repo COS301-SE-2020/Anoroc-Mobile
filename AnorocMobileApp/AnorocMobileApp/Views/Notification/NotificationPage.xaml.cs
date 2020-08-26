@@ -1,6 +1,7 @@
 ﻿using AnorocMobileApp.DataService;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Notification;
 using SQLite;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -16,7 +17,7 @@ namespace AnorocMobileApp.Views.Notification
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotificationPage : ContentPage
     {
-        
+        public NotificationViewModel notificationViewModel;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationPage" /> class.
@@ -25,7 +26,9 @@ namespace AnorocMobileApp.Views.Notification
         {
             InitializeComponent();
             //this.BindingContext = NotificationDataService.Instance.NotificationViewModel;          
-            this.BindingContext = EncounterDataService.Instance.NotificationViewModel;
+            var data = new EncounterDataService();
+            this.BindingContext = data.NotificationViewModel;
+            this.notificationViewModel = data.NotificationViewModel;
         }
 
         protected override void OnAppearing()
@@ -40,6 +43,7 @@ namespace AnorocMobileApp.Views.Notification
             });
             rView.Command = refreshCommand;
             MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
+
         }
 
         void OnMessageReceived(object sender, string msg)

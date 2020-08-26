@@ -1,6 +1,10 @@
 ﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Dashboard;
+using AnorocMobileApp.Views.Notification;
 using SQLite;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -16,6 +20,10 @@ namespace AnorocMobileApp.Views.Navigation
         public BottomNavigationPage()
         {
             InitializeComponent();
+
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleMessageReceived);
+
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
         }
 
 
@@ -24,21 +32,6 @@ namespace AnorocMobileApp.Views.Navigation
             base.OnAppearing();
 
             
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleMessageReceived);
-
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
-
-            /*  if(title != null && body != null)
-              {
-                  SaveMessageToSQLite(title, body);
-              }
-              if (title != null && body != null)
-              {
-
-              }*/
-
-
-
         }
 
 
@@ -64,8 +57,20 @@ namespace AnorocMobileApp.Views.Navigation
                 int rowsAdded = conn.Insert(notificationDB);
                 notificaitons = conn.Table<NotificationDB>().ToList();
                 conn.Close();
+                var newPage = Navigation.NavigationStack.LastOrDefault();
+                NotificationPage page = newPage as NotificationPage;               
+                if( newPage.GetType() == typeof(NotificationPage))
+                {
+                    NotificationModel tempModel = new NotificationModel();
+                    tempModel.Name = notificationDB.Body;
+                    tempModel.IsRead = false;
+                    tempModel.ReceivedTime = "Not sure";
+                    page.notificationViewModel.RecentList.Add(tempModel);
+                }
+                
+
             }
-            
+
 
             Device.BeginInvokeOnMainThread(() =>
             {

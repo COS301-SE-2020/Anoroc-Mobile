@@ -63,7 +63,7 @@ namespace AnorocMobileApp.Views.Navigation
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             //DisplayAlert("Alert", "Notifications", "OK");
-            Navigation.PushModalAsync(new Notification.NotificationPage());
+            Navigation.PushAsync(new Notification.NotificationPage());
         }
 
         /// <summary>

@@ -28,7 +28,7 @@ namespace AnorocMobileApp.DataService
         /// <summary>
         /// Gets an instance of <see cref="EncounterDataService"/>
         /// </summary>
-        public static EncounterDataService Instance => _instance ?? (_instance = new EncounterDataService());
+        //public static EncounterDataService Instance => _instance ?? (_instance = new EncounterDataService());
 
         public NotificationViewModel NotificationViewModel =>
             this.notificationViewModel ??
@@ -69,6 +69,7 @@ namespace AnorocMobileApp.DataService
             {
                 conn.CreateTable<NotificationDB>();
                 var notificaitons = conn.Table<NotificationDB>().ToList();
+                obj.RecentList.Clear();
                 foreach (var n in notificaitons)
                 {
                     NotificationModel tempModel = new NotificationModel();
@@ -76,6 +77,7 @@ namespace AnorocMobileApp.DataService
                     tempModel.IsRead = false;
                     tempModel.ReceivedTime = "Not sure";
                     obj.RecentList.Add(tempModel);
+
                 }
                 conn.Close();                
             }
