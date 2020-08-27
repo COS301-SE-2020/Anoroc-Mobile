@@ -16,6 +16,7 @@ using AnorocMobileApp.Models;
 //using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Dashboard;
 using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
@@ -35,10 +36,12 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
         /// </summary>
-        public AddItineraryViewModel()
+        public AddItineraryViewModel(INavigation navigation, Page view)
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
+            Navigation = navigation;
+            this.View = view;
         }
 
         #endregion
@@ -73,6 +76,8 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private List<Location> locations;
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
+        public INavigation Navigation { get; set;}
+        public Page View { get; set; }
 
         #endregion
 
@@ -217,8 +222,10 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
-            
-            Debug.Print(risk.LocationItineraryRisks.Count.ToString());
+
+            Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
+            await Navigation.PopAsync();
+
         }
         
         #endregion
