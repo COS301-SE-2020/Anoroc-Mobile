@@ -41,61 +41,6 @@ namespace AnorocMobileApp
         public static string FilePath;
 
 
-        
-
-        public App(IFacebookLoginService facebookLoginService)
-        {
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            InitializeComponent();
-
-            //Current.Properties["TOKEN"] = "thisisatoken";
-            //Defualt lifestle
-            //IoCContainer = new Container();
-            /* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*/
-
-            DependencyService.Register<B2CAuthenticationService>();
-
-
-            Current.Properties["TOKEN"] = "thisisatoken";
-
-            MainPage = new NavigationPage(new BottomNavigationPage());
-
-            //Defualt lifestle
-            IoCContainer = new Container();
-            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
-
-            // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
-            IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
-
-            //FacebookLoginService = facebookLoginService;
-
-
-            if (facebookLoginService.isLoggedIn())
-            {
-                User.FirstName = facebookLoginService.FirstName;
-                User.UserSurname = facebookLoginService.LastName;
-                User.UserID = facebookLoginService.UserID;
-                User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new BottomNavigationPage());
-                //MainPage = new Views.Map();
-            }
-            else
-            {
-
-                //MainPage = new Views.Navigation.SettingsPage();
-                //MainPage = new Views.Navigation.MePage();
-                MainPage = new Views.Navigation.BottomNavigationPage();
-
-                //MainPage = new LoginWithSocialIconPage();
-
-            }
-        }
-
-
 
         public App(string filePath)
         {
@@ -108,8 +53,7 @@ namespace AnorocMobileApp
             //Register Syncfusion license
             InitializeComponent();
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            Current.Properties["TOKEN"] = "thisisatoken";
-
+   
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
             MainPage = new LoginWithSocialIconPage();
@@ -129,7 +73,7 @@ namespace AnorocMobileApp
 
             DependencyService.Register<B2CAuthenticationService>();
 
-            Current.Properties["TOKEN"] = "thisisatoken";
+          
 
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
@@ -153,7 +97,7 @@ namespace AnorocMobileApp
             //Register Syncfusion license
             InitializeComponent();
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-            Current.Properties["TOKEN"] = "thisisatoken";
+           
             MainPage = new NavigationPage(new BottomNavigationPage());
         }
         void OnKeyReceived(object sender, string key)
@@ -161,12 +105,7 @@ namespace AnorocMobileApp
             Current.Properties["FirebaseToken"] = key;
            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
-        /*public App()
-        {
-            
-
-            MainPage = new NavigationPage(new Login());
-        }*/
+ 
 
         protected override void OnStart()
         {

@@ -21,6 +21,7 @@ using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
+using AnorocMobileApp.Interfaces;
 
 namespace AnorocMobileApp.ViewModels.Dashboard
 {
@@ -222,16 +223,15 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
-
             Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
             await Navigation.PopAsync();
 
         }
-        
+
         #endregion
 
         #region INotifyPropertyChanged
-        
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected virtual void OnPropertyChanged(string propertyName)

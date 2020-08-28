@@ -43,6 +43,13 @@ namespace AnorocMobileApp.Views.Forms
             {
                 if (signedIn.ToString().Equals("true"))
                 {
+                    var name = CrossSecureStorage.Current.GetValue("Name");
+                    var surname = CrossSecureStorage.Current.GetValue("Surname");
+                    var email = CrossSecureStorage.Current.GetValue("Email");
+                    IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                    //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+
+                    ims.UserLoggedIn(name, surname, email);
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
                 }
             }
@@ -75,6 +82,7 @@ namespace AnorocMobileApp.Views.Forms
                 
                 if(userContext.IsLoggedOn)
                 {
+               
                     /*Console.WriteLine("Access Token: " + userContext.AccessToken);
                     Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
@@ -116,6 +124,7 @@ namespace AnorocMobileApp.Views.Forms
             CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
             CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
             CrossSecureStorage.Current.SetValue("Surname", userContext.FamilyName);
+            CrossSecureStorage.Current.SetValue("Email", userContext.EmailAddress);
 
             //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
 

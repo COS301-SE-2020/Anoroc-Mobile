@@ -108,7 +108,7 @@ namespace AnorocMobileApp.Services
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
                 Token token_object = new Token();
-                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.access_token = "expectingtoken";
                 User.Email = userEmail;
                 User.FirstName = firstName;
                 User.UserSurname = surname;
