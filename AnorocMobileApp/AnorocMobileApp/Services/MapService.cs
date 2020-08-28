@@ -23,6 +23,10 @@ namespace AnorocMobileApp.Services
 
         public async Task<List<Cluster>> GetClustersForCirclesAsync()
         {
+            while(!Xamarin.Forms.Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+
+            }
             string json = "";
             using (Anoroc_Client = new HttpClient(clientHandler))
             {

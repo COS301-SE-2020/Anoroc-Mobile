@@ -5,8 +5,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:map="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.Map">
+    
     <Grid>
-        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Slider Maximum="8" 
+                ValueChanged="Slider_ValueChanged" Grid.Row="0" />
+        
+        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True" Grid.Row="1">
             <map:Map.ItemTemplate>
                 <DataTemplate>
                     <map:Pin Position="{Binding Position}"
@@ -15,5 +25,6 @@
                 </DataTemplate>
             </map:Map.ItemTemplate>
         </map:Map>
+
     </Grid>
 </ContentPage>

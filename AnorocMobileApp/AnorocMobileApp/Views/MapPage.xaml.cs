@@ -18,9 +18,8 @@ namespace AnorocMobileApp.Views
 
             //UpdateMapAsync();
 
-            //DrawClusters();
+            DrawClusters();
         }
-
 
         async void DrawClusters()
         {
@@ -64,6 +63,11 @@ namespace AnorocMobileApp.Views
                 }
                 MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
             }
+        }
+
+        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+
         }
     }
 }
