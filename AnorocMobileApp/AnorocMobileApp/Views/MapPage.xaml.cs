@@ -10,7 +10,8 @@ namespace AnorocMobileApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Map : ContentPage
     {
-        MapViewModel viewModel = new MapViewModel();
+        MapViewModel viewModel;
+        int CurrentRange;
         public Map()
         {
             InitializeComponent();
@@ -18,7 +19,7 @@ namespace AnorocMobileApp.Views
             //Task.Delay(2000);
 
             //UpdateMapAsync();
-
+            CurrentRange = 0;
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
             {
                 DrawClusters();
@@ -27,6 +28,8 @@ namespace AnorocMobileApp.Views
 
         public async void DrawClusters()
         {
+            Slider.IsEnabled = false;
+            viewModel = new MapViewModel();
             List<Circle> circles = await viewModel.GetClustersForMap();
             if (circles != null)
             {
@@ -37,6 +40,7 @@ namespace AnorocMobileApp.Views
                 addPins();
                 MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
             }
+            Slider.IsEnabled = true;
         }
         void addPins()
         {
@@ -71,7 +75,48 @@ namespace AnorocMobileApp.Views
 
         private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
         {
+            var outputString = "Clusters from ";
+            var theValue = (int)e.NewValue;
 
+            if (theValue != CurrentRange)
+            {
+                switch (theValue)
+                {
+                    case (0):
+                        DrawClusters();
+                        outputString += " Today.";
+                        break;
+                    case (1):
+                        outputString += 1 + " Day Ago";
+                        break;
+                    case (2):
+                        outputString += 2 + " Days Ago";
+                        break;
+                    case (3):
+                        outputString += 3 + " Days Ago";
+                        break;
+                    case (4):
+                        outputString += 4 + " Days Ago";
+                        break;
+                    case (5):
+                        outputString += 5 + " Days Ago";
+                        break;
+                    case (6):
+                        outputString += 6 + " Days Ago";
+                        break;
+                    case (7):
+                        outputString += 7 + " Days Ago";
+                        break;
+                    case (8):
+                        outputString += 8 + " Days Ago";
+                        break;
+                    default:
+                        DrawClusters();
+                        outputString += " Today.";
+                        break;
+                }
+                SliderLabel.Text = outputString;
+            }
         }
     }
 }
