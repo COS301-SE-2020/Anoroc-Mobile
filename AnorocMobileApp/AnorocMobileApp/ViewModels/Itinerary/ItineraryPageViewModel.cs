@@ -1,7 +1,10 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
+using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -41,7 +44,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
             AddItineraryCommand = new Command(async () => await AddItinerary());
             
-            
+            PopulateItineraries();
         }
 
         #endregion
@@ -137,7 +140,18 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
         private void PopulateItineraries()
         {
-            
+            var itineraryService = new ItineraryService();
+            var itineraryRisks = itineraryService.ItinerariesFromLocal();
+
+            foreach (var itinerary in itineraryRisks.Select(itineraryRisk => new Models.Itinerary.Itinerary()
+            {
+                Date = itineraryRisk.Created,
+                NumberOfLocations = itineraryRisk.LocationItineraryRisks.Count,
+                RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk]
+            }))
+            {
+                Itineraries.Add(itinerary);
+            }
         }
 
         #endregion      
