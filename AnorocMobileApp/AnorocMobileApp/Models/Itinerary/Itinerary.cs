@@ -33,7 +33,7 @@ namespace AnorocMobileApp.Models.Itinerary
         /// <summary>
         /// Number of locations is the current itinerary
         /// </summary>
-        public int NumberOfLocations => Locations.Count;
+        public int NumberOfLocations;
 
         /// <summary>
         /// Description of the risk of this itinerary (if already analysed)
