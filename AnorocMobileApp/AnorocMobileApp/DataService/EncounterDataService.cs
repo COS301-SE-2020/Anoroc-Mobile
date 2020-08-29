@@ -65,6 +65,8 @@ namespace AnorocMobileApp.DataService
 
         private static NotificationViewModel loadNotifications(NotificationViewModel obj)
         {
+            //NotificationViewModel newObj = new NotificationViewModel();
+
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<NotificationDB>();
@@ -76,8 +78,8 @@ namespace AnorocMobileApp.DataService
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
                     tempModel.ReceivedTime = "Not sure";
-                    obj.RecentList.Add(tempModel);
-
+                    //obj.RecentList.Add(tempModel);
+                    obj.RecentList.Insert(0, tempModel);
                 }
                 conn.Close();                
             }
