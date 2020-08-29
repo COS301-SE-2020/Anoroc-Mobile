@@ -1,4 +1,5 @@
 ﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -18,10 +19,13 @@ namespace AnorocMobileApp.Views
 
             //UpdateMapAsync();
 
-            DrawClusters();
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
+            {
+                DrawClusters();
+            });
         }
 
-        async void DrawClusters()
+        public async void DrawClusters()
         {
             List<Circle> circles = await viewModel.GetClustersForMap();
             if (circles != null)
