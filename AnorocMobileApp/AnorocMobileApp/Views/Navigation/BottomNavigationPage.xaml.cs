@@ -65,7 +65,7 @@ namespace AnorocMobileApp.Views.Navigation
                     tempModel.Name = notificationDB.Body;
                     tempModel.IsRead = false;
                     tempModel.ReceivedTime = "Not sure";
-                    page.notificationViewModel.RecentList.Add(tempModel);
+                    page.notificationViewModel.RecentList.Insert(0, tempModel);
                 }
                 
 
