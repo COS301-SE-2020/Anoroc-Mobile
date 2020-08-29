@@ -106,11 +106,14 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
         public ObservableCollection<Models.Itinerary.Itinerary> Itineraries
         {
-            get => itineraries;
+            get => itineraries ?? (itineraries = new ObservableCollection<Models.Itinerary.Itinerary>());
             set
             {
-                itineraries = value;
-                NotifyPropertyChanged();
+                if (itineraries != value)
+                {
+                    itineraries = value;
+                    NotifyPropertyChanged();
+                }
             }
         }
 
@@ -138,8 +141,9 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             await Navigation.PushAsync(new AddItineraryPage());
         }
 
-        private void PopulateItineraries()
+        public void PopulateItineraries()
         {
+            Itineraries.Clear();
             var itineraryService = new ItineraryService();
             var itineraryRisks = itineraryService.ItinerariesFromLocal();
 
