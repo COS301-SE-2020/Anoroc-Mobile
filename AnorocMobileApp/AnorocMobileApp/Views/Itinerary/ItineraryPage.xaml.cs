@@ -1,6 +1,8 @@
 ﻿using AnorocMobileApp.ViewModels.Itinerary;
+using AnorocMobileApp.Views.Templates;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using Xamarin.Forms.Markup;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views.Itinerary
@@ -12,35 +14,37 @@ namespace AnorocMobileApp.Views.Itinerary
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItineraryPage
     {
+        private ItineraryPageViewModel ViewModel; 
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="ItineraryPage" /> class.
         /// </summary>
         public ItineraryPage()
         {
             InitializeComponent();
-            BindingContext = new ItineraryPageViewModel(Navigation);
+            ViewModel = new ItineraryPageViewModel(Navigation);
+            BindingContext = ViewModel;
+            //Content = new EmptyPage();
+
         }
 
-        /// <summary>
-        /// Invoked when view size is changed.
-        /// </summary>
-        /// <param name="width">The Width</param>
-        /// <param name="height">The Height</param>
-        protected override void OnSizeAllocated(double width, double height)
+        protected override void OnAppearing()
         {
-            base.OnSizeAllocated(width, height);
+            base.OnAppearing();
+            ViewModel.PopulateItineraries();
+        }
 
-            if (width > height)
+        private void EmptyPage()
+        {
+            var grid = new Grid()
             {
-                if (Device.Idiom == TargetIdiom.Phone)
+                RowDefinitions = new RowDefinitionCollection()
                 {
-                    EmptyItinerary.IsVisible = false;
+                    new RowDefinition { Height = GridLength.Star },
+                    new RowDefinition { Height = GridLength.Auto }
                 }
-            }
-            else
-            {
-                EmptyItinerary.IsVisible = true;
-            }
+            };
+            
         }
     }
 }
