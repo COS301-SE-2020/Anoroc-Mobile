@@ -1,5 +1,7 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Views.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -20,6 +22,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
         private string content;
 
+        private ObservableCollection<Models.Itinerary.Itinerary> itineraries;
+
         #endregion
 
         #region Constructor
@@ -29,13 +33,15 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// </summary>
         public ItineraryPageViewModel(INavigation navigation)
         {
-            this.ImagePath = "EmptyItinerary.svg";
-            this.Header = "EMPTY ITINERARY";
-            this.Content = "You currently have no itineraries";
-            this.GoBackCommand = new Command(this.GoBack);
-            this.Navigation = navigation;
+            ImagePath = "EmptyItinerary.svg";
+            Header = "EMPTY ITINERARY";
+            Content = "You currently have no itineraries";
+            GoBackCommand = new Command(GoBack);
+            Navigation = navigation;
+
+            AddItineraryCommand = new Command(async () => await AddItinerary());
             
-            this.AddItineraryCommand = new Command(async () => await AddItinerary());
+            
         }
 
         #endregion
@@ -95,6 +101,16 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             }
         }
 
+        public ObservableCollection<Models.Itinerary.Itinerary> Itineraries
+        {
+            get => itineraries;
+            set
+            {
+                itineraries = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         public INavigation Navigation { get; set;}
         
         #endregion
@@ -110,9 +126,18 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             // Do something
         }
 
+        /// <summary>
+        /// Invoked when the Add Itinerary button is clicked
+        /// </summary>
+        /// <returns></returns>
         private async Task AddItinerary()
         {
             await Navigation.PushAsync(new AddItineraryPage());
+        }
+
+        private void PopulateItineraries()
+        {
+            
         }
 
         #endregion      
