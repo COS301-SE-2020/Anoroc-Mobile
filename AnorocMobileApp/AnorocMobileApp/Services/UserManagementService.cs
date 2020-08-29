@@ -7,6 +7,7 @@ using AnorocMobileApp.Exceptions;
 using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.Views;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
@@ -108,7 +109,7 @@ namespace AnorocMobileApp.Services
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
                 Token token_object = new Token();
-                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.access_token = "expectingtoken";
                 User.Email = userEmail;
                 User.FirstName = firstName;
                 User.UserSurname = surname;
@@ -136,6 +137,10 @@ namespace AnorocMobileApp.Services
                             string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
                             IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
                             ims.SendFireBaseToken(firebaseToken);
+
+                            //notify all listeners of successfull login
+                            var message = new UserLoggedIn();
+                            MessagingCenter.Send(message, "UserLoggedIn");
                         }
                     }
                 }
