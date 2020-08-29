@@ -10,6 +10,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
 using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Services
@@ -169,11 +170,19 @@ namespace AnorocMobileApp.Services
             var returnList = new List<ItineraryRisk>();
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
             {
-                var primitiveList = conn.Table<PrimitiveItineraryRisk>().ToList();
-                primitiveList.ForEach(primitive =>
+                try
                 {
-                    returnList.Add(new ItineraryRisk(primitive));
-                });
+                    var primitiveList = conn.Table<PrimitiveItineraryRisk>().ToList();
+                    primitiveList.ForEach(primitive =>
+                    {
+                        returnList.Add(new ItineraryRisk(primitive));
+                    });
+                }
+                catch (SQLiteException exception)
+                {
+                    Debug.WriteLine(exception.Message);
+                }
+
             }
             return returnList;
         }
