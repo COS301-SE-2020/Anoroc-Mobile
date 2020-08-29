@@ -29,6 +29,16 @@ namespace AnorocMobileApp.Models.Itinerary
         /// E.g. index 0 is the start location. index 1 follows start location.
         /// </summary>
         public List<Location> Locations;
+        
+        /// <summary>
+        /// Number of locations is the current itinerary
+        /// </summary>
+        public int NumberOfLocations => Locations.Count;
+
+        /// <summary>
+        /// Description of the risk of this itinerary (if already analysed)
+        /// </summary>
+        public string RiskDescription = "Analysing...";
 
         public override string ToString()
         {
