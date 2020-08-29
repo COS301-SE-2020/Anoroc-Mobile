@@ -21,7 +21,7 @@ namespace AnorocMobileApp.Models.Itinerary
         /// <summary>
         /// DateTime containing the date and time of the commencement of the travel
         /// </summary>
-        public DateTime DateTime { get; set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// A list of locations to be visited.
@@ -29,7 +29,6 @@ namespace AnorocMobileApp.Models.Itinerary
         /// E.g. index 0 is the start location. index 1 follows start location.
         /// </summary>
         public List<Location> Locations;
-
 
         public override string ToString()
         {
