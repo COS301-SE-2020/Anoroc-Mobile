@@ -1,4 +1,6 @@
-﻿namespace AnorocMobileApp.Models
+﻿using System;
+
+namespace AnorocMobileApp.Models
 {
     /// <summary>
     /// Main class for clusters
@@ -10,5 +12,6 @@
         public int Carrier_Pin_Count { get; set; }
         public double Cluster_Radius { get; set; }
         public Location Center_Pin { get; set; }
+        public DateTime Created { get; set; }
     }
 }
