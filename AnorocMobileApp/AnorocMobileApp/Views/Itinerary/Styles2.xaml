@@ -24,13 +24,13 @@
     <x:String x:Key="Back">&#xe709;</x:String>
     <x:String x:Key="Call">&#xe71c;</x:String>
     <x:String x:Key="MapPin">&#xe729;</x:String>
-    <x:String x:Key="Calender">&#xe742;</x:String>
     <x:String x:Key="Menu">&#xe715;</x:String>
     <x:String x:Key="Group">&#xe714;</x:String>
     <x:String x:Key="Search">&#xe705;</x:String>
     <x:String x:Key="Edit">&#xe727;</x:String>
     <x:String x:Key="Delete">&#xe716;</x:String>
     <x:String x:Key="Phone">&#xe71c;</x:String>
+    <x:String x:Key="Calendar">&#xe742;</x:String>
 
     <converters:DynamicResourceToColorConverter x:Key="DynamicResourceToColorConverter" />
 
