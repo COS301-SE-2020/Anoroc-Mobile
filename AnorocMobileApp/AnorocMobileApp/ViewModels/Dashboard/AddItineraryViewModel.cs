@@ -219,7 +219,6 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private async void DoneTappedMethod()
         {
-            Debug.Write("In DoneTappedMethod()");
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
