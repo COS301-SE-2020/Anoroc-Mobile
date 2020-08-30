@@ -9,6 +9,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
 
 namespace AnorocMobileApp.ViewModels.Itinerary
 {
@@ -45,6 +46,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
             AddItineraryCommand = new Command(async () => await AddItinerary());
             DeleteCommand = new Command(DeleteButtonClicked);
+            ItineraryCommand = new Command(async obj => await ItineraryClicked(obj));
             
             PopulateItineraries();
         }
@@ -62,6 +64,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// Gets or sets the command is executed when the delete button is clicked.
         /// </summary>
         public Command DeleteCommand { get; set; }
+        
+        public ICommand ItineraryCommand { get; set; }
         
         public ICommand AddItineraryCommand { get; set; }
 
@@ -148,6 +152,15 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             Itineraries.Remove(obj as Models.Itinerary.Itinerary);
         }
 
+        private async Task ItineraryClicked(object obj)
+        {
+            if (obj is ItemTappedEventArgs eventArgs)
+            {
+                if (eventArgs.ItemData is Models.Itinerary.Itinerary data) 
+                    await Navigation.PushAsync(new ViewItineraryPage(data.ItineraryRisk));
+            }
+        }
+
         /// <summary>
         /// Invoked when the Add Itinerary button is clicked
         /// </summary>
@@ -167,7 +180,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             {
                 Date = itineraryRisk.Created,
                 NumberOfLocations = itineraryRisk.LocationItineraryRisks.Count,
-                RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk]
+                RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk],
+                ItineraryRisk = itineraryRisk
             }))
             {
                 Itineraries.Add(itinerary);
