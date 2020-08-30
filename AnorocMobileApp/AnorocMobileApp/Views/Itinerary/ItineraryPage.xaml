@@ -3,10 +3,12 @@
     x:Class="AnorocMobileApp.Views.Itinerary.ItineraryPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="itineraryPage"
     xmlns:ListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-    BackgroundColor="{StaticResource Gray-White}"
+    xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp"
+    BackgroundColor="{DynamicResource Gray-100}"
     NavigationPage.HasNavigationBar="False">
     
 
@@ -18,6 +20,23 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <StackLayout x:Name="titleLayout" Spacing="0">
+                <controls:TitleView Title="Itinerary">
+                    <controls:TitleView.LeadingView>
+                        <!--  Back button command  -->
+                        <buttons:SfButton x:Name="backButton" Command="{Binding Path=BindingContext.BackCommand, Source={x:Reference itineraryPage}}" 
+                                          CornerRadius="4" Text="{StaticResource Back}"
+                                          CommandParameter="{x:Reference backButton}" Style="{StaticResource IconButtonStyle}"/>
+                        
+                    </controls:TitleView.LeadingView>
+                </controls:TitleView>
+                <ContentPresenter />
+            </StackLayout>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+    
     <ContentPage.Content>
         <Grid RowSpacing="0" ColumnSpacing="0" >
             <Grid.RowDefinitions>
@@ -26,7 +45,7 @@
             </Grid.RowDefinitions>
             
             <!--  ListView Itineraries  -->
-            <ListView:SfListView x:Name="myAddress" AutoFitMode="Height" IsScrollBarVisible="False" Padding="8" ItemSpacing="8" BackgroundColor="Transparent"
+            <ListView:SfListView x:Name="Itineraries" AutoFitMode="Height" IsScrollBarVisible="False" Padding="8" ItemSpacing="8" BackgroundColor="Transparent"
                                  SelectionGesture="Tap" SelectionBackgroundColor="Transparent" SelectionMode="Single" AllowSwiping="True" 
                                  ItemsSource="{Binding Itineraries}">
                 <ListView:SfListView.ItemTemplate>
@@ -44,7 +63,6 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
 
                                 <!--  Name and Type of the address  -->
@@ -58,17 +76,11 @@
                                     </Label.FormattedText>
                                 </Label>
 
-                                <!--  Edit button command  -->
-                                <buttons:SfButton  x:Name="editButton" CornerRadius="4" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"
-                                                   VerticalOptions="StartAndExpand" Style="{StaticResource IconButtonStyle}"
-                                                   Text="{StaticResource Edit}" Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference myAddress}}"
-                                                   CommandParameter="{x:Reference editButton }"/>
-
                                 <!--  Delete button command  -->
-                                <buttons:SfButton  x:Name="DeleteButton" CornerRadius="4" Grid.Row="0" Grid.Column="3" HorizontalOptions="EndAndExpand"
+                                <buttons:SfButton  x:Name="DeleteButton" CornerRadius="4" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"
                                                    VerticalOptions="StartAndExpand" Style="{StaticResource IconButtonStyle}"
-                                                   Text="{StaticResource Delete}" Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference myAddress}}"
-                                                   CommandParameter="{x:Reference DeleteButton}"/>
+                                                   Text="{StaticResource Delete}" Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference Itineraries}}"
+                                                   CommandParameter="{Binding .}"/>
 
                                 <!--  Map Pin Icon -->
                                 <Label Text="{StaticResource MapPin}" Grid.Row="1" Grid.Column="0" FontSize="18"  
@@ -77,12 +89,12 @@
                                        TextColor="{DynamicResource Gray-600}"/>
 
                                 <!-- Delivery Address -->
-                                <Label  Text="{Binding NumberOfLocations}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" 
+                                <Label  Text="{Binding NumberOfLocations, StringFormat='{0:D} Locations Analysed'}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" 
                                         FontFamily="{StaticResource Montserrat-Medium}" LineBreakMode="WordWrap" HorizontalOptions="StartAndExpand"
                                         VerticalOptions="Start"/>
 
                                 <!--  Phone Icon -->
-                                <Label Text="{StaticResource Phone}" Grid.Row="2" Grid.Column="0"  FontSize="18" FontFamily="{StaticResource FontIcons}" 
+                                <Label Text="{StaticResource Calendar}" Grid.Row="2" Grid.Column="0"  FontSize="18" FontFamily="{StaticResource FontIcons}" 
                                        LineHeight="{OnPlatform Default=-1, Android=1.5}" TextColor="{DynamicResource Gray-600}" />
 
                                 <!--  Contact Number-->
@@ -90,8 +102,7 @@
                                        VerticalOptions="Start">
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span Text="Date: " />
-                                            <Span Text="{Binding Date}" TextColor="{DynamicResource Gray-900}"/>
+                                            <Span Text="{Binding Date, StringFormat='{0:D}'}" TextColor="{DynamicResource Gray-900}"/>
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
