@@ -4,6 +4,7 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using AnorocMobileApp.Views.Notification;
 using SQLite;
+using System;
 using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -64,7 +65,7 @@ namespace AnorocMobileApp.Views.Navigation
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = notificationDB.Body;
                     tempModel.IsRead = false;
-                    tempModel.ReceivedTime = "Not sure";
+                    tempModel.ReceivedTime = DateTime.Now.ToString();                    
                     page.notificationViewModel.RecentList.Insert(0, tempModel);
                 }
                 
