@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -43,6 +44,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             Navigation = navigation;
 
             AddItineraryCommand = new Command(async () => await AddItinerary());
+            DeleteCommand = new Command(DeleteButtonClicked);
             
             PopulateItineraries();
         }
@@ -55,6 +57,11 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// Gets or sets the command that is executed when the Go back button is clicked.
         /// </summary>
         public ICommand GoBackCommand { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the command is executed when the delete button is clicked.
+        /// </summary>
+        public Command DeleteCommand { get; set; }
         
         public ICommand AddItineraryCommand { get; set; }
 
@@ -130,6 +137,15 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         private void GoBack(object obj)
         {
             // Do something
+        }
+        
+        /// <summary>
+        /// Invoked when the delete button clicked
+        /// </summary>
+        /// <param name="obj">The object</param>
+        private void DeleteButtonClicked(object obj)
+        {
+            Itineraries.Remove(obj as Models.Itinerary.Itinerary);
         }
 
         /// <summary>
