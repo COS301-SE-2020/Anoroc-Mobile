@@ -39,6 +39,11 @@ namespace AnorocMobileApp.Models.Itinerary
         /// Description of the risk of this itinerary (if already analysed)
         /// </summary>
         public string RiskDescription { get; set; }
+        
+        /// <summary>
+        /// Stores the itinerary risk that generated this itinerary (if there is)
+        /// </summary>
+        public ItineraryRisk ItineraryRisk { get; set; }
 
         public override string ToString()
         {
