@@ -33,12 +33,12 @@ namespace AnorocMobileApp.Models.Itinerary
         /// <summary>
         /// Number of locations is the current itinerary
         /// </summary>
-        public int NumberOfLocations;
+        public int NumberOfLocations { get; set; }
 
         /// <summary>
         /// Description of the risk of this itinerary (if already analysed)
         /// </summary>
-        public string RiskDescription = "Analysing...";
+        public string RiskDescription { get; set; }
 
         public override string ToString()
         {
