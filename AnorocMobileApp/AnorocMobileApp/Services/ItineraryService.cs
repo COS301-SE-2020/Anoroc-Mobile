@@ -5,10 +5,12 @@ using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Services
 {
@@ -90,50 +92,111 @@ namespace AnorocMobileApp.Services
                 }
             }
         }
-
+        private int retryCount = 0;
         public async Task<ItineraryRisk> ProcessItinerary(Itinerary userItinerary)
         {
-            
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            if (retryCount == 5)
             {
-                if (UserItineraries == null)
+                return null;
+            }
+            else
+            {
+                bool retry = false;
+                using (Anoroc_Client = new HttpClient(clientHandler))
                 {
-                    UserItineraries = new List<ItineraryRisk>();
-                }
-
-                Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
-
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/ProcessItinerary");
-                Token token_object = new Token();
-
-                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-
-                token_object.Object_To_Server = JsonConvert.SerializeObject(userItinerary);
-
-                var data = JsonConvert.SerializeObject(token_object);
-
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-                HttpResponseMessage responseMessage;
-
-                try
-                {
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-                    ItineraryRisk itineraryRisk = null;
-                    if (responseMessage.IsSuccessStatusCode)
+                    if (UserItineraries == null)
                     {
-                        var json = await responseMessage.Content.ReadAsStringAsync();
-                        itineraryRisk = JsonConvert.DeserializeObject<ItineraryRisk>(json);
-                        UserItineraries.Add(itineraryRisk);
+                        UserItineraries = new List<ItineraryRisk>();
                     }
-                    return itineraryRisk;
-                }
-                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    return null;
+
+                    Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
+
+                    Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/ProcessItinerary");
+                    Token token_object = new Token();
+
+                    token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                    token_object.Object_To_Server = JsonConvert.SerializeObject(new ItineraryWrap(userItinerary));
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+                    var content = new StringContent(data, Encoding.UTF8, "application/json");
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                    HttpResponseMessage responseMessage;
+
+                    try
+                    {
+
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+                        ItineraryRiskWrapper itineraryRisk = null;
+                        if (responseMessage != null)
+                        {
+                            if (responseMessage.IsSuccessStatusCode)
+                            {
+                                var json = await responseMessage.Content.ReadAsStringAsync();
+                                itineraryRisk = JsonConvert.DeserializeObject<ItineraryRiskWrapper>(json);
+                                var convertedItinerary = itineraryRisk.toItineraryRisk();
+                                saveItineraryRisk(convertedItinerary);
+                                UserItineraries.Add(convertedItinerary);
+                            }
+                            else if (responseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                            {
+                                retry = true;
+                            }
+
+                            if (!retry)
+                                return itineraryRisk.toItineraryRisk();
+                            else
+                            {
+                                retryCount++;
+                                return await ProcessItinerary(userItinerary);
+                            }
+                        }
+                        else
+                            return null;
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        return null;
+                    }
                 }
             }
+        }
+
+        public List<ItineraryRisk> ItinerariesFromLocal()
+        {
+            var returnList = new List<ItineraryRisk>();
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                var primitiveList = conn.Table<PrimitiveItineraryRisk>().ToList();
+                primitiveList.ForEach(primitive =>
+                {
+                    returnList.Add(new ItineraryRisk(primitive));
+                });
+            }
+            return returnList;
+        }
+
+        private void saveItineraryRisk(ItineraryRisk risk)
+        {
+            var primitiveRisk = new PrimitiveItineraryRisk(risk);
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<PrimitiveItineraryRisk>();
+
+                int rowsAdded = conn.Insert(primitiveRisk);
+                if (rowsAdded > 0)
+                {
+                    Debug.WriteLine("Inserted Itinerary");
+                }
+                else
+                {
+                    Debug.WriteLine("Failed to Insert Itinerary");
+                }
+                conn.Close();
+            }
+            var myvar = ItinerariesFromLocal();
         }
 
         public async Task<List<ItineraryRisk>> LoadMore()

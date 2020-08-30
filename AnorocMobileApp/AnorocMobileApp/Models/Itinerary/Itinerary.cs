@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using AnorocMobileApp.ViewModels;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.Models.Itinerary
@@ -12,7 +14,10 @@ namespace AnorocMobileApp.Models.Itinerary
     public class Itinerary : BaseViewModel
     {
         #region Public properties
-        
+        public Itinerary()
+        {
+
+        }
         /// <summary>
         /// DateTime containing the date and time of the commencement of the travel
         /// </summary>
@@ -25,6 +30,11 @@ namespace AnorocMobileApp.Models.Itinerary
         /// </summary>
         public List<Location> Locations;
 
+
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
         #endregion
     }
 }

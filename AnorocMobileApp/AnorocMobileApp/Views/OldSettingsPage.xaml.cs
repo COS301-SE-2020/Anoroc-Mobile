@@ -54,7 +54,7 @@ namespace AnorocMobileApp.Views
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
 
         }
 

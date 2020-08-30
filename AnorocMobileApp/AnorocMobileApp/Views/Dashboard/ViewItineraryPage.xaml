@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AnorocMobileApp.Views.Dashboard"
+             xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Dashboard"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="AnorocMobileApp.Views.Dashboard.ViewItineraryPage"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:behavior ="clr-namespace:AnorocMobileApp.Behaviors;assembly=AnorocMobileApp"
+             x:Name="ViewItineraryPageName"
+             NavigationPage.HasNavigationBar="False"
+             Style="{StaticResource ContentPageStyle}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <StackLayout x:Name="rootLayout" Spacing="0">
+
+                <!--  Title View  -->
+                <controls:TitleView
+                    Title="View Itinerary"
+                    FontFamily="{StaticResource Montserrat-Medium}"
+                    FontSize="16">
+                </controls:TitleView>
+
+                <ContentPresenter />
+
+            </StackLayout>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Margin="0" Padding="8">
+                <cards:SfCardView CornerRadius="4" IndicatorColor="{Binding CardColour}" IndicatorPosition="Left" IndicatorThickness="8">
+                    <Grid RowSpacing="4" Padding="16">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Text="{Binding Risk}" Style="{StaticResource LabelStyle}"></Label>
+                        <Label Grid.Column="1" Grid.RowSpan="2" FontSize="16" Style="{StaticResource LabelStyle}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="{Binding AverageRisk}"></Label>
+                        <Label Grid.Row="1" Text="{Binding Date}" FontSize="12" TextColor="{DynamicResource Gray-700}" Style="{StaticResource LabelStyle}" FontFamily="{StaticResource Montserrat-Medium}"></Label>
+                    </Grid>
+                </cards:SfCardView>
+                <listView:SfListView SelectionMode="None" AutoFitMode="Height" ItemSpacing="8" ItemsSource="{Binding CardItems}">
+
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+
+                            <cards:SfCardView CornerRadius="8">
+                                <cards:SfCardView.Content>
+                                    <Grid>
+
+                                        <gradient:SfGradientView>
+                                            <gradient:SfGradientView.BackgroundBrush>
+                                                <gradient:SfLinearGradientBrush>
+                                                    <gradient:SfLinearGradientBrush.GradientStops>
+                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientStart}" Offset="0.0"/>
+                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientEnd}" Offset="1.0"/>
+                                                    </gradient:SfLinearGradientBrush.GradientStops>
+                                                </gradient:SfLinearGradientBrush>
+                                            </gradient:SfGradientView.BackgroundBrush>
+                                        </gradient:SfGradientView>
+
+                                        <StackLayout Margin="15" Spacing="5">
+                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="12" Text="{Binding LocationName}"></Label>
+                                            <Label TextColor="{DynamicResource Gray-White}" LineHeight="{OnPlatform Android=1.25, Default=-1}" FontFamily="{StaticResource Montserrat-SemiBold}" FontSize="24" Text="{Binding LocationRisk}"></Label>
+                                        </StackLayout>
+                                    </Grid>
+                                </cards:SfCardView.Content>
+                            </cards:SfCardView>
+
+                        </DataTemplate>
+                    </listView:SfListView.ItemTemplate>
+
+                    <!--  Layout to customize number of columns in SfListView  -->
+                    <listView:SfListView.LayoutManager>
+                        <listView:GridLayout SpanCount="2" />
+                    </listView:SfListView.LayoutManager>
+
+                    <listView:SfListView.Behaviors>
+                        <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
+                    </listView:SfListView.Behaviors>
+
+                </listView:SfListView>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+</ContentPage>

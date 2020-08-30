@@ -12,7 +12,7 @@ namespace AnorocMobileApp.Services.Tests
     [TestClass()]
     public class BackgroundLocaitonServiceTests
     {
-        IBackgroundLocationService BackgroundLocationService = new BackgroundLocaitonService();
+        IBackgroundLocationService BackgroundLocationService = new BackgroundLocationService();
         [TestMethod()]
         public void Start_TrackingTest()
         {

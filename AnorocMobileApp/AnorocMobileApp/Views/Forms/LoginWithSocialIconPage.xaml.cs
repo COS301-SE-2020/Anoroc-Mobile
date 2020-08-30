@@ -1,8 +1,10 @@
 ﻿using System;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Navigation;
 using Microsoft.Identity.Client;
+using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -12,16 +14,45 @@ namespace AnorocMobileApp.Views.Forms
     /// <summary>
     /// Page to login with user name and password
     /// </summary>
-    [Preserve(AllMembers = true)]
+
+    //[Preserve(AllMembers = true)]
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LoginWithSocialIconPage
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="LoginWithSocialIconPage" /> class.
         /// </summary>
+
+        private string title = "";
+        private string body = "";
+
         public LoginWithSocialIconPage()
         {
             InitializeComponent();
+
+          
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
+
+            if (signedIn != null)
+            {
+                if (signedIn.ToString().Equals("true"))
+                {
+                    var name = CrossSecureStorage.Current.GetValue("Name");
+                    var surname = CrossSecureStorage.Current.GetValue("Surname");
+                    var email = CrossSecureStorage.Current.GetValue("Email");
+                    IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                    //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+
+                    ims.UserLoggedIn(name, surname, email);
+                    Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+                }
+            }
         }
         /// <summary>
         /// Function sets Main Page to Navigation Page
@@ -43,12 +74,21 @@ namespace AnorocMobileApp.Views.Forms
 
             try
             {
+
+               
+
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
+                
                 if(userContext.IsLoggedOn)
                 {
-                    Console.WriteLine("Access Token: " + userContext.AccessToken);
-                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+               
+                    /*Console.WriteLine("Access Token: " + userContext.AccessToken);
+                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
+                    IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
+                    //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
+
+                    ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
 
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
@@ -78,7 +118,15 @@ namespace AnorocMobileApp.Views.Forms
         void UpdateSignInState(UserContext userContext)
         {
             var isSignedIn = userContext.IsLoggedOn;
-            btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
+
+
+            CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
+            CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
+            CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
+            CrossSecureStorage.Current.SetValue("Surname", userContext.FamilyName);
+            CrossSecureStorage.Current.SetValue("Email", userContext.EmailAddress);
+
+            //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
 
         }
 

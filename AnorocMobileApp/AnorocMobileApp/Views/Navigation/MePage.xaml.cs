@@ -2,6 +2,7 @@
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -11,13 +12,19 @@ namespace AnorocMobileApp.Views.Navigation
     /// <summary>
     /// Page to show the Me page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    [SQLite.Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MePage : ContentPage
     {
+
+
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MePage" /> class.
         /// </summary>
+        /// 
+        private string title = "";
+        private string body = "";
         public MePage()
         {
             InitializeComponent();
@@ -35,20 +42,34 @@ namespace AnorocMobileApp.Views.Navigation
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            var name = CrossSecureStorage.Current.GetValue("Name");
+            var surname = CrossSecureStorage.Current.GetValue("Surname");
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationReceivedKey, OnMessageReceived);
-
-        }
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
+            var location = CrossSecureStorage.Current.GetValue("Location");
+            if(location != null)
             {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
-        }
+                if (location.Equals("true"))
+                {
+                    locationStatus.Text = "Enabled";
+                }
+                else
+                {
+                    locationStatus.Text = "Disabled";
+                }
 
+            }
+            
+            profileName.Text = name.ToString() + " " + surname.ToString();
+
+        }
+        
+        /*
+        public Task<List<TodoItem>> GetItemsNotDoneAsync()
+        {
+            // SQL queries are also possible
+            return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+        }
+        */
         /// <summary>
         /// Goes to notifications view.
         /// TODO: Show notifications in an improved way

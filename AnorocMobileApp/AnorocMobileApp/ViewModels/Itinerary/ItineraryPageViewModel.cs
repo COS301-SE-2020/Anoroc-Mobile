@@ -1,4 +1,6 @@
-﻿using System.Windows.Input;
+﻿using System.Threading.Tasks;
+using System.Windows.Input;
+using AnorocMobileApp.Views.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -25,12 +27,15 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// <summary>
         /// Initializes a new instance for the <see cref="ItineraryPageViewModel" /> class.
         /// </summary>
-        public ItineraryPageViewModel()
+        public ItineraryPageViewModel(INavigation navigation)
         {
             this.ImagePath = "EmptyItinerary.svg";
             this.Header = "EMPTY ITINERARY";
             this.Content = "You currently have no itineraries";
             this.GoBackCommand = new Command(this.GoBack);
+            this.Navigation = navigation;
+            
+            this.AddItineraryCommand = new Command(async () => await AddItinerary());
         }
 
         #endregion
@@ -41,6 +46,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// Gets or sets the command that is executed when the Go back button is clicked.
         /// </summary>
         public ICommand GoBackCommand { get; set; }
+        
+        public ICommand AddItineraryCommand { get; set; }
 
         #endregion
 
@@ -88,6 +95,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             }
         }
 
+        public INavigation Navigation { get; set;}
+        
         #endregion
 
         #region Methods
@@ -99,6 +108,11 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         private void GoBack(object obj)
         {
             // Do something
+        }
+
+        private async Task AddItinerary()
+        {
+            await Navigation.PushAsync(new AddItineraryPage());
         }
 
         #endregion      

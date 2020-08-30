@@ -95,18 +95,6 @@
                         Style="{StaticResource SfButtonStyle}"
                         Text="Sign in" />
 
-                        <!--Forgot password link-->  
-                        <buttons:SfButton
-                        x:Name="ForgotPasswordLabel"
-                        Grid.Row="5" CornerRadius="4"
-                        Margin="0,2"
-                        FontFamily="{StaticResource Montserrat-SemiBold}"
-                        FontSize="12" 
-                        Clicked="PasswordResetButton_Clicked"    
-                        HorizontalOptions="End" 
-                        Style="{StaticResource SfFlatButtonStyle}"
-                        Text="FORGOT PASSWORD?"
-                        TextColor="{DynamicResource Gray-White}"/>
 
 
                     </Grid>

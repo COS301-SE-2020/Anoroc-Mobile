@@ -4,22 +4,30 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using AnorocMobileApp.Views.Navigation;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Views.Dashboard;
 using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
+using AnorocMobileApp;
 
 namespace AnorocMobileApp
 {
     public partial class App
     {
-        public const string NotificationReceivedKey = "NotificationRecieved";
+        public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
+        public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
+
+
+        public const string FirebaseTokenKey = "FirebaseRecieved";
+
+        
+
 
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
-        readonly bool mapDebug = false;
         public IFacebookLoginService FacebookLoginService { get; private set; }
 
 
@@ -28,56 +36,33 @@ namespace AnorocMobileApp
         public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
 
-        /*
-        public App(IFacebookLoginService facebookLoginService)
+
+
+        public static string FilePath;
+
+
+
+        public App(string filePath)
         {
-            //Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
-            InitializeComponent();
-
-            DependencyService.Register<B2CAuthenticationService>();
-
-
-            Current.Properties["TOKEN"] = "thisisatoken";
-
-            MainPage = new NavigationPage(new BottomNavigationPage());
-
-            //Defualt lifestle
             IoCContainer = new Container();
-            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
             IoCContainer.Register<IItineraryService, ItineraryService>(Lifestyle.Singleton);
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+   
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
-            //FacebookLoginService = facebookLoginService;
+            MainPage = new LoginWithSocialIconPage();
 
-    
-
-            if (facebookLoginService.isLoggedIn())
-            {
-                User.FirstName = facebookLoginService.FirstName;
-                User.UserSurname = facebookLoginService.LastName;
-                User.UserID = facebookLoginService.UserID;
-                User.loggedInFacebook = true;
-                MainPage = new NavigationPage(new BottomNavigationPage());
-                //MainPage = new Views.Map();
-            }
-            else
-            {
-
-                //MainPage = new Views.Navigation.SettingsPage();
-                //MainPage = new Views.Navigation.MePage();
-                MainPage = new Views.Navigation.BottomNavigationPage();
-
-                //MainPage = new LoginWithSocialIconPage();
-
-            }
+            FilePath = filePath;
         }
 
-        */
+
+
 
         public App()
         {
@@ -88,7 +73,10 @@ namespace AnorocMobileApp
 
             DependencyService.Register<B2CAuthenticationService>();
 
-            Current.Properties["TOKEN"] = "thisisatoken";
+          
+
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
+
 
             MainPage = new LoginWithSocialIconPage();
 
@@ -96,25 +84,28 @@ namespace AnorocMobileApp
             IoCContainer = new Container();
             //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Singleton);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
             /*
             // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocaitonService>(Lifestyle.Scoped);
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
             */
 
-
-        }
-
-        /*public App()
-        {
+            //Register Syncfusion license
             InitializeComponent();
-
-            MainPage = new NavigationPage(new Login());
-        }*/
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+           
+            MainPage = new NavigationPage(new BottomNavigationPage());
+        }
+        void OnKeyReceived(object sender, string key)
+        {
+            Current.Properties["FirebaseToken"] = key;
+           // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
+        }
+ 
 
         protected override void OnStart()
         {
@@ -123,7 +114,7 @@ namespace AnorocMobileApp
 
         protected override void OnSleep()
         {
-            Current.Properties["Tracking"] = BackgroundLocaitonService.Tracking;
+            Current.Properties["Tracking"] = BackgroundLocationService.Tracking;
         }
 
         protected override void OnResume()
@@ -137,7 +128,7 @@ namespace AnorocMobileApp
             {
                 IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
-                BackgroundLocaitonService.Tracking = value;
+                BackgroundLocationService.Tracking = value;
                 if(value)
                 {
                     backgroundLocationService.Start_Tracking();

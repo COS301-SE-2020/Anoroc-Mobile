@@ -129,7 +129,7 @@ namespace AnorocMobileAppTests.View
                 app.TapCoordinates(270, 1710);
 
                 AppResult[] results = app.Query(c => c.All());
-                bool result = app.Query(c => c.Text("MARK ALL AS READ")).Any();
+                bool result = app.Query(c => c.Text("MARK ALL AS READ")).Any(); 
 
                 Assert.IsTrue(result);
 

@@ -76,7 +76,8 @@
                     </border:SfBorder>
 
                     <!-- Profile Name -->
-                    <Label Grid.Row="1"
+                    <Label x:Name="profileName"
+                           Grid.Row="1"
                            Margin="0,0,0,2"
                            Text="{Binding ProfileName}"
                            TextColor="{DynamicResource Gray-White}"
@@ -197,7 +198,7 @@
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
                                HorizontalOptions="Center" VerticalOptions="Center" />
 
-                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
+                        <Label  x:Name="locationStatus" Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="Center" VerticalOptions="End" />
 
                         <!-- Seperator -->

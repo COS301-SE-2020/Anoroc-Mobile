@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +75,7 @@ namespace AnorocMobileApp.Services
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
-            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
+            var url = "https://10.0.2.2:5001/" + Secrets.carrierStatusEndpoint;
 
             /*var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
@@ -107,17 +108,17 @@ namespace AnorocMobileApp.Services
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
                 Token token_object = new Token();
-                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.access_token = "expectingtoken";
                 User.Email = userEmail;
                 User.FirstName = firstName;
                 User.UserSurname = surname;
+                User.currentlyLoggedIn = true;
                 token_object.Object_To_Server = User.toString(); ;
 
                 var data = JsonConvert.SerializeObject(token_object);
 
                 var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
 
                 Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserLoggedInEndpoint);
                 HttpResponseMessage responseMessage;
@@ -129,8 +130,13 @@ namespace AnorocMobileApp.Services
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        if(!json.Equals("I trust you...for now..."))
+                        if (json != null)
+                        {
                             Application.Current.Properties["TOKEN"] = json;
+                            string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
+                            IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                            ims.SendFireBaseToken(firebaseToken);
+                        }
                     }
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)

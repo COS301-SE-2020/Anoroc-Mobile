@@ -1,4 +1,9 @@
 ﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using AnorocMobileApp.Models.Itinerary;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Models
 {
@@ -8,6 +13,35 @@ namespace AnorocMobileApp.Models
         {
 
         }
+
+        public Location(Position position)
+        {
+            Latitude = position.Lat;
+            Longitude = position.Lon;
+
+            GetRegion();
+
+        }
+        public async Task GetRegion()
+        {
+            var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
+            var placemark = placemarks?.FirstOrDefault();
+            if (placemark != null)
+            {
+                var geocodeAddress =
+                    $"AdminArea:       {placemark.AdminArea}\n" +
+                    $"CountryCode:     {placemark.CountryCode}\n" +
+                    $"CountryName:     {placemark.CountryName}\n" +
+                    $"FeatureName:     {placemark.FeatureName}\n" +
+                    $"Locality:        {placemark.Locality}\n" +
+                    $"PostalCode:      {placemark.PostalCode}\n" +
+                    $"SubAdminArea:    {placemark.SubAdminArea}\n" +
+                    $"SubLocality:     {placemark.SubLocality}\n" +
+                    $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
+                    $"Thoroughfare:    {placemark.Thoroughfare}\n";
+            }
+            Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality);
+        }
         public Location(Xamarin.Essentials.Location loc)
         {
             this.Created = DateTime.Now;
@@ -15,6 +49,8 @@ namespace AnorocMobileApp.Models
 
             Latitude = loc.Latitude;
             Longitude = loc.Longitude;
+
+            GetRegion();
            
         }
 
@@ -25,6 +61,7 @@ namespace AnorocMobileApp.Models
             Longitude = longC;
             Created = dateTime;
             Carrier_Data_Point = carrier;
+            GetRegion();
         }
    
         public DateTime Created { get; set; }
@@ -38,5 +75,10 @@ namespace AnorocMobileApp.Models
         {
             return new Location(Latitude, Longitude, Created, Carrier_Data_Point);
         }
+        public override string ToString()
+        {
+            return JsonConvert.SerializeObject(this);
+        }
+
     }
 }

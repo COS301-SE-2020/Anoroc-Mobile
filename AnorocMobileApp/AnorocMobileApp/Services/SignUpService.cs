@@ -29,7 +29,7 @@ namespace AnorocMobileApp.Services
         public async Task<bool> registerUserAsync(string password)
         {
             http = new HttpClient();
-            http.BaseAddress = new Uri("localhost:8080");
+            http.BaseAddress = new Uri(Constants.AnorocURI);
 
             // Have to make seporate call to Facebook API to get the email address for the 
 

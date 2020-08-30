@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
 {
-    public class BackgroundLocaitonService : IBackgroundLocationService
+    public class BackgroundLocationService : IBackgroundLocationService
     {
 
         Models.Location User_Location;
@@ -19,10 +19,10 @@ namespace AnorocMobileApp.Services
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
         private int request_count;
-
+        
         public static bool Tracking;
 
-        public BackgroundLocaitonService()
+        public BackgroundLocationService()
         {
             LocationService = App.IoCContainer.GetInstance<ILocationService>();
             Tracking = false;
@@ -103,31 +103,10 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
+                    await customLocation.GetRegion();
 
                     //var placemarks = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
-                    var placemarks = await Geocoding.GetPlacemarksAsync(customLocation.Latitude, customLocation.Longitude);
-                    var placemark = placemarks?.FirstOrDefault();
-                    if (placemark != null)
-                    {
-                        var geocodeAddress =
-                            $"AdminArea:       {placemark.AdminArea}\n" +
-                            $"CountryCode:     {placemark.CountryCode}\n" +
-                            $"CountryName:     {placemark.CountryName}\n" +
-                            $"FeatureName:     {placemark.FeatureName}\n" +
-                            $"Locality:        {placemark.Locality}\n" +
-                            $"PostalCode:      {placemark.PostalCode}\n" +
-                            $"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                            $"SubLocality:     {placemark.SubLocality}\n" +
-                            $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                            $"Thoroughfare:    {placemark.Thoroughfare}\n";
 
-                        //Console.WriteLine(geocodeAddress);
-                        Debug.WriteLine("GEO: " + JsonConvert.SerializeObject(geocodeAddress));
-                        //await App.Current.MainPage.DisplayAlert("Testing", JsonConvert.SerializeObject(geocodeAddress), "OK");
-                    }
-                    customLocation.Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality);
-
-                    
                     if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
                     {
                         _Backoff = Initial_Backoff;
@@ -158,6 +137,9 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
+
+                    await customLocation.GetRegion();
+
                     customLocation.Carrier_Data_Point = User.carrierStatus;
                     LocationService.Send_Locaiton_ServerAsync(customLocation);
                 }
@@ -203,6 +185,22 @@ namespace AnorocMobileApp.Services
         public bool isTracking()
         {
             return Tracking;
+        }
+
+        void SetBackground(double level, bool charging)
+        {
+            Color? colour = null;
+            var status = charging ? "Charging" : "Not charging";
+
+            if (level > .5f)
+                colour = Color.Green.MultiplyAlpha(level);
+            else if (level > .1f)
+                colour = Color.Yellow.MultiplyAlpha(level);
+            else
+                colour = Color.Red.MultiplyAlpha(level);
+
+            Console.WriteLine("Colour: " + colour.Value);
+
         }
     }
 }
