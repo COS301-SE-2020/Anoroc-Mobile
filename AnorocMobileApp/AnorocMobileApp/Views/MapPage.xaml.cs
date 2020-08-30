@@ -143,6 +143,7 @@ namespace AnorocMobileApp.Views
                         break;
                 }
                 SliderLabel.Text = outputString;
+                CurrentRange = theValue;
             }
         }
     }
