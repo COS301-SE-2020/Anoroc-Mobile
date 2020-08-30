@@ -18,6 +18,21 @@ namespace AnorocMobileApp.Models
             Map_Service = new MapService();
         }
 
+        public async Task<List<Cluster>> GetOldClustersWithRadius(int days)
+        {
+            List<Cluster> cluster = null;
+            try
+            {
+                cluster = await Map_Service.GetOldClusterUsingDays(days);
+            }
+            catch (CantConnecToClusterServiceException)
+            {
+                //TODO:
+                // Retry logic for not connecting to the cluster service
+            }
+            return cluster;
+        }
+
         public async Task<List<Cluster>> GetClustersWithRadius()
         {
             List<Cluster> cluster = null;

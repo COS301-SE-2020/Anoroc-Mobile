@@ -20,25 +20,44 @@ namespace AnorocMobileApp.Views
 
             //UpdateMapAsync();
             CurrentRange = 0;
+            Slider.IsEnabled = false;
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
             {
-                DrawClusters();
+                DrawClusters(0);
+                Slider.IsEnabled = true;
             });
         }
 
-        public async void DrawClusters()
+        public async void DrawClusters(int days)
         {
             Slider.IsEnabled = false;
-            viewModel = new MapViewModel();
-            List<Circle> circles = await viewModel.GetClustersForMap();
-            if (circles != null)
+            if (days == 0)
             {
-                foreach (Circle circle in circles)
+                viewModel = new MapViewModel();
+                List<Circle> circles = await viewModel.GetClustersForMap();
+                if (circles != null)
                 {
-                    MyMap.MapElements.Add(circle);
+                    foreach (Circle circle in circles)
+                    {
+                        MyMap.MapElements.Add(circle);
+                    }
+                    addPins();
+                    MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
                 }
-                addPins();
-                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
+            }
+            else
+            {
+                viewModel = new MapViewModel();
+                List<Circle> circles = await viewModel.GetOldClustersForMap(days);
+                if (circles != null)
+                {
+                    foreach (Circle circle in circles)
+                    {
+                        MyMap.MapElements.Add(circle);
+                    }
+                    addPins();
+                    MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
+                }
             }
             Slider.IsEnabled = true;
         }
@@ -83,35 +102,43 @@ namespace AnorocMobileApp.Views
                 switch (theValue)
                 {
                     case (0):
-                        DrawClusters();
+                        DrawClusters(0);
                         outputString += " Today.";
                         break;
                     case (1):
+                        DrawClusters(1);
                         outputString += 1 + " Day Ago";
                         break;
                     case (2):
+                        DrawClusters(2);
                         outputString += 2 + " Days Ago";
                         break;
                     case (3):
+                        DrawClusters(3);
                         outputString += 3 + " Days Ago";
                         break;
                     case (4):
+                        DrawClusters(4);
                         outputString += 4 + " Days Ago";
                         break;
                     case (5):
+                        DrawClusters(5);
                         outputString += 5 + " Days Ago";
                         break;
                     case (6):
+                        DrawClusters(6);
                         outputString += 6 + " Days Ago";
                         break;
                     case (7):
+                        DrawClusters(7);
                         outputString += 7 + " Days Ago";
                         break;
                     case (8):
+                        DrawClusters(8);
                         outputString += 8 + " Days Ago";
                         break;
                     default:
-                        DrawClusters();
+                        DrawClusters(0);
                         outputString += " Today.";
                         break;
                 }
