@@ -1,5 +1,6 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -11,6 +12,8 @@ namespace AnorocMobileApp.Views
     public partial class Map : ContentPage
     {
         MapViewModel viewModel;
+        List<Circle> circles;
+        List<Pin> pins;
         int CurrentRange;
         public Map()
         {
@@ -30,11 +33,12 @@ namespace AnorocMobileApp.Views
 
         public async void DrawClusters(int days)
         {
+            ClearElements();
             Slider.IsEnabled = false;
             if (days == 0)
             {
                 viewModel = new MapViewModel();
-                List<Circle> circles = await viewModel.GetClustersForMap();
+                circles = await viewModel.GetClustersForMap();
                 if (circles != null)
                 {
                     foreach (Circle circle in circles)
@@ -56,14 +60,22 @@ namespace AnorocMobileApp.Views
                         MyMap.MapElements.Add(circle);
                     }
                     addPins();
-                    MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
+                    //MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
                 }
             }
             Slider.IsEnabled = true;
         }
+
+        private void ClearElements()
+        {
+            MyMap.MapElements.Clear();
+
+            MyMap.Pins.Clear();
+        }
+
         void addPins()
         {
-            List<Pin> pins = viewModel.Pins;
+            pins = viewModel.Pins;
             foreach (Pin pin in pins)
             {
                 MyMap.Pins.Add(pin);
@@ -137,13 +149,10 @@ namespace AnorocMobileApp.Views
                         DrawClusters(8);
                         outputString += 8 + " Days Ago";
                         break;
-                    default:
-                        DrawClusters(0);
-                        outputString += " Today.";
-                        break;
+
                 }
-                SliderLabel.Text = outputString;
                 CurrentRange = theValue;
+                SliderLabel.Text = outputString;
             }
         }
     }
