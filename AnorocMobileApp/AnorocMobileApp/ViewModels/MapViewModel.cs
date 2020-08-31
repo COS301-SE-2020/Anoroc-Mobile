@@ -86,13 +86,26 @@ namespace AnorocMobileApp.Models
                         FillColor = Color.FromHex("#88FFC0CB")
                     };
                     // Clickable Centre pin
-                    Pins.Add(new Pin
+                    if (cluster.Pin_Count == 0)
                     {
-                        Label = "Cluster Count: " + cluster.Pin_Count,
-                        Address = "Percentage carrier: " + (int)((cluster.Carrier_Pin_Count / cluster.Pin_Count) * 100),
-                        Type = PinType.SearchResult,
-                        Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
-                    });
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: 0",
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
+                    else
+                    {
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: " + (int)((cluster.Carrier_Pin_Count / cluster.Pin_Count) * 100),
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
                     circles.Add(circle);
                 }
                 return circles;
