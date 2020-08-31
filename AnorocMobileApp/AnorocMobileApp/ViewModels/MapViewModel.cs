@@ -20,9 +20,53 @@ namespace AnorocMobileApp.Models
         {
             Cluster_List = new List<ClusterAllPins>();
         }
-        
 
 
+
+        public async Task<List<Circle>> GetOldClustersForMap(int days)
+        {
+            List<Cluster> clusters = await mapModel.GetOldClustersWithRadius(days);
+            List<Circle> circles = new List<Circle>();
+            if (clusters != null)
+            {
+                foreach (Cluster cluster in clusters)
+                {
+                    Circle circle = new Circle
+                    {
+                        Center = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude),
+                        Radius = new Distance(cluster.Cluster_Radius),
+                        StrokeColor = Color.FromHex("#88FF0000"),
+                        StrokeWidth = 8,
+                        FillColor = Color.FromHex("#88FFC0CB")
+                    };
+                    // Clickable Centre pin
+                    if (cluster.Pin_Count == 0)
+                    {
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: 0",
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
+                    else
+                    {
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: " + (int)((cluster.Carrier_Pin_Count / cluster.Pin_Count) * 100),
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
+                    circles.Add(circle);
+                }
+                return circles;
+            }
+            else
+                return null;
+        }
 
         public async Task<List<Circle>> GetClustersForMap()
         {
@@ -42,13 +86,26 @@ namespace AnorocMobileApp.Models
                         FillColor = Color.FromHex("#88FFC0CB")
                     };
                     // Clickable Centre pin
-                    Pins.Add(new Pin
+                    if (cluster.Pin_Count == 0)
                     {
-                        Label = "Cluster Count: " + cluster.Pin_Count,
-                        Address = "Percentage carrier: " + (int)((cluster.Carrier_Pin_Count / cluster.Pin_Count) * 100),
-                        Type = PinType.SearchResult,
-                        Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
-                    });
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: 0",
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
+                    else
+                    {
+                        Pins.Add(new Pin
+                        {
+                            Label = "Cluster Count: " + cluster.Pin_Count,
+                            Address = "Percentage carrier: " + (int)((cluster.Carrier_Pin_Count / cluster.Pin_Count) * 100),
+                            Type = PinType.SearchResult,
+                            Position = new Position(cluster.Center_Pin.Latitude, cluster.Center_Pin.Longitude)
+                        });
+                    }
                     circles.Add(circle);
                 }
                 return circles;
