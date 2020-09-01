@@ -19,6 +19,22 @@
 
     }
 
+    public class CancelBackgroundUserManagementService
+    {
+        public CancelBackgroundUserManagementService()
+        {
+
+        }
+    }
+
+    public class StopBackgroundUserManagementService
+    {
+        public StopBackgroundUserManagementService()
+        {
+
+        }
+    }
+
     public class UserLoggedIn
     {
         public UserLoggedIn() { }
