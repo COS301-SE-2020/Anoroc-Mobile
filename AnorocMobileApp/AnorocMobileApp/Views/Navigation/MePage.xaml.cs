@@ -45,6 +45,20 @@ namespace AnorocMobileApp.Views.Navigation
             var name = CrossSecureStorage.Current.GetValue("Name");
             var surname = CrossSecureStorage.Current.GetValue("Surname");
 
+            var location = CrossSecureStorage.Current.GetValue("Location");
+            if(location != null)
+            {
+                if (location.Equals("true"))
+                {
+                    locationStatus.Text = "Enabled";
+                }
+                else
+                {
+                    locationStatus.Text = "Disabled";
+                }
+
+            }
+            
             profileName.Text = name.ToString() + " " + surname.ToString();
 
         }

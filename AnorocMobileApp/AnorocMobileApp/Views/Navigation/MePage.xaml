@@ -198,7 +198,7 @@
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
                                HorizontalOptions="Center" VerticalOptions="Center" />
 
-                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
+                        <Label  x:Name="locationStatus" Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
                                 HorizontalOptions="Center" VerticalOptions="End" />
 
                         <!-- Seperator -->
