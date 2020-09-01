@@ -19,6 +19,11 @@
 
     }
 
+    public class UserLoggedIn
+    {
+        public UserLoggedIn() { }
+    }
+
     public class CancelMessage
     {
         public CancelMessage() { }
