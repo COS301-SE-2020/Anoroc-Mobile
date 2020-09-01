@@ -1,4 +1,5 @@
 ﻿using AnorocMobileApp.Exceptions;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
@@ -21,46 +22,103 @@ namespace AnorocMobileApp.Services
             Anoroc_Client = new HttpClient(clientHandler);
         }
 
+
+        public async Task<List<Cluster>> GetOldClusterUsingDays(int days)
+        {
+            if (Xamarin.Forms.Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                string json = "";
+                using (Anoroc_Client = new HttpClient(clientHandler))
+                {
+                    Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
+
+                    Token token_object = new Token();
+                    token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                    //MOCK AREA OBJECT
+                    token_object.Object_To_Server = days.ToString();
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+                    var content = new StringContent(data, Encoding.UTF8, "application/json");
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                    Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Cluster/OldClustersSimplified");
+
+                    HttpResponseMessage responseMessage;
+
+                    try
+                    {
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+                        List<Cluster> clusters = new List<Cluster>();
+
+                        if (responseMessage.IsSuccessStatusCode)
+                        {
+                            json = await responseMessage.Content.ReadAsStringAsync();
+                            clusters = JsonConvert.DeserializeObject<List<Cluster>>(json);
+                        }
+
+                        return clusters;
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        throw new CantConnecToClusterServiceException();
+                    }
+                }
+            }
+            else
+                return null;
+        }
+
+
         public async Task<List<Cluster>> GetClustersForCirclesAsync()
         {
-            string json = "";
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            if(Xamarin.Forms.Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
-
-                Token token_object = new Token();
-                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-
-                //MOCK AREA OBJECT
-                token_object.Object_To_Server = "{\"Area\":{\"HandShake\":\"Hello\"}}";
-
-                var data = JsonConvert.SerializeObject(token_object);
-
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI+ "Cluster/Simplified");
-
-                HttpResponseMessage responseMessage;
-
-                try
+                string json = "";
+                using (Anoroc_Client = new HttpClient(clientHandler))
                 {
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-                    List<Cluster> clusters = new List<Cluster>();
+                    Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
 
-                    if (responseMessage.IsSuccessStatusCode)
+                    Token token_object = new Token();
+                    token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                    //MOCK AREA OBJECT
+                    token_object.Object_To_Server = "{\"Area\":{\"HandShake\":\"Hello\"}}";
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+                    var content = new StringContent(data, Encoding.UTF8, "application/json");
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                    Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Cluster/Simplified");
+
+                    HttpResponseMessage responseMessage;
+
+                    try
                     {
-                        json = await responseMessage.Content.ReadAsStringAsync();
-                        clusters = JsonConvert.DeserializeObject<List<Cluster>>(json);
-                    }
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+                        List<Cluster> clusters = new List<Cluster>();
 
-                    return clusters;
+                        if (responseMessage.IsSuccessStatusCode)
+                        {
+                            json = await responseMessage.Content.ReadAsStringAsync();
+                            clusters = JsonConvert.DeserializeObject<List<Cluster>>(json);
+                        }
+
+                        return clusters;
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        throw new CantConnecToClusterServiceException();
+                    }
                 }
-                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    throw new CantConnecToClusterServiceException();
-                }
+            }
+            else
+            {
+                return null;
             }
         }
 
