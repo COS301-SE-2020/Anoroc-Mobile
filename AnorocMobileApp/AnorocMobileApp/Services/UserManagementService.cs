@@ -161,18 +161,53 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public int UpdatedIncidents()
+        public async Task<int> UpdatedIncidents()
         {
-            return 0;
+            using (Anoroc_Client = new HttpClient(clientHandler))
+            {
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserIncidentsEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        var incidents = Convert.ToInt32(json);
+                        return incidents;
+                    }
+                    else
+                        return 0;
+                    
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
+            }
         }
 
         public async void CheckIncidents()
         {
+            ServiceRunning = true;
             await Task.Run(async () =>
             {
                 while (ServiceRunning)
                 {
-                    UpdatedIncidents();
+                    var message = new CheckUserIncidents();
+                    MessagingCenter.Send(message, "CheckUserIncidents");
 
                     await Task.Delay(1000000);
                 }

@@ -37,6 +37,11 @@ namespace AnorocMobileApp.Views.Navigation
                 else
                     picker.SelectedIndex = 1;
             }
+
+            MessagingCenter.Subscribe<CheckUserIncidents>(this, "CheckUserIncidents", message =>
+            {
+                UpdatedIncidentNumner();
+            });
         }
 
         protected override void OnAppearing()
@@ -95,6 +100,13 @@ namespace AnorocMobileApp.Views.Navigation
         {
             //DisplayAlert("Alert", "Notifications", "OK");
             Navigation.PushModalAsync(new Notification.NotificationPage());
+        }
+
+        async void UpdatedIncidentNumner()
+        {
+            var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+            var theNumber = await ims.UpdatedIncidents();
+            carrier_status_num.Text = theNumber.ToString();
         }
 
         /// <summary>

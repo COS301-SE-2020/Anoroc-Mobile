@@ -1,4 +1,6 @@
-﻿namespace AnorocMobileApp.Interfaces
+﻿using System.Threading.Tasks;
+
+namespace AnorocMobileApp.Interfaces
 {
     public interface IUserManagementService
     {
@@ -6,5 +8,6 @@
         void SendFireBaseToken(string firebasetoken);
         void sendCarrierStatusAsync(string value);
         void CheckIncidents();
+        Task<int> UpdatedIncidents();
     }
 }
