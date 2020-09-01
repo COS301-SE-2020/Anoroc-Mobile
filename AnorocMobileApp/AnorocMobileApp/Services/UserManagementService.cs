@@ -163,8 +163,12 @@ namespace AnorocMobileApp.Services
 
         public async Task<int> UpdatedIncidents()
         {
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            var clientHandler = new HttpClientHandler
             {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            };
+
+            var client = new HttpClient(clientHandler);
                 Token token_object = new Token();
                 token_object.access_token = (string)Application.Current.Properties["TOKEN"];
                 token_object.Object_To_Server = "";
@@ -180,7 +184,7 @@ namespace AnorocMobileApp.Services
 
                 try
                 {
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
 
                     if (responseMessage.IsSuccessStatusCode)
                     {
@@ -196,7 +200,6 @@ namespace AnorocMobileApp.Services
                 {
                     throw new CantConnecToClusterServiceException();
                 }
-            }
         }
 
         public async void CheckIncidents()

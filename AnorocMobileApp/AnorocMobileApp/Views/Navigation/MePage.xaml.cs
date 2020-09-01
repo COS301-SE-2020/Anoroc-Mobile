@@ -72,12 +72,10 @@ namespace AnorocMobileApp.Views.Navigation
                 if (status_info.Equals("true"))
                 {
                     carrier_status_info.Text = "Preventions";
-                    carrier_status_num.Text = "10";
                 }
                 else
                 {
                     carrier_status_info.Text = "Incidents";
-                    carrier_status_num.Text = "20";
                 }
 
             }
