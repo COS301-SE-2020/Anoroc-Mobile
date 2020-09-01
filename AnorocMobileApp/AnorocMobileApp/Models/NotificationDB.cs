@@ -26,10 +26,12 @@ namespace AnorocMobileApp.Models
             set;
         }
         
-        public string time
+        public string Time
         {
             get;
             set;
         }
+
+
     }
 }

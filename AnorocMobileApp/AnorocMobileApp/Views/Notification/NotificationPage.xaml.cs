@@ -34,14 +34,7 @@ namespace AnorocMobileApp.Views.Notification
         protected override void OnAppearing()
         {
             base.OnAppearing();
-
-            
-            RefreshView rView = new RefreshView();
-            ICommand refreshCommand = new Command(() =>
-            {
-                rView.IsRefreshing = false;
-            });
-            rView.Command = refreshCommand;
+                        
             MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
 
         }
@@ -54,5 +47,6 @@ namespace AnorocMobileApp.Views.Notification
                 DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
             });
         }
+
     }
 }

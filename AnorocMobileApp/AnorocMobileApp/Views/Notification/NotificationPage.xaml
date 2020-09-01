@@ -40,8 +40,7 @@
 
             <StackLayout Padding="0, 16" Spacing="24">
 
-                <RefreshView IsRefreshing="{Binding IsRefreshing}"
-                                Command="{Binding RefreshCommand}">
+                
                     <listView:SfListView x:Name="RecentList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
@@ -137,7 +136,7 @@
                             <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
                         </listView:SfListView.Behaviors>
                     </listView:SfListView>
-                </RefreshView>
+                
                     <listView:SfListView x:Name="EarlierList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"

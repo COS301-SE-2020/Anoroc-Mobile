@@ -26,6 +26,7 @@ namespace AnorocMobileApp.Droid
     {
         public static string title = "";
         public static string body = "";
+        public static string time = "";
 
         public override void  OnMessageReceived(RemoteMessage message)
         {
@@ -49,6 +50,8 @@ namespace AnorocMobileApp.Droid
                 // Passing Message onto xamarin forms
                 MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
                 MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, body);
+                //MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTimeReceivedKey, );
+
                 //Console.WriteLine("Received Message: " + body);
 
 
@@ -68,6 +71,7 @@ namespace AnorocMobileApp.Droid
             var intent = new Intent(this, typeof(MainActivity));
             intent.PutExtra("title", title);
             intent.PutExtra("body", body);
+            intent.PutExtra("time", time);
 
             intent.AddFlags(ActivityFlags.ClearTop);
             foreach (var key in data.Keys)
@@ -78,7 +82,8 @@ namespace AnorocMobileApp.Droid
             NotificationDB notificationDB = new NotificationDB()
             {
                 Title = title,
-                Body = body
+                Body = body,
+                Time = DateTime.Now.ToString()
             };
 
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
