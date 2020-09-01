@@ -204,13 +204,15 @@
                         <!-- Seperator -->
                         <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
-                        <!-- Number of incedents -->
+                        <!-- Number of incedents/Preventions -->
                         <Label Grid.Row="1" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center"
                                VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
-                               TextColor="{DynamicResource Gray-700}" />
+                               TextColor="{DynamicResource Gray-700}"
+                               x:Name="carrier_status_info"/>
 
                         <Label Grid.Row="0" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" 
-                               VerticalOptions="End" Style="{StaticResource LabelStyle}" />
+                               VerticalOptions="End" Style="{StaticResource LabelStyle}"
+                               x:Name="carrier_status_num"/>
 
                     </Grid>
                 </cards:SfCardView>

@@ -70,7 +70,8 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 this.Location = "Enabled";
             }
-            this.Incidents = "92";
+            this.Incidents = "0";
+            this.Preventions = "0";
         }
 
         #endregion
@@ -144,6 +145,13 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// Gets or sets the location.
         /// </summary>
         public string Location { get; set; }
+
+        /// <summary>
+        /// Gets or sets the preventions.
+        /// </summary>
+        public string Preventions { get; set; }
+
+        
 
         #endregion
     }

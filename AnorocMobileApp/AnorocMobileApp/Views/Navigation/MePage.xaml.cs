@@ -61,7 +61,24 @@ namespace AnorocMobileApp.Views.Navigation
             
             profileName.Text = name.ToString() + " " + surname.ToString();
 
+            var status_info = CrossSecureStorage.Current.GetValue("Carrier_status");
+            if (status_info != null)
+            {
+                if (status_info.Equals("true"))
+                {
+                    carrier_status_info.Text = "Preventions";
+                    carrier_status_num.Text = "10";
+                }
+                else
+                {
+                    carrier_status_info.Text = "Incidents";
+                    carrier_status_num.Text = "20";
+                }
+
+            }
         }
+
+
         
         /*
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
@@ -94,9 +111,15 @@ namespace AnorocMobileApp.Views.Navigation
                 Application.Current.Properties["CarrierStatus"] = value;
 
                 if (value == "Positive")
+                {
                     User.carrierStatus = true;
+                    CrossSecureStorage.Current.SetValue("Carrier_status", "true");
+                }
                 else
+                {
                     User.carrierStatus = false;
+                    CrossSecureStorage.Current.SetValue("Carrier_status", "false");
+                }
 
 
                 IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
