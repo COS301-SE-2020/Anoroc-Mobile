@@ -10,6 +10,8 @@ using Xamarin.Forms.Xaml;
 using AnorocMobileApp.Interfaces;
 using Plugin.Toast;
 using Plugin.SecureStorage;
+using Microsoft.Identity.Client;
+using AnorocMobileApp.Views.Forms;
 //using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -44,18 +46,91 @@ namespace AnorocMobileApp.Views.Navigation
         {
             base.OnAppearing();
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
+            var signedIn = CrossSecureStorage.Current.GetValue("SignedIn");
 
-        }
-
-        void OnMessageReceived(object sender, string msg)
-        {
-            Device.BeginInvokeOnMainThread(() =>
+            if(signedIn != null && signedIn.ToString().Equals("True"))
             {
-                //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
-            });
+                btnSignOut.IsVisible = true;
+            }
+            else
+            {
+                btnSignOut.IsVisible = false;
+            }
+
+
         }
+
+        private void SignOutButton_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new LoadingPage();
+            OnSignOut(sender, e);
+        }
+        async void OnSignOut(object sender, EventArgs e)
+        {
+
+
+            try
+            {
+
+
+
+                var userContext = await B2CAuthenticationService.Instance.SignOutAsync();
+           
+
+                if (!userContext.IsLoggedOn)
+                {
+                    UpdateSignInState(userContext);
+                    Application.Current.MainPage = new LoginWithSocialIconPage();
+
+                }
+                else
+                {
+                    CrossToastPopUp.Current.ShowToastMessage("Sign out failed");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                // Checking the exception message 
+                // should ONLY be done for B2C
+                // reset and not any other error.
+                if (ex.Message.Contains("AADB2C90118"))
+                    OnPasswordReset();
+                // Alert if any exception excluding user canceling sign-in dialog
+                else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
+                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
+            }
+        }
+        async void OnPasswordReset()
+        {
+            try
+            {
+                var userContext = await B2CAuthenticationService.Instance.ResetPasswordAsync();
+                UpdateSignInState(userContext);
+            }
+            catch (Exception ex)
+            {
+                // Alert if any exception excluding user canceling sign-in dialog
+                if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
+                    await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
+            }
+        }
+        void UpdateSignInState(UserContext userContext)
+        {
+            var isSignedIn = userContext.IsLoggedOn;
+
+            CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
+            CrossSecureStorage.Current.SetValue("SignedInFirstTime", "false");
+            CrossSecureStorage.Current.SetValue("APIKEY","thisisatoken");
+            CrossSecureStorage.Current.SetValue("Name", "");
+            CrossSecureStorage.Current.SetValue("Surname", "");
+            CrossSecureStorage.Current.SetValue("Email", "");
+
+            //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
+
+        }
+
 
         /// <summary>
         /// Enabels and disables location tracking
@@ -76,7 +151,7 @@ namespace AnorocMobileApp.Views.Navigation
                 back.Stop_Tracking();
 
                 //await DisplayAlert("Attention", "Disabled", "OK");
-                CrossToastPopUp.Current.ShowToastMessage("Lacation Tracking Disabled");
+                CrossToastPopUp.Current.ShowToastMessage("Location Tracking Disabled");
                 CrossSecureStorage.Current.SetValue("Location", "false");
             }
 
