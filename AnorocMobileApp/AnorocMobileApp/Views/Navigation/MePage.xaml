@@ -71,6 +71,9 @@
                                                 CacheValidity="14"
                                                 CachingEnabled="True"/>
                             </Image.Source>
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
                         </Image>
 
                     </border:SfBorder>
@@ -135,7 +138,8 @@
                                                       HorizontalOptions="End"
                                                       VerticalOptions="Center"
                                                       WidthRequest="32" 
-                                                      HeightRequest="31" />
+                                                      HeightRequest="31">
+                                        </svg:SVGImage>
 
                                     </Grid>
                                 </cards:SfCardView>

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
@@ -40,7 +42,10 @@ namespace AnorocMobileApp.Views.Navigation
 
             MessagingCenter.Subscribe<CheckUserIncidents>(this, "CheckUserIncidents", message =>
             {
-                UpdatedIncidentNumner();
+                Device.BeginInvokeOnMainThread(()=>
+                {
+                    UpdatedIncidentNumner();
+                });  
             });
         }
 
@@ -135,6 +140,11 @@ namespace AnorocMobileApp.Views.Navigation
                 IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
                 user.sendCarrierStatusAsync(value);
             }
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Debug.WriteLine("HERE"); 
         }
     }
 }
