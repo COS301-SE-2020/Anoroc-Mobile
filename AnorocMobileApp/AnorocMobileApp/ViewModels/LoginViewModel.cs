@@ -23,7 +23,7 @@ namespace AnorocMobileApp.Models
         /// </summary>
         public LoginViewModel()
         {
-            facebookLoginService = (Application.Current as App).FacebookLoginService;
+            //facebookLoginService = (Application.Current as App).FacebookLoginService;
             facebookLoginService.AccessTokenChanged = (string oldToken, string newToken) => FacebookLogoutCmd.ChangeCanExecute();
 
             //Test if the user has logged in already

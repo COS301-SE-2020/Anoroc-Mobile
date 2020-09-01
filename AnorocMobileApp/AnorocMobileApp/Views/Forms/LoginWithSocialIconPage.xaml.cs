@@ -24,19 +24,21 @@ namespace AnorocMobileApp.Views.Forms
         /// Initializes a new instance of the <see cref="LoginWithSocialIconPage" /> class.
         /// </summary>
 
+        NavigationPage HomePage;
         private string title = "";
         private string body = "";
 
         public LoginWithSocialIconPage()
         {
             InitializeComponent();
+           
 
-          
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            loadPage();
             var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
 
             if (signedIn != null)
@@ -54,13 +56,20 @@ namespace AnorocMobileApp.Views.Forms
                 }
             }
         }
+
+
+        async void loadPage()
+        {
+            HomePage = new NavigationPage(new BottomNavigationPage());
+        }
+
         /// <summary>
         /// Function sets Main Page to Navigation Page
         /// </summary>
         private void SignInButton_Clicked(object sender, EventArgs e)
         {
             Application.Current.MainPage = new LoadingPage();
-            OnSignInSignOut(sender,e);
+            OnSignIn(sender,e);
         }
 
         private void PasswordResetButton_Clicked(object sender, EventArgs e)
@@ -68,15 +77,15 @@ namespace AnorocMobileApp.Views.Forms
             OnPasswordReset();
         }
 
-        async void OnSignInSignOut(object sender, EventArgs e)
+        async void OnSignIn(object sender, EventArgs e)
         {
 
 
             try
             {
 
-               
-
+              
+          
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
                 
@@ -90,11 +99,12 @@ namespace AnorocMobileApp.Views.Forms
 
                     ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
 
-                    Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
+                    Application.Current.MainPage = HomePage;
 
                 }
                 else
                 {
+
                     Console.WriteLine("Error: Access Token is not available");
                     Application.Current.MainPage = new LoginWithSocialIconPage();
 
@@ -119,7 +129,7 @@ namespace AnorocMobileApp.Views.Forms
         {
             var isSignedIn = userContext.IsLoggedOn;
 
-
+            CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
             CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
             CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
             CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
