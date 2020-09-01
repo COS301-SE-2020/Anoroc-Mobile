@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using AnorocMobileApp.Exceptions;
 using AnorocMobileApp.Helpers;
@@ -17,9 +18,18 @@ namespace AnorocMobileApp.Services
     {
         HttpClient Anoroc_Client;
         HttpClientHandler clientHandler = new HttpClientHandler();
+        public static bool ServiceRunning { get; private set; }
         public UserManagementService()
         {
             clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            ServiceRunning = false;
+        }
+
+        public void StopUserManagementService()
+        {
+            ServiceRunning = false;
+            var message = new StopBackgroundUserManagementService();
+            MessagingCenter.Send(message, "StopBackgroundUserManagementService");
         }
 
         /// <summary>
@@ -149,6 +159,24 @@ namespace AnorocMobileApp.Services
                     throw new CantConnecToClusterServiceException();
                 }
             }
+        }
+
+        public int UpdatedIncidents()
+        {
+            return 0;
+        }
+
+        public async void CheckIncidents()
+        {
+            await Task.Run(async () =>
+            {
+                while (ServiceRunning)
+                {
+                    UpdatedIncidents();
+
+                    await Task.Delay(1000000);
+                }
+            }, CancellationToken.None);
         }
     }
 }

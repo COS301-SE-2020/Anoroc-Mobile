@@ -33,7 +33,7 @@ namespace AnorocMobileApp.Droid.Resources.services
                 try
                 {
                     var backgroundUserManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
-                    
+                    backgroundUserManagementService.CheckIncidents();
                 }
                 catch (System.OperationCanceledException)
                 {
