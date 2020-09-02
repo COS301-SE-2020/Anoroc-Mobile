@@ -16,8 +16,14 @@ namespace AnorocMobileApp.Models.Itinerary
         #region Public properties
         public Itinerary()
         {
-
+            
         }
+        
+        /// <summary>
+        /// Id for the itinerary
+        /// </summary>
+        public int ItineraryId { get; set; }
+        
         /// <summary>
         /// DateTime containing the date and time of the commencement of the travel
         /// </summary>
