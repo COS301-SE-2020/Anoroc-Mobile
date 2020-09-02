@@ -45,21 +45,24 @@ namespace AnorocMobileApp.Views.Navigation
 
             MessagingCenter.Subscribe<CheckUserIncidents>(this, "CheckUserIncidents", message =>
             {
-                Device.BeginInvokeOnMainThread(async ()=>
+                Device.BeginInvokeOnMainThread(()=>
                 {
                     UpdatedIncidentNumner();
+                });  
+            });
 
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
+            {
+                Device.BeginInvokeOnMainThread(async () =>
+                {
                     var ims = App.IoCContainer.GetInstance<IUserManagementService>();
                     var bytes = await ims.GetUserProfileImage();
                     if (bytes != null)
                     {
-                        Image image = new Image();
-                        Stream stream = new MemoryStream(bytes);
-                        image.Source = ImageSource.FromStream(() => { return stream; });
-
-                        _ProfileImage.Source = image.Source;
+                        Stream ms = new MemoryStream(bytes);
+                        _ProfileImage.Source = ImageSource.FromStream(() => ms);
                     }
-                });  
+                });
             });
         }
 
