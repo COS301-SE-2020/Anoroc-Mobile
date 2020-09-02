@@ -7,7 +7,9 @@ using AnorocMobileApp.Views.Notification;
 using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
@@ -19,22 +21,22 @@ namespace AnorocMobileApp.Views.Navigation
     public partial class BottomNavigationPage : TabbedPage
     {
 
-        private string title; 
+        private string title;
+        NotificationDB notificationDB = new NotificationDB();
+        NotificationModel updateNotification = new NotificationModel();
         public BottomNavigationPage()
         {
             InitializeComponent();
 
             MessagingCenter.Subscribe<object, string>(this, App.NotificationTitleReceivedKey, OnTitleMessageReceived);
 
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);            
         }
 
 
         protected override void OnAppearing()
-        {
+        {            
             base.OnAppearing();
-
-            autoUpdate();
         }
 
 
@@ -47,11 +49,11 @@ namespace AnorocMobileApp.Views.Navigation
         {
             //body = msg;
 
-            NotificationDB notificationDB = new NotificationDB()
-            {
-                Title = title,
-                Body = msg
-            };
+
+
+            notificationDB.Title = title;
+            notificationDB.Body = msg;
+            
 
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
@@ -68,7 +70,7 @@ namespace AnorocMobileApp.Views.Navigation
                     tempModel.Name = notificationDB.Body;
                     tempModel.IsRead = false;
                     tempModel.ReceivedTime = DateTime.Now.ToString();
-                    tempModel.ReceivedTime = RelativeDate(DateTime.Now);
+                    //tempModel.ReceivedTime = await RelativeDate(DateTime.Now, tempModel.ReceivedTime);          
                     page.notificationViewModel.RecentList.Insert(0, tempModel);
                 }
             }
@@ -82,32 +84,86 @@ namespace AnorocMobileApp.Views.Navigation
 
         }
 
-        public static string RelativeDate(DateTime theDate)
-        {            
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            const int SECOND = 1;
+            const int MINUTE = 60 * SECOND;
+            const int HOUR = 60 * MINUTE;
+            const int DAY = 24 * HOUR;
+            const int MONTH = 30 * DAY;
 
-            Dictionary<long, string> thresholds = new Dictionary<long, string>();
-            int minute = 60;
-            int hour = 60 * minute;
-            int day = 24 * hour;
-            thresholds.Add(60, "{0} seconds ago");
-            thresholds.Add(minute * 2, "a minute ago");
-            thresholds.Add(45 * minute, "{0} minutes ago");
-            thresholds.Add(120 * minute, "an hour ago");
-            thresholds.Add(day, "{0} hours ago");
-            thresholds.Add(day * 2, "yesterday");
-            thresholds.Add(day * 30, "{0} days ago");
-            thresholds.Add(day * 365, "{0} months ago");
-            thresholds.Add(long.MaxValue, "{0} years ago");
-            long since = (DateTime.Now.Ticks - theDate.Ticks) / 10000000;
-            foreach (long threshold in thresholds.Keys)
+            if (value == null) return string.Empty;
+
+            var current_day = DateTime.Today;
+            var postedData = (DateTime)value;
+
+            var ts = new TimeSpan(DateTime.Now.Ticks - postedData.Ticks);
+            double delta = Math.Abs(ts.TotalSeconds);
+
+            if (delta < 1 * MINUTE)
             {
-                if (since < threshold)
+                if (ts.Seconds < 0)
                 {
-                    TimeSpan t = new TimeSpan((DateTime.Now.Ticks - theDate.Ticks));
-                    return string.Format(thresholds[threshold], (t.Days > 365 ? t.Days / 365 : (t.Days > 0 ? t.Days : (t.Hours > 0 ? t.Hours : (t.Minutes > 0 ? t.Minutes : (t.Seconds > 0 ? t.Seconds : 0))))).ToString());
+                    return "sometime ago";
                 }
+                return ts.Seconds == 1 ? "One second ago" : ts.Seconds + " seconds ago";
             }
-            return "";
+
+            if (delta < 2 * MINUTE)
+                return "A minute ago";
+
+            if (delta < 45 * MINUTE)
+            {
+                if (ts.Seconds < 0)
+                {
+                    return "sometime ago";
+                }
+                return ts.Minutes + " minutes ago";
+            }
+
+            if (delta <= 90 * MINUTE)
+                return "An hour ago";
+
+            if (delta < 24 * HOUR)
+            {
+                if (ts.Hours < 0)
+                {
+                    return "sometime ago";
+                }
+
+                if (ts.Hours == 1)
+                    return "1 hour ago";
+
+                return ts.Hours + " hours ago";
+            }
+
+            if (delta < 48 * HOUR)
+                return $"Yesterday at {postedData.ToString("t")}";
+
+            if (delta < 30 * DAY)
+            {
+                if (ts.Days == 1)
+                    return "1 day ago";
+
+                return ts.Days + " days ago";
+            }
+
+
+            if (delta < 12 * MONTH)
+            {
+                int months = (int)(Math.Floor((double)ts.Days / 30));
+                return months <= 1 ? "one month ago" : months + " months ago";
+            }
+            else
+            {
+                int years = (int)(Math.Floor((double)ts.Days / 365));
+                return years <= 1 ? "one year ago" : years + " years ago";
+            }
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
 
         public void autoUpdate()
@@ -115,7 +171,7 @@ namespace AnorocMobileApp.Views.Navigation
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<NotificationDB>();
-                var notifications = conn.Table<NotificationDB>().ToList();                
+                var notifications = conn.Table<NotificationDB>().ToList();
                 //notificaitons = conn.Table<NotificationDB>().ToList();
                 conn.Close();
                 var newPage = Navigation.NavigationStack.LastOrDefault();
@@ -129,13 +185,14 @@ namespace AnorocMobileApp.Views.Navigation
                         NotificationModel tempModel = new NotificationModel();
                         tempModel.Name = n.Body;
                         tempModel.IsRead = false;
-                        tempModel.ReceivedTime = RelativeDate(DateTime.Now);
+                        //tempModel.ReceivedTime = RelativeDate(DateTime.Now);
                         //obj.RecentList.Add(tempModel);
                         page.notificationViewModel.RecentList.Insert(0, tempModel);
                     }
                 }
-               
-            }           
+
+            }
         }
     }
 }
+

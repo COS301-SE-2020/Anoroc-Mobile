@@ -190,6 +190,7 @@
       <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\services\BackgroundLocationAndroidService.cs" />
+    <Compile Include="Resources\services\BackgroundUserManagementService.cs" />
     <Compile Include="Resources\services\FacebookLoginService.cs" />
   </ItemGroup>
   <ItemGroup>

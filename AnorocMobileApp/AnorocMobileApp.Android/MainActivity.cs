@@ -23,7 +23,7 @@ using SQLite;
 
 namespace AnorocMobileApp.Droid
 {
-    [Activity(Label = "AnorocMobileApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Anoroc", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         public static ICallbackManager CallbackManager;
@@ -104,6 +104,7 @@ namespace AnorocMobileApp.Droid
 
 
             WireUpBackgroundLocationTask();
+            WireUpBackgroundUsermanagementTask();
         }
         
         //TODO: Add Force Refresh Token
@@ -145,6 +146,21 @@ namespace AnorocMobileApp.Droid
                 Preferences.Set("body", body);
             }
             
+        }
+
+        void WireUpBackgroundUsermanagementTask()
+        {
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
+            {
+                var intent = new Intent(this, typeof(BackgroundUserManagementService));
+                StartService(intent);
+            });
+
+            MessagingCenter.Subscribe<StopBackgroundUserManagementService>(this, "StopBackgroundUserManagementService", message =>
+            {
+                var intent = new Intent(this, typeof(BackgroundUserManagementService));
+                StopService(intent);
+            });
         }
 
         void WireUpBackgroundLocationTask()

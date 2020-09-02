@@ -8,28 +8,12 @@
     
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-
-        <Slider x:Name="Slider"
-                Maximum="8"
-                Minimum="0"
-                Margin="10,10,10,5"
-                VerticalOptions="FillAndExpand"
-                BackgroundColor="Black"
-                ValueChanged="Slider_ValueChanged" Grid.Row="0" />
-
-
-        <Label x:Name="SliderLabel" Text="Clusters from Today" 
-               VerticalOptions="FillAndExpand" 
-               VerticalTextAlignment="Center"
-               HorizontalOptions="Center"
-               Grid.Row="1"/>
-
-        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True" Grid.Row="2">
+        <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True" Grid.Row="0">
             <map:Map.ItemTemplate>
                 <DataTemplate>
                     <map:Pin Position="{Binding Position}"
@@ -38,6 +22,22 @@
                 </DataTemplate>
             </map:Map.ItemTemplate>
         </map:Map>
+
+        <Slider x:Name="Slider"
+                Maximum="8"
+                Minimum="0"
+                Margin="10,10,10,5"
+                VerticalOptions="FillAndExpand"
+                BackgroundColor="Black"
+                ValueChanged="Slider_ValueChanged" Grid.Row="1" />
+
+
+        <Label x:Name="SliderLabel" Text="Clusters from Today" 
+               VerticalOptions="FillAndExpand" 
+               VerticalTextAlignment="Center"
+               HorizontalOptions="Center"
+                Margin="0,0,0,10"
+               Grid.Row="2"/>
 
     </Grid>
 </ContentPage>

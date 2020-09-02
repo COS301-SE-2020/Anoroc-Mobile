@@ -81,11 +81,11 @@ namespace AnorocMobileApp.Services
             var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
             token_object.Object_To_Server = value;
-            
-            var status = value == "Positive";
-            var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);
 
-            var data = JsonConvert.SerializeObject(carrierStatus);
+            /*var status = value == "Positive";
+            var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
+
+            var data = JsonConvert.SerializeObject(token_object);
 
             var c = new StringContent(data, Encoding.UTF8, "application/json");
             c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
