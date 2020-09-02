@@ -156,9 +156,15 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-           
+            Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
+            if (stream != null)
+            {
+                _ProfileImage.Source = ImageSource.FromStream(() => stream);
+                var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                ims.UploadUserProfileImage(stream);
+            }
         }
     }
 }

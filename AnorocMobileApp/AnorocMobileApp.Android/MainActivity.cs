@@ -20,6 +20,7 @@ using System.IO;
 using Plugin.CurrentActivity;
 using Microsoft.Identity.Client;
 using SQLite;
+using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Droid
 {
@@ -29,7 +30,7 @@ namespace AnorocMobileApp.Droid
         public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
-       
+        internal static MainActivity Instance { get; private set; }
 
         readonly string[] LocationPermissions =
         {
@@ -102,9 +103,11 @@ namespace AnorocMobileApp.Droid
             string completePath = Path.Combine(folderPath, fileNmae);            
             LoadApplication(new App(completePath));
 
+            Instance = this;
 
             WireUpBackgroundLocationTask();
             WireUpBackgroundUsermanagementTask();
+
         }
         
         //TODO: Add Force Refresh Token
@@ -197,9 +200,29 @@ namespace AnorocMobileApp.Droid
                 base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             }
         }
+
+        public static readonly int PickImageId = 1000;
+
+        public TaskCompletionSource<Stream> PickImageTaskCompletionSource { set; get; }
+
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
+            if (requestCode == PickImageId)
+            {
+                if ((resultCode == Result.Ok) && (data != null))
+                {
+                    Android.Net.Uri uri = data.Data;
+                    Stream stream = ContentResolver.OpenInputStream(uri);
+
+                    // Set the Stream as the completion of the Task
+                    PickImageTaskCompletionSource.SetResult(stream);
+                }
+                else
+                {
+                    PickImageTaskCompletionSource.SetResult(null);
+                }
+            }
             AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
             CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }

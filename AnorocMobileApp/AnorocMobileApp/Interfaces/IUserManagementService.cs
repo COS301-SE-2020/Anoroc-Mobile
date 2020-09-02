@@ -11,6 +11,6 @@ namespace AnorocMobileApp.Interfaces
         void CheckIncidents();
         Task<int> UpdatedIncidents();
         Task<byte[]> GetUserProfileImage();
-        void UploadUserProfileImage(byte[] image);
+        void UploadUserProfileImage(Stream image);
     }
 }
