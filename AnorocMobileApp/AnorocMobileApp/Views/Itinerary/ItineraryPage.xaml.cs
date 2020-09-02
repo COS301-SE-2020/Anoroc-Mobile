@@ -22,29 +22,26 @@ namespace AnorocMobileApp.Views.Itinerary
         public ItineraryPage()
         {
             InitializeComponent();
+            ControlTemplate = null;
+            Resources.MergedDictionaries.Clear();
+            Content = new EmptyPage();
             ViewModel = new ItineraryPageViewModel(Navigation);
             BindingContext = ViewModel;
-            //Content = new EmptyPage();
-
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            ViewModel.PopulateItineraries();
+            //ViewModel.PopulateItineraries();
+            //CheckEmptyPage();
         }
 
-        private void EmptyPage()
+        private void CheckEmptyPage()
         {
-            var grid = new Grid()
+            if (ViewModel.Itineraries.Count == 0)
             {
-                RowDefinitions = new RowDefinitionCollection()
-                {
-                    new RowDefinition { Height = GridLength.Star },
-                    new RowDefinition { Height = GridLength.Auto }
-                }
-            };
-            
+                Content = new EmptyPage();
+            }
         }
     }
 }
