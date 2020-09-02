@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Net.Http;
 using System.Text;
 using System.Threading;
@@ -161,7 +163,7 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async Task<byte[]> GetUserProfileImage()
+        public async Task<MemoryStream> GetUserProfileImage()
         {
             var clientHandler = new HttpClientHandler
             {
@@ -189,7 +191,12 @@ namespace AnorocMobileApp.Services
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var profileImage = await responseMessage.Content.ReadAsByteArrayAsync();
-                    return profileImage;
+
+                    var ms = new MemoryStream(profileImage);
+
+                    //TODO: Save to SQLite database
+
+                    return ms;
                 }
                 else
                     return null;

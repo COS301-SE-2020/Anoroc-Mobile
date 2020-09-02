@@ -4,10 +4,12 @@ using System.Threading.Tasks;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using Plugin.Permissions;
 using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+using static Android.Manifest;
 
 namespace AnorocMobileApp.Views.Navigation
 {
@@ -142,9 +144,11 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            Debug.WriteLine("HERE"); 
+            var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+            ImageSource image = ImageSource.FromStream(await ims.GetUserProfileImage());
+            _ProfileImage.Source = image;
         }
     }
 }

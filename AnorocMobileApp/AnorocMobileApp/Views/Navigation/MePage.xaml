@@ -64,7 +64,7 @@
                                      BorderColor="{DynamicResource Gray-White}"
                                      BackgroundColor="{DynamicResource Gray-White}">
 
-                        <Image Aspect="AspectFill"
+                        <Image x:Name="_ProfileImage" Aspect="AspectFill"
                                BackgroundColor="{DynamicResource Gray-White}">
                             <Image.Source>
                                 <UriImageSource Uri="{Binding ProfileImage}"

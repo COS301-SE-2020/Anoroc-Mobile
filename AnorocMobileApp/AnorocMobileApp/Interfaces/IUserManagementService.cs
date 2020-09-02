@@ -9,7 +9,7 @@ namespace AnorocMobileApp.Interfaces
         void sendCarrierStatusAsync(string value);
         void CheckIncidents();
         Task<int> UpdatedIncidents();
-        Task<byte[]> GetUserProfileImage();
-        void UploadUserProfileImage(byte[] image);
+        Task<MemoryStream> GetUserProfileImage();
+        void UploadUserProfileImage(Task<System.Drawing.Image> image);
     }
 }
