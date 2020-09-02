@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -45,10 +46,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             Navigation = navigation;
 
             AddItineraryCommand = new Command(async () => await AddItinerary());
-            DeleteCommand = new Command(DeleteButtonClicked);
+            DeleteCommand = new Command(async obj => await DeleteButtonClicked(obj));
             ItineraryCommand = new Command(async obj => await ItineraryClicked(obj));
-            
-            PopulateItineraries();
         }
 
         #endregion
@@ -147,9 +146,14 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// Invoked when the delete button clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void DeleteButtonClicked(object obj)
+        private async Task DeleteButtonClicked(object obj)
         {
+            var delete = 99999;
+            if (obj is Models.Itinerary.Itinerary itinerary) 
+                delete = await ItineraryService.DeleteItinerary(itinerary.ItineraryRisk);
             Itineraries.Remove(obj as Models.Itinerary.Itinerary);
+            
+            Debug.WriteLine(delete);
         }
 
         private async Task ItineraryClicked(object obj)
