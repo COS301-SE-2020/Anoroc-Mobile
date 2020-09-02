@@ -138,7 +138,7 @@ namespace AnorocMobileApp.Services
                                 var json = await responseMessage.Content.ReadAsStringAsync();
                                 itineraryRisk = JsonConvert.DeserializeObject<ItineraryRiskWrapper>(json);
                                 var convertedItinerary = itineraryRisk.toItineraryRisk();
-                                saveItineraryRisk(convertedItinerary);
+                                SaveItineraryRisk(convertedItinerary);
                                 UserItineraries.Add(convertedItinerary);
                             }
                             else if (responseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
@@ -187,24 +187,25 @@ namespace AnorocMobileApp.Services
             return returnList;
         }
 
-        private void saveItineraryRisk(ItineraryRisk risk)
+        public static Task<int> DeleteItinerary(ItineraryRisk risk)
+        {
+            var primitive = new PrimitiveItineraryRisk(risk);
+            var database = new SQLiteAsyncConnection(App.FilePath);
+
+            return database.DeleteAsync<PrimitiveItineraryRisk>(risk.Id);
+        }
+        
+        private void SaveItineraryRisk(ItineraryRisk risk)
         {
             var primitiveRisk = new PrimitiveItineraryRisk(risk);
-            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            var conn = new SQLiteAsyncConnection(App.FilePath);
+            conn.CreateTableAsync<PrimitiveItineraryRisk>().Wait();
+            conn.InsertAsync(primitiveRisk).ContinueWith((t) =>
             {
-                conn.CreateTable<PrimitiveItineraryRisk>();
-
-                int rowsAdded = conn.Insert(primitiveRisk);
-                if (rowsAdded > 0)
-                {
-                    Debug.WriteLine("Inserted Itinerary");
-                }
-                else
-                {
-                    Debug.WriteLine("Failed to Insert Itinerary");
-                }
-                conn.Close();
-            }
+                Debug.WriteLine("New ID from t: {0}", t.Id);
+                Debug.WriteLine("New ID: {0} from primitiveRisk", primitiveRisk.ItineraryId);
+            });
+            conn.CloseAsync();
             var myvar = ItinerariesFromLocal();
         }
 
