@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
+using Android.Content;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
@@ -51,7 +53,7 @@ namespace AnorocMobileApp.Views.Navigation
                 });  
             });
 
-            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
+           /* MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
             {
                 Device.BeginInvokeOnMainThread(async () =>
                 {
@@ -63,7 +65,7 @@ namespace AnorocMobileApp.Views.Navigation
                         _ProfileImage.Source = ImageSource.FromStream(() => ms);
                     }
                 });
-            });
+            });*/
         }
 
         protected override void OnAppearing()
@@ -162,11 +164,15 @@ namespace AnorocMobileApp.Views.Navigation
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
+            MemoryStream copyStream = new MemoryStream();
+            await stream.CopyToAsync(copyStream);
+            copyStream.Position = 0;
             if (stream != null)
             {
-                _ProfileImage.Source = ImageSource.FromStream(() => stream);
-                var ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                ims.UploadUserProfileImage(stream);
+                _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
+                /*var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                copyStream.Position = 0;
+                ims.UploadUserProfileImage(copyStream);*/
             }
         }
     }

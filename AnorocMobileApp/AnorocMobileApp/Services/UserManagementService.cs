@@ -208,7 +208,8 @@ namespace AnorocMobileApp.Services
 
         public async void UploadUserProfileImage(Stream streamImage)
         {
-            var image = ReadToEnd(streamImage);
+            byte[] image = null;
+
             var clientHandler = new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
