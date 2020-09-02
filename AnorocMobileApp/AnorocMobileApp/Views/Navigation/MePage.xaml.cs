@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Threading.Tasks;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
@@ -44,9 +45,20 @@ namespace AnorocMobileApp.Views.Navigation
 
             MessagingCenter.Subscribe<CheckUserIncidents>(this, "CheckUserIncidents", message =>
             {
-                Device.BeginInvokeOnMainThread(()=>
+                Device.BeginInvokeOnMainThread(async ()=>
                 {
                     UpdatedIncidentNumner();
+
+                    var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                    var bytes = await ims.GetUserProfileImage();
+                    if (bytes != null)
+                    {
+                        Image image = new Image();
+                        Stream stream = new MemoryStream(bytes);
+                        image.Source = ImageSource.FromStream(() => { return stream; });
+
+                        _ProfileImage.Source = image.Source;
+                    }
                 });  
             });
         }
@@ -144,11 +156,9 @@ namespace AnorocMobileApp.Views.Navigation
             }
         }
 
-        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            var ims = App.IoCContainer.GetInstance<IUserManagementService>();
-            ImageSource image = ImageSource.FromStream(await ims.GetUserProfileImage());
-            _ProfileImage.Source = image;
+           
         }
     }
 }

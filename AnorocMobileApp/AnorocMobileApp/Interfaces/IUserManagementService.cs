@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.IO;
+using System.Threading.Tasks;
 
 namespace AnorocMobileApp.Interfaces
 {
@@ -9,7 +10,7 @@ namespace AnorocMobileApp.Interfaces
         void sendCarrierStatusAsync(string value);
         void CheckIncidents();
         Task<int> UpdatedIncidents();
-        Task<MemoryStream> GetUserProfileImage();
-        void UploadUserProfileImage(Task<System.Drawing.Image> image);
+        Task<byte[]> GetUserProfileImage();
+        void UploadUserProfileImage(byte[] image);
     }
 }

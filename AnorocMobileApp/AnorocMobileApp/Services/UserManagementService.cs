@@ -88,7 +88,7 @@ namespace AnorocMobileApp.Services
             HttpClient client = new HttpClient(clientHandler);
 
             //HttpClientHandler clientHandler = new HttpClientHandler();
-            var url = "https://10.0.2.2:5001/" + Secrets.carrierStatusEndpoint;
+            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
 
             var token_object = new Token();
             token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
@@ -163,7 +163,7 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async Task<MemoryStream> GetUserProfileImage()
+        public async Task<byte[]> GetUserProfileImage()
         {
             var clientHandler = new HttpClientHandler
             {
@@ -196,7 +196,7 @@ namespace AnorocMobileApp.Services
 
                     //TODO: Save to SQLite database
 
-                    return ms;
+                    return profileImage;
                 }
                 else
                     return null;
