@@ -62,14 +62,15 @@ namespace AnorocMobileApp.Views.Navigation
 
         private void SignOutButton_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new LoadingPage();
+            //Application.Current.MainPage = new LoadingPage();
             OnSignOut(sender, e);
         }
         async void OnSignOut(object sender, EventArgs e)
         {
+            NotificationService notificationService = new NotificationService();
+            await notificationService.test();
 
-
-            try
+            /*try
             {
 
 
@@ -100,7 +101,7 @@ namespace AnorocMobileApp.Views.Navigation
                 // Alert if any exception excluding user canceling sign-in dialog
                 else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
                     await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
-            }
+            }*/
         }
         async void OnPasswordReset()
         {

@@ -70,7 +70,7 @@ namespace AnorocMobileApp.Views.Navigation
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification(title, msg);
+                DependencyService.Get<PushNotificationServices>().CreateNotification(title, msg);
             });
 
         }

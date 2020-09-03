@@ -2,7 +2,7 @@
 
 namespace AnorocMobileApp.Services
 {
-    public interface NotificationServices
+    public interface PushNotificationServices
     {
         void CreateNotification(String title, String message);
 

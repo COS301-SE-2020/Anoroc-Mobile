@@ -11,7 +11,7 @@ using Xamarin.Forms;
 [assembly:Dependency(typeof(NotificationHelper))]
 namespace AnorocMobileApp.Droid
 {
-    class NotificationHelper : Services.NotificationServices
+    class NotificationHelper : Services.PushNotificationServices
     {
         private Context mContext;
         private NotificationManager mNotificationManager;

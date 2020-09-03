@@ -17,7 +17,7 @@ namespace AnorocMobileApp.Models
         public static string TenantId = "f5f6b221-9383-4138-9841-789904213bd8";
         public static string ClientId = "841e1d06-26d5-4092-a0b0-c75823ed2671";
         public static string ClientSecret = "SP_f6~Ny_s81.8v4ZfFO5Xfv9~0.jT05tT";
-        public static string BaseAddress = "https://localhost:5001/Notification/test";
+        public static string BaseAddress = "https://10.0.2.2:5001/Notification/test";
         public static string ResourceId = "https://anorocb2c.onmicrosoft.com/dbaaace6-f645-4e57-9f08-8f809470175c";
 
         public static string[] Scopes = { "https://anorocb2c.onmicrosoft.com/cc5bb58e-b34f-41db-80d4-1d8b33d40038/read" };
