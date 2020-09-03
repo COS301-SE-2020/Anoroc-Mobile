@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
@@ -80,7 +81,14 @@ namespace AnorocMobileApp.Views.Forms
         async void OnSignIn(object sender, EventArgs e)
         {
 
+            //AuthConfig config = AuthConfig.ReadFromJsonFile("secrets.json");
 
+            Console.WriteLine($"Authority: {B2CConstants.Authority}");
+
+
+            Console.WriteLine("Making the call...");
+            RunAsync().GetAwaiter().GetResult();
+            /*
             try
             {
 
@@ -93,11 +101,13 @@ namespace AnorocMobileApp.Views.Forms
                 {
                
                     /*Console.WriteLine("Access Token: " + userContext.AccessToken);
-                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;*/
+                    Application.Current.Properties["TOKEN"] = userContext.AccessToken;
                     IUserManagementService ims =  App.IoCContainer.GetInstance<IUserManagementService>();
                     //Application.Current.Properties["TOKEN"] = userContext.AccessToken;
 
                     ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
+
+
 
                     Application.Current.MainPage = HomePage;
 
@@ -121,10 +131,51 @@ namespace AnorocMobileApp.Views.Forms
                 // Alert if any exception excluding user canceling sign-in dialog
                 else if (((ex as MsalException)?.ErrorCode != "authentication_canceled"))
                     await DisplayAlert($"Exception:", ex.ToString(), "Dismiss");
-            }
+            }*/
         }
 
+        private static async Task RunAsync()
+        {
+            
 
+            IConfidentialClientApplication app;
+
+            app = ConfidentialClientApplicationBuilder.Create(B2CConstants.ClientId)
+                .WithClientSecret(B2CConstants.ClientSecret)
+                .WithAuthority(new Uri(B2CConstants.Authority))
+                .Build();
+
+            string[] ResourceIds = new string[] { B2CConstants.ResourceId };
+
+            AuthenticationResult result = null;
+            try
+            {
+                result = await app.AcquireTokenForClient(ResourceIds).ExecuteAsync();
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("Token acquired \n");
+                Console.WriteLine(result.AccessToken);
+                Console.ResetColor();
+            }
+            catch (MsalClientException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(ex.Message);
+                Console.ResetColor();
+            }
+        }
+        /*
+        private static async Task getAuthToken()
+        {
+
+            IConfidentialClientApplication app;
+            app = ConfidentialClientApplicationBuilder.Create(B2CConstants.ClientId)
+          .WithClientSecret(B2CConstants.ClientSecret)
+          .WithAuthority(new Uri(B2CConstants.Authority))
+          .Build();
+
+
+        }
+        */
         void UpdateSignInState(UserContext userContext)
         {
             var isSignedIn = userContext.IsLoggedOn;

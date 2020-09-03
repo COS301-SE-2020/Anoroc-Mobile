@@ -111,7 +111,7 @@ namespace AnorocMobileApp.Services
             var newContext = UpdateUserInfo(authResult);
             return newContext;
         }
-
+         
         public async Task<UserContext> SignOutAsync()
         {
 
