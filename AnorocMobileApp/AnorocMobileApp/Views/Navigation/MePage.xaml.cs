@@ -35,7 +35,7 @@ namespace AnorocMobileApp.Views.Navigation
         public MePage()
         {
             InitializeComponent();
-
+            //_ProfileImage.Source = ImageSource.FromUri(new Uri(Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "profilepicture.jpg")));
             if (Application.Current.Properties.ContainsKey("CarrierStatus"))
             {
                 var value = Application.Current.Properties["CarrierStatus"].ToString();
@@ -53,19 +53,21 @@ namespace AnorocMobileApp.Views.Navigation
                 });  
             });
 
-           /* MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
-            {
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    var ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                    var bytes = await ims.GetUserProfileImage();
-                    if (bytes != null)
-                    {
-                        Stream ms = new MemoryStream(bytes);
-                        _ProfileImage.Source = ImageSource.FromStream(() => ms);
-                    }
-                });
-            });*/
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+             {
+                 var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                 var bytes = await ims.GetUserProfileImage();
+                 if (bytes != null)
+                 {
+                     MemoryStream ms = new MemoryStream(bytes);
+                     ms.Position = 0;
+                     MemoryStream otherstream = new MemoryStream();
+                     ms.CopyTo(otherstream);
+                     otherstream.Position = 0;
+
+                     _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
+                 }
+             });
         }
 
         protected override void OnAppearing()
@@ -165,14 +167,23 @@ namespace AnorocMobileApp.Views.Navigation
         {
             Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
             MemoryStream copyStream = new MemoryStream();
-            await stream.CopyToAsync(copyStream);
-            copyStream.Position = 0;
+            
             if (stream != null)
             {
-                _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
-                /*var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                await stream.CopyToAsync(copyStream);
                 copyStream.Position = 0;
-                ims.UploadUserProfileImage(copyStream);*/
+                MemoryStream ms = new MemoryStream();
+                await copyStream.CopyToAsync(ms);
+                copyStream.Position = 0;
+
+                _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
+                
+                DependencyService.Get<IPhotoPickerService>().SavePicture("profilepicture.jpg", ms, "image");
+
+               /* ms.Position = 0;
+                var bytes = ms.ToArray();
+                var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                ims.UploadUserProfileImage(bytes);*/
             }
         }
     }

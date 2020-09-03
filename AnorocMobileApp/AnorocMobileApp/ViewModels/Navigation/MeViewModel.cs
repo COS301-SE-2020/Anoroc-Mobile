@@ -3,6 +3,7 @@ using Xamarin.Forms.Internals;
 using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
+using System.IO;
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
@@ -60,7 +61,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             //cardItems.Add();                            
             //CardItem button onPress={() => Alert.alert('hi')}
 
-            this.ProfileImage = App.BaseImageUrl + "ProfileImage16.png";
+            this.ProfileImage = Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "profilepicture.jpg");
             this.ProfileName = "Anoroc Van Looi";
             this.State = "Gauteng";
             this.Country = "South Africa";

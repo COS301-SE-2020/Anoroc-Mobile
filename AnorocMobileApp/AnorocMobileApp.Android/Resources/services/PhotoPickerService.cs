@@ -38,13 +38,14 @@ namespace AnorocMobileApp.Droid.Resources.services
             return MainActivity.Instance.PickImageTaskCompletionSource.Task;
         }
 
-        public void SavePicture(string name, Stream data, string location = "temp")
+        public void SavePicture(string name, MemoryStream data, string location = "temp")
         {
+            data.Position = 0;
             var documentsPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            documentsPath = Path.Combine(documentsPath, "Orders", location);
+            documentsPath = Path.Combine(documentsPath, "UserProfileImage", location);
             Directory.CreateDirectory(documentsPath);
 
-            string filePath = Path.Combine(documentsPath, name);
+            string filePath = Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, name);
             byte[] bArray = new byte[data.Length];
             using (FileStream fs = new FileStream(filePath, FileMode.OpenOrCreate))
             {

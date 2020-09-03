@@ -206,9 +206,8 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async void UploadUserProfileImage(Stream streamImage)
+        public async void UploadUserProfileImage(byte[] image)
         {
-            byte[] image = null;
 
             var clientHandler = new HttpClientHandler
             {

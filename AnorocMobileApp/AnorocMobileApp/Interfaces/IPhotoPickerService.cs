@@ -9,6 +9,6 @@ namespace AnorocMobileApp.Interfaces
     public interface IPhotoPickerService
     {
         Task<Stream> GetImageStreamAsync();
-        void SavePicture(string name, Stream data, string location = "temp");
+        void SavePicture(string name, MemoryStream data, string location = "temp");
     }
 }
