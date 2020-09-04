@@ -51,10 +51,6 @@
     <EmbeddedResource Update="Views\Itinerary\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator></Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -118,9 +114,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Services\FacebookLogin.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -144,7 +137,7 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Forms\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\BottomNavigationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
