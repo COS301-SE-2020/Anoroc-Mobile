@@ -57,7 +57,7 @@ namespace AnorocMobileApp.Views.Navigation
              {
                  var ims = App.IoCContainer.GetInstance<IUserManagementService>();
                  var base64 = await ims.GetUserProfileImage();
-                 if (base64 != null)
+                 if (base64 != "")
                  {
                      var bytes = Convert.FromBase64String(base64);
                      MemoryStream ms = new MemoryStream(bytes);
