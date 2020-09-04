@@ -61,7 +61,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             //cardItems.Add();                            
             //CardItem button onPress={() => Alert.alert('hi')}
 
-            this.ProfileImage = Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "profilepicture.jpg");
+            this.ProfileImage = App.BaseImageUrl + "profilepicture.jpg";
             this.ProfileName = "Anoroc Van Looi";
             this.State = "Gauteng";
             this.Country = "South Africa";

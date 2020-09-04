@@ -68,6 +68,12 @@ namespace AnorocMobileApp.Views.Navigation
 
                      _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
                  }
+                 else
+                 {
+                     _ProfileImage.Source = Device.RuntimePlatform == Device.Android
+                                    ? ImageSource.FromFile("pngfuel.com.png")
+                                    : ImageSource.FromFile("Images/pngfuel.com.png");
+                 }
              });
         }
 
