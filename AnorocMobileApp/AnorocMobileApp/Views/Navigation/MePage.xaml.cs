@@ -46,14 +46,6 @@ namespace AnorocMobileApp.Views.Navigation
                     picker.SelectedIndex = 1;
             }
 
-            MessagingCenter.Subscribe<CheckUserIncidents>(this, "CheckUserIncidents", message =>
-            {
-                Device.BeginInvokeOnMainThread(()=>
-                {
-                    UpdatedIncidentNumner();
-                });  
-            });
-
             
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
              {
@@ -76,6 +68,7 @@ namespace AnorocMobileApp.Views.Navigation
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            UpdatedIncidentNumner();
             var name = CrossSecureStorage.Current.GetValue("Name");
             var surname = CrossSecureStorage.Current.GetValue("Surname");
 

@@ -106,7 +106,7 @@ namespace AnorocMobileApp.Droid
             Instance = this;
 
             WireUpBackgroundLocationTask();
-            WireUpBackgroundUsermanagementTask();
+            //WireUpBackgroundUsermanagementTask();
 
         }
         
