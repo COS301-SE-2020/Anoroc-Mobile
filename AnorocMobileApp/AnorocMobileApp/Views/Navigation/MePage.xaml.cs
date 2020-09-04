@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Reflection;
-using System.Threading.Tasks;
-using Android.Content;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-using Plugin.Permissions;
 using Plugin.SecureStorage;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
-using static Android.Manifest;
 
 namespace AnorocMobileApp.Views.Navigation
 {
