@@ -12,6 +12,7 @@ using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Views;
 using Newtonsoft.Json;
+using SQLite;
 using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
@@ -165,51 +166,104 @@ namespace AnorocMobileApp.Services
 
         public async Task<string> GetUserProfileImage()
         {
-            var clientHandler = new HttpClientHandler
+            var localImage = checkLocalImage();
+            if (localImage != "")
             {
-                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-            };
-
-            var client = new HttpClient(clientHandler);
-            Token token_object = new Token();
-            token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = "";
-
-            var data = JsonConvert.SerializeObject(token_object);
-
-            var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-            stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.GetUserProfileImageEndpoint);
-            HttpResponseMessage responseMessage;
-
-            try
+                return localImage;
+            }
+            else
             {
-                responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
-
-                if (responseMessage.IsSuccessStatusCode)
+                var clientHandler = new HttpClientHandler
                 {
-                    var profileImage = await responseMessage.Content.ReadAsStringAsync();
-                  
-                    //TODO: Save to SQLite database
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
 
-                    return profileImage;
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.GetUserProfileImageEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var profileImage = await responseMessage.Content.ReadAsStringAsync();
+
+                        //TODO: Save to SQLite database
+
+                        return profileImage;
+                    }
+                    else
+                        return null;
+
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
+            }
+        }
+
+        protected string checkLocalImage()
+        {
+            string return64 = "";
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                try
+                {
+                    var userImage = conn.Table<ProfileImage>().FirstOrDefault();
+                    if (userImage != null)
+                    {
+                        return64 = userImage.Base64;
+                    }
+                }
+                catch(SQLiteException)
+                {
+
+                }
+            }
+            return return64;
+        }
+
+        protected void saveProfileImage(string image)
+        {
+            ProfileImage profileImage = new ProfileImage();
+            profileImage.Base64 = image;
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                conn.DropTable<ProfileImage>();
+
+                conn.CreateTable<ProfileImage>();
+
+                int rowsAdded = conn.Insert(profileImage);
+                if (rowsAdded > 0)
+                {
+                    Debug.WriteLine("Inserted Itinerary");
                 }
                 else
-                    return null;
-
-            }
-            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-            {
-                throw new CantConnecToClusterServiceException();
+                {
+                    Debug.WriteLine("Failed to Insert Itinerary");
+                }
+                conn.Close();
             }
         }
 
         public async void UploadUserProfileImage(string image)
         {
+            saveProfileImage(image);
 
-            var clientHandler = new HttpClientHandler
+               var clientHandler = new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
             };

@@ -10,6 +10,7 @@
              xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:svg="clr-namespace:AnorocMobileApp.Controls"
              xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Navigation"
+             xmlns:local="clr-namespace:AnorocMobileApp.Helpers"
              x:Class="AnorocMobileApp.Views.Navigation.MePage"
              NavigationPage.HasNavigationBar="False">
 
@@ -65,12 +66,9 @@
                                      BackgroundColor="{DynamicResource Gray-White}">
 
                         <Image x:Name="_ProfileImage" Aspect="AspectFill"
-                               BackgroundColor="{DynamicResource Gray-White}">
-                            <Image.Source>
-                                <UriImageSource Uri="{Binding ProfileImage}"
-                                                CacheValidity="14"
-                                                CachingEnabled="True"/>
-                            </Image.Source>
+                               BackgroundColor="{DynamicResource Gray-White}"
+                               Source="{local:ImageResource AnorocMobileApp.Images.pngfuel.com.png}">
+                           
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                             </Image.GestureRecognizers>

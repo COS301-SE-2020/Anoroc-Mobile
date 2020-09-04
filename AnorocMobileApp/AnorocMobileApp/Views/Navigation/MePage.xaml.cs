@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Threading.Tasks;
 using Android.Content;
 using AnorocMobileApp.Interfaces;
@@ -53,6 +54,7 @@ namespace AnorocMobileApp.Views.Navigation
                 });  
             });
 
+            
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
              {
                  var ims = App.IoCContainer.GetInstance<IUserManagementService>();
@@ -67,12 +69,6 @@ namespace AnorocMobileApp.Views.Navigation
                      otherstream.Position = 0;
 
                      _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
-                 }
-                 else
-                 {
-                     _ProfileImage.Source = Device.RuntimePlatform == Device.Android
-                                    ? ImageSource.FromFile("pngfuel.com.png")
-                                    : ImageSource.FromFile("Images/pngfuel.com.png");
                  }
              });
         }

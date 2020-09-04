@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
+using System.IO;
 
 namespace AnorocMobileApp
 {
@@ -57,7 +58,7 @@ namespace AnorocMobileApp
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
             MainPage = new LoginWithSocialIconPage();
-
+            
             FilePath = filePath;
         }
 

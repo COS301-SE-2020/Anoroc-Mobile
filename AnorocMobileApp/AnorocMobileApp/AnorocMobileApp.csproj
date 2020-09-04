@@ -18,6 +18,7 @@
     <None Remove="Images\CaloriesEaten.svg" />
     <None Remove="Images\HeartRate.svg" />
     <None Remove="Images\EmptyItinerary.svg" />
+    <None Remove="Images\pngfuel.com.png" />
     <None Remove="Images\SleepDuration.svg" />
     <None Remove="Images\WaterConsumed.svg" />
     <None Remove="places.json" />
@@ -101,6 +102,10 @@
     <Reference Include="Mono.Android">
       <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\pngfuel.com.png" />
   </ItemGroup>
 
   <ItemGroup>
