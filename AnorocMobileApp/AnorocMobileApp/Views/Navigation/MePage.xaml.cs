@@ -56,9 +56,10 @@ namespace AnorocMobileApp.Views.Navigation
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
              {
                  var ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                 var bytes = await ims.GetUserProfileImage();
-                 if (bytes != null)
+                 var base64 = await ims.GetUserProfileImage();
+                 if (base64 != null)
                  {
+                     var bytes = Convert.FromBase64String(base64);
                      MemoryStream ms = new MemoryStream(bytes);
                      ms.Position = 0;
                      MemoryStream otherstream = new MemoryStream();
@@ -177,13 +178,12 @@ namespace AnorocMobileApp.Views.Navigation
                 copyStream.Position = 0;
 
                 _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
-                
-                DependencyService.Get<IPhotoPickerService>().SavePicture("profilepicture.jpg", ms, "image");
 
-               /* ms.Position = 0;
+                ms.Position = 0;
                 var bytes = ms.ToArray();
+                string base64 = System.Convert.ToBase64String(bytes);
                 var ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                ims.UploadUserProfileImage(bytes);*/
+                ims.UploadUserProfileImage(base64);
             }
         }
     }

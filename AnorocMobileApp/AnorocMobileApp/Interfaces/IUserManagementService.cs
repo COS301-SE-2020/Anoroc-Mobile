@@ -11,7 +11,7 @@ namespace AnorocMobileApp.Interfaces
         void sendCarrierStatusAsync(string value);
         void CheckIncidents();
         Task<int> UpdatedIncidents();
-        Task<byte[]> GetUserProfileImage();
-        void UploadUserProfileImage(byte[] image);
+        Task<string> GetUserProfileImage();
+        void UploadUserProfileImage(string image);
     }
 }

@@ -163,7 +163,7 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async Task<byte[]> GetUserProfileImage()
+        public async Task<string> GetUserProfileImage()
         {
             var clientHandler = new HttpClientHandler
             {
@@ -190,7 +190,7 @@ namespace AnorocMobileApp.Services
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    var profileImage = await responseMessage.Content.ReadAsByteArrayAsync();
+                    var profileImage = await responseMessage.Content.ReadAsStringAsync();
                   
                     //TODO: Save to SQLite database
 
@@ -206,7 +206,7 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async void UploadUserProfileImage(byte[] image)
+        public async void UploadUserProfileImage(string image)
         {
 
             var clientHandler = new HttpClientHandler
@@ -217,8 +217,7 @@ namespace AnorocMobileApp.Services
             var client = new HttpClient(clientHandler);
             Token token_object = new Token();
             token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = "";
-            token_object.Profile_image = image;
+            token_object.Object_To_Server = image;
 
             var data = JsonConvert.SerializeObject(token_object);
 
