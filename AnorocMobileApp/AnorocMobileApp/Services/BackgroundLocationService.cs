@@ -13,13 +13,9 @@ namespace AnorocMobileApp.Services
 {
     public class BackgroundLocationService : IBackgroundLocationService
     {
-
-        Models.Location User_Location;
         GeolocationRequest request;
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
-        private int request_count;
-        
         public static bool Tracking;
 
         public BackgroundLocationService()
@@ -29,9 +25,6 @@ namespace AnorocMobileApp.Services
             Initial_Backoff = 15;
             _Backoff = Initial_Backoff;
             Modifier = 1.6;
-            request_count = 0;
-            User_Location = new Models.Location();
-
             Track_Retry = 0;
         }
 

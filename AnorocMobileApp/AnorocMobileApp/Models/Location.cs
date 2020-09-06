@@ -45,13 +45,10 @@ namespace AnorocMobileApp.Models
         public Location(Xamarin.Essentials.Location loc)
         {
             this.Created = DateTime.Now;
-            Carrier_Data_Point = false;
-
+            Carrier_Data_Point = User.carrierStatus;
             Latitude = loc.Latitude;
             Longitude = loc.Longitude;
-
             GetRegion();
-           
         }
 
         public Location(double lat, double longC, DateTime dateTime, bool carrier)
