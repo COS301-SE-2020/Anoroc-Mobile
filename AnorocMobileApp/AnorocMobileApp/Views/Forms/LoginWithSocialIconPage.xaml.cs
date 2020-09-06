@@ -39,7 +39,8 @@ namespace AnorocMobileApp.Views.Forms
         {
             base.OnAppearing();
             loadPage();
-            var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
+            //var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
+            var signedIn = Application.Current.Properties["RememberMe"];
 
             if (signedIn != null)
             {
@@ -130,6 +131,7 @@ namespace AnorocMobileApp.Views.Forms
             var isSignedIn = userContext.IsLoggedOn;
 
             CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
+            Application.Current.Properties["RememberMe"] = "true";
             CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
             CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
             CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);

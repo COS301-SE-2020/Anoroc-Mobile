@@ -22,9 +22,9 @@ namespace AnorocMobileApp
 
         public const string FirebaseTokenKey = "FirebaseRecieved";
 
-        
 
 
+    
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
@@ -45,6 +45,7 @@ namespace AnorocMobileApp
 
         public App(string filePath)
         {
+            Application.Current.Properties["RememberMe"] = "false";
             IoCContainer = new Container();
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
