@@ -143,6 +143,7 @@ namespace AnorocMobileApp.Views.Navigation
                 //BackgroundLocaitonService.Tracking = true;
                 back.Start_Tracking();
                 CrossSecureStorage.Current.SetValue("Location", "true");
+                CrossToastPopUp.Current.ShowToastMessage("Location Tracking Enabled");
 
             }
             else
