@@ -42,33 +42,37 @@ namespace AnorocMobileApp.Services
 
         public async void SendFireBaseToken(string firebasetoken)
         {
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                Token token_object = new Token();
-                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-                token_object.Object_To_Server = firebasetoken;
-
-                var data = JsonConvert.SerializeObject(token_object);
-
-                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
-                HttpResponseMessage responseMessage;
-
-                try
+                using (Anoroc_Client = new HttpClient(clientHandler))
                 {
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+                    Token token_object = new Token();
 
-                    if (responseMessage.IsSuccessStatusCode)
+                    token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                    token_object.Object_To_Server = firebasetoken;
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+                    var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                    stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                    Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
+                    HttpResponseMessage responseMessage;
+
+                    try
                     {
-                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+
+                        if (responseMessage.IsSuccessStatusCode)
+                        {
+                            var json = await responseMessage.Content.ReadAsStringAsync();
+                        }
                     }
-                }
-                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    throw new CantConnecToClusterServiceException();
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        throw new CantConnecToClusterServiceException();
+                    }
                 }
             }
         }
@@ -147,10 +151,12 @@ namespace AnorocMobileApp.Services
                         if (json != null)
                         {
                             Application.Current.Properties["TOKEN"] = json;
-                            string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
-                            IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                            ims.SendFireBaseToken(firebaseToken);
-
+                            if (Application.Current.Properties.ContainsKey("FirebaseToken"))
+                            {
+                                string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
+                                IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                                ims.SendFireBaseToken(firebaseToken);
+                            }
                             //notify all listeners of successfull login
                             var message = new UserLoggedIn();
                             MessagingCenter.Send(message, "UserLoggedIn");

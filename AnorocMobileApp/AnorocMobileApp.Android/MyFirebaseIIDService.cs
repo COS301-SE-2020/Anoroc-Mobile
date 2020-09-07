@@ -28,6 +28,7 @@ namespace AnorocMobileApp.Droid
         {
             var refreshedToken = FirebaseInstanceId.Instance.Token;
             Console.WriteLine($"Token wire up: {refreshedToken}");
+            App.Current.Properties["FirebaseToken"] = refreshedToken;
             MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.FirebaseTokenKey, refreshedToken);
            // SendRegistrationToServer(refreshedToken);
         }
