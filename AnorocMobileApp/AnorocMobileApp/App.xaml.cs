@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
+using System.IO;
 
 namespace AnorocMobileApp
 {
@@ -17,10 +18,14 @@ namespace AnorocMobileApp
     {
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
-        
+
+
         public const string FirebaseTokenKey = "FirebaseRecieved";
 
-        public static int ScreenWidth;
+
+
+    
+        static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
@@ -31,11 +36,16 @@ namespace AnorocMobileApp
         //Container Set up
         public static Container IoCContainer { get; set; }
         //-------------------------------------------------------------------------------------------------
-        
+
+
+
         public static string FilePath;
+
+
 
         public App(string filePath)
         {
+            Application.Current.Properties["RememberMe"] = "false";
             IoCContainer = new Container();
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
@@ -49,16 +59,59 @@ namespace AnorocMobileApp
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
             MainPage = new LoginWithSocialIconPage();
-
+            
             FilePath = filePath;
         }
-        
+
+
+
+
+        public App()
+        {  
+            InitializeComponent();
+            /*//Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+
+          
+
+            DependencyService.Register<B2CAuthenticationService>();
+
+          
+
+            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
+
+
+            MainPage = new LoginWithSocialIconPage();
+
+            //Defualt lifestle
+            IoCContainer = new Container();
+            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
+            *//*
+            // Dependancy Injections:
+            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
+            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
+            *//*
+
+            //Register Syncfusion license
+            InitializeComponent();
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
+           
+            MainPage = new NavigationPage(new BottomNavigationPage());*/
+        }
         void OnKeyReceived(object sender, string key)
         {
             Current.Properties["FirebaseToken"] = key;
-           // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
+            userManagementService.SendFireBaseToken(key);
+            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
-        
+ 
+
         protected override void OnStart()
         {
             LoadPersistentValues();

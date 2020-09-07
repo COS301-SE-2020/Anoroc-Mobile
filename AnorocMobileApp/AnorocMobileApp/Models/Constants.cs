@@ -1,4 +1,6 @@
-﻿namespace AnorocMobileApp.Models
+﻿using AnorocMobileApp.Helpers;
+
+namespace AnorocMobileApp.Models
 {
     public class Constants
     {
@@ -11,7 +13,7 @@
         public static readonly string googleAPIKey = "//KEY HERE//";
         public static readonly string clientID = $"{googleAPIKey}.apps.googleusercontent.com";
         public static readonly string redirectUrl = $"com.googleusercontent.apps.{googleAPIKey}:/oauth2redirect";
-        public static readonly string AnorocURI = "https://anoroc-server.azurewebsites.net/";
+        public static readonly string AnorocURI = Secrets.baseEndpoint;
          public static bool IsDev = true;
         public static readonly string GoogleClientID = "googleID on google project .apps.googleusercontent.com";
         public static readonly string GoogleClientSecret = "google secret on google project";

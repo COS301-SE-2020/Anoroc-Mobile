@@ -18,6 +18,7 @@
     <None Remove="Images\CaloriesEaten.svg" />
     <None Remove="Images\HeartRate.svg" />
     <None Remove="Images\EmptyItinerary.svg" />
+    <None Remove="Images\pngfuel.com.png" />
     <None Remove="Images\SleepDuration.svg" />
     <None Remove="Images\WaterConsumed.svg" />
     <None Remove="places.json" />
@@ -58,6 +59,7 @@
     <PackageReference Include="Microsoft.Identity.Client" Version="4.17.0" />
     <PackageReference Include="Mobile.BuildTools" Version="1.4.0.638" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
     <PackageReference Include="sameerIOTApps.Plugin.SecureStorage" Version="2.5.0" />
     <PackageReference Include="SimpleInjector" Version="5.0.3" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
@@ -90,6 +92,16 @@
     <PackageReference Include="Behaviors.Forms" Version="1.4.0" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
     <PackageReference Include="Plugin.Toast" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\pngfuel.com.png" />
   </ItemGroup>
 
   <ItemGroup>
