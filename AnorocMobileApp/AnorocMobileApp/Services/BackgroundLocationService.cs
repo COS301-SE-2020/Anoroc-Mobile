@@ -18,6 +18,7 @@ namespace AnorocMobileApp.Services
         ILocationService LocationService;
         public static bool Tracking;
         protected static DateTime LastSent;
+        protected readonly double MetersConsidedUserMoved;
         public BackgroundLocationService()
         {
             LocationService = App.IoCContainer.GetInstance<ILocationService>();
@@ -26,6 +27,7 @@ namespace AnorocMobileApp.Services
             _Backoff = Initial_Backoff;
             Modifier = 1.6;
             Track_Retry = 0;
+            MetersConsidedUserMoved = 0.011;
         }
 
         /// <summary>
@@ -97,7 +99,7 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
                     await customLocation.GetRegion();
 
-                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.011)
+                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
                     {
                         _Backoff = Initial_Backoff;
                         Track_Retry = 0;
