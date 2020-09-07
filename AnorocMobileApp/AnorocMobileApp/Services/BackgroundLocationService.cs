@@ -97,7 +97,7 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
                     await customLocation.GetRegion();
 
-                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
+                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.011)
                     {
                         _Backoff = Initial_Backoff;
                         Track_Retry = 0;
@@ -109,10 +109,6 @@ namespace AnorocMobileApp.Services
                         {
                             _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
                             Track_Retry++;
-                        }
-                        else
-                        {
-                            SendUserLocation(customLocation);
                         }
                     }
                 }
