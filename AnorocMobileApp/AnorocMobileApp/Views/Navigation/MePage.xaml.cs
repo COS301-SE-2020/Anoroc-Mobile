@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Net;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
@@ -37,8 +38,11 @@ namespace AnorocMobileApp.Views.Navigation
                 else
                     picker.SelectedIndex = 1;
             }
+            else
+                picker.SelectedIndex = 1;
 
-            
+
+
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
              {
                  var ims = App.IoCContainer.GetInstance<IUserManagementService>();
@@ -56,6 +60,8 @@ namespace AnorocMobileApp.Views.Navigation
                  }
              });
         }
+
+
 
         protected override void OnAppearing()
         {
