@@ -45,26 +45,38 @@ public class UserManagementService : IUserManagementService
     {
         using (Anoroc_Client = new HttpClient(clientHandler))
         {
-            Token token_object = new Token();
-            token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = firebasetoken;
 
-            var data = JsonConvert.SerializeObject(token_object);
-
-            var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-            stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
-            HttpResponseMessage responseMessage;
-
-            try
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
-
-                if (responseMessage.IsSuccessStatusCode)
+                using (Anoroc_Client = new HttpClient(clientHandler))
                 {
-                    var json = await responseMessage.Content.ReadAsStringAsync();
+                    Token token_object = new Token();
+
+                    token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                    token_object.Object_To_Server = firebasetoken;
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+
+                    var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                    stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                    Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
+                    HttpResponseMessage responseMessage;
+
+                    try
+                    {
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+
+                        if (responseMessage.IsSuccessStatusCode)
+                        {
+                            var json = await responseMessage.Content.ReadAsStringAsync();
+                        }
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
+                        throw new CantConnecToClusterServiceException();
+                    }
                 }
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
@@ -147,14 +159,20 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
                     var json = await responseMessage.Content.ReadAsStringAsync();
                     if (json != null)
                     {
-                        Application.Current.Properties["TOKEN"] = json;
-                        string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
-                        IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                        ims.SendFireBaseToken(firebaseToken);
-
-                        //notify all listeners of successfull login
-                        var message = new UserLoggedIn();
-                        MessagingCenter.Send(message, "UserLoggedIn");
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        if (json != null)
+                        {
+                            Application.Current.Properties["TOKEN"] = json;
+                            if (Application.Current.Properties.ContainsKey("FirebaseToken"))
+                            {
+                                string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
+                                IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                                ims.SendFireBaseToken(firebaseToken);
+                            }
+                            //notify all listeners of successfull login
+                            var message = new UserLoggedIn();
+                            MessagingCenter.Send(message, "UserLoggedIn");
+                        }
                     }
                 }
             }

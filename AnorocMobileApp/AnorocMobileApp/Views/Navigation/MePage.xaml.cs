@@ -66,7 +66,10 @@ namespace AnorocMobileApp.Views.Navigation
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            UpdatedIncidentNumner();
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                UpdatedIncidentNumner();
+            }
             var name = CrossSecureStorage.Current.GetValue("Name");
             var surname = CrossSecureStorage.Current.GetValue("Surname");
 
