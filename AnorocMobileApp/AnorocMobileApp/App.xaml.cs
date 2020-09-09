@@ -67,48 +67,14 @@ namespace AnorocMobileApp
 
 
         public App()
-        {  
+        {
             InitializeComponent();
-            /*//Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
-          
-
-            DependencyService.Register<B2CAuthenticationService>();
-
-          
-
-            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
-
-
-            MainPage = new LoginWithSocialIconPage();
-
-            //Defualt lifestle
-            IoCContainer = new Container();
-            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
-            // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
-            *//*
-            // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
-            *//*
-
-            //Register Syncfusion license
-            InitializeComponent();
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-           
-            MainPage = new NavigationPage(new BottomNavigationPage());*/
         }
         void OnKeyReceived(object sender, string key)
         {
             Current.Properties["FirebaseToken"] = key;
             IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
             userManagementService.SendFireBaseToken(key);
-            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
  
 
@@ -142,10 +108,7 @@ namespace AnorocMobileApp
             if (Current.Properties.ContainsKey("CarrierStatus"))
             {
                 // Use Carrier status
-                if (Current.Properties["CarrierStatus"].ToString() == "Positive")
-                    User.carrierStatus = true;
-                else
-                    User.carrierStatus = false;
+                User.carrierStatus = Current.Properties["CarrierStatus"].ToString() == "Positive";
             }
         }
     }
