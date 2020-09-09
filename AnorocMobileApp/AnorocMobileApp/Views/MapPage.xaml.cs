@@ -21,7 +21,7 @@ namespace AnorocMobileApp.Views
 
             //Task.Delay(2000);
 
-            //UpdateMapAsync();
+            
             CurrentRange = 0;
             Slider.IsEnabled = false;
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
