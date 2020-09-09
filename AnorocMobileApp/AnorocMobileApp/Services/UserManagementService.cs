@@ -89,39 +89,41 @@ namespace AnorocMobileApp.Services
         /// 
         public async void sendCarrierStatusAsync(string value)
         {
-            var clientHandler = new HttpClientHandler
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-            };
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
 
-            HttpClient client = new HttpClient(clientHandler);
+                HttpClient client = new HttpClient(clientHandler);
 
-            //HttpClientHandler clientHandler = new HttpClientHandler();
-            var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
+                //HttpClientHandler clientHandler = new HttpClientHandler();
+                var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
 
-            var token_object = new Token();
-            token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = value;
+                var token_object = new Token();
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = value;
 
-            /*var status = value == "Positive";
-            var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
+                /*var status = value == "Positive";
+                var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
 
-            var data = JsonConvert.SerializeObject(token_object);
+                var data = JsonConvert.SerializeObject(token_object);
 
-            var c = new StringContent(data, Encoding.UTF8, "application/json");
-            c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                var c = new StringContent(data, Encoding.UTF8, "application/json");
+                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
-            try
-            {
-                var response = await client.PostAsync(url, c);
-                //string result = response.Content.ReadAsStringAsync().Result;
-                //Debug.WriteLine(result);
+                try
+                {
+                    var response = await client.PostAsync(url, c);
+                    //string result = response.Content.ReadAsStringAsync().Result;
+                    //Debug.WriteLine(result);
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
             }
-            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-            {
-                throw new CantConnectToLocationServerException();
-            }
-
         }
 
 
@@ -311,43 +313,48 @@ namespace AnorocMobileApp.Services
 
         public async Task<int> UpdatedIncidents()
         {
-            var clientHandler = new HttpClientHandler
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-            };
-
-            var client = new HttpClient(clientHandler);
-            Token token_object = new Token();
-            token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = "";
-
-            var data = JsonConvert.SerializeObject(token_object);
-
-            var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-            stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserIncidentsEndpoint);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
-
-                if (responseMessage.IsSuccessStatusCode)
+                var clientHandler = new HttpClientHandler
                 {
-                    var json = await responseMessage.Content.ReadAsStringAsync();
-                    var incidents = Convert.ToInt32(json);
-                    return incidents;
-                }
-                else
-                    return 0;
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
 
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserIncidentsEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        var incidents = Convert.ToInt32(json);
+                        return incidents;
+                    }
+                    else
+                        return 0;
+
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
             }
-            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-            {
-                throw new CantConnecToClusterServiceException();
-            }
+            else
+                return 0;
         }
 
         protected static byte[] ReadToEnd(System.IO.Stream stream)

@@ -175,6 +175,8 @@ namespace AnorocMobileApp.Views.Navigation
 
                 _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
 
+                var theString = _ProfileImage.Source.ToString();
+
                 ms.Position = 0;
                 var bytes = ms.ToArray();
                 string base64 = System.Convert.ToBase64String(bytes);
