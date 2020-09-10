@@ -34,5 +34,7 @@ namespace AnorocMobileApp.Interfaces
         Task<List<ItineraryRisk>> GetUserItineraries();
 
         Task<List<ItineraryRisk>> GetAllUserItineraries();
+
+        void DeleteCloudItinerary(int id);
     }
 }
