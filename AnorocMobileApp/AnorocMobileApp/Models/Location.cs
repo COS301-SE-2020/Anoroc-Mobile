@@ -26,7 +26,7 @@ namespace AnorocMobileApp.Models
         {
             var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
             var placemark = placemarks?.FirstOrDefault();
-            Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality);
+            Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality, placemark.SubLocality);
         }
         public Location(Xamarin.Essentials.Location loc)
         {
