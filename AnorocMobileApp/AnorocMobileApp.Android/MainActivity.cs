@@ -97,9 +97,9 @@ namespace AnorocMobileApp.Droid
 
             // Dependency Injection:
 
-            string fileNmae = "notification_db.db3";
+            string fileName = "notification_db.db3";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string completePath = Path.Combine(folderPath, fileNmae);            
+            string completePath = Path.Combine(folderPath, fileName);            
             LoadApplication(new App(completePath));
 
 

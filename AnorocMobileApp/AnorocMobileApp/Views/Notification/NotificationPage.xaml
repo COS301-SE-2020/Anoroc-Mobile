@@ -5,7 +5,7 @@
              xmlns:converter="clr-namespace:AnorocMobileApp.Converters"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors"
+             xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors" xmlns:navigation="clr-namespace:AnorocMobileApp.Views.Navigation"
              x:Class="AnorocMobileApp.Views.Notification.NotificationPage"
              x:Name="notificationPage"
              BackgroundColor="{DynamicResource Gray-White}"
@@ -14,7 +14,9 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="Styles.xaml">
+                    <converter:RelativeTimeConverter x:Key="RelativeTime"/>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <converter:BooleanToColorConverter x:Key="BoolToColorConverter" />
         </ResourceDictionary>
@@ -118,7 +120,7 @@
                                     <!-- Received Time -->
                                     <Label Grid.Row="1"
                                            Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="{Binding ReceivedTime}"
+                                           Text="{Binding ReceivedTime, Converter={x:StaticResource RelativeTime}}"
                                            TextColor="{DynamicResource Gray-700}"
                                            FontSize="12"
                                            LineHeight="{OnPlatform Android=1.5,Default=-1}"
