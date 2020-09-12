@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [Project Overview](#projectoverview)
-- [Repositories](repositories)
+- [Repositories](#repositories)
 - [Documentation](#documentation)
 - [Technologies](#technologies)
 - [Installation](#installation)
