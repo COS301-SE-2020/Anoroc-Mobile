@@ -139,6 +139,7 @@ namespace AnorocMobileApp
                     backgroundLocationService.Start_Tracking();
                 }
             }
+
             if (Current.Properties.ContainsKey("CarrierStatus"))
             {
                 // Use Carrier status
@@ -147,6 +148,8 @@ namespace AnorocMobileApp
                 else
                     User.carrierStatus = false;
             }
+            else
+                User.carrierStatus = false;
         }
     }
 }
