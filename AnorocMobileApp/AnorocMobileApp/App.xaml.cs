@@ -11,6 +11,7 @@ using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
 using System.IO;
+using Plugin.SecureStorage;
 
 namespace AnorocMobileApp
 {
@@ -58,7 +59,7 @@ namespace AnorocMobileApp
    
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
-            MainPage = new LoginWithSocialIconPage();
+            // MainPage = new LoginWithSocialIconPage();
             
             FilePath = filePath;
         }
@@ -81,6 +82,16 @@ namespace AnorocMobileApp
         protected override void OnStart()
         {
             LoadPersistentValues();
+            
+            var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
+            if (status != null && status == "True")
+            {
+                MainPage = new NavigationPage(new BottomNavigationPage());
+            }
+            else
+            {
+                MainPage = new LoginWithSocialIconPage();
+            }
         }
 
         protected override void OnSleep()
@@ -91,6 +102,15 @@ namespace AnorocMobileApp
         protected override void OnResume()
         {
             LoadPersistentValues();
+            var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
+            if (status != null && status == "True")
+            {
+                MainPage = new NavigationPage(new BottomNavigationPage());
+            }
+            else
+            {
+                MainPage = new LoginWithSocialIconPage();
+            }
         }
 
         private void LoadPersistentValues()
