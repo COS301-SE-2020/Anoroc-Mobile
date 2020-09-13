@@ -234,12 +234,11 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private async void DoneTappedMethod()
         {
-            var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
+            var itinerary = new Models.Itinerary.Itinerary {Locations = Locations, Date = Date};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
             Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
             await Navigation.PopAsync();
-
         }
 
         #endregion
