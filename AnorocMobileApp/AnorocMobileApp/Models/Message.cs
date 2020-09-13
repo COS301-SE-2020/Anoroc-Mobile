@@ -44,4 +44,9 @@
     {
         public CancelMessage() { }
     }
+
+    public class CheckUserIncidents
+    {
+        public CheckUserIncidents() { }
+    }
 }

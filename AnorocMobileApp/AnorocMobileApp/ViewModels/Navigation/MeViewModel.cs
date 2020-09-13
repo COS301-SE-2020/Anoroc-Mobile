@@ -3,6 +3,7 @@ using Xamarin.Forms.Internals;
 using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
+using System.IO;
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
@@ -60,7 +61,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             //cardItems.Add();                            
             //CardItem button onPress={() => Alert.alert('hi')}
 
-            this.ProfileImage = App.BaseImageUrl + "ProfileImage16.png";
+            this.ProfileImage = App.BaseImageUrl + "profilepicture.jpg";
             this.ProfileName = "Anoroc Van Looi";
             this.State = "Gauteng";
             this.Country = "South Africa";
@@ -70,7 +71,8 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 this.Location = "Enabled";
             }
-            this.Incidents = "92";
+            this.Incidents = "0";
+            this.Preventions = "0";
         }
 
         #endregion
@@ -144,6 +146,13 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// Gets or sets the location.
         /// </summary>
         public string Location { get; set; }
+
+        /// <summary>
+        /// Gets or sets the preventions.
+        /// </summary>
+        public string Preventions { get; set; }
+
+        
 
         #endregion
     }

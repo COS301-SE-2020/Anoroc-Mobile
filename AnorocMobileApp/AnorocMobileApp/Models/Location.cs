@@ -26,32 +26,19 @@ namespace AnorocMobileApp.Models
         {
             var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
             var placemark = placemarks?.FirstOrDefault();
-            if (placemark != null)
-            {
-                var geocodeAddress =
-                    $"AdminArea:       {placemark.AdminArea}\n" +
-                    $"CountryCode:     {placemark.CountryCode}\n" +
-                    $"CountryName:     {placemark.CountryName}\n" +
-                    $"FeatureName:     {placemark.FeatureName}\n" +
-                    $"Locality:        {placemark.Locality}\n" +
-                    $"PostalCode:      {placemark.PostalCode}\n" +
-                    $"SubAdminArea:    {placemark.SubAdminArea}\n" +
-                    $"SubLocality:     {placemark.SubLocality}\n" +
-                    $"SubThoroughfare: {placemark.SubThoroughfare}\n" +
-                    $"Thoroughfare:    {placemark.Thoroughfare}\n";
-            }
-            Region = new Area(placemark.CountryName, placemark.AdminArea, placemark.Locality);
+            if (placemark.SubLocality != null)
+                Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubLocality);
+            else
+                Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubAdminArea);
+
         }
         public Location(Xamarin.Essentials.Location loc)
         {
             this.Created = DateTime.Now;
-            Carrier_Data_Point = false;
-
+            Carrier_Data_Point = User.carrierStatus;
             Latitude = loc.Latitude;
             Longitude = loc.Longitude;
-
             GetRegion();
-           
         }
 
         public Location(double lat, double longC, DateTime dateTime, bool carrier)

@@ -33,7 +33,7 @@ namespace AnorocMobileApp.Droid.Resources.services
                 try
                 {
                     var backgroundUserManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
-                    
+                    backgroundUserManagementService.CheckIncidents();
                 }
                 catch (System.OperationCanceledException)
                 {
@@ -46,7 +46,7 @@ namespace AnorocMobileApp.Droid.Resources.services
                         var message = new CancelBackgroundUserManagementService();
                         Device.BeginInvokeOnMainThread(() =>
                         {
-                            MessagingCenter.Send(message, "StopBackgroundUserManagementService");
+                            MessagingCenter.Send(message, "CancelBackgroundUserManagementService");
                         });
                     }
                 }

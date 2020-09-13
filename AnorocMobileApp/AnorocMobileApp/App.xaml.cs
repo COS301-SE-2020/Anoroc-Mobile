@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
+using System.IO;
 
 namespace AnorocMobileApp
 {
@@ -22,14 +23,14 @@ namespace AnorocMobileApp
 
         public const string FirebaseTokenKey = "FirebaseRecieved";
 
-        
 
 
+    
         static public int ScreenWidth;
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
-        public IFacebookLoginService FacebookLoginService { get; private set; }
+       // public IFacebookLoginService FacebookLoginService { get; private set; }
 
 
         //-------------------------------------------------------------------------------------------------
@@ -45,6 +46,7 @@ namespace AnorocMobileApp
 
         public App(string filePath)
         {
+            Application.Current.Properties["RememberMe"] = "false";
             IoCContainer = new Container();
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
@@ -58,7 +60,7 @@ namespace AnorocMobileApp
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
             MainPage = new LoginWithSocialIconPage();
-
+            
             FilePath = filePath;
         }
 
@@ -66,11 +68,12 @@ namespace AnorocMobileApp
 
 
         public App()
-        {
-            //Register Syncfusion license
+        {  
+            InitializeComponent();
+            /*//Register Syncfusion license
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
 
-            InitializeComponent();
+          
 
             DependencyService.Register<B2CAuthenticationService>();
 
@@ -88,23 +91,25 @@ namespace AnorocMobileApp
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
-            /*
+            *//*
             // Dependancy Injections:
             IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
             IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
             IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
-            */
+            *//*
 
             //Register Syncfusion license
             InitializeComponent();
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
            
-            MainPage = new NavigationPage(new BottomNavigationPage());
+            MainPage = new NavigationPage(new BottomNavigationPage());*/
         }
         void OnKeyReceived(object sender, string key)
         {
             Current.Properties["FirebaseToken"] = key;
-           // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
+            userManagementService.SendFireBaseToken(key);
+            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
  
 
@@ -144,6 +149,8 @@ namespace AnorocMobileApp
                 else
                     User.carrierStatus = false;
             }
+            else
+                User.carrierStatus = false;
         }
     }
 }

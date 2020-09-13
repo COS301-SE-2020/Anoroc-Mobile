@@ -10,7 +10,10 @@ namespace AnorocMobileApp.Models
         public DateTime expiry_date { get; set; }
 
         public string Object_To_Server { get; set; }
-
-        public Token() { }
+        public byte[] Profile_image { get; set; }
+        public Token() 
+        {
+            Profile_image = null;
+        }
     }
 }
