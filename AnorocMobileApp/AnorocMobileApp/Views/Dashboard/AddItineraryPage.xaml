@@ -48,9 +48,10 @@
 
                 <StackLayout Grid.Row="2" Margin="16" Spacing="0" >
                     <DatePicker x:Name="datePicker"
-                                HorizontalOptions="Center"
+                                HorizontalOptions="Fill"
+                                BackgroundColor="Transparent"
                                 Date="{Binding Date}"
-                                Format="D"
+                                Format="dddd, MMMM dd"
                     />
 
                     <Grid RowSpacing="0" ColumnSpacing="0" Margin="16,24,0,0">
