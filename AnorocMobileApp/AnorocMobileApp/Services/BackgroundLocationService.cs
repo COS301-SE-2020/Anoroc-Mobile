@@ -168,6 +168,8 @@ namespace AnorocMobileApp.Services
             Application.Current.Properties["Tracking"] = false;
             var message = new StopBackgroundLocationTrackingMessage();
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
+            _Backoff = Initial_Backoff;
+            Track_Retry = 0;
         }
 
         public bool isTracking()

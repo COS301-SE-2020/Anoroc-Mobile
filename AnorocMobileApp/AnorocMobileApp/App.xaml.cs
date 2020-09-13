@@ -105,11 +105,14 @@ namespace AnorocMobileApp
                     backgroundLocationService.Start_Tracking();
                 }
             }
+
             if (Current.Properties.ContainsKey("CarrierStatus"))
             {
                 // Use Carrier status
                 User.carrierStatus = Current.Properties["CarrierStatus"].ToString() == "Positive";
             }
+            else
+                User.carrierStatus = false;
         }
     }
 }

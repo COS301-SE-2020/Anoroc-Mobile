@@ -175,8 +175,9 @@
                             x:Name="picker"
                             SelectedIndexChanged="OnPickerSelectedIndexChanged"
                             Grid.Row="1"
-                            Title="  Status  "                                              
-                            Grid.Column="0"  FontSize="12"  
+                            Title="  Status  "                            
+                            Grid.Column="0"
+                            FontSize="12"  
                             FontFamily="{DynamicResource Montserrat-Medium}"
                             TextColor="{DynamicResource Gray-700}" 
                             HorizontalOptions="Center"
@@ -196,33 +197,37 @@
                         <BoxView Grid.Column="1" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
                         <!-- Location tracking -->
-                        <Label Grid.Row="1" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
+                        <Label Grid.Row="0" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
                                FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
-                               HorizontalOptions="Center" VerticalOptions="Center" />
+                               HorizontalOptions="Center" VerticalOptions="End" />
 
-                        <Label  x:Name="locationStatus" Grid.Row="0" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="Center" VerticalOptions="End" />
+                        <Label  x:Name="locationStatus" Grid.Row="1" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
+                                HorizontalOptions="Center" FontSize="12" VerticalOptions="Center" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"/>
+
 
                         <!-- Seperator -->
                         <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
 
                         <!-- Number of incedents/Preventions -->
-                        <Label Grid.Row="1" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center"
-                               VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
+
+                        <Label Grid.Row="1" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" 
+                               VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontSize="12"
+                               x:Name="carrier_status_num" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"/>
+
+                        <Label Grid.Row="0" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center" 
+                               VerticalOptions="End" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
                                TextColor="{DynamicResource Gray-700}"
                                x:Name="carrier_status_info"/>
-
-                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" 
-                               VerticalOptions="End" Style="{StaticResource LabelStyle}"
-                               x:Name="carrier_status_num"/>
 
                     </Grid>
                 </cards:SfCardView>
 
                 <!-- Go to notifications -->
-                <Button Text="Notifications"
-                        Font="Ariel"
+                <Button Text="Notifications"                        
+                        FontFamily="{DynamicResource Montserrat-Medium}"
+                        FontSize="12"
                         Grid.Row="1"
+                        TextColor="{DynamicResource Gray-700}"
                         VerticalOptions="Start"                        
                         Padding="20"
                         BackgroundColor="#f2f2f2"
