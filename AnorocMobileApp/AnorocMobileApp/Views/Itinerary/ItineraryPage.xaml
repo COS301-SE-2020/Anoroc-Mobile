@@ -3,82 +3,124 @@
     x:Class="AnorocMobileApp.Views.Itinerary.ItineraryPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-    xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
-    xmlns:svg="clr-namespace:AnorocMobileApp.Controls"
-    xmlns:itinerary="clr-namespace:AnorocMobileApp.ViewModels.Itinerary;assembly=AnorocMobileApp"
-    BackgroundColor="{StaticResource Gray-White}"
+    x:Name="itineraryPage"
+    xmlns:ListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp"
+    BackgroundColor="{DynamicResource Gray-100}"
     NavigationPage.HasNavigationBar="False">
     
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="Styles2.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ContentPage.Content>
-
-        <Grid>
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-
-            <StackLayout
-                BackgroundColor="Transparent"
-                Spacing="0"
-                VerticalOptions="Center">
-
-                <!--  Display the svg illustration image  -->
-                <svg:SVGImage
-                    x:Name="EmptyItinerary"
-                    Margin="{x:OnIdiom Phone='0,0,0,0',
-                                       Desktop='0',
-                                       Tablet='0'}"
-                    HeightRequest="{core:OnPlatformOrientationDoubleValue Default=300,
-                                                                          AndroidPhonePortrait=200,
-                                                                          AndroidPhoneLandscape=140,
-                                                                          iOSPhonePortrait=200,
-                                                                          iOSPhoneLandscape=140}"
-                    Source="{Binding ImagePath}"
-                    VerticalOptions="Center"
-                    WidthRequest="{x:OnIdiom Phone=200,
-                                             Desktop=300,
-                                             Tablet=300}" />
-
-                <!--  Label to display header  -->
-                <Label
-                    Margin="0,32,0,8"
-                    FontFamily="{StaticResource Montserrat-SemiBold}"
-                    FontSize="20"
-                    HorizontalTextAlignment="Center"
-                    Style="{StaticResource LabelStyle}"
-                    Text="{Binding Header}"
-                    VerticalTextAlignment="Center" />
-
-                <!--  Label to display content  -->
-                <Label
-                    Margin="8,0,8,0"
-                    FontFamily="{StaticResource Montserrat-Medium}"
-                    FontSize="16"
-                    Style="{StaticResource LabelStyle}"
-                    Text="{Binding Content}"
-                    VerticalTextAlignment="Center" />
+    <ContentPage.ControlTemplate>
+        <ControlTemplate>
+            <StackLayout x:Name="titleLayout" Spacing="0">
+                <controls:TitleView Title="Itinerary">
+                    <controls:TitleView.LeadingView>
+                        <!--  Back button command  -->
+                        <buttons:SfButton x:Name="backButton" Command="{Binding Path=BindingContext.BackCommand, Source={x:Reference itineraryPage}}" 
+                                          CornerRadius="4" Text="{StaticResource Back}"
+                                          CommandParameter="{x:Reference backButton}" Style="{StaticResource IconButtonStyle}"/>
+                        
+                    </controls:TitleView.LeadingView>
+                </controls:TitleView>
+                <ContentPresenter />
             </StackLayout>
+        </ControlTemplate>
+    </ContentPage.ControlTemplate>
+    
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!--  ListView Itineraries  -->
+            <ListView:SfListView x:Name="Itineraries" AutoFitMode="Height" IsScrollBarVisible="False" Padding="8" ItemSpacing="8" BackgroundColor="Transparent"
+                                 SelectionGesture="Tap" SelectionBackgroundColor="Transparent" SelectionMode="Single" AllowSwiping="True" 
+                                 ItemsSource="{Binding Itineraries}"
+                                 TapCommand="{Binding ItineraryCommand}"
+                                 >
+                <ListView:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <cards:SfCardView CornerRadius="4" HasShadow="True" WidthRequest="343" BackgroundColor="{DynamicResource Gray-White}" 
+                                          HorizontalOptions="Center" Padding="16,16,8,16">
+                            <Grid ColumnSpacing="8" RowSpacing="8" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
 
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!--  Description of risk  -->
+                                <Label  LineBreakMode="NoWrap" HorizontalOptions="Start" Grid.ColumnSpan="2"
+                                        VerticalOptions="Center" LineHeight="{OnPlatform Default=-1, Android=1.5}" >
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding RiskDescription}" FontSize="16" TextColor="{DynamicResource Gray-900}" 
+                                                  FontFamily="{StaticResource Montserrat-SemiBold}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <!--  Delete button command  -->
+                                <buttons:SfButton  x:Name="DeleteButton" CornerRadius="4" Grid.Row="0" Grid.Column="2" HorizontalOptions="EndAndExpand"
+                                                   VerticalOptions="StartAndExpand" Style="{StaticResource IconButtonStyle}"
+                                                   Text="{StaticResource Delete}" Command="{Binding Path=BindingContext.DeleteCommand,Source={x:Reference Itineraries}}"
+                                                   CommandParameter="{Binding .}"/>
+
+                                <!--  Map Pin Icon -->
+                                <Label Text="{StaticResource MapPin}" Grid.Row="1" Grid.Column="0" FontSize="18"  
+                                       FontFamily="{StaticResource FontIcons}" 
+                                       LineHeight="{OnPlatform Default=-1, Android=1.5}" VerticalOptions="Start"
+                                       TextColor="{DynamicResource Gray-600}"/>
+
+                                <!-- Number of locations -->
+                                <Label  Text="{Binding NumberOfLocations, StringFormat='{0:D} Locations Analysed'}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Style="{StaticResource CommonLabelStyle}" 
+                                        FontFamily="{StaticResource Montserrat-Medium}" LineBreakMode="WordWrap" HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="Start"/>
+
+                                <!--  Date Icon -->
+                                <Label Text="{StaticResource Calendar}" Grid.Row="2" Grid.Column="0"  FontSize="18" FontFamily="{StaticResource FontIcons}" 
+                                       LineHeight="{OnPlatform Default=-1, Android=1.5}" TextColor="{DynamicResource Gray-600}" />
+
+                                <!-- Date -->
+                                <Label Style="{StaticResource CommonLabelStyle}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" FontFamily="{StaticResource Montserrat-Medium}"
+                                       VerticalOptions="Start">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding Date, StringFormat='{0:D}'}" TextColor="{DynamicResource Gray-900}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </Grid>
+                        </cards:SfCardView>
+                    </DataTemplate>
+                </ListView:SfListView.ItemTemplate>
+            </ListView:SfListView>
+            
             <!--  Try again button  -->
-            <button:SfButton
+            <buttons:SfButton
                 Grid.Row="1"
                 Command="{Binding AddItineraryCommand}"
-                Style="{StaticResource SfGradientButtonStyle}"
+                Style="{StaticResource SfGradientAddButtonStyle}"
                 Text="Add Itinerary" />
         </Grid>
-
     </ContentPage.Content>
 
 </ContentPage>

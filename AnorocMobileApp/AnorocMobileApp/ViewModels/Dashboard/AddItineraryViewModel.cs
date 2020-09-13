@@ -78,9 +78,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private List<Location> locations;
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
-        public INavigation Navigation { get; set;}
-        public Page View { get; set; }
         private DateTime date;
+        private INavigation Navigation { get; set;}
+        private Page View { get; set; }
 
         #endregion
 
@@ -100,7 +100,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (results != value)
                 {
                     results = value;
-                    OnPropertyChanged("Results");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -113,7 +113,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addresses != value)
                 {
                     addresses = value;
-                    OnPropertyChanged("Addresses");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -126,7 +126,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (locations != value)
                 {
                     locations = value;
-                    OnPropertyChanged("Locations");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -139,7 +139,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addressTimeline != value)
                 {
                     addressTimeline = value;
-                    OnPropertyChanged("AddressTimeline");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -151,7 +151,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             {
                 if (addressText != value) {
                     addressText = value;
-                    OnPropertyChanged("AddressText");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -164,7 +164,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (date != value)
                 {
                     date = value;
-                    OnPropertyChanged("Date");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -234,24 +234,12 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private async void DoneTappedMethod()
         {
-            Debug.Write("In DoneTappedMethod()");
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
             Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
             await Navigation.PopAsync();
 
-        }
-
-        #endregion
-
-        #region INotifyPropertyChanged
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         #endregion
