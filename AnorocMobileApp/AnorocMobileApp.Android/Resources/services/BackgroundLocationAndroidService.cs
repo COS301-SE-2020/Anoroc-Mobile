@@ -36,9 +36,12 @@ namespace AnorocMobileApp.Droid.Resources.services
               {
                   try
                   {
-                      var backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
-                      backgroundLocationService.Run_TrackAsync();
-                      BackgroundLocationService.Tracking = true;
+                      Device.BeginInvokeOnMainThread(() =>
+                      {
+                          var backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
+                          backgroundLocationService.Run_TrackAsync();
+                          BackgroundLocationService.Tracking = true;
+                      });
                   }
                   catch (System.OperationCanceledException)
                   {
