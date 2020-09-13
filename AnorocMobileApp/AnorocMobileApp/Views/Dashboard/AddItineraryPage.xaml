@@ -47,12 +47,11 @@
                 <BoxView  Grid.Row="1" BackgroundColor="{DynamicResource Gray-200}" HeightRequest="1" />
 
                 <StackLayout Grid.Row="2" Margin="16" Spacing="0" >
-                    <Label Text="25 Dec 2020" HorizontalOptions="Start" FontSize="20" FontFamily="{StaticResource Montserrat-Bold}"
-                           TextColor="{DynamicResource Gray-900}">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="ClickedDate"/>
-                        </Label.GestureRecognizers>
-                    </Label>
+                    <DatePicker x:Name="datePicker"
+                                HorizontalOptions="Center"
+                                Date="{Binding Date}"
+                                Format="D"
+                    />
 
                     <Grid RowSpacing="0" ColumnSpacing="0" Margin="16,24,0,0">
                         <BoxView HeightRequest="{Binding Source={x:Reference listView}, Path=Height}" HorizontalOptions="Start" 

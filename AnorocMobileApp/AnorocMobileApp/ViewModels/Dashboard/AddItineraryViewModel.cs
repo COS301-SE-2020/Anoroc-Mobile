@@ -30,7 +30,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
-    public class AddItineraryViewModel : INotifyPropertyChanged
+    public class AddItineraryViewModel : BaseViewModel
     {
         #region Constructor
 
@@ -43,6 +43,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             DoneButtonTapped = new Command(DoneTappedMethod);
             Navigation = navigation;
             this.View = view;
+            this.Date = DateTime.Today;
         }
 
         #endregion
@@ -79,6 +80,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private string addressText;
         public INavigation Navigation { get; set;}
         public Page View { get; set; }
+        private DateTime date;
 
         #endregion
 
@@ -150,6 +152,19 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addressText != value) {
                     addressText = value;
                     OnPropertyChanged("AddressText");
+                }
+            }
+        }
+
+        public DateTime Date
+        {
+            get => date;
+            set
+            {
+                if (date != value)
+                {
+                    date = value;
+                    OnPropertyChanged("Date");
                 }
             }
         }
