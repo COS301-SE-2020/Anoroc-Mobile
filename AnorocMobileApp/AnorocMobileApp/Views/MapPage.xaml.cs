@@ -21,7 +21,7 @@ namespace AnorocMobileApp.Views
 
             //Task.Delay(2000);
 
-            //UpdateMapAsync();
+            
             CurrentRange = 0;
             Slider.IsEnabled = false;
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", message =>
@@ -29,6 +29,7 @@ namespace AnorocMobileApp.Views
                 DrawClusters(0);
                 Slider.IsEnabled = true;
             });
+            MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
         }
 
         public async void DrawClusters(int days)
@@ -46,7 +47,6 @@ namespace AnorocMobileApp.Views
                         MyMap.MapElements.Add(circle);
                     }
                     addPins();
-                    MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(-25.783290, 28.274518), Distance.FromKilometers(1)));
                 }
             }
             else

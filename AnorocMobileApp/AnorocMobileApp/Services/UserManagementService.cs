@@ -18,122 +18,125 @@ using Xamarin.Forms;
 
 namespace AnorocMobileApp.Services
 {
-public class UserManagementService : IUserManagementService
-{
-    HttpClient Anoroc_Client;
-    HttpClientHandler clientHandler = new HttpClientHandler();
-    public static bool ServiceRunning { get; private set; }
-    public UserManagementService()
+    public class UserManagementService : IUserManagementService
     {
-        clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-        ServiceRunning = false;
-    }
-
-    public void StopUserManagementService()
-    {
-        ServiceRunning = false;
-        var message = new StopBackgroundUserManagementService();
-        MessagingCenter.Send(message, "StopBackgroundUserManagementService");
-    }
-
-    /// <summary>
-    /// Function to send Fire base token
-    /// </summary>
-    /// <param name="firebasetoken">Fire base token</param>
-
-    public async void SendFireBaseToken(string firebasetoken)
-    {
-        using (Anoroc_Client = new HttpClient(clientHandler))
+        HttpClient Anoroc_Client;
+        HttpClientHandler clientHandler = new HttpClientHandler();
+        public static bool ServiceRunning { get; private set; }
+        public UserManagementService()
         {
+            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+            ServiceRunning = false;
+        }
 
+        public void StopUserManagementService()
+        {
+            ServiceRunning = false;
+            var message = new StopBackgroundUserManagementService();
+            MessagingCenter.Send(message, "StopBackgroundUserManagementService");
+        }
+
+        /// <summary>
+        /// Function to send Fire base token
+        /// </summary>
+        /// <param name="firebasetoken">Fire base token</param>
+
+        public async void SendFireBaseToken(string firebasetoken)
+        {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                using (Anoroc_Client = new HttpClient(clientHandler))
+                var clientHandler = new HttpClientHandler
                 {
-                    Token token_object = new Token();
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
 
-                    token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-                    token_object.Object_To_Server = firebasetoken;
+                HttpClient client = new HttpClient(clientHandler);
 
-                    var data = JsonConvert.SerializeObject(token_object);
+                Token token_object = new Token();
+
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = firebasetoken;
+
+                var data = JsonConvert.SerializeObject(token_object);
 
 
-                    var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-                    stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
-                    Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
-                    HttpResponseMessage responseMessage;
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
+                HttpResponseMessage responseMessage;
 
-                    try
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
                     {
-                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
-
-                        if (responseMessage.IsSuccessStatusCode)
-                        {
-                            var json = await responseMessage.Content.ReadAsStringAsync();
-                        }
-                    }
-                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                    {
-                        throw new CantConnecToClusterServiceException();
+                        var json = await responseMessage.Content.ReadAsStringAsync();
                     }
                 }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
             }
-            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+        }
+
+
+        /// <summary>
+        /// Function to send Carrier status to server
+        /// </summary>
+        /// <param name="value">Carrier status</param>
+        /// 
+        public async void sendCarrierStatusAsync(string value)
+        {
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                throw new CantConnecToClusterServiceException();
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                HttpClient client = new HttpClient(clientHandler);
+
+                //HttpClientHandler clientHandler = new HttpClientHandler();
+                var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
+
+                var token_object = new Token();
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = value;
+
+                /*var status = value == "Positive";
+                var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var c = new StringContent(data, Encoding.UTF8, "application/json");
+                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                try
+                {
+                    var response = await client.PostAsync(url, c);
+                    //string result = response.Content.ReadAsStringAsync().Result;
+                    //Debug.WriteLine(result);
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnectToLocationServerException();
+                }
             }
         }
-    }
 
 
-    /// <summary>
-    /// Function to send Carrier status to server
-    /// </summary>
-    /// <param name="value">Carrier status</param>
-    /// 
-    public async void sendCarrierStatusAsync(string value)
-    {
-        var clientHandler = new HttpClientHandler
+        public async void UserLoggedIn(string firstName, string surname, string userEmail)
         {
-            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-        };
+            var clientHandler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            };
 
-        HttpClient client = new HttpClient(clientHandler);
+            HttpClient client = new HttpClient(clientHandler);
 
-        //HttpClientHandler clientHandler = new HttpClientHandler();
-        var url = Secrets.baseEndpoint + Secrets.carrierStatusEndpoint;
-
-        var token_object = new Token();
-        token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-        token_object.Object_To_Server = value;
-
-        /*var status = value == "Positive";
-        var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
-
-        var data = JsonConvert.SerializeObject(token_object);
-
-        var c = new StringContent(data, Encoding.UTF8, "application/json");
-        c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");            
-
-        try
-        {
-            var response = await client.PostAsync(url, c);
-            //string result = response.Content.ReadAsStringAsync().Result;
-            //Debug.WriteLine(result);
-        }
-        catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-        {                
-            throw new CantConnectToLocationServerException();
-        }
-
-    }
-        
-
-public async void UserLoggedIn(string firstName, string surname, string userEmail)
-    {
-        using (Anoroc_Client = new HttpClient(clientHandler))
-        {
             Token token_object = new Token();
             token_object.access_token = "expectingtoken";
             User.Email = userEmail;
@@ -152,27 +155,23 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
 
             try
             {
-                responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, stringcontent);
+                responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var json = await responseMessage.Content.ReadAsStringAsync();
                     if (json != null)
                     {
-                        var json = await responseMessage.Content.ReadAsStringAsync();
-                        if (json != null)
+                        Application.Current.Properties["TOKEN"] = json;
+                        if (Application.Current.Properties.ContainsKey("FirebaseToken"))
                         {
-                            Application.Current.Properties["TOKEN"] = json;
-                            if (Application.Current.Properties.ContainsKey("FirebaseToken"))
-                            {
-                                string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
-                                IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
-                                ims.SendFireBaseToken(firebaseToken);
-                            }
-                            //notify all listeners of successfull login
-                            var message = new UserLoggedIn();
-                            MessagingCenter.Send(message, "UserLoggedIn");
+                            string firebaseToken = (string)Application.Current.Properties["FirebaseToken"];
+                            IUserManagementService ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                            ims.SendFireBaseToken(firebaseToken);
                         }
+                        //notify all listeners of successfull login
+                        var message = new UserLoggedIn();
+                        MessagingCenter.Send(message, "UserLoggedIn");
                     }
                 }
             }
@@ -181,17 +180,106 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
                 throw new CantConnecToClusterServiceException();
             }
         }
-    }
 
-    public async Task<string> GetUserProfileImage()
-    {
-        var localImage = checkLocalImage();
-        if (localImage != "")
+        public async Task<string> GetUserProfileImage()
         {
-            return localImage;
+            var localImage = checkLocalImage();
+            if (localImage != "")
+            {
+                return localImage;
+            }
+            else
+            {
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.GetUserProfileImageEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var profileImage = await responseMessage.Content.ReadAsStringAsync();
+
+                        //TODO: Save to SQLite database
+
+                        return profileImage;
+                    }
+                    else
+                        return null;
+
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
+            }
         }
-        else
+
+        protected string checkLocalImage()
         {
+            string return64 = "";
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                try
+                {
+                    var userImage = conn.Table<ProfileImage>().FirstOrDefault();
+                    if (userImage != null)
+                    {
+                        return64 = userImage.Base64;
+                    }
+                }
+                catch (SQLiteException)
+                {
+
+                }
+            }
+            return return64;
+        }
+
+        protected void saveProfileImage(string image)
+        {
+            ProfileImage profileImage = new ProfileImage();
+            profileImage.Base64 = image;
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                conn.DropTable<ProfileImage>();
+
+                conn.CreateTable<ProfileImage>();
+
+                int rowsAdded = conn.Insert(profileImage);
+                if (rowsAdded > 0)
+                {
+                    Debug.WriteLine("Inserted Itinerary");
+                }
+                else
+                {
+                    Debug.WriteLine("Failed to Insert Itinerary");
+                }
+                conn.Close();
+            }
+        }
+
+        public async void UploadUserProfileImage(string image)
+        {
+            saveProfileImage(image);
+
             var clientHandler = new HttpClientHandler
             {
                 ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
@@ -200,7 +288,7 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
             var client = new HttpClient(clientHandler);
             Token token_object = new Token();
             token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = "";
+            token_object.Object_To_Server = image;
 
             var data = JsonConvert.SerializeObject(token_object);
 
@@ -208,7 +296,7 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
             stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.GetUserProfileImageEndpoint);
+            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UploadUserProfileImage);
             HttpResponseMessage responseMessage;
 
             try
@@ -217,14 +305,9 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
 
                 if (responseMessage.IsSuccessStatusCode)
                 {
-                    var profileImage = await responseMessage.Content.ReadAsStringAsync();
-
-                    //TODO: Save to SQLite database
-
-                    return profileImage;
+                    //TODO:
+                    //Uploaded the profile image
                 }
-                else
-                    return null;
 
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
@@ -232,155 +315,75 @@ public async void UserLoggedIn(string firstName, string surname, string userEmai
                 throw new CantConnecToClusterServiceException();
             }
         }
-    }
 
-    protected string checkLocalImage()
-    {
-        string return64 = "";
-        using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+        public async Task<int> UpdatedIncidents()
         {
-            try
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
-                var userImage = conn.Table<ProfileImage>().FirstOrDefault();
-                if (userImage != null)
+                var clientHandler = new HttpClientHandler
                 {
-                    return64 = userImage.Base64;
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserIncidentsEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var json = await responseMessage.Content.ReadAsStringAsync();
+                        var incidents = Convert.ToInt32(json);
+                        return incidents;
+                    }
+                    else
+                        return 0;
+
                 }
-            }
-            catch(SQLiteException)
-            {
-
-            }
-        }
-        return return64;
-    }
-
-    protected void saveProfileImage(string image)
-    {
-        ProfileImage profileImage = new ProfileImage();
-        profileImage.Base64 = image;
-        using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
-        {
-            conn.DropTable<ProfileImage>();
-
-            conn.CreateTable<ProfileImage>();
-
-            int rowsAdded = conn.Insert(profileImage);
-            if (rowsAdded > 0)
-            {
-                Debug.WriteLine("Inserted Itinerary");
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    throw new CantConnecToClusterServiceException();
+                }
             }
             else
+                return 0;
+        }
+
+        protected static byte[] ReadToEnd(System.IO.Stream stream)
+        {
+            using (var memoryStream = new MemoryStream())
             {
-                Debug.WriteLine("Failed to Insert Itinerary");
+                stream.CopyTo(memoryStream);
+                return memoryStream.ToArray();
             }
-            conn.Close();
         }
-    }
 
-    public async void UploadUserProfileImage(string image)
-    {
-        saveProfileImage(image);
-
-            var clientHandler = new HttpClientHandler
+        public async void CheckIncidents()
         {
-            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-        };
-
-        var client = new HttpClient(clientHandler);
-        Token token_object = new Token();
-        token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-        token_object.Object_To_Server = image;
-
-        var data = JsonConvert.SerializeObject(token_object);
-
-        var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-        stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-        Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UploadUserProfileImage);
-        HttpResponseMessage responseMessage;
-
-        try
-        {
-            responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
-
-            if (responseMessage.IsSuccessStatusCode)
+            ServiceRunning = true;
+            await Task.Run(async () =>
             {
-                //TODO:
-                //Uploaded the profile image
-            }
-
-        }
-        catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-        {
-            throw new CantConnecToClusterServiceException();
-        }
-    }
-
-    public async Task<int> UpdatedIncidents()
-    {
-        var clientHandler = new HttpClientHandler
-        {
-            ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
-        };
-
-        var client = new HttpClient(clientHandler);
-            Token token_object = new Token();
-            token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-            token_object.Object_To_Server = "";
-
-            var data = JsonConvert.SerializeObject(token_object);
-
-            var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
-            stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-
-            Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserIncidentsEndpoint);
-            HttpResponseMessage responseMessage;
-
-            try
-            {
-                responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
-
-                if (responseMessage.IsSuccessStatusCode)
+                while (ServiceRunning)
                 {
-                    var json = await responseMessage.Content.ReadAsStringAsync();
-                    var incidents = Convert.ToInt32(json);
-                    return incidents;
-                }
-                else
-                    return 0;
-                    
-            }
-            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-            {
-                throw new CantConnecToClusterServiceException();
-            }
-    }
+                    var message = new CheckUserIncidents();
+                    MessagingCenter.Send(message, "CheckUserIncidents");
 
-    protected static byte[] ReadToEnd(System.IO.Stream stream)
-    {
-        using (var memoryStream = new MemoryStream())
-        {
-            stream.CopyTo(memoryStream);
-            return memoryStream.ToArray();
+                    await Task.Delay(1000000);
+                }
+            }, CancellationToken.None);
         }
     }
-
-    public async void CheckIncidents()
-    {
-        ServiceRunning = true;
-        await Task.Run(async () =>
-        {
-            while (ServiceRunning)
-            {
-                var message = new CheckUserIncidents();
-                MessagingCenter.Send(message, "CheckUserIncidents");
-
-                await Task.Delay(1000000);
-            }
-        }, CancellationToken.None);
-    }
-}
 }
