@@ -138,78 +138,7 @@
                             <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
                         </listView:SfListView.Behaviors>
                     </listView:SfListView>
-                
-                    <listView:SfListView x:Name="EarlierList"
-                                     IsScrollBarVisible="False" IsScrollingEnabled="False"
-                                     AllowSwiping="True"
-                                     AutoFitMode="Height"
-                                     ItemSpacing="0"
-                                     SelectionGesture="Tap"
-                                     SelectionMode="Single"
-                                     VerticalOptions="FillAndExpand"
-                                     TapCommand="{Binding ItemTappedCommand}"
-                                     ItemsSource="{Binding EarlierList}"
-                                     SelectionBackgroundColor="Transparent">
-
-                        <listView:SfListView.HeaderTemplate>
-                            <DataTemplate>
-
-                                <Label Text="EARLIER"
-                                       Margin="16, 0, 16, 8"
-                                       TextColor="{DynamicResource Gray-900}"
-                                       FontSize="12"
-                                       FontFamily="{DynamicResource Montserrat-SemiBold}"
-                                       HorizontalOptions="Start"/>
-
-                            </DataTemplate>
-                        </listView:SfListView.HeaderTemplate>
-
-                        <listView:SfListView.ItemTemplate>
-                            <DataTemplate>
-                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
-
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <!-- Notify icon for readable item  -->
-                                    <Label Text="{StaticResource 'New Message'}" 
-                                           TextColor="{Binding IsRead, Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=6}" 
-                                           FontSize="12" Margin="16, 20, 0, 0" 
-                                           FontFamily="{StaticResource FontIcons}"/>
-
-                                    <!-- Notification Detail -->
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium }" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
-
-                                    <!-- Received Time -->
-                                <Label Grid.Row="1"
-                                           Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="{Binding ReceivedTime}"
-                                           TextColor="{DynamicResource Gray-700}"
-                                           FontSize="12"
-                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"
-                                           LineBreakMode="TailTruncation"
-                                           FontFamily="{DynamicResource Montserrat-Medium}"/>
-
-                                <!-- Seperator -->
-                                    <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
-
-                                </Grid>
-                            </DataTemplate>
-                        </listView:SfListView.ItemTemplate>
-
-                        <listView:SfListView.Behaviors>
-                            <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
-                        </listView:SfListView.Behaviors>
-                    </listView:SfListView>
-                
+                               
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

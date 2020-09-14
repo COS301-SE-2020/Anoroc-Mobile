@@ -1,37 +1,5 @@
 {
-  "recentNotificationList": [
-    {
-      "name": "You were directly exposed to the virus.",
-      "receivedTime": "2 mins ago",
-      "isRead": "false"
-    },
-    {
-      "name": "You were in a virus hotspot.",
-      "receivedTime": "5 hours ago",
-      "isRead": "false"
-    }
-  ],
+  "recentNotificationList": [],
 
-  "earlierNotificationList": [
-    {
-      "name": "You were directly exposed to the virus.",
-      "receivedTime": "4 days ago",
-      "isRead": "true"
-    },
-    {
-      "name": "You were directly exposed to the virus.",
-      "receivedTime": "8 weeks ago",
-      "isRead": "false"
-    },
-    {
-      "name": "You were in a virus hotspot",
-      "receivedTime": "9 weeks ago",
-      "isRead": "true"
-    },
-    {
-      "name": "You were directly exposed to the virus.",
-      "receivedTime": "5 months ago",
-      "isRead": "true"
-    }
-  ]
+  "earlierNotificationList": []
 }
