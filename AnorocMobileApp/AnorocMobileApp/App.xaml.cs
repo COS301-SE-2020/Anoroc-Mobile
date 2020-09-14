@@ -106,7 +106,9 @@ namespace AnorocMobileApp
         void OnKeyReceived(object sender, string key)
         {
             Current.Properties["FirebaseToken"] = key;
-           // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
+            IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
+            userManagementService.SendFireBaseToken(key);
+            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
  
 
