@@ -1,18 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
-             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:svg="clr-namespace:AnorocMobileApp.Controls"
-             xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Navigation"
-             xmlns:local="clr-namespace:AnorocMobileApp.Helpers"
-             x:Class="AnorocMobileApp.Views.Navigation.MePage"
-             NavigationPage.HasNavigationBar="False">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms" xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:svg="clr-namespace:AnorocMobileApp.Controls" xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Navigation" xmlns:local="clr-namespace:AnorocMobileApp.Helpers" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors" x:Class="AnorocMobileApp.Views.Navigation.MePage" NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -28,216 +15,269 @@
     </ContentPage.BindingContext>
 
     <ContentPage.Content>
-        <ScrollView>
-            <Grid>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid RowSpacing="0" HeightRequest="361">
+
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
 
-                <Grid RowSpacing="0" HeightRequest="361">
+                <gradient:SfGradientView Grid.RowSpan="3">
+                    <gradient:SfGradientView.BackgroundBrush>
+                        <gradient:SfLinearGradientBrush>
+                            <gradient:SfLinearGradientBrush.GradientStops>
+                                <gradient:SfGradientStop Color="{StaticResource Dull-Red}" Offset="0.0" />
+                                <gradient:SfGradientStop Color="{StaticResource Deep-Purple}" Offset="1.0" />
+                            </gradient:SfLinearGradientBrush.GradientStops>
+                        </gradient:SfLinearGradientBrush>
+                    </gradient:SfGradientView.BackgroundBrush>
+                </gradient:SfGradientView>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
+                <!-- Profile Image -->
+                <border:SfBorder Margin="0,56,0,8" HeightRequest="120" WidthRequest="120" CornerRadius="60" BorderWidth="2" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" BorderColor="{DynamicResource Gray-White}" BackgroundColor="{DynamicResource Gray-White}">
 
-                    <gradient:SfGradientView Grid.RowSpan="3">
-                        <gradient:SfGradientView.BackgroundBrush>
-                            <gradient:SfLinearGradientBrush>
-                                <gradient:SfLinearGradientBrush.GradientStops>
-                                    <gradient:SfGradientStop Color="{StaticResource Dull-Red}" Offset="0.0"/>
-                                    <gradient:SfGradientStop Color="{StaticResource Deep-Purple}" Offset="1.0"/>
-                                </gradient:SfLinearGradientBrush.GradientStops>
-                            </gradient:SfLinearGradientBrush>
-                        </gradient:SfGradientView.BackgroundBrush>
-                    </gradient:SfGradientView>
+                    <Image x:Name="_ProfileImage" Aspect="AspectFill" BackgroundColor="{DynamicResource Gray-White}" Source="{local:ImageResource AnorocMobileApp.Images.pngfuel.com.png}">
 
-                    <!-- Profile Image -->
-                    <border:SfBorder Margin="0,56,0,8"
-                                     HeightRequest="120"
-                                     WidthRequest="120"
-                                     CornerRadius="60"
-                                     BorderWidth="2"
-                                     HorizontalOptions="CenterAndExpand"
-                                     VerticalOptions="StartAndExpand"
-                                     BorderColor="{DynamicResource Gray-White}"
-                                     BackgroundColor="{DynamicResource Gray-White}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+                    </Image>
 
-                        <Image x:Name="_ProfileImage" Aspect="AspectFill"
-                               BackgroundColor="{DynamicResource Gray-White}"
-                               Source="{local:ImageResource AnorocMobileApp.Images.pngfuel.com.png}">
-                           
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                            </Image.GestureRecognizers>
-                        </Image>
-
-                    </border:SfBorder>
-
-                    <!-- Profile Name -->
-                    <Label x:Name="profileName"
-                           Grid.Row="1"
-                           Margin="0,0,0,2"
-                           Text="{Binding ProfileName}"
-                           TextColor="{DynamicResource Gray-White}"
-                           FontSize="20"
-                           FontFamily="{DynamicResource Montserrat-SemiBold}"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="StartAndExpand"
-                           LineHeight="{OnPlatform Android=1.5, Default=-1}" />
-
-                    <!-- State and Country -->
-                    <Label Grid.Row="2"
-                           TextColor="{DynamicResource Gray-White}"
-                           FontSize="12"
-                           FontFamily="{DynamicResource Montserrat-Medium}"
-                           HorizontalOptions="CenterAndExpand"
-                           VerticalOptions="StartAndExpand"
-                           LineHeight="{OnPlatform Android=1.5, Default=-1}">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="{Binding State}"/>
-                                <Span Text=" "/>
-                                <Span Text="{Binding Country}"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-                </Grid>
-
-                <border:SfBorder Grid.Row="1" Margin="0,-69,0,0" Padding="0,61,0,0" BackgroundColor="{DynamicResource Gray-100}" CornerRadius="14,14,0,0"
-                                 VerticalOptions="Start" BorderWidth="0">
-                    <listView:SfListView SelectionMode="None" ItemSpacing="16,8" ItemSize="74" IsScrollingEnabled="False" AutoFitMode="Height"
-                                         ItemsSource="{Binding CardItems}">
-                        <listView:SfListView.ItemTemplate>
-                            <DataTemplate>
-                                <cards:SfCardView CornerRadius="4" BorderWidth="0" HasShadow="True" WidthRequest="{OnIdiom Phone=343, Default=736}"
-                                                  HorizontalOptions="CenterAndExpand" BackgroundColor="{DynamicResource Gray-White}">
-                                    <Grid RowSpacing="0" Padding="16">
-
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="Auto" />
-                                            <RowDefinition Height="*" />
-                                        </Grid.RowDefinitions>
-
-                                        <!-- Category -->
-                                        <Label Text="{Binding CategoryValue}" Style="{StaticResource LabelStyle}" />
-
-                                        <!-- Category Value -->
-                                        <Label Grid.Row="1" FontSize="12" Style="{StaticResource LabelStyle}" 
-                                               FontFamily="{DynamicResource Montserrat-Medium}" 
-                                               TextColor="{DynamicResource Gray-700}" HeightRequest="18" Text="{Binding Category}" />
-
-                                        <!-- Category Image -->
-                                        <svg:SVGImage Grid.RowSpan="2" 
-                                                      BackgroundColor="Transparent"
-                                                      Source="{Binding ImagePath}"
-                                                      HorizontalOptions="End"
-                                                      VerticalOptions="Center"
-                                                      WidthRequest="32" 
-                                                      HeightRequest="31">
-                                        </svg:SVGImage>
-
-                                    </Grid>
-                                </cards:SfCardView>
-                            </DataTemplate>
-                        </listView:SfListView.ItemTemplate>
-                    </listView:SfListView>
                 </border:SfBorder>
 
-                <cards:SfCardView Grid.Row="0" CornerRadius="4" VerticalOptions="End" Margin="16,0,16,24"  BorderWidth="0" HasShadow="True"  
-                                 BackgroundColor="{DynamicResource Gray-White}" HorizontalOptions="CenterAndExpand" WidthRequest="{OnIdiom Phone=343, Default=736}" >
+                <!-- Profile Name -->
+                <Label x:Name="profileName" Grid.Row="1" Margin="0,0,0,2" Text="{Binding ProfileName}" TextColor="{DynamicResource Gray-White}" FontSize="20" FontFamily="{DynamicResource Montserrat-SemiBold}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" LineHeight="{OnPlatform Android=1.5, Default=-1}" />
 
-                    <Grid RowSpacing="0" ColumnSpacing="0" WidthRequest="{OnIdiom Phone=343, Default=480}" 
-                          HeightRequest="90">
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
-
-                        <!-- Carrier status -->
-                        <Label Grid.Row="0" FontSize="12" Text="Status" Style="{StaticResource LabelStyle}" 
-                               HorizontalOptions="Center" VerticalOptions="End"
-                               FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
-
-                        <Picker
-                            AutomationId="Picker"
-                            x:Name="picker"
-                            SelectedIndexChanged="OnPickerSelectedIndexChanged"
-                            Grid.Row="1"
-                            Title="  Status  "                            
-                            Grid.Column="0"
-                            FontSize="12"  
-                            FontFamily="{DynamicResource Montserrat-Medium}"
-                            TextColor="{DynamicResource Gray-700}" 
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center">
-                            <Picker.ItemsSource>
-                                <x:Array Type="{x:Type x:String}">
-                                    <x:String>Positive</x:String>
-                                    <x:String>Negative</x:String>
-                                </x:Array>
-                            </Picker.ItemsSource>
-                        </Picker>
-                        <!--<Label Text="{Binding Status}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
-                               VerticalOptions="End" />-->
-
-
-                        <!-- Seperator -->
-                        <BoxView Grid.Column="1" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
-
-                        <!-- Location tracking -->
-                        <Label Grid.Row="0" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" 
-                               FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" 
-                               HorizontalOptions="Center" VerticalOptions="End" />
-
-                        <Label  x:Name="locationStatus" Grid.Row="1" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}"
-                                HorizontalOptions="Center" FontSize="12" VerticalOptions="Center" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"/>
-
-
-                        <!-- Seperator -->
-                        <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
-
-                        <!-- Number of incedents/Preventions -->
-
-                        <Label Grid.Row="1" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" 
-                               VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontSize="12"
-                               x:Name="carrier_status_num" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"/>
-
-                        <Label Grid.Row="0" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center" 
-                               VerticalOptions="End" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" 
-                               TextColor="{DynamicResource Gray-700}"
-                               x:Name="carrier_status_info"/>
-
-                    </Grid>
-                </cards:SfCardView>
-
-                <!-- Go to notifications -->
-                <Button Text="Notifications"                        
-                        FontFamily="{DynamicResource Montserrat-Medium}"
-                        FontSize="12"
-                        Grid.Row="1"
-                        TextColor="{DynamicResource Gray-700}"
-                        VerticalOptions="Start"                        
-                        Padding="20"
-                        BackgroundColor="#f2f2f2"
-                        Clicked="Button_Clicked"                        
-                        />
-                        <!-- Command="{Binding NotificationsView}" -->
+                <!-- State and Country -->
+                <Label Grid.Row="2" TextColor="{DynamicResource Gray-White}" FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" LineHeight="{OnPlatform Android=1.5, Default=-1}">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding State}" />
+                            <Span Text=" " />
+                            <Span Text="{Binding Country}" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </Grid>
 
+            <border:SfBorder Grid.Row="1" Margin="0,-69,0,0" Padding="0,61,0,0" BackgroundColor="{DynamicResource Gray-100}" CornerRadius="14,14,0,0" VerticalOptions="Start" BorderWidth="0">
+                <listView:SfListView SelectionMode="None" ItemSpacing="16,8" ItemSize="74" IsScrollingEnabled="False" AutoFitMode="Height" ItemsSource="{Binding CardItems}">
+                    <listView:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <cards:SfCardView CornerRadius="4" BorderWidth="0" HasShadow="True" WidthRequest="{OnIdiom Phone=343, Default=736}" HorizontalOptions="CenterAndExpand" BackgroundColor="{DynamicResource Gray-White}">
+                                <Grid RowSpacing="0" Padding="16">
 
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+
+                                    <!-- Category -->
+                                    <Label Text="{Binding CategoryValue}" Style="{StaticResource LabelStyle}" />
+
+                                    <!-- Category Value -->
+                                    <Label Grid.Row="1" FontSize="12" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" HeightRequest="18" Text="{Binding Category}" />
+
+                                    <!-- Category Image -->
+                                    <svg:SVGImage Grid.RowSpan="2" BackgroundColor="Transparent" Source="{Binding ImagePath}" HorizontalOptions="End" VerticalOptions="Center" WidthRequest="32" HeightRequest="31"></svg:SVGImage>
+
+                                </Grid>
+                            </cards:SfCardView>
+                        </DataTemplate>
+                    </listView:SfListView.ItemTemplate>
+                </listView:SfListView>
+            </border:SfBorder>
+
+            <cards:SfCardView Grid.Row="0" CornerRadius="4" VerticalOptions="End" Margin="16,0,16,24" BorderWidth="0" HasShadow="True" BackgroundColor="{DynamicResource Gray-White}" HorizontalOptions="CenterAndExpand" WidthRequest="{OnIdiom Phone=343, Default=736}">
+
+                <Grid RowSpacing="0" ColumnSpacing="0" WidthRequest="{OnIdiom Phone=343, Default=480}" HeightRequest="90">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Carrier status -->
+                    <Label Grid.Row="0" FontSize="12" Text="Status" Style="{StaticResource LabelStyle}" HorizontalOptions="Center" VerticalOptions="End" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
+
+                    <Picker AutomationId="Picker" x:Name="picker" SelectedIndexChanged="OnPickerSelectedIndexChanged" Grid.Row="1" Title="  Status  " Grid.Column="0" FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Positive</x:String>
+                                <x:String>Negative</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <!--<Label Text="{Binding Status}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center"
+                                VerticalOptions="End" />-->
+
+
+                    <!-- Seperator -->
+                    <BoxView Grid.Column="1" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
+
+                    <!-- Location tracking -->
+                    <Label Grid.Row="0" Grid.Column="2" Text="Location" FontSize="12" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" HorizontalOptions="Center" VerticalOptions="End" />
+
+                    <Label x:Name="locationStatus" Grid.Row="1" Grid.Column="2" Text="{Binding Location}" Style="{StaticResource LabelStyle}" HorizontalOptions="Center" FontSize="12" VerticalOptions="Center" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
+
+
+                    <!-- Seperator -->
+                    <BoxView Grid.Column="3" Style="{StaticResource BoxViewStyle}" Grid.RowSpan="2" />
+
+                    <!-- Number of incedents/Preventions -->
+
+                    <Label Grid.Row="1" Grid.Column="4" Text="{Binding Incidents}" HorizontalOptions="Center" VerticalOptions="Center" Style="{StaticResource LabelStyle}" FontSize="12" x:Name="carrier_status_num" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" />
+
+                    <Label Grid.Row="0" Grid.Column="4" Text="Incidents" FontSize="12" HorizontalOptions="Center" VerticalOptions="End" Style="{StaticResource LabelStyle}" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}" x:Name="carrier_status_info" />
+
+                </Grid>
+
+                
+
+            </cards:SfCardView>
+
+
+            <cards:SfCardView Grid.Row="1" VerticalOptions="Fill" Margin="0,0,0,0" BorderWidth="0" HasShadow="True" BackgroundColor="{DynamicResource Gray-White}" HorizontalOptions="FillAndExpand">
+
+                <Grid RowSpacing="0" ColumnSpacing="0" WidthRequest="{OnIdiom Phone=343, Default=480}" HeightRequest="90">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition />                        
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+            <!--encounters-->
+            <ScrollView>
+
+            <StackLayout Padding="0, 16" Spacing="24">
+
+                <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                                Command="{Binding RefreshCommand}">
+                    <listView:SfListView x:Name="RecentList"
+                                     IsScrollBarVisible="False" IsScrollingEnabled="False"
+                                     AllowSwiping="True"
+                                     AutoFitMode="Height"
+                                     ItemSpacing="0"                                     
+                                     SelectionGesture="Tap"
+                                     SelectionMode="Single"
+                                     VerticalOptions="FillAndExpand"
+                                     TapCommand="{Binding ItemTappedCommand}"
+                                     ItemsSource="{Binding RecentList}"
+                                     SelectionBackgroundColor="Transparent">
+
+                        <listView:SfListView.HeaderTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" Margin="16, 0, 16, 8" ColumnSpacing="0">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="RECENT"                                       
+                                       FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"                                       
+                                       HorizontalOptions="Start"/>
+
+                                    <buttons:SfButton Grid.Column="1" 
+                                                  BorderWidth="0" 
+                                                  WidthRequest="134" 
+                                                  HeightRequest="18"
+                                                  FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"  
+                                                  BackgroundColor="{DynamicResource Gray-White}"                                                  
+                                                  CornerRadius="4"
+                                                  HorizontalOptions="End">
+
+                                        <Label Text="MARK ALL AS READ"
+                                           FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
+                                           VerticalTextAlignment="Center"
+                                           HorizontalTextAlignment="Center"
+                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"/>
+
+                                    </buttons:SfButton>
+
+                                </Grid>
+                            </DataTemplate>
+                        </listView:SfListView.HeaderTemplate>
+
+                        <listView:SfListView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <!-- Notify icon for readable item  -->
+                                    <Label Text="StaticResource 'New Message'" 
+                                           TextColor="{Binding IsRead, Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=6}" 
+                                           Margin="16, 20, 0, 0"
+                                           FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}"/>
+
+                                    <!-- Notification Detail -->
+                                    <Label  x:Name="LblTest" Grid.Row="0" Grid.Column="1" Text="Binding Name" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium}" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
+
+                                    <!-- Received Time -->
+                                    <Label Grid.Row="1"
+                                           Grid.Column="1" Margin="0, 4, 16, 16"
+                                           Text="Binding ReceivedTime"                                           
+                                           FontSize="12"
+                                           FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
+                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"
+                                           LineBreakMode="TailTruncation"
+                                           />
+
+                                    <!-- Seperator -->
+                                    <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
+
+                                </Grid>
+                            </DataTemplate>
+                        </listView:SfListView.ItemTemplate>
+
+                        <listView:SfListView.Behaviors>
+                            <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
+                        </listView:SfListView.Behaviors>
+                    </listView:SfListView>
+                </RefreshView>
+                
+            </StackLayout>
         </ScrollView>
+
+
+                </Grid>
+            </cards:SfCardView>
+            <!-- Go to Encounters -->
+            <Button Text="Show all Encounters" FontFamily="{DynamicResource Montserrat-Medium}" FontSize="12" Grid.Row="2" TextColor="{DynamicResource Gray-700}" VerticalOptions="Start" Padding="20" BackgroundColor="#f2f2f2" Clicked="Button_Clicked" />
+
+
+        </Grid>
 
 
     </ContentPage.Content>
