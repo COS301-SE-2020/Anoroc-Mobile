@@ -91,6 +91,7 @@ namespace AnorocMobileApp.Services
 
                     var content = new StringContent(data, Encoding.UTF8, "application/json");
                     content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                    content.Headers.Add("Access-Control-Allow-Origin", "*");
 
 
                     Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Cluster/Simplified");
