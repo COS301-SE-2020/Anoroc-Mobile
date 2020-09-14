@@ -31,32 +31,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
         {
             cardItems = new ObservableCollection<Me>()
             {
-                //new Me()
-                //{
-                //    Category = "Notifications",
-                //    //CategoryValue = "13",                    
-                //    //ImagePath = "CaloriesEaten.svg",
-                //    //doSomething()
-                //}
-                //,
-                //new Me()
-                //{
-                //    Category = "Heart Rate",
-                //    CategoryValue = "87 BPM",
-                //    ImagePath = "HeartRate.svg"
-                //},
-                //new Me()
-                //{
-                //    Category = "Water Consumed",
-                //    CategoryValue = "38.6 L",
-                //    ImagePath = "WaterConsumed.svg"
-                //},
-                //new Me()
-                //{
-                //    Category = "Sleep Duration",
-                //    CategoryValue = "7.3 H",
-                //    ImagePath = "SleepDuration.svg"
-                //}
+                
             };
             //cardItems.Add();                            
             //CardItem button onPress={() => Alert.alert('hi')}
@@ -71,8 +46,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 this.Location = "Enabled";
             }
-            this.Incidents = "0";
-            this.Preventions = "0";
+           
         }
 
         #endregion
