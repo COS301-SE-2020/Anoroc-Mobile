@@ -19,7 +19,7 @@ namespace AnorocMobileApp.Converters
             if (value == null) return string.Empty;
 
             var current_day = DateTime.Today;
-            var postedData = (DateTime)value;
+            var postedData = DateTime.ParseExact(value.ToString(), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture); ;
 
             var ts = new TimeSpan(DateTime.Now.Ticks - postedData.Ticks);
             double delta = Math.Abs(ts.TotalSeconds);
