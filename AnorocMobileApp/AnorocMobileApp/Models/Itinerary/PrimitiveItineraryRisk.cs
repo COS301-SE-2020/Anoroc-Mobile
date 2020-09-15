@@ -3,11 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SQLite;
 
 namespace AnorocMobileApp.Models.Itinerary
 {
+    [Table("PrimitiveItineraryRisk")]
     public class PrimitiveItineraryRisk
     {
+        /// <summary>
+        /// Id for the itinerary
+        /// </summary>
+        [PrimaryKey, AutoIncrement]
+        public int ItineraryId { get; set; }
+        
         public DateTime Created { get; set; }
         /// <summary>
         /// The total risk of the journey

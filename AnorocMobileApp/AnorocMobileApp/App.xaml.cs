@@ -11,6 +11,7 @@ using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
 using System.IO;
+using Plugin.SecureStorage;
 
 namespace AnorocMobileApp
 {
@@ -58,7 +59,7 @@ namespace AnorocMobileApp
    
             MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
 
-            MainPage = new LoginWithSocialIconPage();
+            // MainPage = new LoginWithSocialIconPage();
             
             FilePath = filePath;
         }
@@ -67,54 +68,30 @@ namespace AnorocMobileApp
 
 
         public App()
-        {  
+        {
             InitializeComponent();
-            /*//Register Syncfusion license
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-
-          
-
-            DependencyService.Register<B2CAuthenticationService>();
-
-          
-
-            MessagingCenter.Subscribe<object, string>(this, App.FirebaseTokenKey, OnKeyReceived);
-
-
-            MainPage = new LoginWithSocialIconPage();
-
-            //Defualt lifestle
-            IoCContainer = new Container();
-            //* IoCContainer.Options.DefaultLifestyle = new AsyncScopedLifestyle();*//*
-            // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Singleton);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Singleton);
-            *//*
-            // Dependancy Injections:
-            IoCContainer.Register<IBackgroundLocationService, BackgroundLocationService>(Lifestyle.Scoped);
-            IoCContainer.Register<ILocationService, LocationService>(Lifestyle.Scoped);
-            IoCContainer.Register<IUserManagementService, UserManagementService>(Lifestyle.Scoped);
-            *//*
-
-            //Register Syncfusion license
-            InitializeComponent();
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(syncfusionLicense);
-           
-            MainPage = new NavigationPage(new BottomNavigationPage());*/
         }
         void OnKeyReceived(object sender, string key)
         {
             Current.Properties["FirebaseToken"] = key;
             IUserManagementService userManagementService = App.IoCContainer.GetInstance<IUserManagementService>();
             userManagementService.SendFireBaseToken(key);
-            // IoCContainer.GetInstance<IUserManagementService>().SendFireBaseToken(key);
         }
  
 
         protected override void OnStart()
         {
             LoadPersistentValues();
+            
+            var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
+            if (status != null && status == "True")
+            {
+                MainPage = new NavigationPage(new BottomNavigationPage());
+            }
+            else
+            {
+                MainPage = new LoginWithSocialIconPage();
+            }
         }
 
         protected override void OnSleep()
@@ -125,6 +102,15 @@ namespace AnorocMobileApp
         protected override void OnResume()
         {
             LoadPersistentValues();
+            var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
+            if (status != null && status == "True")
+            {
+                MainPage = new NavigationPage(new BottomNavigationPage());
+            }
+            else
+            {
+                MainPage = new LoginWithSocialIconPage();
+            }
         }
 
         private void LoadPersistentValues()
@@ -143,10 +129,7 @@ namespace AnorocMobileApp
             if (Current.Properties.ContainsKey("CarrierStatus"))
             {
                 // Use Carrier status
-                if (Current.Properties["CarrierStatus"].ToString() == "Positive")
-                    User.carrierStatus = true;
-                else
-                    User.carrierStatus = false;
+                User.carrierStatus = Current.Properties["CarrierStatus"].ToString() == "Positive";
             }
             else
                 User.carrierStatus = false;
