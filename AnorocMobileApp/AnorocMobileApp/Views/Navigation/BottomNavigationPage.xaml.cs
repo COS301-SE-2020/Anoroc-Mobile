@@ -69,7 +69,7 @@ namespace AnorocMobileApp.Views.Navigation
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = notificationDB.Body;
                     tempModel.IsRead = false;
-                    tempModel.ReceivedTime = DateTime.Now.ToString();
+                    tempModel.ReceivedTime = DateTime.Now;
                     //tempModel.ReceivedTime = await RelativeDate(DateTime.Now, tempModel.ReceivedTime);                        
                     page.notificationViewModel.RecentList.Insert(0, tempModel);
                 }

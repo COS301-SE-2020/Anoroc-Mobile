@@ -33,7 +33,7 @@ namespace AnorocMobileApp.Models.Notification
         /// Gets or sets the received time of an item.
         /// </summary>
         [DataMember(Name = "receivedTime")]        
-        public string ReceivedTime { get; set; }
+        public DateTime ReceivedTime { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the notification item is read or not.

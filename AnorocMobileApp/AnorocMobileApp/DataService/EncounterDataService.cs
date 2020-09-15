@@ -78,7 +78,7 @@ namespace AnorocMobileApp.DataService
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
-                    tempModel.ReceivedTime = DateTime.Now.ToString();
+                    tempModel.ReceivedTime =n.Time;
                     //obj.RecentList.Add(tempModel);
                     obj.RecentList.Insert(0, tempModel);
                 }

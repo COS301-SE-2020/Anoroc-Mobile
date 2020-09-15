@@ -8,7 +8,7 @@ namespace AnorocMobileApp.Models
 {
     public class NotificationDB : INotifyPropertyChanged 
     {
-        string relevantTime = string.Empty;
+        DateTime relevantTime = DateTime.Now;
 
         [PrimaryKey, AutoIncrement]
         public int Id
@@ -29,7 +29,7 @@ namespace AnorocMobileApp.Models
             set;
         }
         
-        public string Time
+        public DateTime Time
         {
             get => relevantTime;
             set

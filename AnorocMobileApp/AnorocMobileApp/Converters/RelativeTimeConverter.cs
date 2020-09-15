@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 using Xamarin.Forms;
+using AnorocMobileApp.Models.Notification;
+using SQLite;
+using AnorocMobileApp.Models;
 
 namespace AnorocMobileApp.Converters
 {
@@ -16,10 +19,10 @@ namespace AnorocMobileApp.Converters
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null) return string.Empty;
+            if (value == null) return string.Empty;            
 
             var current_day = DateTime.Today;
-            var postedData = DateTime.ParseExact(value.ToString(), "M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture); ;
+            var postedData = value as DateTime;
 
             var ts = new TimeSpan(DateTime.Now.Ticks - postedData.Ticks);
             double delta = Math.Abs(ts.TotalSeconds);

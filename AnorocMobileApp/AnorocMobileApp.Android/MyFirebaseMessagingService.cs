@@ -83,7 +83,7 @@ namespace AnorocMobileApp.Droid
             {
                 Title = title,
                 Body = body,
-                Time = DateTime.Now.ToString()
+                Time = DateTime.Now
             };
 
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))

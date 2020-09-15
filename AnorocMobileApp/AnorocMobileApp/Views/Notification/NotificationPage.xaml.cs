@@ -18,7 +18,7 @@ namespace AnorocMobileApp.Views.Notification
     public partial class NotificationPage : ContentPage
     {
         public NotificationViewModel notificationViewModel;
-
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationPage" /> class.
         /// </summary>
@@ -29,6 +29,7 @@ namespace AnorocMobileApp.Views.Notification
             var data = new EncounterDataService();
             this.BindingContext = data.NotificationViewModel;
             this.notificationViewModel = data.NotificationViewModel;
+            
         }
 
         protected override void OnAppearing()
