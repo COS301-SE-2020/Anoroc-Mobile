@@ -43,7 +43,7 @@
             <StackLayout Padding="0, 16" Spacing="24">
 
                 
-                    <listView:SfListView x:Name="Notifications/Encounters"
+                    <listView:SfListView x:Name="Encounters"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
                                      AutoFitMode="Height"

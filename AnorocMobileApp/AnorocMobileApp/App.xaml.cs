@@ -11,6 +11,10 @@ using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using AnorocMobileApp;
 using System.IO;
+using SQLite;
+using AnorocMobileApp.Views.Notification;
+using System;
+using AnorocMobileApp.Models.Notification;
 
 namespace AnorocMobileApp
 {
@@ -62,6 +66,28 @@ namespace AnorocMobileApp
             MainPage = new LoginWithSocialIconPage();
             
             FilePath = filePath;
+            MessagingCenter.Subscribe<object, string[]>(this, App.NotificationBodyReceivedKey, (object sender, string[] msg) =>
+            {
+
+                NotificationDB notificationDB = new NotificationDB();
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    DependencyService.Get<NotificationServices>().CreateNotification(msg[0], msg[1]);
+                    notificationDB.Title = msg[0];
+                    notificationDB.Body = msg[1];
+
+
+                    using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                    {
+                        conn.CreateTable<NotificationDB>();
+                        var notificaitons = conn.Table<NotificationDB>().ToList();
+                        int rowsAdded = conn.Insert(notificationDB);
+                        //notificaitons = conn.Table<NotificationDB>().ToList();
+                        conn.Close();
+                                            
+                    }
+                });
+            });
         }
 
 
