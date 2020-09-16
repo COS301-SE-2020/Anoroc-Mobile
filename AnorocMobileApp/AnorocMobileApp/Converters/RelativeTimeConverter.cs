@@ -21,10 +21,10 @@ namespace AnorocMobileApp.Converters
         {
             if (value == null) return string.Empty;            
 
-            var current_day = DateTime.Today;
-            var postedData = value as DateTime;
+            var current_day = DateTime.Now;
+            var postedData = (DateTime)value;
 
-            var ts = new TimeSpan(DateTime.Now.Ticks - postedData.Ticks);
+            var ts = new TimeSpan(current_day.Ticks - postedData.Ticks);
             double delta = Math.Abs(ts.TotalSeconds);
 
             if (delta < 1 * MINUTE)
