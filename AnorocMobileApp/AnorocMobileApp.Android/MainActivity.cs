@@ -3,7 +3,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using Xamarin.Facebook;
 using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
@@ -27,7 +26,7 @@ namespace AnorocMobileApp.Droid
     [Activity(Label = "Anoroc", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        public static ICallbackManager CallbackManager;
+        // public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
         internal static MainActivity Instance { get; private set; }
@@ -74,7 +73,7 @@ namespace AnorocMobileApp.Droid
                 }
             }
 
-            CallbackManager = CallbackManagerFactory.Create();
+            // CallbackManager = CallbackManagerFactory.Create();
 
             base.OnCreate(savedInstanceState);
 
@@ -224,7 +223,7 @@ namespace AnorocMobileApp.Droid
                 }
             }
             AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
-            CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
+            // CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }
 
 

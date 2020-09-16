@@ -1,11 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms" xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms" xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms" xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms" xmlns:svg="clr-namespace:AnorocMobileApp.Controls" xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Navigation" xmlns:local="clr-namespace:AnorocMobileApp.Helpers" xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors" x:Class="AnorocMobileApp.Views.Navigation.MePage" NavigationPage.HasNavigationBar="False">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"            
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:gradient="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:svg="clr-namespace:AnorocMobileApp.Controls"
+             xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Navigation"
+             xmlns:local="clr-namespace:AnorocMobileApp.Helpers"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors"
+             xmlns:converter="clr-namespace:AnorocMobileApp.Converters"
+             x:Class="AnorocMobileApp.Views.Navigation.MePage"
+             NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <converter:BooleanToColorConverter x:Key="BoolToColorConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -172,9 +189,7 @@
 
             <StackLayout Padding="0, 16" Spacing="24">
 
-                <RefreshView IsRefreshing="{Binding IsRefreshing}"
-                                Command="{Binding RefreshCommand}">
-                    <listView:SfListView x:Name="RecentList"
+                    <listView:SfListView x:Name="MeRecentList"
                                      IsScrollBarVisible="False" IsScrollingEnabled="False"
                                      AllowSwiping="True"
                                      AutoFitMode="Height"
@@ -195,24 +210,24 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="RECENT"                                       
-                                       FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"                                       
+                                    <Label Text="Recent Encouners"                                       
+                                       FontSize="14" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"                                       
                                        HorizontalOptions="Start"/>
 
                                     <buttons:SfButton Grid.Column="1" 
                                                   BorderWidth="0" 
                                                   WidthRequest="134" 
                                                   HeightRequest="18"
-                                                  FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"  
+                                                  FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-900}"  
                                                   BackgroundColor="{DynamicResource Gray-White}"                                                  
                                                   CornerRadius="4"
                                                   HorizontalOptions="End">
 
-                                        <Label Text="MARK ALL AS READ"
+                                        <!--<Label Text="MARK ALL AS READ"
                                            FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
                                            VerticalTextAlignment="Center"
                                            HorizontalTextAlignment="Center"
-                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"/>
+                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"/>-->
 
                                     </buttons:SfButton>
 
@@ -222,7 +237,7 @@
 
                         <listView:SfListView.ItemTemplate>
                             <DataTemplate>
-                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{Binding IsRead,  Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=7}">
+                                <Grid RowSpacing="0" ColumnSpacing="16" BackgroundColor="{DynamicResource Gray-White}">
 
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
@@ -236,18 +251,25 @@
                                     </Grid.ColumnDefinitions>
 
                                     <!-- Notify icon for readable item  -->
-                                    <Label Text="StaticResource 'New Message'" 
+                                    <!--<Label Te xt="{StaticResource 'New Message'}" 
                                            TextColor="{Binding IsRead, Converter={x:StaticResource BoolToColorConverter}, ConverterParameter=6}" 
                                            Margin="16, 20, 0, 0"
-                                           FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}"/>
+                                           FontSize="12" FontFamily="{DynamicResource Montserrat-Medium}"/>-->
 
                                     <!-- Notification Detail -->
-                                    <Label  x:Name="LblTest" Grid.Row="0" Grid.Column="1" Text="Binding Name" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium}" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
+                                    <Label  x:Name="LblTest" Grid.Row="0"
+                                            Grid.Column="1" Text="{Binding Name}"
+                                            VerticalTextAlignment="Center"
+                                            TextColor="{DynamicResource Gray-700}"   
+                                            FontSize="14"
+                                            FontFamily="{StaticResource Montserrat-Medium}"
+                                            Margin="0, 16, 16, 0"
+                                            LineHeight="{OnPlatform Android=2,Default=-1}"></Label>
 
                                     <!-- Received Time -->
                                     <Label Grid.Row="1"
                                            Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="Binding ReceivedTime"                                           
+                                           Text="{Binding ReceivedTime}"                                           
                                            FontSize="12"
                                            FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
                                            LineHeight="{OnPlatform Android=1.5,Default=-1}"
@@ -265,7 +287,7 @@
                             <behavior:SfListViewExtendHeightBehavior ></behavior:SfListViewExtendHeightBehavior>
                         </listView:SfListView.Behaviors>
                     </listView:SfListView>
-                </RefreshView>
+               
                 
             </StackLayout>
         </ScrollView>
@@ -274,8 +296,27 @@
                 </Grid>
             </cards:SfCardView>
             <!-- Go to Encounters -->
-            <Button Text="Show all Encounters" FontFamily="{DynamicResource Montserrat-Medium}" FontSize="12" Grid.Row="2" TextColor="{DynamicResource Gray-700}" VerticalOptions="Start" Padding="20" BackgroundColor="#f2f2f2" Clicked="Button_Clicked" />
+            <!--<Button Text="Show all Encounters"
+                    Style="{StaticResource SfButtonStyle}"
+                    FontFamily="{DynamicResource Montserrat-Medium}"
+                    FontSize="12"
+                    Grid.Row="2"
+                    TextColor="{DynamicResource Gray-700}"
+                    VerticalOptions="Start"
+                    Padding="20"
+                    BackgroundColor="#f2f2f2"
+                    Clicked="Button_Clicked" />-->
 
+            <buttons:SfButton
+                        Grid.Row="2"
+                        FontFamily="{DynamicResource Montserrat-Medium}"
+                        
+                        CornerRadius="5"
+                        x:Name="btnShowEncounters"
+                        Clicked="Button_Clicked" 
+                        Command="{Binding LoginCommand}"
+                        Style="{StaticResource SfButtonStyle}"
+                        Text="Show all Encounters" />
 
         </Grid>
 

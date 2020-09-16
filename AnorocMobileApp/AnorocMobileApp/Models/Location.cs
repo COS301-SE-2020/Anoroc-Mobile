@@ -50,7 +50,7 @@ namespace AnorocMobileApp.Models
                 if (placemark.SubAdminArea == null)
                     Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.Locality);
                 else
-                    Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.SubAdminArea, placemark.Locality);
+                    Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubAdminArea);
             }
 
         }

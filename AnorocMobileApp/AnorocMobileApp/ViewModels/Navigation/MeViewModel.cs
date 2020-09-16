@@ -4,13 +4,16 @@ using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using System.IO;
+using AnorocMobileApp.Models.Notification;
+using System.Runtime.Serialization;
+using SQLite;
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
     /// <summary>
     /// ViewModel for Me page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     public class MeViewModel : BaseViewModel
     {
         #region Fields
@@ -46,7 +49,29 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 this.Location = "Enabled";
             }
-           
+
+            RecentList = new ObservableCollection<NotificationModel>();
+            loadNotifications();
+        }
+
+        private void loadNotifications()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
+                foreach (var n in notificaitons)
+                {
+                    NotificationModel tempModel = new NotificationModel();
+                    tempModel.Name = n.Body;
+                    tempModel.IsRead = false;
+                    tempModel.ReceivedTime = "Not sure";
+                    this.RecentList.Add(tempModel);
+                }
+                conn.Close();
+            }
+
+            
         }
 
         #endregion
@@ -126,7 +151,12 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// </summary>
         public string Preventions { get; set; }
 
-        
+        /// <summary>
+        /// Gets or sets a collection of values to be displayed in the social notification page recent list.
+        /// </summary>
+        [DataMember(Name = "recentNotificationList")]
+        public ObservableCollection<NotificationModel> RecentList { get; set; }
+
 
         #endregion
     }
