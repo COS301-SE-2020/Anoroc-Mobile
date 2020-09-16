@@ -116,7 +116,7 @@ namespace AnorocMobileApp.Services
 
                 try
                 {
-                    var response = await client.PostAsync(url, c);
+                    //var response = await client.PostAsync(url, c);
                     //string result = response.Content.ReadAsStringAsync().Result;
                     //Debug.WriteLine(result);
                 }

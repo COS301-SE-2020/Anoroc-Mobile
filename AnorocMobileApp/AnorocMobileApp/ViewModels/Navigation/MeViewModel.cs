@@ -4,13 +4,19 @@ using AnorocMobileApp.Models;
 using Xamarin.Forms;
 using AnorocMobileApp.Services;
 using System.IO;
+using AnorocMobileApp.Models.Notification;
+using System.Runtime.Serialization;
+using SQLite;
+using AnorocMobileApp.Views.Notification;
+using System;
+
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
     /// <summary>
     /// ViewModel for Me page.
     /// </summary>
-    [Preserve(AllMembers = true)]
+    //[Preserve(AllMembers = true)]
     public class MeViewModel : BaseViewModel
     {
         #region Fields
@@ -31,32 +37,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
         {
             cardItems = new ObservableCollection<Me>()
             {
-                //new Me()
-                //{
-                //    Category = "Notifications",
-                //    //CategoryValue = "13",                    
-                //    //ImagePath = "CaloriesEaten.svg",
-                //    //doSomething()
-                //}
-                //,
-                //new Me()
-                //{
-                //    Category = "Heart Rate",
-                //    CategoryValue = "87 BPM",
-                //    ImagePath = "HeartRate.svg"
-                //},
-                //new Me()
-                //{
-                //    Category = "Water Consumed",
-                //    CategoryValue = "38.6 L",
-                //    ImagePath = "WaterConsumed.svg"
-                //},
-                //new Me()
-                //{
-                //    Category = "Sleep Duration",
-                //    CategoryValue = "7.3 H",
-                //    ImagePath = "SleepDuration.svg"
-                //}
+                
             };
             //cardItems.Add();                            
             //CardItem button onPress={() => Alert.alert('hi')}
@@ -71,8 +52,34 @@ namespace AnorocMobileApp.ViewModels.Navigation
             {
                 this.Location = "Enabled";
             }
-            this.Incidents = "0";
-            this.Preventions = "0";
+
+            RecentList = new ObservableCollection<NotificationModel>();
+
+            loadNotifications();
+        }
+
+
+
+
+
+        public void loadNotifications()
+        {
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
+                foreach (var n in notificaitons)
+                {
+                    NotificationModel tempModel = new NotificationModel();
+                    tempModel.Name = n.Body;
+                    tempModel.IsRead = false;
+                    //tempModel.ReceivedTime = "Not sure";
+                    this.RecentList.Insert(0, tempModel);
+                }
+                conn.Close();
+            }
+
+            
         }
 
         #endregion
@@ -152,7 +159,12 @@ namespace AnorocMobileApp.ViewModels.Navigation
         /// </summary>
         public string Preventions { get; set; }
 
-        
+        /// <summary>
+        /// Gets or sets a collection of values to be displayed in the social notification page recent list.
+        /// </summary>
+        [DataMember(Name = "recentNotificationList")]
+        public ObservableCollection<NotificationModel> RecentList { get; set; }
+
 
         #endregion
     }

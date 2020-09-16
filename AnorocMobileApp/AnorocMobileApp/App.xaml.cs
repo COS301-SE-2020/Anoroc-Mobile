@@ -35,7 +35,9 @@ namespace AnorocMobileApp
         public static string BaseImageUrl { get; } = "https://cdn.syncfusion.com/essential-ui-kit-for-xamarin.forms/common/uikitimages/";
 
         private static string syncfusionLicense = Secrets.SyncfusionLicense;
-       // public IFacebookLoginService FacebookLoginService { get; private set; }
+        NotificationDB notificationDB = new NotificationDB();
+
+        // public IFacebookLoginService FacebookLoginService { get; private set; }
 
 
         //-------------------------------------------------------------------------------------------------
@@ -148,6 +150,24 @@ namespace AnorocMobileApp
             }
         }
 
+        void OnBodyMessageReceived(object sender, string msg)
+        {
+            //body = msg;
+
+
+            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+            {
+                conn.CreateTable<NotificationDB>();
+                var notificaitons = conn.Table<NotificationDB>().ToList();
+                int rowsAdded = conn.Insert(notificationDB);
+                //notificaitons = conn.Table<NotificationDB>().ToList();
+                conn.Close();
+               
+            }
+
+
+        }
+
         private void LoadPersistentValues()
         {
             if(Current.Properties.ContainsKey("Tracking"))
@@ -169,5 +189,7 @@ namespace AnorocMobileApp
             else
                 User.carrierStatus = false;
         }
+
+
     }
 }

@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Navigation;
+using AnorocMobileApp.Views.Notification;
 using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,6 +30,8 @@ namespace AnorocMobileApp.Views.Navigation
         /// 
         private string title = "";
         private string body = "";
+        MeViewModel me = new MeViewModel();
+
         public MePage()
         {
             InitializeComponent();
@@ -60,6 +65,7 @@ namespace AnorocMobileApp.Views.Navigation
                      _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
                  }
              });
+            me = new MeViewModel();
         }
 
 
@@ -111,6 +117,7 @@ namespace AnorocMobileApp.Views.Navigation
                 }
 
             }
+            me.loadNotifications();
         }
 
 
