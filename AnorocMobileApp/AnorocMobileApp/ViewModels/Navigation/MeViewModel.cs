@@ -7,6 +7,9 @@ using System.IO;
 using AnorocMobileApp.Models.Notification;
 using System.Runtime.Serialization;
 using SQLite;
+using AnorocMobileApp.Views.Notification;
+using System;
+
 
 namespace AnorocMobileApp.ViewModels.Navigation
 {
@@ -51,10 +54,15 @@ namespace AnorocMobileApp.ViewModels.Navigation
             }
 
             RecentList = new ObservableCollection<NotificationModel>();
+
             loadNotifications();
         }
 
-        private void loadNotifications()
+
+
+
+
+        public void loadNotifications()
         {
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
@@ -65,7 +73,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
-                    tempModel.ReceivedTime = "Not sure";
+                    //tempModel.ReceivedTime = "Not sure";
                     this.RecentList.Add(tempModel);
                 }
                 conn.Close();

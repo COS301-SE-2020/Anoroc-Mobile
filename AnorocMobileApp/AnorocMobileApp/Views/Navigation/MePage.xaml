@@ -177,7 +177,7 @@
                 <Grid RowSpacing="0" ColumnSpacing="0" WidthRequest="{OnIdiom Phone=343, Default=480}" HeightRequest="90">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition />                        
+                        <RowDefinition />                                                                   
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
@@ -185,6 +185,10 @@
                     </Grid.ColumnDefinitions>
 
             <!--encounters-->
+            <Label Text="Recent Encouners"                                       
+                   FontSize="14" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
+                   HorizontalOptions="Start" Padding="10" Grid.Row="0"
+                   />
             <ScrollView>
 
             <StackLayout Padding="0, 16" Spacing="24">
@@ -210,9 +214,7 @@
                                         <ColumnDefinition Width="*" />
                                     </Grid.ColumnDefinitions>
 
-                                    <Label Text="Recent Encouners"                                       
-                                       FontSize="14" FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"                                       
-                                       HorizontalOptions="Start"/>
+                                   
 
                                     <buttons:SfButton Grid.Column="1" 
                                                   BorderWidth="0" 
@@ -277,7 +279,7 @@
                                            />
 
                                     <!-- Seperator -->
-                                    <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
+                                    <BoxView Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
 
                                 </Grid>
                             </DataTemplate>
