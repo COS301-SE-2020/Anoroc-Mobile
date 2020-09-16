@@ -117,14 +117,7 @@ namespace AnorocMobileApp.Views.Navigation
                 }
 
             }
-
-            var newPage = Navigation.NavigationStack.LastOrDefault();
-            NotificationPage page = newPage as NotificationPage;
-            if (newPage.GetType() == typeof(NotificationPage))
-            {
-                me.loadNotifications();
-            }
-            
+            me.loadNotifications();
         }
 
 

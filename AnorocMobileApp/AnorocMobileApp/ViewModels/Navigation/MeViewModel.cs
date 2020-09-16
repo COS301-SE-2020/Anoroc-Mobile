@@ -74,7 +74,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
                     //tempModel.ReceivedTime = "Not sure";
-                    this.RecentList.Add(tempModel);
+                    this.RecentList.Insert(0, tempModel);
                 }
                 conn.Close();
             }

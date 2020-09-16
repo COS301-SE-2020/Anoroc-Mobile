@@ -20,7 +20,9 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="Styles.xaml">
+                    <converter:RelativeTimeConverter x:Key="RelativeTime"/>
+                </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <converter:BooleanToColorConverter x:Key="BoolToColorConverter" />
         </ResourceDictionary>
