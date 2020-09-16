@@ -26,10 +26,32 @@ namespace AnorocMobileApp.Models
         {
             var placemarks = await Geocoding.GetPlacemarksAsync(Latitude, Longitude);
             var placemark = placemarks?.FirstOrDefault();
-            if (placemark.SubLocality != null)
+            if (placemark.Locality == null)
+            {
+                if (placemark.SubAdminArea == null)
+                {
+                    if (placemark.FeatureName == null)
+                        Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.AdminArea, placemark.AdminArea);
+                    else
+                        Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.AdminArea, placemark.FeatureName);
+                }
+                else
+                {
+                    if (placemark.FeatureName == null)
+                        Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.SubAdminArea, placemark.SubAdminArea);
+                    else
+                        Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.SubAdminArea, placemark.FeatureName);
+                }
+            }
+            else if (placemark.SubLocality != null)
                 Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubLocality);
             else
-                Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubAdminArea);
+            {
+                if (placemark.SubAdminArea == null)
+                    Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.Locality);
+                else
+                    Region = new Area(placemark.CountryCode, placemark.AdminArea, placemark.Locality, placemark.SubAdminArea);
+            }
 
         }
         public Location(Xamarin.Essentials.Location loc)

@@ -37,7 +37,12 @@ namespace AnorocMobileApp.Models.Itinerary
                 LocationItineraryRisks.Add(JsonConvert.DeserializeObject<Location>(dictionary.Keys.ElementAt(i)), dictionary.Values.ElementAt(i));
             }
         }
-
+        
+        /// <summary>
+        /// Id for the itinerary
+        /// </summary>
+        public int Id { get; set; }
+        
         public DateTime Created { get; set; }
         /// <summary>
         /// The total risk of the journey
