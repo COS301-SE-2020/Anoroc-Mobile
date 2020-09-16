@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using Xamarin.Forms.Internals;
@@ -10,6 +11,7 @@ namespace AnorocMobileApp.Models.Notification
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
+    [Serializable]
     public class NotificationModel : INotifyPropertyChanged
     {
 
@@ -30,8 +32,8 @@ namespace AnorocMobileApp.Models.Notification
         /// <summary>
         /// Gets or sets the received time of an item.
         /// </summary>
-        [DataMember(Name = "receivedTime")]
-        public string ReceivedTime { get; set; }
+        [DataMember(Name = "receivedTime")]        
+        public DateTime ReceivedTime { get; set; }
 
         /// <summary>
         /// Gets or sets a value indicating whether the notification item is read or not.

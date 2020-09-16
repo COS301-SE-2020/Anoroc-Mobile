@@ -1,6 +1,7 @@
 ﻿using AnorocMobileApp.DataService;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Notification;
 using SQLite;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -16,8 +17,8 @@ namespace AnorocMobileApp.Views.Notification
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NotificationPage : ContentPage
     {
+        public NotificationViewModel notificationViewModel;
         
-
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationPage" /> class.
         /// </summary>
@@ -25,30 +26,29 @@ namespace AnorocMobileApp.Views.Notification
         {
             InitializeComponent();
             //this.BindingContext = NotificationDataService.Instance.NotificationViewModel;          
-            this.BindingContext = EncounterDataService.Instance.NotificationViewModel;
+            var data = new EncounterDataService();
+            this.BindingContext = data.NotificationViewModel;
+            this.notificationViewModel = data.NotificationViewModel;
+            MessagingCenter.Subscribe<object, string[]>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
+
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+                        
+            MessagingCenter.Subscribe<object, string[]>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
 
-            
-            RefreshView rView = new RefreshView();
-            ICommand refreshCommand = new Command(() =>
-            {
-                rView.IsRefreshing = false;
-            });
-            rView.Command = refreshCommand;
-            MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnMessageReceived);
         }
 
-        void OnMessageReceived(object sender, string msg)
+        void OnMessageReceived(object sender, string[] msg)
         {
             Device.BeginInvokeOnMainThread(() =>
             {
                 //Update Label
-                DependencyService.Get<NotificationServices>().CreateNotification("Anoroc", msg);
+                DependencyService.Get<NotificationServices>().CreateNotification(msg[0], msg[1]);
             });
         }
+
     }
 }

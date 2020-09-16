@@ -40,52 +40,55 @@ namespace AnorocMobileApp.Services
         /// 
         protected async void PostLocationAsync(Location location)
         {
-            const string url = Secrets.baseEndpoint + Secrets.geolocationEndpoint;
-
-            HttpClientHandler clientHandler = new HttpClientHandler();
-            clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
-            try
+            if (App.Current.Properties.ContainsKey("TOKEN"))
             {
-                using (HttpClient client = new HttpClient(clientHandler))
+                const string url = Secrets.baseEndpoint + Secrets.geolocationEndpoint;
+
+                HttpClientHandler clientHandler = new HttpClientHandler();
+                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                try
                 {
-
-                    client.Timeout = TimeSpan.FromSeconds(30);
-
-                    Token token = new Token();
-                    token.access_token = (string)Application.Current.Properties["TOKEN"];
-
-
-                    token.Object_To_Server = JsonConvert.SerializeObject(location);
-                    var data = JsonConvert.SerializeObject(token);
-
-                    var StringConent = new StringContent(data, Encoding.UTF8, "application/json");
-                    StringConent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-                    HttpResponseMessage response;
-
-                    try
+                    using (HttpClient client = new HttpClient(clientHandler))
                     {
-                        response = await client.PostAsync(url, StringConent);
-                    }
-                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException || e is HttpRequestException)
-                    {
-                        throw new CantConnectToLocationServerException();
+
+                        client.Timeout = TimeSpan.FromSeconds(30);
+
+                        Token token = new Token();
+                        token.access_token = (string)Application.Current.Properties["TOKEN"];
+
+
+                        token.Object_To_Server = JsonConvert.SerializeObject(location);
+                        var data = JsonConvert.SerializeObject(token);
+
+                        var StringConent = new StringContent(data, Encoding.UTF8, "application/json");
+                        StringConent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                        HttpResponseMessage response;
+
+                        try
+                        {
+                            response = await client.PostAsync(url, StringConent);
+                        }
+                        catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException || e is HttpRequestException)
+                        {
+                            throw new CantConnectToLocationServerException();
+                        }
+
+                        if (!response.IsSuccessStatusCode)
+                        {
+                            throw new CantConnectToLocationServerException();
+                        }
+                        string result = response.Content.ReadAsStringAsync().Result;
+
+                        //await DisplayAlert("Attention", "Enabled: " + result, "OK");
+                        success = true;
                     }
 
-                    if (!response.IsSuccessStatusCode)
-                    {
-                        throw new CantConnectToLocationServerException();
-                    }
-                    string result = response.Content.ReadAsStringAsync().Result;
-
-                    //await DisplayAlert("Attention", "Enabled: " + result, "OK");
-                    success = true;
                 }
-
-            }
-            catch(Exception e) when (e is CantConnectToLocationServerException)
-            {
-               //TODO:
-               // retry logic for sending to the server
+                catch (Exception e) when (e is CantConnectToLocationServerException)
+                {
+                    //TODO:
+                    // retry logic for sending to the server
+                }
             }
         }
 
