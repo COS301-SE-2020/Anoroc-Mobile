@@ -60,8 +60,15 @@ namespace AnorocMobileApp.Views.Dashboard
             {
                 ShowHeader = false
             };
+            
+            var nativeDatePicker = new DatePicker
+            {
+              HorizontalOptions  = LayoutOptions.Center,
+              
+                  
+            };
 
-            popup.PopupView.ContentTemplate = new DataTemplate(() => datePicker);
+            popup.PopupView.ContentTemplate = new DataTemplate(() => nativeDatePicker);
 
             return popup;
         }
