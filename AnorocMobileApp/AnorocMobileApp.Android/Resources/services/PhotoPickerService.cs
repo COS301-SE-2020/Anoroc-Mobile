@@ -34,7 +34,6 @@ namespace AnorocMobileApp.Droid.Resources.services
             // Save the TaskCompletionSource object as a MainActivity property
             MainActivity.Instance.PickImageTaskCompletionSource = new TaskCompletionSource<Stream>();
 
-            // Return Task object
             return MainActivity.Instance.PickImageTaskCompletionSource.Task;
         }
 
