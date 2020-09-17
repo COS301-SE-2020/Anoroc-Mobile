@@ -24,7 +24,7 @@ namespace AnorocMobileApp.Models.Itinerary
         }
         public ItineraryWrap(Itinerary userItinerary)
         {
-            DateTime = userItinerary.DateTime;
+            DateTime = userItinerary.Date;
             Locations = new List<Location>();
             userItinerary.Locations.ForEach(location =>
             {

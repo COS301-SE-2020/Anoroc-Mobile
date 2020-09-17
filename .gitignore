@@ -507,5 +507,5 @@ AnorocMobileApp/AnorocMobileApp.iOS/obj/iPhone/Debug/AnorocMobileApp.iOS.csprojA
 AnorocMobileApp/AnorocMobileApp/obj/Debug/netstandard2.0/AnorocMobileApp.csprojAssemblyReference.cache
 
 secrets.json
-
+*.apk
 

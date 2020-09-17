@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Navigation;
+using AnorocMobileApp.Views.Notification;
 using Plugin.SecureStorage;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -27,6 +30,8 @@ namespace AnorocMobileApp.Views.Navigation
         /// 
         private string title = "";
         private string body = "";
+        MeViewModel me = new MeViewModel();
+
         public MePage()
         {
             InitializeComponent();
@@ -63,6 +68,7 @@ namespace AnorocMobileApp.Views.Navigation
                      }
                  }
              });
+            me = new MeViewModel();
         }
 
 
@@ -114,6 +120,7 @@ namespace AnorocMobileApp.Views.Navigation
                 }
 
             }
+            me.loadNotifications();
         }
 
 
@@ -132,7 +139,7 @@ namespace AnorocMobileApp.Views.Navigation
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             //DisplayAlert("Alert", "Notifications", "OK");
-            Navigation.PushModalAsync(new Notification.NotificationPage());
+            Navigation.PushAsync(new Notification.NotificationPage());
         }
 
         async void UpdatedIncidentNumner()

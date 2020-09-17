@@ -27,6 +27,7 @@ namespace AnorocMobileApp.Droid
     {
         public static string title = "";
         public static string body = "";
+        public static string time = "";
 
         public override void  OnMessageReceived(RemoteMessage message)
         {
@@ -37,64 +38,65 @@ namespace AnorocMobileApp.Droid
             {
 
                 base.OnMessageReceived(message);
-
-                var title = message.GetNotification().Title;
-                var data = message.Data;
-                var msg = message.GetNotification().Body;
-                Console.WriteLine("Testing Data output: "  + message.Data.Values);
-
-                var location = JsonConvert.DeserializeObject<Models.Location>(data["Location"]);
-                var risk = Convert.ToInt32(data["Risk"]);
-                var dateTime = DateTime.Parse(data["DateTime"]);
-
-                var body = "High Risk: You have come into contact in " + location.Region.Suburb;
+                try
+                {
+                    var data = message.Data;
+                    var location = JsonConvert.DeserializeObject<Models.Location>(data["Location"]);
+                    var risk = Convert.ToInt32(data["Risk"]);
+                    var dT = data["DateTime"];
+                    var title = message.GetNotification().Title;
 
 
-                string[] notificationMessage = { title, body };
+                    var outRisk = "";
+                    switch(risk)
+                    {
+                        case 4:
+                            outRisk = "HIGH RISK";
+                            break;
+                        case 3:
+                            outRisk = "MEDIUM_RISK";
+                            break;
+                        case 2:
+                            outRisk = "MODERATE_RISK";
+                            break;
+                        case 1:
+                            outRisk = "LOW_RISK";
+                            break;
+                        case 0:
+                            outRisk = "NO_RISK";
+                            break;
+                    }
+
+                    var body = outRisk + ": You have come into contact in " + location.Region.Suburb + " at " + dT.ToString();
+                    string[] notificationMessage = { title, body };
+                    Console.WriteLine("Testing Data output: " + message.Data.Values);
 
 
-                // Passing Message onto xamarin forms
-                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
-                MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
-                //Console.WriteLine("Received Message: " + body);
+
+                    // Passing Message onto xamarin forms
+                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
+                }
+                catch(Exception e)
+                {
+                    var body = message.GetNotification().Body;
+                    var title = message.GetNotification().Title;
+                    var msg = message.GetNotification().Body;
+                     string[] notificationMessage = { title, body };
+                    Console.WriteLine("Testing Data output: " + message.Data.Values);
 
 
 
-                //MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationReceivedKey, notificationMessage);
-                //SendNotification(body, message.Data);                
+                    // Passing Message onto xamarin forms
+                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
+
+                }     
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Errorr extracting message: " + ex);
             }
         }
-
-        private void SendNotification(string messageBody, IDictionary<string, string> data)
-        {
-
-            var intent = new Intent(this, typeof(MainActivity));
-            intent.PutExtra("title", title);
-            intent.PutExtra("body", body);
-
-            intent.AddFlags(ActivityFlags.ClearTop);
-            foreach (var key in data.Keys)
-            {
-                intent.PutExtra(key, data[key]);
-            }
-
-            NotificationDB notificationDB = new NotificationDB()
-            {
-                Title = title,
-                Body = body
-            };
-
-            using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
-            {
-
-                conn.CreateTable<NotificationDB>();
-                var notifications = conn.Table<NotificationDB>().ToList();
-
-            }
-        }   
     }
 }

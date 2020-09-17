@@ -3,7 +3,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using Xamarin.Facebook;
 using Android.Content;
 using AnorocMobileApp.Droid.Resources.services;
 using Android;
@@ -27,7 +26,7 @@ namespace AnorocMobileApp.Droid
     [Activity(Label = "Anoroc", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        public static ICallbackManager CallbackManager;
+        // public static ICallbackManager CallbackManager;
         const int RequestLocationId = 0;
 
         internal static MainActivity Instance { get; private set; }
@@ -74,7 +73,7 @@ namespace AnorocMobileApp.Droid
                 }
             }
 
-            CallbackManager = CallbackManagerFactory.Create();
+            // CallbackManager = CallbackManagerFactory.Create();
 
             base.OnCreate(savedInstanceState);
 
@@ -98,9 +97,9 @@ namespace AnorocMobileApp.Droid
 
             // Dependency Injection:
 
-            string fileNmae = "notification_db.db3";
+            string fileName = "notification_db.db3";
             string folderPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            string completePath = Path.Combine(folderPath, fileNmae);            
+            string completePath = Path.Combine(folderPath, fileName);            
             LoadApplication(new App(completePath));
 
             Instance = this;
@@ -224,7 +223,7 @@ namespace AnorocMobileApp.Droid
                 }
             }
             AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
-            CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
+            // CallbackManager.OnActivityResult(requestCode, Convert.ToInt32(resultCode), data);
         }
 
 

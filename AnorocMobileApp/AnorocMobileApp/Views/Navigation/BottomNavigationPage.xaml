@@ -38,9 +38,8 @@
     <itinerary:ItineraryPage Title="Itinerary"  >
         <itinerary:ItineraryPage.IconImageSource >
             <FontImageSource FontFamily="{StaticResource FontIcons}"
-                                 Glyph="{StaticResource SettingsIcon}"
-                                 Size="16"/>
-
+                                 Glyph="{StaticResource HomeIcon}"
+                                 Size="16"/>                
         </itinerary:ItineraryPage.IconImageSource>
     </itinerary:ItineraryPage>
     <local:Map Title="Map">
