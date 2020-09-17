@@ -270,15 +270,6 @@
                                             Margin="0, 16, 16, 0"
                                             LineHeight="{OnPlatform Android=2,Default=-1}"></Label>
 
-                                    <!-- Received Time -->
-                                    <Label Grid.Row="1"
-                                           Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="{Binding ReceivedTime}"                                           
-                                           FontSize="12"
-                                           FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
-                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"
-                                           LineBreakMode="TailTruncation"
-                                           />
 
                                     <!-- Seperator -->
                                     <BoxView Grid.Row="3" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />

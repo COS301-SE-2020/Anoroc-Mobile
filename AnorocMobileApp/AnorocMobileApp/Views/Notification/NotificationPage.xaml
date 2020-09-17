@@ -117,15 +117,7 @@
                                     <!-- Notification Detail -->
                                     <Label  x:Name="LblTest" Grid.Row="0" Grid.Column="1" Text="{Binding Name}" TextColor="{DynamicResource Gray-900}" FontSize="16" FontFamily="{StaticResource Montserrat-Medium}" Margin="0, 16, 16, 0" LineHeight="{OnPlatform Android=1.25,Default=-1}"></Label>
 
-                                    <!-- Received Time -->
-                                    <Label Grid.Row="1"
-                                           Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="{Binding ReceivedTime, Converter={StaticResource RelativeTime}}"
-                                           TextColor="{DynamicResource Gray-700}"
-                                           FontSize="12"
-                                           LineHeight="{OnPlatform Android=1.5,Default=-1}"
-                                           LineBreakMode="TailTruncation"
-                                           FontFamily="{DynamicResource Montserrat-Medium}"/>
+                                 
 
                                     <!-- Seperator -->
                                     <BoxView Grid.Row="2" Grid.ColumnSpan="2" Style="{StaticResource SeparatorStyle}" />
