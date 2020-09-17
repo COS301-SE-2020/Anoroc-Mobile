@@ -1,8 +1,16 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using System.Windows.Input;
+using AnorocMobileApp.Models.Dashboard;
+using AnorocMobileApp.Models.Itinerary;
+using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
+using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
 
 namespace AnorocMobileApp.ViewModels.Itinerary
 {
@@ -20,6 +28,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
         private string content;
 
+        private ObservableCollection<Models.Itinerary.Itinerary> itineraries;
+
         #endregion
 
         #region Constructor
@@ -29,13 +39,15 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// </summary>
         public ItineraryPageViewModel(INavigation navigation)
         {
-            this.ImagePath = "EmptyItinerary.svg";
-            this.Header = "EMPTY ITINERARY";
-            this.Content = "You currently have no itineraries";
-            this.GoBackCommand = new Command(this.GoBack);
-            this.Navigation = navigation;
-            
-            this.AddItineraryCommand = new Command(async () => await AddItinerary());
+            ImagePath = "EmptyItinerary.svg";
+            Header = "EMPTY ITINERARY";
+            Content = "You currently have no itineraries";
+            GoBackCommand = new Command(GoBack);
+            Navigation = navigation;
+
+            AddItineraryCommand = new Command(async () => await AddItinerary());
+            DeleteCommand = new Command(async obj => await DeleteButtonClicked(obj));
+            ItineraryCommand = new Command(async obj => await ItineraryClicked(obj));
         }
 
         #endregion
@@ -46,6 +58,13 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// Gets or sets the command that is executed when the Go back button is clicked.
         /// </summary>
         public ICommand GoBackCommand { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the command is executed when the delete button is clicked.
+        /// </summary>
+        public Command DeleteCommand { get; set; }
+        
+        public ICommand ItineraryCommand { get; set; }
         
         public ICommand AddItineraryCommand { get; set; }
 
@@ -95,6 +114,19 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             }
         }
 
+        public ObservableCollection<Models.Itinerary.Itinerary> Itineraries
+        {
+            get => itineraries ?? (itineraries = new ObservableCollection<Models.Itinerary.Itinerary>());
+            set
+            {
+                if (itineraries != value)
+                {
+                    itineraries = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public INavigation Navigation { get; set;}
         
         #endregion
@@ -109,10 +141,55 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         {
             // Do something
         }
+        
+        /// <summary>
+        /// Invoked when the delete button clicked
+        /// </summary>
+        /// <param name="obj">The object</param>
+        private async Task DeleteButtonClicked(object obj)
+        {
+            var delete = 99999;
+            if (obj is Models.Itinerary.Itinerary itinerary) 
+                delete = await ItineraryService.DeleteItinerary(itinerary.ItineraryRisk);
+            Itineraries.Remove(obj as Models.Itinerary.Itinerary);
+            
+            Debug.WriteLine(delete);
+        }
 
+        private async Task ItineraryClicked(object obj)
+        {
+            if (obj is ItemTappedEventArgs eventArgs)
+            {
+                if (eventArgs.ItemData is Models.Itinerary.Itinerary data) 
+                    await Navigation.PushAsync(new ViewItineraryPage(data.ItineraryRisk));
+            }
+        }
+
+        /// <summary>
+        /// Invoked when the Add Itinerary button is clicked
+        /// </summary>
+        /// <returns></returns>
         private async Task AddItinerary()
         {
             await Navigation.PushAsync(new AddItineraryPage());
+        }
+
+        public void PopulateItineraries()
+        {
+            Itineraries.Clear();
+            var itineraryService = new ItineraryService();
+            var itineraryRisks = itineraryService.ItinerariesFromLocal();
+
+            foreach (var itinerary in itineraryRisks.Select(itineraryRisk => new Models.Itinerary.Itinerary()
+            {
+                Date = itineraryRisk.Created,
+                NumberOfLocations = itineraryRisk.LocationItineraryRisks.Count,
+                RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk],
+                ItineraryRisk = itineraryRisk
+            }))
+            {
+                Itineraries.Add(itinerary);
+            }
         }
 
         #endregion      

@@ -7,15 +7,42 @@ using System.Diagnostics;
 using AnorocMobileApp.Services;
 using System.Threading.Tasks;
 using AnorocMobileApp.Exceptions;
+using System.Linq;
 
 namespace AnorocMobileApp.Models
 {
     class MapModel
     {
         MapService Map_Service;
+        Dictionary<int, List<Cluster>> OldClusters;
         public MapModel()
         {
             Map_Service = new MapService();
+            OldClusters = new Dictionary<int, List<Cluster>>();
+        }
+
+        public async Task<List<Cluster>> GetOldClustersWithRadius(int days)
+        {
+            
+            if (OldClusters.ContainsKey(days))
+            {
+                return OldClusters[days];
+            }
+            else
+            {
+                List<Cluster> cluster = null;
+                try
+                {
+                    cluster = await Map_Service.GetOldClusterUsingDays(days);
+                    OldClusters.Add(days, cluster);
+                }
+                catch (CantConnecToClusterServiceException)
+                {
+                    //TODO:
+                    // Retry logic for not connecting to the cluster service
+                }
+                return cluster;
+            }
         }
 
         public async Task<List<Cluster>> GetClustersWithRadius()

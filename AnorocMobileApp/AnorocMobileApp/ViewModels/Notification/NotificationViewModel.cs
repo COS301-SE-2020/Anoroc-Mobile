@@ -2,6 +2,7 @@
 using AnorocMobileApp.Models.Notification;
 using SQLite;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Runtime.Serialization;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -22,6 +23,8 @@ namespace AnorocMobileApp.ViewModels.Notification
         private Command<object> backCommand;
 
         private Command<object> menuCommand;
+
+        private ObservableCollection<NotificationModel> recentList;
 
         #endregion
 
@@ -76,7 +79,18 @@ namespace AnorocMobileApp.ViewModels.Notification
         /// Gets or sets a collection of values to be displayed in the social notification page recent list.
         /// </summary>
         [DataMember(Name = "recentNotificationList")]
-        public ObservableCollection<NotificationModel> RecentList { get; set; }
+        public ObservableCollection<NotificationModel> RecentList
+        {
+            get => recentList ?? (recentList = new ObservableCollection<NotificationModel>());
+            set
+            {
+                if (recentList != value)
+                {
+                    recentList = value;
+                    OnPropertyChanged("AddressTimeline");
+                }
+            }
+        }
 
         /// <summary>
         /// Gets or sets a collection of values to be displayed in the social notification page earlier list.
@@ -117,5 +131,14 @@ namespace AnorocMobileApp.ViewModels.Notification
         }
 
         #endregion       
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        
     }
 }

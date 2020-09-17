@@ -18,6 +18,7 @@
     <None Remove="Images\CaloriesEaten.svg" />
     <None Remove="Images\HeartRate.svg" />
     <None Remove="Images\EmptyItinerary.svg" />
+    <None Remove="Images\pngfuel.com.png" />
     <None Remove="Images\SleepDuration.svg" />
     <None Remove="Images\WaterConsumed.svg" />
     <None Remove="places.json" />
@@ -39,6 +40,9 @@
     <EmbeddedResource Update="Views\Dashboard\AddItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Dashboard\ViewItineraryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Dashboard\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -48,10 +52,6 @@
     <EmbeddedResource Update="Views\Itinerary\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Login.xaml">
-      <SubType>Designer</SubType>
-      <Generator></Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -59,8 +59,11 @@
     <PackageReference Include="Microsoft.Identity.Client" Version="4.17.0" />
     <PackageReference Include="Mobile.BuildTools" Version="1.4.0.638" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="sameerIOTApps.Plugin.SecureStorage" Version="2.5.0" />
     <PackageReference Include="SimpleInjector" Version="5.0.3" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.2.0.48" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
@@ -92,6 +95,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Mono.Android">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\ReferenceAssemblies\Microsoft\Framework\MonoAndroid\v9.0\Mono.Android.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\pngfuel.com.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
@@ -113,9 +126,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Services\FacebookLogin.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -140,28 +150,10 @@
     <EmbeddedResource Update="Views\Forms\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\HomePage_old.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Menu\ArticleListPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Menu\Styles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Navigation\AlbumPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Navigation\ArticleListPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\BottomNavigationPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\MePage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Navigation\PhotosPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Navigation\SettingsPage.xaml">

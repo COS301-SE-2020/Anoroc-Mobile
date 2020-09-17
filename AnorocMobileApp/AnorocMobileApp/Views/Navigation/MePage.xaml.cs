@@ -1,10 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Net;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
-
+using AnorocMobileApp.ViewModels.Navigation;
+using AnorocMobileApp.Views.Notification;
+using Plugin.SecureStorage;
 using Xamarin.Forms;
-using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -25,10 +30,12 @@ namespace AnorocMobileApp.Views.Navigation
         /// 
         private string title = "";
         private string body = "";
+        MeViewModel me = new MeViewModel();
+
         public MePage()
         {
             InitializeComponent();
-
+            //_ProfileImage.Source = ImageSource.FromUri(new Uri(Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "profilepicture.jpg")));
             if (Application.Current.Properties.ContainsKey("CarrierStatus"))
             {
                 var value = Application.Current.Properties["CarrierStatus"].ToString();
@@ -37,12 +44,83 @@ namespace AnorocMobileApp.Views.Navigation
                 else
                     picker.SelectedIndex = 1;
             }
+            else
+                picker.SelectedIndex = 1;
+
+
+
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+             {
+                 var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                 var base64 = await ims.GetUserProfileImage();
+                 if (base64 != "")
+                 {
+                     var bytes = Convert.FromBase64String(base64);
+                     MemoryStream ms = new MemoryStream(bytes);
+                     ms.Position = 0;
+                     MemoryStream otherstream = new MemoryStream();
+                     ms.CopyTo(otherstream);
+                     otherstream.Position = 0;
+
+                     _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
+                 }
+             });
+            me = new MeViewModel();
         }
 
-        public void OnAppearing()
+
+
+        protected override void OnAppearing()
         {
-                   
+            base.OnAppearing();
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                UpdatedIncidentNumner();
+            }
+            var name = CrossSecureStorage.Current.GetValue("Name");
+            var surname = CrossSecureStorage.Current.GetValue("Surname");
+
+            try
+            {
+                var location = CrossSecureStorage.Current.GetValue("Location");
+                if (location != null)
+                {
+                    if (location.Equals("true"))
+                    {
+                        locationStatus.Text = "Enabled";
+                    }
+                    else
+                    {
+                        locationStatus.Text = "Disabled";
+                    }
+
+                }
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e.Message);
+                locationStatus.Text = "Disabled";
+            }
+            
+            profileName.Text = name.ToString() + " " + surname.ToString();
+
+            var status_info = CrossSecureStorage.Current.GetValue("Carrier_status");
+            if (status_info != null)
+            {
+                if (status_info.Equals("true"))
+                {
+                    carrier_status_info.Text = "Preventions";
+                }
+                else
+                {
+                    carrier_status_info.Text = "Incidents";
+                }
+
+            }
+            me.loadNotifications();
         }
+
+
         
         /*
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
@@ -58,7 +136,14 @@ namespace AnorocMobileApp.Views.Navigation
         void Button_Clicked(System.Object sender, System.EventArgs e)
         {
             //DisplayAlert("Alert", "Notifications", "OK");
-            Navigation.PushModalAsync(new Notification.NotificationPage());
+            Navigation.PushAsync(new Notification.NotificationPage());
+        }
+
+        async void UpdatedIncidentNumner()
+        {
+            var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+            var theNumber = await ims.UpdatedIncidents();
+            carrier_status_num.Text = theNumber.ToString();
         }
 
         /// <summary>
@@ -75,13 +160,44 @@ namespace AnorocMobileApp.Views.Navigation
                 Application.Current.Properties["CarrierStatus"] = value;
 
                 if (value == "Positive")
+                {
                     User.carrierStatus = true;
+                    CrossSecureStorage.Current.SetValue("Carrier_status", "true");
+                }
                 else
+                {
                     User.carrierStatus = false;
+                    CrossSecureStorage.Current.SetValue("Carrier_status", "false");
+                }
 
 
                 IUserManagementService user = App.IoCContainer.GetInstance<IUserManagementService>();
                 user.sendCarrierStatusAsync(value);
+            }
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
+            MemoryStream copyStream = new MemoryStream();
+            
+            if (stream != null)
+            {
+                await stream.CopyToAsync(copyStream);
+                copyStream.Position = 0;
+                MemoryStream ms = new MemoryStream();
+                await copyStream.CopyToAsync(ms);
+                copyStream.Position = 0;
+
+                _ProfileImage.Source = ImageSource.FromStream(()=> copyStream);
+
+                var theString = _ProfileImage.Source.ToString();
+
+                ms.Position = 0;
+                var bytes = ms.ToArray();
+                string base64 = System.Convert.ToBase64String(bytes);
+                var ims = App.IoCContainer.GetInstance<IUserManagementService>();
+                ims.UploadUserProfileImage(base64);
             }
         }
     }

@@ -20,22 +20,14 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </TabbedPage.Resources>
-    <home:HomePage Title="Home">
+    <!--<home:HomePage Title="Home">
         <home:HomePage.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
                                  Glyph="{StaticResource HomeIcon}"
                                  Size="16"/>
         </home:HomePage.IconImageSource>
-    </home:HomePage>
-    <itinerary:ItineraryPage Title="Itinerary"  >
-        <itinerary:ItineraryPage.IconImageSource >
-            <FontImageSource FontFamily="{StaticResource FontIcons}"
-                                 Glyph="{StaticResource SettingsIcon}"
-                                 Size="16"/>
-
-        </itinerary:ItineraryPage.IconImageSource>
-    </itinerary:ItineraryPage>
-    <navigation:MePage Title="Me">
+    </home:HomePage>-->
+        <navigation:MePage Title="Me">
         <navigation:MePage.IconImageSource>
 
             <FontImageSource FontFamily="{StaticResource FontIcons}"
@@ -43,6 +35,13 @@
                                  Size="16"/>
         </navigation:MePage.IconImageSource>
     </navigation:MePage>
+    <itinerary:ItineraryPage Title="Itinerary"  >
+        <itinerary:ItineraryPage.IconImageSource >
+            <FontImageSource FontFamily="{StaticResource FontIcons}"
+                                 Glyph="{StaticResource HomeIcon}"
+                                 Size="16"/>                
+        </itinerary:ItineraryPage.IconImageSource>
+    </itinerary:ItineraryPage>
     <local:Map Title="Map">
         <local:Map.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"

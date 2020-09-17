@@ -13,15 +13,12 @@ namespace AnorocMobileApp.Services
 {
     public class BackgroundLocationService : IBackgroundLocationService
     {
-
-        Models.Location User_Location;
         GeolocationRequest request;
         Xamarin.Essentials.Location Previous_request;
         ILocationService LocationService;
-        private int request_count;
-        
         public static bool Tracking;
-
+        protected static DateTime LastSent;
+        protected readonly double MetersConsidedUserMoved;
         public BackgroundLocationService()
         {
             LocationService = App.IoCContainer.GetInstance<ILocationService>();
@@ -29,10 +26,8 @@ namespace AnorocMobileApp.Services
             Initial_Backoff = 15;
             _Backoff = Initial_Backoff;
             Modifier = 1.6;
-            request_count = 0;
-            User_Location = new Models.Location();
-
             Track_Retry = 0;
+            MetersConsidedUserMoved = 0.011;
         }
 
         /// <summary>
@@ -90,7 +85,6 @@ namespace AnorocMobileApp.Services
 
             bool success = false;
             int retry = 0;
-
             retry = 0;
             try
             {
@@ -105,31 +99,19 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
                     await customLocation.GetRegion();
 
-                    //var placemarks = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
-
-                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= 0.005)
+                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
                     {
                         _Backoff = Initial_Backoff;
                         Track_Retry = 0;
-                        //Models.Location customLocation = new Models.Location(location);
-                        //customLocation.Region
-
-                        customLocation.Carrier_Data_Point = User.carrierStatus;
-                        LocationService.Send_Locaiton_ServerAsync(customLocation);
+                        SendUserLocation(customLocation);
                     }
                     else
                     {
+                        
                         if ((_Backoff / 60) <= 10)
                         {
                             _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
                             Track_Retry++;
-                        }
-                        else
-                        {
-                            //send the location on the 10th minute, and every 10 minutes after that
-                            //Models.Location customLocation = new Models.Location(location);
-                            customLocation.Carrier_Data_Point = User.carrierStatus;
-                            LocationService.Send_Locaiton_ServerAsync(customLocation);
                         }
                     }
                 }
@@ -137,14 +119,11 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-
                     await customLocation.GetRegion();
 
-                    customLocation.Carrier_Data_Point = User.carrierStatus;
-                    LocationService.Send_Locaiton_ServerAsync(customLocation);
+                    SendUserLocation(customLocation);
                 }
                 Previous_request = location;
-
                 success = true;
             }
             catch (Exception e)
@@ -153,13 +132,23 @@ namespace AnorocMobileApp.Services
                 //retry for getting the geolocation
                 retry++;
             }
+        }
 
-            /*if(retry == 3 || !success)
+        protected bool TestIfCanSendLocation()
+        {
+            DateTime currentTime = DateTime.Now;
+            if((currentTime-LastSent).TotalMinutes <= 5)
             {
-                Stop_Tracking();
-                // TODO:
-                // Failed to Track, need to make a handler - copuld be a manual retry button that starts the tracking again
-            }*/
+
+            }
+            return false;
+        }
+
+        protected void SendUserLocation(Models.Location customLocation)
+        {
+            customLocation.Carrier_Data_Point = User.carrierStatus;
+            LocationService.Send_Locaiton_ServerAsync(customLocation);
+            LastSent = DateTime.Now;
         }
 
         void HandleCancel()
@@ -180,6 +169,8 @@ namespace AnorocMobileApp.Services
             Application.Current.Properties["Tracking"] = false;
             var message = new StopBackgroundLocationTrackingMessage();
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
+            _Backoff = Initial_Backoff;
+            Track_Retry = 0;
         }
 
         public bool isTracking()

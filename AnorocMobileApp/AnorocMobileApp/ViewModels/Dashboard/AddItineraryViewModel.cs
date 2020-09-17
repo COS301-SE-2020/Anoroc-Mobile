@@ -16,10 +16,12 @@ using AnorocMobileApp.Models;
 //using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Dashboard;
 using Newtonsoft.Json;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
+using AnorocMobileApp.Interfaces;
 
 namespace AnorocMobileApp.ViewModels.Dashboard
 {
@@ -28,17 +30,20 @@ namespace AnorocMobileApp.ViewModels.Dashboard
     /// </summary>
     [Preserve(AllMembers = true)]
     [DataContract]
-    public class AddItineraryViewModel : INotifyPropertyChanged
+    public class AddItineraryViewModel : BaseViewModel
     {
         #region Constructor
 
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
         /// </summary>
-        public AddItineraryViewModel()
+        public AddItineraryViewModel(INavigation navigation, Page view)
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
+            Navigation = navigation;
+            this.View = view;
+            this.Date = DateTime.Today;
         }
 
         #endregion
@@ -73,6 +78,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private List<Location> locations;
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
+        private DateTime date;
+        private INavigation Navigation { get; set;}
+        private Page View { get; set; }
 
         #endregion
 
@@ -92,7 +100,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (results != value)
                 {
                     results = value;
-                    OnPropertyChanged("Results");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -105,7 +113,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addresses != value)
                 {
                     addresses = value;
-                    OnPropertyChanged("Addresses");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -118,7 +126,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (locations != value)
                 {
                     locations = value;
-                    OnPropertyChanged("Locations");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -131,7 +139,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                 if (addressTimeline != value)
                 {
                     addressTimeline = value;
-                    OnPropertyChanged("AddressTimeline");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -143,7 +151,20 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             {
                 if (addressText != value) {
                     addressText = value;
-                    OnPropertyChanged("AddressText");
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
+        public DateTime Date
+        {
+            get => date;
+            set
+            {
+                if (date != value)
+                {
+                    date = value;
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -213,23 +234,11 @@ namespace AnorocMobileApp.ViewModels.Dashboard
 
         private async void DoneTappedMethod()
         {
-            Debug.Write("In DoneTappedMethod()");
-            var itinerary = new Models.Itinerary.Itinerary {Locations = Locations};
+            var itinerary = new Models.Itinerary.Itinerary {Locations = Locations, Date = Date};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
-            
-            Debug.Print(risk.LocationItineraryRisks.Count.ToString());
-        }
-        
-        #endregion
-
-        #region INotifyPropertyChanged
-        
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
+            await Navigation.PopAsync();
         }
 
         #endregion

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.Serialization.Json;
 using AnorocMobileApp.Models;
@@ -21,14 +22,14 @@ namespace AnorocMobileApp.DataService
 
         private NotificationViewModel notificationViewModel;
 
-        #endregion
+        #endregion  
         
         #region Properties
 
         /// <summary>
         /// Gets an instance of <see cref="EncounterDataService"/>
         /// </summary>
-        public static EncounterDataService Instance => _instance ?? (_instance = new EncounterDataService());
+        //public static EncounterDataService Instance => _instance ?? (_instance = new EncounterDataService());
 
         public NotificationViewModel NotificationViewModel =>
             this.notificationViewModel ??
@@ -65,22 +66,26 @@ namespace AnorocMobileApp.DataService
 
         private static NotificationViewModel loadNotifications(NotificationViewModel obj)
         {
+            //NotificationViewModel newObj = new NotificationViewModel();
+
             using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
             {
                 conn.CreateTable<NotificationDB>();
-                var notificaitons = conn.Table<NotificationDB>().ToList();
-                foreach (var n in notificaitons)
+                var notifications = conn.Table<NotificationDB>().ToList();
+                obj.RecentList.Clear();
+                foreach (var n in notifications)
                 {
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
-                    tempModel.ReceivedTime = "Not sure";
-                    obj.RecentList.Add(tempModel);
+                    tempModel.ReceivedTime =n.Time;
+                    //obj.RecentList.Add(tempModel);
+                    obj.RecentList.Insert(0, tempModel);
                 }
                 conn.Close();                
-            }
+            } 
 
             return obj;
-        }
+        }               
     }
 }

@@ -1,14 +1,17 @@
 ﻿using AnorocMobileApp.Exceptions;
+using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using SQLite;
 using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Services
@@ -47,7 +50,7 @@ namespace AnorocMobileApp.Services
         {
             using (Anoroc_Client = new HttpClient(clientHandler))
             {
-                if(UserItineraries == null)
+                if (UserItineraries == null)
                 {
                     UserItineraries = new List<ItineraryRisk>();
                 }
@@ -71,7 +74,7 @@ namespace AnorocMobileApp.Services
                 try
                 {
                     responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-                  
+
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
@@ -91,56 +94,120 @@ namespace AnorocMobileApp.Services
                 }
             }
         }
-
+        private int retryCount = 0;
         public async Task<ItineraryRisk> ProcessItinerary(Itinerary userItinerary)
         {
-            
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            if (retryCount == 5)
             {
-                if (UserItineraries == null)
+                return null;
+            }
+            else
+            {
+                bool retry = false;
+                using (Anoroc_Client = new HttpClient(clientHandler))
                 {
-                    UserItineraries = new List<ItineraryRisk>();
-                }
-
-                Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
-
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/ProcessItinerary");
-                Token token_object = new Token();
-
-                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-                
-                token_object.Object_To_Server = JsonConvert.SerializeObject(new ItineraryWrap(userItinerary));
-
-                var data = JsonConvert.SerializeObject(token_object);
-
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
-                HttpResponseMessage responseMessage;
-
-                try
-                {
-
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
-                    ItineraryRiskWrapper itineraryRisk = null;
-                    if (responseMessage != null)
+                    if (UserItineraries == null)
                     {
-                        if (responseMessage.IsSuccessStatusCode)
-                        {
-                            var json = await responseMessage.Content.ReadAsStringAsync();
-                            itineraryRisk = JsonConvert.DeserializeObject<ItineraryRiskWrapper>(json);
-                            UserItineraries.Add(itineraryRisk.toItineraryRisk());
-                        }
-                        return itineraryRisk.toItineraryRisk();
+                        UserItineraries = new List<ItineraryRisk>();
                     }
-                    else
+
+                    Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
+
+                    Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/ProcessItinerary");
+                    Token token_object = new Token();
+
+                    token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+                    token_object.Object_To_Server = JsonConvert.SerializeObject(new ItineraryWrap(userItinerary));
+
+                    var data = JsonConvert.SerializeObject(token_object);
+
+                    var content = new StringContent(data, Encoding.UTF8, "application/json");
+                    content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                    HttpResponseMessage responseMessage;
+
+                    try
+                    {
+
+                        responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+                        ItineraryRiskWrapper itineraryRisk = null;
+                        if (responseMessage != null)
+                        {
+                            if (responseMessage.IsSuccessStatusCode)
+                            {
+                                var json = await responseMessage.Content.ReadAsStringAsync();
+                                itineraryRisk = JsonConvert.DeserializeObject<ItineraryRiskWrapper>(json);
+                                var convertedItinerary = itineraryRisk.toItineraryRisk();
+                                SaveItineraryRisk(convertedItinerary);
+                                UserItineraries.Add(convertedItinerary);
+                            }
+                            else if (responseMessage.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+                            {
+                                retry = true;
+                            }
+
+                            if (!retry)
+                                return itineraryRisk.toItineraryRisk();
+                            else
+                            {
+                                retryCount++;
+                                return await ProcessItinerary(userItinerary);
+                            }
+                        }
+                        else
+                            return null;
+                    }
+                    catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                    {
                         return null;
-                }
-                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
-                {
-                    return null;
+                    }
                 }
             }
+        }
+
+        public List<ItineraryRisk> ItinerariesFromLocal()
+        {
+            var returnList = new List<ItineraryRisk>();
+            using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
+            {
+                try
+                {
+                    var primitiveList = conn.Table<PrimitiveItineraryRisk>().ToList();
+                    primitiveList.ForEach(primitive =>
+                    {
+                        returnList.Add(new ItineraryRisk(primitive));
+                    });
+                }
+                catch (SQLiteException exception)
+                {
+                    Debug.WriteLine(exception.Message);
+                }
+
+            }
+            return returnList;
+        }
+
+        public static Task<int> DeleteItinerary(ItineraryRisk risk)
+        {
+            var primitive = new PrimitiveItineraryRisk(risk);
+            var database = new SQLiteAsyncConnection(App.FilePath);
+
+            return database.DeleteAsync<PrimitiveItineraryRisk>(risk.Id);
+        }
+        
+        private void SaveItineraryRisk(ItineraryRisk risk)
+        {
+            var primitiveRisk = new PrimitiveItineraryRisk(risk);
+            var conn = new SQLiteAsyncConnection(App.FilePath);
+            conn.CreateTableAsync<PrimitiveItineraryRisk>().Wait();
+            conn.InsertAsync(primitiveRisk).ContinueWith((t) =>
+            {
+                Debug.WriteLine("New ID from t: {0}", t.Id);
+                Debug.WriteLine("New ID: {0} from primitiveRisk", primitiveRisk.ItineraryId);
+            });
+            conn.CloseAsync();
+            var myvar = ItinerariesFromLocal();
         }
 
         public async Task<List<ItineraryRisk>> LoadMore()
@@ -173,49 +240,92 @@ namespace AnorocMobileApp.Services
 
         public async Task<List<ItineraryRisk>> GetAllUserItineraries()
         {
-            using (Anoroc_Client = new HttpClient(clientHandler))
+            var clientHandler = new HttpClientHandler
             {
-                if (UserItineraries == null)
+                ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+            };
+
+            HttpClient client = new HttpClient(clientHandler);
+            if (UserItineraries == null)
+            {
+                UserItineraries = new List<ItineraryRisk>();
+            }
+
+
+
+            Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/GetUserItinerary");
+            Token token_object = new Token();
+
+            token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+
+            token_object.Object_To_Server = Convert.ToString(-1);
+
+            var data = JsonConvert.SerializeObject(token_object);
+
+            var content = new StringContent(data, Encoding.UTF8, "application/json");
+            content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+            HttpResponseMessage responseMessage;
+
+            try
+            {
+                responseMessage = await client.PostAsync(Anoroc_Uri, content);
+
+                if (responseMessage.IsSuccessStatusCode)
                 {
-                    UserItineraries = new List<ItineraryRisk>();
+                    var json = await responseMessage.Content.ReadAsStringAsync();
+                    UserItineraries = JsonConvert.DeserializeObject<List<ItineraryRisk>>(json);
                 }
 
-                Anoroc_Client.Timeout = TimeSpan.FromSeconds(30);
+                if (UserItineraries == null)
+                    return null;
+                else if (UserItineraries.Count > 0)
+                    return UserItineraries;
+                else
+                    return null;
+            }
+            catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+            {
+                throw new CantConnecToItineraryServiceException();
+            }
+        }
 
-                Uri Anoroc_Uri = new Uri(Constants.AnorocURI + "Itinerary/GetUserItinerary");
+        public async void DeleteCloudItinerary(int id)
+        {
+            if (Xamarin.Forms.Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                HttpClient client = new HttpClient(clientHandler);
+
                 Token token_object = new Token();
 
-                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
-
-                token_object.Object_To_Server = Convert.ToString(-1);
+                token_object.Object_To_Server = id.ToString();
 
                 var data = JsonConvert.SerializeObject(token_object);
 
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.sendFireBaseTokenEndpoint);
                 HttpResponseMessage responseMessage;
 
                 try
                 {
-                    responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
 
                     if (responseMessage.IsSuccessStatusCode)
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
-                        UserItineraries = JsonConvert.DeserializeObject<List<ItineraryRisk>>(json);
                     }
-
-                    if (UserItineraries == null)
-                        return null;
-                    else if (UserItineraries.Count > 0)
-                        return UserItineraries;
-                    else
-                        return null;
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToItineraryServiceException();
+
                 }
             }
         }
