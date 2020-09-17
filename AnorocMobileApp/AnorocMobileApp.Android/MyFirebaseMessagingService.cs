@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using AnorocMobileApp.Models;
 using Firebase.Messaging;
+using Newtonsoft.Json;
 using SQLite;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -37,18 +38,24 @@ namespace AnorocMobileApp.Droid
 
                 base.OnMessageReceived(message);
 
-                var body = message.GetNotification().Body;
                 var title = message.GetNotification().Title;
-                string[] notificationMessage = { title, body };
-                var data = message.GetNotification().ToString();
+                var data = message.Data;
                 var msg = message.GetNotification().Body;
                 Console.WriteLine("Testing Data output: "  + message.Data.Values);
 
+                var location = JsonConvert.DeserializeObject<Models.Location>(data["Location"]);
+                var risk = Convert.ToInt32(data["Risk"]);
+                var dateTime = DateTime.Parse(data["DateTime"]);
+
+                var body = "High Risk: You have come into contact in " + location.Region.Suburb;
+
+
+                string[] notificationMessage = { title, body };
 
 
                 // Passing Message onto xamarin forms
                 MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
-                MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, body);
+                MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
                 //Console.WriteLine("Received Message: " + body);
 
 

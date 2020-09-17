@@ -50,14 +50,17 @@ namespace AnorocMobileApp.Views.Navigation
                  var base64 = await ims.GetUserProfileImage();
                  if (base64 != "")
                  {
-                     var bytes = Convert.FromBase64String(base64);
-                     MemoryStream ms = new MemoryStream(bytes);
-                     ms.Position = 0;
-                     MemoryStream otherstream = new MemoryStream();
-                     ms.CopyTo(otherstream);
-                     otherstream.Position = 0;
+                     if (base64 != null)
+                     {
+                         var bytes = Convert.FromBase64String(base64);
+                         MemoryStream ms = new MemoryStream(bytes);
+                         ms.Position = 0;
+                         MemoryStream otherstream = new MemoryStream();
+                         ms.CopyTo(otherstream);
+                         otherstream.Position = 0;
 
-                     _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
+                         _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
+                     }
                  }
              });
         }
