@@ -215,7 +215,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             }
         }
 
-        private void SearchLocationTappedMethod(object obj)
+        private async void SearchLocationTappedMethod(object obj)
         {
             if (obj is ItemTappedEventArgs item)
             {
@@ -225,7 +225,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
                     if (result.Address == address)
                     {
                         // TODO perhaps just store Position object instead of Location
-                        Locations.Add(new Location(result.Position));
+                        var location = new Location(result.Position);
+                        await location.GetRegion();
+                        Locations.Add(location);
                         AddressTimeline.Add(result.Address);
                     }
                 }
