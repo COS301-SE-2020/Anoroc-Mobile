@@ -116,8 +116,8 @@ namespace AnorocMobileApp.Services
 
                 try
                 {
-                    //var response = await client.PostAsync(url, c);
-                    //string result = response.Content.ReadAsStringAsync().Result;
+                    var response = await client.PostAsync(url, c);
+                    string result = response.Content.ReadAsStringAsync().Result;
                     //Debug.WriteLine(result);
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
