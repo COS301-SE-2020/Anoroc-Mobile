@@ -1,4 +1,5 @@
 ﻿using AnorocMobileApp.Models;
+using System.Collections.Generic;
 
 namespace AnorocMobileApp.Interfaces
 {
@@ -13,5 +14,11 @@ namespace AnorocMobileApp.Interfaces
         /// User can choose that their current location will no longer be sent to the server.
         /// </summary>
         void DontSentCurrentLocationAnymoreAsync();
+
+        /// <summary>
+        /// Get a list of locations to compare to to see if the current location is found
+        /// </summary>
+        /// <returns></returns>
+        bool LocationSavedToNotSend(Location location);
     }
 }
