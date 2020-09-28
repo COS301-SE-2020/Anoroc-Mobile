@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using AnorocMobileApp.Helpers;
 using Newtonsoft.Json;
 using Xamarin.Forms;
+using Xamarin.Essentials;
+using SQLite;
+using System.Diagnostics;
 
 namespace AnorocMobileApp.Services
 {
@@ -24,7 +27,7 @@ namespace AnorocMobileApp.Services
         /// </summary>
         /// <param name="location">Location Object</param>        
         /// 
-        public void Send_Locaiton_ServerAsync(Location location)
+        public void Send_Locaiton_ServerAsync(Models.Location location)
         {
             
             PostLocationAsync(location);
@@ -33,12 +36,39 @@ namespace AnorocMobileApp.Services
                 //throw new CantConnectToLocationServerException();
             }
         }
+
+        public async void DontSentCurrentLocationAnymoreAsync()
+        {
+            GeolocationRequest request;
+            request = new GeolocationRequest(GeolocationAccuracy.Best);
+            Xamarin.Essentials.Location location;
+            try
+            {
+                location = await Geolocation.GetLocationAsync(request);
+                Models.Location customLocation = new Models.Location(location);
+                var conn = new SQLiteAsyncConnection(App.FilePath);
+
+
+                conn.CreateTableAsync<Models.Location>().Wait();
+                await conn.InsertAsync(customLocation).ContinueWith((t) =>
+                 {
+                     Debug.WriteLine("New ID from t: {0}", t.Id);
+                     Debug.WriteLine("New ID: {0} from primitiveRisk", customLocation.LocationId);
+                 });
+                await conn.CloseAsync();
+            }
+            catch(Exception e)
+            {
+                //TODO:
+                // retry to get the location
+            }
+        }
         /// <summary>
         /// Function to send user locaton to server
         /// </summary>
         /// <param name="location">Location Object</param>
         /// 
-        protected async void PostLocationAsync(Location location)
+        protected async void PostLocationAsync(Models.Location location)
         {
             if (App.Current.Properties.ContainsKey("TOKEN"))
             {
