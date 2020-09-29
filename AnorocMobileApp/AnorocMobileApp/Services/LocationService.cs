@@ -87,7 +87,7 @@ namespace AnorocMobileApp.Services
             return dist * 1000; // dist is in KM so must convert to meter
         }
 
-        public async void DontSentCurrentLocationAnymoreAsync()
+        public async void DontSendCurrentLocationAnymoreAsync()
         {
             GeolocationRequest request;
             request = new GeolocationRequest(GeolocationAccuracy.Best);

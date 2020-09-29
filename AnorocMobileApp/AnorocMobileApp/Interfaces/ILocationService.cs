@@ -13,7 +13,7 @@ namespace AnorocMobileApp.Interfaces
         /// <summary>
         /// User can choose that their current location will no longer be sent to the server.
         /// </summary>
-        void DontSentCurrentLocationAnymoreAsync();
+        void DontSendCurrentLocationAnymoreAsync();
 
         /// <summary>
         /// Get a list of locations to compare to to see if the current location is found
