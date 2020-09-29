@@ -10,6 +10,7 @@ namespace AnorocMobileApp.Interfaces
         /// </summary>
         /// <param name="location">The locaiton to send.</param>
         void Send_Locaiton_ServerAsync(Location location);
+
         /// <summary>
         /// User can choose that their current location will no longer be sent to the server.
         /// </summary>

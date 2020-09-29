@@ -13,5 +13,7 @@ namespace AnorocMobileApp.Interfaces
         Task<int> UpdatedIncidents();
         Task<string> GetUserProfileImage();
         void UploadUserProfileImage(string image);
+
+        void ToggleAnonymousUser();
     }
 }

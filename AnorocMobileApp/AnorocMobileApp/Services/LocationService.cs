@@ -137,7 +137,6 @@ namespace AnorocMobileApp.Services
                         Token token = new Token();
                         token.access_token = (string)Application.Current.Properties["TOKEN"];
 
-
                         token.Object_To_Server = JsonConvert.SerializeObject(location);
                         var data = JsonConvert.SerializeObject(token);
 

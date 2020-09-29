@@ -385,5 +385,10 @@ namespace AnorocMobileApp.Services
                 }
             }, CancellationToken.None);
         }
+
+        public void ToggleAnonymousUser()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
