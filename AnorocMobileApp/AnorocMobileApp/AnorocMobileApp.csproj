@@ -37,19 +37,19 @@
     <EmbeddedResource Include="Images\EmptyItinerary.svg" />
     <EmbeddedResource Include="Places.json" />
     <EmbeddedResource Include="Points.json" />
-    <EmbeddedResource Update="Views\Dashboard\AddItineraryPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Dashboard\ViewItineraryPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Dashboard\Styles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Itinerary\ItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Itinerary\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\Styles3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\ViewItineraryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\AddItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -107,6 +107,18 @@
   <ItemGroup>
     <Compile Update="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Itinerary\Styles3.xaml.cs">
+      <DependentUpon>Styles3.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Itinerary\ViewItineraryPage.xaml.cs">
+      <DependentUpon>ViewItineraryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Itinerary\AddItineraryPage.xaml.cs">
+      <DependentUpon>AddItineraryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
 
     
@@ -180,5 +192,9 @@
     <EmbeddedResource Update="Views\Templates\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Dashboard" />
   </ItemGroup>
 </Project>
