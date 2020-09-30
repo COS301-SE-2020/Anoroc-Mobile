@@ -56,11 +56,6 @@ namespace AnorocMobileApp.Views.Dashboard
                 },
             };
             
-            var datePicker = new SfDatePicker()
-            {
-                ShowHeader = false
-            };
-            
             var nativeDatePicker = new DatePicker
             {
               HorizontalOptions  = LayoutOptions.Center,
