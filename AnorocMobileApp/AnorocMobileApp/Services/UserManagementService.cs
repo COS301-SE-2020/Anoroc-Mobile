@@ -149,7 +149,7 @@ namespace AnorocMobileApp.Services
 
             var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
             stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
-
+            stringcontent.Headers.Add("X-XamarinKey", Secrets.XamarinKey);
             Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.UserLoggedInEndpoint);
             HttpResponseMessage responseMessage;
 
