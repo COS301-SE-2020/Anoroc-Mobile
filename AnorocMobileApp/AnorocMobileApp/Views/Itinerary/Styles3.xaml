@@ -10,6 +10,7 @@
 
     <x:String x:Key="Menu">&#xe72e;</x:String>
     <x:String x:Key="Bell">&#xe700;</x:String>
+    <x:String x:Key="Back">&#xe709;</x:String>
     
     <x:String x:Key="DropDownButtonIcon">&#xe70b;</x:String>
 
@@ -148,6 +149,17 @@
                 </graphics:SfLinearGradientBrush>
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <!--  Common style for Navigation bar SfButton  -->
+    <Style x:Key="NavigationBarButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Fill" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
 
 </ResourceDictionary>
