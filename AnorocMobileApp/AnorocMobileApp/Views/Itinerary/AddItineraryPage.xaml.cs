@@ -4,6 +4,8 @@ using System.Linq;
 using AnorocMobileApp.DataService;
 using AnorocMobileApp.ViewModels.Dashboard;
 using Syncfusion.ListView.XForms;
+using Syncfusion.XForms.Border;
+using Syncfusion.XForms.Buttons;
 using Syncfusion.XForms.Pickers;
 using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms;
@@ -75,7 +77,8 @@ namespace AnorocMobileApp.Views.Dashboard
                 PopupView =
                 {
                     ShowHeader = false,
-                    ShowFooter = false
+                    ShowFooter = false,
+                    AnimationMode = AnimationMode.Zoom
                 }
             };
 
@@ -84,6 +87,31 @@ namespace AnorocMobileApp.Views.Dashboard
             var searchBar = new SearchBar();
             searchBar.SetBinding(SearchBar.TextProperty, "AddressText");
             searchBar.TextChanged += OnSearchBarTextChanged;
+
+            var topStack = new StackLayout
+            {
+                IsVisible = false,
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 0.0,
+                HorizontalOptions = LayoutOptions.EndAndExpand
+            };
+
+            var backButton = new SfButton();
+            backButton.Clicked += (sender, args) =>
+            {
+                popup.IsOpen = false;
+                popup.IsVisible = false;
+            };
+            backButton.Text = (string) Resources["Back"];
+            backButton.Style = (Style) Resources["NavigationBarButtonStyle"];
+            
+            topStack.Children.Add(backButton);
+
+            var searchBorder = new SfBorder
+            {
+                
+            };
+            
 
             var sfListView = new SfListView
             {
