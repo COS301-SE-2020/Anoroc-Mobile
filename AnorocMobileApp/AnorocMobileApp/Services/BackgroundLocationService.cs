@@ -97,22 +97,23 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-                    await customLocation.GetRegion();
-
-                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
+                    if (!LocationService.LocationSavedToNotSend(customLocation))
                     {
-                        _Backoff = Initial_Backoff;
-                        Track_Retry = 0;
-                        SendUserLocation(customLocation);
+                        await customLocation.GetRegion();
+                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
+                        {
+                            _Backoff = Initial_Backoff;
+                            Track_Retry = 0;
+                            SendUserLocation(customLocation);
+                        }
+                        else
+                        {
+                            ExtendBackoff();
+                        }
                     }
                     else
                     {
-                        
-                        if ((_Backoff / 60) <= 10)
-                        {
-                            _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
-                            Track_Retry++;
-                        }
+                        ExtendBackoff();
                     }
                 }
                 else
@@ -131,6 +132,15 @@ namespace AnorocMobileApp.Services
                 Debug.WriteLine(e.StackTrace);
                 //retry for getting the geolocation
                 retry++;
+            }
+        }
+
+        private void ExtendBackoff()
+        {
+            if ((_Backoff / 60) <= 10)
+            {
+                _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
+                Track_Retry++;
             }
         }
 

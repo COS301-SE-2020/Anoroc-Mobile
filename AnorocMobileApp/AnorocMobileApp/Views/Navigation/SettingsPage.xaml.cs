@@ -12,6 +12,7 @@ using Plugin.Toast;
 using Plugin.SecureStorage;
 using Microsoft.Identity.Client;
 using AnorocMobileApp.Views.Forms;
+using AnorocMobileApp.Helpers;
 //using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -39,8 +40,8 @@ namespace AnorocMobileApp.Views.Navigation
                 Locations_SfSwitch.IsOn = true;
                 
             }
-
         }
+
 
         protected override void OnAppearing()
         {
@@ -158,5 +159,18 @@ namespace AnorocMobileApp.Views.Navigation
 
         }
 
+        private async void btnDownloadUserData_Clicked(object sender, EventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var userdata = await user.DownloadData();
+            if (userdata)
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Email Sent.");
+            }
+            else
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Error Generating the file.");
+            }
+        }
     }
 }

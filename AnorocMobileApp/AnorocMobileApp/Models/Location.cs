@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AnorocMobileApp.Models.Itinerary;
 using Newtonsoft.Json;
+using SQLite;
 using Xamarin.Essentials;
 
 namespace AnorocMobileApp.Models
@@ -79,6 +80,9 @@ namespace AnorocMobileApp.Models
         public double Longitude { get; set; }
         public bool Carrier_Data_Point { get; set; }
         public Area Region { get; set; }
+
+        [PrimaryKey, AutoIncrement]
+        public int LocationId { get; set; }
 
         public Location clone()
         {

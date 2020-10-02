@@ -25,6 +25,7 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Label Grid.Row="0"
                   FontFamily="{StaticResource Montserrat-Medium}"
@@ -86,6 +87,15 @@
 
                 <buttons:SfButton
                         Grid.Row="3"
+                        AutomationId="DownloadDataButton"
+                        CornerRadius="4"
+                        x:Name="btnDownloadUserData"
+                        Clicked="btnDownloadUserData_Clicked"
+                        Style="{StaticResource SfButtonStyle}"
+                        Text="Send me my data." />
+                
+                <buttons:SfButton
+                        Grid.Row="4"
                         AutomationId="LogoutButton"
                         CornerRadius="4"
                         x:Name="btnSignOut"
@@ -93,6 +103,8 @@
                         Command="{Binding LoginCommand}"
                         Style="{StaticResource SfButtonStyle}"
                         Text="Sign out" />
+
+                
 
                 <!--<BoxView Style="{StaticResource BoxViewStyle}" Grid.Row="3"/>
                 <Label Style="{StaticResource SettingsLabelStyle}" Text="Download quality" Grid.Row="4"/>
