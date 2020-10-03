@@ -60,6 +60,14 @@
         </Setter>
 
     </Style>
+    
+    <!-- Common style for borders -->
+    <Style x:Key="SfBorderStyle" TargetType="border:SfBorder">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
 
     <!--  Common style for profile border style  -->
     <Style x:Key="ProfileBorderStyle" TargetType="border:SfBorder">
