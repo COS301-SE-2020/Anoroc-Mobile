@@ -14,6 +14,7 @@ using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Newtonsoft.Json;
+using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals; //using AnorocMobileApp.Models;
 //using Itinerary = AnorocMobileApp.Models.Itinerary;
@@ -29,6 +30,14 @@ namespace AnorocMobileApp.ViewModels.Itinerary
     public class AddItineraryViewModel : BaseViewModel
     {
         #region Constructor
+        
+        public AddItineraryViewModel()
+        {
+            SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
+            DoneButtonTapped = new Command(DoneTappedMethod);
+            OpenSearchDialog = new Command<SfPopupLayout>(DisplaySearchDialog);
+            Date = DateTime.Today;
+        }
 
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
@@ -37,6 +46,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
+            OpenSearchDialog = new Command<SfPopupLayout>(DisplaySearchDialog);
             Navigation = navigation;
             this.View = view;
             this.Date = DateTime.Today;
@@ -75,8 +85,9 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
         private DateTime date;
-        private INavigation Navigation { get; set;}
-        private Page View { get; set; }
+
+        public INavigation Navigation { get; set;}
+        public Page View { get; set; }
 
         #endregion
 
@@ -172,6 +183,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         public Command<object> SearchLocationTapped { get; set; }
         
         public Command DoneButtonTapped { get; set; }
+        
+        public Command<SfPopupLayout> OpenSearchDialog { get; set; }
 
         #endregion
         
@@ -239,6 +252,11 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             await Navigation.PopAsync();
         }
 
+        private void DisplaySearchDialog(SfPopupLayout popupLayout)
+        {
+            popupLayout.Show();
+        }
+        
         #endregion
 
     }
