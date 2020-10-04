@@ -1,29 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms.Internals;
-using System.Windows.Input;
 using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Models;
-//using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Newtonsoft.Json;
-//using Itinerary = AnorocMobileApp.Models.Itinerary;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals; //using AnorocMobileApp.Models;
+//using Itinerary = AnorocMobileApp.Models.Itinerary;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
-using AnorocMobileApp.Interfaces;
 
-namespace AnorocMobileApp.ViewModels.Dashboard
+namespace AnorocMobileApp.ViewModels.Itinerary
 {
     /// <summary>
     /// ViewModel for Add Itinerary page.

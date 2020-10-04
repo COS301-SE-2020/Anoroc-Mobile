@@ -6,7 +6,8 @@
     xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:converter="clr-namespace:AnorocMobileApp.Converters"
-    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms">
+    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp">
 
     <x:String x:Key="Menu">&#xe72e;</x:String>
     <x:String x:Key="Bell">&#xe700;</x:String>
@@ -67,6 +68,16 @@
         <Setter Property="BorderColor" Value="Transparent" />
         <Setter Property="CornerRadius" Value="25" />
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+    
+    <!-- Common style for search entries -->
+    <Style x:Key="SearchEntryStyle" TargetType="controls:BorderlessEntry">
+        <Setter Property="PlaceholderColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="ReturnType" Value="Done" />
     </Style>
 
     <!--  Common style for profile border style  -->

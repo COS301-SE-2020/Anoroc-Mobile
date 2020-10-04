@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq;
+using AnorocMobileApp.Controls;
 using AnorocMobileApp.DataService;
-using AnorocMobileApp.ViewModels.Dashboard;
+using AnorocMobileApp.ViewModels.Itinerary;
 using Syncfusion.ListView.XForms;
 using Syncfusion.XForms.Border;
 using Syncfusion.XForms.Buttons;
@@ -102,17 +103,27 @@ namespace AnorocMobileApp.Views.Dashboard
                 popup.IsOpen = false;
                 popup.IsVisible = false;
             };
-            backButton.Text = (string) Resources["Back"];
-            backButton.Style = (Style) Resources["NavigationBarButtonStyle"];
+            Application.Current.Resources.TryGetValue("Back", out var resource);
+            // backButton.Text = (string) resource;
+            // backButton.Style = (Style) Resources["NavigationBarButtonStyle"];
             
             topStack.Children.Add(backButton);
 
             var searchBorder = new SfBorder
             {
-                
+               // Style = (Style) Resources["SfBorderStyle"]
             };
             
+            var borderlessEntry = new BorderlessEntry();
+            borderlessEntry.SetBinding(Entry.TextProperty, "AddressText");
+            borderlessEntry.Placeholder = "Search here";
+            borderlessEntry.HorizontalOptions = LayoutOptions.FillAndExpand;
+           // borderlessEntry.Style = (Style) Resources["SearchEntryStyle"];
 
+          //  searchBorder.Children.Append(borderlessEntry);
+
+            topStack.Children.Add(borderlessEntry);
+            
             var sfListView = new SfListView
             {
                 ItemsSource = viewModel.Addresses,
