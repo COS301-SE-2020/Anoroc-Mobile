@@ -158,6 +158,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             {
                 if (addressText != value) {
                     addressText = value;
+                    SearchTextChanged();
                     NotifyPropertyChanged();
                 }
             }
@@ -221,6 +222,14 @@ namespace AnorocMobileApp.ViewModels.Itinerary
                         }
                     }
                 }
+            }
+        }
+
+        private async void SearchTextChanged()
+        {
+            if (!string.IsNullOrWhiteSpace(AddressText))
+            {
+                await GetPlacesPredictonAsync();
             }
         }
 
