@@ -25,7 +25,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles3.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <sfPopout:SfPopupLayout x:Key="SearchDialog">
+            <sfPopout:SfPopupLayout x:Key="SearchDialog" x:Name="PopupLayout2">
                 <sfPopout:SfPopupLayout.PopupView>
                     <sfPopout:PopupView ShowHeader="False"
                                         AcceptButtonText="ACCEPT"
@@ -65,13 +65,19 @@
                                     
                                     <listView:SfListView Grid.Row="2" x:Name="SearchList"
                                                          ItemsSource="{Binding Addresses}"
-                                                         Margin="8,4"
+                                                         Margin="8,8"
+                                                         ItemTapped="ClickedAdd"
                                                          >
                                         <listView:SfListView.ItemTemplate>
                                             <DataTemplate>
-                                                <StackLayout>
-                                                    <Label FontAttributes="None" BackgroundColor="White" FontSize="12" Text="{Binding FreeformAddress}"/>
-                                                </StackLayout>
+                                                <Grid RowSpacing="0">
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto" />
+                                                        <RowDefinition Height="*" />
+                                                    </Grid.RowDefinitions>
+                                                    <Label Grid.Row="0" FontAttributes="None" BackgroundColor="White" FontSize="15" Text="{Binding FreeformAddress}"/>
+                                                    <BoxView Grid.Row="1" Style="{StaticResource SeparatorStyle}"/>
+                                                </Grid>
                                             </DataTemplate>
                                         </listView:SfListView.ItemTemplate>
                                     </listView:SfListView>
