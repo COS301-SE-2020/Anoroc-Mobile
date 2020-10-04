@@ -10,16 +10,78 @@
              xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp"
              xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:itineraryViewModel="clr-namespace:AnorocMobileApp.ViewModels.Itinerary;assembly=AnorocMobileApp"
              mc:Ignorable="d"
-             x:Class="AnorocMobileApp.Views.Dashboard.AddItineraryPage"
+             x:Class="AnorocMobileApp.Views.Itinerary.AddItineraryPage"
              BackgroundColor="{DynamicResource Gray-White}"
              NavigationPage.HasNavigationBar="False">
 
+    <ContentPage.BindingContext>
+        <itineraryViewModel:AddItineraryViewModel />
+    </ContentPage.BindingContext>
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles3.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <sfPopout:SfPopupLayout x:Key="SearchDialog">
+                <sfPopout:SfPopupLayout.PopupView>
+                    <sfPopout:PopupView ShowHeader="False"
+                                        AcceptButtonText="ACCEPT"
+                                        DeclineButtonText="CANCEL"
+                                        AppearanceMode="TwoButton"
+                                        HeightRequest="320"
+                                        AnimationMode="Zoom"
+                                        >
+                        
+                        <sfPopout:PopupView.ContentTemplate>
+                            <DataTemplate>
+                               <Grid RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    
+                                    <StackLayout Grid.Row="0" Padding="8, 6" HeightRequest="50" x:Name="Search" HorizontalOptions="StartAndExpand" IsVisible="True"
+                                                 Orientation="Horizontal" Spacing="0"
+                                                 >
+                                        <!--  Search Icon  -->
+                                        <buttons:SfButton x:Name="SearchIcon" Text="{StaticResource Search}"
+                                                          Style="{StaticResource IconButtonStyle}" />
+                                        
+                                        <!--  Rounded Search Entry  -->
+                                        <border:SfBorder Style="{StaticResource SfBorderStyle}">
+                                            <controls:BorderlessEntry x:Name="SearchEntry" 
+                                                                      Text="{Binding AddressText, Mode=TwoWay}" Placeholder="Search here"
+                                                                      HorizontalOptions="FillAndExpand"  Style="{StaticResource SearchEntryStyle}"
+                                                                      />
+                                        </border:SfBorder>
+                                        
+                                    </StackLayout>
+                                   
+                                   <BoxView Grid.Row="1" Style="{StaticResource SeparatorStyle}"/>
+                                    
+                                    <listView:SfListView Grid.Row="2" x:Name="SearchList"
+                                                         ItemsSource="{Binding Addresses}"
+                                                         Margin="8,4"
+                                                         >
+                                        <listView:SfListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackLayout>
+                                                    <Label FontAttributes="None" BackgroundColor="White" FontSize="12" Text="{Binding FreeformAddress}"/>
+                                                </StackLayout>
+                                            </DataTemplate>
+                                        </listView:SfListView.ItemTemplate>
+                                    </listView:SfListView>
+                                    
+                                </Grid>
+                            </DataTemplate>
+                        </sfPopout:PopupView.ContentTemplate>
+                    </sfPopout:PopupView>
+                </sfPopout:SfPopupLayout.PopupView>
+            </sfPopout:SfPopupLayout>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -107,9 +169,11 @@
                 
                 <StackLayout Grid.Row="3" Margin="0" Spacing="0">
                     <buttons:SfButton
-                        Clicked="ClickedAdd"
                         Style="{StaticResource SfGradientButtonStyle}"
-                        Text="Add next location" />
+                        Text="Add next location"
+                        Command="{Binding OpenSearchDialog}"
+                        CommandParameter="{StaticResource SearchDialog}"
+                        />
                     <buttons:SfButton
                         Command="{Binding DoneButtonTapped}"
                         Style="{StaticResource SfGradientButtonStyle}"
