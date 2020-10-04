@@ -1,20 +1,15 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Linq;
 using AnorocMobileApp.Controls;
-using AnorocMobileApp.DataService;
 using AnorocMobileApp.ViewModels.Itinerary;
 using Syncfusion.ListView.XForms;
 using Syncfusion.XForms.Border;
 using Syncfusion.XForms.Buttons;
-using Syncfusion.XForms.Pickers;
 using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
-using Xamarin.Forms.Markup;
 using Xamarin.Forms.Xaml;
 
-namespace AnorocMobileApp.Views.Dashboard
+namespace AnorocMobileApp.Views.Itinerary
 {
     /// <summary>
     /// Page to add an itinerary.
@@ -33,25 +28,27 @@ namespace AnorocMobileApp.Views.Dashboard
         {
             InitializeComponent();
             // this.BindingContext = AddItineraryDataService.Instance.AddItineraryViewModel;
-            viewModel = new AddItineraryViewModel(Navigation, this);
-            this.BindingContext = viewModel;
-            this.popupLayout = CreateDatePopoutLayout();
-            this.searchPopupLayout = CreateSearchPopoutLayout();
+            // viewModel = new AddItineraryViewModel(Navigation, this);
+            ((AddItineraryViewModel) BindingContext).View = this;
+            ((AddItineraryViewModel) BindingContext).Navigation = Navigation;
+            viewModel = (AddItineraryViewModel) BindingContext;
+            popupLayout = CreateDatePopoutLayout();
+            searchPopupLayout = CreateSearchPopoutLayout();
         }
 
         private void ClickedDate(object sender, EventArgs e)
         {
-            this.popupLayout.Show();
+            popupLayout.Show();
         }
 
         private void ClickedAdd(object sender, EventArgs e)
         {
-            this.searchPopupLayout.Show();
+            searchPopupLayout.Show();
         }
 
         private SfPopupLayout CreateDatePopoutLayout()
         {
-            var popup = new SfPopupLayout()
+            var popup = new SfPopupLayout
             {
                 PopupView =
                 {
@@ -73,7 +70,7 @@ namespace AnorocMobileApp.Views.Dashboard
 
         private SfPopupLayout CreateSearchPopoutLayout()
         {
-            var popup = new SfPopupLayout()
+            var popup = new SfPopupLayout
             {
                 PopupView =
                 {
@@ -109,10 +106,7 @@ namespace AnorocMobileApp.Views.Dashboard
             
             topStack.Children.Add(backButton);
 
-            var searchBorder = new SfBorder
-            {
-               // Style = (Style) Resources["SfBorderStyle"]
-            };
+            var searchBorder = new SfBorder();
             
             var borderlessEntry = new BorderlessEntry();
             borderlessEntry.SetBinding(Entry.TextProperty, "AddressText");
