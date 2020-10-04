@@ -171,6 +171,12 @@
     <EmbeddedResource Update="Views\Notification\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\HomeTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
