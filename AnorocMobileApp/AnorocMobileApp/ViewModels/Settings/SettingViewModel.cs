@@ -1,10 +1,4 @@
-﻿using AnorocMobileApp.Views.Settings;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.ViewModels.Settings
@@ -22,14 +16,15 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// </summary>
         public SettingViewModel()
         {
-            this.BackButtonCommand = new Command(this.BackButtonClicked);
-            this.EditProfileCommand = new Command(this.EditProfileClicked);
-            this.ChangePasswordCommand = new Command(this.ChangePasswordClicked);
-            this.RequestAllPersonalDataCommand = new Command(this.RequestAllPersonalDataClicked);
-            this.HelpCommand = new Command(this.HelpClicked);
-            this.TermsCommand = new Command(this.TermsServiceClicked);
-            this.PolicyCommand = new Command(this.PrivacyPolicyClicked);
-            this.FAQCommand = new Command(this.FAQClicked);
+            BackButtonCommand = new Command(BackButtonClicked);
+            EditProfileCommand = new Command(EditProfileClicked);
+            ChangePasswordCommand = new Command(ChangePasswordClicked);
+            RequestAllPersonalDataCommand = new Command(RequestAllPersonalDataClicked);
+            HelpCommand = new Command(HelpClicked);
+            TermsCommand = new Command(TermsServiceClicked);
+            PolicyCommand = new Command(PrivacyPolicyClicked);
+            FAQCommand = new Command(FAQClicked);
+            LogOutCommand = new Command(LogOutClicked);
         }
 
         #endregion
@@ -75,6 +70,11 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Gets or sets the command is executed when the FAQ option is clicked.
         /// </summary>
         public Command FAQCommand { get; set; }
+        
+        /// <summary>
+        /// Gets or sets the command that is executed when the Log Out button is clicked
+        /// </summary>
+        public Command LogOutCommand { get; set; }
 
         #endregion
 
@@ -152,6 +152,15 @@ namespace AnorocMobileApp.ViewModels.Settings
         private void HelpClicked(object obj)
         {
             // Do something
+        }
+
+        /// <summary>
+        /// Invoked when the log out button is clicked
+        /// </summary>
+        /// <param name="obj">The object</param>
+        private void LogOutClicked(object obj)
+        {
+            
         }
 
         #endregion
