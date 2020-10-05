@@ -107,7 +107,7 @@ namespace AnorocMobileApp.Services
                     }
                     else
                     {
-                        
+                        SendUserLocation(customLocation);
                         if ((_Backoff / 60) <= 10)
                         {
                             _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
