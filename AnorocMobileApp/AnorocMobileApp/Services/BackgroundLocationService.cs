@@ -99,9 +99,9 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
                     if (!LocationService.LocationSavedToNotSend(customLocation))
                     {
-                        await customLocation.GetRegion();
                         if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
                         {
+                            await customLocation.GetRegion();
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
                             SendUserLocation(customLocation);
