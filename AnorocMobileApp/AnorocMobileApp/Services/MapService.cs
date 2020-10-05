@@ -114,7 +114,7 @@ namespace AnorocMobileApp.Services
                     }
                     catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                     {
-                        return null
+                        return null;
                     }
                 }
             }

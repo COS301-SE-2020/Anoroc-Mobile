@@ -41,13 +41,13 @@ namespace AnorocMobileApp.Services
 
         public bool LocationSavedToNotSend(Models.Location location)
         {
-            var returnList = new List<Models.Location>();
+            var returnList = new List<PrimitiveLocation>();
             var returnValue = false;
             using (SQLite.SQLiteConnection conn = new SQLite.SQLiteConnection(App.FilePath))
             {
                 try
                 {
-                    returnList = conn.Table<Models.Location>().ToList();
+                    returnList = conn.Table<PrimitiveLocation>().ToList();
                 }
                 catch (SQLiteException exception)
                 {
@@ -56,7 +56,7 @@ namespace AnorocMobileApp.Services
             }
             returnList.ForEach(storedLocation =>
             {
-                if(HaversineDistance(location, storedLocation) <= 11)
+                if(HaversineDistance(location, storedLocation.toCustomLocation()) <= 11)
                 {
                     returnValue = true;
                 }
@@ -96,13 +96,16 @@ namespace AnorocMobileApp.Services
             {
                 location = await Geolocation.GetLocationAsync(request);
                 Models.Location customLocation = new Models.Location(location);
+                await customLocation.GetRegion();
+                PrimitiveLocation primitiveLocation = new PrimitiveLocation(customLocation);
+
                 var conn = new SQLiteAsyncConnection(App.FilePath);
 
-                conn.CreateTableAsync<Models.Location>().Wait();
-                await conn.InsertAsync(customLocation).ContinueWith((t) =>
+                conn.CreateTableAsync<PrimitiveLocation>().Wait();
+                await conn.InsertAsync(primitiveLocation).ContinueWith((t) =>
                  {
                      Debug.WriteLine("New ID from t: {0}", t.Id);
-                     Debug.WriteLine("New ID: {0} from customLocation", customLocation.LocationId);
+                     Debug.WriteLine("New ID: {0} from customLocation", primitiveLocation.LocationId);
                  });
                 await conn.CloseAsync();
             }

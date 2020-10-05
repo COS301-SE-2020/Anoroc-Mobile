@@ -120,9 +120,11 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-                    await customLocation.GetRegion();
-
-                    SendUserLocation(customLocation);
+                    if ((!LocationService.LocationSavedToNotSend(customLocation)))
+                    {
+                        await customLocation.GetRegion();
+                        SendUserLocation(customLocation);
+                    }
                 }
                 Previous_request = location;
                 success = true;
@@ -147,7 +149,7 @@ namespace AnorocMobileApp.Services
         protected bool TestIfCanSendLocation()
         {
             DateTime currentTime = DateTime.Now;
-            if((currentTime-LastSent).TotalMinutes <= 5)
+            if ((currentTime - LastSent).TotalMinutes <= 5)
             {
 
             }

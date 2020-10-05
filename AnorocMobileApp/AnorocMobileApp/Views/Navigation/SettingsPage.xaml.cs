@@ -172,5 +172,12 @@ namespace AnorocMobileApp.Views.Navigation
                 CrossToastPopUp.Current.ShowToastMessage("Error Generating the file.");
             }
         }
+
+        private void btnDontSendLocation_Clicked(object sender, EventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<ILocationService>();
+            user.DontSendCurrentLocationAnymoreAsync();
+            CrossToastPopUp.Current.ShowToastMessage("Location not longer being tracked.");
+        }
     }
 }
