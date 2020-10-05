@@ -25,7 +25,7 @@ namespace AnorocMobileApp.ViewModels.Settings
             this.BackButtonCommand = new Command(this.BackButtonClicked);
             this.EditProfileCommand = new Command(this.EditProfileClicked);
             this.ChangePasswordCommand = new Command(this.ChangePasswordClicked);
-            this.LinkAccountCommand = new Command(this.LinkAccountClicked);
+            this.RequestAllPersonalDataCommand = new Command(this.RequestAllPersonalDataClicked);
             this.HelpCommand = new Command(this.HelpClicked);
             this.TermsCommand = new Command(this.TermsServiceClicked);
             this.PolicyCommand = new Command(this.PrivacyPolicyClicked);
@@ -54,7 +54,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// <summary>
         /// Gets or sets the command is executed when the account link option is clicked.
         /// </summary>
-        public Command LinkAccountCommand { get; set; }
+        public Command RequestAllPersonalDataCommand { get; set; }
 
         /// <summary>
         /// Gets or sets the command is executed when the help option is clicked.
@@ -111,7 +111,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the account link clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void LinkAccountClicked(object obj)
+        private void RequestAllPersonalDataClicked(object obj)
         {
             // Do something
         }
