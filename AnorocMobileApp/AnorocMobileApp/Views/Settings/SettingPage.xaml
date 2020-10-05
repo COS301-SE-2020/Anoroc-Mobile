@@ -186,11 +186,11 @@
                 </controls:TapAnimationGrid>
                 <BoxView Style="{StaticResource SeparatorStyle}" />
 
-                <!--  Grid for Account link label and navigation bar icon  -->
+                <!--  Grid for Download Data label and navigation bar icon  -->
                 <controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-White}"
                     ColumnSpacing="0"
-                    Command="{Binding LinkAccountCommand}"
+                    Command="{Binding RequestAllPersonalDataCommand}"
                     RowSpacing="0"
                     Tapped="False">
                     <Grid.ColumnDefinitions>
@@ -198,24 +198,24 @@
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <!--  Link account icon  -->
+                    <!--  Download data icon  -->
                     <Label
                         Grid.Column="0"
                         Margin="16,0,0,0"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Share}" />
-                    <!--  Link account label  -->
+                        Text="{StaticResource Account}" />
+                    <!--  Download data label  -->
                     <Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Link Account" />
+                        Text="Request All Personal Data" />
                     <!--  Navigation icon  -->
                     <Label
                         Grid.Column="2"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Next}"/>
+                        Text="{StaticResource Next}" />
                 </controls:TapAnimationGrid>
-                <BoxView BackgroundColor="{DynamicResource Gray-100}" HeightRequest="20" />
+                <BoxView Style="{StaticResource SeparatorStyle}" />
 
                 <!--  Header lable for notifications  -->
                 <Label
