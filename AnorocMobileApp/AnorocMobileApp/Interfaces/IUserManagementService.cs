@@ -14,7 +14,7 @@ namespace AnorocMobileApp.Interfaces
         Task<string> GetUserProfileImage();
         void UploadUserProfileImage(string image);
 
-        void ToggleAnonymousUser();
+        Task<string> ToggleAnonymousUser();
         Task<bool> DownloadData();
     }
 }
