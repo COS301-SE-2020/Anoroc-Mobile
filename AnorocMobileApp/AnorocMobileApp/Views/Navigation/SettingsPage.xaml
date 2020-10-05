@@ -93,9 +93,18 @@
                         Clicked="btnDownloadUserData_Clicked"
                         Style="{StaticResource SfButtonStyle}"
                         Text="Send me my data." />
-                
+
                 <buttons:SfButton
                         Grid.Row="4"
+                        AutomationId="DownloadDataButton"
+                        CornerRadius="4"
+                        x:Name="btnDontSendLocation"
+                        Clicked="btnDontSendLocation_Clicked"
+                        Style="{StaticResource SfButtonStyle}"
+                        Text="Don't send this location anymore." />
+
+                <buttons:SfButton
+                        Grid.Row="5"
                         AutomationId="LogoutButton"
                         CornerRadius="4"
                         x:Name="btnSignOut"

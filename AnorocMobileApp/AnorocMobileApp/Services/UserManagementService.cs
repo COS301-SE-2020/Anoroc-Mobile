@@ -77,7 +77,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    
                 }
             }
         }
@@ -122,7 +122,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnectToLocationServerException();
+                    
                 }
             }
         }
@@ -177,7 +177,7 @@ namespace AnorocMobileApp.Services
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {
-                throw new CantConnecToClusterServiceException();
+                
             }
         }
 
@@ -227,7 +227,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return null;
                 }
             }
         }
@@ -312,7 +312,7 @@ namespace AnorocMobileApp.Services
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {
-                throw new CantConnecToClusterServiceException();
+                
             }
         }
 
@@ -355,7 +355,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return 0;
                 }
             }
             else
@@ -399,7 +399,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return false;
                 }
             }
             else
