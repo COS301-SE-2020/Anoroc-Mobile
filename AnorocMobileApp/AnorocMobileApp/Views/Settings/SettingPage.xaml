@@ -509,7 +509,9 @@
                     Style="{StaticResource RoundButtonStyle}"
                     Text="LOG OUT"
                     TextColor="{DynamicResource Gray-White}"
-                    WidthRequest="245" />
+                    WidthRequest="245"
+                    Command="{Binding LogOutCommand}"
+                    />
 
             </StackLayout>
         </ScrollView>

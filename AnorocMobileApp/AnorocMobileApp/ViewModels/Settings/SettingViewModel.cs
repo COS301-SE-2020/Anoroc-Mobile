@@ -1,4 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using AnorocMobileApp.Models;
+using AnorocMobileApp.Services;
+using AnorocMobileApp.Views.Forms;
+using Plugin.SecureStorage;
+using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.ViewModels.Settings
@@ -158,9 +162,34 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the log out button is clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void LogOutClicked(object obj)
+        private async void LogOutClicked(object obj)
         {
-            
+            var userContext = await B2CAuthenticationService.Instance.SignOutAsync();
+            if (!userContext.IsLoggedOn)
+            {
+                // BUG why does UpdateSignInState uses APIKEY as thisisatoken
+                UpdateSignInState(userContext);   
+                Application.Current.MainPage = new LoginWithSocialIconPage();
+            } 
+        }
+        
+        /// <summary>
+        /// Used to update the sign in state
+        /// </summary>
+        /// <param name="userContext"></param>
+        void UpdateSignInState(UserContext userContext)
+        {
+            var isSignedIn = userContext.IsLoggedOn;
+
+            CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
+            CrossSecureStorage.Current.SetValue("SignedInFirstTime", "false");
+            CrossSecureStorage.Current.SetValue("APIKEY","thisisatoken");
+            CrossSecureStorage.Current.SetValue("Name", "");
+            CrossSecureStorage.Current.SetValue("Surname", "");
+            CrossSecureStorage.Current.SetValue("Email", "");
+
+            //btnSignInSignOut.Text = isSignedIn ? "Sign out" : "Sign in";
+
         }
 
         #endregion
