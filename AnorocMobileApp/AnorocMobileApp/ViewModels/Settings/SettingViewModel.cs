@@ -1,7 +1,9 @@
-﻿using AnorocMobileApp.Models;
+﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Models;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using Plugin.SecureStorage;
+using Plugin.Toast;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -115,9 +117,18 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the account link clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void RequestAllPersonalDataClicked(object obj)
+        private async void RequestAllPersonalDataClicked(object obj)
         {
-            // Do something
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var userdata = await user.DownloadData();
+            if (userdata)
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Email Sent.");
+            }
+            else
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Error Generating the file.");
+            }
         }
 
         /// <summary>
