@@ -59,7 +59,71 @@
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
 
-
+                <!--  Grid for Location Tracking label and switch  -->
+                <Grid
+                    BackgroundColor="{DynamicResource Gray-White}"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--  Map Pin icon  -->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource MapPin}" />
+                    <!--  Location Tracking label  -->
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource LabelStyle}"
+                        Text="Location Tracking" />
+                    <!--  Location Tracking switch  -->
+                    <buttons:SfSwitch
+                        Grid.Column="2"
+                        Margin="8,0"
+                        AllowIndeterminateState="False"
+                        HeightRequest="28"
+                        StateChanged="SfSwitch_OnStateChanged"
+                        VisualType="Cupertino">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="On">
+                                    <VisualState.Setters>
+                                        <Setter Property="SwitchSettings">
+                                            <Setter.Value>
+                                                <buttons:CupertinoSwitchSettings
+                                                    x:TypeArguments="buttons:OnState"
+                                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                                    ThumbColor="{DynamicResource Gray-White}"
+                                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                                    TrackColor="{DynamicResource PrimaryColor}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Off">
+                                    <VisualState.Setters>
+                                        <Setter Property="SwitchSettings">
+                                            <Setter.Value>
+                                                <buttons:CupertinoSwitchSettings
+                                                    x:TypeArguments="buttons:OffState"
+                                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                                    ThumbColor="{DynamicResource Gray-White}"
+                                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                                    TrackColor="{DynamicResource Gray-200}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </buttons:SfSwitch>
+                </Grid>
+                <BoxView Style="{StaticResource SeparatorStyle}" />
+                
                 <!--  Grid for Edit profile label and navigation bar icon  -->
                 <controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-White}"
@@ -166,6 +230,7 @@
                     TextColor="{DynamicResource Gray-800}"
                     VerticalOptions="Center"
                     VerticalTextAlignment="Center" />
+                
 
                 <!--  Grid for Notifications label and switch  -->
                 <Grid
