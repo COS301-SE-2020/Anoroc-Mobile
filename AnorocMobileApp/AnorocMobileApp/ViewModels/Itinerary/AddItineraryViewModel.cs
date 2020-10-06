@@ -158,7 +158,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             {
                 if (addressText != value) {
                     addressText = value;
-                    SearchTextChanged();
+                    DelayedQueryForKeyboardTypingSearches();
                     NotifyPropertyChanged();
                 }
             }
@@ -225,12 +225,14 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             }
         }
 
-        private async void SearchTextChanged()
+        private async Task SearchTextChanged()
         {
             if (!string.IsNullOrWhiteSpace(AddressText))
             {
                 await GetPlacesPredictonAsync();
             }
+            else
+                Addresses.Clear();
         }
 
         private async void SearchLocationTappedMethod(object obj)
@@ -266,6 +268,31 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             popupLayout.Show();
         }
         
+        public Command RefreshCommand => 
+            new Command(async () => { 
+                await DelayedQueryForKeyboardTypingSearches().ConfigureAwait(false); });
+        
+        private CancellationTokenSource throttleCts = new CancellationTokenSource();
+        /// <summary>
+        /// Runs in a background thread, checks for new Query and runs current one
+        /// </summary>
+        private async Task DelayedQueryForKeyboardTypingSearches()
+        {
+            try
+            {
+                Interlocked.Exchange(ref this.throttleCts, new CancellationTokenSource()).Cancel();
+                await Task.Delay(TimeSpan.FromMilliseconds(500), this.throttleCts.Token)
+                    .ContinueWith(async task => await SearchTextChanged()  , 
+                        CancellationToken.None, 
+                        TaskContinuationOptions.OnlyOnRanToCompletion, 
+                        TaskScheduler.FromCurrentSynchronizationContext());
+            }
+            catch  
+            {
+                //Ignore any Threading errors
+            }
+        }
+
         #endregion
 
     }
