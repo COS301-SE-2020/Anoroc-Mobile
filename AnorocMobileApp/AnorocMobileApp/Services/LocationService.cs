@@ -54,13 +54,16 @@ namespace AnorocMobileApp.Services
                     Debug.WriteLine(exception.Message);
                 }
             }
-            returnList.ForEach(storedLocation =>
+            if (returnList != null)
             {
-                if(HaversineDistance(location, storedLocation.toCustomLocation()) <= 11)
+                returnList.ForEach(storedLocation =>
                 {
-                    returnValue = true;
-                }
-            });
+                    if (HaversineDistance(location, storedLocation.toCustomLocation()) <= 11)
+                    {
+                        returnValue = true;
+                    }
+                });
+            }
             return returnValue;
         }
 
