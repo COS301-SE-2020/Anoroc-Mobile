@@ -5,12 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             xmlns:sfpicker="clr-namespace:Syncfusion.XForms.Pickers;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:converters="clr-namespace:AnorocMobileApp.Converters;assembly=AnorocMobileApp"
              xmlns:sfPopout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
              xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp"
              xmlns:behavior="clr-namespace:AnorocMobileApp.Behaviors"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:itineraryViewModel="clr-namespace:AnorocMobileApp.ViewModels.Itinerary;assembly=AnorocMobileApp"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
              mc:Ignorable="d"
              x:Class="AnorocMobileApp.Views.Itinerary.AddItineraryPage"
              BackgroundColor="{DynamicResource Gray-White}"
@@ -25,7 +26,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles3.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <sfPopout:SfPopupLayout x:Key="SearchDialog" x:Name="PopupLayout2">
+            <converters:BoolConverter x:Key="Converter"/>
+            <sfPopout:SfPopupLayout x:Key="SearchDialog" x:Name="PopupLayout2" >
                 <sfPopout:SfPopupLayout.PopupView>
                     <sfPopout:PopupView ShowHeader="False"
                                         AcceptButtonText="ACCEPT"
@@ -37,7 +39,11 @@
                         
                         <sfPopout:PopupView.ContentTemplate>
                             <DataTemplate>
-                               <Grid RowSpacing="0">
+                                <busyindicator:SfBusyIndicator x:Name="BusyIndicator"
+                                                               AnimationType="Cupertino"
+                                                               IsEnabled="False"
+                                />
+                                <Grid RowSpacing="0" IsEnabled="{Binding Source={x:Reference BusyIndicator}, Path=IsEnabled, Converter={StaticResource Converter}}">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="Auto"/>
@@ -55,7 +61,7 @@
                                         <border:SfBorder Style="{StaticResource SfBorderStyle}">
                                             <controls:BorderlessEntry x:Name="SearchEntry" 
                                                                       Text="{Binding AddressText, Mode=TwoWay}" Placeholder="Search here"
-                                                                      HorizontalOptions="FillAndExpand"  Style="{StaticResource SearchEntryStyle}"
+                                                                      HorizontalOptions="FillAndExpand"  Style="{StaticResource SearchEntryStyle}" 
                                                                       />
                                         </border:SfBorder>
                                         
@@ -185,7 +191,6 @@
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Done" />
                 </StackLayout>
-
             </Grid>
         </ScrollView>
     </ContentPage.Content>
