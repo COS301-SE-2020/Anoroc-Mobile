@@ -63,6 +63,7 @@
     <PackageReference Include="sameerIOTApps.Plugin.SecureStorage" Version="2.5.0" />
     <PackageReference Include="SimpleInjector" Version="5.0.3" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.2.0.48" />
