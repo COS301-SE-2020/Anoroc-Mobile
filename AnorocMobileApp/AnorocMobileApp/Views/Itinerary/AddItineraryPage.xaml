@@ -66,7 +66,7 @@
                                     <listView:SfListView Grid.Row="2" x:Name="SearchList"
                                                          ItemsSource="{Binding Addresses}"
                                                          Margin="8,8"
-                                                         ItemTapped="ClickedAdd"
+                                                         TapCommand="{Binding SearchLocationTapped}"
                                                          >
                                         <listView:SfListView.ItemTemplate>
                                             <DataTemplate>
