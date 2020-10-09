@@ -8,6 +8,7 @@ using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
+using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
