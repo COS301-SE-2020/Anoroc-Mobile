@@ -85,8 +85,51 @@
                     </VisualStateManager.VisualStateGroups>
                 </buttons:SfSwitch>
 
+                <Label Grid.Row="3" Style="{StaticResource SettingsLabelStyle}" Text="Be Anonymous"/>
+
+                <buttons:SfSwitch Grid.Row="3"
+                      HorizontalOptions="EndAndExpand"
+                      AllowIndeterminateState="False"
+                      HeightRequest="30"
+                      x:Name="Anonymity_SfSwitch"                      
+                      StateChanged="SfSwitch_Anonymity_StateChanged"
+                      VisualType="Cupertino">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="On">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:CupertinoSwitchSettings
+                                    x:TypeArguments="buttons:OnState"
+                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                    ThumbColor="{DynamicResource Gray-White}"
+                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                    TrackColor="{DynamicResource PrimaryColor}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Off">
+                                <VisualState.Setters>
+                                    <Setter Property="SwitchSettings">
+                                        <Setter.Value>
+                                            <buttons:CupertinoSwitchSettings
+                                    x:TypeArguments="buttons:OffState"
+                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                    ThumbColor="{DynamicResource Gray-White}"
+                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                    TrackColor="{DynamicResource Gray-White}" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </buttons:SfSwitch>
+
                 <buttons:SfButton
-                        Grid.Row="3"
+                        Grid.Row="4"
                         AutomationId="DownloadDataButton"
                         CornerRadius="4"
                         x:Name="btnDownloadUserData"
@@ -95,7 +138,7 @@
                         Text="Send me my data." />
 
                 <buttons:SfButton
-                        Grid.Row="4"
+                        Grid.Row="5"
                         AutomationId="DownloadDataButton"
                         CornerRadius="4"
                         x:Name="btnDontSendLocation"
@@ -104,7 +147,7 @@
                         Text="Don't send this location anymore." />
 
                 <buttons:SfButton
-                        Grid.Row="5"
+                        Grid.Row="6"
                         AutomationId="LogoutButton"
                         CornerRadius="4"
                         x:Name="btnSignOut"

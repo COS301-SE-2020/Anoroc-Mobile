@@ -183,6 +183,7 @@ namespace AnorocMobileApp.Services
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
             _Backoff = Initial_Backoff;
             Track_Retry = 0;
+            Previous_request = null;
         }
 
         public bool isTracking()
