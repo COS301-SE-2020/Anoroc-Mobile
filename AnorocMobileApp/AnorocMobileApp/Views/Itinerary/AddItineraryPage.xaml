@@ -39,10 +39,7 @@
                         
                         <sfPopout:PopupView.ContentTemplate>
                             <DataTemplate>
-                                <busyindicator:SfBusyIndicator x:Name="BusyIndicator"
-                                                               AnimationType="Cupertino"
-                                                               IsEnabled="False"
-                                />
+                                
                                 <Grid RowSpacing="0" IsEnabled="{Binding Source={x:Reference BusyIndicator}, Path=IsEnabled, Converter={StaticResource Converter}}">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
@@ -103,12 +100,16 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-
+                <busyindicator:SfBusyIndicator Grid.Row="0" x:Name="BusyIndicator"
+                                               AnimationType="Cupertino"
+                                               IsEnabled="False"
+                />
                 <Label
-                        Margin="0,12"
+                    Grid.Row="1" Margin="0,12"
                         FontFamily="{StaticResource Montserrat-Medium}"
                         FontSize="16"
                         HorizontalOptions="CenterAndExpand"
@@ -119,9 +120,9 @@
                         VerticalTextAlignment="Center" />
 
                 <!-- Separator -->
-                <BoxView  Grid.Row="1" BackgroundColor="{DynamicResource Gray-200}" HeightRequest="1" />
+                <BoxView  Grid.Row="2" BackgroundColor="{DynamicResource Gray-200}" HeightRequest="1" />
 
-                <StackLayout Grid.Row="2" Margin="16" Spacing="0" >
+                <StackLayout Grid.Row="3" Margin="16" Spacing="0" >
                     <DatePicker x:Name="datePicker"
                                 HorizontalOptions="Fill"
                                 BackgroundColor="Transparent"
@@ -179,7 +180,7 @@
                     </Grid>
                 </StackLayout>
                 
-                <StackLayout Grid.Row="3" Margin="0" Spacing="0">
+                <StackLayout Grid.Row="4" Margin="0" Spacing="0">
                     <buttons:SfButton
                         Style="{StaticResource SfGradientButtonStyle}"
                         Text="Add next location"
