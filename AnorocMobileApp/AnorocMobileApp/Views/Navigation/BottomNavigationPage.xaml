@@ -39,14 +39,14 @@
     <itinerary:ItineraryPage Title="Itinerary"  >
         <itinerary:ItineraryPage.IconImageSource >
             <FontImageSource FontFamily="{StaticResource FontIcons}"
-                                 Glyph="{StaticResource HomeIcon}"
+                                 Glyph="{StaticResource ItineraryIcon}"
                                  Size="16"/>                
         </itinerary:ItineraryPage.IconImageSource>
     </itinerary:ItineraryPage>
     <local:Map Title="Map">
         <local:Map.IconImageSource>
             <FontImageSource FontFamily="{StaticResource FontIcons}"
-                             Glyph="{StaticResource MapIcon}"
+                             Glyph="{StaticResource MapPinIcon}"
                              Size="16"/>
         </local:Map.IconImageSource>
     </local:Map>
