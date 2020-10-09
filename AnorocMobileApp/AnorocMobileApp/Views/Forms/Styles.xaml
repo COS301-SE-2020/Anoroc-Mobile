@@ -20,6 +20,11 @@
     <Color x:Key="FacebookBlue">#4267B2</Color>
     <Color x:Key="LightGreen">#35c659</Color>
     <Color x:Key="FacebookLogin">#3b5998</Color>
+    <Color x:Key="Dull-Red">#c04848</Color>
+    <Color x:Key="Deep-Purple">#480048</Color>
+    
+    <Color x:Key="Gradient-End">#f43a7c</Color>
+    <Color x:Key="Gradient-Start">#3F0041</Color>
 
     <x:String x:Key="DropDownButtonIcon">&#xe70b;</x:String>
     <x:String x:Key="AvatarIcon">&#xe723;</x:String>
@@ -120,8 +125,8 @@
                 <graphics:SfLinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                     <graphics:SfLinearGradientBrush.GradientStops>
                         
-                        <graphics:SfGradientStop Offset="0.0" Color="{StaticResource GradientStart}" />
-                        <graphics:SfGradientStop Offset="1.0" Color="{StaticResource GradientEnd}" />
+                        <graphics:SfGradientStop Offset="0.0" Color="{StaticResource Gradient-Start}" />
+                        <graphics:SfGradientStop Offset="1.0" Color="{StaticResource Gradient-End}" />
                     </graphics:SfLinearGradientBrush.GradientStops>
                 </graphics:SfLinearGradientBrush>
             </Setter.Value>
