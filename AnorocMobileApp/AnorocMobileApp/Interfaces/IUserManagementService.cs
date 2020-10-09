@@ -16,5 +16,6 @@ namespace AnorocMobileApp.Interfaces
 
         void ToggleAnonymousUser();
         Task<bool> DownloadData();
+        Task<string> GetNotifications();
     }
 }
