@@ -400,6 +400,8 @@
                         Margin="8,0"
                         AllowIndeterminateState="False"
                         HeightRequest="28"
+                        x:Name="Email_Notification_Switch"
+                        StateChanged="Email_Notification_Switch_StateChanged"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">

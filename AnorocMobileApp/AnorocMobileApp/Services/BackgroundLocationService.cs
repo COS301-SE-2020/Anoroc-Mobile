@@ -109,6 +109,7 @@ namespace AnorocMobileApp.Services
                         else
                         {
                             ExtendBackoff();
+                            SendUserLocation(customLocation);
                         }
                     }
                     else

@@ -35,6 +35,13 @@ namespace AnorocMobileApp.Views.Settings
                 if (value)
                     Set_Anonomous_Switch.IsOn = true;
             }
+
+            if(Application.Current.Properties.ContainsKey("EmailNotifications"))
+            {
+                var value = (bool)Application.Current.Properties["EmailNotifications"];
+                if (value)
+                    Email_Notification_Switch.IsOn = true;
+            }
         }
         private void SfSwitch_OnStateChanged(object sender, SwitchStateChangedEventArgs e)
         {
@@ -57,6 +64,16 @@ namespace AnorocMobileApp.Views.Settings
             var value = await user.ToggleAnonymousUser((bool)e.NewValue);
             CrossToastPopUp.Current.ShowToastMessage($"Anonymity set to: {value}");
             Application.Current.Properties["Anonymity"] = e.NewValue;
+        }
+
+        private async void Email_Notification_Switch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var value = await user.SetEmaileNotificationSettings((bool)e.NewValue);
+            if(value)
+                CrossToastPopUp.Current.ShowToastMessage("Notifications will be emailed.");
+
+            Application.Current.Properties["EmailNotifications"] = value;
         }
     }
 }

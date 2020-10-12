@@ -17,5 +17,6 @@ namespace AnorocMobileApp.Interfaces
         Task<string> ToggleAnonymousUser(bool value);
         Task<bool> DownloadData();
         void DeleteTheUser();
+        Task<bool> SetEmaileNotificationSettings(bool newValue);
     }
 }
