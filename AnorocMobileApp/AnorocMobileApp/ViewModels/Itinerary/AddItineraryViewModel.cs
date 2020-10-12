@@ -1,29 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using AnorocMobileApp.Models.Dashboard;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Runtime.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
-using Xamarin.Forms.Internals;
-using System.Windows.Input;
 using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Models;
-//using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
 using Newtonsoft.Json;
-//using Itinerary = AnorocMobileApp.Models.Itinerary;
+using Syncfusion.XForms.PopupLayout;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals; //using AnorocMobileApp.Models;
+//using Itinerary = AnorocMobileApp.Models.Itinerary;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
-using AnorocMobileApp.Interfaces;
 
-namespace AnorocMobileApp.ViewModels.Dashboard
+namespace AnorocMobileApp.ViewModels.Itinerary
 {
     /// <summary>
     /// ViewModel for Add Itinerary page.
@@ -33,6 +30,14 @@ namespace AnorocMobileApp.ViewModels.Dashboard
     public class AddItineraryViewModel : BaseViewModel
     {
         #region Constructor
+        
+        public AddItineraryViewModel()
+        {
+            SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
+            DoneButtonTapped = new Command(DoneTappedMethod);
+            OpenSearchDialog = new Command<SfPopupLayout>(DisplaySearchDialog);
+            Date = DateTime.Today;
+        }
 
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
@@ -41,6 +46,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
+            OpenSearchDialog = new Command<SfPopupLayout>(DisplaySearchDialog);
             Navigation = navigation;
             this.View = view;
             this.Date = DateTime.Today;
@@ -79,8 +85,9 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
         private DateTime date;
-        private INavigation Navigation { get; set;}
-        private Page View { get; set; }
+
+        public INavigation Navigation { get; set;}
+        public Page View { get; set; }
 
         #endregion
 
@@ -151,6 +158,7 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             {
                 if (addressText != value) {
                     addressText = value;
+                    DelayedQueryForKeyboardTypingSearches();
                     NotifyPropertyChanged();
                 }
             }
@@ -176,6 +184,8 @@ namespace AnorocMobileApp.ViewModels.Dashboard
         public Command<object> SearchLocationTapped { get; set; }
         
         public Command DoneButtonTapped { get; set; }
+        
+        public Command<SfPopupLayout> OpenSearchDialog { get; set; }
 
         #endregion
         
@@ -215,6 +225,16 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             }
         }
 
+        private async Task SearchTextChanged()
+        {
+            if (!string.IsNullOrWhiteSpace(AddressText))
+            {
+                await GetPlacesPredictonAsync();
+            }
+            else
+                Addresses.Clear();
+        }
+
         private async void SearchLocationTappedMethod(object obj)
         {
             if (obj is ItemTappedEventArgs item)
@@ -241,6 +261,36 @@ namespace AnorocMobileApp.ViewModels.Dashboard
             var risk = await service.ProcessItinerary(itinerary);
             Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
             await Navigation.PopAsync();
+        }
+
+        private void DisplaySearchDialog(SfPopupLayout popupLayout)
+        {
+            popupLayout.Show();
+        }
+        
+        public Command RefreshCommand => 
+            new Command(async () => { 
+                await DelayedQueryForKeyboardTypingSearches().ConfigureAwait(false); });
+        
+        private CancellationTokenSource throttleCts = new CancellationTokenSource();
+        /// <summary>
+        /// Runs in a background thread, checks for new Query and runs current one
+        /// </summary>
+        private async Task DelayedQueryForKeyboardTypingSearches()
+        {
+            try
+            {
+                Interlocked.Exchange(ref this.throttleCts, new CancellationTokenSource()).Cancel();
+                await Task.Delay(TimeSpan.FromMilliseconds(500), this.throttleCts.Token)
+                    .ContinueWith(async task => await SearchTextChanged()  , 
+                        CancellationToken.None, 
+                        TaskContinuationOptions.OnlyOnRanToCompletion, 
+                        TaskScheduler.FromCurrentSynchronizationContext());
+            }
+            catch  
+            {
+                //Ignore any Threading errors
+            }
         }
 
         #endregion

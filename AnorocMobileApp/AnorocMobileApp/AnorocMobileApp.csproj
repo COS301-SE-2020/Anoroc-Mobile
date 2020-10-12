@@ -37,19 +37,19 @@
     <EmbeddedResource Include="Images\EmptyItinerary.svg" />
     <EmbeddedResource Include="Places.json" />
     <EmbeddedResource Include="Points.json" />
-    <EmbeddedResource Update="Views\Dashboard\AddItineraryPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Dashboard\ViewItineraryPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Dashboard\Styles.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Views\Itinerary\ItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Itinerary\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\Styles3.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\ViewItineraryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Itinerary\AddItineraryPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -63,6 +63,7 @@
     <PackageReference Include="sameerIOTApps.Plugin.SecureStorage" Version="2.5.0" />
     <PackageReference Include="SimpleInjector" Version="5.0.3" />
     <PackageReference Include="SkiaSharp.Extended" Version="1.60.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfBusyIndicator" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfChart" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="18.2.0.48" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="18.2.0.48" />
@@ -107,6 +108,18 @@
   <ItemGroup>
     <Compile Update="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Itinerary\Styles3.xaml.cs">
+      <DependentUpon>Styles3.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Itinerary\ViewItineraryPage.xaml.cs">
+      <DependentUpon>ViewItineraryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Itinerary\AddItineraryPage.xaml.cs">
+      <DependentUpon>AddItineraryPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
 
     
@@ -171,6 +184,12 @@
     <EmbeddedResource Update="Views\Notification\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\SettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Settings\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\HomeTemplate.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -180,5 +199,9 @@
     <EmbeddedResource Update="Views\Templates\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\Dashboard" />
   </ItemGroup>
 </Project>
