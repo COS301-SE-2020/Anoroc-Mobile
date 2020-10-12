@@ -1,5 +1,7 @@
 ﻿using AnorocMobileApp.Interfaces;
+using AnorocMobileApp.Services;
 using Plugin.SecureStorage;
+using Plugin.Toast;
 using Syncfusion.XForms.Buttons;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -20,8 +22,20 @@ namespace AnorocMobileApp.Views.Settings
         public SettingPage()
         {
             InitializeComponent();
-        }
+            if (Application.Current.Properties.ContainsKey("Tracking"))
+            {
+                var value = (bool)Application.Current.Properties["Tracking"];
+                if (value)
+                    Location_Tracking_Switch.IsOn = true;
+            }
 
+            if(Application.Current.Properties.ContainsKey("Anonymity"))
+            {
+                var value = (bool)Application.Current.Properties["Anonymity"];
+                if (value)
+                    Set_Anonomous_Switch.IsOn = true;
+            }
+        }
         private void SfSwitch_OnStateChanged(object sender, SwitchStateChangedEventArgs e)
         {
             var backgroundLocationService = App.IoCContainer.GetInstance<IBackgroundLocationService>();
@@ -35,6 +49,14 @@ namespace AnorocMobileApp.Views.Settings
                 backgroundLocationService.Stop_Tracking();
                 CrossSecureStorage.Current.SetValue("Location", "false");
             }
+        }
+
+        private async void Set_Anonomous_Switch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var value = await user.ToggleAnonymousUser((bool)e.NewValue);
+            CrossToastPopUp.Current.ShowToastMessage($"Anonymity set to: {value}");
+            Application.Current.Properties["Anonymity"] = e.NewValue;
         }
     }
 }

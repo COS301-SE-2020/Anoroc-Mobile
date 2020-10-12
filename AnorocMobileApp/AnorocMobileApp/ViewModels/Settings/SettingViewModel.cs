@@ -4,6 +4,9 @@ using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Forms;
 using Plugin.SecureStorage;
 using Plugin.Toast;
+using System;
+using System.Diagnostics;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
@@ -31,6 +34,7 @@ namespace AnorocMobileApp.ViewModels.Settings
             PolicyCommand = new Command(PrivacyPolicyClicked);
             FAQCommand = new Command(FAQClicked);
             LogOutCommand = new Command(LogOutClicked);
+            DeleteAccount = new Command(DeleteUserAccount);
         }
 
         #endregion
@@ -82,6 +86,11 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// </summary>
         public Command LogOutCommand { get; set; }
 
+        /// <summary>
+        /// Gets or sets the command that is executed when the Delete account button is clicked
+        /// </summary>
+        public Command DeleteAccount { get; set; }
+
         #endregion
 
         #region Methods
@@ -119,6 +128,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// <param name="obj">The object</param>
         private async void RequestAllPersonalDataClicked(object obj)
         {
+            CrossToastPopUp.Current.ShowToastMessage("Requesting...");
             var user = App.IoCContainer.GetInstance<IUserManagementService>();
             var userdata = await user.DownloadData();
             if (userdata)
@@ -144,9 +154,16 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the privacy and policy clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void PrivacyPolicyClicked(object obj)
+        private async void PrivacyPolicyClicked(object obj)
         {
             // Do something
+            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net"), new BrowserLaunchOptions
+            {
+                LaunchMode = BrowserLaunchMode.SystemPreferred,
+                TitleMode = BrowserTitleMode.Show,
+                PreferredToolbarColor = Color.AliceBlue,
+                PreferredControlColor = Color.Violet
+            });
         }
 
         /// <summary>
@@ -203,6 +220,35 @@ namespace AnorocMobileApp.ViewModels.Settings
 
         }
 
+        /// <summary>
+        /// Invoked when the Delete User account is clicked
+        /// </summary>
+        /// <param name="obj">The object</param>
+        private async void DeleteUserAccount(object obj)
+        {
+            bool answer = await Application.Current.MainPage.DisplayAlert("Delete Account", "Are you sure you wish to delete your account?", "Yes", "No");
+            if(answer)
+            {
+                bool answer2 = await Application.Current.MainPage.DisplayAlert("Delete Account", "This process may not be undone, are you sure you want to continue?", "Yes", "No");
+                if(answer2)
+                {
+                    bool answer3 = await Application.Current.MainPage.DisplayAlert("Delete Account", "Are you VERY sure?", "No", "Yes");
+                    if(!answer3)
+                    {
+                        //delete account
+                        var user = App.IoCContainer.GetInstance<IUserManagementService>();
+                        user.DeleteTheUser();
+                        var userContext = await B2CAuthenticationService.Instance.SignOutAsync();
+                        if (!userContext.IsLoggedOn)
+                        {
+                            // BUG why does UpdateSignInState uses APIKEY as thisisatoken
+                            UpdateSignInState(userContext);
+                        }
+                        Application.Current.MainPage = new LoginWithSocialIconPage();
+                    }
+                }
+            }
+        }
         #endregion
     }
 }

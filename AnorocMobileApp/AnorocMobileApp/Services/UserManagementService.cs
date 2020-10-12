@@ -470,7 +470,7 @@ namespace AnorocMobileApp.Services
             }, CancellationToken.None);
         }
 
-        public async Task<string> ToggleAnonymousUser()
+        public async Task<string> ToggleAnonymousUser(bool value)
         {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -482,7 +482,7 @@ namespace AnorocMobileApp.Services
                 var client = new HttpClient(clientHandler);
                 Token token_object = new Token();
                 token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-                token_object.Object_To_Server = "";
+                token_object.Object_To_Server = value.ToString();
 
                 var data = JsonConvert.SerializeObject(token_object);
 
