@@ -203,6 +203,5 @@
 
   <ItemGroup>
     <Folder Include="ViewModels\Dashboard" />
-    <Folder Include="Views\Dashboard" />
   </ItemGroup>
 </Project>
