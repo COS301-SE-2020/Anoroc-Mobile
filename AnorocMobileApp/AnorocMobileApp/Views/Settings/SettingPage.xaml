@@ -336,6 +336,8 @@
                         Margin="8,0"
                         AllowIndeterminateState="False"
                         HeightRequest="28"
+                        x:Name="Allow_Notification_Switch"
+                        StateChanged="Allow_Notification_Switch_StateChanged"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -388,7 +390,7 @@
                         Grid.Column="0"
                         Margin="16,0,0,0"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Mail}" />
+                        Text="{StaticResource Bell}" />
                     <!--  Email notification label  -->
                     <Label
                         Grid.Column="1"

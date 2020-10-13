@@ -157,7 +157,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         private async void PrivacyPolicyClicked(object obj)
         {
             // Do something
-            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net"), new BrowserLaunchOptions
+            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net/privacyInfo"), new BrowserLaunchOptions
             {
                 LaunchMode = BrowserLaunchMode.SystemPreferred,
                 TitleMode = BrowserTitleMode.Show,
@@ -172,9 +172,16 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// <param name="obj">The object</param>
         /// 
 
-        private void FAQClicked(object obj)
+        private async void FAQClicked(object obj)
         {
             // Do something
+            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net/FAQinfo"), new BrowserLaunchOptions
+            {
+                LaunchMode = BrowserLaunchMode.SystemPreferred,
+                TitleMode = BrowserTitleMode.Show,
+                PreferredToolbarColor = Color.AliceBlue,
+                PreferredControlColor = Color.Violet
+            });
         }
 
         /// <summary>

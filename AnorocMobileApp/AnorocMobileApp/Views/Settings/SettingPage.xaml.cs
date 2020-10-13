@@ -42,6 +42,18 @@ namespace AnorocMobileApp.Views.Settings
                 if (value)
                     Email_Notification_Switch.IsOn = true;
             }
+
+            if(Application.Current.Properties.ContainsKey("Allow_Notifications"))
+            {
+                var value = (bool)Application.Current.Properties["Allow_Notifications"];
+                Allow_Notification_Switch.IsOn = value;
+            }
+            else
+            {
+                Application.Current.Properties["Allow_Notifications"] = true;
+                Allow_Notification_Switch.IsOn = true;
+            }
+
         }
         private void SfSwitch_OnStateChanged(object sender, SwitchStateChangedEventArgs e)
         {
@@ -74,6 +86,16 @@ namespace AnorocMobileApp.Views.Settings
                 CrossToastPopUp.Current.ShowToastMessage("Notifications will be emailed.");
 
             Application.Current.Properties["EmailNotifications"] = value;
+        }
+
+        private void Allow_Notification_Switch_StateChanged(object sender, SwitchStateChangedEventArgs e)
+        {
+            var val = (bool)e.NewValue;
+            if(val == false)
+            {
+                Email_Notification_Switch.IsOn = true;
+            }
+            App.Current.Properties["Allow_Notifications"] = val;
         }
     }
 }
