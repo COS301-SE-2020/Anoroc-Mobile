@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnorocMobileApp.Models;
+using System;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace AnorocMobileApp.Interfaces
 
         Task<string> ToggleAnonymousUser();
         Task<bool> DownloadData();
-        Task<string> GetNotifications();
+        Task<NotificationDB[]> GetNotifications();
 
         void sendNotification(string notificationString);
         void DeleteTheUser();

@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Threading.Tasks;
+using AnorocMobileApp.Helpers;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.ViewModels.Notification;
+using Newtonsoft.Json;
 using SQLite;
 using Xamarin.Forms.Internals;
 
@@ -80,12 +86,12 @@ namespace AnorocMobileApp.DataService
                     tempModel.IsRead = false;
                     tempModel.ReceivedTime =n.Time;
                     //obj.RecentList.Add(tempModel);
-                    obj.RecentList.Insert(0, tempModel);
+                    obj.RecentList.Insert(0, tempModel);                    
                 }
                 conn.Close();                
-            } 
-
+            }
             return obj;
-        }               
+        }         
+        
     }
 }

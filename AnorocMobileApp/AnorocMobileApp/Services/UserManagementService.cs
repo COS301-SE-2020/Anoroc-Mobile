@@ -561,7 +561,7 @@ namespace AnorocMobileApp.Services
             }
         }
 
-        public async Task<string> GetNotifications()
+        public async Task<NotificationDB[]> GetNotifications()
         {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -592,10 +592,10 @@ namespace AnorocMobileApp.Services
                     {
                         var json = await responseMessage.Content.ReadAsStringAsync();
                         var notifiations = JsonConvert.DeserializeObject<List<NotificationDB>>(json);
-                        return notifiations.ToString();
+                        return notifiations.ToArray();
                     }
                     else
-                        return "";
+                        return null;
 
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
@@ -604,7 +604,7 @@ namespace AnorocMobileApp.Services
                 }
             }
             else
-                return "";
+                return null;
         }
 
     }

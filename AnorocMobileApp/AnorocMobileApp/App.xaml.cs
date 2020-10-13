@@ -16,6 +16,9 @@ using AnorocMobileApp.Views.Notification;
 using System;
 using AnorocMobileApp.Models.Notification;
 using Plugin.SecureStorage;
+using AnorocMobileApp.DataService;
+using AnorocMobileApp.ViewModels.Notification;
+using System.Reflection;
 
 namespace AnorocMobileApp
 {
@@ -111,7 +114,8 @@ namespace AnorocMobileApp
         protected override void OnStart()
         {
             LoadPersistentValues();
-            
+            var data = new EncounterDataService();
+            this.BindingContext = data.NotificationViewModel;
             var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
             if (status != null && status == "True")
             {
@@ -119,8 +123,30 @@ namespace AnorocMobileApp
                 var name = CrossSecureStorage.Current.GetValue("Name");
                 var surname = CrossSecureStorage.Current.GetValue("Surname");
                 var email = CrossSecureStorage.Current.GetValue("Email");
-                IUserManagementService userManagementServiceNotification = new UserManagementService();
-                userManagementServiceNotification.GetNotifications();
+                MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+                {
+                    var userManagementServiceNotification = IoCContainer.GetInstance<IUserManagementService>();
+                    var serverNotifi = await userManagementServiceNotification.GetNotifications();
+                    
+                    //var serverNotiList = userManagementServiceNotification;
+                    using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                    {
+                        conn.DropTable<NotificationDB>();
+                        conn.CreateTable<NotificationDB>();
+                        var notifications = conn.Table<NotificationDB>().ToList();
+                                             
+                        foreach(var n in serverNotifi)
+                        {
+                            NotificationDB passingNotification = new NotificationDB();
+                            passingNotification.Body = n.Body;                            
+                            passingNotification.Time = n.Time;
+
+                            conn.Insert(passingNotification);
+                        }
+                        conn.Close();
+                    }
+
+                });                
                 IoCContainer.GetInstance<IUserManagementService>().UserLoggedIn(name, surname, email);
             }
             else
