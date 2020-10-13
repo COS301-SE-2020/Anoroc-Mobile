@@ -35,6 +35,7 @@ namespace AnorocMobileApp.ViewModels.Settings
             FAQCommand = new Command(FAQClicked);
             LogOutCommand = new Command(LogOutClicked);
             DeleteAccount = new Command(DeleteUserAccount);
+            DontTrackCommand = new Command(DontTrackLocation);
         }
 
         #endregion
@@ -90,6 +91,11 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Gets or sets the command that is executed when the Delete account button is clicked
         /// </summary>
         public Command DeleteAccount { get; set; }
+
+        /// <summary>
+        /// Gets or sets the command that is executed when the Dont track button is clicked
+        /// </summary>
+        public Command DontTrackCommand { get; set; }
 
         #endregion
 
@@ -157,7 +163,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         private async void PrivacyPolicyClicked(object obj)
         {
             // Do something
-            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net/privacyInfo"), new BrowserLaunchOptions
+            await Browser.OpenAsync(new Uri("https://anorocb2cloginwebsite.blob.core.windows.net/anorocb2cloginwebsite/privacyinfo.html"), new BrowserLaunchOptions
             {
                 LaunchMode = BrowserLaunchMode.SystemPreferred,
                 TitleMode = BrowserTitleMode.Show,
@@ -175,7 +181,7 @@ namespace AnorocMobileApp.ViewModels.Settings
         private async void FAQClicked(object obj)
         {
             // Do something
-            await Browser.OpenAsync(new Uri("https://anoroc-webapp.azurewebsites.net/FAQinfo"), new BrowserLaunchOptions
+            await Browser.OpenAsync(new Uri("https://anorocb2cloginwebsite.blob.core.windows.net/anorocb2cloginwebsite/faqpage.component.html"), new BrowserLaunchOptions
             {
                 LaunchMode = BrowserLaunchMode.SystemPreferred,
                 TitleMode = BrowserTitleMode.Show,
@@ -255,6 +261,13 @@ namespace AnorocMobileApp.ViewModels.Settings
                     }
                 }
             }
+        }
+
+        private void DontTrackLocation(object obj)
+        {
+            var locationSerivce = App.IoCContainer.GetInstance<ILocationService>();
+            locationSerivce.DontSendCurrentLocationAnymoreAsync();
+            CrossToastPopUp.Current.ShowToastMessage("This location won't be tracked.");
         }
         #endregion
     }

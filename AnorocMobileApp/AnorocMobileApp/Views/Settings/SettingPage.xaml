@@ -185,8 +185,39 @@
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
                 </Grid>
+
+                <!-- Dont track this location button-->
+                <controls:TapAnimationGrid
+                    BackgroundColor="{DynamicResource Gray-White}"
+                    ColumnSpacing="0"
+                    Command="{Binding DontTrackCommand}"
+                    RowSpacing="0"
+                    Tapped="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--  Dont track icon  -->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource MapPin}" />
+                    <!-- Dont tracka label  -->
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource LabelStyle}"
+                        Text="Dont Track This Location" />
+                    <!--  Navigation icon  -->
+                    <Label
+                        Grid.Column="2"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource Next}" />
+                </controls:TapAnimationGrid>
                 <BoxView Style="{StaticResource SeparatorStyle}" />
-                
+
+
                 <!--  Header label for account setting  -->
                 <Label
                     Margin="16,0,0,0"
@@ -329,7 +360,7 @@
                     <Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Notifications" />
+                        Text="Pop-Up Notifications" />
                     <!--  Notifications switch  -->
                     <buttons:SfSwitch
                         Grid.Column="2"
