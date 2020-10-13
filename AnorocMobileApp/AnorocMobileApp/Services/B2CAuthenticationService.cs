@@ -75,14 +75,45 @@ namespace AnorocMobileApp.Services
 
         public async Task<UserContext> ResetPasswordAsync()
         {
-            AuthenticationResult authResult = await _pca.AcquireTokenInteractive(B2CConstants.Scopes)
-                .WithPrompt(Prompt.NoPrompt)
-                .WithAuthority(B2CConstants.AuthorityPasswordReset)
-                .ExecuteAsync();
+            try
+            {
+                AuthenticationResult authResult = await _pca.AcquireTokenInteractive(B2CConstants.Scopes)
+                    .WithPrompt(Prompt.NoPrompt)
+                    .WithAuthority(B2CConstants.AuthorityPasswordReset)
+                    .ExecuteAsync();
+                var userContext = UpdateUserInfo(authResult);
+                return userContext;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return null;
+            }
 
-            var userContext = UpdateUserInfo(authResult);
 
-            return userContext;
+        }
+
+        public async Task<UserContext> EditProfileAsync()
+        {
+            try
+            {
+                AuthenticationResult authResult = await _pca.AcquireTokenInteractive(B2CConstants.Scopes)
+                    .WithPrompt(Prompt.NoPrompt)
+                    .WithAuthority(B2CConstants.AuthorityEditProfile)
+                    .ExecuteAsync();
+
+                var userContext = UpdateUserInfo(authResult);
+                return userContext;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
+                return null;
+            }
+
+          
+
+       
         }
 
         /*        public async Task<UserContext> EditProfileAsync()

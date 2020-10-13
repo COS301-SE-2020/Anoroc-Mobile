@@ -114,8 +114,9 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the edit profile option clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void EditProfileClicked(object obj)
+        private async void EditProfileClicked(object obj)
         {
+            var userContext = await B2CAuthenticationService.Instance.EditProfileAsync(); 
             // Do something
         }
 
@@ -123,8 +124,9 @@ namespace AnorocMobileApp.ViewModels.Settings
         /// Invoked when the change password clicked
         /// </summary>
         /// <param name="obj">The object</param>
-        private void ChangePasswordClicked(object obj)
+        private async void ChangePasswordClicked(object obj)
         {
+            var userContext = await B2CAuthenticationService.Instance.ResetPasswordAsync();
             // Do something
         }
 
