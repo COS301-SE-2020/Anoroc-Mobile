@@ -516,7 +516,7 @@ namespace AnorocMobileApp.Services
                 return "False";
         }
 
-        public async void sendNotification(string notificationString)
+/*        public async void sendNotification(string notificationString)
         {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -559,7 +559,7 @@ namespace AnorocMobileApp.Services
             {
                 return ;
             }
-        }
+        }*/
 
         public async Task<NotificationDB[]> GetNotifications()
         {

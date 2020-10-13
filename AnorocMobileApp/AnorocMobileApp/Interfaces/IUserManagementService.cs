@@ -19,7 +19,7 @@ namespace AnorocMobileApp.Interfaces
         Task<bool> DownloadData();
         Task<NotificationDB[]> GetNotifications();
 
-        void sendNotification(string notificationString);
+        //void sendNotification(string notificationString);
         void DeleteTheUser();
     }
 }
