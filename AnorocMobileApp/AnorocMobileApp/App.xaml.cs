@@ -119,6 +119,8 @@ namespace AnorocMobileApp
                 var name = CrossSecureStorage.Current.GetValue("Name");
                 var surname = CrossSecureStorage.Current.GetValue("Surname");
                 var email = CrossSecureStorage.Current.GetValue("Email");
+                IUserManagementService userManagementServiceNotification = new UserManagementService();
+                userManagementServiceNotification.GetNotifications();
                 IoCContainer.GetInstance<IUserManagementService>().UserLoggedIn(name, surname, email);
             }
             else
