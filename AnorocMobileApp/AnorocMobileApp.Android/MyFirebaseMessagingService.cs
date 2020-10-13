@@ -34,68 +34,72 @@ namespace AnorocMobileApp.Droid
             base.OnMessageReceived(message);
 
             Console.WriteLine("Received: " + message);
-            try
+            var value = (bool)Xamarin.Forms.Application.Current.Properties["Allow_Notifications"];
+            if (value)
             {
-
-                base.OnMessageReceived(message);
                 try
                 {
-                    var data = message.Data;
-                    var location = JsonConvert.DeserializeObject<Models.Location>(data["Location"]);
-                    var risk = Convert.ToInt32(data["Risk"]);
-                    var dT = data["DateTime"];
-                    var title = message.GetNotification().Title;
 
-
-                    var outRisk = "";
-                    switch(risk)
+                    base.OnMessageReceived(message);
+                    try
                     {
-                        case 4:
-                            outRisk = "HIGH RISK";
-                            break;
-                        case 3:
-                            outRisk = "MEDIUM_RISK";
-                            break;
-                        case 2:
-                            outRisk = "MODERATE_RISK";
-                            break;
-                        case 1:
-                            outRisk = "LOW_RISK";
-                            break;
-                        case 0:
-                            outRisk = "NO_RISK";
-                            break;
+                        var data = message.Data;
+                        var location = JsonConvert.DeserializeObject<Models.Location>(data["Location"]);
+                        var risk = Convert.ToInt32(data["Risk"]);
+                        var dT = data["DateTime"];
+                        var title = message.GetNotification().Title;
+
+
+                        var outRisk = "";
+                        switch (risk)
+                        {
+                            case 4:
+                                outRisk = "HIGH RISK";
+                                break;
+                            case 3:
+                                outRisk = "MEDIUM_RISK";
+                                break;
+                            case 2:
+                                outRisk = "MODERATE_RISK";
+                                break;
+                            case 1:
+                                outRisk = "LOW_RISK";
+                                break;
+                            case 0:
+                                outRisk = "NO_RISK";
+                                break;
+                        }
+
+                        var body = outRisk + ": You have come into contact in " + location.Region.Suburb + " at " + dT.ToString();
+                        string[] notificationMessage = { title, body };
+                        Console.WriteLine("Testing Data output: " + message.Data.Values);
+
+
+
+                        // Passing Message onto xamarin forms
+                        MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                        MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
                     }
+                    catch (Exception e)
+                    {
+                        var body = message.GetNotification().Body;
+                        var title = message.GetNotification().Title;
+                        var msg = message.GetNotification().Body;
+                        string[] notificationMessage = { title, body };
+                        Console.WriteLine("Testing Data output: " + message.Data.Values);
 
-                    var body = outRisk + ": You have come into contact in " + location.Region.Suburb + " at " + dT.ToString();
-                    string[] notificationMessage = { title, body };
-                    Console.WriteLine("Testing Data output: " + message.Data.Values);
 
 
+                        // Passing Message onto xamarin forms
+                        MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                        MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
 
-                    // Passing Message onto xamarin forms
-                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
-                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
+                    }
                 }
-                catch(Exception e)
+                catch (Exception ex)
                 {
-                    var body = message.GetNotification().Body;
-                    var title = message.GetNotification().Title;
-                    var msg = message.GetNotification().Body;
-                     string[] notificationMessage = { title, body };
-                    Console.WriteLine("Testing Data output: " + message.Data.Values);
-
-
-
-                    // Passing Message onto xamarin forms
-                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
-                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
-
-                }     
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Errorr extracting message: " + ex);
+                    Console.WriteLine("Errorr extracting message: " + ex);
+                }
             }
         }
     }

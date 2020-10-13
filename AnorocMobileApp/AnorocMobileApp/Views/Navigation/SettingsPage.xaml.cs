@@ -169,7 +169,7 @@ namespace AnorocMobileApp.Views.Navigation
         async void SfSwitch_Anonymity_StateChanged(System.Object ssender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
         {
             var user = App.IoCContainer.GetInstance<IUserManagementService>();
-            var response = await user.ToggleAnonymousUser();
+            var response = await user.ToggleAnonymousUser((bool)e.NewValue);
             CrossToastPopUp.Current.ShowToastMessage("Anonomity set to: " + response);
             App.Current.Properties["isAnonymous"] = response;
         }
