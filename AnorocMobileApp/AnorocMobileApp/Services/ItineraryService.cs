@@ -200,6 +200,7 @@ namespace AnorocMobileApp.Services
             var primitiveRisk = new PrimitiveItineraryRisk(risk);
             var conn = new SQLiteAsyncConnection(App.FilePath);
             await conn.CreateTableAsync<PrimitiveItineraryRisk>();
+            primitiveRisk.Created = DateTime.Today;
             await conn.InsertAsync(primitiveRisk);
             await conn.CloseAsync();
         }
