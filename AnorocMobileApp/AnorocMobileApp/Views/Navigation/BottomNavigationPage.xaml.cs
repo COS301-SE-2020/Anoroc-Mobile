@@ -1,6 +1,7 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Navigation;
 using AnorocMobileApp.ViewModels.Notification;
 using AnorocMobileApp.Views.Dashboard;
 using AnorocMobileApp.Views.Notification;
@@ -78,6 +79,7 @@ namespace AnorocMobileApp.Views.Navigation
 
             Device.BeginInvokeOnMainThread(() =>
             {
+                Console.WriteLine("Notification Recieved");
                 //Update Label
                 DependencyService.Get<NotificationServices>().CreateNotification(title, msg);
             });

@@ -5,10 +5,12 @@ using System.Linq;
 using System.Net;
 using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
+using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.ViewModels.Navigation;
 using AnorocMobileApp.Views.Notification;
 using Plugin.SecureStorage;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -30,11 +32,14 @@ namespace AnorocMobileApp.Views.Navigation
         /// 
         private string title = "";
         private string body = "";
+        NotificationDB notificationDB = new NotificationDB();
         MeViewModel me = new MeViewModel();
 
         public MePage()
         {
+
             InitializeComponent();
+            MessagingCenter.Subscribe<object, string>(this, App.NotificationOnMePageKey, OnBodyMessageReceived);
             //_ProfileImage.Source = ImageSource.FromUri(new Uri(Path.Combine(Xamarin.Essentials.FileSystem.AppDataDirectory, "profilepicture.jpg")));
             if (Application.Current.Properties.ContainsKey("CarrierStatus"))
             {
@@ -46,8 +51,6 @@ namespace AnorocMobileApp.Views.Navigation
             }
             else
                 picker.SelectedIndex = 1;
-
-
 
             MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
              {
@@ -67,14 +70,13 @@ namespace AnorocMobileApp.Views.Navigation
                          _ProfileImage.Source = ImageSource.FromStream(() => otherstream);
                      }
                  }
-             });
-            me = new MeViewModel();
+             });           
         }
 
-
+        
 
         protected override void OnAppearing()
-        {
+        {           
             base.OnAppearing();
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -96,7 +98,6 @@ namespace AnorocMobileApp.Views.Navigation
                     {
                         locationStatus.Text = "Disabled";
                     }
-
                 }
             }
             catch(Exception e)
@@ -118,9 +119,7 @@ namespace AnorocMobileApp.Views.Navigation
                 {
                     carrier_status_info.Text = "Incidents";
                 }
-
-            }
-            me.loadNotifications();
+            }            
         }
 
 
@@ -202,6 +201,17 @@ namespace AnorocMobileApp.Views.Navigation
                 var ims = App.IoCContainer.GetInstance<IUserManagementService>();
                 ims.UploadUserProfileImage(base64);
             }
+        }
+
+        void OnBodyMessageReceived(object sender, string msg)
+        {
+            Console.WriteLine(msg);
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                //Update Label
+                me.loadNotifications();
+            });
+            
         }
     }
 }

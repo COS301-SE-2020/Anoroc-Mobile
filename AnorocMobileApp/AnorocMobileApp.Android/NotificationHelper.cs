@@ -4,6 +4,7 @@ using Android.Content;
 using Android.Media;
 using Android.Support.V4.App;
 using AnorocMobileApp.Droid;
+using AnorocMobileApp.Models;
 using Xamarin.Forms;
 ///<summary>
 /// Helper class used to customize local push notifications on Android Devices
@@ -89,6 +90,11 @@ namespace AnorocMobileApp.Droid
             {
                 //
             }
+        }
+
+        public void notificationToDB(NotificationDB notificationObj)
+        {
+            throw new NotImplementedException();
         }
     }    
 }
