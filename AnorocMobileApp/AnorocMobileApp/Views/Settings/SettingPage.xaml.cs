@@ -82,8 +82,6 @@ namespace AnorocMobileApp.Views.Settings
         {
             var user = App.IoCContainer.GetInstance<IUserManagementService>();
             var value = await user.SetEmaileNotificationSettings((bool)e.NewValue);
-            if(value)
-                CrossToastPopUp.Current.ShowToastMessage("Notifications will be emailed.");
 
             Application.Current.Properties["EmailNotifications"] = value;
         }
