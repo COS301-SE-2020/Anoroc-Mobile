@@ -201,7 +201,7 @@
                     <Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Dont Track This Location" />
+                        Text="Ignore Current Location" />
                     <!--  Navigation icon  -->
                     <Label
                         Grid.Column="2"
