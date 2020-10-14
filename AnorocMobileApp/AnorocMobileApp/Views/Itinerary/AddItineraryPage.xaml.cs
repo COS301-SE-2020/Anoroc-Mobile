@@ -1,5 +1,6 @@
 ﻿using System;
 using AnorocMobileApp.Controls;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.ViewModels.Itinerary;
 using Syncfusion.ListView.XForms;
 using Syncfusion.XForms.Border;
@@ -16,11 +17,12 @@ namespace AnorocMobileApp.Views.Itinerary
     /// </summary>
     [Preserve(AllMembers = true)]
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AddItineraryPage
+    public partial class AddItineraryPage : IView
     {
         private SfPopupLayout popupLayout;
         private SfPopupLayout searchPopupLayout;
         private AddItineraryViewModel viewModel;
+
         /// <summary>
         /// Initializes a new instance of the <see cref="AddItineraryPage" /> class.
         /// </summary>
@@ -55,12 +57,12 @@ namespace AnorocMobileApp.Views.Itinerary
                     HeaderTitle = "Itinerary date"
                 },
             };
-            
+
             var nativeDatePicker = new DatePicker
             {
-              HorizontalOptions  = LayoutOptions.Center,
-              
-                  
+                HorizontalOptions = LayoutOptions.Center,
+
+
             };
 
             popup.PopupView.ContentTemplate = new DataTemplate(() => nativeDatePicker);
@@ -81,7 +83,7 @@ namespace AnorocMobileApp.Views.Itinerary
             };
 
             var stack = new StackLayout();
-            
+
             var searchBar = new SearchBar();
             searchBar.SetBinding(SearchBar.TextProperty, "AddressText");
             searchBar.TextChanged += OnSearchBarTextChanged;
@@ -103,21 +105,21 @@ namespace AnorocMobileApp.Views.Itinerary
             Application.Current.Resources.TryGetValue("Back", out var resource);
             // backButton.Text = (string) resource;
             // backButton.Style = (Style) Resources["NavigationBarButtonStyle"];
-            
+
             topStack.Children.Add(backButton);
 
             var searchBorder = new SfBorder();
-            
+
             var borderlessEntry = new BorderlessEntry();
             borderlessEntry.SetBinding(Entry.TextProperty, "AddressText");
             borderlessEntry.Placeholder = "Search here";
             borderlessEntry.HorizontalOptions = LayoutOptions.FillAndExpand;
-           // borderlessEntry.Style = (Style) Resources["SearchEntryStyle"];
+            // borderlessEntry.Style = (Style) Resources["SearchEntryStyle"];
 
-          //  searchBorder.Children.Append(borderlessEntry);
+            //  searchBorder.Children.Append(borderlessEntry);
 
             topStack.Children.Add(borderlessEntry);
-            
+
             var sfListView = new SfListView
             {
                 ItemsSource = viewModel.Addresses,
@@ -130,16 +132,17 @@ namespace AnorocMobileApp.Views.Itinerary
             var listViewDataTemplate = new DataTemplate(() =>
             {
                 var grid = new Grid();
-                
+
                 var addressForm = new Label
                 {
-                    FontAttributes = FontAttributes.None, 
-                    BackgroundColor = Color.White, 
+                    FontAttributes = FontAttributes.None,
+                    BackgroundColor = Color.White,
                     FontSize = 12
-                };;
+                };
+                ;
                 addressForm.SetBinding(Label.TextProperty, new Binding("FreeformAddress"));
                 grid.Children.Add(addressForm);
-                
+
                 return grid;
             });
 
@@ -160,6 +163,11 @@ namespace AnorocMobileApp.Views.Itinerary
             {
                 await viewModel.GetPlacesPredictonAsync();
             }
+        }
+
+        public void ClosePopupView()
+        {
+            PopupLayout2.Dismiss();
         }
     }
 }
