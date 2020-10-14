@@ -30,11 +30,14 @@ namespace AnorocMobileApp.ViewModels.Navigation
 
         #region Constructor
 
+        private string title;
+        NotificationDB notificationDB = new NotificationDB();
         /// <summary>
         /// Initializes a new instance for the <see cref="MeViewModel" /> class.
         /// </summary>
         public MeViewModel()
         {
+
             cardItems = new ObservableCollection<Me>()
             {
                 
@@ -55,7 +58,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
 
             RecentList = new ObservableCollection<NotificationModel>();
 
-            loadNotifications();
+           loadNotifications();
         }
 
 
@@ -73,14 +76,14 @@ namespace AnorocMobileApp.ViewModels.Navigation
                     NotificationModel tempModel = new NotificationModel();
                     tempModel.Name = n.Body;
                     tempModel.IsRead = false;
-                    //tempModel.ReceivedTime = "Not sure";
+                    tempModel.ReceivedTime = n.Time;
                     this.RecentList.Insert(0, tempModel);
                 }
-                conn.Close();
+                    conn.Close();
             }
 
-            
         }
+        
 
         #endregion
 

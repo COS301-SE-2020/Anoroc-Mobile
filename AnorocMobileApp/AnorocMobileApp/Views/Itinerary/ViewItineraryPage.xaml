@@ -6,7 +6,6 @@
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
              xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
              xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:viewModel="clr-namespace:AnorocMobileApp.ViewModels.Dashboard"
              xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
              x:Class="AnorocMobileApp.Views.Dashboard.ViewItineraryPage"
              xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
@@ -19,7 +18,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles.xaml" />
+                <ResourceDictionary Source="Styles3.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -52,7 +51,6 @@
                         </Grid.RowDefinitions>
                         <Label Text="{Binding Risk}" Style="{StaticResource LabelStyle}"></Label>
                         <Label Grid.Column="1" Grid.RowSpan="2" FontSize="16" Style="{StaticResource LabelStyle}" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Text="{Binding AverageRisk}"></Label>
-                        <Label Grid.Row="1" Text="{Binding Date}" FontSize="12" TextColor="{DynamicResource Gray-700}" Style="{StaticResource LabelStyle}" FontFamily="{StaticResource Montserrat-Medium}"></Label>
                     </Grid>
                 </cards:SfCardView>
                 <listView:SfListView SelectionMode="None" AutoFitMode="Height" ItemSpacing="8" ItemsSource="{Binding CardItems}">
@@ -68,7 +66,7 @@
                                             <gradient:SfGradientView.BackgroundBrush>
                                                 <gradient:SfLinearGradientBrush>
                                                     <gradient:SfLinearGradientBrush.GradientStops>
-                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientStart}" Offset="0.0"/>
+                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientEnd}" Offset="0.0"/>
                                                         <gradient:SfGradientStop Color="{Binding BackgroundGradientEnd}" Offset="1.0"/>
                                                     </gradient:SfLinearGradientBrush.GradientStops>
                                                 </gradient:SfLinearGradientBrush>

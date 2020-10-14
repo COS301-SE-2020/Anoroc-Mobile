@@ -27,6 +27,7 @@
     <x:String x:Key="MeIcon">&#xe70e;</x:String>
     <x:String x:Key="SettingsIcon">&#xe72b;</x:String>
     <x:String x:Key="MapIcon">&#xe726;</x:String>
+    <x:String x:Key="MapPinIcon">&#xe729;</x:String>
     <x:String x:Key="Next">&#xe71a;</x:String>
     <x:String x:Key="EditIcon">&#xe727;</x:String>
     <x:String x:Key="More">&#xe719;</x:String>
@@ -42,6 +43,7 @@
     <x:String x:Key="MoreIcon">&#xe715;</x:String>
     <x:String x:Key="Category">&#xe733;</x:String>
     <x:String x:Key="FileExplorer">&#xe74a;</x:String>
+    <x:String x:Key="ItineraryIcon">&#xe737;</x:String>
 
     <!-- Common style for rating labels -->
     <Style x:Key="RatingLabelStyle" TargetType="Label">

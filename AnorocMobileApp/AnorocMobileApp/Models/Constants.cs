@@ -24,7 +24,7 @@ namespace AnorocMobileApp.Models
             "https://maps.googleapis.com/maps/api/place/autocomplete/json?key={0}&input={1}&components=country:za";
 
         public static readonly string AzureFuzzySearchUrl =
-            "https://atlas.microsoft.com/search/fuzzy/json?api-version=1.0&query={0}&subscription-key={1}&countrySet=ZA&limit=5";
+            "https://atlas.microsoft.com/search/fuzzy/json?subscription-key={1}&api-version=1.0&query={0}&limit=5&countrySet=ZA&language=En&minFuzzyLevel=1&maxFuzzyLevel=2&typeahead=true";
     }
 
 }

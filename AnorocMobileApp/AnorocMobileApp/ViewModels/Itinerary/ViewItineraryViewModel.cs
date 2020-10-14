@@ -9,7 +9,7 @@ using Syncfusion.SfChart.XForms;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 
-namespace AnorocMobileApp.ViewModels.Dashboard
+namespace AnorocMobileApp.ViewModels.Itinerary
 {
     /// <summary>
     /// ViewModel for stock overview page.

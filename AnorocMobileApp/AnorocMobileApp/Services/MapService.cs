@@ -63,7 +63,7 @@ namespace AnorocMobileApp.Services
                     }
                     catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                     {
-                        throw new CantConnecToClusterServiceException();
+                        return null;
 
                     }
                 }
@@ -114,7 +114,7 @@ namespace AnorocMobileApp.Services
                     }
                     catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                     {
-                        throw new CantConnecToClusterServiceException();
+                        return null;
                     }
                 }
             }
@@ -157,7 +157,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch(Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return null;
                 }
             }
         }

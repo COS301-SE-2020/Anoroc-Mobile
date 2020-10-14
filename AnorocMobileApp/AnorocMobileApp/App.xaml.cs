@@ -16,6 +16,11 @@ using AnorocMobileApp.Views.Notification;
 using System;
 using AnorocMobileApp.Models.Notification;
 using Plugin.SecureStorage;
+using AnorocMobileApp.DataService;
+using AnorocMobileApp.ViewModels.Notification;
+using System.Reflection;
+using AnorocMobileApp.ViewModels.Navigation;
+using AnorocMobileApp.Views;
 
 namespace AnorocMobileApp
 {
@@ -23,6 +28,7 @@ namespace AnorocMobileApp
     {
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
+        public const string NotificationOnMePageKey = "MePageRecieved";
         public const string NotificationTimeReceivedKey = "NotificationTimeRecieved";
 
 
@@ -53,6 +59,7 @@ namespace AnorocMobileApp
 
         public App(string filePath)
         {
+            CrossSecureStorage.Current.SetValue("RememberMe", "false");
             Application.Current.Properties["RememberMe"] = "false";
             IoCContainer = new Container();
             // Dependancy Injections:
@@ -69,9 +76,10 @@ namespace AnorocMobileApp
             // MainPage = new LoginWithSocialIconPage();
             
             FilePath = filePath;
+
             MessagingCenter.Subscribe<object, string[]>(this, App.NotificationBodyReceivedKey, (object sender, string[] msg) =>
             {
-
+                BottomNavigationPage temp = new BottomNavigationPage();
                 NotificationDB notificationDB = new NotificationDB();
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -89,8 +97,12 @@ namespace AnorocMobileApp
                         conn.Close();
                                             
                     }
+                    //me.loadNotifications();
+                  
                 });
             });
+            
+            getUserNotifications();
         }
 
 
@@ -111,7 +123,8 @@ namespace AnorocMobileApp
         protected override void OnStart()
         {
             LoadPersistentValues();
-            
+            var data = new EncounterDataService();
+            this.BindingContext = data.NotificationViewModel;
             var status = CrossSecureStorage.Current.GetValue("SignedIn", null);
             if (status != null && status == "True")
             {
@@ -119,6 +132,30 @@ namespace AnorocMobileApp
                 var name = CrossSecureStorage.Current.GetValue("Name");
                 var surname = CrossSecureStorage.Current.GetValue("Surname");
                 var email = CrossSecureStorage.Current.GetValue("Email");
+                MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+                {
+                    var userManagementServiceNotification = IoCContainer.GetInstance<IUserManagementService>();
+                    var serverNotifi = await userManagementServiceNotification.GetNotifications();
+                    
+                    //var serverNotiList = userManagementServiceNotification;
+                    using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                    {
+                        conn.DropTable<NotificationDB>();
+                        conn.CreateTable<NotificationDB>();
+                        var notifications = conn.Table<NotificationDB>().ToList();
+                                             
+                        foreach(var n in serverNotifi)
+                        {
+                            NotificationDB passingNotification = new NotificationDB();
+                            passingNotification.Body = n.Body;                            
+                            passingNotification.Time = n.Time;
+
+                            conn.Insert(passingNotification);
+                        }
+                        conn.Close();
+                    }
+
+                });                
                 IoCContainer.GetInstance<IUserManagementService>().UserLoggedIn(name, surname, email);
             }
             else
@@ -170,7 +207,7 @@ namespace AnorocMobileApp
 
         private void LoadPersistentValues()
         {
-            if(Current.Properties.ContainsKey("Tracking"))
+            if (Current.Properties.ContainsKey("Tracking"))
             {
                 IBackgroundLocationService backgroundLocationService = IoCContainer.GetInstance<IBackgroundLocationService>();
                 var value = (bool)Current.Properties["Tracking"];
@@ -190,6 +227,32 @@ namespace AnorocMobileApp
                 User.carrierStatus = false;
         }
 
+        public void getUserNotifications()
+        {
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+            {
+                var userManagementServiceNotification = IoCContainer.GetInstance<IUserManagementService>();
+                var serverNotifi = await userManagementServiceNotification.GetNotifications();
 
+                //var serverNotiList = userManagementServiceNotification;
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.DropTable<NotificationDB>();
+                    conn.CreateTable<NotificationDB>();
+                    var notifications = conn.Table<NotificationDB>().ToList();
+
+                    foreach (var n in serverNotifi)
+                    {
+                        NotificationDB passingNotification = new NotificationDB();
+                        passingNotification.Body = n.Body;
+                        passingNotification.Time = n.Time;
+
+                        conn.Insert(passingNotification);
+                    }
+                    conn.Close();
+                }
+
+            });
+        }
     }
 }

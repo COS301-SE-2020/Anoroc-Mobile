@@ -12,6 +12,7 @@ using Plugin.Toast;
 using Plugin.SecureStorage;
 using Microsoft.Identity.Client;
 using AnorocMobileApp.Views.Forms;
+using AnorocMobileApp.Helpers;
 //using Container = AnorocMobileApp.Interfaces.Container;
 
 namespace AnorocMobileApp.Views.Navigation
@@ -39,8 +40,16 @@ namespace AnorocMobileApp.Views.Navigation
                 Locations_SfSwitch.IsOn = true;
                 
             }
-
+            if(Application.Current.Properties.ContainsKey("isAnonymous"))
+            {
+                var anon = Application.Current.Properties["isAnonymous"];
+                if (anon.Equals("True"))
+                {
+                    Anonymity_SfSwitch.IsOn = true;
+                }
+            }
         }
+
 
         protected override void OnAppearing()
         {
@@ -62,7 +71,6 @@ namespace AnorocMobileApp.Views.Navigation
 
         private void SignOutButton_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new LoadingPage();
             OnSignOut(sender, e);
         }
         async void OnSignOut(object sender, EventArgs e)
@@ -157,6 +165,33 @@ namespace AnorocMobileApp.Views.Navigation
             }
 
         }
+        async void SfSwitch_Anonymity_StateChanged(System.Object ssender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var response = await user.ToggleAnonymousUser((bool)e.NewValue);
+            CrossToastPopUp.Current.ShowToastMessage("Anonomity set to: " + response);
+            App.Current.Properties["isAnonymous"] = response;
+        }
 
+        private async void btnDownloadUserData_Clicked(object sender, EventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var userdata = await user.DownloadData();
+            if (userdata)
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Email Sent.");
+            }
+            else
+            {
+                CrossToastPopUp.Current.ShowToastMessage("Error Generating the file.");
+            }
+        }
+
+        private void btnDontSendLocation_Clicked(object sender, EventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<ILocationService>();
+            user.DontSendCurrentLocationAnymoreAsync();
+            CrossToastPopUp.Current.ShowToastMessage("Location not longer being tracked.");
+        }
     }
 }

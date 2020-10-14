@@ -129,7 +129,6 @@ namespace AnorocMobileApp.Services
 
                     try
                     {
-
                         responseMessage = await Anoroc_Client.PostAsync(Anoroc_Uri, content);
                         ItineraryRiskWrapper itineraryRisk = null;
                         if (responseMessage != null)
@@ -196,18 +195,14 @@ namespace AnorocMobileApp.Services
             return database.DeleteAsync<PrimitiveItineraryRisk>(risk.Id);
         }
         
-        private void SaveItineraryRisk(ItineraryRisk risk)
+        private async void SaveItineraryRisk(ItineraryRisk risk)
         {
             var primitiveRisk = new PrimitiveItineraryRisk(risk);
             var conn = new SQLiteAsyncConnection(App.FilePath);
-            conn.CreateTableAsync<PrimitiveItineraryRisk>().Wait();
-            conn.InsertAsync(primitiveRisk).ContinueWith((t) =>
-            {
-                Debug.WriteLine("New ID from t: {0}", t.Id);
-                Debug.WriteLine("New ID: {0} from primitiveRisk", primitiveRisk.ItineraryId);
-            });
-            conn.CloseAsync();
-            var myvar = ItinerariesFromLocal();
+            await conn.CreateTableAsync<PrimitiveItineraryRisk>();
+            primitiveRisk.Created = DateTime.Today;
+            await conn.InsertAsync(primitiveRisk);
+            await conn.CloseAsync();
         }
 
         public async Task<List<ItineraryRisk>> LoadMore()

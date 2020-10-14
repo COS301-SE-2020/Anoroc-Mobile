@@ -6,10 +6,13 @@
     xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:converter="clr-namespace:AnorocMobileApp.Converters"
-    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms">
+    xmlns:graphics="clr-namespace:Syncfusion.XForms.Graphics;assembly=Syncfusion.Core.XForms"
+    xmlns:controls="clr-namespace:AnorocMobileApp.Controls;assembly=AnorocMobileApp">
 
     <x:String x:Key="Menu">&#xe72e;</x:String>
     <x:String x:Key="Bell">&#xe700;</x:String>
+    <x:String x:Key="Back">&#xe709;</x:String>
+    <x:String x:Key="Search">&#xe705;</x:String>
     
     <x:String x:Key="DropDownButtonIcon">&#xe70b;</x:String>
 
@@ -25,6 +28,7 @@
     <Color x:Key="Link">#567cd7</Color>
     <Color x:Key="Bright-Cyan">#3cdeff</Color>
     <Color x:Key="Lemon-Lime">#bdff27</Color>
+    
 
     <converter:DynamicResourceToColorConverter x:Key="DynamicResourceToColorConverter" />
 
@@ -58,6 +62,24 @@
             </Setter.Value>
         </Setter>
 
+    </Style>
+    
+    <!-- Common style for borders -->
+    <Style x:Key="SfBorderStyle" TargetType="border:SfBorder">
+        <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="CornerRadius" Value="25" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+    
+    <!-- Common style for search entries -->
+    <Style x:Key="SearchEntryStyle" TargetType="controls:BorderlessEntry">
+        <Setter Property="PlaceholderColor" Value="{DynamicResource Gray-700}" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="TextColor" Value="{DynamicResource Gray-900}" />
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="ReturnType" Value="Done" />
     </Style>
 
     <!--  Common style for profile border style  -->
@@ -148,6 +170,17 @@
                 </graphics:SfLinearGradientBrush>
             </Setter.Value>
         </Setter>
+    </Style>
+    
+    <!--  Common style for Navigation bar SfButton  -->
+    <Style x:Key="NavigationBarButtonStyle" TargetType="buttons:SfButton">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Fill" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="BorderWidth" Value="0" />
+        <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
 
 </ResourceDictionary>

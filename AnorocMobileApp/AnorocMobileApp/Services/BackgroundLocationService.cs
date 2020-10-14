@@ -97,31 +97,35 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-                    await customLocation.GetRegion();
-
-                    if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
+                    if (!LocationService.LocationSavedToNotSend(customLocation))
                     {
-                        _Backoff = Initial_Backoff;
-                        Track_Retry = 0;
-                        SendUserLocation(customLocation);
+                        if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
+                        {
+                            await customLocation.GetRegion();
+                            _Backoff = Initial_Backoff;
+                            Track_Retry = 0;
+                            SendUserLocation(customLocation);
+                        }
+                        else
+                        {
+                            ExtendBackoff();
+                            SendUserLocation(customLocation);
+                        }
                     }
                     else
                     {
-                        
-                        if ((_Backoff / 60) <= 10)
-                        {
-                            _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
-                            Track_Retry++;
-                        }
+                        ExtendBackoff();
                     }
                 }
                 else
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-                    await customLocation.GetRegion();
-
-                    SendUserLocation(customLocation);
+                    if ((!LocationService.LocationSavedToNotSend(customLocation)))
+                    {
+                        await customLocation.GetRegion();
+                        SendUserLocation(customLocation);
+                    }
                 }
                 Previous_request = location;
                 success = true;
@@ -134,10 +138,19 @@ namespace AnorocMobileApp.Services
             }
         }
 
+        private void ExtendBackoff()
+        {
+            if ((_Backoff / 60) <= 10)
+            {
+                _Backoff = _Backoff + Math.Pow(Modifier, Track_Retry);
+                Track_Retry++;
+            }
+        }
+
         protected bool TestIfCanSendLocation()
         {
             DateTime currentTime = DateTime.Now;
-            if((currentTime-LastSent).TotalMinutes <= 5)
+            if ((currentTime - LastSent).TotalMinutes <= 5)
             {
 
             }
@@ -171,6 +184,7 @@ namespace AnorocMobileApp.Services
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
             _Backoff = Initial_Backoff;
             Track_Retry = 0;
+            Previous_request = null;
         }
 
         public bool isTracking()

@@ -8,6 +8,7 @@ using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
 using AnorocMobileApp.Services;
 using AnorocMobileApp.Views.Dashboard;
+using AnorocMobileApp.Views.Itinerary;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using ItemTappedEventArgs = Syncfusion.ListView.XForms.ItemTappedEventArgs;
@@ -182,7 +183,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
             foreach (var itinerary in itineraryRisks.Select(itineraryRisk => new Models.Itinerary.Itinerary()
             {
-                Date = itineraryRisk.Created,
+                Date = DateTime.Today,
                 NumberOfLocations = itineraryRisk.LocationItineraryRisks.Count,
                 RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk],
                 ItineraryRisk = itineraryRisk
@@ -190,6 +191,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             {
                 Itineraries.Add(itinerary);
             }
+
+            Itineraries = new ObservableCollection<Models.Itinerary.Itinerary>(Itineraries.Reverse());
         }
 
         #endregion      
