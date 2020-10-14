@@ -26,6 +26,7 @@ namespace AnorocMobileApp
     {
         public const string NotificationTitleReceivedKey = "NotificationTitleRecieved";
         public const string NotificationBodyReceivedKey = "NotificationBodyRecieved";
+        public const string NotificationOnMePageKey = "MePageRecieved";
         public const string NotificationTimeReceivedKey = "NotificationTimeRecieved";
 
 

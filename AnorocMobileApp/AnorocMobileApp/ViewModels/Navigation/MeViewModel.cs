@@ -58,9 +58,7 @@ namespace AnorocMobileApp.ViewModels.Navigation
 
             RecentList = new ObservableCollection<NotificationModel>();
 
-            loadNotifications();
-
-            //MessagingCenter.Subscribe<object, string>(this, App.NotificationBodyReceivedKey, OnBodyMessageReceived);
+           loadNotifications();
         }
 
 
@@ -84,8 +82,8 @@ namespace AnorocMobileApp.ViewModels.Navigation
                     conn.Close();
             }
 
-            
         }
+        
 
         #endregion
 

@@ -27,7 +27,7 @@
                                  Size="16"/>
         </home:HomePage.IconImageSource>
     </home:HomePage>-->
-        <navigation:MePage Title="Me">
+    <navigation:MePage Title="Me">
         <navigation:MePage.IconImageSource>
 
             <FontImageSource FontFamily="{StaticResource FontIcons}"

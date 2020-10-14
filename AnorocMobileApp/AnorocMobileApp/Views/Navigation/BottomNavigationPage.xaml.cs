@@ -79,6 +79,7 @@ namespace AnorocMobileApp.Views.Navigation
 
             Device.BeginInvokeOnMainThread(() =>
             {
+                Console.WriteLine("Notification Recieved");
                 //Update Label
                 DependencyService.Get<NotificationServices>().CreateNotification(title, msg);
             });

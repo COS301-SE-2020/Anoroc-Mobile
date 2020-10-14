@@ -90,7 +90,7 @@ namespace AnorocMobileApp.Droid
                     // Passing Message onto xamarin forms
                     MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
                     MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
-
+                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationOnMePageKey, notificationMessage);
                 }     
             }
             catch (Exception ex)
