@@ -24,7 +24,6 @@ namespace AnorocMobileApp.Views.Itinerary
             InitializeComponent();
             ControlTemplate = null;
             Resources.MergedDictionaries.Clear();
-            Content = new EmptyPage();
             ViewModel = new ItineraryPageViewModel(Navigation);
             BindingContext = ViewModel;
         }
@@ -32,8 +31,8 @@ namespace AnorocMobileApp.Views.Itinerary
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            //ViewModel.PopulateItineraries();
-            //CheckEmptyPage();
+            ViewModel.PopulateItineraries();
+            CheckEmptyPage();
         }
 
         private void CheckEmptyPage()
@@ -42,6 +41,8 @@ namespace AnorocMobileApp.Views.Itinerary
             {
                 Content = new EmptyPage();
             }
+            else
+                Content = new ItineraryPageNonEmpty();
         }
     }
 }
