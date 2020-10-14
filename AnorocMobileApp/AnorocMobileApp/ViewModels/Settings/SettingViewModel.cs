@@ -5,7 +5,9 @@ using AnorocMobileApp.Views.Forms;
 using Plugin.SecureStorage;
 using Plugin.Toast;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
@@ -18,6 +20,7 @@ namespace AnorocMobileApp.ViewModels.Settings
     [Preserve(AllMembers = true)]
     public class SettingViewModel : BaseViewModel
     {
+        
         #region Constructor
 
         /// <summary>
@@ -211,7 +214,7 @@ namespace AnorocMobileApp.ViewModels.Settings
             if (!userContext.IsLoggedOn)
             {
                 // BUG why does UpdateSignInState uses APIKEY as thisisatoken
-                UpdateSignInState(userContext);   
+                UpdateSignInState(userContext);
                 Application.Current.MainPage = new LoginWithSocialIconPage();
             } 
         }
@@ -226,7 +229,8 @@ namespace AnorocMobileApp.ViewModels.Settings
 
             CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
             CrossSecureStorage.Current.SetValue("SignedInFirstTime", "false");
-            CrossSecureStorage.Current.SetValue("APIKEY","thisisatoken");
+            CrossSecureStorage.Current.SetValue("RememberMe", "false");
+            CrossSecureStorage.Current.SetValue("APIKEY","");
             CrossSecureStorage.Current.SetValue("Name", "");
             CrossSecureStorage.Current.SetValue("Surname", "");
             CrossSecureStorage.Current.SetValue("Email", "");

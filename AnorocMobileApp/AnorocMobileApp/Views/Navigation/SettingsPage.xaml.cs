@@ -71,7 +71,6 @@ namespace AnorocMobileApp.Views.Navigation
 
         private void SignOutButton_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new LoadingPage();
             OnSignOut(sender, e);
         }
         async void OnSignOut(object sender, EventArgs e)
