@@ -1,6 +1,7 @@
 ﻿using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Notification;
 using AnorocMobileApp.Services;
+using AnorocMobileApp.ViewModels.Navigation;
 using AnorocMobileApp.ViewModels.Notification;
 using AnorocMobileApp.Views.Dashboard;
 using AnorocMobileApp.Views.Notification;
@@ -72,7 +73,6 @@ namespace AnorocMobileApp.Views.Navigation
                     tempModel.ReceivedTime = DateTime.Now;
                     //tempModel.ReceivedTime = await RelativeDate(DateTime.Now, tempModel.ReceivedTime);                        
                     page.notificationViewModel.RecentList.Insert(0, tempModel);
-
                 }
             }
 

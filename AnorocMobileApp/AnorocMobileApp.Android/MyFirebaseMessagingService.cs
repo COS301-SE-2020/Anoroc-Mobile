@@ -29,7 +29,7 @@ namespace AnorocMobileApp.Droid
         public static string body = "";
         public static string time = "";
 
-        public override void  OnMessageReceived(RemoteMessage message)
+        public override void OnMessageReceived(RemoteMessage message)
         {
             base.OnMessageReceived(message);
 
@@ -70,7 +70,7 @@ namespace AnorocMobileApp.Droid
                                 break;
                         }
 
-                        var body = outRisk + ": You have come into contact in " + location.Region.Suburb + " at " + dT.ToString();
+                        var body = outRisk + ": You have come into contact in " + location.Region.Suburb;
                         string[] notificationMessage = { title, body };
                         Console.WriteLine("Testing Data output: " + message.Data.Values);
 
@@ -88,15 +88,16 @@ namespace AnorocMobileApp.Droid
                         string[] notificationMessage = { title, body };
                         Console.WriteLine("Testing Data output: " + message.Data.Values);
 
-                    // Passing Message onto xamarin forms
-                    MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
-                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
-                    MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationOnMePageKey, notificationMessage);
-                }     
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Errorr extracting message: " + ex);
+                        // Passing Message onto xamarin forms
+                        MessagingCenter.Send<object, string>(this, AnorocMobileApp.App.NotificationTitleReceivedKey, title);
+                        MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationBodyReceivedKey, notificationMessage);
+                        MessagingCenter.Send<object, string[]>(this, AnorocMobileApp.App.NotificationOnMePageKey, notificationMessage);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Errorr extracting message: " + ex);
+                }
             }
         }
     }

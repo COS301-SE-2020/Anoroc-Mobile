@@ -76,8 +76,7 @@ namespace AnorocMobileApp.Views.Navigation
         
 
         protected override void OnAppearing()
-        {
-            
+        {           
             base.OnAppearing();
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -99,7 +98,6 @@ namespace AnorocMobileApp.Views.Navigation
                     {
                         locationStatus.Text = "Disabled";
                     }
-
                 }
             }
             catch(Exception e)
@@ -121,12 +119,7 @@ namespace AnorocMobileApp.Views.Navigation
                 {
                     carrier_status_info.Text = "Incidents";
                 }
-
-            }
-
-
-            me.loadNotifications();
-
+            }            
         }
 
 

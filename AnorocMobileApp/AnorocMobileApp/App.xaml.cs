@@ -19,6 +19,7 @@ using Plugin.SecureStorage;
 using AnorocMobileApp.DataService;
 using AnorocMobileApp.ViewModels.Notification;
 using System.Reflection;
+using AnorocMobileApp.ViewModels.Navigation;
 
 namespace AnorocMobileApp
 {
@@ -73,9 +74,10 @@ namespace AnorocMobileApp
             // MainPage = new LoginWithSocialIconPage();
             
             FilePath = filePath;
+
             MessagingCenter.Subscribe<object, string[]>(this, App.NotificationBodyReceivedKey, (object sender, string[] msg) =>
             {
-
+                BottomNavigationPage temp = new BottomNavigationPage();
                 NotificationDB notificationDB = new NotificationDB();
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -93,8 +95,12 @@ namespace AnorocMobileApp
                         conn.Close();
                                             
                     }
+                    //me.loadNotifications();
+                  
                 });
             });
+            
+            getUserNotifications();
         }
 
 
@@ -219,6 +225,32 @@ namespace AnorocMobileApp
                 User.carrierStatus = false;
         }
 
+        public void getUserNotifications()
+        {
+            MessagingCenter.Subscribe<UserLoggedIn>(this, "UserLoggedIn", async message =>
+            {
+                var userManagementServiceNotification = IoCContainer.GetInstance<IUserManagementService>();
+                var serverNotifi = await userManagementServiceNotification.GetNotifications();
 
+                //var serverNotiList = userManagementServiceNotification;
+                using (SQLiteConnection conn = new SQLiteConnection(App.FilePath))
+                {
+                    conn.DropTable<NotificationDB>();
+                    conn.CreateTable<NotificationDB>();
+                    var notifications = conn.Table<NotificationDB>().ToList();
+
+                    foreach (var n in serverNotifi)
+                    {
+                        NotificationDB passingNotification = new NotificationDB();
+                        passingNotification.Body = n.Body;
+                        passingNotification.Time = n.Time;
+
+                        conn.Insert(passingNotification);
+                    }
+                    conn.Close();
+                }
+
+            });
+        }
     }
 }
