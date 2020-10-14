@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.Threading;
 using System.Threading.Tasks;
 using AnorocMobileApp.Helpers;
+using AnorocMobileApp.Interfaces;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Dashboard;
 using AnorocMobileApp.Models.Itinerary;
@@ -42,7 +43,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         /// <summary>
         /// Initializes a new instance for the <see cref="AddItineraryViewModel"/> class.
         /// </summary>
-        public AddItineraryViewModel(INavigation navigation, Page view)
+        public AddItineraryViewModel(INavigation navigation, IView view)
         {
             SearchLocationTapped = new Command<object>(SearchLocationTappedMethod);
             DoneButtonTapped = new Command(DoneTappedMethod);
@@ -85,9 +86,9 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         private ObservableCollection<Address> addressTimeline;
         private string addressText;
         private DateTime date;
-
+        private bool isBusy;
         public INavigation Navigation { get; set;}
-        public Page View { get; set; }
+        public IView View { get; set; }
 
         #endregion
 
@@ -177,6 +178,16 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             }
         }
 
+        public bool IsBusy
+        {
+            get => isBusy;
+            set
+            {
+                isBusy = value;
+                NotifyPropertyChanged();
+            }
+        }
+
         #endregion
         
         #region Commands
@@ -239,6 +250,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
         {
             if (obj is ItemTappedEventArgs item)
             {
+                View.ClosePopupView();
                 var address = item.ItemData as Address;
                 foreach (var result in Results)
                 {
@@ -246,7 +258,19 @@ namespace AnorocMobileApp.ViewModels.Itinerary
                     {
                         // TODO perhaps just store Position object instead of Location
                         var location = new Location(result.Position);
-                        await location.GetRegion();
+                        try
+                        {
+                            IsBusy = true;
+                            await location.GetRegion();
+                        }
+                        catch
+                        {
+                            // ignored
+                        }
+                        finally
+                        {
+                            IsBusy = false;
+                        }
                         Locations.Add(location);
                         AddressTimeline.Add(result.Address);
                     }
@@ -259,7 +283,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             var itinerary = new Models.Itinerary.Itinerary {Locations = Locations, Date = Date};
             var service = new ItineraryService();
             var risk = await service.ProcessItinerary(itinerary);
-            Navigation.InsertPageBefore(new ViewItineraryPage(risk), View);
+            Navigation.InsertPageBefore(new ViewItineraryPage(risk), View as Page);
             await Navigation.PopAsync();
         }
 
