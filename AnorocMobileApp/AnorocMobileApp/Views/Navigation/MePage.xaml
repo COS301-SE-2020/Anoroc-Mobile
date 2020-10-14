@@ -273,7 +273,7 @@
                                     <!-- Received Time -->
                                     <Label Grid.Row="1"
                                            Grid.Column="1" Margin="0, 4, 16, 16"
-                                           Text="{Binding ReceivedTime}"                                           
+                                           Text="{Binding ReceivedTime, Converter={StaticResource RelativeTime}}"                                           
                                            FontSize="12"
                                            FontFamily="{DynamicResource Montserrat-Medium}" TextColor="{DynamicResource Gray-700}"
                                            LineHeight="{OnPlatform Android=1.5,Default=-1}"
