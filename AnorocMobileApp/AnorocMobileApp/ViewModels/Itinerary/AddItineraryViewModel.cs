@@ -276,6 +276,9 @@ namespace AnorocMobileApp.ViewModels.Itinerary
                     }
                 }
             };
+            AddressText = "";
+            Addresses.Clear();
+            Results.Clear();
         }
 
         private async void DoneTappedMethod()
