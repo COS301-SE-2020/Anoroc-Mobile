@@ -183,7 +183,7 @@ namespace AnorocMobileApp.ViewModels.Itinerary
 
             foreach (var itinerary in itineraryRisks.Select(itineraryRisk => new Models.Itinerary.Itinerary()
             {
-                Date = itineraryRisk.Created,
+                Date = DateTime.Today,
                 NumberOfLocations = itineraryRisk.LocationItineraryRisks.Count,
                 RiskDescription = ItineraryRiskDetail.RiskDescription[itineraryRisk.TotalItineraryRisk],
                 ItineraryRisk = itineraryRisk
@@ -191,6 +191,8 @@ namespace AnorocMobileApp.ViewModels.Itinerary
             {
                 Itineraries.Add(itinerary);
             }
+
+            Itineraries = new ObservableCollection<Models.Itinerary.Itinerary>(Itineraries.Reverse());
         }
 
         #endregion      
