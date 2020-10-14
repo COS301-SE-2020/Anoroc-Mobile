@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using AnorocMobileApp.Models;
 using AnorocMobileApp.Models.Itinerary;
-using AnorocMobileApp.ViewModels.Dashboard;
+using AnorocMobileApp.ViewModels.Itinerary;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;

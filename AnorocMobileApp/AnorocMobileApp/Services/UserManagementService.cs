@@ -471,7 +471,7 @@ namespace AnorocMobileApp.Services
             }, CancellationToken.None);
         }
 
-        public async Task<string> ToggleAnonymousUser()
+        public async Task<string> ToggleAnonymousUser(bool value)
         {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -483,7 +483,7 @@ namespace AnorocMobileApp.Services
                 var client = new HttpClient(clientHandler);
                 Token token_object = new Token();
                 token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-                token_object.Object_To_Server = "";
+                token_object.Object_To_Server = value.ToString();
 
                 var data = JsonConvert.SerializeObject(token_object);
 
@@ -516,7 +516,7 @@ namespace AnorocMobileApp.Services
                 return "False";
         }
 
-/*        public async void sendNotification(string notificationString)
+       public async Task<bool> SetEmaileNotificationSettings(bool newValue)
         {
             if (Application.Current.Properties.ContainsKey("TOKEN"))
             {
@@ -528,7 +528,7 @@ namespace AnorocMobileApp.Services
                 var client = new HttpClient(clientHandler);
                 Token token_object = new Token();
                 token_object.access_token = (string)Application.Current.Properties["TOKEN"];
-                token_object.Object_To_Server = notificationString;
+                token_object.Object_To_Server = newValue.ToString();
 
                 var data = JsonConvert.SerializeObject(token_object);
 
@@ -536,7 +536,7 @@ namespace AnorocMobileApp.Services
                 stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
 
 
-                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.SendNotificationToServerEndpoint);
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.SetEmailNotificationSettings);
                 HttpResponseMessage responseMessage;
 
                 try
@@ -545,21 +545,21 @@ namespace AnorocMobileApp.Services
 
                     if (responseMessage.IsSuccessStatusCode)
                     {
-                        //TODO:
-                        Console.WriteLine("Notification Saved");
+                        var returnVal = await responseMessage.Content.ReadAsStringAsync();
+                        return Convert.ToBoolean(returnVal);
                     }
+                    else
+                        return false;
 
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-
+                    return false;
                 }
             }
             else
-            {
-                return ;
-            }
-        }*/
+                return false;
+        }
 
         public async Task<NotificationDB[]> GetNotifications()
         {

@@ -1,6 +1,6 @@
-﻿using AnorocMobileApp.ViewModels.Dashboard;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.Serialization.Json;
+using AnorocMobileApp.ViewModels.Itinerary;
 using Xamarin.Forms.Internals;
 
 namespace AnorocMobileApp.DataService
