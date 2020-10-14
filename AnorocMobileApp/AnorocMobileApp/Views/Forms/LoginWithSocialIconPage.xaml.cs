@@ -38,10 +38,8 @@ namespace AnorocMobileApp.Views.Forms
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            loadPage();
-            //var signedIn = CrossSecureStorage.Current.GetValue("SignedInFirstTime");
-            var signedIn = Application.Current.Properties["RememberMe"];
-
+            var signedIn = CrossSecureStorage.Current.GetValue("RememberMe");
+            //var signedIn = Application.Current.Properties["RememberMe"];
             if (signedIn != null)
             {
                 if (signedIn.ToString().Equals("true"))
@@ -56,12 +54,10 @@ namespace AnorocMobileApp.Views.Forms
                     Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
                 }
             }
-        }
-
-
-        async void loadPage()
-        {
-            HomePage = new NavigationPage(new BottomNavigationPage());
+            else
+            {
+                Application.Current.MainPage = new LoginWithSocialIconPage();
+            }
         }
 
         /// <summary>
@@ -69,7 +65,6 @@ namespace AnorocMobileApp.Views.Forms
         /// </summary>
         private void SignInButton_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new LoadingPage();
             OnSignIn(sender,e);
         }
 
@@ -85,8 +80,6 @@ namespace AnorocMobileApp.Views.Forms
             try
             {
 
-              
-          
                 var userContext = await B2CAuthenticationService.Instance.SignInAsync();
                 UpdateSignInState(userContext);
                 
@@ -100,7 +93,7 @@ namespace AnorocMobileApp.Views.Forms
 
                     ims.UserLoggedIn(userContext.GivenName, userContext.FamilyName, userContext.EmailAddress);
 
-                    Application.Current.MainPage = HomePage;
+                    Application.Current.MainPage = new NavigationPage(new BottomNavigationPage());
 
                 }
                 else
@@ -131,7 +124,7 @@ namespace AnorocMobileApp.Views.Forms
             var isSignedIn = userContext.IsLoggedOn;
 
             CrossSecureStorage.Current.SetValue("SignedIn", isSignedIn.ToString());
-            Application.Current.Properties["RememberMe"] = "true";
+            CrossSecureStorage.Current.SetValue("RememberMe", "true");
             CrossSecureStorage.Current.SetValue("SignedInFirstTime", "true");
             CrossSecureStorage.Current.SetValue("APIKEY", userContext.AccessToken);
             CrossSecureStorage.Current.SetValue("Name", userContext.GivenName);
