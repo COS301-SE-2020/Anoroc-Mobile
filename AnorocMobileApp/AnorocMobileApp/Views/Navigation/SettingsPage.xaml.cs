@@ -40,6 +40,14 @@ namespace AnorocMobileApp.Views.Navigation
                 Locations_SfSwitch.IsOn = true;
                 
             }
+            if(Application.Current.Properties.ContainsKey("isAnonymous"))
+            {
+                var anon = Application.Current.Properties["isAnonymous"];
+                if (anon.Equals("True"))
+                {
+                    Anonymity_SfSwitch.IsOn = true;
+                }
+            }
         }
 
 
@@ -158,6 +166,13 @@ namespace AnorocMobileApp.Views.Navigation
             }
 
         }
+        async void SfSwitch_Anonymity_StateChanged(System.Object ssender, Syncfusion.XForms.Buttons.SwitchStateChangedEventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<IUserManagementService>();
+            var response = await user.ToggleAnonymousUser((bool)e.NewValue);
+            CrossToastPopUp.Current.ShowToastMessage("Anonomity set to: " + response);
+            App.Current.Properties["isAnonymous"] = response;
+        }
 
         private async void btnDownloadUserData_Clicked(object sender, EventArgs e)
         {
@@ -171,6 +186,13 @@ namespace AnorocMobileApp.Views.Navigation
             {
                 CrossToastPopUp.Current.ShowToastMessage("Error Generating the file.");
             }
+        }
+
+        private void btnDontSendLocation_Clicked(object sender, EventArgs e)
+        {
+            var user = App.IoCContainer.GetInstance<ILocationService>();
+            user.DontSendCurrentLocationAnymoreAsync();
+            CrossToastPopUp.Current.ShowToastMessage("Location not longer being tracked.");
         }
     }
 }

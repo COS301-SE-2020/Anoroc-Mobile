@@ -99,9 +99,9 @@ namespace AnorocMobileApp.Services
                     Models.Location customLocation = new Models.Location(location);
                     if (!LocationService.LocationSavedToNotSend(customLocation))
                     {
-                        await customLocation.GetRegion();
                         if (location.CalculateDistance(Previous_request, DistanceUnits.Kilometers) >= MetersConsidedUserMoved)
                         {
+                            await customLocation.GetRegion();
                             _Backoff = Initial_Backoff;
                             Track_Retry = 0;
                             SendUserLocation(customLocation);
@@ -109,6 +109,7 @@ namespace AnorocMobileApp.Services
                         else
                         {
                             ExtendBackoff();
+                            SendUserLocation(customLocation);
                         }
                     }
                     else
@@ -120,9 +121,11 @@ namespace AnorocMobileApp.Services
                 {
                     location = await Geolocation.GetLocationAsync(request);
                     Models.Location customLocation = new Models.Location(location);
-                    await customLocation.GetRegion();
-
-                    SendUserLocation(customLocation);
+                    if ((!LocationService.LocationSavedToNotSend(customLocation)))
+                    {
+                        await customLocation.GetRegion();
+                        SendUserLocation(customLocation);
+                    }
                 }
                 Previous_request = location;
                 success = true;
@@ -147,7 +150,7 @@ namespace AnorocMobileApp.Services
         protected bool TestIfCanSendLocation()
         {
             DateTime currentTime = DateTime.Now;
-            if((currentTime-LastSent).TotalMinutes <= 5)
+            if ((currentTime - LastSent).TotalMinutes <= 5)
             {
 
             }
@@ -181,6 +184,7 @@ namespace AnorocMobileApp.Services
             MessagingCenter.Send(message, "StopBackgroundLocationTrackingMessage");
             _Backoff = Initial_Backoff;
             Track_Retry = 0;
+            Previous_request = null;
         }
 
         public bool isTracking()

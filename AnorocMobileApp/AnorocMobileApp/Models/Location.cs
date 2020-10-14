@@ -61,7 +61,6 @@ namespace AnorocMobileApp.Models
             Carrier_Data_Point = User.carrierStatus;
             Latitude = loc.Latitude;
             Longitude = loc.Longitude;
-            GetRegion();
         }
 
         public Location(double lat, double longC, DateTime dateTime, bool carrier)
@@ -71,9 +70,13 @@ namespace AnorocMobileApp.Models
             Longitude = longC;
             Created = dateTime;
             Carrier_Data_Point = carrier;
-            GetRegion();
         }
-   
+
+        public Location(double lat, double longC, DateTime dateTime, bool carrier, Area customArea) : this(lat, longC, dateTime, carrier)
+        {
+            Region = customArea;
+        }
+
         public DateTime Created { get; set; }
         
         public double Latitude { get; set; }
@@ -81,8 +84,6 @@ namespace AnorocMobileApp.Models
         public bool Carrier_Data_Point { get; set; }
         public Area Region { get; set; }
 
-        [PrimaryKey, AutoIncrement]
-        public int LocationId { get; set; }
 
         public Location clone()
         {

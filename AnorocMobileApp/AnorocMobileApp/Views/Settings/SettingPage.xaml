@@ -22,15 +22,8 @@
             <StackLayout Spacing="0">
                 <!--  Title View  -->
                 <controls:TitleView Title="Settings" BackgroundColor="{DynamicResource Gray-White} ">
-                    <controls:TitleView.LeadingView>
-                        <buttons:SfButton
-                            x:Name="backButton"
-                            Command="{TemplateBinding BindingContext.BackButtonCommand}"
-                            CommandParameter="{x:Reference backButton}"
-                            CornerRadius="4"
-                            Style="{StaticResource IconButtonStyle}"
-                            Text="{StaticResource Back}" />
-                    </controls:TitleView.LeadingView>
+                   
+                   
                 </controls:TitleView>
                 <ContentPresenter />
             </StackLayout>
@@ -87,6 +80,7 @@
                         AllowIndeterminateState="False"
                         HeightRequest="28"
                         StateChanged="SfSwitch_OnStateChanged"
+                        x:Name="Location_Tracking_Switch"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -122,8 +116,101 @@
                         </VisualStateManager.VisualStateGroups>
                     </buttons:SfSwitch>
                 </Grid>
+                <Grid
+                    BackgroundColor="{DynamicResource Gray-White}"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <!--Annonomous switch label-->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource MapPin}" />
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource LabelStyle}"
+                        Text="Set Anonymity" />
+                    <!--  Annonomous switch  -->
+                    <buttons:SfSwitch
+                        Grid.Column="2"
+                        Margin="8,0"
+                        AllowIndeterminateState="False"
+                        HeightRequest="28"
+                        StateChanged="Set_Anonomous_Switch_StateChanged"
+                        x:Name="Set_Anonomous_Switch"
+                        VisualType="Cupertino">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="On">
+                                    <VisualState.Setters>
+                                        <Setter Property="SwitchSettings">
+                                            <Setter.Value>
+                                                <buttons:CupertinoSwitchSettings
+                                                    x:TypeArguments="buttons:OnState"
+                                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                                    ThumbColor="{DynamicResource Gray-White}"
+                                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                                    TrackColor="{DynamicResource PrimaryColor}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+                                <VisualState x:Name="Off">
+                                    <VisualState.Setters>
+                                        <Setter Property="SwitchSettings">
+                                            <Setter.Value>
+                                                <buttons:CupertinoSwitchSettings
+                                                    x:TypeArguments="buttons:OffState"
+                                                    ThumbBorderColor="{DynamicResource Gray-200}"
+                                                    ThumbColor="{DynamicResource Gray-White}"
+                                                    TrackBorderColor="{DynamicResource Gray-200}"
+                                                    TrackColor="{DynamicResource Gray-200}" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </buttons:SfSwitch>
+                </Grid>
+
+                <!-- Dont track this location button-->
+                <controls:TapAnimationGrid
+                    BackgroundColor="{DynamicResource Gray-White}"
+                    ColumnSpacing="0"
+                    Command="{Binding DontTrackCommand}"
+                    RowSpacing="0"
+                    Tapped="False">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <!--  Dont track icon  -->
+                    <Label
+                        Grid.Column="0"
+                        Margin="16,0,0,0"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource MapPin}" />
+                    <!-- Dont tracka label  -->
+                    <Label
+                        Grid.Column="1"
+                        Style="{StaticResource LabelStyle}"
+                        Text="Dont Track This Location" />
+                    <!--  Navigation icon  -->
+                    <Label
+                        Grid.Column="2"
+                        Style="{StaticResource IconLabelStyle}"
+                        Text="{StaticResource Next}" />
+                </controls:TapAnimationGrid>
                 <BoxView Style="{StaticResource SeparatorStyle}" />
-                
+
+
                 <!--  Header label for account setting  -->
                 <Label
                     Margin="16,0,0,0"
@@ -266,13 +353,15 @@
                     <Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Notifications" />
+                        Text="Pop-Up Notifications" />
                     <!--  Notifications switch  -->
                     <buttons:SfSwitch
                         Grid.Column="2"
                         Margin="8,0"
                         AllowIndeterminateState="False"
                         HeightRequest="28"
+                        x:Name="Allow_Notification_Switch"
+                        StateChanged="Allow_Notification_Switch_StateChanged"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -325,7 +414,7 @@
                         Grid.Column="0"
                         Margin="16,0,0,0"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Mail}" />
+                        Text="{StaticResource Bell}" />
                     <!--  Email notification label  -->
                     <Label
                         Grid.Column="1"
@@ -337,6 +426,8 @@
                         Margin="8,0"
                         AllowIndeterminateState="False"
                         HeightRequest="28"
+                        x:Name="Email_Notification_Switch"
+                        StateChanged="Email_Notification_Switch_StateChanged"
                         VisualType="Cupertino">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
@@ -389,7 +480,7 @@
                     VerticalTextAlignment="Center" />
 
                 <!--  Grid for Help label and navigation bar icon  -->
-                <controls:TapAnimationGrid
+                <!--<controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-White}"
                     ColumnSpacing="0"
                     Command="{Binding HelpCommand}"
@@ -399,28 +490,28 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>-->
                     <!--  help icon  -->
-                    <Label
+                    <!--<Label
                         Grid.Column="0"
                         Margin="16,0,0,0"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Help}" />
+                        Text="{StaticResource Help}" />-->
                     <!--  Help text label  -->
-                    <Label
+                <!--<Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Help" />
+                        Text="Help" />-->
                     <!--  Navigation icon  -->
-                    <Label
+                <!-- <Label
                         Grid.Column="2"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Next}" />
-                </controls:TapAnimationGrid>
-                <BoxView Style="{StaticResource SeparatorStyle}" />
+                        Text="{StaticResource Next}" />-->
+                <!--</controls:TapAnimationGrid>
+                <BoxView Style="{StaticResource SeparatorStyle}" />-->
 
                 <!--  Grid for Terms of service label and navigation bar icon  -->
-                <controls:TapAnimationGrid
+                <!--<controls:TapAnimationGrid
                     BackgroundColor="{DynamicResource Gray-White}"
                     ColumnSpacing="0"
                     Command="{Binding TermsCommand}"
@@ -430,25 +521,25 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="*" />
                         <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
+                    </Grid.ColumnDefinitions>-->
                     <!--  Terms of service icon  -->
-                    <Label
+                <!-- <Label
                         Grid.Column="0"
                         Margin="16,0,0,0"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Account}" />
-                    <!--  Terms of service label  -->
-                    <Label
+                        Text="{StaticResource Account}" /> -->
+                <!--  Terms of service label  -->
+                <!--  <Label
                         Grid.Column="1"
                         Style="{StaticResource LabelStyle}"
-                        Text="Terms of Service" />
-                    <!--  Navigation icon  -->
-                    <Label
+                        Text="Terms of Service" /> -->
+                <!--  Navigation icon  -->
+                <!--  <Label
                         Grid.Column="2"
                         Style="{StaticResource IconLabelStyle}"
-                        Text="{StaticResource Next}" />
-                </controls:TapAnimationGrid>
-                <BoxView Style="{StaticResource SeparatorStyle}" />
+                        Text="{StaticResource Next}" /> -->
+                <!-- </controls:TapAnimationGrid>
+                <BoxView Style="{StaticResource SeparatorStyle}" />-->
 
                 <!--  Grid for Privacy policy label and navigation bar icon  -->
                 <controls:TapAnimationGrid
@@ -510,7 +601,8 @@
                         Style="{StaticResource IconLabelStyle}"
                         Text="{StaticResource Next}" />
                 </controls:TapAnimationGrid>
-
+                
+                
                 <!--  Logout button  -->
                 <buttons:SfButton
                     Margin="0,24,0,32"
@@ -526,7 +618,21 @@
                     WidthRequest="245"
                     Command="{Binding LogOutCommand}"
                     />
-
+                <!-- Delete Account Button -->
+                <buttons:SfButton
+                    Margin="0,24,0,32"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    BorderColor="{DynamicResource PrimaryColor}"
+                    BorderWidth="1"
+                    FontFamily="{StaticResource Montserrat-SemiBold}"
+                    HeightRequest="40"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource RoundButtonStyle}"
+                    Text="DELETE ACCOUNT"
+                    TextColor="{DynamicResource Gray-White}"
+                    WidthRequest="245"
+                    Command="{Binding DeleteAccount}"
+                    />
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

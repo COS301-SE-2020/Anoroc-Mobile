@@ -77,7 +77,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    
                 }
             }
         }
@@ -122,12 +122,52 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnectToLocationServerException();
+                    
                 }
             }
         }
 
+        public async void DeleteTheUser()
+        {
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
 
+                HttpClient client = new HttpClient(clientHandler);
+
+                //HttpClientHandler clientHandler = new HttpClientHandler();
+                var url = Secrets.baseEndpoint + Secrets.CompletelyDeleteUserEndpoint;
+
+                var token_object = new Token();
+                token_object.access_token = (string)Xamarin.Forms.Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = "";
+
+                /*var status = value == "Positive";
+                var carrierStatus = new CarrierStatus((string)Xamarin.Forms.Application.Current.Properties["TOKEN"], status);*/
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var c = new StringContent(data, Encoding.UTF8, "application/json");
+                c.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+                try
+                {
+                    var response = await client.PostAsync(url, c);
+                    if(response.IsSuccessStatusCode)
+                    {
+                        // User forgotten on the server.
+                        // Call sign out
+                    }
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+
+                }
+            }
+        }
         public async void UserLoggedIn(string firstName, string surname, string userEmail)
         {
             var clientHandler = new HttpClientHandler
@@ -177,7 +217,7 @@ namespace AnorocMobileApp.Services
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {
-                throw new CantConnecToClusterServiceException();
+                
             }
         }
 
@@ -227,7 +267,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return null;
                 }
             }
         }
@@ -312,7 +352,7 @@ namespace AnorocMobileApp.Services
             }
             catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
             {
-                throw new CantConnecToClusterServiceException();
+                
             }
         }
 
@@ -355,7 +395,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return 0;
                 }
             }
             else
@@ -399,7 +439,7 @@ namespace AnorocMobileApp.Services
                 }
                 catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
                 {
-                    throw new CantConnecToClusterServiceException();
+                    return false;
                 }
             }
             else
@@ -430,9 +470,94 @@ namespace AnorocMobileApp.Services
             }, CancellationToken.None);
         }
 
-        public void ToggleAnonymousUser()
+        public async Task<string> ToggleAnonymousUser(bool value)
         {
-            throw new NotImplementedException();
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = value.ToString();
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.ToggleAnonmityEndpoint);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var returnVal = await responseMessage.Content.ReadAsStringAsync();
+                        return returnVal;
+                    }
+                    else
+                        return "False";
+
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    return "False";
+                }
+            }
+            else
+                return "False";
+        }
+
+        public async Task<bool> SetEmaileNotificationSettings(bool newValue)
+        {
+            if (Application.Current.Properties.ContainsKey("TOKEN"))
+            {
+                var clientHandler = new HttpClientHandler
+                {
+                    ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => true
+                };
+
+                var client = new HttpClient(clientHandler);
+                Token token_object = new Token();
+                token_object.access_token = (string)Application.Current.Properties["TOKEN"];
+                token_object.Object_To_Server = newValue.ToString();
+
+                var data = JsonConvert.SerializeObject(token_object);
+
+                var stringcontent = new StringContent(data, Encoding.UTF8, "application/json");
+                stringcontent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+                Uri Anoroc_Uri = new Uri(Secrets.baseEndpoint + Secrets.SetEmailNotificationSettings);
+                HttpResponseMessage responseMessage;
+
+                try
+                {
+                    responseMessage = await client.PostAsync(Anoroc_Uri, stringcontent);
+
+                    if (responseMessage.IsSuccessStatusCode)
+                    {
+                        var returnVal = await responseMessage.Content.ReadAsStringAsync();
+                        return Convert.ToBoolean(returnVal);
+                    }
+                    else
+                        return false;
+
+                }
+                catch (Exception e) when (e is TaskCanceledException || e is OperationCanceledException)
+                {
+                    return false;
+                }
+            }
+            else
+                return false;
         }
     }
 }
