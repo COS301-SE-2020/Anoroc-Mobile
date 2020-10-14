@@ -67,7 +67,7 @@
                                             <gradient:SfGradientView.BackgroundBrush>
                                                 <gradient:SfLinearGradientBrush>
                                                     <gradient:SfLinearGradientBrush.GradientStops>
-                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientStart}" Offset="0.0"/>
+                                                        <gradient:SfGradientStop Color="{Binding BackgroundGradientEnd}" Offset="0.0"/>
                                                         <gradient:SfGradientStop Color="{Binding BackgroundGradientEnd}" Offset="1.0"/>
                                                     </gradient:SfLinearGradientBrush.GradientStops>
                                                 </gradient:SfLinearGradientBrush>
